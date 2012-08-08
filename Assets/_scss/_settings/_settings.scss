@@ -1,0 +1,128 @@
+// ==========================================================
+// _settings.scss
+//
+// Merges all listed stylesheets and does the SASS & Compass magic
+// DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+// ==========================================================
+
+
+
+// =============================================================================
+// Gid-System
+// =============================================================================
+// $columWidth:          	60px; // Width of a Column (Disabled by default, it gets generated)
+$totalColumns: 					12;		// Number of columns
+$columnGutter:	 				20px;	// Inner spacing
+
+
+// =============================================================================
+// Layout
+// NOTE: $layoutWidth is used for calculating the grid and centering purposes
+// =============================================================================
+$layoutWidth:						960px + $columnGutter; // Grid Setup
+$bodyBackground:				#fff;
+
+$query-tablet: 					800px; // Tablets
+$query-smartphoneLarge: 480px; // Phone - Landscape
+$query-smartphoneSmall: 320px; // Phone - Portrait
+
+
+// =============================================================================
+// Typography
+// NOTE: 	Font-weights below are used to handle webfonts
+// 				If this layout doesnt use a webfont, dont change them
+// =============================================================================
+$bold:									700;
+$regular:								400;
+$light:									300;
+
+$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
+
+$baseFontSize:          16px;
+$baseFontFamily:        $sansFontFamily;
+$baseFontWeight:        $regular;
+$baseLineHeight:        1.5;
+$baseColor: 						#3C474B;
+
+$headingsFontFamily:    inherit; // empty to use $baseFontFamily
+$headingsFontWeight:    $bold;
+$headingsColor:         #000;
+$lineHeightSpacing:			$baseFontSize * $baseLineHeight;
+
+
+// =============================================================================
+// Borders
+// =============================================================================
+$basicBorderColor:			#ccc;
+$basicBorderStyle:			solid;
+
+
+// =============================================================================
+// Basic Colors
+// =============================================================================
+// ======================== Coporate Design colors ========================
+$cd-main:								#0097d7;
+$cd-lightGray:					#AAA;
+$cd-darkGray:						#333;
+
+// ======================== 				Links					 ========================
+$linkColor:							$cd-main;
+$linkColorHover:				lighten($cd-main, 20%);
+
+
+// =============================================================================
+// Input-Colors
+// =============================================================================
+// ======================== 				Basic 				========================
+$inputBorderColor:			$basicBorderColor;
+$inputTextColor:				lighten( $baseColor, 5% );
+$inputRadius:						3px;
+$placeHolderColor:			lighten( $inputTextColor, 20% );
+
+// ======================== 				Error				 	========================
+$inputErrorBorder:			#dc0039;
+$inputErrorTextColor:		lighten( $baseColor, 5% );
+
+// ======================== 				Warning			 	========================
+$inputWarningBorder:		#dc0039;
+$inputWarningTextColor:	lighten( $baseColor, 5% );
+
+
+// =============================================================================
+// Buttons
+// =============================================================================
+$buttonBackground:			$cd-main;
+$buttonTextColor:				#FFF;
+$buttonRadius:					3px;
+
+$buttonBorderSize:			1px;
+$buttonBorderStyle:			solid;
+$buttonBorderColor:			$buttonBackground;
+
+
+// =============================================================================
+// Warnings & Errors
+// =============================================================================
+$warningBackground:			#FAFAEC;
+$warningTextColor:			#555;
+$warningBorder:					1px $basicBorderStyle #FCD344;
+
+$errorBackground:				#dc0039;
+$errorTextColor:				#FFF;
+$errorBorder:						1px $basicBorderStyle #901132;
+
+
+
+// ============================================================================
+// Z-Index Masterlist
+// ============================================================================
+$zindexDetail:     	    1010;	// Details
+$zindexModal: 				  1020;	// Modal sections
+
+$zindexDropdown:				1070;	// Dropdowns
+$zindexPopover:					1080;	// Popover
+$zindexPreloader:     	1090;	// Preloader
+
+

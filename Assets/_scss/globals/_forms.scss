@@ -1,0 +1,69 @@
+/* ==========================================================
+ * forms.scss
+ *
+ * Basic styling for forms and inputs
+ * DOCS: 
+ * ========================================================== */
+
+
+/* =============================================================================
+General styling of Input Fields
+================================================================================ */
+@include placeHolder($placeHolderColor);
+
+textarea,
+input[type="date"],
+input[type="email"],
+input[type="month"],
+input[type="password"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="number"] {
+  color: $inputTextColor;  
+  border: 1px solid $inputBorderColor;
+  font-size: $baseFontSize - 2;
+  @if $inputRadius != 0 { @include border-radius($inputRadius); }
+  @include transition(border-color .2s ease);
+  &:hover { border-color: darken($inputBorderColor, 20%); }
+  &:focus { outline: 0; border-color: $cd-main; }
+}
+:invalid {
+  border-color: $inputErrorBorder !important;
+  color: $inputErrorTextColor !important;
+}
+
+textarea {
+  min-height: 70px;
+}
+
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background: $buttonBackground;  
+  padding: 3px 6px;
+  color: $buttonTextColor;
+  @if $buttonRadius != 0 { @include border-radius($buttonRadius); }
+  @if $buttonBorderSize != 0 { border: $buttonBorderSize $buttonBorderStyle $buttonBorderColor; }
+}
+
+
+/* =============================================================================
+General styling of Form Fields
+================================================================================ */
+form {
+  ol { list-style: none; }
+  legend { display: none; }
+}
+label {
+
+  strong {
+
+  }
+  em {
+
+  }
+}

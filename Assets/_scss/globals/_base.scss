@@ -1,0 +1,110 @@
+/* ==========================================================
+ * base.scss
+ *
+ * Basic styling for this site (f.e. Header, Footer and Content)
+ * DOCS: 
+ * ========================================================== */
+
+
+/* =============================================================================
+Maincontainer
+================================================================================ */
+.wrapper {
+	margin: 0 auto;
+	width: $layoutWidth;
+	position: relative;
+}
+#header { }
+#content { }
+#footer { }
+
+#content .wrapper { }
+#footer .wrapper { }
+#footer .wrapper { }
+
+
+/* =============================================================================
+Sprites
+================================================================================ */
+// .sprite { background-image: url('../img/sprite.png'); background-repeat: no-repeat; }
+// Usage:
+// @extend .sprite;
+// or use the class itself
+
+
+/* =============================================================================
+Header
+================================================================================ */
+/* ======================== Logo ======================== */
+#header {
+	.logo {	  
+	  position: absolute;
+	  top: 30px;
+	  left: 30px;
+	  @include img-wh('logo.png');
+	  background: url('../img/logo.png');
+	  &:hover {	}
+	}
+}
+
+/* ======================== Navi ======================== */
+#navi {
+	position: absolute;
+	right: 250px;
+	top: 30px;
+	ul { position: relative; }
+	li {
+	  float: left;
+	  &:hover a { }
+	  &.active a { }
+	}
+	a {
+		display: block;
+	}
+}
+
+/* ======================== Search ======================== */
+#searchform {
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	input {
+		float: left;
+		display: block;
+	}
+	input[type="text"] {    
+	}
+	input[type="submit"] {
+	}
+}
+
+
+/* =============================================================================
+FCE's / Content
+================================================================================ */
+
+
+
+/* =============================================================================
+Footer
+================================================================================ */
+
+
+
+/* =============================================================================
+Chrome Frame
+================================================================================ */
+.chromeframe {
+	display: block;
+	height: 41px;
+	line-height: 41px;
+	font-size: 12px;
+	background: $warningBackground;
+	color: $warningTextColor;
+	border-bottom: $warningBorder;
+	text-align: center;
+	a { border-bottom: 1px dotted; }
+}
+
+
+

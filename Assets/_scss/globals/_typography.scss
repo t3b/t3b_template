@@ -1,0 +1,114 @@
+/* ==========================================================
+ * typography.scss
+ *
+ * Basic styling for typography elements
+ * DOCS: 
+ * ========================================================== */
+
+
+/* =============================================================================
+Links and other stuff
+================================================================================ */
+a,
+a:visited { color: $linkColor; text-decoration: none; }
+a {
+  &:hover,
+  &:active { color: $linkColorHover; }
+}
+
+::-moz-selection,
+::selection { background: $cd-main; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+Headings
+================================================================================ */
+#{headings(all)},
+.h1, .h2, .h3,
+.h4, .h5, .h6 {  
+  font-family: $headingsFontFamily;
+  font-weight: $headingsFontWeight;
+  color: $headingsColor;
+  line-height: 1.1;
+  margin: 1em 0 0;
+  text-rendering: optimizeLegibility;
+  @include hyphens;
+  small {
+    font-size: 70%;
+    color: lighten($headingsColor, 30%);
+  }
+}
+h1, .h1 {
+  font-size: 30px;  
+}
+h2, .h2 {
+  font-size: 22px;
+}
+h3, .h3 {
+  font-size: 20px;
+}
+h4, .h4 {
+  font-size: 18px;
+}
+h5, .h5 {
+  font-size: 16px;
+  font-weight: $bold;
+  margin: 0;
+}
+h6, .h6 {
+  font-size: 16px;
+  margin: 0;
+}
+
+
+/* =============================================================================
+Paragraphs
+================================================================================ */
+p {
+  margin: 0 0 1em;
+  small {
+    font-size: 70%;
+    color: lighten($baseColor, 30%);
+  }
+}
+
+
+/* =============================================================================
+Attachements & Images
+================================================================================ */
+a {
+  img { @include transition(opacity 0.2s); }
+  &:hover img { @include opacity(0.85); }
+}
+embed, iframe, object, img { max-width: 100%; }
+
+
+/* =============================================================================
+Lists
+================================================================================ */
+ol { list-style-type: decimal; }
+ol ol { list-style: upper-alpha; }
+ol ol ol { list-style: lower-roman; }
+ol ol ol ol { list-style: lower-alpha; }
+
+
+/* =============================================================================
+TYPEKIT
+Basic styling for browsers that dont support @font-face
+================================================================================
+.no-js,
+.wf-inactive {
+  #{headings(all)} {
+
+  }
+  p {
+    
+  }
+} */
+
+
+
+
+
+
+

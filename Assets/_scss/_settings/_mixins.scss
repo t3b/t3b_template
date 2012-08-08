@@ -1,0 +1,123 @@
+// ==========================================================
+// mixins.scss
+//
+// Mixins to develope faster
+// DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+// ==========================================================
+
+
+// =============================================================================
+// Mixins
+// =============================================================================
+// ======================== Image-Dimensions =============================
+@mixin img-wh($img) {
+  width: image-width($img);
+  height: image-height($img);
+}
+@mixin img-whr($img) {
+  background-size: image-width($img)/2 image-height($img)/2;
+}
+
+// ======================== CSS3 Word-breaker ============================
+@mixin hyphens {
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+
+// ======================== REM Unit Mixin ===============================
+@mixin font-size($size, $is-important: false) {
+  @if $is-important {
+    font-size: $size + px !important;
+    font-size: ($size / 10) + rem !important;
+  } @else {
+    font-size: $size + px;
+    font-size: ($size / 10) + rem;
+  }
+}
+
+// ======================== Reset list ==================================
+@mixin reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// ======================== Placeholder styling =========================
+@mixin placeHolder($color) {
+  :-webkit-input-placeholder { color: $color; }
+  :-moz-placeholder { color: $color; }
+  :-ms-input-placeholder { color: $color; }
+}
+
+// ======================== CSS3 Triangle ===============================
+@mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: solid   $triangleSize;
+  @if ($triangleDirection == top) {
+    border-color: $triangleColor transparent transparent transparent;
+  } @if ($triangleDirection == bottom) {
+    border-color: transparent transparent $triangleColor transparent;
+  } @if ($triangleDirection == left) {
+    border-color: transparent transparent transparent $triangleColor;
+  } @if ($triangleDirection == right) {
+    border-color: transparent $triangleColor transparent transparent;
+  }
+  // .example { @include css-triangle(5px, #fff, bottom); }
+}
+
+// ======================== cross browser inline-block ===============================
+// http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/
+@mixin inline-block {
+  display: -moz-inline-stack;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  *display: inline;
+  vertical-align: top;
+  *zoom: 1;
+}
+
+// ======================== Micro Clearfix ===============================
+@mixin clearfix() {
+  *zoom:1;
+  &:before, &:after { content: ""; display: table; }
+  &:after { clear: both; }
+}
+
+// ======================== Media Queries ===============================
+// Be Prepared for SASS 3.2, embrace yourself!
+
+// @mixin responsive($media) {
+//   @if $media == tablet {
+//     @media screen and (max-width:$query-tablet) { @content; }
+//   }
+//   @else if $media == smartphoneLarge {
+//     @media screen and (max-width:$query-smartphoneLarge) { @content; }
+//   }
+//   @else if $media == smartphoneSmall {
+//     @media screen and (max-width:$query-smartphoneSmall) { @content; }
+//   }
+// }
+
+// Usage
+// .foo {
+//   float: left;
+//   width: 1000px;
+// 
+//   @include responsive(tablet) {
+//     float: none;
+//     width: 600px;
+//   }
+//   @include responsive(smartphoneLarge) {
+//     width: 480px;
+//   }
+//   @include responsive(smartphoneSmall) {
+//     width: 280px;
+//   }
+// }
+

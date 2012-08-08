@@ -1,0 +1,50 @@
+// ==========================================================
+// merged.scss
+// Base Version 1.5
+// 
+// Merges all listed stylesheets and does the SASS & Compass magic
+// DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+// ==========================================================
+
+
+// =============================================================================
+// SASS Setup
+// =============================================================================
+@import "compass/css3";						// Compass setup
+@import "_settings/_all";					// SASS Settings
+
+
+// =============================================================================
+// Normalize and helpers
+// =============================================================================
+@import "globals/_normalize";			// Normalize elements accross all browsers
+@import "globals/_helper";				// Helper classes for developement
+
+
+// =============================================================================
+// Typography and Layout
+// =============================================================================
+@import "globals/_base";					// Base Layout
+@import "globals/_grid";					// Grid setup
+
+@import "globals/_typography";		// Basic Typography
+@import "globals/_tables"; 				// Basic styling of tables
+@import "globals/_forms";					// Basic styling of forms
+
+@import "globals/_t3-general";		// TYPO3 element styling
+@import "globals/_css3-fallbacks"; // Modernizr driven Fallbacks for CSS3-Props
+
+
+// =============================================================================
+// Extensions & Components
+// =============================================================================
+@import "modules/_module";				// Module X or Page X
+@import "ext/_exinitFX";					// EXT:ExinitFX
+@import "ext/_news";							// EXT:News
+
+
+// =============================================================================
+// Media-Queries
+// =============================================================================
+@import "globals/_media-queries";	// Media-Queries
+
