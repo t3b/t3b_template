@@ -7,7 +7,7 @@
 
 
 /* =============================================================================
-General stylings
+$ General stylings
 ================================================================================ */
 .intend { padding:0 20px; }
 .csc-textpic-caption { font-size: $baseFontSize -3; }
@@ -16,7 +16,7 @@ General stylings
 .align-left { text-align: left; }
 
 /* =============================================================================
-CSC-Frames
+$ CSC-Frames
 ================================================================================ */
 .csc-frame-rulerBefore { border-top: 1px $basicBorderStyle $basicBorderColor; }
 .csc-frame-rulerAfter { border-bottom: 1px $basicBorderStyle $basicBorderColor; }
@@ -27,7 +27,7 @@ CSC-Frames
 
 
 /* =============================================================================
-CSC-Sitemap
+$ CSC-Sitemap
 ================================================================================ */
 .csc-sitemap {
 	list-style: disc;
@@ -36,7 +36,7 @@ CSC-Sitemap
 
 
 /* =============================================================================
-CSC-Uploads
+$ CSC-Uploads
 ================================================================================ */
 .csc-uploads {
   .csc-uploads-icon {

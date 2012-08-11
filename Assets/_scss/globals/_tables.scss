@@ -7,7 +7,7 @@
 
 
 /* =============================================================================
-Tables
+$ Tables
 ================================================================================ */
 table {
   max-width: 100% !important;
@@ -27,7 +27,7 @@ td { padding: 9px 8px 7px; }
 
 
 /* =============================================================================
-Contenttable-1 (Bordered Table w/ odd & even)
+$ Contenttable-1 (Bordered Table w/ odd & even)
 ================================================================================ */
 .contenttable-1 {
   border: 1px $basicBorderStyle $basicBorderColor;
@@ -44,7 +44,7 @@ Contenttable-1 (Bordered Table w/ odd & even)
 
 
 /* =============================================================================
-Contenttable-2 (Clean Table)
+$ Contenttable-2 (Clean Table)
 ================================================================================ */
 .contenttable-2 {
   td, th { border-bottom: 1px $basicBorderStyle $basicBorderColor; }
@@ -52,7 +52,7 @@ Contenttable-2 (Clean Table)
 
 
 /* =============================================================================
-Contenttable-3 (Clean Table (condensed))
+$ Contenttable-3 (Clean Table (condensed))
 ================================================================================ */
 .contenttable-3 {
   td, th { border-bottom: 1px $basicBorderStyle $basicBorderColor; }
