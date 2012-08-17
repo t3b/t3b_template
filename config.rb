@@ -26,7 +26,7 @@ output_style = :compressed
 # The environment mode.
 # Defaults to :production, can also be :development
 # Use :development to see line numbers, file names, etc
-environment = :production
+environment = :development
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 line_comments = false
