@@ -47,8 +47,4 @@ intermediate
 publish
 .idea
 
-# build script local files
-build/buildinfo.properties
-build/config/buildinfo.properties
-
 Assets/js/vendor/modernizr-2.6.1.min.js
