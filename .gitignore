@@ -47,4 +47,7 @@ intermediate
 publish
 .idea
 
+
+# Ignore user generated files
 Assets/js/vendor/modernizr-2.6.1.min.js
+Assets/css/*.css
