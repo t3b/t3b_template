@@ -29,7 +29,7 @@ $ Headings
   font-family: $headingsFontFamily;
   font-weight: $headingsFontWeight;
   color: $headingsColor;
-  line-height: 1.1;
+  line-height: $headingsLineHeight;
   margin: 1em 0 0;
   text-rendering: optimizeLegibility;
   @include hyphens;

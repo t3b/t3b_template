@@ -36,19 +36,20 @@ $bold:									700;
 $regular:								400;
 $light:									300;
 
-$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serifFontFamily:       Georgia, "Times New Roman", Times, serif;
-$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
+$sansFontFamily:				"Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFontFamily:				Georgia, "Times New Roman", Times, serif;
+$monoFontFamily:				Menlo, Monaco, Consolas, "Courier New", monospace;
 
-$baseFontSize:          16px;
-$baseFontFamily:        $sansFontFamily;
-$baseFontWeight:        $regular;
-$baseLineHeight:        1.5;
-$baseColor: 						#3C474B;
+$baseFontSize:					16px;
+$baseFontFamily:				$sansFontFamily;
+$baseFontWeight:				$regular;
+$baseLineHeight:				1.5;
+$baseColor:							#3C474B;
 
-$headingsFontFamily:    inherit; // empty to use $baseFontFamily
-$headingsFontWeight:    $bold;
-$headingsColor:         #000;
+$headingsFontFamily:		inherit; // empty to use $baseFontFamily
+$headingsFontWeight:		$bold;
+$headingsColor:					#000;
+$headingsLineHeight:		1.1;
 $lineHeightSpacing:			$baseFontSize * $baseLineHeight;
 
 
@@ -123,6 +124,6 @@ $zindexModal: 				  1020;	// Modal sections
 
 $zindexDropdown:				1070;	// Dropdowns
 $zindexPopover:					1080;	// Popover
-$zindexPreloader:     	1090;	// Preloader
+$zindexPreloader:				1090;	// Preloader
 
 
