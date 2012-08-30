@@ -32,15 +32,12 @@
 @import "globals/_forms";					// Basic styling of forms
 
 @import "globals/_t3-general";		// TYPO3 element styling
-@import "globals/_css3-fallbacks"; // Modernizr driven Fallbacks for CSS3-Props
 
 
 // =============================================================================
 // Extensions & Components
 // =============================================================================
-@import "modules/_module";				// Module X or Page X
-@import "ext/_exinitFX";					// EXT:ExinitFX
-@import "ext/_news";							// EXT:News
+// @import "modules/_module";				// Module X or Page X
 
 
 // =============================================================================
