@@ -91,26 +91,47 @@
   &:after { clear: both; }
 }
 
-// ======================== Media Queries ===============================
-// Be Prepared for SASS 3.2, embrace yourself!
+// ======================== OldIE-Class fixes =============================== >>> Requires SASS 3.2 <<<<
+@mixin ie6 {
+  .lt-ie7 & {
+    @content;
+  }
+}
+@mixin ie7 {
+  .lt-ie8 & {
+    @content;
+  }
+}
+@mixin ie8 {
+  .lt-ie9 & {
+    @content;
+  }
+}
+// Usage
+// .foo {
+//   display: block;
+//   @include ie6 {
+//     display: none;
+//   }
+//  }
 
-// @mixin responsive($media) {
-//   @if $media == tablet {
-//     @media screen and (max-width:$query-tablet) { @content; }
-//   }
-//   @else if $media == smartphoneLarge {
-//     @media screen and (max-width:$query-smartphoneLarge) { @content; }
-//   }
-//   @else if $media == smartphoneSmall {
-//     @media screen and (max-width:$query-smartphoneSmall) { @content; }
-//   }
-// }
 
+// ======================== Media Queries =============================== >>> Requires SASS 3.2 <<<<
+@mixin responsive($media) {
+  @if $media == tablet {
+    @media screen and (max-width:$query-tablet) { @content; }
+  }
+  @else if $media == smartphoneLarge {
+    @media screen and (max-width:$query-smartphoneLarge) { @content; }
+  }
+  @else if $media == smartphoneSmall {
+    @media screen and (max-width:$query-smartphoneSmall) { @content; }
+  }
+}
 // Usage
 // .foo {
 //   float: left;
 //   width: 1000px;
-// 
 //   @include responsive(tablet) {
 //     float: none;
 //     width: 600px;

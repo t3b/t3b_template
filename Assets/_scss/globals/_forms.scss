@@ -11,6 +11,11 @@ $ General styling of Input Fields
 ================================================================================ */
 @include placeHolder($placeHolderColor);
 
+label {
+  @include inline-block;
+  font-size: $baseFontSize - 2;
+}
+
 textarea,
 input[type="date"],
 input[type="email"],
@@ -20,7 +25,8 @@ input[type="tel"],
 input[type="text"],
 input[type="time"],
 input[type="url"],
-input[type="number"] {
+input[type="number"],
+input[type="search"] {
   color: $inputTextColor;  
   border: 1px solid $inputBorderColor;
   font-size: $baseFontSize - 2;

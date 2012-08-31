@@ -21,6 +21,11 @@ jQuery(function($) {
 </script>
 ```
 
+Requirements
+-------------------------
+* SASS 3.2
+* Compass 0.12.2
+
 Documentation
 -------------------------
 _(Coming soon)_
