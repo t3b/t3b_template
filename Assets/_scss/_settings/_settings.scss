@@ -106,13 +106,19 @@ $buttonBorderColor:			$buttonBackground;
 // =============================================================================
 // Warnings & Errors
 // =============================================================================
-$warningBackground:			#FAFAEC;
-$warningTextColor:			#555;
-$warningBorder:					1px $basicBorderStyle #FCD344;
+$infoBackground:				#e8f3fa;
+$infoTextColor:					$cd-darkGray;
+$infoBorder:						1px $basicBorderStyle #9cd7e7;
 
-$errorBackground:				#dc0039;
-$errorTextColor:				#FFF;
-$errorBorder:						1px $basicBorderStyle #901132;
+$warningBackground:			#faf6e8;
+$warningTextColor:			$cd-darkGray;
+$warningBorder:					1px $basicBorderStyle #e7db9c;
+
+$errorBackground:				#faeee8;
+$errorTextColor:				$cd-darkGray;
+$errorBorder:						1px $basicBorderStyle #e7b19c;
+
+
 
 
 

@@ -107,10 +107,16 @@
     @content;
   }
 }
+// Usage
+// .foo {
+//   display: block;
+//   @include ie6 {
+//     display: none;
+//   }
+//  }
+
 
 // ======================== Media Queries =============================== >>> Requires SASS 3.2 <<<<
-// Be Prepared for SASS 3.2, embrace yourself!
-
 @mixin responsive($media) {
   @if $media == tablet {
     @media screen and (max-width:$query-tablet) { @content; }
@@ -122,15 +128,10 @@
     @media screen and (max-width:$query-smartphoneSmall) { @content; }
   }
 }
-
 // Usage
 // .foo {
 //   float: left;
 //   width: 1000px;
-//   @include ie6 {
-//     display: none;
-//   }
-
 //   @include responsive(tablet) {
 //     float: none;
 //     width: 600px;
