@@ -26,10 +26,9 @@ $ Maincontainer
 /* =============================================================================
 $ Sprites
 ================================================================================ */
-// .sprite { background-image: url('../img/sprite.png'); background-repeat: no-repeat; }
+%sprite { background-image: url('../img/sprite.png'); background-repeat: no-repeat; }
 // Usage:
 // @extend .sprite;
-// or use the class itself
 
 
 /* =============================================================================
@@ -64,7 +63,7 @@ $ Header
 }
 
 /* ======================== Search ======================== */
-#searchform {
+.searchform {
 	position: absolute;
 	right: 30px;
 	top: 30px;
@@ -72,7 +71,7 @@ $ Header
 		float: left;
 		display: block;
 	}
-	input[type="text"] {    
+	input[type="search"] {    
 	}
 	input[type="submit"] {
 	}

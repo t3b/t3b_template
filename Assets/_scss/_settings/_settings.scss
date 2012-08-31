@@ -36,19 +36,20 @@ $bold:									700;
 $regular:								400;
 $light:									300;
 
-$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serifFontFamily:       Georgia, "Times New Roman", Times, serif;
-$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
+$sansFontFamily:				"Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFontFamily:				Georgia, "Times New Roman", Times, serif;
+$monoFontFamily:				Menlo, Monaco, Consolas, "Courier New", monospace;
 
-$baseFontSize:          16px;
-$baseFontFamily:        $sansFontFamily;
-$baseFontWeight:        $regular;
-$baseLineHeight:        1.5;
-$baseColor: 						#3C474B;
+$baseFontSize:					16px;
+$baseFontFamily:				$sansFontFamily;
+$baseFontWeight:				$regular;
+$baseLineHeight:				1.5;
+$baseColor:							#3C474B;
 
-$headingsFontFamily:    inherit; // empty to use $baseFontFamily
-$headingsFontWeight:    $bold;
-$headingsColor:         #000;
+$headingsFontFamily:		inherit; // empty to use $baseFontFamily
+$headingsFontWeight:		$bold;
+$headingsColor:					#000;
+$headingsLineHeight:		1.1;
 $lineHeightSpacing:			$baseFontSize * $baseLineHeight;
 
 
@@ -105,13 +106,19 @@ $buttonBorderColor:			$buttonBackground;
 // =============================================================================
 // Warnings & Errors
 // =============================================================================
-$warningBackground:			#FAFAEC;
-$warningTextColor:			#555;
-$warningBorder:					1px $basicBorderStyle #FCD344;
+$infoBackground:				#e8f3fa;
+$infoTextColor:					$cd-darkGray;
+$infoBorder:						1px $basicBorderStyle #9cd7e7;
 
-$errorBackground:				#dc0039;
-$errorTextColor:				#FFF;
-$errorBorder:						1px $basicBorderStyle #901132;
+$warningBackground:			#faf6e8;
+$warningTextColor:			$cd-darkGray;
+$warningBorder:					1px $basicBorderStyle #e7db9c;
+
+$errorBackground:				#faeee8;
+$errorTextColor:				$cd-darkGray;
+$errorBorder:						1px $basicBorderStyle #e7b19c;
+
+
 
 
 
@@ -123,6 +130,6 @@ $zindexModal: 				  1020;	// Modal sections
 
 $zindexDropdown:				1070;	// Dropdowns
 $zindexPopover:					1080;	// Popover
-$zindexPreloader:     	1090;	// Preloader
+$zindexPreloader:				1090;	// Preloader
 
 
