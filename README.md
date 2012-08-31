@@ -23,8 +23,8 @@ jQuery(function($) {
 
 Requirements
 -------------------------
-SASS 3.2
-Compass 0.12.2
+* SASS 3.2
+* Compass 0.12.2
 
 Documentation
 -------------------------
