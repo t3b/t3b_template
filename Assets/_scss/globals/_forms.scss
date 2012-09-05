@@ -12,8 +12,8 @@ $ General styling of Input Fields
 @include placeHolder($placeHolderColor);
 
 label {
-        @include inline-block;
-        font-size: $baseFontSize - 2;
+	@include inline-block;
+	font-size: $baseFontSize - 2;
 }
 
 textarea,
@@ -27,21 +27,21 @@ input[type="time"],
 input[type="url"],
 input[type="number"],
 input[type="search"] {
-        color: $inputTextColor;
-        border: 1px solid $inputBorderColor;
-        font-size: $baseFontSize - 2;
-        @if $inputRadius != 0 { @include border-radius($inputRadius); }
-        @include transition(border-color .2s ease);
-        &:hover { border-color: darken($inputBorderColor, 20%); }
-        &:focus { outline: 0; border-color: $cd-main; }
+	color: $inputTextColor;
+	border: 1px solid $inputBorderColor;
+	font-size: $baseFontSize - 2;
+	@if $inputRadius != 0 { @include border-radius($inputRadius); }
+	@include transition(border-color .2s ease);
+	&:hover { border-color: darken($inputBorderColor, 20%); }
+	&:focus { outline: 0; border-color: $cd-main; }
 }
 :invalid {
-        border-color: $inputErrorBorder !important;
-        color: $inputErrorTextColor !important;
+	border-color: $inputErrorBorder !important;
+	color: $inputErrorTextColor !important;
 }
 
 textarea {
-        min-height: 70px;
+	min-height: 70px;
 }
 
 .btn,
@@ -49,11 +49,11 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-        background: $buttonBackground;
-        padding: 3px 6px;
-        color: $buttonTextColor;
-        @if $buttonRadius != 0 { @include border-radius($buttonRadius); }
-        @if $buttonBorderSize != 0 { border: $buttonBorderSize $buttonBorderStyle $buttonBorderColor; }
+	background: $buttonBackground;
+	padding: 3px 6px;
+	color: $buttonTextColor;
+	@if $buttonRadius != 0 { @include border-radius($buttonRadius); }
+	@if $buttonBorderSize != 0 { border: $buttonBorderSize $buttonBorderStyle $buttonBorderColor; }
 }
 
 
@@ -61,15 +61,15 @@ input[type="submit"] {
 $ General styling of Form Fields
 ================================================================================ */
 form {
-        ol { list-style: none; }
-        legend { display: none; }
+	ol { list-style: none; }
+	legend { display: none; }
 }
 label {
 
-        strong {
+	strong {
 
-        }
-        em {
+	}
+	em {
 
-        }
+	}
 }
