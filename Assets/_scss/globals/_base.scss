@@ -36,13 +36,13 @@ $ Header
 ================================================================================ */
 /* ======================== Logo ======================== */
 #header {
-	.logo {	  
-	  position: absolute;
-	  top: 30px;
-	  left: 30px;
-	  @include img-wh('logo.png');
-	  background: url('../img/logo.png');
-	  &:hover {	}
+        .logo {
+                position: absolute;
+                top: 30px;
+                left: 30px;
+                @include img-wh('logo.png');
+                background: url('../img/logo.png');
+                &:hover {	}
 	}
 }
 
@@ -53,9 +53,9 @@ $ Header
 	top: 30px;
 	ul { position: relative; }
 	li {
-	  float: left;
-	  &:hover a { }
-	  &.active a { }
+                float: left;
+                &:hover a { }
+                &.active a { }
 	}
 	a {
 		display: block;
