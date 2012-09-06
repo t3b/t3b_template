@@ -11,136 +11,135 @@
 // =============================================================================
 // ======================== Image-Dimensions =============================
 @mixin img-wh($img) {
-  width: image-width($img);
-  height: image-height($img);
+	width: image-width($img);
+	height: image-height($img);
 }
 @mixin img-whr($img) {
-  background-size: image-width($img)/2 image-height($img)/2;
+	background-size: image-width($img)/2 image-height($img)/2;
 }
 
 // ======================== CSS3 Word-breaker ============================
 @mixin hyphens {
-  -ms-word-break: break-all;
-      word-break: break-all;
-      word-break: break-word;
-  -webkit-hyphens: auto;
-     -moz-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+	-ms-word-break: break-all;
+			word-break: break-all;
+			word-break: break-word;
+	-webkit-hyphens: auto;
+		 -moz-hyphens: auto;
+			-ms-hyphens: auto;
+					hyphens: auto;
 }
 
 // ======================== REM Unit Mixin ===============================
 @mixin font-size($size, $is-important: false) {
-  @if $is-important {
-    font-size: $size + px !important;
-    font-size: ($size / 10) + rem !important;
-  } @else {
-    font-size: $size + px;
-    font-size: ($size / 10) + rem;
-  }
+	@if $is-important {
+		font-size: $size + px !important;
+		font-size: ($size / 10) + rem !important;
+	} @else {
+		font-size: $size + px;
+		font-size: ($size / 10) + rem;
+	}
 }
 
 // ======================== Reset list ==================================
 @mixin reset-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 // ======================== Placeholder styling =========================
 @mixin placeHolder($color) {
-  :-webkit-input-placeholder { color: $color; }
-  :-moz-placeholder { color: $color; }
-  :-ms-input-placeholder { color: $color; }
+	:-webkit-input-placeholder { color: $color; }
+	:-moz-placeholder { color: $color; }
+	:-ms-input-placeholder { color: $color; }
 }
 
 // ======================== CSS3 Triangle ===============================
 @mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: solid   $triangleSize;
-  @if ($triangleDirection == top) {
-    border-color: $triangleColor transparent transparent transparent;
-  } @if ($triangleDirection == bottom) {
-    border-color: transparent transparent $triangleColor transparent;
-  } @if ($triangleDirection == left) {
-    border-color: transparent transparent transparent $triangleColor;
-  } @if ($triangleDirection == right) {
-    border-color: transparent $triangleColor transparent transparent;
-  }
-  // .example { @include css-triangle(5px, #fff, bottom); }
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border: solid   $triangleSize;
+	@if ($triangleDirection == top) {
+		border-color: $triangleColor transparent transparent transparent;
+	} @if ($triangleDirection == bottom) {
+		border-color: transparent transparent $triangleColor transparent;
+	} @if ($triangleDirection == left) {
+		border-color: transparent transparent transparent $triangleColor;
+	} @if ($triangleDirection == right) {
+		border-color: transparent $triangleColor transparent transparent;
+	}
+	// .example { @include css-triangle(5px, #fff, bottom); }
 }
 
 // ======================== cross browser inline-block ===============================
 // http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/
 @mixin inline-block {
-  display: -moz-inline-stack;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  *display: inline;
-  vertical-align: top;
-  *zoom: 1;
+	display: -moz-inline-stack;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	*display: inline;
+	vertical-align: top;
+	*zoom: 1;
 }
 
 // ======================== Micro Clearfix ===============================
 @mixin clearfix() {
-  *zoom:1;
-  &:before, &:after { content: ""; display: table; }
-  &:after { clear: both; }
+	*zoom:1;
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
 }
 
 // ======================== OldIE-Class fixes =============================== >>> Requires SASS 3.2 <<<<
 @mixin ie6 {
-  .lt-ie7 & {
-    @content;
-  }
+	.lt-ie7 & {
+		@content;
+	}
 }
 @mixin ie7 {
-  .lt-ie8 & {
-    @content;
-  }
+	.lt-ie8 & {
+		@content;
+	}
 }
 @mixin ie8 {
-  .lt-ie9 & {
-    @content;
-  }
+	.lt-ie9 & {
+		@content;
+	}
 }
 // Usage
 // .foo {
-//   display: block;
-//   @include ie6 {
-//     display: none;
-//   }
-//  }
+//	display: block;
+//		@include ie6 {
+// 			display: none;
+//		}
+//	}
 
 
 // ======================== Media Queries =============================== >>> Requires SASS 3.2 <<<<
 @mixin responsive($media) {
-  @if $media == tablet {
-    @media screen and (max-width:$query-tablet) { @content; }
-  }
-  @else if $media == smartphoneLarge {
-    @media screen and (max-width:$query-smartphoneLarge) { @content; }
-  }
-  @else if $media == smartphoneSmall {
-    @media screen and (max-width:$query-smartphoneSmall) { @content; }
-  }
+	@if $media == tablet {
+		@media screen and (max-width:$query-tablet) { @content; }
+	}
+	@else if $media == smartphoneLarge {
+		@media screen and (max-width:$query-smartphoneLarge) { @content; }
+	}
+	@else if $media == smartphoneSmall {
+		@media screen and (max-width:$query-smartphoneSmall) { @content; }
+	}
 }
 // Usage
 // .foo {
-//   float: left;
-//   width: 1000px;
-//   @include responsive(tablet) {
-//     float: none;
-//     width: 600px;
-//   }
-//   @include responsive(smartphoneLarge) {
-//     width: 480px;
-//   }
-//   @include responsive(smartphoneSmall) {
-//     width: 280px;
-//   }
+// 	float: left;
+// 	width: 1000px;
+// 	@include responsive(tablet) {
+// 		float: none;
+// 		width: 600px;
+// 	}
+// 	@include responsive(smartphoneLarge) {
+// 		width: 480px;
+// 	}
+// 	@include responsive(smartphoneSmall) {
+// 		width: 280px;
+// 	}
 // }
-

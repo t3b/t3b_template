@@ -33,7 +33,7 @@ input[type="search"] {
 	@if $inputRadius != 0 { @include border-radius($inputRadius); }
 	@include transition(border-color .2s ease);
 	&:hover { border-color: darken($inputBorderColor, 20%); }
-	&:focus { outline: 0; border-color: $cd-main; }
+	&:focus { outline: 0; border-color: $inputFocusBorder; }
 }
 :invalid {
 	border-color: $inputErrorBorder !important;
