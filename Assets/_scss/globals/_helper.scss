@@ -51,7 +51,7 @@
 
 /* Contain floats: h5bp.com/q */
 .clearfix {
-  @include clearfix();
+	@include clearfix();
 }
 
 .breaker {

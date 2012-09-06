@@ -12,18 +12,18 @@ $ General stylings
 .intend { padding:0 20px; }
 .csc-textpic-caption { font-size: $baseFontSize -3; }
 .align-center	{ text-align: center; }
-.align-right { text-align: right; }
-.align-left { text-align: left; }
+.align-right 	{ text-align: right; }
+.align-left 	{ text-align: left; }
 
 /* =============================================================================
 $ CSC-Frames
 ================================================================================ */
-.csc-frame-rulerBefore { border-top: 1px $basicBorderStyle $basicBorderColor; }
-.csc-frame-rulerAfter { border-bottom: 1px $basicBorderStyle $basicBorderColor; }
+.csc-frame-rulerBefore 	{ border-top: 		1px $basicBorderStyle $basicBorderColor; }
+.csc-frame-rulerAfter 	{ border-bottom: 	1px $basicBorderStyle $basicBorderColor; }
 
-.csc-frame-indent 		{ padding-left: $layoutWidth / 10; }
-.csc-frame-indent3366 { padding-left: $layoutWidth / 3; }
-.csc-frame-indent6633 { padding-right: $layoutWidth / 3; }
+.csc-frame-indent			{ padding: 			0 $layoutWidth / 10; }
+.csc-frame-indent3366 { padding-left: 	$layoutWidth / 3; }
+.csc-frame-indent6633 { padding-right: 	$layoutWidth / 3; }
 
 
 /* =============================================================================
@@ -39,10 +39,6 @@ $ CSC-Sitemap
 $ CSC-Uploads
 ================================================================================ */
 .csc-uploads {
-  .csc-uploads-icon {
-
-  }
-  .csc-uploads-fileName {
-
-  }
+	.csc-uploads-icon {}
+	.csc-uploads-fileName {}
 }

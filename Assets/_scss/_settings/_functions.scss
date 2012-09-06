@@ -10,14 +10,14 @@
 // Convert to number
 // =============================================================================
 @function convert-number-to-word($num) {
-  $count: 1;
-  @each $word in one,two,three,four,five,six,seven,eight,nine,ten,eleven,
-    twelve,thirteen,fourteen,fifteen,sixteen,seventeen,eighteen,nineteen,
-    twenty,twentyone,twentytwo,twentythree,twentyfour {
-    @if ($count == $num) { @return $word; }
-    $count: $count + 1;
-  }
-  @return "invalid";
+	$count: 1;
+	@each $word in one,two,three,four,five,six,seven,eight,nine,ten,eleven,
+		twelve,thirteen,fourteen,fifteen,sixteen,seventeen,eighteen,nineteen,
+		twenty,twentyone,twentytwo,twentythree,twentyfour {
+		@if ($count == $num) { @return $word; }
+		$count: $count + 1;
+	}
+	@return "invalid";
 }
 
 
@@ -25,5 +25,5 @@
 // Grid Calc
 // =============================================================================
 @function gridCalc($colNumber, $totalColumns) {
-  @return ($columWidth * $colNumber) + ($columnGutter * ($colNumber - 1));
+	@return ($columWidth * $colNumber) + ($columnGutter * ($colNumber - 1));
 }

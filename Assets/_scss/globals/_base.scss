@@ -14,13 +14,13 @@ $ Maincontainer
 	width: $layoutWidth;
 	position: relative;
 }
-#header { }
-#content { }
-#footer { }
+#header {}
+#content {}
+#footer {}
 
-#content .wrapper { }
-#footer .wrapper { }
-#footer .wrapper { }
+#content .wrapper {}
+#footer .wrapper {}
+#footer .wrapper {}
 
 
 /* =============================================================================
@@ -28,7 +28,7 @@ $ Sprites
 ================================================================================ */
 %sprite { background-image: url('../img/sprite.png'); background-repeat: no-repeat; }
 // Usage:
-// @extend .sprite;
+// @extend %sprite;
 
 
 /* =============================================================================
@@ -36,13 +36,13 @@ $ Header
 ================================================================================ */
 /* ======================== Logo ======================== */
 #header {
-	.logo {	  
-	  position: absolute;
-	  top: 30px;
-	  left: 30px;
-	  @include img-wh('logo.png');
-	  background: url('../img/logo.png');
-	  &:hover {	}
+	.logo {
+		position: absolute;
+		top: 30px;
+		left: 30px;
+		@include img-wh('logo.png');
+		background: url('../img/logo.png');
+		&:hover {}
 	}
 }
 
@@ -53,9 +53,9 @@ $ Header
 	top: 30px;
 	ul { position: relative; }
 	li {
-	  float: left;
-	  &:hover a { }
-	  &.active a { }
+		float: left;
+		&:hover a {}
+		&.active a {}
 	}
 	a {
 		display: block;
@@ -71,7 +71,7 @@ $ Header
 		float: left;
 		display: block;
 	}
-	input[type="search"] {    
+	input[type="search"] {
 	}
 	input[type="submit"] {
 	}
@@ -104,6 +104,3 @@ $ Chromeframe
 	text-align: center;
 	a { border-bottom: 1px dotted; }
 }
-
-
-
