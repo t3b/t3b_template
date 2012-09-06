@@ -35,16 +35,17 @@ $ Sprites
 $ Header
 ================================================================================ */
 /* ======================== Logo ======================== */
-#header {
-	.logo {
-		position: absolute;
-		top: 30px;
-		left: 30px;
-		@include img-wh('logo.png');
-		background: url('../img/logo.png');
-		&:hover {}
-	}
+.logo {
+	@include img-wh('logo.png');
+	background: url('../img/logo.png');
+	&:hover {}
 }
+#header .logo {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+
 
 /* ======================== Navi ======================== */
 #navi {
@@ -71,10 +72,8 @@ $ Header
 		float: left;
 		display: block;
 	}
-	input[type="search"] {
-	}
-	input[type="submit"] {
-	}
+	input[type="search"] {}
+	input[type="submit"] {}
 }
 
 
