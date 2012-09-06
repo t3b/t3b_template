@@ -10,17 +10,15 @@
 $ Tables
 ================================================================================ */
 table {
-  max-width: 100% !important;
-  width: 100%;
-  caption {
-    text-align: left; // UA-Style is centered
-  }
+	max-width: 100% !important;
+	width: 100%;
+	caption {	text-align: left; }
 }
 th {
-  padding:7px 8px 3px;
-  text-align: left; // UA-Style is centered
-  font-weight:400;
-  color: darken( $baseColor, 30% );
+	padding:7px 8px 3px;
+	text-align: left; // UA-Style is centered
+	font-weight:400;
+	color: darken( $baseColor, 30% );
 }
 td { padding: 9px 8px 7px; }
 
@@ -30,16 +28,16 @@ td { padding: 9px 8px 7px; }
 $ Contenttable-1 (Bordered Table w/ odd & even)
 ================================================================================ */
 .contenttable-1 {
-  border: 1px $basicBorderStyle $basicBorderColor;
-  border-collapse: separate;
-  td, th {
-    border-left: 1px $basicBorderStyle $basicBorderColor;
-    border-bottom: 1px $basicBorderStyle $basicBorderColor;
-  }
-  .tr-even { background: #FFF; }
-  .tr-odd { background: #F9F9F9; }
-  .tr-last td { border-bottom: 0; }
-  .td-0 { border-left: 0; }
+	border: 1px $basicBorderStyle $basicBorderColor;
+	border-collapse: separate;
+	td, th {
+		border-left: 1px $basicBorderStyle $basicBorderColor;
+		border-bottom: 1px $basicBorderStyle $basicBorderColor;
+	}
+	.tr-even { background: #FFF; }
+	.tr-odd { background: #F9F9F9; }
+	.tr-last td { border-bottom: 0; }
+	.td-0 { border-left: 0; }
 }
 
 
@@ -47,7 +45,7 @@ $ Contenttable-1 (Bordered Table w/ odd & even)
 $ Contenttable-2 (Clean Table)
 ================================================================================ */
 .contenttable-2 {
-  td, th { border-bottom: 1px $basicBorderStyle $basicBorderColor; }
+	td, th { border-bottom: 1px $basicBorderStyle $basicBorderColor; }
 }
 
 
@@ -55,7 +53,7 @@ $ Contenttable-2 (Clean Table)
 $ Contenttable-3 (Clean Table (condensed))
 ================================================================================ */
 .contenttable-3 {
-  td, th { border-bottom: 1px $basicBorderStyle $basicBorderColor; }
-  th { padding: 5px 8px 2px; }
-  td { padding: 5px 8px 3px; }
+	td, th { border-bottom: 1px $basicBorderStyle $basicBorderColor; }
+	th { padding: 5px 8px 2px; }
+	td { padding: 5px 8px 3px; }
 }

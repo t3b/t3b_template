@@ -12,12 +12,16 @@ $ Links and other stuff
 a,
 a:visited { color: $linkColor; text-decoration: none; }
 a {
-  &:hover,
-  &:active { color: $linkColorHover; }
+	&:hover,
+	&:active { color: $linkColorHover; }
 }
 
 ::-moz-selection,
-::selection { background: $cd-main; color: #fff; text-shadow: none; }
+::selection {
+	background: $cd-main;
+	color: #fff;
+	text-shadow: none;
+}
 
 
 /* =============================================================================
@@ -26,44 +30,44 @@ $ Headings
 #{headings(all)},
 .h1, .h2, .h3,
 .h4, .h5, .h6 {  
-  font-family: $headingsFontFamily;
-  font-weight: $headingsFontWeight;
-  color: $headingsColor;
-  line-height: $headingsLineHeight;
-  margin: 1em 0 0;
-  text-rendering: optimizeLegibility;
-  @include hyphens;
-  small {
-    font-size: 70%;
-    color: lighten($headingsColor, 30%);
-  }
+	font-family: $headingsFontFamily;
+	font-weight: $headingsFontWeight;
+	color: $headingsColor;
+	line-height: $headingsLineHeight;
+	margin: 1em 0 0;
+	text-rendering: optimizeLegibility;
+	@include hyphens;
+	small {
+		font-size: 70%;
+		color: lighten($headingsColor, 30%);
+	}
 }
 h1, .h1 {
-  font-size: 34px;  
+	font-size: 34px;
 }
 h2, .h2 {
-  font-size: 28px;
+	font-size: 28px;
 }
 h3, .h3 {
-  font-size: 24px;
+	font-size: 24px;
 }
 h4, .h4 {
-  font-size: 22px;
+	font-size: 22px;
 }
 h5, .h5 {
-  font-size: 20px;
-  margin: 0;
+	font-size: 20px;
+	margin: 0;
 }
 h6, .h6 {
-  font-size: 18px;
-  margin: 0;
+	font-size: 18px;
+	margin: 0;
 }
 
 
 /* =============================================================================
 $ Paragraphs
 ================================================================================ */
-p { margin: 0 0 1em; }
+p {	margin: 0 0 1em; }
 
 
 /* =============================================================================
@@ -85,10 +89,10 @@ ol ol ol ol { list-style: lower-alpha; }
 $ HTML-Elements
 ================================================================================ */
 hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px $basicBorderStyle $basicBorderColor;
-  margin: 1em 0;
-  padding: 0;
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px $basicBorderStyle $basicBorderColor;
+	margin: 1em 0;
+	padding: 0;
 }

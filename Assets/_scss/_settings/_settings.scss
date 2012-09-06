@@ -82,13 +82,12 @@ $inputTextColor:				lighten( $baseColor, 5% );
 $inputRadius:						3px;
 $placeHolderColor:			lighten( $inputTextColor, 20% );
 
+// ======================== 				:Focus			 	========================
+$inputFocusBorder:			$cd-main;
+
 // ======================== 				Error				 	========================
 $inputErrorBorder:			#dc0039;
 $inputErrorTextColor:		lighten( $baseColor, 5% );
-
-// ======================== 				Warning			 	========================
-$inputWarningBorder:		#dc0039;
-$inputWarningTextColor:	lighten( $baseColor, 5% );
 
 
 // =============================================================================
@@ -119,17 +118,12 @@ $errorTextColor:				$cd-darkGray;
 $errorBorder:						1px $basicBorderStyle #e7b19c;
 
 
-
-
-
 // ============================================================================
 // Z-Index Masterlist
 // ============================================================================
-$zindexDetail:     	    1010;	// Details
-$zindexModal: 				  1020;	// Modal sections
+$zindexDetail:					1010;	// Details
+$zindexModal: 					1020;	// Modal sections
 
 $zindexDropdown:				1070;	// Dropdowns
 $zindexPopover:					1080;	// Popover
 $zindexPreloader:				1090;	// Preloader
-
-
