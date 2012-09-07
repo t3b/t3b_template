@@ -14,13 +14,18 @@ $ Maincontainer
 	width: $layoutWidth;
 	position: relative;
 }
-#header {}
-#content {}
-#footer {}
+#header {
 
-#content .wrapper {}
-#footer .wrapper {}
-#footer .wrapper {}
+	.wrapper {}
+}
+#content {
+
+	.wrapper {}
+}
+#footer {
+	
+	.wrapper {}
+}
 
 
 /* =============================================================================

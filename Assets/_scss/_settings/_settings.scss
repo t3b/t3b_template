@@ -6,7 +6,6 @@
 // ==========================================================
 
 
-
 // =============================================================================
 // Gid-System
 // =============================================================================
@@ -49,8 +48,7 @@ $baseColor:							#3C474B;
 $headingsFontFamily:		inherit; // empty to use $baseFontFamily
 $headingsFontWeight:		$bold;
 $headingsColor:					#000;
-$headingsLineHeight:		1.1;
-$lineHeightSpacing:			$baseFontSize * $baseLineHeight;
+$verticalRhythm:				$baseFontSize * $baseLineHeight;
 
 
 // =============================================================================
