@@ -36,10 +36,6 @@ $ Headings
 	margin: 1em 0 0;
 	text-rendering: optimizeLegibility; // Optimized kerning for large font sizes
 	@include hyphens;
-	small {
-		font-size: 70%;
-		color: lighten($headingsColor, 30%);
-	}
 }
 h1, .h1 {
 	font-size: 34px;

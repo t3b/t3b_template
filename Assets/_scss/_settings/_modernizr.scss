@@ -6,12 +6,12 @@
 // ==========================================================
 
 // Usage:
-// .foo {
-// 		@include box-shadow(0 2px 2px rgba(#000, 0.2));
+//	.foo {
+//		@include box-shadow(0 2px 2px rgba(#000, 0.2));
 //		@include no-boxshadow {
 //			border: 1px solid lighten(#000, 0.8);
-// 		}
-// }
+//		}
+//	}
 
 
 
