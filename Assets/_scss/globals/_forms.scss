@@ -9,8 +9,6 @@
 /* =============================================================================
 $ General styling of Input Fields
 ================================================================================ */
-@include placeHolder($placeHolderColor);
-
 label {
 	@include inline-block;
 	font-size: $baseFontSize - 2;

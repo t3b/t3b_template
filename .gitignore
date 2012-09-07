@@ -49,5 +49,8 @@ publish
 
 
 # Ignore user generated files
-Assets/js/vendor/modernizr-2.6.1.min.js
+Assets/js/vendor/modernizr-2.6.2.min.js
 Assets/css/*.css
+Assets/_scss/main.scss
+
+Assets/_scss/main.scss
