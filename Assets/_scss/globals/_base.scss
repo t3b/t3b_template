@@ -8,6 +8,7 @@
 
 /* =============================================================================
 $ RWD Viewport rules
+DOCS: http://dev.w3.org/csswg/css-device-adapt/
 ================================================================================ */
 @if $isResponsive == 1 {
 	@-webkit-viewport { width: device-width; }
