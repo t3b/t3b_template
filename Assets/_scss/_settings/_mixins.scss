@@ -14,6 +14,12 @@
 	width: image-width($img);
 	height: image-height($img);
 }
+// Usage:
+// .foo {
+// 	@include img-wh('bar.png');
+// 	background: url('../img/bar.png');
+// }
+
 @mixin img-whr($img) {
 	background-size: image-width($img)/2 image-height($img)/2;
 }
