@@ -8,11 +8,18 @@
 
 /* For image replacement */
 .ir {
-	border: 0;
-	font: 0/0 a !important;
-	text-shadow: none !important;
-	color: transparent !important;
-	background-color: transparent;
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
 }
 
 /* Hide from both screenreaders and browsers: h5bp.com/u */

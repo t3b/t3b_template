@@ -47,13 +47,6 @@
 	padding: 0;
 }
 
-// ======================== Placeholder styling =========================
-@mixin placeHolder($color) {
-	:-webkit-input-placeholder { color: $color; }
-	:-moz-placeholder { color: $color; }
-	:-ms-input-placeholder { color: $color; }
-}
-
 // ======================== CSS3 Triangle ===============================
 @mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
 	content: "";

@@ -6,7 +6,6 @@
 // ==========================================================
 
 
-
 // =============================================================================
 // Gid-System
 // =============================================================================
@@ -29,8 +28,8 @@ $query-smartphoneSmall: 320px; // Phone - Portrait
 
 // =============================================================================
 // Typography
-// NOTE: 	Font-weights below are used to handle webfonts
-// 				If this layout doesnt use a webfont, dont change them
+//	NOTE:		Font-weights below are used to handle webfonts
+//					If this layout doesnt use a webfont, dont change them
 // =============================================================================
 $bold:									700;
 $regular:								400;
@@ -40,17 +39,20 @@ $sansFontFamily:				"Helvetica Neue", Helvetica, Arial, sans-serif;
 $serifFontFamily:				Georgia, "Times New Roman", Times, serif;
 $monoFontFamily:				Menlo, Monaco, Consolas, "Courier New", monospace;
 
+// ========================== Base font settings ==========================
 $baseFontSize:					16px;
 $baseFontFamily:				$sansFontFamily;
 $baseFontWeight:				$regular;
 $baseLineHeight:				1.5;
 $baseColor:							#3C474B;
 
+// =============================== Headings ===============================
 $headingsFontFamily:		inherit; // empty to use $baseFontFamily
 $headingsFontWeight:		$bold;
 $headingsColor:					#000;
-$headingsLineHeight:		1.1;
-$lineHeightSpacing:			$baseFontSize * $baseLineHeight;
+
+// ========================= Typographic settings =========================
+$verticalRhythm:				$baseFontSize * $baseLineHeight;
 
 
 // =============================================================================
@@ -68,7 +70,7 @@ $cd-main:								#0097d7;
 $cd-lightGray:					#AAA;
 $cd-darkGray:						#333;
 
-// ======================== 				Links					 ========================
+// ================================= Links ================================
 $linkColor:							$cd-main;
 $linkColorHover:				lighten($cd-main, 20%);
 
@@ -76,16 +78,15 @@ $linkColorHover:				lighten($cd-main, 20%);
 // =============================================================================
 // Input-Colors
 // =============================================================================
-// ======================== 				Basic 				========================
+// ================================ Basic =================================
 $inputBorderColor:			$basicBorderColor;
 $inputTextColor:				lighten( $baseColor, 5% );
 $inputRadius:						3px;
-$placeHolderColor:			lighten( $inputTextColor, 20% );
 
-// ======================== 				:Focus			 	========================
+// ================================ :Focus ================================
 $inputFocusBorder:			$cd-main;
 
-// ======================== 				Error				 	========================
+// =========================== Error / :invalid ===========================
 $inputErrorBorder:			#dc0039;
 $inputErrorTextColor:		lighten( $baseColor, 5% );
 
@@ -93,10 +94,12 @@ $inputErrorTextColor:		lighten( $baseColor, 5% );
 // =============================================================================
 // Buttons
 // =============================================================================
+// ============================= Button-Main ==============================
 $buttonBackground:			$cd-main;
 $buttonTextColor:				#FFF;
 $buttonRadius:					3px;
 
+// ============================= Button-Border ============================
 $buttonBorderSize:			1px;
 $buttonBorderStyle:			solid;
 $buttonBorderColor:			$buttonBackground;
@@ -105,14 +108,17 @@ $buttonBorderColor:			$buttonBackground;
 // =============================================================================
 // Warnings & Errors
 // =============================================================================
+// ============================== Info-Modal ==============================
 $infoBackground:				#e8f3fa;
 $infoTextColor:					$cd-darkGray;
 $infoBorder:						1px $basicBorderStyle #9cd7e7;
 
+// ============================= Warning-Modal ============================
 $warningBackground:			#faf6e8;
 $warningTextColor:			$cd-darkGray;
 $warningBorder:					1px $basicBorderStyle #e7db9c;
 
+// ============================== Error-Modal =============================
 $errorBackground:				#faeee8;
 $errorTextColor:				$cd-darkGray;
 $errorBorder:						1px $basicBorderStyle #e7b19c;
@@ -123,7 +129,6 @@ $errorBorder:						1px $basicBorderStyle #e7b19c;
 // ============================================================================
 $zindexDetail:					1010;	// Details
 $zindexModal: 					1020;	// Modal sections
-
 $zindexDropdown:				1070;	// Dropdowns
 $zindexPopover:					1080;	// Popover
 $zindexPreloader:				1090;	// Preloader
