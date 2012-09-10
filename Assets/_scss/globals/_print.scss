@@ -1,23 +1,11 @@
 /* ==========================================================
- * media-queries.scss
+ * print.scss
  *
- * Media-queries (adaptve layout)
- * DOCS: 
+ * Inlined to avoid another HTTP connection
+ * DOCS: h5bp.com/r
  * ========================================================== */
-/* RWD
-@-ms-viewport { width: device-width }
-@-webkit-viewport { width : device-width; }
-@-moz-viewport { width : device-width; }
-@-ms-viewport { width : device-width; }
-@-o-viewport { width : device-width; }
-@viewport { width : device-width; } */
 
 
-
-/* =============================================================================
-$ Print styles.
-Inlined to avoid another HTTP connection: h5bp.com/r
-================================================================================ */
 @media print {
 	* { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; } /* Black prints faster: h5bp.com/s */
 	a, a:visited { text-decoration: underline; }
