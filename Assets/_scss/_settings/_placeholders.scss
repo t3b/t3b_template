@@ -1,0 +1,33 @@
+// ==========================================================
+// placeholders.scss
+//
+// Placeholders to develope faster
+// We use placeholders to reduce duplicate code
+//
+// Usage:
+// @extend %name;
+//
+// DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+// ==========================================================
+
+
+// ======================== Reset list ==================================
+%reset-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+// ======================== Cross browser inline-block ===============================
+// http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/
+%inline-block {
+	display: -moz-inline-stack;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	*display: inline;
+	vertical-align: top;
+	*zoom: 1;
+}
+
+// ======================== Sprites ===============================
+%sprite { background-image: url('../img/sprite.png'); background-repeat: no-repeat; }
