@@ -21,7 +21,7 @@ javascripts_dir = "Assets/js"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output option: nested, expanded, compact, compressed
-output_style = :compressed
+output_style = :expanded
 
 # The environment mode.
 # Defaults to :production, can also be :development

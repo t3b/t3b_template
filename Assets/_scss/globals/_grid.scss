@@ -28,6 +28,7 @@ $ Grid Classes
 			width: gridCalc($i, $totalColumns);
 		}
 	}
+	
 	// Creating .row .offset-by-# classes
 	@for $i from 1 through $totalColumns - 2 {
 		.offset-by-#{convert-number-to-word($i)} {

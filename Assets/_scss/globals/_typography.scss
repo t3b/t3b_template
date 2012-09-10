@@ -29,18 +29,13 @@ $ Headings
 ================================================================================ */
 #{headings(all)},
 .h1, .h2, .h3,
-.h4, .h5, .h6 {  
+.h4, .h5, .h6 {
 	font-family: $headingsFontFamily;
 	font-weight: $headingsFontWeight;
 	color: $headingsColor;
-	line-height: $headingsLineHeight;
 	margin: 1em 0 0;
-	text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility; // Optimized kerning for large font sizes
 	@include hyphens;
-	small {
-		font-size: 70%;
-		color: lighten($headingsColor, 30%);
-	}
 }
 h1, .h1 {
 	font-size: 34px;
