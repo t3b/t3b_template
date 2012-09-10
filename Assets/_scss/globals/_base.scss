@@ -1,9 +1,22 @@
 /* ==========================================================
  * base.scss
  *
- * Basic styling for this site (f.e. Header, Footer and Content)
+ * Basic styling for this site (f.e. Header and Footer)
  * DOCS: 
  * ========================================================== */
+
+
+/* =============================================================================
+$ RWD Viewport rules
+DOCS: http://dev.w3.org/csswg/css-device-adapt/
+================================================================================ */
+@if $isResponsive == 1 {
+	@-webkit-viewport { width: device-width; }
+		 @-moz-viewport { width: device-width; }
+			@-ms-viewport { width: device-width; }
+			 @-o-viewport { width: device-width; }
+					@viewport { width: device-width; }
+}
 
 
 /* =============================================================================
@@ -29,46 +42,26 @@ $ Maincontainer
 
 
 /* =============================================================================
-$ Sprites
+$ Logos
 ================================================================================ */
-%sprite { background-image: url('../img/sprite.png'); background-repeat: no-repeat; }
-// Usage:
-// @extend %sprite;
-
-
-/* =============================================================================
-$ Header
-================================================================================ */
-/* ======================== Logo ======================== */
 .logo {
 	@include img-wh('logo.png');
 	background: url('../img/logo.png');
 	&:hover {}
-}
-#header .logo {
-	position: absolute;
-	top: 30px;
-	left: 30px;
-}
-
-
-/* ======================== Navi ======================== */
-#navi {
-	position: absolute;
-	right: 250px;
-	top: 30px;
-	ul { position: relative; }
-	li {
-		float: left;
-		&:hover a {}
-		&.active a {}
+	#header & {
+		position: absolute;
+		top: 30px;
+		left: 30px;
 	}
-	a {
-		display: block;
+	#footer & {
+		float: right;
 	}
 }
 
-/* ======================== Search ======================== */
+
+/* =============================================================================
+$ Searchforms
+================================================================================ */
 .searchform {
 	position: absolute;
 	right: 30px;
@@ -80,11 +73,6 @@ $ Header
 	input[type="search"] {}
 	input[type="submit"] {}
 }
-
-
-/* =============================================================================
-$ FCE's / Content
-================================================================================ */
 
 
 

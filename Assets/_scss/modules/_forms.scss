@@ -9,11 +9,6 @@
 /* =============================================================================
 $ General styling of Input Fields
 ================================================================================ */
-label {
-	@include inline-block;
-	font-size: $baseFontSize - 2;
-}
-
 textarea,
 input[type="date"],
 input[type="email"],
@@ -33,13 +28,12 @@ input[type="search"] {
 	&:hover { border-color: darken($inputBorderColor, 20%); }
 	&:focus { outline: 0; border-color: $inputFocusBorder; }
 }
+textarea {
+	min-height: 70px;
+}
 :invalid {
 	border-color: $inputErrorBorder !important;
 	color: $inputErrorTextColor !important;
-}
-
-textarea {
-	min-height: 70px;
 }
 
 .btn,
@@ -63,7 +57,8 @@ form {
 	legend { display: none; }
 }
 label {
-
+	@include inline-block;
+	font-size: $baseFontSize - 2;
 	strong {
 
 	}
