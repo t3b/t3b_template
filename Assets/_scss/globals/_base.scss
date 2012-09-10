@@ -37,27 +37,27 @@ $ Sprites
 
 
 /* =============================================================================
-$ Header
+$ Logos
 ================================================================================ */
-/* ======================== Logo ======================== */
 .logo {
 	@include img-wh('logo.png');
 	background: url('../img/logo.png');
 	&:hover {}
-}
-#header .logo {
-	position: absolute;
-	top: 30px;
-	left: 30px;
+	#header & {
+		position: absolute;
+		top: 30px;
+		left: 30px;
+	}
+	#footer & {
+		float: right;
+	}
 }
 
 
-/* ======================== Navi ======================== */
-#navi {
-	position: absolute;
-	right: 250px;
-	top: 30px;
-	ul { position: relative; }
+/* =============================================================================
+$ Navigations
+================================================================================ */
+.nav {
 	li {
 		float: left;
 		&:hover a {}
@@ -67,8 +67,25 @@ $ Header
 		display: block;
 	}
 }
+/* .nav */.site-nav {
+	// Main Navigation
+	#header & { // positioning on site-header
+		position: absolute;
+		right: 250px;
+		top: 30px;
+	}		
+}
+/* .nav */.footer-nav {
+	// Footer Navigation
+}
+/* .nav */.breadcrumb {
+	// Breadcrumb Navigation
+}
 
-/* ======================== Search ======================== */
+
+/* =============================================================================
+$ Searchforms
+================================================================================ */
 .searchform {
 	position: absolute;
 	right: 30px;
@@ -83,7 +100,7 @@ $ Header
 
 
 /* =============================================================================
-$ FCE's / Content
+$ Content
 ================================================================================ */
 
 
