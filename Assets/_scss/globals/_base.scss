@@ -6,16 +6,16 @@
  * ========================================================== */
 
 
-/* =============================================================================
-$ RWD Viewport rules
-DOCS: http://dev.w3.org/csswg/css-device-adapt/
-================================================================================ */
+// =============================================================================
+// $ RWD Viewport rules
+// DOCS: http://dev.w3.org/csswg/css-device-adapt/
+// =============================================================================
 @if $isResponsive == 1 {
-	@-webkit-viewport { width: device-width; }
-		 @-moz-viewport { width: device-width; }
-			@-ms-viewport { width: device-width; }
-			 @-o-viewport { width: device-width; }
-					@viewport { width: device-width; }
+  @-webkit-viewport { width: device-width; }
+     @-moz-viewport { width: device-width; }
+      @-ms-viewport { width: device-width; }
+       @-o-viewport { width: device-width; }
+          @viewport { width: device-width; }
 }
 
 
@@ -47,14 +47,11 @@ $ Logos
 .logo {
 	@include img-wh('logo.png');
 	background: url('../img/logo.png');
-	&:hover {}
+
 	#header & {
 		position: absolute;
 		top: 30px;
 		left: 30px;
-	}
-	#footer & {
-		float: right;
 	}
 }
 
@@ -62,7 +59,7 @@ $ Logos
 /* =============================================================================
 $ Searchforms
 ================================================================================ */
-.searchform {
+/*form*/.searchform {
 	position: absolute;
 	right: 30px;
 	top: 30px;
