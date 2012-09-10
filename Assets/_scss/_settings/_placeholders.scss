@@ -24,9 +24,11 @@
 	display: -moz-inline-stack;
 	-moz-box-orient: vertical;
 	display: inline-block;
-	*display: inline;
-	vertical-align: top;
-	*zoom: 1;
+	@if $isOldIE == 1 { 
+		*display: inline;
+		vertical-align: top;
+		*zoom: 1;
+	}
 }
 
 // ======================== Sprites ===============================
