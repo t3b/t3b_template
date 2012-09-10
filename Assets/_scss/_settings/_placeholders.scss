@@ -18,7 +18,7 @@
 	padding: 0;
 }
 
-// ======================== cross browser inline-block ===============================
+// ======================== Cross browser inline-block ===============================
 // http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/
 %inline-block {
 	display: -moz-inline-stack;
@@ -29,5 +29,5 @@
 	*zoom: 1;
 }
 
-// ======================== sprites ===============================
+// ======================== Sprites ===============================
 %sprite { background-image: url('../img/sprite.png'); background-repeat: no-repeat; }

@@ -27,9 +27,10 @@
 @import "globals/_base";					// Base Layout
 @import "globals/_grid";					// Grid setup
 
-@import "globals/_typography";		// Basic Typography
-@import "globals/_tables"; 				// Basic styling of tables
-@import "globals/_forms";					// Basic styling of forms
+@import "modules/_typography";		// Basic typography
+@import "modules/_tables"; 				// Basic styling of tables
+@import "modules/_forms";					// Basic styling of forms
+@import "modules/_navigations"; 	// Site navigation
 
 @import "globals/_t3-general";		// TYPO3 element styling
 
