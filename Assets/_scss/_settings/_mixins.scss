@@ -88,7 +88,7 @@
 
 
 // ======================== Media Queries =============================== >>> Requires SASS 3.2 <<<<
-@mixin mq($media) {
+@mixin respondTo($media) {
 	@if $media == tablet {
 		@media screen and (max-width:$query-tablet) { @content; }
 	}
@@ -108,17 +108,17 @@
 // 	width: 1000px;
 // 	background: url(../img/hdpi/foo.png) center center no-repeat;
 //
-// 	@include mq(tablet) {
+// 	@include respondTo(tablet) {
 // 		float: none;
 // 		width: 600px;
 // 	}
-// 	@include mq(smartphoneLarge) {
+// 	@include respondTo(smartphoneLarge) {
 // 		width: 480px;
 // 	}
-// 	@include mq(smartphoneSmall) {
+// 	@include respondTo(smartphoneSmall) {
 // 		width: 280px;
 // 	}
-// 	@include mq(HDPI) {
+// 	@include respondTo(HDPI) {
 // 		background-image: url(../img/hdpi/foo.png);
 // 		@include img-whr('hdpi/foo.png');
 // 	}

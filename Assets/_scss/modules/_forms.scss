@@ -57,7 +57,7 @@ form {
 	legend { display: none; }
 }
 label {
-	@include inline-block;
+	@extend %inline-block;
 	font-size: $baseFontSize - 2;
 	strong {
 

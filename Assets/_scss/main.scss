@@ -15,10 +15,11 @@
 
 
 // =============================================================================
-// Normalize and helpers
+// Normalize, helpers and placeholders
 // =============================================================================
 @import "globals/_normalize";			// Normalize elements accross all browsers
 @import "globals/_helper";				// Helper classes for developement
+@import "_settings/_placeholders";// SASS Placeholders
 
 
 // =============================================================================

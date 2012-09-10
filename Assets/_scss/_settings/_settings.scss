@@ -7,6 +7,19 @@
 
 
 // =============================================================================
+// Support $vars
+// =============================================================================
+$isResponsive: 					0; // If set to '1' CSS-Viewport-Rules are added
+$isOldIE: 							1; // If set to '0' it will remove unnecessary stuff from normalize 1.0.1
+// Supporttable for $isOldIE: 0;
+// Google Chrome
+// Mozilla Firefox 4+
+// Apple Safari 5+
+// Opera 12+
+// Internet Explorer 8+
+
+
+// =============================================================================
 // Gid-System
 // =============================================================================
 // $columWidth:          	60px; // Width of a Column (Disabled by default, it gets generated)
@@ -21,7 +34,6 @@ $columnGutter:	 				20px;	// Inner spacing
 $layoutWidth:						960px + $columnGutter; // Grid Setup
 $bodyBackground:				#fff;
 
-$isResponsive: 					0; // If set to '1' viewport-rules are added
 $query-tablet: 					800px; // Tablets
 $query-smartphoneLarge: 480px; // Phone - Landscape
 $query-smartphoneSmall: 320px; // Phone - Portrait

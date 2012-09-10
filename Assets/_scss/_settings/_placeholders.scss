@@ -1,14 +1,14 @@
-// ==========================================================
-// placeholders.scss
-//
-// Placeholders to develope faster
-// We use placeholders to reduce duplicate code
-//
-// Usage:
-// @extend %name;
-//
-// DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
-// ==========================================================
+/* ==========================================================
+ * placeholders.scss
+ *
+ * Placeholders to develope faster
+ * Use these to reduce duplicate code
+ *
+ * Usage:
+ * @extend %name;
+ *
+ * DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+ * ========================================================== */
 
 
 // ======================== Reset list ==================================
@@ -24,9 +24,11 @@
 	display: -moz-inline-stack;
 	-moz-box-orient: vertical;
 	display: inline-block;
-	*display: inline;
-	vertical-align: top;
-	*zoom: 1;
+	@if $isOldIE == 1 { 
+		*display: inline;
+		vertical-align: top;
+		*zoom: 1;
+	}
 }
 
 // ======================== Sprites ===============================
