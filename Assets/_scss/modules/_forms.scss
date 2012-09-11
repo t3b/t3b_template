@@ -20,20 +20,15 @@ input[type="time"],
 input[type="url"],
 input[type="number"],
 input[type="search"] {
-	color: $inputTextColor;
-	border: 1px solid $inputBorderColor;
+	color: lighten( $baseColor, 5% );
+	border: 1px solid $basicBorderColor;
 	font-size: $baseFontSize - 2;
-	@if $inputRadius != 0 { @include border-radius($inputRadius); }
 	@include transition(border-color .2s ease);
-	&:hover { border-color: darken($inputBorderColor, 20%); }
-	&:focus { outline: 0; border-color: $inputFocusBorder; }
+	&:hover { border-color: darken($basicBorderColor, 20%); }
+	&:focus { outline: 0; border-color: $cd-main; }
 }
 textarea {
 	min-height: 70px;
-}
-:invalid {
-	border-color: $inputErrorBorder !important;
-	color: $inputErrorTextColor !important;
 }
 
 .btn,
@@ -41,11 +36,10 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	background: $buttonBackground;
+	background: $cd-main;
 	padding: 3px 6px;
-	color: $buttonTextColor;
-	@if $buttonRadius != 0 { @include border-radius($buttonRadius); }
-	@if $buttonBorderSize != 0 { border: $buttonBorderSize $buttonBorderStyle $buttonBorderColor; }
+	color: #FFF;
+	border: 1px solid $cd-main;
 }
 
 
