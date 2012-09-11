@@ -10,8 +10,8 @@
 // Support $vars
 // =============================================================================
 $isResponsive: 					0; // If set to '1' CSS-Viewport-Rules are added
-$isOldIE: 							1; // If set to '0' it will remove unnecessary stuff from normalize 1.0.1
-// Supporttable for $isOldIE: 0;
+$isOldIE: 							1; // If set to '0' it will remove unnecessary stuff from normalize.css
+// Support-table for $isOldIE: 0;
 // Google Chrome
 // Mozilla Firefox 4+
 // Apple Safari 5+
@@ -116,25 +116,6 @@ $buttonRadius:					3px;
 $buttonBorderSize:			1px;
 $buttonBorderStyle:			solid;
 $buttonBorderColor:			$buttonBackground;
-
-
-// =============================================================================
-// Warnings & Errors
-// =============================================================================
-// ============================== Info-Modal ==============================
-$infoBackground:				#e8f3fa;
-$infoTextColor:					$cd-darkGray;
-$infoBorder:						1px $basicBorderStyle #9cd7e7;
-
-// ============================= Warning-Modal ============================
-$warningBackground:			#faf6e8;
-$warningTextColor:			$cd-darkGray;
-$warningBorder:					1px $basicBorderStyle #e7db9c;
-
-// ============================== Error-Modal =============================
-$errorBackground:				#faeee8;
-$errorTextColor:				$cd-darkGray;
-$errorBorder:						1px $basicBorderStyle #e7b19c;
 
 
 // ============================================================================

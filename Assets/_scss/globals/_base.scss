@@ -79,6 +79,7 @@ $ Footer
 
 
 
+
 /* =============================================================================
 $ Chromeframe
 ================================================================================ */
@@ -87,9 +88,9 @@ $ Chromeframe
 	height: 41px;
 	line-height: 41px;
 	font-size: 12px;
-	background: $warningBackground;
-	color: $warningTextColor;
-	border-bottom: $warningBorder;
+	background: #faf6e8;
+	color: $cd-darkGray;
+	border-bottom: 1px $basicBorderStyle #e7db9c;
 	text-align: center;
 	a { border-bottom: 1px dotted; }
 }
