@@ -11,8 +11,10 @@
 	background-color: transparent;
 	border: 0;
 	overflow: hidden;
-	/* IE 6/7 fallback */
-	*text-indent: -9999px;
+	@if $isOldIE == 1 {
+		/* IE 6/7 fallback */
+		*text-indent: -9999px;
+	}
 }
 
 .ir:before {
@@ -58,7 +60,9 @@
 
 /* Contain floats: h5bp.com/q */
 .clearfix {
-	*zoom:1;
+	@if $isOldIE == 1 {
+		*zoom:1;
+	}
 	&:before, &:after { content: ""; display: table; }
 	&:after { clear: both; }
 }

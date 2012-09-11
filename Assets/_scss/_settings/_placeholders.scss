@@ -24,7 +24,7 @@
 	display: -moz-inline-stack;
 	-moz-box-orient: vertical;
 	display: inline-block;
-	@if $isOldIE == 1 { 
+	@if $isOldIE == 1 {
 		*display: inline;
 		vertical-align: top;
 		*zoom: 1;
