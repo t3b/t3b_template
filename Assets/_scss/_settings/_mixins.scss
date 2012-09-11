@@ -11,7 +11,7 @@
 	width: image-width($img);
 	height: image-height($img);
 }
-// Usage:
+// Usefull for image-replacement, see Usage below:
 // .foo {
 // 	@include img-wh('bar.png');
 // 	background: url('../img/bar.png');
