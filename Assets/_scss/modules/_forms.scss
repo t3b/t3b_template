@@ -46,17 +46,7 @@ input[type="submit"] {
 /* =============================================================================
 $ General styling of Form Fields
 ================================================================================ */
-form {
-	ol { list-style: none; }
-	legend { display: none; }
-}
 label {
 	@extend %inline-block;
 	font-size: rs(14);
-	strong {
-
-	}
-	em {
-
-	}
 }
