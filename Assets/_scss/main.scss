@@ -15,20 +15,12 @@
 
 
 // =============================================================================
-// Normalize, helpers and placeholders
-// =============================================================================
-@import "globals/_normalize";			// Normalize elements accross all browsers
-@import "globals/_helper";				// Helper classes for developement
-@import "_settings/_placeholders";// SASS Placeholders
-
-
-// =============================================================================
 // Typography and Layout
 // =============================================================================
+@import "globals/_normalize";			// Normalize elements accross all browsers
 @import "globals/_base";					// Base Layout
 @import "globals/_grid";					// Grid setup
 @import "globals/_t3-general";		// TYPO3 element styling
-@import "globals/_print";					// Print styles
 
 
 // =============================================================================
@@ -38,3 +30,11 @@
 @import "modules/_tables"; 				// Basic styling of tables
 @import "modules/_forms";					// Basic styling of forms
 @import "modules/_navigations"; 	// Site navigation
+
+
+// =============================================================================
+// Helpers, placeholders and print styles
+// =============================================================================
+@import "_settings/_placeholders";// SASS Placeholders
+@import "globals/_helper";				// Helper classes for developement
+@import "globals/_print";					// Print styles
