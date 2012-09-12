@@ -60,3 +60,22 @@ label {
 
 	}
 }
+
+
+/* =============================================================================
+$ Searchforms
+================================================================================ */
+/*form*/.searchform {
+	input {
+		float: left;
+		display: block;
+	}
+	input[type="search"] {}
+	input[type="submit"] {}
+	
+	#header & {
+		position: absolute;
+		right: 30px;
+		top: 30px;
+	}
+}
