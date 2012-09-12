@@ -42,8 +42,8 @@ $query-smartphoneSmall: 320px; // Phone - Portrait
 
 // =============================================================================
 // Typography
-//	NOTE:		Font-weights below are used to handle webfonts
-//					If this layout doesnt use a webfont, dont change them
+//	NOTE:	Font-weights below are used to handle webfonts
+//				If this layout doesnt use a webfont, dont change them
 // =============================================================================
 $bold:									700;
 $regular:								400;
@@ -55,18 +55,16 @@ $monoFontFamily:				Menlo, Monaco, Consolas, "Courier New", monospace;
 
 // ========================== Base font settings ==========================
 $baseFontSize:					16;
+$baseLineHeight:				24;
 $baseFontFamily:				$sansFontFamily;
 $baseFontWeight:				$regular;
-$baseLineHeight:				24;
 $baseColor:							#3C474B;
 
 // =============================== Headings ===============================
+$headingsLineHeight:		1.1;
 $headingsFontFamily:		inherit; // empty to use $baseFontFamily
 $headingsFontWeight:		$bold;
 $headingsColor:					#000;
-
-// ========================= Typographic settings =========================
-$verticalRhythm:				$baseFontSize * $baseLineHeight;
 
 
 // =============================================================================

@@ -33,8 +33,7 @@ $ Headings
 	font-family: $headingsFontFamily;
 	font-weight: $headingsFontWeight;
 	color: $headingsColor;
-	line-height: 1.1;
-	margin: 0 0 1em;
+	line-height: $headingsLineHeight;
 	text-rendering: optimizeLegibility; // Optimized kerning for large font sizes
 	@include hyphens;
 	small {
