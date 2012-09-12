@@ -83,7 +83,7 @@ $ Chromeframe
 	background: #faf6e8;
 	font-size: rs(12);
 	line-height: 41px;
-	color: $cd-darkGray;	
+	color: darken(#faf6e8, 60%);	
 	text-align: center;
 	a { border-bottom: 1px dotted; }
 }

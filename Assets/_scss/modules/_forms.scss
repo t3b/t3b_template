@@ -25,7 +25,7 @@ input[type="search"] {
 	color: lighten( $baseColor, 5% );
 
 	&:hover { border-color: darken($basicBorderColor, 20%); }
-	&:focus { outline: 0; border-color: $cd-main; }
+	&:focus { outline: 0; border-color: $cd-primary; }
 }
 textarea {
 	min-height: 70px;
@@ -37,8 +37,8 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	padding: 3px 6px;
-	border: 1px solid $cd-main;
-	background: $cd-main;	
+	border: 1px solid $cd-primary;
+	background: $cd-primary;	
 	color: #FFF;	
 }
 
