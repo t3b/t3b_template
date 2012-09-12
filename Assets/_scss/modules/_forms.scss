@@ -19,13 +19,13 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="number"],
-input[type="search"] {
-	color: lighten( $baseColor, 5% );
+input[type="search"] {	
 	border: 1px solid $basicBorderColor;
-	font-size: $baseFontSize - 2;
-	@include transition(border-color .2s ease);
+	font-size: rs(14);
+	color: lighten( $baseColor, 5% );
+
 	&:hover { border-color: darken($basicBorderColor, 20%); }
-	&:focus { outline: 0; border-color: $cd-main; }
+	&:focus { outline: 0; border-color: $cd-primary; }
 }
 textarea {
 	min-height: 70px;
@@ -36,10 +36,10 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	background: $cd-main;
 	padding: 3px 6px;
-	color: #FFF;
-	border: 1px solid $cd-main;
+	border: 1px solid $cd-primary;
+	background: $cd-primary;	
+	color: #FFF;	
 }
 
 
@@ -52,11 +52,30 @@ form {
 }
 label {
 	@extend %inline-block;
-	font-size: $baseFontSize - 2;
+	font-size: rs(14);
 	strong {
 
 	}
 	em {
 
+	}
+}
+
+
+/* =============================================================================
+$ Searchforms
+================================================================================ */
+/*form*/.searchform {
+	input {
+		float: left;
+		display: block;
+	}
+	input[type="search"] {}
+	input[type="submit"] {}
+	
+	#header & {
+		position: absolute;
+		right: 30px;
+		top: 30px;
 	}
 }

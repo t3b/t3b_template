@@ -6,16 +6,16 @@
  * ========================================================== */
 
 
-// =============================================================================
-// $ RWD Viewport rules
-// DOCS: http://dev.w3.org/csswg/css-device-adapt/
-// =============================================================================
 @if $isResponsive == 1 {
-  @-webkit-viewport { width: device-width; }
-     @-moz-viewport { width: device-width; }
-      @-ms-viewport { width: device-width; }
-       @-o-viewport { width: device-width; }
-          @viewport { width: device-width; }
+/* =============================================================================
+$ RWD Viewport rules
+DOCS: http://dev.w3.org/csswg/css-device-adapt/
+================================================================================ */
+@-webkit-viewport { width: device-width; }
+   @-moz-viewport { width: device-width; }
+    @-ms-viewport { width: device-width; }
+     @-o-viewport { width: device-width; }
+        @viewport { width: device-width; }
 }
 
 
@@ -28,7 +28,7 @@ $ Site-wrapper
 	position: relative;
 }
 #header {
-
+	height: 300px;
 	.wrapper {}
 }
 #content {
@@ -58,32 +58,16 @@ $ Logos
 
 
 /* =============================================================================
-$ Searchforms
-================================================================================ */
-/*form*/.searchform {
-	position: absolute;
-	right: 30px;
-	top: 30px;
-	input {
-		float: left;
-		display: block;
-	}
-	input[type="search"] {}
-	input[type="submit"] {}
-}
-
-
-/* =============================================================================
 $ Chromeframe
 ================================================================================ */
 .chromeframe {
 	display: block;
 	height: 41px;
-	line-height: 41px;
-	font-size: 12px;
-	background: #faf6e8;
-	color: $cd-darkGray;
 	border-bottom: 1px $basicBorderStyle #e7db9c;
+	background: #faf6e8;
+	font-size: rs(12);
+	line-height: 41px;
+	color: darken(#faf6e8, 60%);	
 	text-align: center;
 	a { border-bottom: 1px dotted; }
 }

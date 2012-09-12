@@ -25,7 +25,6 @@
 @mixin hyphens {
 	-ms-word-break: break-all;
 			word-break: break-all;
-			word-break: break-word;
 	-webkit-hyphens: auto;
 		 -moz-hyphens: auto;
 			-ms-hyphens: auto;
@@ -90,10 +89,10 @@
 // ======================== Media Queries =============================== >>> Requires SASS 3.2 <<<<
 @mixin respondTo($media) {
 	@if $media == tablet {
-		@media screen and (max-width:$query-tablet) { @content; }
+		@media screen and (min-width:$query-smartphoneLarge +1px) and (max-width:$query-tablet) { @content; }
 	}
 	@else if $media == smartphoneLarge {
-		@media screen and (max-width:$query-smartphoneLarge) { @content; }
+		@media screen and (min-width:$query-smartphoneSmall +1px) and (max-width:$query-smartphoneLarge) { @content; }
 	}
 	@else if $media == smartphoneSmall {
 		@media screen and (max-width:$query-smartphoneSmall) { @content; }

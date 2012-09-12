@@ -33,6 +33,7 @@ $columnGutter:	 				20px;	// Inner spacing
 // =============================================================================
 $layoutWidth:						960px + $columnGutter; // Grid Setup
 $bodyBackground:				#fff;
+$contentBackground:			$bodyBackground; // Used for generating some colors
 
 $query-tablet: 					800px; // Tablets
 $query-smartphoneLarge: 480px; // Phone - Landscape
@@ -41,8 +42,8 @@ $query-smartphoneSmall: 320px; // Phone - Portrait
 
 // =============================================================================
 // Typography
-//	NOTE:		Font-weights below are used to handle webfonts
-//					If this layout doesnt use a webfont, dont change them
+//	NOTE:	Font-weights below are used to handle webfonts
+//				If this layout doesnt use a webfont, dont change them
 // =============================================================================
 $bold:									700;
 $regular:								400;
@@ -53,38 +54,40 @@ $serifFontFamily:				Georgia, "Times New Roman", Times, serif;
 $monoFontFamily:				Menlo, Monaco, Consolas, "Courier New", monospace;
 
 // ========================== Base font settings ==========================
-$baseFontSize:					16px;
+$baseFontSize:					16; // px
+$baseLineHeight:				24; // px
 $baseFontFamily:				$sansFontFamily;
 $baseFontWeight:				$regular;
-$baseLineHeight:				1.5;
 $baseColor:							#3C474B;
 
 // =============================== Headings ===============================
+$headingsLineHeight:		1.1;
 $headingsFontFamily:		inherit; // empty to use $baseFontFamily
 $headingsFontWeight:		$bold;
 $headingsColor:					#000;
-
-// ========================= Typographic settings =========================
-$verticalRhythm:				$baseFontSize * $baseLineHeight;
 
 
 // =============================================================================
 // Basic Colors
 // =============================================================================
 // ======================== Coporate Design colors ========================
-$cd-main:								#0097d7;
-$cd-lightGray:					#AAA;
-$cd-darkGray:						#333;
+$cd-primary:						#0097d7;
+$cd-primaryLight:				lighten($cd-primary, 20%);
+$cd-primaryDark:				darken($cd-primary, 30%);
+
+$cd-secondary:					#38464b;
+$cd-primaryLight:				lighten($cd-secondary, 20%);
+$cd-primaryDark:				darken($cd-secondary, 30%);
 
 // ================================= Links ================================
-$linkColor:							$cd-main;
-$linkColorHover:				lighten($cd-main, 20%);
+$linkColor:							$cd-primary;
+$linkColorHover:				$cd-primaryLight;
 
 
 // =============================================================================
 // Borders
 // =============================================================================
-$basicBorderColor:			#ccc;
+$basicBorderColor:			darken($contentBackground, 20%);
 $basicBorderStyle:			solid;
 
 
