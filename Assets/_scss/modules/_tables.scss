@@ -10,7 +10,6 @@
 $ Tables
 ================================================================================ */
 table {
-	max-width: 100% !important;
 	width: 100%;
 	caption {	text-align: left; }
 }
@@ -26,14 +25,14 @@ td { padding: 9px 8px 7px; }
 $ Contenttable-1 (Bordered Table w/ odd & even)
 ================================================================================ */
 /*table*/.contenttable-1 {
-	border: 1px $basicBorderStyle $basicBorderColor;
+	border: 1px solid $basicBorderColor;
 	border-collapse: separate;
 	td, th {
-		border-left: 1px $basicBorderStyle $basicBorderColor;
-		border-bottom: 1px $basicBorderStyle $basicBorderColor;
+		border-left: 1px solid $basicBorderColor;
+		border-bottom: 1px solid $basicBorderColor;
 	}
-	/*tr*/.tr-even { background: #FFF; }
-	/*tr*/.tr-odd { background: #F9F9F9; }
+	/*tr*/.tr-even { background: $contentBackground; }
+	/*tr*/.tr-odd { background: darken($contentBackground, 10%); }
 	/*tr*/.tr-last td { border-bottom: 0; }
 	/*td*/.td-0 { border-left: 0; }
 }
@@ -43,7 +42,7 @@ $ Contenttable-1 (Bordered Table w/ odd & even)
 $ Contenttable-2 (Clean Table)
 ================================================================================ */
 /*table*/.contenttable-2 {
-	td, th { border-bottom: 1px $basicBorderStyle $basicBorderColor; }
+	td, th { border-bottom: 1px solid $basicBorderColor; }
 }
 
 
@@ -51,7 +50,7 @@ $ Contenttable-2 (Clean Table)
 $ Contenttable-3 (Clean Table (condensed))
 ================================================================================ */
 /*table*/.contenttable-3 {
-	td, th { border-bottom: 1px $basicBorderStyle $basicBorderColor; }
+	td, th { border-bottom: 1px solid $basicBorderColor; }
 	th { padding: 5px 8px 2px; }
 	td { padding: 5px 8px 3px; }
 }

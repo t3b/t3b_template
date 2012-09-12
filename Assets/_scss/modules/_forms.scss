@@ -19,11 +19,11 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="number"],
-input[type="search"] {
-	color: lighten( $baseColor, 5% );
+input[type="search"] {	
 	border: 1px solid $basicBorderColor;
 	font-size: $baseFontSize - 2;
-	@include transition(border-color .2s ease);
+	color: lighten( $baseColor, 5% );
+
 	&:hover { border-color: darken($basicBorderColor, 20%); }
 	&:focus { outline: 0; border-color: $cd-main; }
 }
@@ -36,10 +36,10 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	background: $cd-main;
 	padding: 3px 6px;
-	color: #FFF;
 	border: 1px solid $cd-main;
+	background: $cd-main;	
+	color: #FFF;	
 }
 
 
