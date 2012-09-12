@@ -6,16 +6,16 @@
  * ========================================================== */
 
 
-// =============================================================================
-// $ RWD Viewport rules
-// DOCS: http://dev.w3.org/csswg/css-device-adapt/
-// =============================================================================
 @if $isResponsive == 1 {
-  @-webkit-viewport { width: device-width; }
-     @-moz-viewport { width: device-width; }
-      @-ms-viewport { width: device-width; }
-       @-o-viewport { width: device-width; }
-          @viewport { width: device-width; }
+/* =============================================================================
+$ RWD Viewport rules
+DOCS: http://dev.w3.org/csswg/css-device-adapt/
+================================================================================ */
+@-webkit-viewport { width: device-width; }
+   @-moz-viewport { width: device-width; }
+    @-ms-viewport { width: device-width; }
+     @-o-viewport { width: device-width; }
+        @viewport { width: device-width; }
 }
 
 
@@ -61,15 +61,18 @@ $ Logos
 $ Searchforms
 ================================================================================ */
 /*form*/.searchform {
-	position: absolute;
-	right: 30px;
-	top: 30px;
 	input {
 		float: left;
 		display: block;
 	}
 	input[type="search"] {}
 	input[type="submit"] {}
+	
+	#header & {
+		position: absolute;
+		right: 30px;
+		top: 30px;
+	}
 }
 
 
