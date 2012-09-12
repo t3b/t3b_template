@@ -44,37 +44,44 @@ $ Headings
 	}
 }
 h1, .h1 {
-	font-size: 34px;
+	font-size: rs(34);
+	margin: 0 0 rs(21,34);
 }
 h2, .h2 {
-	font-size: 28px;
+	font-size: rs(28);
+	margin: 0 0 rs(18,28);
 }
 h3, .h3 {
-	font-size: 24px;
+	font-size: rs(24);
+	margin: 0 0 rs(16,24);
 }
 h4, .h4 {
-	font-size: 22px;
+	font-size: rs(22);
+	margin: 0 0 rs(16,22);
 }
 h5, .h5 {
-	font-size: 18px;
+	font-size: rs(18);
 	margin: 0;
 }
 h6, .h6 {
-	font-size: 16px;
+	font-size: rs(16);
 	margin: 0;
 }
 
 
 /* =============================================================================
-$ Paragraphs
+$ Margins
 ================================================================================ */
-p {	margin: 0 0 1em; }
+p,
+ul,
+ol,
+dl { margin: 0 0 rs($baseLineHeight); }
 
 
 /* =============================================================================
 $ Attachements & Images
 ================================================================================ */
-embed, iframe, object, img { max-width: 100%; }
+embed, iframe, object, img { max-width: 100%; height: auto; }
 
 
 /* =============================================================================

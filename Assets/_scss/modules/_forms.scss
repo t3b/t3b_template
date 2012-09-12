@@ -21,7 +21,7 @@ input[type="url"],
 input[type="number"],
 input[type="search"] {	
 	border: 1px solid $basicBorderColor;
-	font-size: $baseFontSize - 2;
+	font-size: rs(14);
 	color: lighten( $baseColor, 5% );
 
 	&:hover { border-color: darken($basicBorderColor, 20%); }
@@ -52,7 +52,7 @@ form {
 }
 label {
 	@extend %inline-block;
-	font-size: $baseFontSize - 2;
+	font-size: rs(14);
 	strong {
 
 	}
