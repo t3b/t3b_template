@@ -17,10 +17,10 @@
 // =============================================================================
 // Typography and Layout
 // =============================================================================
-@import "globals/_normalize";			// Normalize elements accross all browsers
-@import "globals/_base";					// Base Layout
-@import "globals/_grid";					// Grid setup
-@import "globals/_t3-general";		// TYPO3 element styling
+@import "common/_normalize";			// Normalize elements accross all browsers
+@import "common/_base";					// Base Layout
+@import "common/_grid";					// Grid setup
+@import "common/_t3-general";		// TYPO3 element styling
 
 
 // =============================================================================
@@ -36,5 +36,5 @@
 // Helpers, placeholders and print styles
 // =============================================================================
 @import "_settings/_placeholders";// SASS Placeholders
-@import "globals/_helper";				// Helper classes for developement
-@import "globals/_print";					// Print styles
+@import "common/_helper";				// Helper classes for developement
+@import "common/_print";					// Print styles
