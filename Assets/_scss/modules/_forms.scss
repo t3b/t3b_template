@@ -25,11 +25,16 @@ input[type="search"] {
 	color: lighten( $baseColor, 5% );
 
 	&:hover { border-color: darken($basicBorderColor, 20%); }
-	&:focus { outline: 0; border-color: $cd-primary; }
 }
 textarea {
 	min-height: 70px;
 }
+
+input[type="checkbox"],
+input[type="radio"] {
+        margin-right: 4px;
+}
+
 
 .btn,
 button,
@@ -53,12 +58,6 @@ form {
 label {
 	@extend %inline-block;
 	font-size: rs(14);
-	strong {
-
-	}
-	em {
-
-	}
 }
 
 
