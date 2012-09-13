@@ -76,8 +76,8 @@ $cd-primaryLight:				lighten($cd-primary, 20%);
 $cd-primaryDark:				darken($cd-primary, 30%);
 
 $cd-secondary:					#38464b;
-$cd-primaryLight:				lighten($cd-secondary, 20%);
-$cd-primaryDark:				darken($cd-secondary, 30%);
+$cd-secondaryLight:			lighten($cd-secondary, 20%);
+$cd-secondaryDark:			darken($cd-secondary, 30%);
 
 // ================================= Links ================================
 $linkColor:							$cd-primary;
