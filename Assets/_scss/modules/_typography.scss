@@ -35,7 +35,6 @@ $ Headings
 	color: $headingsColor;
 	line-height: $headingsLineHeight;
 	text-rendering: optimizeLegibility; // Optimized kerning for large font sizes
-	@include hyphens;
 	small {
 		font-size: 60%;
 		color: lighten($headingsColor, 20%);
