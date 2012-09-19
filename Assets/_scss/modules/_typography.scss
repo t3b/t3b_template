@@ -10,7 +10,10 @@
 $ Links and other stuff
 ================================================================================ */
 a,
-a:visited { color: $linkColor; text-decoration: none; }
+a:visited {
+	color: $linkColor;
+	text-decoration: none;
+}
 a {
 	&:hover,
 	&:active { color: $linkColorHover; }
