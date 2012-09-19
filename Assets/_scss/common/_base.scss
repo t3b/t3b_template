@@ -45,6 +45,7 @@ $ Site-wrapper
 $ Logos
 ================================================================================ */
 .siteLogo {
+	display: block;
 	@include img-wh('logo.png');
 	background: url('../img/logo.png');
 
