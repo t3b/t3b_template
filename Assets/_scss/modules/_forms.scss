@@ -10,16 +10,19 @@
 $ General styling of Input Fields
 ================================================================================ */
 textarea,
-input[type="date"],
 input[type="email"],
-input[type="month"],
+input[type="number"],
 input[type="password"],
+input[type="search"],
 input[type="tel"],
 input[type="text"],
-input[type="time"],
 input[type="url"],
-input[type="number"],
-input[type="search"] {	
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"] {	
 	border: 1px solid $basicBorderColor;
 	font-size: rs(14);
 	color: lighten( $baseColor, 5% );
