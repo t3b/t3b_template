@@ -14,7 +14,12 @@ _(Coming soon)_
 
 Release History
 -------------------------
-- **1.0.4**
+- **1.0.5**
+    - Additions to forms.scss
+    - Update to jQuery 1.8.2
+    - Removed Modernizr Mixins
+    - Style consistency
+- 1.0.4
     - Modular searchform styling
     - Preset CD-Colors
     - Added min-width to some MQ's
