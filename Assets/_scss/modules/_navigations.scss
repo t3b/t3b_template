@@ -14,9 +14,9 @@ $ Navigations
 	li { @extend %inline-block; }
 	a {
 		display: block;
-		&:hover { }
-		li.active & { }
+		&:hover { }		
 	}
+	li.active a { }
 }
 
 /* ======================== Main Navigation ======================== */
