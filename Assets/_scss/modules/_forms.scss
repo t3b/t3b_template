@@ -10,26 +10,34 @@
 $ General styling of Input Fields
 ================================================================================ */
 textarea,
-input[type="date"],
 input[type="email"],
-input[type="month"],
+input[type="number"],
 input[type="password"],
+input[type="search"],
 input[type="tel"],
 input[type="text"],
-input[type="time"],
 input[type="url"],
-input[type="number"],
-input[type="search"] {	
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"] {	
 	border: 1px solid $basicBorderColor;
 	font-size: rs(14);
 	color: lighten( $baseColor, 5% );
 
 	&:hover { border-color: darken($basicBorderColor, 20%); }
-	&:focus { outline: 0; border-color: $cd-primary; }
 }
 textarea {
 	min-height: 70px;
 }
+
+input[type="checkbox"],
+input[type="radio"] {
+	margin-right: 4px;
+}
+
 
 .btn,
 button,
@@ -46,19 +54,9 @@ input[type="submit"] {
 /* =============================================================================
 $ General styling of Form Fields
 ================================================================================ */
-form {
-	ol { list-style: none; }
-	legend { display: none; }
-}
 label {
 	@extend %inline-block;
 	font-size: rs(14);
-	strong {
-
-	}
-	em {
-
-	}
 }
 
 
