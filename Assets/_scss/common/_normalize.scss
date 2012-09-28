@@ -72,12 +72,14 @@ $ Base
  *    `em` units.
  * 2. Prevents iOS text size adjust after orientation change, without disabling
  *    user zoom.
+ * 3. Forces vertical scrollbar to prevent jumpy page
  */
 
 html {
 	@if $isOldIE == 1 { font-size: 100%; /* 1 */ }
 	-webkit-text-size-adjust: 100%; /* 2 */
 	-ms-text-size-adjust: 100%; /* 2 */
+	overflow-y: scroll; /* 3 */
 }
 @if $isOldIE == 1 { 
 	/*
