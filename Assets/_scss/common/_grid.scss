@@ -30,7 +30,7 @@ $ Grid Classes
 	}
 	
 	// Creating .row .offset-by-# classes
-	@for $i from 1 through $totalColumns - 2 {
+	@for $i from 1 through $totalColumns - 1 {
 		.offset-by-#{convert-number-to-word($i)} {
 			margin-left: gridCalc($i, $totalColumns) + ($columnGutter * 1.5);
 		}
