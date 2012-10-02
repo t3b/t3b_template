@@ -102,8 +102,8 @@ html {
 
 body {
 	margin: 0;
-	color: $baseColor;
-	font: $baseFontWeight #{$baseFontSize/16*100}%/($baseLineHeight/$baseFontSize ) $baseFontFamily;
+	color: $baseTextColor;
+	font: $baseFontWeight #{$baseFontSize/16*100}%/($baseLineHeight/$baseFontSize) $baseFontFamily;
 	background: $bodyBackground;
 	-webkit-font-smoothing: antialiased;
 }

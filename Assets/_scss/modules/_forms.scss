@@ -25,7 +25,7 @@ input[type="time"],
 input[type="week"] {	
 	border: 1px solid $basicBorderColor;
 	font-size: rs(14);
-	color: lighten( $baseColor, 5% );
+	color: lighten( $baseTextColor, 5% );
 
 	&:hover { border-color: darken($basicBorderColor, 20%); }
 }
