@@ -14,7 +14,12 @@ _(Coming soon)_
 
 Release History
 -------------------------
-- **1.0.5**
+- **1.0.6**
+    - Corrected margins on typography elements
+    - Renamed $baseColor to $baseTextColor
+    - Force vertical scrollbar on the html element
+    - Cleaning the /img/ folder
+- 1.0.5
     - Additions to forms.scss
     - Update to jQuery 1.8.2
     - Removed Modernizr Mixins

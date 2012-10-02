@@ -74,15 +74,19 @@ h6, .h6 {
 $ Margins
 ================================================================================ */
 p,
-ul,
 ol,
-dl { margin: 0 0 rs($baseLineHeight); }
+ul,
+dl,
+menu { margin: 0 0 ($baseLineHeight/$baseFontSize) + em; }
 
 
 /* =============================================================================
 $ Attachements & Images
 ================================================================================ */
-embed, iframe, object, img { max-width: 100%; height: auto; }
+embed, iframe, object, img {
+	max-width: 100%; /* Make images responsive */
+	height: auto; /* Ignore height attributes */
+}
 
 
 /* =============================================================================
@@ -102,6 +106,6 @@ hr {
 	height: 1px;
 	border: 0;
 	border-top: 1px $basicBorderStyle $basicBorderColor;
-	margin: 1em 0;
+	margin: ($baseLineHeight/$baseFontSize) + em 0 ($baseLineHeight/$baseFontSize) + em;
 	padding: 0;
 }

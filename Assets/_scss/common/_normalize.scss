@@ -72,12 +72,14 @@ $ Base
  *    `em` units.
  * 2. Prevents iOS text size adjust after orientation change, without disabling
  *    user zoom.
+ * 3. Forces vertical scrollbar to prevent jumpy page
  */
 
 html {
 	@if $isOldIE == 1 { font-size: 100%; /* 1 */ }
 	-webkit-text-size-adjust: 100%; /* 2 */
 	-ms-text-size-adjust: 100%; /* 2 */
+	overflow-y: scroll; /* 3 */
 }
 @if $isOldIE == 1 { 
 	/*
@@ -100,8 +102,8 @@ html {
 
 body {
 	margin: 0;
-	color: $baseColor;
-	font: $baseFontWeight #{$baseFontSize/16*100}%/($baseLineHeight/$baseFontSize ) $baseFontFamily;
+	color: $baseTextColor;
+	font: $baseFontWeight #{$baseFontSize/16*100}%/($baseLineHeight/$baseFontSize) $baseFontFamily;
 	background: $bodyBackground;
 	-webkit-font-smoothing: antialiased;
 }
@@ -259,12 +261,12 @@ sub {
 	 * Addresses margins set differently in IE6/7.
 	 */
 
-	dl,
-	menu,
-	ol,
-	ul {
-		margin: 1em 0;
-	}
+	// dl,
+	// menu,
+	// ol,
+	// ul {
+	// 	margin: 1em 0;
+	// }
 
 	dd {
 		margin: 0 0 0 40px;
