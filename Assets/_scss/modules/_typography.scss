@@ -45,27 +45,27 @@ $ Headings
 	}
 }
 h1, .h1 {
-	font-size: rs(34);
-	margin: 0 0 rs(21, 34);
+	@include font-size(36);
+	margin: 0 0 rs(21, 36);
 }
 h2, .h2 {
-	font-size: rs(28);
-	margin: 0 0 rs(18, 28);
+	@include font-size(30);
+	margin: 0 0 rs(18, 30);
 }
 h3, .h3 {
-	font-size: rs(24);
+	@include font-size(24);
 	margin: 0 0 rs(16, 24);
 }
 h4, .h4 {
-	font-size: rs(22);
-	margin: 0 0 rs(16, 22);
+	@include font-size(20);
+	margin: 0 0 rs(16, 20);
 }
 h5, .h5 {
-	font-size: rs(18);
+	@include font-size(16);
 	margin: 0;
 }
 h6, .h6 {
-	font-size: rs(16);
+	@include font-size(14);
 	margin: 0;
 }
 
@@ -86,6 +86,9 @@ $ Attachements & Images
 embed, iframe, object, img {
 	max-width: 100%; /* Make images responsive */
 	height: auto; /* Ignore height attributes */
+}
+figure > img{
+    display:block;
 }
 
 
