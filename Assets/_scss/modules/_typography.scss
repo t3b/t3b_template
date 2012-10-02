@@ -74,9 +74,10 @@ h6, .h6 {
 $ Margins
 ================================================================================ */
 p,
-ul,
 ol,
-dl { margin: 0 0 rs($baseLineHeight); }
+ul,
+dl,
+menu { margin: 0 0 ($baseLineHeight/$baseFontSize) + em; }
 
 
 /* =============================================================================
@@ -105,6 +106,6 @@ hr {
 	height: 1px;
 	border: 0;
 	border-top: 1px $basicBorderStyle $basicBorderColor;
-	margin: 1em 0;
+	margin: ($baseLineHeight/$baseFontSize) + em 0 ($baseLineHeight/$baseFontSize) + em;
 	padding: 0;
 }
