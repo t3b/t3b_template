@@ -12,7 +12,7 @@ Documentation
 _(Coming soon)_
 
 
-Release History
+Changelog
 -------------------------
 - **1.0.6**
     - Corrected margins on typography elements
