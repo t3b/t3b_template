@@ -1,7 +1,7 @@
 /* ==========================================================
  * normalize.scss (v 2.0.1)
  * Updated: 09/10/2012
- * 
+ *
  * Normalize the browser-default styling
  * DOCS: http://necolas.github.com/normalize.css/
  * ========================================================== */
@@ -37,7 +37,7 @@ audio,
 canvas,
 video {
 	display: inline-block;
-	@if $isOldIE == 1 { 
+	@if $isOldIE == 1 {
 		*display: inline;
 		*zoom: 1;
 	}
@@ -81,7 +81,7 @@ html {
 	-ms-text-size-adjust: 100%; /* 2 */
 	overflow-y: scroll; /* 3 */
 }
-@if $isOldIE == 1 { 
+@if $isOldIE == 1 {
 	/*
 	 * Addresses `font-family` inconsistency between `textarea` and other form
 	 * elements.
@@ -172,7 +172,7 @@ mark {
 	color: #000;
 }
 
-@if $isOldIE == 1 { 
+@if $isOldIE == 1 {
 	/*
 	 * Addresses margins set differently in IE6/7.
 	 */
@@ -215,7 +215,7 @@ q {
 	quotes: none;
 }
 
-@if $isOldIE == 1 { 
+@if $isOldIE == 1 {
 	/*
 	 * Addresses `quotes` property not supported in S4.
 	 */
@@ -252,7 +252,7 @@ sub {
 	bottom: -0.25em;
 }
 
-@if $isOldIE == 1 { 
+@if $isOldIE == 1 {
 	/* ==========================================================================
 	   Lists
 	   ========================================================================== */
@@ -334,7 +334,7 @@ figure {
 $ Forms
 ========================================================================== */
 
-@if $isOldIE == 1 { 
+@if $isOldIE == 1 {
 	/*
 	 * Corrects margin displayed oddly in IE6/7.
 	 */
@@ -363,7 +363,7 @@ fieldset {
 legend {
 	border: 0; /* 1 */
 	padding: 0;
-	@if $isOldIE == 1 { 
+	@if $isOldIE == 1 {
 		white-space: normal; /* 2 */
 		*margin-left: -7px; /* 3 */
 	}
@@ -381,7 +381,7 @@ select,
 textarea {
 	font-size: 100%; /* 1 */
 	margin: 0; /* 2 */
-	@if $isOldIE == 1 { 
+	@if $isOldIE == 1 {
 		vertical-align: baseline; /* 3 */
 		*vertical-align: middle; /* 3 */
 	}
@@ -413,7 +413,7 @@ input[type="reset"],
 input[type="submit"] {
 	-webkit-appearance: button; /* 2 */
 	cursor: pointer; /* 3 */
-	@if $isOldIE == 1 { 
+	@if $isOldIE == 1 {
 		*overflow: visible;  /* 4 */
 	}
 }
@@ -438,7 +438,7 @@ input[type="checkbox"],
 input[type="radio"] {
 	box-sizing: border-box; /* 1 */
 	padding: 0; /* 2 */
-	@if $isOldIE == 1 { 
+	@if $isOldIE == 1 {
 		*height: 13px; /* 3 */
 		*width: 13px; /* 3 */
 	}

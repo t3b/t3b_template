@@ -2,7 +2,7 @@
  * navigations.scss
  *
  * Basic styling for all site-navigation elements
- * DOCS: 
+ * DOCS:
  * ========================================================== */
 
 
@@ -14,7 +14,7 @@ $ Navigations
 	li { @extend %inline-block; }
 	a {
 		display: block;
-		&:hover { }		
+		&:hover { }
 	}
 	li.active a { }
 }

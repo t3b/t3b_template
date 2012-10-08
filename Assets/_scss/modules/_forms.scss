@@ -2,7 +2,7 @@
  * forms.scss
  *
  * Basic styling for forms and inputs
- * DOCS: 
+ * DOCS:
  * ========================================================== */
 
 
@@ -22,7 +22,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="month"],
 input[type="time"],
-input[type="week"] {	
+input[type="week"] {
 	border: 1px solid $basicBorderColor;
 	font-size: rs(14);
 	color: lighten( $baseTextColor, 5% );
@@ -46,8 +46,8 @@ input[type="reset"],
 input[type="submit"] {
 	padding: 3px 6px;
 	border: 1px solid $cd-primary;
-	background: $cd-primary;	
-	color: #FFF;	
+	background: $cd-primary;
+	color: #FFF;
 }
 
 
@@ -56,7 +56,7 @@ $ General styling of Form Fields
 ================================================================================ */
 label {
 	@extend %inline-block;
-	font-size: rs(14);
+	@include font-size(14);
 }
 
 
@@ -71,10 +71,4 @@ $ Searchforms
 	}
 	input[type="search"] {}
 	input[type="submit"] {}
-	
-	#header & {
-		position: absolute;
-		right: 30px;
-		top: 30px;
-	}
 }

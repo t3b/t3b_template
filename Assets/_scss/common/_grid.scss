@@ -2,7 +2,7 @@
  * grid.scss
  *
  * Sets up the grid
- * DOCS: 
+ * DOCS:
  * ========================================================== */
 
 
@@ -30,7 +30,7 @@ $ Grid Classes
 			width: gridCalc($i, $totalColumns);
 		}
 	}
-	
+
 	// Creating .row .offset-by-# classes
 	@for $i from 1 through $totalColumns - 1 {
 		.offset-by-#{convert-number-to-word($i)} {

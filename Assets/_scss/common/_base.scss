@@ -2,7 +2,7 @@
  * base.scss
  *
  * Basic styling for this site (f.e. Header and Footer)
- * DOCS: 
+ * DOCS:
  * ========================================================== */
 
 
@@ -39,7 +39,7 @@ $ Site-wrapper
 }
 #footer {
 	@extend %non-print;
-	
+
 	.wrapper {}
 }
 
@@ -71,7 +71,7 @@ $ Chromeframe
 	background: #faf6e8;
 	font-size: rs(12);
 	line-height: 41px;
-	color: darken(#faf6e8, 60%);	
+	color: darken(#faf6e8, 60%);
 	text-align: center;
 	a { border-bottom: 1px dotted; }
 	@extend %non-print;

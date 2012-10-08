@@ -2,7 +2,7 @@
  * typography.scss
  *
  * Basic styling for typography elements
- * DOCS: 
+ * DOCS:
  * ========================================================== */
 
 
@@ -38,7 +38,7 @@ $ Headings
 	color: $headingsColor;
 	text-rendering: optimizeLegibility; // Optimized kerning for large font sizes
 	small {
-		font-size: 60%;
+		font-size: 75%;
 		color: lighten($headingsColor, 20%);
 		line-height: 0;
 	}
@@ -104,11 +104,8 @@ p a { /* 3 */ // TODO: Cross-Browser testing
 
 /* =============================================================================
 $ Lists
+	Contents: 1: Remove vertical spacing from nested lists
 ================================================================================ */
-ol { list-style-type: decimal; }
-ol ol { list-style: upper-alpha; }
-ol ol ol { list-style: lower-roman; }
-ol ol ol ol { list-style: lower-alpha; }
 li > ul,
 li > ol {  /* 1 */
     margin-bottom:0;
