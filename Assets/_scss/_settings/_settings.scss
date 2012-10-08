@@ -31,7 +31,7 @@ $columnGutter:	 				20px;	// Inner spacing
 // Layout
 // NOTE: $layoutWidth is used for calculating the grid and centering purposes
 // =============================================================================
-$layoutWidth:						960px + $columnGutter; // Grid Setup
+$layoutWidth:						960px; // Grid Setup
 $bodyBackground:				#fff;
 $contentBackground:			$bodyBackground; // Used for generating some colors
 
