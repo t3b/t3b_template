@@ -80,14 +80,25 @@ menu { margin: 0 0 ($baseLineHeight/$baseFontSize) + em; }
 
 
 /* =============================================================================
-$ Attachements & Images
+$ Attachements, Images & Links
+	Contents: 1: Make Images & Attachements responsive
+						2: Styling the alt="" Text on images ( http://csswizardry.com/2011/06/styling-alt-text-on-images/ )
+						3: Increasing the Clickable Area of Inline Links ( http://joshnh.com/2012/09/06/increasing-the-clickable-area-of-inline-links/ )
 ================================================================================ */
-embed, iframe, object, img {
-	max-width: 100%; /* Make images responsive */
-	height: auto; /* Ignore height attributes */
+embed, iframe, object, img { /* 1 */
+	max-width: 100%;
+	height: auto;
 }
-figure > img{
-    display:block;
+figure > img {
+	display: block;
+}
+img { /* 2 */
+	font-style: italic;
+}
+p a { /* 3 */ // TODO: Cross-Browser testing
+	margin: -.3em;
+	padding: .3em;
+	position: relative;
 }
 
 
