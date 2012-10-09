@@ -11,9 +11,9 @@ $ General stylings
 ================================================================================ */
 .intend { padding: 0 20px; }
 .csc-textpic-caption { font-size: $baseFontSize - 3+px; }
-.align-center	{ text-align: center; }
-.align-right 	{ text-align: right; }
-.align-left 	{ text-align: left; }
+.align-center { text-align: center; }
+.align-right  { text-align: right; }
+.align-left   { text-align: left; }
 
 /* =============================================================================
 $ CSC-Frames
@@ -42,8 +42,8 @@ $ CSC-Menu
 $ CSC-Sitemap
 ================================================================================ */
 .csc-sitemap {
-	list-style: disc;
-	margin: 0 0 0 1em;
+  list-style: disc;
+  margin: 0 0 0 1em;
 }
 
 
@@ -51,6 +51,6 @@ $ CSC-Sitemap
 $ CSC-Uploads
 ================================================================================ */
 .csc-uploads {
-	.csc-uploads-icon { }
-	.csc-uploads-fileName { }
+  .csc-uploads-icon { }
+  .csc-uploads-fileName { }
 }

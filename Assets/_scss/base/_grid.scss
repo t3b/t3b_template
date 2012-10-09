@@ -17,24 +17,24 @@ $ Grid Classes
 ================================================================================ */
 // Base styles for .row .# classes
 .columns {
-	float: left;
-	margin: 0 $columnGutter / 2;
-	&.first { margin-left: 0; }
-	&.last { margin-right: 0; }
+  float: left;
+  margin: 0 $columnGutter / 2;
+  &.first { margin-left: 0; }
+  &.last { margin-right: 0; }
 }
 
 .row {
-	// Creating .row .# classes
-	@for $i from 1 through $totalColumns {
-		.#{convert-number-to-word($i)} {
-			width: gridCalc($i, $totalColumns);
-		}
-	}
+  // Creating .row .# classes
+  @for $i from 1 through $totalColumns {
+    .#{convert-number-to-word($i)} {
+      width: gridCalc($i, $totalColumns);
+    }
+  }
 
-	// Creating .row .offset-by-# classes
-	@for $i from 1 through $totalColumns - 1 {
-		.offset-by-#{convert-number-to-word($i)} {
-			margin-left: gridCalc($i, $totalColumns) + ($columnGutter * 1.5);
-		}
-	}
+  // Creating .row .offset-by-# classes
+  @for $i from 1 through $totalColumns - 1 {
+    .offset-by-#{convert-number-to-word($i)} {
+      margin-left: gridCalc($i, $totalColumns) + ($columnGutter * 1.5);
+    }
+  }
 }
