@@ -1,6 +1,15 @@
 # Changelog
 -------------------------
-- **1.0.6**
+- **1.0.7**
+    - Added a font-size @mixin to embrace a vertical rhythm & 'rem' as a css unit
+    - Added a %non-print placeholder
+    - Increased the clickable area of links
+    - Removed vertical spacing from nested lists
+    - Stacking grid-system
+    - Changed #header & #footer to classes
+    - Renamed /common/ to /base/
+    - Renamed /modules/ to /components/
+- 1.0.6
     - Corrected margins on typography elements
     - Renamed $baseColor to $baseTextColor
     - Force vertical scrollbar on the html element
