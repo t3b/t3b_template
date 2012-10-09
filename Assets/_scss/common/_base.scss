@@ -29,8 +29,8 @@ $ Site-wrapper
 }
 #header {
 	height: 300px;
-	@extend %non-print;
 
+	@extend %non-print;
 	.wrapper {}
 }
 #content {
@@ -38,8 +38,8 @@ $ Site-wrapper
 	.wrapper {}
 }
 #footer {
-	@extend %non-print;
 
+	@extend %non-print;
 	.wrapper {}
 }
 
@@ -69,7 +69,8 @@ $ Chromeframe
 	height: 41px;
 	border-bottom: 1px $basicBorderStyle #e7db9c;
 	background: #faf6e8;
-	font-size: rs(12);
+	font-size: 12 +px;
+	font-size: 12 / $baseFontSize +rem;
 	line-height: 41px;
 	color: darken(#faf6e8, 60%);
 	text-align: center;
