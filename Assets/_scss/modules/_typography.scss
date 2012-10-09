@@ -9,14 +9,17 @@
 /* =============================================================================
 $ Links and other stuff
 ================================================================================ */
-a,
-a:visited {
+a {
 	color: $linkColor;
 	text-decoration: none;
 }
 a {
 	&:hover,
-	&:active { color: $linkColorHover; }
+	&:active,
+	&:focus {
+		text-decoration: underline;
+		color: $linkColorHover;
+	}
 }
 
 ::-moz-selection,

@@ -79,8 +79,8 @@ $cd-secondaryLight:			lighten($cd-secondary, 20%);
 $cd-secondaryDark:			darken($cd-secondary, 30%);
 
 // ================================= Links ================================
-$linkColor:							$cd-primary;
-$linkColorHover:				$cd-primaryLight;
+$linkColor:							lighten($cd-primary, 10%);
+$linkColorHover:				$cd-primary;
 
 
 // =============================================================================
