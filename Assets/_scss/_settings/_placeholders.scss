@@ -35,3 +35,13 @@
   font: 0/0 a;
   text-shadow: none;
 }
+
+// ======================== CSS3 Word-breaker ============================
+%hyphens {
+	-ms-word-break: break-all;
+			word-break: break-all;
+	-webkit-hyphens: auto;
+		 -moz-hyphens: auto;
+			-ms-hyphens: auto;
+					hyphens: auto;
+}

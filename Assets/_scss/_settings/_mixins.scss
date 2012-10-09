@@ -21,16 +21,6 @@
 	background-size: image-width($img)/2 image-height($img)/2;
 }
 
-// ======================== CSS3 Word-breaker ============================
-@mixin hyphens {
-	-ms-word-break: break-all;
-			word-break: break-all;
-	-webkit-hyphens: auto;
-		 -moz-hyphens: auto;
-			-ms-hyphens: auto;
-					hyphens: auto;
-}
-
 // ======================== REM Unit Mixin ===============================
 // Create a fully formed type style (sizing and vertical rhythm) by passing in a
 // single value, e.g.:
