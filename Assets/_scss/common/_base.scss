@@ -31,16 +31,16 @@ $ Site-wrapper
 	height: 300px;
 
 	@extend %non-print;
-	.wrapper {}
+	.wrapper { }
 }
 #content {
 
-	.wrapper {}
+	.wrapper { }
 }
 .site-footer {
 
 	@extend %non-print;
-	.wrapper {}
+	.wrapper { }
 }
 
 
@@ -57,7 +57,7 @@ $ Logos
 		top: 10px;
 		left: $columnGutter / 2;
 	}
-	.site-footer & {}
+	.site-footer & { }
 }
 
 

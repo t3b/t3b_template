@@ -71,11 +71,11 @@ label {
 $ Searchforms
 ================================================================================ */
 /*form*/.searchform {
-	label {}
+	label { }
 	input {
 		float: left;
 		display: block;
 	}
-	input[type="search"] {}
-	input[type="submit"] {}
+	input[type="search"] { }
+	input[type="submit"] { }
 }
