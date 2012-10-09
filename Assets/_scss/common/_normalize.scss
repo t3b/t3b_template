@@ -36,11 +36,7 @@ summary {
 audio,
 canvas,
 video {
-	display: inline-block;
-	@if $isOldIE == 1 {
-		*display: inline;
-		*zoom: 1;
-	}
+	@extend %inline-block;
 }
 
 /*

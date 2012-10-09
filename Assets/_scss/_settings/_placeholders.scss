@@ -19,14 +19,10 @@
 }
 
 // ======================== Cross browser inline-block ===============================
-// http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/
 %inline-block {
-	display: -moz-inline-stack;
-	-moz-box-orient: vertical;
 	display: inline-block;
 	@if $isOldIE == 1 {
 		*display: inline;
-		vertical-align: top;
 		*zoom: 1;
 	}
 }
