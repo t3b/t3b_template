@@ -16,26 +16,26 @@
 
 
 // =============================================================================
-// Typography and Layout
+// Layout
 // =============================================================================
-@import "common/_normalize";				// Normalize elements accross all browsers
-@import "common/_base";							// Base Layout
-@import "common/_grid";							// Grid setup
-@import "common/_t3-general";				// TYPO3 element styling
+@import "base/_normalize";				// Normalize elements accross all browsers
+@import "base/_base";							// Base Layout
+@import "base/_grid";							// Grid setup
+@import "base/_t3-general";				// TYPO3 element styling
 
 
 // =============================================================================
-// Modules
+// Components
 // =============================================================================
-@import "modules/_typography";			// Basic typography
-@import "modules/_tables"; 					// Basic styling of tables
-@import "modules/_forms";						// Basic styling of forms
-@import "modules/_navigations"; 		// Site navigation
+@import "components/_typography";			// Basic typography
+@import "components/_tables"; 					// Basic styling of tables
+@import "components/_forms";						// Basic styling of forms
+@import "components/_navigations"; 		// Site navigation
 
 
 // =============================================================================
 // Helpers, placeholders and print styles
 // =============================================================================
 @import "_settings/_placeholders";	// SASS Placeholders
-@import "common/_helper";						// Helper classes for developement
-@import "common/_print";						// Print styles
+@import "base/_helper";						// Helper classes for developement
+@import "base/_print";						// Print styles

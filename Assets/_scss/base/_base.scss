@@ -28,9 +28,9 @@ $ Site-wrapper
 	position: relative;
 }
 .site-header {
-	height: 300px;
+	height: 100px; // A height should be set
 
-	@extend %non-print;
+	@extend %non-print; // Will be hidden on print
 	.wrapper { }
 }
 #content {
@@ -39,7 +39,7 @@ $ Site-wrapper
 }
 .site-footer {
 
-	@extend %non-print;
+	@extend %non-print; // Will be hidden on print
 	.wrapper { }
 }
 
@@ -75,5 +75,5 @@ $ Chromeframe
 	color: darken(#faf6e8, 60%);
 	text-align: center;
 	a { border-bottom: 1px dotted; }
-	@extend %non-print;
+	@extend %non-print; // Will be hidden on print
 }

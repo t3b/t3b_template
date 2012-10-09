@@ -99,8 +99,8 @@ img { /* 2 */
 	font-style: italic;
 }
 p a { /* 3 */ // TODO: Cross-Browser testing
-	margin: -.3em;
-	padding: .3em;
+	margin: -.33em;
+	padding: .33em;
 	position: relative;
 }
 
@@ -111,7 +111,7 @@ $ Lists
 ================================================================================ */
 li > ul,
 li > ol {  /* 1 */
-    margin-bottom:0;
+	margin-bottom:0;
 }
 
 
