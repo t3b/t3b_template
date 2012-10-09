@@ -44,9 +44,14 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	padding: 3px 6px;
+	cursor: pointer;
+	padding: 0.5em;
+
 	border: 1px solid $cd-primary;
 	background: $cd-primary;
+
+	font-size: .8em;
+	line-height: 1;
 	color: #FFF;
 }
 
