@@ -2,7 +2,7 @@
  * base.scss
  *
  * Basic styling for this site (f.e. Header and Footer)
- * DOCS: 
+ * DOCS:
  * ========================================================== */
 
 
@@ -27,17 +27,20 @@ $ Site-wrapper
 	width: $layoutWidth;
 	position: relative;
 }
-#header {
-	height: 300px;
-	.wrapper {}
+.site-header {
+	height: 100px; // A height should be set
+
+	@extend %non-print; // Will be hidden on print
+	.wrapper { }
 }
 #content {
 
-	.wrapper {}
+	.wrapper { }
 }
-#footer {
-	
-	.wrapper {}
+.site-footer {
+
+	@extend %non-print; // Will be hidden on print
+	.wrapper { }
 }
 
 
@@ -49,12 +52,12 @@ $ Logos
 	@include img-wh('logo.png');
 	background: url('../img/logo.png');
 
-	#header & {
+	.site-header & {
 		position: absolute;
-		top: 30px;
-		left: 30px;
+		top: 10px;
+		left: $columnGutter / 2;
 	}
-	#footer & {}
+	.site-footer & { }
 }
 
 
@@ -66,9 +69,11 @@ $ Chromeframe
 	height: 41px;
 	border-bottom: 1px $basicBorderStyle #e7db9c;
 	background: #faf6e8;
-	font-size: rs(12);
+	font-size: 12px;
+	font-size: rs(12, $unit: rem);
 	line-height: 41px;
-	color: darken(#faf6e8, 60%);	
+	color: darken(#faf6e8, 60%);
 	text-align: center;
 	a { border-bottom: 1px dotted; }
+	@extend %non-print; // Will be hidden on print
 }

@@ -2,7 +2,7 @@
  * t3-general.scss
  *
  * Basic styling for typo3 generated elements and classes
- * DOCS: 
+ * DOCS:
  * ========================================================== */
 
 
@@ -25,13 +25,16 @@ $ CSC-Frames
 .csc-frame-indent3366 { padding-left: $layoutWidth / 3; }
 .csc-frame-indent6633 { padding-right: $layoutWidth / 3; }
 
+.csc-frame-frame1 { }
+.csc-frame-frame2 { }
+
 
 /* =============================================================================
 $ CSC-Menu
 ================================================================================ */
 .csc-menu {
-	li {}
-	a {}
+  li { }
+  a { }
 }
 
 
@@ -48,6 +51,6 @@ $ CSC-Sitemap
 $ CSC-Uploads
 ================================================================================ */
 .csc-uploads {
-	.csc-uploads-icon {}
-	.csc-uploads-fileName {}
+	.csc-uploads-icon { }
+	.csc-uploads-fileName { }
 }

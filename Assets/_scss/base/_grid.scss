@@ -2,14 +2,14 @@
  * grid.scss
  *
  * Sets up the grid
- * DOCS: 
+ * DOCS:
  * ========================================================== */
 
 
 /* =============================================================================
 $ Variables
 ================================================================================ */
-$columWidth:				$layoutWidth / $totalColumns - $columnGutter !default;
+$columWidth:				($layoutWidth + $columnGutter) / $totalColumns - $columnGutter !default;
 
 
 /* =============================================================================
@@ -19,6 +19,8 @@ $ Grid Classes
 .columns {
 	float: left;
 	margin: 0 $columnGutter / 2;
+	&.first { margin-left: 0; }
+	&.last { margin-right: 0; }
 }
 
 .row {
@@ -28,7 +30,7 @@ $ Grid Classes
 			width: gridCalc($i, $totalColumns);
 		}
 	}
-	
+
 	// Creating .row .offset-by-# classes
 	@for $i from 1 through $totalColumns - 1 {
 		.offset-by-#{convert-number-to-word($i)} {

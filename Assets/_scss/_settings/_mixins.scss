@@ -32,14 +32,13 @@
 }
 
 // ======================== REM Unit Mixin ===============================
-@mixin font-size($size, $is-important: false) {
-	@if $is-important {
-		font-size: $size + px !important;
-		font-size: ($size / 10) + rem !important;
-	} @else {
-		font-size: $size + px;
-		font-size: ($size / 10) + rem;
-	}
+// Create a fully formed type style (sizing and vertical rhythm) by passing in a
+// single value, e.g.:
+// Thanks to Harry Roberts (@csswizardry)
+@mixin font-size($size) {
+	font-size: $size +px;
+	font-size: $size / $baseFontSize +rem;
+	line-height: ceil($size / $baseLineHeight) * ($baseLineHeight / $size);
 }
 
 // ======================== CSS3 Triangle ===============================
@@ -61,7 +60,7 @@
 	// .foo { @include css-triangle(5px, #fff, bottom); }
 }
 
-// ======================== OldIE-Class fixes =============================== >>> Requires SASS 3.2 <<<<
+// ======================== OldIE-Class fixes ===============================
 @mixin ie6 {
 	.lt-ie7 & {
 		@content;
@@ -86,7 +85,7 @@
 //	}
 
 
-// ======================== Media Queries =============================== >>> Requires SASS 3.2 <<<<
+// ======================== Media Queries ===============================
 @mixin respondTo($media) {
 	@if $media == tablet {
 		@media screen and (min-width:$query-smartphoneLarge +1px) and (max-width:$query-tablet) { @content; }

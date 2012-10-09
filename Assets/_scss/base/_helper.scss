@@ -1,10 +1,18 @@
 /* ==========================================================
  * helper.scss
- * 
+ *
  * Helper Classes from the boilerplate project
  * DOCS: http://html5boilerplate.com/docs/css/#non-semantic-helper-classes
  * ========================================================== */
 
+
+/* Quick floats */
+.fl-r {
+	float: right;
+}
+.fl-l {
+	float: left;
+}
 
 /* For image replacement */
 .ir {
@@ -36,8 +44,8 @@
 	height: 1px;
 	margin: -1px;
 	overflow: hidden;
-	padding: 0; position:
-	absolute;
+	padding: 0;
+	position: absolute;
 	width: 1px;
 }
 
@@ -64,10 +72,4 @@
 	}
 	&:before, &:after { content: ""; display: table; }
 	&:after { clear: both; }
-}
-
-.breaker {
-	clear: both;
-	height: 0;
-	overflow: hidden;
 }
