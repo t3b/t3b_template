@@ -33,7 +33,7 @@ $ Site-wrapper
 	@extend %non-print; // Will be hidden on print
 	.wrapper { }
 }
-#content {
+.site-content {
 
 	.wrapper { }
 }
