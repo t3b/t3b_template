@@ -27,7 +27,7 @@ $ Site-wrapper
 	width: $layoutWidth;
 	position: relative;
 }
-#header {
+.site-header {
 	height: 300px;
 
 	@extend %non-print;
@@ -37,7 +37,7 @@ $ Site-wrapper
 
 	.wrapper {}
 }
-#footer {
+.site-footer {
 
 	@extend %non-print;
 	.wrapper {}
@@ -52,12 +52,12 @@ $ Logos
 	@include img-wh('logo.png');
 	background: url('../img/logo.png');
 
-	#header & {
+	.site-header & {
 		position: absolute;
 		top: 10px;
 		left: $columnGutter / 2;
 	}
-	#footer & {}
+	.site-footer & {}
 }
 
 

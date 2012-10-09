@@ -22,7 +22,7 @@ $ Navigations
 /* ======================== Main Navigation ======================== */
 /*.nav*/.site-nav {
 	// Main Navigation
-	#header & { // positioning on site-header
+	.site-header & { // positioning on site-header
 		position: absolute;
 		right: 250px;
 		top: 30px;
