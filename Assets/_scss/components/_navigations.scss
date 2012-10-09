@@ -2,7 +2,7 @@
  * navigations.scss
  *
  * Basic styling for all site-navigation elements
- * DOCS: 
+ * DOCS:
  * ========================================================== */
 
 
@@ -14,7 +14,7 @@ $ Navigations
 	li { @extend %inline-block; }
 	a {
 		display: block;
-		&:hover { }		
+		&:hover { }
 	}
 	li.active a { }
 }
@@ -22,14 +22,14 @@ $ Navigations
 /* ======================== Main Navigation ======================== */
 /*.nav*/.site-nav {
 	// Main Navigation
-	#header & { // positioning on site-header
+	.site-header & { // positioning on site-header
 		position: absolute;
 		right: 250px;
 		top: 30px;
 	}
 	ul { }
 	li { }
-	a {	}
+	a { }
 }
 
 /* ======================== Footer Navigation ======================== */
@@ -37,7 +37,7 @@ $ Navigations
 	// Footer Navigation
 	ul { }
 	li { }
-	a {	}
+	a { }
 }
 
 /* ======================== Breadcrumb Navigation ======================== */
@@ -45,5 +45,5 @@ $ Navigations
 	// Breadcrumb Navigation
 	ul { }
 	li { }
-	a {	}
+	a { }
 }

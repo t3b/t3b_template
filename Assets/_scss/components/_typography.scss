@@ -2,21 +2,24 @@
  * typography.scss
  *
  * Basic styling for typography elements
- * DOCS: 
+ * DOCS:
  * ========================================================== */
 
 
 /* =============================================================================
 $ Links and other stuff
 ================================================================================ */
-a,
-a:visited {
+a {
 	color: $linkColor;
 	text-decoration: none;
 }
 a {
 	&:hover,
-	&:active { color: $linkColorHover; }
+	&:active,
+	&:focus {
+		text-decoration: underline;
+		color: $linkColorHover;
+	}
 }
 
 ::-moz-selection,
@@ -36,36 +39,35 @@ $ Headings
 	font-family: $headingsFontFamily;
 	font-weight: $headingsFontWeight;
 	color: $headingsColor;
-	line-height: $headingsLineHeight;
 	text-rendering: optimizeLegibility; // Optimized kerning for large font sizes
 	small {
-		font-size: 60%;
+		font-size: 75%;
 		color: lighten($headingsColor, 20%);
 		line-height: 0;
 	}
 }
 h1, .h1 {
-	font-size: rs(34);
-	margin: 0 0 rs(21, 34);
+	@include font-size(36);
+	margin: 0 0 rs(21, 36);
 }
 h2, .h2 {
-	font-size: rs(28);
-	margin: 0 0 rs(18, 28);
+	@include font-size(30);
+	margin: 0 0 rs(18, 30);
 }
 h3, .h3 {
-	font-size: rs(24);
+	@include font-size(24);
 	margin: 0 0 rs(16, 24);
 }
 h4, .h4 {
-	font-size: rs(22);
-	margin: 0 0 rs(16, 22);
+	@include font-size(20);
+	margin: 0 0 rs(16, 20);
 }
 h5, .h5 {
-	font-size: rs(18);
+	@include font-size(16);
 	margin: 0;
 }
 h6, .h6 {
-	font-size: rs(16);
+	@include font-size(14);
 	margin: 0;
 }
 
@@ -81,21 +83,36 @@ menu { margin: 0 0 ($baseLineHeight/$baseFontSize) + em; }
 
 
 /* =============================================================================
-$ Attachements & Images
+$ Attachements, Images & Links
+	Contents: 1: Make Images & Attachements responsive
+						2: Styling the alt="" Text on images ( http://csswizardry.com/2011/06/styling-alt-text-on-images/ )
+						3: Increasing the Clickable Area of Inline Links ( http://joshnh.com/2012/09/06/increasing-the-clickable-area-of-inline-links/ )
 ================================================================================ */
-embed, iframe, object, img {
-	max-width: 100%; /* Make images responsive */
-	height: auto; /* Ignore height attributes */
+embed, iframe, object, img { /* 1 */
+	max-width: 100%;
+	height: auto;
+}
+figure > img {
+	display: block;
+}
+img { /* 2 */
+	font-style: italic;
+}
+p a { /* 3 */ // TODO: Cross-Browser testing
+	margin: -.33em;
+	padding: .33em;
+	position: relative;
 }
 
 
 /* =============================================================================
 $ Lists
+	Contents: 1: Remove vertical spacing from nested lists
 ================================================================================ */
-ol { list-style-type: decimal; }
-ol ol { list-style: upper-alpha; }
-ol ol ol { list-style: lower-roman; }
-ol ol ol ol { list-style: lower-alpha; }
+li > ul,
+li > ol {  /* 1 */
+	margin-bottom:0;
+}
 
 
 /* =============================================================================

@@ -10,7 +10,7 @@
 // Support $vars
 // =============================================================================
 $isResponsive: 					0; // If set to '1' CSS-Viewport-Rules are added
-$isOldIE: 							1; // If set to '0' it will remove unnecessary stuff from normalize.css
+$isOldIE: 							1; // If set to '0' it will ignore IE6 & IE7 Hacks while compiling
 // Support-table for $isOldIE: 0;
 // Google Chrome
 // Mozilla Firefox 4+
@@ -31,7 +31,7 @@ $columnGutter:	 				20px;	// Inner spacing
 // Layout
 // NOTE: $layoutWidth is used for calculating the grid and centering purposes
 // =============================================================================
-$layoutWidth:						960px + $columnGutter; // Grid Setup
+$layoutWidth:						960px; // Grid Setup
 $bodyBackground:				#fff;
 $contentBackground:			$bodyBackground; // Used for generating some colors
 
@@ -61,7 +61,6 @@ $baseFontWeight:				$regular;
 $baseTextColor:					#3C474B;
 
 // =============================== Headings ===============================
-$headingsLineHeight:		1.1;
 $headingsFontFamily:		inherit; // empty to use $baseFontFamily
 $headingsFontWeight:		$bold;
 $headingsColor:					#000;
@@ -80,8 +79,8 @@ $cd-secondaryLight:			lighten($cd-secondary, 20%);
 $cd-secondaryDark:			darken($cd-secondary, 30%);
 
 // ================================= Links ================================
-$linkColor:							$cd-primary;
-$linkColorHover:				$cd-primaryLight;
+$linkColor:							lighten($cd-primary, 10%);
+$linkColorHover:				$cd-primary;
 
 
 // =============================================================================
