@@ -24,7 +24,8 @@ input[type="month"],
 input[type="time"],
 input[type="week"] {
 	border: 1px solid $basicBorderColor;
-	font-size: rs(14);
+	font-size: 14px;
+	font-size: rs(14, $unit: rem);
 	color: lighten( $baseTextColor, 5% );
 
 	&:hover { border-color: darken($basicBorderColor, 20%); }
@@ -60,8 +61,9 @@ input[type="submit"] {
 $ General styling of Form Fields
 ================================================================================ */
 label {
-	@extend %inline-block;
-	@include font-size(14);
+	display: block;
+	font-size: 14px;
+	font-size: rs(14, $unit: rem);
 }
 
 

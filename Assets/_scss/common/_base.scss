@@ -69,8 +69,8 @@ $ Chromeframe
 	height: 41px;
 	border-bottom: 1px $basicBorderStyle #e7db9c;
 	background: #faf6e8;
-	font-size: 12 +px;
-	font-size: 12 / $baseFontSize +rem;
+	font-size: 12px;
+	font-size: rs(12, $unit: rem);
 	line-height: 41px;
 	color: darken(#faf6e8, 60%);
 	text-align: center;
