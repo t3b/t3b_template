@@ -19,7 +19,7 @@ $ Grid Classes
 @if $direction == ltr {
   .columns {
     float: $grid-direction;
-    margin: 0 $columnGutter / 2;
+    margin: 0 ($columnGutter / 2) +px;
     &.first { margin-left: 0; }
     &.last { margin-right: 0; }
     &.centered { margin: 0 auto; float: none; }
@@ -27,7 +27,7 @@ $ Grid Classes
 } @else {
   .columns {
     float: $grid-direction;
-    margin: 0 $columnGutter / 2;
+    margin: 0 ($columnGutter / 2) +px;
     &.first { margin-right: 0; }
     &.last { margin-left: 0; }
     &.centered { margin: 0 auto; float: none; }
