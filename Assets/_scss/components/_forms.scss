@@ -9,6 +9,7 @@
 /* =============================================================================
 $ General styling of Input Fields
 ================================================================================ */
+// ====================== Base input styles ======================
 textarea,
 input[type="email"],
 input[type="number"],
@@ -30,16 +31,19 @@ input[type="week"] {
 
   &:hover { border-color: darken($basicBorderColor, 20%); }
 }
+
+// ======================== Textinputs =========================
 textarea {
   min-height: 70px;
 }
 
+// ========================= Checkboxes ========================
 input[type="checkbox"],
 input[type="radio"] {
   margin-right: 4px;
 }
 
-
+// ========================== Buttons ==========================
 .btn,
 button,
 input[type="button"],
