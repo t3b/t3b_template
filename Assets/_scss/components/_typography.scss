@@ -79,7 +79,7 @@ p,
 ol,
 ul,
 dl,
-menu { margin: 0 0 ($baseLineHeight/$baseFontSize) + em; }
+menu { margin: 0 0 $basicSpacing; }
 
 
 /* =============================================================================
@@ -123,6 +123,6 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px $basicBorderStyle $basicBorderColor;
-  margin: ($baseLineHeight/$baseFontSize) + em 0 ($baseLineHeight/$baseFontSize) + em;
+  margin: $basicSpacing 0 $basicSpacing;
   padding: 0;
 }
