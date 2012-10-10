@@ -2,7 +2,7 @@
  * navigations.scss
  *
  * Basic styling for all site-navigation elements
- * DOCS:
+ * DOCS: http://csswizardry.com/2011/09/the-nav-abstraction/
  * ========================================================== */
 
 
@@ -19,7 +19,14 @@ $ Navigations
   li.active a { }
 }
 
-/* ======================== Main Navigation ======================== */
+/* ======================= Stacked Navigation ======================= */
+.stacked ul {
+  li { display: list-item;
+    a { display: block; }
+  }
+}
+
+/* ======================== Main Navigation ========================= */
 /*.nav*/.site-nav {
   // Main Navigation
   .site-header & { // positioning on site-header
@@ -40,7 +47,7 @@ $ Navigations
   a { }
 }
 
-/* ======================== Breadcrumb Navigation ======================== */
+/* ====================== Breadcrumb Navigation ====================== */
 /*.nav*/.breadcrumb {
   // Breadcrumb Navigation
   ul { }
