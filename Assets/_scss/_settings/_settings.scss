@@ -7,7 +7,6 @@
 
 
 // =============================================================================
-// Support $vars
 // Project Settings
 // =============================================================================
 // ============================= Support $vars ============================
@@ -27,7 +26,6 @@ $direction:             ltr;  // set "dir" attribute in HTML to "ltr" (default) 
 // =============================================================================
 // Gid-System
 // =============================================================================
-$columWidth:            60px;   // Width of a Column (Disabled by default, it gets generated)
 // $columWidth:            60px;   // Disabled by default, it'll be calculated
 $totalColumns:          12;     // Number of columns
 $columnGutter:          20px;   // Inner spacing
@@ -42,7 +40,6 @@ $bodyBackground:        #fff;
 $contentBackground:     $bodyBackground; // Used for generating some colors
 $textDirection:         left;
 
-
 $query-tablet:          800px;  // Tablets
 $query-smartphoneLarge: 480px;  // Phone - Landscape
 $query-smartphoneSmall: 320px;  // Phone - Portrait
@@ -53,10 +50,12 @@ $query-smartphoneSmall: 320px;  // Phone - Portrait
 //  NOTE: Font-weights below are used to handle webfonts
 //        If this layout doesnt use a webfont, dont change them
 // =============================================================================
+// =========================== Base font weights ==========================
 $bold:                  700;
 $regular:               400;
 $light:                 300;
 
+// =========================== Base font familys ==========================
 $sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 $monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
