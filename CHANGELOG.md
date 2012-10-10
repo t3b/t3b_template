@@ -1,3 +1,12 @@
+## 1.0.8
+**SCSS**
+* Added the color-adjust function from @necolas
+* Changed @hyphens into a %placeholder
+* Added "stacked" navigation mode
+* Added a 'centered' mode for grids
+* Changes to the grid for RTL-Templates
+
+
 ## 1.0.7
 **Structure**
 * Renamed /common/ to /base/
