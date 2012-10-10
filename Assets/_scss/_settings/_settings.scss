@@ -28,6 +28,7 @@ $direction:             ltr;  // set "dir" attribute in HTML to "ltr" (default) 
 // Gid-System
 // =============================================================================
 $columWidth:            60px;   // Width of a Column (Disabled by default, it gets generated)
+// $columWidth:            60px;   // Disabled by default, it'll be calculated
 $totalColumns:          12;     // Number of columns
 $columnGutter:          20px;   // Inner spacing
 
