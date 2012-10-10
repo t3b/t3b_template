@@ -36,6 +36,6 @@
 // =============================================================================
 // Helpers, placeholders and print styles
 // =============================================================================
-@import "_settings/_placeholders";    // SASS Placeholders
+@import "_settings/_shared";          // SASS Placeholders
 @import "base/_helper";               // Helper classes for developement
 @import "base/_print";                // Print styles
