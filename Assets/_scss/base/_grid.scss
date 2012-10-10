@@ -9,19 +9,29 @@
 /* =============================================================================
 $ Variables
 ================================================================================ */
-$columWidth: ($layoutWidth + $columnGutter) / $totalColumns - $columnGutter !default;
-
+$columWidth:      ($layoutWidth + $columnGutter) / $totalColumns - $columnGutter !default;
+$grid-direction:  $start;
 
 /* =============================================================================
 $ Grid Classes
 ================================================================================ */
 // Base styles for .row .# classes
-.columns {
-  float: left;
-  margin: 0 $columnGutter / 2;
-  &.first { margin-left: 0; }
-  &.last { margin-right: 0; }
-  &.centered { margin: 0 auto; float: none; }
+@if $direction == ltr {
+  .columns {
+    float: $grid-direction;
+    margin: 0 $columnGutter / 2;
+    &.first { margin-left: 0; }
+    &.last { margin-right: 0; }
+    &.centered { margin: 0 auto; float: none; }
+  }
+} @else {
+  .columns {
+    float: $grid-direction;
+    margin: 0 $columnGutter / 2;
+    &.first { margin-right: 0; }
+    &.last { margin-left: 0; }
+    &.centered { margin: 0 auto; float: none; }
+  }
 }
 
 .row {
