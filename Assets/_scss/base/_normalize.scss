@@ -9,7 +9,7 @@
 
 /* =============================================================================
 $ HTML5 display definitions
-========================================================================== */
+================================================================================ */
 
 /*
  * Corrects `block` display not defined in IE6/7/8/9 & FF3.
@@ -26,7 +26,7 @@ hgroup,
 nav,
 section,
 summary {
-	display: block;
+  display: block;
 }
 
 /*
@@ -36,7 +36,7 @@ summary {
 audio,
 canvas,
 video {
-	@extend %inline-block;
+  @extend %inline-block;
 }
 
 /*
@@ -45,8 +45,8 @@ video {
  */
 
 audio:not([controls]) {
-	display: none;
-	height: 0;
+  display: none;
+  height: 0;
 }
 
 /*
@@ -55,13 +55,13 @@ audio:not([controls]) {
  */
 
 [hidden] {
-	display: none;
+  display: none;
 }
 
 
 /* =============================================================================
 $ Base
-========================================================================== */
+================================================================================ */
 
 /*
  * 1. Corrects text resizing oddly in IE6/7 when body `font-size` is set using
@@ -72,24 +72,24 @@ $ Base
  */
 
 html {
-	@if $isOldIE == 1 { font-size: 100%; /* 1 */ }
-	-webkit-text-size-adjust: 100%; /* 2 */
-	-ms-text-size-adjust: 100%; /* 2 */
-	overflow-y: scroll; /* 3 */
+  @if $isOldIE == 1 { font-size: 100%; /* 1 */ }
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  overflow-y: scroll; /* 3 */
 }
 @if $isOldIE == 1 {
-	/*
-	 * Addresses `font-family` inconsistency between `textarea` and other form
-	 * elements.
-	 */
+  /*
+   * Addresses `font-family` inconsistency between `textarea` and other form
+   * elements.
+   */
 
-	html,
-	button,
-	input,
-	select,
-	textarea {
-		font-family: $baseFontFamily;
-	}
+  html,
+  button,
+  input,
+  select,
+  textarea {
+    font-family: $baseFontFamily;
+  }
 }
 
 /*
@@ -97,25 +97,25 @@ html {
  */
 
 body {
-	margin: 0;
-	color: $baseTextColor;
-	font: $baseFontWeight #{$baseFontSize/16*100}%/($baseLineHeight/$baseFontSize) $baseFontFamily;
-	background: $bodyBackground;
-	-webkit-font-smoothing: antialiased;
+  margin: 0;
+  color: $baseTextColor;
+  font: $baseFontWeight #{$baseFontSize/16*100}%/($baseLineHeight/$baseFontSize) $baseFontFamily;
+  background: $bodyBackground;
+  -webkit-font-smoothing: antialiased;
 }
 
 
 
 /* =============================================================================
 $ Links
-========================================================================== */
+================================================================================ */
 
 /*
  * Addresses `outline` inconsistency between Chrome and other browsers.
  */
 
 a:focus {
-	outline: thin dotted;
+  outline: thin dotted;
 }
 
 /*
@@ -125,21 +125,21 @@ a:focus {
 
 a:active,
 a:hover {
-	outline: 0;
+  outline: 0;
 }
 
 
 /* =============================================================================
 $ Typography
-========================================================================== */
+================================================================================ */
 
 /*
  * Addresses styling not present in IE7/8/9, S5, Chrome.
  */
 
 abbr[title] {
-	border-bottom: 1px dotted;
-	cursor: help;
+  border-bottom: 1px dotted;
+  cursor: help;
 }
 
 /*
@@ -148,7 +148,7 @@ abbr[title] {
 
 b,
 strong {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 /*
@@ -156,7 +156,7 @@ strong {
  */
 
 dfn {
-	font-style: italic;
+  font-style: italic;
 }
 
 /*
@@ -164,19 +164,19 @@ dfn {
  */
 
 mark {
-	background: #ff0;
-	color: #000;
+  background: $cd-primary;
+  color: color-adjust($cd-primary, 100%);
 }
 
 @if $isOldIE == 1 {
-	/*
-	 * Addresses margins set differently in IE6/7.
-	 */
+  /*
+   * Addresses margins set differently in IE6/7.
+   */
 
-	p,
-	pre {
-		margin: 1em 0;
-	}
+  p,
+  pre {
+    margin: 1em 0;
+  }
 }
 
 /*
@@ -188,9 +188,9 @@ code,
 kbd,
 pre,
 samp {
-	font-family: $monoFontFamily;
-	@if $isOldIE == 1 { _font-family: 'courier new', monospace; }
-	font-size: 1em;
+  font-family: $monoFontFamily;
+  @if $isOldIE == 1 { _font-family: 'courier new', monospace; }
+  font-size: 1em;
 }
 
 /*
@@ -198,9 +198,9 @@ samp {
  */
 
 pre {
-	white-space: pre;
-	white-space: pre-wrap;
-	word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 /*
@@ -208,23 +208,23 @@ pre {
  */
 
 q {
-	quotes: none;
+  quotes: none;
 }
 
 @if $isOldIE == 1 {
-	/*
-	 * Addresses `quotes` property not supported in S4.
-	 */
+  /*
+   * Addresses `quotes` property not supported in S4.
+   */
 
-	q:before,
-	q:after {
-		content: '';
-		content: none;
-	}
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
 }
 
 small {
-	font-size: 80%;
+  font-size: 80%;
 }
 
 /*
@@ -234,64 +234,64 @@ small {
 
 sub,
 sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
 sup {
-	top: -0.5em;
+  top: -0.5em;
 }
 
 sub {
-	bottom: -0.25em;
+  bottom: -0.25em;
 }
 
 @if $isOldIE == 1 {
-	/* ==========================================================================
-	   Lists
-	   ========================================================================== */
+/* =============================================================================
+$ Lists
+================================================================================ */
 
-	/*
-	 * Addresses margins set differently in IE6/7.
-	 */
+  /*
+   * Addresses margins set differently in IE6/7.
+   */
 
-	// dl,
-	// menu,
-	// ol,
-	// ul {
-	// 	margin: 1em 0;
-	// }
+  // dl,
+  // menu,
+  // ol,
+  // ul {
+  //  margin: 1em 0;
+  // }
 
-	dd {
-		margin: 0 0 0 40px;
-	}
+  dd {
+    margin: 0 0 0 40px;
+  }
 
-	/*
-	 * Addresses paddings set differently in IE6/7.
-	 */
+  /*
+   * Addresses paddings set differently in IE6/7.
+   */
 
-	menu,
-	ol,
-	ul {
-		padding: 0 0 0 40px;
-	}
+  menu,
+  ol,
+  ul {
+    padding: 0 0 0 40px;
+  }
 
-	/*
-	 * Corrects list images handled incorrectly in IE7.
-	 */
+  /*
+   * Corrects list images handled incorrectly in IE7.
+   */
 
-	nav ul,
-	nav ol {
-		list-style: none;
-		list-style-image: none;
-	}
+  nav ul,
+  nav ol {
+    list-style: none;
+    list-style-image: none;
+  }
 }
 
 /* =============================================================================
-$ Embedded content
-========================================================================== */
+$ Embedded Content
+================================================================================ */
 
 /*
  * 1. Removes border when inside `a` element in IE6/7/8/9, FF3.
@@ -300,8 +300,8 @@ $ Embedded content
  */
 
 img {
-	border: 0; /* 1 */
-	@if $isOldIE == 1 { -ms-interpolation-mode: bicubic; /* 2 */ }
+  border: 0; /* 1 */
+  @if $isOldIE == 1 { -ms-interpolation-mode: bicubic; /* 2 */ }
 }
 
 /*
@@ -309,35 +309,35 @@ img {
  */
 
 svg:not(:root) {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 
 /* =============================================================================
 $ Figures
-========================================================================== */
+================================================================================ */
 
 /*
  * Addresses margin not present in IE6/7/8/9, S5, O11.
  */
 
 figure {
-	margin: 0;
+  margin: 0;
 }
 
 
 /* =============================================================================
 $ Forms
-========================================================================== */
+================================================================================ */
 
 @if $isOldIE == 1 {
-	/*
-	 * Corrects margin displayed oddly in IE6/7.
-	 */
+  /*
+   * Corrects margin displayed oddly in IE6/7.
+   */
 
-	form {
-		margin: 0;
-	}
+  form {
+    margin: 0;
+  }
 }
 
 /*
@@ -345,9 +345,9 @@ $ Forms
  */
 
 fieldset {
-	border: 1px $basicBorderStyle $basicBorderColor;
-	margin: 0 2px;
-	padding: 0.35em 0.625em 0.75em;
+  border: 1px $basicBorderStyle $basicBorderColor;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
 }
 
 /*
@@ -357,12 +357,12 @@ fieldset {
  */
 
 legend {
-	border: 0; /* 1 */
-	padding: 0;
-	@if $isOldIE == 1 {
-		white-space: normal; /* 2 */
-		*margin-left: -7px; /* 3 */
-	}
+  border: 0; /* 1 */
+  padding: 0;
+  @if $isOldIE == 1 {
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+  }
 }
 
 /*
@@ -375,12 +375,12 @@ button,
 input,
 select,
 textarea {
-	font-size: 100%; /* 1 */
-	margin: 0; /* 2 */
-	@if $isOldIE == 1 {
-		vertical-align: baseline; /* 3 */
-		*vertical-align: middle; /* 3 */
-	}
+  font-size: 100%; /* 1 */
+  margin: 0; /* 2 */
+  @if $isOldIE == 1 {
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+  }
 }
 
 /*
@@ -390,7 +390,7 @@ textarea {
 
 button,
 input {
-	line-height: normal;
+  line-height: normal;
 }
 
 /*
@@ -407,11 +407,11 @@ button,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
-	-webkit-appearance: button; /* 2 */
-	cursor: pointer; /* 3 */
-	@if $isOldIE == 1 {
-		*overflow: visible;  /* 4 */
-	}
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+  @if $isOldIE == 1 {
+    *overflow: visible;  /* 4 */
+  }
 }
 
 /*
@@ -420,7 +420,7 @@ input[type="submit"] {
 
 button[disabled],
 input[disabled] {
-	cursor: default;
+  cursor: default;
 }
 
 /*
@@ -432,12 +432,12 @@ input[disabled] {
 
 input[type="checkbox"],
 input[type="radio"] {
-	box-sizing: border-box; /* 1 */
-	padding: 0; /* 2 */
-	@if $isOldIE == 1 {
-		*height: 13px; /* 3 */
-		*width: 13px; /* 3 */
-	}
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+  @if $isOldIE == 1 {
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+  }
 }
 
 /*
@@ -447,10 +447,10 @@ input[type="radio"] {
  */
 
 input[type="search"] {
-	-webkit-appearance: textfield; /* 1 */
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box; /* 2 */
-	box-sizing: content-box;
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
 }
 
 /*
@@ -459,7 +459,7 @@ input[type="search"] {
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 /*
@@ -468,8 +468,8 @@ input[type="search"]::-webkit-search-decoration {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
+  border: 0;
+  padding: 0;
 }
 
 /*
@@ -478,19 +478,19 @@ input::-moz-focus-inner {
  */
 
 textarea {
-	overflow: auto; /* 1 */
-	vertical-align: top; /* 2 */
+  overflow: auto; /* 1 */
+  vertical-align: top; /* 2 */
 }
 
-/* ==========================================================================
-   Tables
-   ========================================================================== */
+/* =============================================================================
+$ Tables
+================================================================================ */
 
 /*
  * Remove most spacing between table cells.
  */
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }

@@ -1,9 +1,9 @@
 // ==========================================================
 // merged.scss
-// Base Version 1.0.7
+// Base Version 1.0.8
 //
 // Merges all listed stylesheets and does the SASS & Compass magic
-// DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+// DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#import
 // ==========================================================
 @charset "UTF-8";
 
@@ -11,31 +11,31 @@
 // =============================================================================
 // SASS Setup
 // =============================================================================
-@import "compass/css3";							// Compass setup
-@import "_settings/_all";						// SASS Settings
+@import "compass/css3";               // Compass setup
+@import "_settings/_all";             // SASS Settings
 
 
 // =============================================================================
 // Layout
 // =============================================================================
-@import "base/_normalize";				// Normalize elements accross all browsers
-@import "base/_base";							// Base Layout
-@import "base/_grid";							// Grid setup
-@import "base/_t3-general";				// TYPO3 element styling
+@import "base/_normalize";            // Normalize elements accross all browsers
+@import "base/_base";                 // Base Layout
+@import "base/_grid";                 // Grid setup
+@import "base/_t3-general";           // TYPO3 element styling
 
 
 // =============================================================================
 // Components
 // =============================================================================
-@import "components/_typography";			// Basic typography
-@import "components/_tables"; 					// Basic styling of tables
-@import "components/_forms";						// Basic styling of forms
-@import "components/_navigations"; 		// Site navigation
+@import "components/_typography";     // Basic typography
+@import "components/_tables";         // Basic styling of tables
+@import "components/_forms";          // Basic styling of forms
+@import "components/_navigations";    // Site navigation
 
 
 // =============================================================================
 // Helpers, placeholders and print styles
 // =============================================================================
-@import "_settings/_placeholders";	// SASS Placeholders
-@import "base/_helper";						// Helper classes for developement
-@import "base/_print";						// Print styles
+@import "_settings/_placeholders";    // SASS Placeholders
+@import "base/_helper";               // Helper classes for developement
+@import "base/_print";                // Print styles

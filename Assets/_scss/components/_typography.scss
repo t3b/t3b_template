@@ -10,23 +10,23 @@
 $ Links and other stuff
 ================================================================================ */
 a {
-	color: $linkColor;
-	text-decoration: none;
+  color: $linkColor;
+  text-decoration: none;
 }
 a {
-	&:hover,
-	&:active,
-	&:focus {
-		text-decoration: underline;
-		color: $linkColorHover;
-	}
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+    color: $linkColorHover;
+  }
 }
 
 ::-moz-selection,
 ::selection {
-	background: $cd-primary;
-	color: #fff;
-	text-shadow: none;
+  background: $cd-primary;
+  color: #fff;
+  text-shadow: none;
 }
 
 
@@ -36,39 +36,39 @@ $ Headings
 #{headings(all)},
 .h1, .h2, .h3,
 .h4, .h5, .h6 {
-	font-family: $headingsFontFamily;
-	font-weight: $headingsFontWeight;
-	color: $headingsColor;
-	text-rendering: optimizeLegibility; // Optimized kerning for large font sizes
-	small {
-		font-size: 75%;
-		color: lighten($headingsColor, 20%);
-		line-height: 0;
-	}
+  font-family: $headingsFontFamily;
+  font-weight: $headingsFontWeight;
+  color: $headingsColor;
+  text-rendering: optimizeLegibility; // Optimized kerning for large font sizes
+  small {
+    font-size: 75%;
+    color: lighten($headingsColor, 20%);
+    line-height: 0;
+  }
 }
 h1, .h1 {
-	@include font-size(36);
-	margin: 0 0 rs(21, 36);
+  @include font-size(36);
+  margin: 0 0 rs(21, 36);
 }
 h2, .h2 {
-	@include font-size(30);
-	margin: 0 0 rs(18, 30);
+  @include font-size(30);
+  margin: 0 0 rs(18, 30);
 }
 h3, .h3 {
-	@include font-size(24);
-	margin: 0 0 rs(16, 24);
+  @include font-size(24);
+  margin: 0 0 rs(16, 24);
 }
 h4, .h4 {
-	@include font-size(20);
-	margin: 0 0 rs(16, 20);
+  @include font-size(20);
+  margin: 0 0 rs(16, 20);
 }
 h5, .h5 {
-	@include font-size(16);
-	margin: 0;
+  @include font-size(16);
+  margin: 0;
 }
 h6, .h6 {
-	@include font-size(14);
-	margin: 0;
+  @include font-size(14);
+  margin: 0;
 }
 
 
@@ -79,39 +79,39 @@ p,
 ol,
 ul,
 dl,
-menu { margin: 0 0 ($baseLineHeight/$baseFontSize) + em; }
+menu { margin: 0 0 $basicSpacing; }
 
 
 /* =============================================================================
 $ Attachements, Images & Links
-	Contents: 1: Make Images & Attachements responsive
-						2: Styling the alt="" Text on images ( http://csswizardry.com/2011/06/styling-alt-text-on-images/ )
-						3: Increasing the Clickable Area of Inline Links ( http://joshnh.com/2012/09/06/increasing-the-clickable-area-of-inline-links/ )
+  Contents: 1: Make Images & Attachements responsive
+            2: Styling the alt="" Text on images ( http://csswizardry.com/2011/06/styling-alt-text-on-images/ )
+            3: Increasing the Clickable Area of Inline Links ( http://joshnh.com/2012/09/06/increasing-the-clickable-area-of-inline-links/ )
 ================================================================================ */
 embed, iframe, object, img { /* 1 */
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 figure > img {
-	display: block;
+  display: block;
 }
 img { /* 2 */
-	font-style: italic;
+  font-style: italic;
 }
 p a { /* 3 */ // TODO: Cross-Browser testing
-	margin: -.33em;
-	padding: .33em;
-	position: relative;
+  margin: -.33em;
+  padding: .33em;
+  position: relative;
 }
 
 
 /* =============================================================================
 $ Lists
-	Contents: 1: Remove vertical spacing from nested lists
+  Contents: 1: Remove vertical spacing from nested lists
 ================================================================================ */
 li > ul,
 li > ol {  /* 1 */
-	margin-bottom:0;
+  margin-bottom:0;
 }
 
 
@@ -119,10 +119,10 @@ li > ol {  /* 1 */
 $ HTML-Elements
 ================================================================================ */
 hr {
-	display: block;
-	height: 1px;
-	border: 0;
-	border-top: 1px $basicBorderStyle $basicBorderColor;
-	margin: ($baseLineHeight/$baseFontSize) + em 0 ($baseLineHeight/$baseFontSize) + em;
-	padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px $basicBorderStyle $basicBorderColor;
+  margin: $basicSpacing 0 $basicSpacing;
+  padding: 0;
 }

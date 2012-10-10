@@ -23,24 +23,24 @@ DOCS: http://dev.w3.org/csswg/css-device-adapt/
 $ Site-wrapper
 ================================================================================ */
 .wrapper {
-	margin: 0 auto;
-	width: $layoutWidth;
-	position: relative;
+  margin: 0 auto;
+  width: $layoutWidth;
+  position: relative;
 }
 .site-header {
-	height: 100px; // A height should be set
+  height: 100px; // A height should be set
 
-	@extend %non-print; // Will be hidden on print
-	.wrapper { }
+  @extend %non-print; // Will be hidden on print
+  .wrapper { }
 }
-#content {
+.site-content {
 
-	.wrapper { }
+  .wrapper { }
 }
 .site-footer {
 
-	@extend %non-print; // Will be hidden on print
-	.wrapper { }
+  @extend %non-print; // Will be hidden on print
+  .wrapper { }
 }
 
 
@@ -48,16 +48,16 @@ $ Site-wrapper
 $ Logos
 ================================================================================ */
 .siteLogo {
-	display: block;
-	@include img-wh('logo.png');
-	background: url('../img/logo.png');
+  display: block;
+  @include img-wh('logo.png');
+  background: url('../img/logo.png');
 
-	.site-header & {
-		position: absolute;
-		top: 10px;
-		left: $columnGutter / 2;
-	}
-	.site-footer & { }
+  .site-header & {
+    position: absolute;
+    top: 10px;
+    left: $columnGutter / 2;
+  }
+  .site-footer & { }
 }
 
 
@@ -65,15 +65,15 @@ $ Logos
 $ Chromeframe
 ================================================================================ */
 .chromeframe {
-	display: block;
-	height: 41px;
-	border-bottom: 1px $basicBorderStyle #e7db9c;
-	background: #faf6e8;
-	font-size: 12px;
-	font-size: rs(12, $unit: rem);
-	line-height: 41px;
-	color: darken(#faf6e8, 60%);
-	text-align: center;
-	a { border-bottom: 1px dotted; }
-	@extend %non-print; // Will be hidden on print
+  display: block;
+  height: 41px;
+  border-bottom: 1px $basicBorderStyle #e7db9c;
+  background: #faf6e8;
+  font-size: 12px;
+  font-size: rs(12, $unit: rem);
+  line-height: 41px;
+  color: darken(#faf6e8, 60%);
+  text-align: center;
+  a { border-bottom: 1px dotted; }
+  @extend %non-print; // Will be hidden on print
 }

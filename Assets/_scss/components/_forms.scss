@@ -9,6 +9,7 @@
 /* =============================================================================
 $ General styling of Input Fields
 ================================================================================ */
+// ====================== Base input styles ======================
 textarea,
 input[type="email"],
 input[type="number"],
@@ -23,37 +24,40 @@ input[type="datetime-local"],
 input[type="month"],
 input[type="time"],
 input[type="week"] {
-	border: 1px solid $basicBorderColor;
-	font-size: 14px;
-	font-size: rs(14, $unit: rem);
-	color: lighten( $baseTextColor, 5% );
+  border: 1px solid $basicBorderColor;
+  font-size: 14px;
+  font-size: rs(14, $unit: rem);
+  color: lighten( $baseTextColor, 5% );
 
-	&:hover { border-color: darken($basicBorderColor, 20%); }
+  &:hover { border-color: darken($basicBorderColor, 20%); }
 }
+
+// ======================== Textinputs =========================
 textarea {
-	min-height: 70px;
+  min-height: 70px;
 }
 
+// ========================= Checkboxes ========================
 input[type="checkbox"],
 input[type="radio"] {
-	margin-right: 4px;
+  margin-right: 4px;
 }
 
-
+// ========================== Buttons ==========================
 .btn,
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	cursor: pointer;
-	padding: 0.5em;
+  cursor: pointer;
+  padding: 0.5em;
 
-	border: 1px solid $cd-primary;
-	background: $cd-primary;
+  border: 1px solid $cd-primary;
+  background: $cd-primary;
 
-	font-size: .8em;
-	line-height: 1;
-	color: #FFF;
+  font-size: .8em;
+  line-height: 1;
+  color: #FFF;
 }
 
 
@@ -61,9 +65,12 @@ input[type="submit"] {
 $ General styling of Form Fields
 ================================================================================ */
 label {
-	display: block;
-	font-size: 14px;
-	font-size: rs(14, $unit: rem);
+  display: block;
+  font-size: 14px;
+  font-size: rs(14, $unit: rem);
+}
+form {
+  ol, ul { @extend %reset-list; }
 }
 
 
@@ -71,11 +78,11 @@ label {
 $ Searchforms
 ================================================================================ */
 /*form*/.searchform {
-	label { }
-	input {
-		float: left;
-		display: block;
-	}
-	input[type="search"] { }
-	input[type="submit"] { }
+  label { }
+  input {
+    float: left;
+    display: block;
+  }
+  input[type="search"] { }
+  input[type="submit"] { }
 }
