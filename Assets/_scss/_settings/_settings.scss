@@ -2,15 +2,16 @@
 // _settings.scss
 //
 // Merges all listed stylesheets and does the SASS & Compass magic
-// DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+// DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
 // ==========================================================
 
 
 // =============================================================================
-// Support $vars
+// Project Settings
 // =============================================================================
-$isResponsive: 					0; // If set to '1' CSS-Viewport-Rules are added
-$isOldIE: 							1; // If set to '0' it will ignore IE6 & IE7 Hacks while compiling
+// ============================= Support $vars ============================
+$isResponsive:          0;      // If set to '1' CSS-Viewport-Rules are added
+$isOldIE:               1;      // If set to '0' it will ignore IE6 & IE7 Hacks while compiling
 // Support-table for $isOldIE: 0;
 // Google Chrome
 // Mozilla Firefox 4+
@@ -18,83 +19,90 @@ $isOldIE: 							1; // If set to '0' it will ignore IE6 & IE7 Hacks while compil
 // Opera 12+
 // Internet Explorer 8+
 
+// ============================ Text Direction ============================
+$direction:             ltr;  // set "dir" attribute in HTML to "ltr" (default) or "rtl"
+
 
 // =============================================================================
 // Gid-System
 // =============================================================================
-// $columWidth:          	60px; // Width of a Column (Disabled by default, it gets generated)
-$totalColumns: 					12;		// Number of columns
-$columnGutter:	 				20px;	// Inner spacing
+// $columWidth:            60px;   // Disabled by default, it'll be calculated
+$totalColumns:          12;     // Number of columns
+$columnGutter:          20px;   // Inner spacing
 
 
 // =============================================================================
 // Layout
 // NOTE: $layoutWidth is used for calculating the grid and centering purposes
 // =============================================================================
-$layoutWidth:						960px; // Grid Setup
-$bodyBackground:				#fff;
-$contentBackground:			$bodyBackground; // Used for generating some colors
+$layoutWidth:           960px;  // Grid Setup
+$bodyBackground:        #fff;
+$contentBackground:     $bodyBackground; // Used for generating some colors
+$textDirection:         left;
 
-$query-tablet: 					800px; // Tablets
-$query-smartphoneLarge: 480px; // Phone - Landscape
-$query-smartphoneSmall: 320px; // Phone - Portrait
+$query-tablet:          800px;  // Tablets
+$query-smartphoneLarge: 480px;  // Phone - Landscape
+$query-smartphoneSmall: 320px;  // Phone - Portrait
 
 
 // =============================================================================
 // Typography
-//	NOTE:	Font-weights below are used to handle webfonts
-//				If this layout doesnt use a webfont, dont change them
+//  NOTE: Font-weights below are used to handle webfonts
+//        If this layout doesnt use a webfont, dont change them
 // =============================================================================
-$bold:									700;
-$regular:								400;
-$light:									300;
+// =========================== Base font weights ==========================
+$bold:                  700;
+$regular:               400;
+$light:                 300;
 
-$sansFontFamily:				"Helvetica Neue", Helvetica, Arial, sans-serif;
-$serifFontFamily:				Georgia, "Times New Roman", Times, serif;
-$monoFontFamily:				Menlo, Monaco, Consolas, "Courier New", monospace;
+// =========================== Base font familys ==========================
+$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
 
 // ========================== Base font settings ==========================
-$baseFontSize:					16; // px
-$baseLineHeight:				24; // px
-$baseFontFamily:				$sansFontFamily;
-$baseFontWeight:				$regular;
-$baseTextColor:					#3C474B;
+$baseFontSize:          16;   // px
+$baseLineHeight:        24;   // px
+$baseFontFamily:        $sansFontFamily;
+$baseFontWeight:        $regular;
+$baseTextColor:         #3C474B;
+$basicSpacing:          $baseLineHeight / $baseFontSize +em;
 
 // =============================== Headings ===============================
-$headingsFontFamily:		inherit; // empty to use $baseFontFamily
-$headingsFontWeight:		$bold;
-$headingsColor:					#000;
+$headingsFontFamily:    inherit; // empty to use $baseFontFamily
+$headingsFontWeight:    $bold;
+$headingsColor:         #000;
 
 
 // =============================================================================
 // Basic Colors
 // =============================================================================
 // ======================== Coporate Design colors ========================
-$cd-primary:						#0097d7;
-$cd-primaryLight:				lighten($cd-primary, 20%);
-$cd-primaryDark:				darken($cd-primary, 30%);
+$cd-primary:            #0097d7;
+$cd-primaryLight:       lighten($cd-primary, 20%);
+$cd-primaryDark:        darken($cd-primary, 30%);
 
-$cd-secondary:					#38464b;
-$cd-secondaryLight:			lighten($cd-secondary, 20%);
-$cd-secondaryDark:			darken($cd-secondary, 30%);
+$cd-secondary:          #38464b;
+$cd-secondaryLight:     lighten($cd-secondary, 20%);
+$cd-secondaryDark:      darken($cd-secondary, 30%);
 
 // ================================= Links ================================
-$linkColor:							lighten($cd-primary, 10%);
-$linkColorHover:				$cd-primary;
+$linkColor:             lighten($cd-primary, 10%);
+$linkColorHover:        $cd-primary;
 
 
 // =============================================================================
 // Borders
 // =============================================================================
-$basicBorderColor:			darken($contentBackground, 20%);
-$basicBorderStyle:			solid;
+$basicBorderColor:      darken($contentBackground, 20%);
+$basicBorderStyle:      solid;
 
 
 // ============================================================================
 // Z-Index Masterlist
 // ============================================================================
-$zindexDetail:					1010;	// Details
-$zindexModal: 					1020;	// Modal sections
-$zindexDropdown:				1070;	// Dropdowns
-$zindexPopover:					1080;	// Popover
-$zindexPreloader:				1090;	// Preloader
+$zindexDetail:          1010;   // Details
+$zindexModal:           1020;   // Modal sections
+$zindexDropdown:        1070;   // Dropdowns
+$zindexPopover:         1080;   // Popover
+$zindexPreloader:       1090;   // Preloader

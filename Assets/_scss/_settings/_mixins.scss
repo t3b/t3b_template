@@ -2,33 +2,23 @@
 // mixins.scss
 //
 // Mixins to develope faster
-// DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+// DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#mixins
 // ==========================================================
 
 
 // ======================== Image-Dimensions =============================
 @mixin img-wh($img) {
-	width: image-width($img);
-	height: image-height($img);
+  width: image-width($img);
+  height: image-height($img);
 }
 // Usefull for image-replacement, see Usage below:
 // .foo {
-// 	@include img-wh('bar.png');
-// 	background: url('../img/bar.png');
+//  @include img-wh('bar.png');
+//  background: url('../img/bar.png');
 // }
 
 @mixin img-whr($img) {
-	background-size: image-width($img)/2 image-height($img)/2;
-}
-
-// ======================== CSS3 Word-breaker ============================
-@mixin hyphens {
-	-ms-word-break: break-all;
-			word-break: break-all;
-	-webkit-hyphens: auto;
-		 -moz-hyphens: auto;
-			-ms-hyphens: auto;
-					hyphens: auto;
+  background-size: image-width($img)/2 image-height($img)/2;
 }
 
 // ======================== REM Unit Mixin ===============================
@@ -36,88 +26,88 @@
 // single value, e.g.:
 // Thanks to Harry Roberts (@csswizardry)
 @mixin font-size($size) {
-	font-size: $size +px;
-	font-size: $size / $baseFontSize +rem;
-	line-height: ceil($size / $baseLineHeight) * ($baseLineHeight / $size);
+  font-size: $size +px;
+  font-size: $size / $baseFontSize +rem;
+  line-height: ceil($size / $baseLineHeight) * ($baseLineHeight / $size);
 }
 
 // ======================== CSS3 Triangle ===============================
 @mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
-	content: "";
-	display: block;
-	width: 0;
-	height: 0;
-	border: solid   $triangleSize;
-	@if ($triangleDirection == top) {
-		border-color: $triangleColor transparent transparent transparent;
-	} @if ($triangleDirection == bottom) {
-		border-color: transparent transparent $triangleColor transparent;
-	} @if ($triangleDirection == left) {
-		border-color: transparent transparent transparent $triangleColor;
-	} @if ($triangleDirection == right) {
-		border-color: transparent $triangleColor transparent transparent;
-	}
-	// .foo { @include css-triangle(5px, #fff, bottom); }
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: solid   $triangleSize;
+  @if ($triangleDirection == top) {
+    border-color: $triangleColor transparent transparent transparent;
+  } @if ($triangleDirection == bottom) {
+    border-color: transparent transparent $triangleColor transparent;
+  } @if ($triangleDirection == left) {
+    border-color: transparent transparent transparent $triangleColor;
+  } @if ($triangleDirection == right) {
+    border-color: transparent $triangleColor transparent transparent;
+  }
+  // .foo { @include css-triangle(5px, #fff, bottom); }
 }
 
 // ======================== OldIE-Class fixes ===============================
 @mixin ie6 {
-	.lt-ie7 & {
-		@content;
-	}
+  .lt-ie7 & {
+    @content;
+  }
 }
 @mixin ie7 {
-	.lt-ie8 & {
-		@content;
-	}
+  .lt-ie8 & {
+    @content;
+  }
 }
 @mixin ie8 {
-	.lt-ie9 & {
-		@content;
-	}
+  .lt-ie9 & {
+    @content;
+  }
 }
 // Usage
 // .foo {
-//	display: block;
-//		@include ie6 {
-// 			display: none;
-//		}
-//	}
+//  display: block;
+//    @include ie6 {
+//      display: none;
+//    }
+//  }
 
 
 // ======================== Media Queries ===============================
 @mixin respondTo($media) {
-	@if $media == tablet {
-		@media screen and (min-width:$query-smartphoneLarge +1px) and (max-width:$query-tablet) { @content; }
-	}
-	@else if $media == smartphoneLarge {
-		@media screen and (min-width:$query-smartphoneSmall +1px) and (max-width:$query-smartphoneLarge) { @content; }
-	}
-	@else if $media == smartphoneSmall {
-		@media screen and (max-width:$query-smartphoneSmall) { @content; }
-	}
-	@else if $media == HDPI {
-		@media only screen and (-webkit-min-device-pixel-ratio: 1.5),	only screen and (min-resolution: 144dpi) { @content; }
-	}
+  @if $media == tablet {
+    @media screen and (min-width:$query-smartphoneLarge +1px) and (max-width:$query-tablet) { @content; }
+  }
+  @else if $media == smartphoneLarge {
+    @media screen and (min-width:$query-smartphoneSmall +1px) and (max-width:$query-smartphoneLarge) { @content; }
+  }
+  @else if $media == smartphoneSmall {
+    @media screen and (max-width:$query-smartphoneSmall) { @content; }
+  }
+  @else if $media == HDPI {
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) { @content; }
+  }
 }
 // Usage
 // .foo {
-// 	float: left;
-// 	width: 1000px;
-// 	background: url(../img/foo.png) center center no-repeat;
+//  float: left;
+//  width: 1000px;
+//  background: url(../img/foo.png) center center no-repeat;
 //
-// 	@include respondTo(tablet) {
-// 		float: none;
-// 		width: 600px;
-// 	}
-// 	@include respondTo(smartphoneLarge) {
-// 		width: 480px;
-// 	}
-// 	@include respondTo(smartphoneSmall) {
-// 		width: 280px;
-// 	}
-// 	@include respondTo(HDPI) {
-// 		background-image: url(../img/hdpi/foo.png);
-// 		@include img-whr('hdpi/foo.png');
-// 	}
+//  @include respondTo(tablet) {
+//    float: none;
+//    width: 600px;
+//  }
+//  @include respondTo(smartphoneLarge) {
+//    width: 480px;
+//  }
+//  @include respondTo(smartphoneSmall) {
+//    width: 280px;
+//  }
+//  @include respondTo(HDPI) {
+//    background-image: url(../img/hdpi/foo.png);
+//    @include img-whr('hdpi/foo.png');
+//  }
 // }

@@ -7,24 +7,24 @@
  * Usage:
  * @extend %name;
  *
- * DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+ * DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#placeholder_selectors_
  * ========================================================== */
 
 
 // ======================== Reset list ==================================
 %reset-list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 // ======================== Cross browser inline-block ===============================
 %inline-block {
-	display: inline-block;
-	@if $isOldIE == 1 {
-		*display: inline;
-		*zoom: 1;
-	}
+  display: inline-block;
+  @if $isOldIE == 1 {
+    *display: inline;
+    *zoom: 1;
+  }
 }
 
 // ======================== Sprites ===============================
@@ -34,4 +34,14 @@
 %replace {
   font: 0/0 a;
   text-shadow: none;
+}
+
+// ======================== CSS3 Word-breaker ============================
+%hyphens {
+  -ms-word-break: break-all;
+      word-break: break-all;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }

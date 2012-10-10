@@ -50,3 +50,4 @@ publish
 
 # Ignore user generated files
 Assets/css/*.css
+Tests/*

@@ -2,7 +2,7 @@
  * navigations.scss
  *
  * Basic styling for all site-navigation elements
- * DOCS:
+ * DOCS: http://csswizardry.com/2011/09/the-nav-abstraction/
  * ========================================================== */
 
 
@@ -10,40 +10,47 @@
 $ Navigations
 ================================================================================ */
 .nav {
-	ul { @extend %reset-list;	}
-	li { @extend %inline-block; }
-	a {
-		display: block;
-		&:hover { }
-	}
-	li.active a { }
+  ul { @extend %reset-list; }
+  li { @extend %inline-block; }
+  a {
+    display: block;
+    &:hover { }
+  }
+  li.active a { }
 }
 
-/* ======================== Main Navigation ======================== */
+/* ======================= Stacked Navigation ======================= */
+.stacked ul {
+  li { display: list-item;
+    a { display: block; }
+  }
+}
+
+/* ======================== Main Navigation ========================= */
 /*.nav*/.site-nav {
-	// Main Navigation
-	.site-header & { // positioning on site-header
-		position: absolute;
-		right: 250px;
-		top: 30px;
-	}
-	ul { }
-	li { }
-	a { }
+  // Main Navigation
+  .site-header & { // positioning on site-header
+    position: absolute;
+    right: 250px;
+    top: 30px;
+  }
+  ul { }
+  li { }
+  a { }
 }
 
 /* ======================== Footer Navigation ======================== */
 /*.nav*/.footer-nav {
-	// Footer Navigation
-	ul { }
-	li { }
-	a { }
+  // Footer Navigation
+  ul { }
+  li { }
+  a { }
 }
 
-/* ======================== Breadcrumb Navigation ======================== */
+/* ====================== Breadcrumb Navigation ====================== */
 /*.nav*/.breadcrumb {
-	// Breadcrumb Navigation
-	ul { }
-	li { }
-	a { }
+  // Breadcrumb Navigation
+  ul { }
+  li { }
+  a { }
 }

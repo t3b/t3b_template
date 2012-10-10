@@ -2,7 +2,7 @@
 // functions.scss
 //
 // Functions - thats all.
-// DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+// DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#function_directives
 // ==========================================================
 
 
@@ -10,14 +10,14 @@
 // Convert to number
 // =============================================================================
 @function convert-number-to-word($num) {
-	$count: 1;
-	@each $word in one,two,three,four,five,six,seven,eight,nine,ten,eleven,
-		twelve,thirteen,fourteen,fifteen,sixteen,seventeen,eighteen,nineteen,
-		twenty,twentyone,twentytwo,twentythree,twentyfour {
-		@if ($count == $num) { @return $word; }
-		$count: $count + 1;
-	}
-	@return "invalid";
+  $count: 1;
+  @each $word in one,two,three,four,five,six,seven,eight,nine,ten,eleven,
+    twelve,thirteen,fourteen,fifteen,sixteen,seventeen,eighteen,nineteen,
+    twenty,twentyone,twentytwo,twentythree,twentyfour {
+    @if ($count == $num) { @return $word; }
+    $count: $count + 1;
+  }
+  @return "invalid";
 }
 
 
@@ -25,7 +25,7 @@
 // Grid Calc
 // =============================================================================
 @function gridCalc($colNumber, $totalColumns) {
-	@return ($columWidth * $colNumber) + ($columnGutter * ($colNumber - 1));
+  @return ($columWidth * $colNumber) + ($columnGutter * ($colNumber - 1));
 }
 
 
@@ -37,6 +37,35 @@
 
 // Based on the relative-size function from Stitch, http://stitchcss.com/
 // To use rems, pass in `rem` as the last parameter
+// =============================================================================
 @function rs( $target, $context: $baseFontSize, $unit: em ) {
   @return #{$target/$context}$unit;
+}
+
+
+// =============================================================================
+// Text direction check - Based on code from suit (@necolas), https://github.com/necolas/suit
+// =============================================================================
+$start:                 left !default;
+$end:                   right !default;
+@if $direction == rtl {
+  $start: right;
+  $end: left;
+}
+
+// =============================================================================
+// Color-Adjust
+// =============================================================================
+// Adjust color based on lightness
+// Helps to better adjust site-wide colors for light and dark themes
+
+// Based on code from suit (@necolas), https://github.com/necolas/suit
+// =============================================================================
+@function color-adjust($color, $contrast: 100%) {
+  @if (lightness($color) > 50) {
+    @return darken($color, $contrast)
+  }
+  @else {
+    @return lighten($color, $contrast)
+  }
 }
