@@ -21,6 +21,7 @@ $ Grid Classes
   margin: 0 $columnGutter / 2;
   &.first { margin-left: 0; }
   &.last { margin-right: 0; }
+  &.centered { margin: 0 auto; float: none; }
 }
 
 .row {
