@@ -164,8 +164,8 @@ dfn {
  */
 
 mark {
-  background: #ff0;
-  color: #000;
+  background: $cd-primary;
+  color: color-adjust($cd-primary, 100%);
 }
 
 @if $isOldIE == 1 {

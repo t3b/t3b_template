@@ -37,18 +37,35 @@
 
 // Based on the relative-size function from Stitch, http://stitchcss.com/
 // To use rems, pass in `rem` as the last parameter
+// =============================================================================
 @function rs( $target, $context: $baseFontSize, $unit: em ) {
   @return #{$target/$context}$unit;
 }
 
 
 // =============================================================================
-// Text direction check
-// Based on code from suit (@necolas), https://github.com/necolas/suit
+// Text direction check - Based on code from suit (@necolas), https://github.com/necolas/suit
 // =============================================================================
 $start:                 left !default;
 $end:                   right !default;
 @if $direction == rtl {
   $start: right;
   $end: left;
+}
+
+// =============================================================================
+// Color-Adjust
+// =============================================================================
+// Adjust color based on lightness
+// Helps to better adjust site-wide colors for light and dark themes
+
+// Based on code from suit (@necolas), https://github.com/necolas/suit
+// =============================================================================
+@function color-adjust($color, $contrast: 100%) {
+  @if (lightness($color) > 50) {
+    @return darken($color, $contrast)
+  }
+  @else {
+    @return lighten($color, $contrast)
+  }
 }
