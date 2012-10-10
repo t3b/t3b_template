@@ -99,7 +99,7 @@ html {
 body {
   margin: 0;
   color: $baseTextColor;
-  font: $baseFontWeight #{$baseFontSize/16*100}%/($baseLineHeight/$baseFontSize) $baseFontFamily;
+  font: $baseFontWeight #{$baseFontSize/16*100}%/$basicSpacing $baseFontFamily;
   background: $bodyBackground;
   -webkit-font-smoothing: antialiased;
 }

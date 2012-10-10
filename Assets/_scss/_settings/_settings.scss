@@ -66,7 +66,7 @@ $baseLineHeight:        24;   // px
 $baseFontFamily:        $sansFontFamily;
 $baseFontWeight:        $regular;
 $baseTextColor:         #3C474B;
-$basicSpacing:          $baseLineHeight / $baseFontSize +em;
+$basicSpacing:          $baseLineHeight / $baseFontSize;
 
 // =============================== Headings ===============================
 $headingsFontFamily:    inherit; // empty to use $baseFontFamily

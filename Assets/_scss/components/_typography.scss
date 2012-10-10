@@ -80,7 +80,7 @@ ol,
 ul,
 dl,
 figure,
-menu { margin: 0 0 $basicSpacing; }
+menu { margin: 0 0 $basicSpacing +em; }
 
 
 /* =============================================================================
@@ -131,6 +131,6 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px $basicBorderStyle $basicBorderColor;
-  margin: $basicSpacing 0 $basicSpacing;
+  margin: $basicSpacing +em 0 $basicSpacing +em;
   padding: 0;
 }
