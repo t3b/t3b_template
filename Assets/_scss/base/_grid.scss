@@ -34,17 +34,17 @@ $ Grid Classes
   }
 }
 
-.row {
-  // Creating .row .# classes
+.columns {
+  // Creating .columns.# classes
   @for $i from 1 through $totalColumns {
-    .#{convert-number-to-word($i)} {
+    &.#{convert-number-to-word($i)} {
       width: gridCalc($i, $totalColumns);
     }
   }
 
-  // Creating .row .offset-by-# classes
+  // Creating .columns.offset-by-# classes
   @for $i from 1 through $totalColumns - 1 {
-    .offset-by-#{convert-number-to-word($i)} {
+    &.offset-by-#{convert-number-to-word($i)} {
       margin-left: gridCalc($i, $totalColumns) + ($columnGutter);
     }
   }
