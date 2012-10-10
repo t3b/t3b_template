@@ -45,7 +45,11 @@ $ Grid Classes
   // Creating .columns.offset-by-# classes
   @for $i from 1 through $totalColumns - 1 {
     &.offset-by-#{convert-number-to-word($i)} {
-      margin-left: gridCalc($i, $totalColumns) + ($columnGutter);
+      @if $direction == ltr {
+        margin-left: gridCalc($i, $totalColumns) + ($columnGutter);
+      } @else {
+        margin-right: gridCalc($i, $totalColumns) + ($columnGutter);
+      }
     }
   }
 }
