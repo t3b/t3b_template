@@ -79,6 +79,7 @@ p,
 ol,
 ul,
 dl,
+figure,
 menu { margin: 0 0 $basicSpacing; }
 
 
@@ -86,19 +87,26 @@ menu { margin: 0 0 $basicSpacing; }
 $ Attachements, Images & Links
   Contents: 1: Make Images & Attachements responsive
             2: Styling the alt="" Text on images ( http://csswizardry.com/2011/06/styling-alt-text-on-images/ )
-            3: Increasing the Clickable Area of Inline Links ( http://joshnh.com/2012/09/06/increasing-the-clickable-area-of-inline-links/ )
+            3: Decrease font-size on figcaption elements
+            4: Increasing the Clickable Area of Inline Links ( http://joshnh.com/2012/09/06/increasing-the-clickable-area-of-inline-links/ )
 ================================================================================ */
 embed, iframe, object, img { /* 1 */
   max-width: 100%;
   height: auto;
 }
+
 figure > img {
   display: block;
+}
+figcaption {
+  font-size: ($baseFontSize - 2) +px;
+  font-size: rs( ($baseFontSize - 2), $unit: rem);
 }
 img { /* 2 */
   font-style: italic;
 }
-p a { /* 3 */ // TODO: Cross-Browser testing
+
+p a { /* 4 */ // TODO: Cross-Browser testing
   margin: -.33em;
   padding: .33em;
   position: relative;
