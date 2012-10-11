@@ -15,26 +15,21 @@ $grid-direction:  $start;
 /* =============================================================================
 $ Grid Classes
 ================================================================================ */
-// Base styles for .row .# classes
-@if $direction == ltr {
-  .columns {
-    float: $grid-direction;
-    margin: 0 ($columnGutter / 2) +px;
+.columns {
+  // Base styles for .row .# classes
+  float: $grid-direction;
+  margin: 0 ($columnGutter / 2) +px;
+
+  // Layout modes and helper classes
+  &.centered { margin: 0 auto; float: none; }
+  @if $direction == ltr {
     &.first { margin-left: 0; }
     &.last { margin-right: 0; }
-    &.centered { margin: 0 auto; float: none; }
-  }
-} @else {
-  .columns {
-    float: $grid-direction;
-    margin: 0 ($columnGutter / 2) +px;
+  } @else {
     &.first { margin-right: 0; }
     &.last { margin-left: 0; }
-    &.centered { margin: 0 auto; float: none; }
   }
-}
 
-.columns {
   // Creating .columns.# classes
   @for $i from 1 through $totalColumns {
     &.#{convert-number-to-word($i)} {
