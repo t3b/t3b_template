@@ -102,6 +102,7 @@ body {
   font: $baseFontWeight #{$baseFontSize/16*100}%/$basicSpacing $baseFontFamily;
   background: $bodyBackground;
   -webkit-font-smoothing: antialiased;
+  text-align: $start;
 }
 
 
