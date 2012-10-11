@@ -50,7 +50,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
-  padding: 0.5em;
+  padding: 0.5em; // Set in em's so we can change the size of the button depending on the font-size
 
   border: 1px solid $cd-primary;
   background: $cd-primary;
