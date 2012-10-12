@@ -47,19 +47,15 @@ h4, h5, h6 {
 }
 h1, .h1 {
   @include font-size(36);
-  margin: 0 0 rs(21, 36);
 }
 h2, .h2 {
   @include font-size(30);
-  margin: 0 0 rs(18, 30);
 }
 h3, .h3 {
   @include font-size(24);
-  margin: 0 0 rs(16, 24);
 }
 h4, .h4 {
   @include font-size(20);
-  margin: 0 0 rs(16, 20);
 }
 h5, .h5 {
   @include font-size(16);
@@ -68,6 +64,11 @@ h5, .h5 {
 h6, .h6 {
   @include font-size(14);
   margin: 0;
+}
+
+hgroup {
+  h1, h2, h3, h4, h5, h6 { margin-top: 0; }
+  .csc-firstHeader { margin-bottom: 0; }
 }
 
 
