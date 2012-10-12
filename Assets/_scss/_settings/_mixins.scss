@@ -7,16 +7,15 @@
 
 
 // ======================== Image-Dimensions =============================
+// Usefull for image-replacement, see Usage below:
+// .foo {
+//   @include img-wh('bar.png');
+//   background: url('../img/bar.png');
+// }
 @mixin img-wh($img) {
   width: image-width($img);
   height: image-height($img);
 }
-// Usefull for image-replacement, see Usage below:
-// .foo {
-//  @include img-wh('bar.png');
-//  background: url('../img/bar.png');
-// }
-
 @mixin img-whr($img) {
   background-size: image-width($img)/2 image-height($img)/2;
 }
@@ -32,6 +31,10 @@
 }
 
 // ======================== CSS3 Triangle ===============================
+// Usage
+// .foo {
+//   @include css-triangle(5px, #fff, bottom);
+// }
 @mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
   content: "";
   display: block;
@@ -47,10 +50,16 @@
   } @if ($triangleDirection == right) {
     border-color: transparent $triangleColor transparent transparent;
   }
-  // .foo { @include css-triangle(5px, #fff, bottom); }
 }
 
 // ======================== OldIE-Class fixes ===============================
+// Usage
+// .foo {
+//  display: block;
+//    @include ie6 {
+//      display: none;
+//    }
+//  }
 @mixin ie6 {
   .lt-ie7 & {
     @content;
@@ -66,16 +75,29 @@
     @content;
   }
 }
-// Usage
-// .foo {
-//  display: block;
-//    @include ie6 {
-//      display: none;
-//    }
-//  }
-
 
 // ======================== Media Queries ===============================
+// Usage
+// .foo {
+//   float: left;
+//   width: 1000px;
+//   background: url(../img/foo.png) center center no-repeat;
+//
+//   @include respondTo(tablet) {
+//     float: none;
+//     width: 600px;
+//   }
+//   @include respondTo(smartphoneLarge) {
+//     width: 480px;
+//   }
+//   @include respondTo(smartphoneSmall) {
+//     width: 280px;
+//   }
+//   @include respondTo(HDPI) {
+//     background-image: url(../img/hdpi/foo.png);
+//     @include img-whr('hdpi/foo.png');
+//   }
+// }
 @mixin respondTo($media) {
   @if $media == tablet {
     @media screen and (min-width:$query-smartphoneLarge +1px) and (max-width:$query-tablet) { @content; }
@@ -90,24 +112,4 @@
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) { @content; }
   }
 }
-// Usage
-// .foo {
-//  float: left;
-//  width: 1000px;
-//  background: url(../img/foo.png) center center no-repeat;
-//
-//  @include respondTo(tablet) {
-//    float: none;
-//    width: 600px;
-//  }
-//  @include respondTo(smartphoneLarge) {
-//    width: 480px;
-//  }
-//  @include respondTo(smartphoneSmall) {
-//    width: 280px;
-//  }
-//  @include respondTo(HDPI) {
-//    background-image: url(../img/hdpi/foo.png);
-//    @include img-whr('hdpi/foo.png');
-//  }
-// }
+
