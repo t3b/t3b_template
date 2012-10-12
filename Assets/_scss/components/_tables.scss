@@ -11,7 +11,7 @@ $ Tables
 ================================================================================ */
 table {
   width: 100%;
-  margin: 0 0 ($baseLineHeight/$baseFontSize) + em;
+  margin: 0 0 $basicSpacing +em;
   caption { text-align: $start; }
 }
 th { text-align: $start; }

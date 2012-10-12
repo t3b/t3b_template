@@ -72,7 +72,7 @@ $headingsColor:         #000;
 
 // =============================== Spacings ===============================
 $basicSpacing:          $baseLineHeight / $baseFontSize;
-$halfSpacing:           ($baseLineHeight / $baseFontSize) / 2;
+$halfSpacing:           $basicSpacing / 2;
 
 
 // =============================================================================
