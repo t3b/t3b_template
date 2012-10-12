@@ -1,3 +1,18 @@
+## 1.0.9
+**SCSS**
+* BUGFIX: Spacing for offset-by-# classes
+* Direction based offset-by-# classes
+* Added text-align on body {} for RTL-Templates
+* Automated ::selection-styling
+* Styling for <label>
+* Styling for <figure> and <figcaption>
+* Styling for subheaders in <hgroup>
+
+**Structure**
+* Renamed _placeholders.scss to _shared.scss
+* Renamed _settings.scss to _variables.scss
+* Added a _media.scss file
+
 ## 1.0.8
 **SCSS**
 * Added the color-adjust function from @necolas
