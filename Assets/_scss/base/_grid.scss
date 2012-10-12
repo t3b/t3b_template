@@ -22,13 +22,9 @@ $ Grid Classes
 
   // Layout modes and helper classes
   &.centered { margin: 0 auto; float: none; }
-  @if $direction == ltr {
-    &.first { margin-left: 0; }
-    &.last { margin-right: 0; }
-  } @else {
-    &.first { margin-right: 0; }
-    &.last { margin-left: 0; }
-  }
+  &.first { margin-#{$start}: 0; }
+  &.last { margin-#{$end}: 0; }
+
 
   // Creating .columns.# classes
   @for $i from 1 through $totalColumns {
