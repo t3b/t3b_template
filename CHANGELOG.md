@@ -4,9 +4,9 @@
 * Direction based offset-by-# classes
 * Added text-align on body {} for RTL-Templates
 * Automated ::selection-styling
-* Styling for <label>
-* Styling for <figure> and <figcaption>
-* Styling for subheaders in <hgroup>
+* Styling for `<label>`
+* Styling for `<figure>` and `<figcaption>`
+* Styling for subheaders in `<hgroup>`
 
 **Structure**
 * Renamed _placeholders.scss to _shared.scss
