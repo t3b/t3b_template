@@ -1,8 +1,7 @@
 /* ==========================================================
- * placeholders.scss
+ * shared.scss
  *
- * Placeholders to develope faster
- * Use these to reduce duplicate code
+ * Shared styles(%placeholders) to reduce duplicate code
  *
  * Usage:
  * @extend %name;
@@ -26,9 +25,6 @@
     *zoom: 1;
   }
 }
-
-// ======================== Sprites ===============================
-%sprite { background-image: url('../img/sprite.png'); background-repeat: no-repeat; }
 
 // ===================== Simple Replace ===========================
 %replace {

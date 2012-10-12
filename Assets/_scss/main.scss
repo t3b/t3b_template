@@ -1,6 +1,6 @@
 // ==========================================================
 // merged.scss
-// Base Version 1.0.8
+// Base Version 1.0.9
 //
 // Merges all listed stylesheets and does the SASS & Compass magic
 // DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#import
@@ -28,6 +28,7 @@
 // Components
 // =============================================================================
 @import "components/_typography";     // Basic typography
+@import "components/_media";          // Basic styling of media elements
 @import "components/_tables";         // Basic styling of tables
 @import "components/_forms";          // Basic styling of forms
 @import "components/_navigations";    // Site navigation
@@ -36,6 +37,6 @@
 // =============================================================================
 // Helpers, placeholders and print styles
 // =============================================================================
-@import "_settings/_placeholders";    // SASS Placeholders
+@import "_settings/_shared";          // SASS Placeholders
 @import "base/_helper";               // Helper classes for developement
 @import "base/_print";                // Print styles
