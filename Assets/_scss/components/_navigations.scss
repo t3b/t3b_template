@@ -20,10 +20,9 @@ $ Navigations
 }
 
 /* ======================= Stacked Navigation ======================= */
-.stacked ul {
-  li { display: list-item;
-    a { display: block; }
-  }
+/*.nav*/.stacked ul li {
+  display: list-item;
+  a { display: block; }
 }
 
 /* ======================== Main Navigation ========================= */
