@@ -15,37 +15,32 @@ $grid-direction:  $start;
 /* =============================================================================
 $ Grid Classes
 ================================================================================ */
-// Base styles for .row .# classes
-@if $direction == ltr {
-  .columns {
-    float: $grid-direction;
-    margin: 0 $columnGutter / 2;
-    &.first { margin-left: 0; }
-    &.last { margin-right: 0; }
-    &.centered { margin: 0 auto; float: none; }
-  }
-} @else {
-  .columns {
-    float: $grid-direction;
-    margin: 0 $columnGutter / 2;
-    &.first { margin-right: 0; }
-    &.last { margin-left: 0; }
-    &.centered { margin: 0 auto; float: none; }
-  }
-}
+.columns {
+  // Base styles for .row .# classes
+  float: $grid-direction;
+  margin: 0 ($columnGutter / 2) +px;
 
-.row {
-  // Creating .row .# classes
+  // Layout modes and helper classes
+  &.centered { margin: 0 auto; float: none; }
+  &.first { margin-#{$start}: 0; }
+  &.last { margin-#{$end}: 0; }
+
+
+  // Creating .columns.# classes
   @for $i from 1 through $totalColumns {
-    .#{convert-number-to-word($i)} {
+    &.#{convert-number-to-word($i)} {
       width: gridCalc($i, $totalColumns);
     }
   }
 
-  // Creating .row .offset-by-# classes
+  // Creating .columns.offset-by-# classes
   @for $i from 1 through $totalColumns - 1 {
-    .offset-by-#{convert-number-to-word($i)} {
-      margin-left: gridCalc($i, $totalColumns) + ($columnGutter * 1.5);
+    &.offset-by-#{convert-number-to-word($i)} {
+      @if $direction == ltr {
+        margin-left: gridCalc($i, $totalColumns) + ($columnGutter);
+      } @else {
+        margin-right: gridCalc($i, $totalColumns) + ($columnGutter);
+      }
     }
   }
 }

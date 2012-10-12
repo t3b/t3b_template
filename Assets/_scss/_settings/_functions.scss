@@ -46,8 +46,8 @@
 // =============================================================================
 // Text direction check - Based on code from suit (@necolas), https://github.com/necolas/suit
 // =============================================================================
-$start:                 left !default;
-$end:                   right !default;
+$start: left !default;
+$end: right !default;
 @if $direction == rtl {
   $start: right;
   $end: left;

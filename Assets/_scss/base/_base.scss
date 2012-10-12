@@ -55,7 +55,7 @@ $ Logos
   .site-header & {
     position: absolute;
     top: 10px;
-    left: $columnGutter / 2;
+    left: ($columnGutter / 2) +px;
   }
   .site-footer & { }
 }

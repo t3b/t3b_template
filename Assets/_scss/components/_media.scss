@@ -1,0 +1,61 @@
+/* ==========================================================
+ * media.scss
+ *
+ * Basic styling for media elements e.g. Images, Video & Audio
+ * DOCS:
+ * ========================================================== */
+
+
+/* =============================================================================
+$ Attachements & Images
+  Contents: 1: Make Images & Attachements responsive
+            2: Decrease font-size on figcaption elements
+            3: Styling the alt="" Text on images ( http://csswizardry.com/2011/06/styling-alt-text-on-images/ )
+================================================================================ */
+embed, iframe, object, img { /* 1 */
+  max-width: 100%;
+  height: auto;
+}
+figure > img {
+  display: block;
+}
+figcaption { /* 2 */
+  font-size: ($baseFontSize - 2) +px;
+  font-size: rs( ($baseFontSize - 2), $unit: rem);
+}
+img { /* 3 */
+  font-style: italic;
+}
+
+
+/* =============================================================================
+$ Video
+================================================================================ */
+video {
+  &::-webkit-media-controls-panel {
+    bottom: 10px;
+
+    background-color: rgba(0, 0, 0, .6);
+    -webkit-transition: all .6s;
+    &:hover {
+      background-color: rgba(0, 0, 0, .8);
+    }
+  }
+  &::-webkit-media-controls-play-button:hover {
+    -webkit-transform: scale(1.2);
+  }
+  &::-webkit-media-controls-timeline {
+    border-radius: 3px;
+  }
+}
+
+
+/* =============================================================================
+$ Audio
+================================================================================ */
+audio {
+  min-width: 65%;
+  &::-webkit-media-controls-play-button:hover {
+    -webkit-transform: scale(1.2);
+  }
+}
