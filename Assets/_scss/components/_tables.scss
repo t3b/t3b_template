@@ -32,7 +32,7 @@ $ Contenttable-1 (Bordered Table w/ odd & even)
   }
 
   /*tr*/.tr-even { background: $contentBackground; }
-  /*tr*/.tr-odd { background: color-adjust($contentBackground, 5%) }
+  /*tr*/.tr-odd { background: color-adjust($contentBackground, 5%); }
   /*tr*/.tr-last td { border-bottom: 0; }
   /*td*/.td-0 { border-left: 0; }
 }
