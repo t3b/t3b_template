@@ -25,7 +25,7 @@ a {
 ::-moz-selection,
 ::selection {
   background: $cd-primary;
-  color: #fff;
+  color: color-adjust($cd-primary, 100%);
   text-shadow: none;
 }
 
