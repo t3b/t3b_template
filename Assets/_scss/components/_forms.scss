@@ -66,8 +66,11 @@ $ General styling of Form Fields
 ================================================================================ */
 label {
   display: block;
-  font-size: 14px;
-  font-size: rs(14, $unit: rem);
+  font-weight: $bold;
+  @include font-size(14);
+  &[for] {
+    cursor: pointer;
+  }
 }
 form {
   ol, ul { @extend %reset-list; }
