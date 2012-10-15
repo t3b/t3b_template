@@ -21,10 +21,12 @@ $ Grid Classes
   margin: 0 ($columnGutter / 2) +px;
 
   // Layout modes and helper classes
-  &.centered { margin: 0 auto; float: none; }
+  &.centered {
+    margin: 0 auto;
+    float: none;
+  }
   &.first { margin-#{$start}: 0; }
   &.last { margin-#{$end}: 0; }
-
 
   // Creating .columns.# classes
   @for $i from 1 through $totalColumns {

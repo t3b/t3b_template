@@ -85,12 +85,9 @@ menu { margin: 0 0 $basicSpacing +em; }
 
 
 /* =============================================================================
-$ Attachements, Images & Links
-  Contents: 1: Increasing the Clickable Area of Inline Links ( http://joshnh.com/2012/09/06/increasing-the-clickable-area-of-inline-links/ )
+$ Paragraphs
 ================================================================================ */
-
-
-p a { /* 1 */ // TODO: Cross-Browser testing
+p a { /* Increasing the Clickable Area of Inline Links */
   margin: -.33em;
   padding: .33em;
   position: relative;
@@ -99,10 +96,10 @@ p a { /* 1 */ // TODO: Cross-Browser testing
 
 /* =============================================================================
 $ Lists
-  Contents: 1: Remove vertical spacing from nested lists
+  Contents: 1:
 ================================================================================ */
 li > ul,
-li > ol {  /* 1 */
+li > ol { /* Remove vertical spacing from nested lists */
   margin-bottom:0;
 }
 
