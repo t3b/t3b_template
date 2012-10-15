@@ -6,12 +6,16 @@
 // ==========================================================
 
 
-// ======================== Image-Dimensions =============================
+// =============================================================================
+// Image-Dimensions
+// =============================================================================
 // Usefull for image-replacement, see Usage below:
+//
 // .foo {
 //   @include img-wh('bar.png');
 //   background: url('../img/bar.png');
 // }
+// =============================================================================
 @mixin img-wh($img) {
   width: image-width($img);
   height: image-height($img);
@@ -20,21 +24,28 @@
   background-size: image-width($img)/2 image-height($img)/2;
 }
 
-// ======================== REM Unit Mixin ===============================
+
+// =============================================================================
+// REM Unit Mixin
+// =============================================================================
 // Create a fully formed type style (sizing and vertical rhythm) by passing in a
 // single value, e.g.:
 // Thanks to Harry Roberts (@csswizardry)
+// =============================================================================
 @mixin font-size($size) {
   font-size: $size +px;
   font-size: $size / $baseFontSize +rem;
   line-height: ceil($size / $baseLineHeight) * ($baseLineHeight / $size);
 }
 
-// ======================== CSS3 Triangle ===============================
-// Usage
+
+// =============================================================================
+// CSS3 Triangle
+// =============================================================================
 // .foo {
 //   @include css-triangle(5px, #fff, bottom);
 // }
+// =============================================================================
 @mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
   content: "";
   display: block;
@@ -52,14 +63,17 @@
   }
 }
 
-// ======================== OldIE-Class fixes ===============================
-// Usage
+
+// =============================================================================
+// OldIE-Class Mixins
+// =============================================================================
 // .foo {
 //  display: block;
 //    @include ie6 {
 //      display: none;
 //    }
 //  }
+// =============================================================================
 @mixin ie6 {
   .lt-ie7 & {
     @content;
@@ -76,8 +90,10 @@
   }
 }
 
-// ======================== Media Queries ===============================
-// Usage
+
+// =============================================================================
+// Media Queries
+// =============================================================================
 // .foo {
 //   float: left;
 //   width: 1000px;
@@ -98,6 +114,7 @@
 //     @include img-whr('hdpi/foo.png');
 //   }
 // }
+// =============================================================================
 @mixin respondTo($media) {
   @if $media == tablet {
     @media screen and (min-width:$query-smartphoneLarge +1px) and (max-width:$query-tablet) { @content; }
