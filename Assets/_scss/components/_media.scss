@@ -12,8 +12,14 @@ $ Attachements & Images
             2: Decrease font-size on figcaption elements
             3: Styling the alt="" Text on images ( http://csswizardry.com/2011/06/styling-alt-text-on-images/ )
 ================================================================================ */
-embed, iframe, object, img { /* 1 */
+embed,
+iframe,
+object,
+img { /* 1 */
   max-width: 100%;
+}
+img[height] { /* 1 */
+  height: auto;
 }
 figure > img {
   display: block;
