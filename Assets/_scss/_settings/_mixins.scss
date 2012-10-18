@@ -13,7 +13,7 @@
 //
 // .foo {
 //   @include img-wh('bar.png');
-//   background: url('../img/bar.png');
+//   background: image-url('bar.png');
 // }
 // =============================================================================
 @mixin img-wh($img) {
@@ -97,7 +97,7 @@
 // .foo {
 //   float: left;
 //   width: 1000px;
-//   background: url(../img/foo.png) center center no-repeat;
+//   background: image-url('foo.png') center center no-repeat;
 //
 //   @include respondTo(tablet) {
 //     float: none;
@@ -110,7 +110,7 @@
 //     width: 280px;
 //   }
 //   @include respondTo(HDPI) {
-//     background-image: url(../img/hdpi/foo.png);
+//     background-image: image-url('hdpi/foo.png');
 //     @include img-whr('hdpi/foo.png');
 //   }
 // }

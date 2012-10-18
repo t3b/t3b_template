@@ -50,7 +50,7 @@ $ Logos
 .siteLogo {
   display: block;
   @include img-wh('logo.png');
-  background: url('../img/logo.png');
+  background: image-url('logo.png');
 
   .site-header & {
     position: absolute;
