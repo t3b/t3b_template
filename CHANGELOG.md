@@ -1,4 +1,18 @@
+## 1.1.0
+**SCSS**
+* Refactored structure for variables.scss
+* Added Compass image-url()-Function usage
+* BUGFIX: Removed height: auto; from iframes
+* Added a %border-box placeholder
+* Removed controls positioning on `<video>`
+
+
 ## 1.0.9
+**Structure**
+* Renamed _placeholders.scss to _shared.scss
+* Renamed _settings.scss to _variables.scss
+* Added a _media.scss file
+
 **SCSS**
 * BUGFIX: Spacing for offset-by-# classes
 * Direction based offset-by-# classes
@@ -8,10 +22,6 @@
 * Styling for `<figure>` and `<figcaption>`
 * Styling for subheaders in `<hgroup>`
 
-**Structure**
-* Renamed _placeholders.scss to _shared.scss
-* Renamed _settings.scss to _variables.scss
-* Added a _media.scss file
 
 ## 1.0.8
 **SCSS**
@@ -121,11 +131,8 @@
 
 
 ## 0.9.1
-**Structure**
-* Update Modernizr to 2.6.1
-
 **JS**
 * Folder setup and placeholders
-
+* Update Modernizr to 2.6.1
 
 ## 0.9.0 Initial commit

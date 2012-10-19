@@ -9,7 +9,7 @@
 /* =============================================================================
 $ General styling of Input Fields
 ================================================================================ */
-// ====================== Base input styles ======================
+/* ====================== Base input styles ====================== */
 textarea,
 input[type="email"],
 input[type="number"],
@@ -32,18 +32,18 @@ input[type="week"] {
   &:hover { border-color: darken($basicBorderColor, 20%); }
 }
 
-// ======================== Textinputs =========================
+/* ======================== Textinputs ========================= */
 textarea {
   min-height: 70px;
 }
 
-// ========================= Checkboxes ========================
+/* ========================= Checkboxes ======================== */
 input[type="checkbox"],
 input[type="radio"] {
   margin-right: 4px;
 }
 
-// ========================== Buttons ==========================
+/* ========================== Buttons ========================== */
 .btn,
 button,
 input[type="button"],
@@ -52,7 +52,7 @@ input[type="submit"] {
   cursor: pointer;
   padding: 0.5em; // Set in em's so we can change the size of the button depending on the font-size
 
-  border: 1px solid $cd-primary;
+  border: 0;
   background: $cd-primary;
 
   font-size: .8em;
@@ -73,14 +73,15 @@ label {
   }
 }
 form {
-  ol, ul { @extend %reset-list; }
+  ol,
+  ul { @extend %reset-list; }
 }
 
 
 /* =============================================================================
 $ Secific forms
 ================================================================================ */
-// ========================= Searchform ========================
+/* ========================= Searchform ======================== */
 /*form*/.searchform {
   label { }
   input {

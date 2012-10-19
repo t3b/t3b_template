@@ -1,6 +1,6 @@
 // ==========================================================
 // merged.scss
-// Base Version 1.0.9
+// Base Version 1.1.0
 //
 // Merges all listed stylesheets and does the SASS & Compass magic
 // DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#import
@@ -19,8 +19,8 @@
 // Layout
 // =============================================================================
 @import "base/_normalize";            // Normalize elements accross all browsers
-@import "base/_base";                 // Base Layout
-@import "base/_grid";                 // Grid setup
+@import "base/_base";                 // Header, Footer, Logos and Chromeframe
+@import "base/_grid";                 // Grid
 @import "base/_t3-general";           // TYPO3 element styling
 
 
@@ -28,10 +28,10 @@
 // Components
 // =============================================================================
 @import "components/_typography";     // Basic typography
-@import "components/_media";          // Basic styling of media elements
-@import "components/_tables";         // Basic styling of tables
-@import "components/_forms";          // Basic styling of forms
-@import "components/_navigations";    // Site navigation
+@import "components/_media";          // Media elements like images, audio and video
+@import "components/_tables";         // Tables
+@import "components/_forms";          // Forms, input's and other form fields
+@import "components/_navigations";    // Navigations
 
 
 // =============================================================================

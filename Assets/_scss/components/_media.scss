@@ -12,8 +12,13 @@ $ Attachements & Images
             2: Decrease font-size on figcaption elements
             3: Styling the alt="" Text on images ( http://csswizardry.com/2011/06/styling-alt-text-on-images/ )
 ================================================================================ */
-embed, iframe, object, img { /* 1 */
+embed,
+iframe,
+object,
+img { /* 1 */
   max-width: 100%;
+}
+img[height] { /* 1 */
   height: auto;
 }
 figure > img {
@@ -33,8 +38,6 @@ $ Video
 ================================================================================ */
 video {
   &::-webkit-media-controls-panel {
-    bottom: 10px;
-
     background-color: rgba(0, 0, 0, .6);
     -webkit-transition: all .6s;
     &:hover {

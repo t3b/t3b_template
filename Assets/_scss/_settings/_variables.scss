@@ -3,61 +3,60 @@
 //
 // Merges all listed stylesheets and does the SASS & Compass magic
 // DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
+//
+//
+// Support-table for $isOldIE: 0;
+//
+// Google Chrome
+// Mozilla Firefox 4+
+// Apple Safari 5+
+// Opera 12+
+// Internet Explorer 8+
+//
 // ==========================================================
 
 
 // =============================================================================
 // Project Settings
 // =============================================================================
-// ============================= Support $vars ============================
 $isResponsive:          0;      // If set to '1' CSS-Viewport-Rules are added
 $isOldIE:               1;      // If set to '0' it will ignore IE6 & IE7 Hacks while compiling
-// Support-table for $isOldIE: 0;
-// Google Chrome
-// Mozilla Firefox 4+
-// Apple Safari 5+
-// Opera 12+
-// Internet Explorer 8+
-
-// ============================ Text Direction ============================
-$direction:             ltr;  // set "dir" attribute in HTML to "ltr" (default) or "rtl"
-
-
-// =============================================================================
-// Gid-System
-// =============================================================================
-// $columWidth:            60px;   // Disabled by default, it'll be calculated
-$totalColumns:          12;     // Number of columns
-$columnGutter:          20;     // Inner spacing
+$direction:             ltr;    // set "dir" attribute in HTML to "ltr" (default) or "rtl"
 
 
 // =============================================================================
 // Layout
-// NOTE: $layoutWidth is used for calculating the grid and centering purposes
 // =============================================================================
-$layoutWidth:           960px;  // Grid Setup
-$bodyBackground:        #fff;
-$contentBackground:     $bodyBackground; // Used for generating some colors
-
+// ================================ Widths ================================
+$layoutWidth:           960px;  // Used for calculating the grid
 $query-tablet:          800px;  // Tablets
 $query-smartphoneLarge: 480px;  // Phone - Landscape
 $query-smartphoneSmall: 320px;  // Phone - Portrait
 
+// ============================== Grid System =============================
+$totalColumns:          12;     // Number of columns
+$columnGutter:          20;     // Inner spacing
+
+// ============================== Backgrounds =============================
+$bodyBackground:        #fff;   // Will be set on <body>
+$contentBackground:     $bodyBackground; // Used for generating some colors
+
 
 // =============================================================================
 // Typography
-//  NOTE: Font-weights below are used to handle webfonts
-//        If this layout doesnt use a webfont, dont change them
 // =============================================================================
-// =========================== Base font weights ==========================
-$bold:                  700;
-$regular:               400;
-$light:                 300;
-
-// =========================== Base font familys ==========================
+// ============================== Font familys ============================
 $sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 $monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// ============================== Font weights ============================
+// NOTE:
+// Font-weights below are used to handle webfonts - if this layout doesnt
+// use a webfont, dont change them
+$bold:                  700;
+$regular:               400;
+$light:                 300;
 
 // ========================== Base font settings ==========================
 $baseFontSize:          16; // Set in px
@@ -65,16 +64,19 @@ $baseLineHeight:        24; // Set in px
 $baseFontFamily:        $sansFontFamily;
 $baseFontWeight:        $regular;
 $baseTextColor:         #3C474B;
-$basicSpacing:          $baseLineHeight / $baseFontSize;
 
 // =============================== Headings ===============================
 $headingsFontFamily:    inherit; // empty to use $baseFontFamily
 $headingsFontWeight:    $bold;
 $headingsColor:         #000;
 
+// =============================== Spacings ===============================
+$basicSpacing:          $baseLineHeight / $baseFontSize;
+$halfSpacing:           $basicSpacing / 2;
+
 
 // =============================================================================
-// Basic Colors
+// Colors
 // =============================================================================
 // ======================== Coporate Design colors ========================
 $cd-primary:            #0097d7;
@@ -89,19 +91,7 @@ $cd-secondaryDark:      darken($cd-secondary, 30%);
 $linkColor:             lighten($cd-primary, 10%);
 $linkColorHover:        $cd-primary;
 
-
-// =============================================================================
-// Borders
-// =============================================================================
+// ================================ Borders ===============================
 $basicBorderColor:      darken($contentBackground, 20%);
 $basicBorderStyle:      solid;
 
-
-// ============================================================================
-// Z-Index Masterlist
-// ============================================================================
-$zindexDetail:          1010;   // Details
-$zindexModal:           1020;   // Modal sections
-$zindexDropdown:        1070;   // Dropdowns
-$zindexPopover:         1080;   // Popover
-$zindexPreloader:       1090;   // Preloader

@@ -149,7 +149,7 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: bold;
+  font-weight: $bold;
 }
 
 /*
@@ -169,16 +169,17 @@ mark {
   color: color-adjust($cd-primary, 100%);
 }
 
-@if $isOldIE == 1 {
-  /*
-   * Addresses margins set differently in IE6/7.
-   */
 
-  p,
-  pre {
-    margin: 1em 0;
-  }
-}
+// Will be set in typography.scss
+// /*
+//  * Addresses margins set differently in IE6/7.
+//  */
+//
+// p,
+// pre {
+//   margin: 1em 0;
+// }
+
 
 /*
  * Corrects font family set oddly in IE6, S4/5, Chrome.
@@ -258,6 +259,7 @@ $ Lists
    * Addresses margins set differently in IE6/7.
    */
 
+  // Will be set in typography.scss
   // dl,
   // menu,
   // ol,

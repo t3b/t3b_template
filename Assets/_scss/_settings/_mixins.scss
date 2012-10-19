@@ -6,32 +6,46 @@
 // ==========================================================
 
 
-// ======================== Image-Dimensions =============================
+// =============================================================================
+// Image-Dimensions
+// =============================================================================
+// Usefull for image-replacement, see Usage below:
+//
+// .foo {
+//   @include img-wh('bar.png');
+//   background: image-url('bar.png');
+// }
+// =============================================================================
 @mixin img-wh($img) {
   width: image-width($img);
   height: image-height($img);
 }
-// Usefull for image-replacement, see Usage below:
-// .foo {
-//  @include img-wh('bar.png');
-//  background: url('../img/bar.png');
-// }
-
 @mixin img-whr($img) {
   background-size: image-width($img)/2 image-height($img)/2;
 }
 
-// ======================== REM Unit Mixin ===============================
+
+// =============================================================================
+// REM Unit Mixin
+// =============================================================================
 // Create a fully formed type style (sizing and vertical rhythm) by passing in a
 // single value, e.g.:
 // Thanks to Harry Roberts (@csswizardry)
+// =============================================================================
 @mixin font-size($size) {
   font-size: $size +px;
   font-size: $size / $baseFontSize +rem;
   line-height: ceil($size / $baseLineHeight) * ($baseLineHeight / $size);
 }
 
-// ======================== CSS3 Triangle ===============================
+
+// =============================================================================
+// CSS3 Triangle
+// =============================================================================
+// .foo {
+//   @include css-triangle(5px, #fff, bottom);
+// }
+// =============================================================================
 @mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
   content: "";
   display: block;
@@ -47,10 +61,19 @@
   } @if ($triangleDirection == right) {
     border-color: transparent $triangleColor transparent transparent;
   }
-  // .foo { @include css-triangle(5px, #fff, bottom); }
 }
 
-// ======================== OldIE-Class fixes ===============================
+
+// =============================================================================
+// OldIE-Class Mixins
+// =============================================================================
+// .foo {
+//  display: block;
+//    @include ie6 {
+//      display: none;
+//    }
+//  }
+// =============================================================================
 @mixin ie6 {
   .lt-ie7 & {
     @content;
@@ -66,16 +89,32 @@
     @content;
   }
 }
-// Usage
+
+
+// =============================================================================
+// Media Queries
+// =============================================================================
 // .foo {
-//  display: block;
-//    @include ie6 {
-//      display: none;
-//    }
-//  }
-
-
-// ======================== Media Queries ===============================
+//   float: left;
+//   width: 1000px;
+//   background: image-url('foo.png') center center no-repeat;
+//
+//   @include respondTo(tablet) {
+//     float: none;
+//     width: 600px;
+//   }
+//   @include respondTo(smartphoneLarge) {
+//     width: 480px;
+//   }
+//   @include respondTo(smartphoneSmall) {
+//     width: 280px;
+//   }
+//   @include respondTo(HDPI) {
+//     background-image: image-url('hdpi/foo.png');
+//     @include img-whr('hdpi/foo.png');
+//   }
+// }
+// =============================================================================
 @mixin respondTo($media) {
   @if $media == tablet {
     @media screen and (min-width:$query-smartphoneLarge +1px) and (max-width:$query-tablet) { @content; }
@@ -90,24 +129,4 @@
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) { @content; }
   }
 }
-// Usage
-// .foo {
-//  float: left;
-//  width: 1000px;
-//  background: url(../img/foo.png) center center no-repeat;
-//
-//  @include respondTo(tablet) {
-//    float: none;
-//    width: 600px;
-//  }
-//  @include respondTo(smartphoneLarge) {
-//    width: 480px;
-//  }
-//  @include respondTo(smartphoneSmall) {
-//    width: 280px;
-//  }
-//  @include respondTo(HDPI) {
-//    background-image: url(../img/hdpi/foo.png);
-//    @include img-whr('hdpi/foo.png');
-//  }
-// }
+
