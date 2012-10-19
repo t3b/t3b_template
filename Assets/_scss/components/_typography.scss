@@ -67,7 +67,8 @@ h6, .h6 {
 }
 
 hgroup {
-  h1, h2, h3, h4, h5, h6 { margin-top: 0; }
+  h1, h2, h3,
+  h4, h5, h6 { margin-top: 0; }
   .csc-firstHeader { margin-bottom: 0; }
 }
 
@@ -76,6 +77,7 @@ hgroup {
 $ Margins
 ================================================================================ */
 p,
+pre,
 ol,
 ul,
 dl,
@@ -84,12 +86,9 @@ menu { margin: 0 0 $basicSpacing +em; }
 
 
 /* =============================================================================
-$ Attachements, Images & Links
-  Contents: 1: Increasing the Clickable Area of Inline Links ( http://joshnh.com/2012/09/06/increasing-the-clickable-area-of-inline-links/ )
+$ Paragraphs
 ================================================================================ */
-
-
-p a { /* 1 */ // TODO: Cross-Browser testing
+p a { /* Increasing the Clickable Area of Inline Links */
   margin: -.33em;
   padding: .33em;
   position: relative;
@@ -98,10 +97,9 @@ p a { /* 1 */ // TODO: Cross-Browser testing
 
 /* =============================================================================
 $ Lists
-  Contents: 1: Remove vertical spacing from nested lists
 ================================================================================ */
 li > ul,
-li > ol {  /* 1 */
+li > ol { /* Remove vertical spacing from nested lists */
   margin-bottom:0;
 }
 

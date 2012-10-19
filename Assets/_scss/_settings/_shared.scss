@@ -10,15 +10,17 @@
  * ========================================================== */
 
 
-// ======================== Reset list ==================================
+
 %reset-list {
+/* ========================== Reset list ========================= */
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-// ======================== Cross browser inline-block ===============================
+
 %inline-block {
+/* ================== Cross browser inline-block ================= */
   display: inline-block;
   @if $isOldIE == 1 {
     *display: inline;
@@ -26,14 +28,27 @@
   }
 }
 
-// ===================== Simple Replace ===========================
+
+%border-box {
+/* ================== Cross browser Border-box =================
+ * Includes boxsizing.htc behavior for IE7 and below
+ * https://github.com/Schepp/box-sizing-polyfill
+ */
+  @include box-sizing(border-box);
+  /* URL has to be relative to the HTML Doc */
+  *behavior: url('Assets/js/boxsizing.htc');
+}
+
+
 %replace {
+/* ========================= Text Replace ======================== */
   font: 0/0 a;
   text-shadow: none;
 }
 
-// ======================== CSS3 Word-breaker ============================
+
 %hyphens {
+/* ====================== CSS3 Word-breaker ====================== */
   -ms-word-break: break-all;
       word-break: break-all;
   -webkit-hyphens: auto;
