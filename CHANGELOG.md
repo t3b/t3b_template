@@ -4,7 +4,7 @@
 * Added Compass image-url()-Function usage
 * BUGFIX: Removed height: auto; from iframes
 * Added a %border-box placeholder
-* Removed controls positioning on '<video>'
+* Removed controls positioning on `<video>`
 
 
 ## 1.0.9
