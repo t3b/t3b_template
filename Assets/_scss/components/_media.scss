@@ -38,8 +38,6 @@ $ Video
 ================================================================================ */
 video {
   &::-webkit-media-controls-panel {
-    bottom: 10px;
-
     background-color: rgba(0, 0, 0, .6);
     -webkit-transition: all .6s;
     &:hover {
