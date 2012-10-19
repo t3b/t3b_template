@@ -28,7 +28,18 @@
   }
 }
 
-/* ========================= Text Replace ======================== */
+
+%border-box {
+/* ================== Cross browser Border-box =================
+ * Includes boxsizing.htc behavior for IE7 and below
+ * https://github.com/Schepp/box-sizing-polyfill
+ */
+  @include box-sizing(border-box);
+  /* URL has to be relative to the HTML Doc */
+  *behavior: url('Assets/js/boxsizing.htc');
+}
+
+
 %replace {
 /* ========================= Text Replace ======================== */
   font: 0/0 a;
