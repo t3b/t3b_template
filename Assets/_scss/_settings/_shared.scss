@@ -35,8 +35,10 @@
  * https://github.com/Schepp/box-sizing-polyfill
  */
   @include box-sizing(border-box);
-  /* URL has to be relative to the HTML Doc */
-  *behavior: url('Assets/js/boxsizing.htc');
+  @if $isOldIE == 1 {
+    /* URL has to be relative to the HTML Doc */
+    *behavior: url('Assets/js/boxsizing.htc');
+  }
 }
 
 
