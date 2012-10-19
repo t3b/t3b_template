@@ -130,3 +130,17 @@
   }
 }
 
+
+// =============================================================================
+// CSS Viewport rule Mixin
+// =============================================================================
+// Basicly the same as <meta name="viewport"> but the future proof way
+// DOCS: http://dev.w3.org/csswg/css-device-adapt/
+// =============================================================================
+@mixin viewport($arg) {
+  @-webkit-viewport { width: $arg; }
+     @-moz-viewport { width: $arg; }
+      @-ms-viewport { width: $arg; }
+       @-o-viewport { width: $arg; }
+          @viewport { width: $arg; }
+}

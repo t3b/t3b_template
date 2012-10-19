@@ -9,13 +9,8 @@
 @if $isResponsive == 1 {
 /* =============================================================================
 $ RWD Viewport rules
-DOCS: http://dev.w3.org/csswg/css-device-adapt/
 ================================================================================ */
-@-webkit-viewport { width: device-width; }
-   @-moz-viewport { width: device-width; }
-    @-ms-viewport { width: device-width; }
-     @-o-viewport { width: device-width; }
-        @viewport { width: device-width; }
+  @include viewport(device-width);
 }
 
 
