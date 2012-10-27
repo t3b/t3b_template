@@ -37,6 +37,8 @@ img { /* 3 */
 $ Video
 ================================================================================ */
 video {
+  @extend %non-print; // Will be hidden on print
+  
   &::-webkit-media-controls-panel {
     background-color: rgba(0, 0, 0, .6);
     -webkit-transition: all .6s;
