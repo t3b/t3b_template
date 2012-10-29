@@ -57,7 +57,7 @@ input[type="submit"] {
 
   font-size: .8em;
   line-height: 1;
-  color: #FFF;
+  color: color-adjust($cd-primary, 100%);
 }
 
 
