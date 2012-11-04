@@ -1,33 +1,33 @@
 # COMPASS
 # ----------------------------------------------
 # Configuration: http://compass-style.org/help/tutorials/configuration-reference/
-#
-# ----------------------------------------------
-# PRODUCTION
-# compass compile -e production -s compressed --no-line-comments --force --trace --time
-#
+
 
 # Require any additional compass plugins here.
 
 
 
-# paths
+# COMPASS PATHS
 # Set this to the root of your project when deployed:
 http_path       = "/"
+
 sass_dir        = "Assets/_scss"
 css_dir         = "Assets/css"
 images_dir      = "Assets/img"
 javascripts_dir = "Assets/js"
 
-# You can select your preferred output style here (can be overridden via the command line):
-# output option: nested, expanded, compact, compressed
-output_style = :expanded
 
-# The environment mode.
-# Defaults to :production, can also be :development
-# Use :development to see line numbers, file names, etc
+# COMPASS MODE
+# Development
+output_style = :expanded
 environment = :development
 
+# Production
+# output_style = :compressed
+# environment = :production
+
+
+# COMPASS SETTINGS
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 line_comments = false
 
