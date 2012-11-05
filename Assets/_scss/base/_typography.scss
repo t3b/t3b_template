@@ -6,28 +6,6 @@
  * ========================================================== */
 
 
-/* =============================================================================
-$ Links and other stuff
-================================================================================ */
-a {
-  color: $linkColor;
-  text-decoration: none;
-
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: underline;
-    color: $linkColorHover;
-  }
-}
-
-::-moz-selection,
-::selection {
-  background: $cd-primary;
-  color: color-adjust($cd-primary, 100%);
-  text-shadow: none;
-}
-
 
 /* =============================================================================
 $ Headings
@@ -85,12 +63,23 @@ menu { margin: 0 0 $basicSpacing +em; }
 
 
 /* =============================================================================
-$ Paragraphs
+$ Links
 ================================================================================ */
-p a { /* Increasing the Clickable Area of Inline Links */
-  margin: -.33em;
-  padding: .33em;
-  position: relative;
+a {
+  color: $linkColor;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+    color: $linkColorHover;
+  }
+  p & { /* Increasing the Clickable Area of Inline Links inside a paragraph */
+    margin: -.33em;
+    padding: .33em;
+    position: relative;
+  }
 }
 
 
@@ -113,4 +102,15 @@ hr {
   border-top: 1px $basicBorderStyle $basicBorderColor;
   margin: $basicSpacing +em 0 $basicSpacing +em;
   padding: 0;
+}
+
+
+/* =============================================================================
+$ Text-Selection
+================================================================================ */
+::-moz-selection,
+::selection {
+  background: $cd-primary;
+  color: color-adjust($cd-primary, 100%);
+  text-shadow: none;
 }
