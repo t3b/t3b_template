@@ -146,3 +146,13 @@
        @-o-viewport { width: $arg; }
           @viewport { width: $arg; }
 }
+
+
+// =============================================================================
+// Input placeholder Mixin
+// =============================================================================
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder { color: $color; }
+  &:-moz-placeholder { color: $color; }
+  &:-ms-input-placeholder { color: $color; }
+}
