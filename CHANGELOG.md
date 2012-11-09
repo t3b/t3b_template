@@ -1,3 +1,21 @@
+## 1.1.1
+**Structure**
+* Created a /generic folder for files wich will be generated
+* Moved all /component files to /base
+* Renamed /modules to /objects
+
+**SCSS**
+* Added a input-placeholder @mixin
+* Added a @viewport @mixin
+* Added $isOldIE integration for %border-box
+* Added lots of documentation
+* Splitted normalize.scss up into discrete partials
+* Refactored structure for the config.rb file
+* Changed project-setting $vars namespace to boolean
+* .offset-by-# classes are now disabled by default
+* Hide `<audio>` and `<video>` on @ media print
+
+
 ## 1.1.0
 **SCSS**
 * Added Compass image-url()-Function usage
