@@ -1,9 +1,27 @@
+## 1.1.1
+**Structure**
+* Created a /generic folder for files wich will be generated
+* Moved all /component files to /base
+* Renamed /modules to /objects
+
+**SCSS**
+* Added a input-placeholder @mixin
+* Added a @viewport @mixin
+* Added $isOldIE integration for %border-box
+* Added lots of documentation
+* Splitted normalize.scss up into discrete partials
+* Refactored structure for the config.rb file
+* Changed project-setting $vars namespace to boolean
+* .offset-by-# classes are now disabled by default
+* Hide `<audio>` and `<video>` on @ media print
+
+
 ## 1.1.0
 **SCSS**
-* Refactored structure for variables.scss
 * Added Compass image-url()-Function usage
-* BUGFIX: Removed height: auto; from iframes
 * Added a %border-box placeholder
+* Refactored structure for variables.scss
+* BUGFIX: Removed height: auto; from iframes
 * Removed controls positioning on `<video>`
 
 
@@ -26,10 +44,10 @@
 ## 1.0.8
 **SCSS**
 * Added the color-adjust function from @necolas
-* Changed @hyphens into a %placeholder
 * Added 'stacked' navigation mode
 * Added a 'centered' mode for grids
 * Changes to the grid for RTL-Templates
+* Changed @hyphens into a %placeholder
 
 
 ## 1.0.7
@@ -135,4 +153,4 @@
 * Folder setup and placeholders
 * Update Modernizr to 2.6.1
 
-## 0.9.0 Initial commit
+## Initial commit

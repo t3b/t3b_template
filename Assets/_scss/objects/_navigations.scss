@@ -9,6 +9,20 @@
 /* =============================================================================
 $ Navigations
 ================================================================================ */
+/**
+ * When used on an `ol` or `ul` wrapper, this class throws the list into horizontal mode
+ * e.g.:
+ *
+   <nav class="nav" role="navigation">
+     <ul>
+         <li><a href=#>Home</a></li>
+         <li><a href=#>About</a></li>
+         <li><a href=#>Portfolio</a></li>
+         <li><a href=#>Contact</a></li>
+     </ul>
+   </nav>
+ *
+ */
 .nav {
   ul { @extend %reset-list; }
   li { @extend %inline-block; }
@@ -20,6 +34,7 @@ $ Navigations
 }
 
 /* ======================= Stacked Navigation ======================= */
+/* Throws the list into vertical mode - used for DropDowns etc. */
 /*.nav*/.stacked ul li {
   display: list-item;
   a { display: block; }

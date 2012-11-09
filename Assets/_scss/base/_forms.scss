@@ -35,6 +35,9 @@ input[type="week"] {
 /* ======================== Textinputs ========================= */
 textarea {
   min-height: 70px;
+
+  overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9. */
+  vertical-align: top; /* Improves readability and alignment in all browsers. */
 }
 
 /* ========================= Checkboxes ======================== */
@@ -57,13 +60,38 @@ input[type="submit"] {
 
   font-size: .8em;
   line-height: 1;
-  color: #FFF;
+  color: color-adjust($cd-primary, 100%);
 }
 
 
 /* =============================================================================
 $ General styling of Form Fields
 ================================================================================ */
+fieldset {
+  /* Define consistent border, margin, and padding. */
+  border: 1px $basicBorderStyle $basicBorderColor;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+form {
+  @if $oldIE == true {
+    /* Corrects margin displayed oddly in IE6/7. */
+    margin: 0;
+  }
+  ol,
+  ul { @extend %reset-list; }
+}
+legend {
+  padding: 0;
+  /* Corrects color not being inherited in IE6/7/8/9. */
+  border: 0;
+  @if $oldIE == true {
+    /* Corrects text not wrapping in FF3. */
+    white-space: normal;
+    /* Corrects alignment displayed oddly in IE6/7. */
+    *margin-left: -7px;
+  }
+}
 label {
   display: block;
   font-weight: $bold;
@@ -71,10 +99,6 @@ label {
   &[for] {
     cursor: pointer;
   }
-}
-form {
-  ol,
-  ul { @extend %reset-list; }
 }
 
 
@@ -84,10 +108,7 @@ $ Secific forms
 /* ========================= Searchform ======================== */
 /*form*/.searchform {
   label { }
-  input {
-    float: left;
-    display: block;
-  }
+  input { }
   input[type="search"] { }
   input[type="submit"] { }
 }

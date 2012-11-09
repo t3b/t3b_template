@@ -6,22 +6,19 @@
  * ========================================================== */
 
 
-@if $isResponsive == 1 {
-/* =============================================================================
-$ RWD Viewport rules
-DOCS: http://dev.w3.org/csswg/css-device-adapt/
-================================================================================ */
-@-webkit-viewport { width: device-width; }
-   @-moz-viewport { width: device-width; }
-    @-ms-viewport { width: device-width; }
-     @-o-viewport { width: device-width; }
-        @viewport { width: device-width; }
-}
-
-
 /* =============================================================================
 $ Site-wrapper
 ================================================================================ */
+body {
+  /* Addresses margins handled incorrectly in IE6/7. */
+  margin: 0;
+
+  font: $baseFontWeight #{$baseFontSize/16*100}%/$basicSpacing $baseFontFamily;
+  text-align: $start;
+  color: $baseTextColor;
+  -webkit-font-smoothing: antialiased;
+  background: $bodyBackground;
+}
 .wrapper {
   margin: 0 auto;
   width: $layoutWidth;
@@ -55,7 +52,7 @@ $ Logos
   .site-header & {
     position: absolute;
     top: 10px;
-    left: ($columnGutter / 2) +px;
+    left: 0;
   }
   .site-footer & { }
 }
@@ -66,14 +63,15 @@ $ Chromeframe
 ================================================================================ */
 .chromeframe {
   display: block;
-  height: 41px;
+  height: 3.5em;
   border-bottom: 1px $basicBorderStyle #e7db9c;
   background: #faf6e8;
+
   font-size: 12px;
-  font-size: rs(12, $unit: rem);
-  line-height: 41px;
-  color: darken(#faf6e8, 60%);
+  line-height: 3.5em;
   text-align: center;
-  a { border-bottom: 1px dotted; }
+  color: darken(#faf6e8, 60%);
+
   @extend %non-print; // Will be hidden on print
+  a { border-bottom: 1px dotted; }
 }

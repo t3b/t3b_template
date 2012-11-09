@@ -1,0 +1,53 @@
+/* ==========================================================
+ * headings.scss
+ *
+ * Styling for Headings and Sub-Headings
+ * DOCS:
+ * ========================================================== */
+
+
+/* =============================================================================
+$ Headings
+================================================================================ */
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: $headingsFontFamily;
+  font-weight: $headingsFontWeight;
+  color: $headingsColor;
+  text-rendering: optimizeLegibility; // Optimized kerning for large font sizes
+  small {
+    font-size: 75%;
+    color: lighten($headingsColor, 20%);
+    line-height: 0;
+  }
+}
+h1, .h1 {
+  @include font-size(36);
+}
+h2, .h2 {
+  @include font-size(30);
+}
+h3, .h3 {
+  @include font-size(24);
+}
+h4, .h4 {
+  @include font-size(20);
+}
+h5, .h5 {
+  @include font-size(16);
+  margin: 0;
+}
+h6, .h6 {
+  @include font-size(14);
+  margin: 0;
+}
+
+
+/* =============================================================================
+$ Sub-Headings
+================================================================================ */
+hgroup {
+  h1, h2, h3,
+  h4, h5, h6 { margin-top: 0; }
+  .csc-firstHeader { margin-bottom: 0; }
+}

@@ -1,0 +1,120 @@
+/* ==========================================================
+ * typography.scss
+ *
+ * Basic styling for typography elements
+ * DOCS:
+ * ========================================================== */
+
+
+/* =============================================================================
+$ Margins
+================================================================================ */
+p,
+pre,
+ol,
+ul,
+dl,
+figure,
+menu { margin: 0 0 $basicSpacing +em; }
+
+
+/* =============================================================================
+$ Typography Elements
+================================================================================ */
+b,
+strong {
+  /* Addresses style set to `bolder` in FF3+, S4/5, Chrome. */
+  font-weight: $bold;
+}
+small { font-size: 80%; }
+
+abbr[title] {
+  /* Addresses styling not present in IE7/8/9, S5, Chrome. */
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+mark {
+  /* Addresses styling not present in IE6/7/8/9. */
+  background: $cd-primary;
+  color: color-adjust($cd-primary, 100%);
+}
+dfn {
+  /* Addresses styling not present in S5, Chrome. */
+  font-style: italic;
+}
+
+sub,
+sup {
+  /*
+   * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+   * gist.github.com/413930
+   */
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+$ Code & pre-formatted text elements
+================================================================================ */
+code,
+kbd,
+pre,
+samp {
+   /* Corrects font family set oddly in Safari 5 and Chrome. */
+  font-family: $monoFontFamily;
+  @if $oldIE == true { _font-family: 'courier new', monospace; }
+  font-size: 1em;
+}
+pre {
+  /* Improves readability of pre-formatted text in all browsers. */
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+/* =============================================================================
+$ Quotes
+================================================================================ */
+q {
+  /* Sets consistent quote types. */
+  quotes: "\201C" "\201D" "\2018" "\2019";
+
+  @if $oldIE == true {
+    &:before,
+    &:after {
+      /* Addresses `quotes` property not supported in S4. */
+      content: '';
+      content: none;
+    }
+  }
+}
+
+
+/* =============================================================================
+$ Seperators
+================================================================================ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px $basicBorderStyle $basicBorderColor;
+  margin: $basicSpacing +em 0 $basicSpacing +em;
+  padding: 0;
+}
+
+
+/* =============================================================================
+$ Text-Selection
+================================================================================ */
+::-moz-selection,
+::selection {
+  background: $cd-primary;
+  color: color-adjust($cd-primary, 100%);
+  text-shadow: none;
+}

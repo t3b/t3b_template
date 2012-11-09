@@ -12,6 +12,9 @@ $ Tables
 table {
   width: 100%;
   margin: 0 0 $basicSpacing +em;
+  border-collapse: collapse;
+  border-spacing: 0;
+
   caption { text-align: $start; }
 }
 th { text-align: $start; }

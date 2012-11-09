@@ -130,3 +130,29 @@
   }
 }
 
+
+// =============================================================================
+// CSS Viewport rule Mixin
+// =============================================================================
+// Basicly the same as <meta name="viewport" content="width=device-width"> 
+// but the future proof way.
+// 
+// DOCS: http://dev.w3.org/csswg/css-device-adapt/
+// =============================================================================
+@mixin viewport($arg) {
+  @-webkit-viewport { width: $arg; }
+     @-moz-viewport { width: $arg; }
+      @-ms-viewport { width: $arg; }
+       @-o-viewport { width: $arg; }
+          @viewport { width: $arg; }
+}
+
+
+// =============================================================================
+// Input placeholder Mixin
+// =============================================================================
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder { color: $color; }
+  &:-moz-placeholder { color: $color; }
+  &:-ms-input-placeholder { color: $color; }
+}
