@@ -10,7 +10,11 @@
 $ Attachements & Images
   Contents: 1: Make Images & Attachements responsive
             2: Decrease font-size on figcaption elements
-            3: Styling the alt="" Text on images ( http://csswizardry.com/2011/06/styling-alt-text-on-images/ )
+            3: Styling the alt="" Text on images
+               http://csswizardry.com/2011/06/styling-alt-text-on-images/
+            4. Removes border when inside `a` element in IE6/7/8/9, FF3.
+            5. Improves image quality when scaled in IE7.
+               code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
 ================================================================================ */
 embed,
 iframe,
@@ -21,15 +25,21 @@ img { /* 1 */
 img[height] { /* 1 */
   height: auto;
 }
-figure > img {
-  display: block;
+figure {
+  /* Addresses margin not present in IE6/7/8/9, S5, O11. */
+  margin: 0;
+  > img {
+    display: block;
+  }
 }
 figcaption { /* 2 */
   font-size: ($baseFontSize - 2) +px;
-  font-size: rs( ($baseFontSize - 2), $unit: rem);
+  font-size: rs(($baseFontSize - 2), $unit: rem);
 }
-img { /* 3 */
-  font-style: italic;
+img {
+  font-style: italic; /* 3 */
+  border: 0; /* 4 */
+  @if $oldIE == true { -ms-interpolation-mode: bicubic; /* 5 */ }
 }
 
 
@@ -37,15 +47,19 @@ img { /* 3 */
 $ Video
 ================================================================================ */
 video {
+  @extend %non-print; // Will be hidden on print
+
   &::-webkit-media-controls-panel {
     background-color: rgba(0, 0, 0, .6);
     -webkit-transition: all .6s;
+            transition: all .6s;
     &:hover {
       background-color: rgba(0, 0, 0, .8);
     }
   }
   &::-webkit-media-controls-play-button:hover {
     -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   &::-webkit-media-controls-timeline {
     border-radius: 3px;
@@ -58,7 +72,27 @@ $ Audio
 ================================================================================ */
 audio {
   min-width: 65%;
+
+  @extend %non-print; // Will be hidden on print
   &::-webkit-media-controls-play-button:hover {
     -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  &:not([controls]) {
+    /* Prevents modern browsers from displaying `audio` without controls. */
+    display: none;
+    /* Remove excess height in iOS5 devices. */
+    height: 0;
+  }
+}
+
+
+/* =============================================================================
+$ SVG
+================================================================================ */
+svg {
+  &:not(:root) {
+    /* Corrects overflow displayed oddly in IE9. */
+    overflow: hidden;
   }
 }

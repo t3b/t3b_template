@@ -1,6 +1,6 @@
 // ==========================================================
 // merged.scss
-// Base Version 1.1.0
+// Base Version 1.1.1
 //
 // Merges all listed stylesheets and does the SASS & Compass magic
 // DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#import
@@ -16,27 +16,35 @@
 
 
 // =============================================================================
+// Generic
+// =============================================================================
+@import "generic/_normalize";         // Normalize elements accross all browsers
+@import "generic/_grid";              // Grid
+
+
+// =============================================================================
 // Layout
 // =============================================================================
-@import "base/_normalize";            // Normalize elements accross all browsers
 @import "base/_base";                 // Header, Footer, Logos and Chromeframe
-@import "base/_grid";                 // Grid
-@import "base/_t3-general";           // TYPO3 element styling
+@import "base/_headings";             // Headings
+@import "base/_typography";           // Basic typography
+@import "base/_links";                // Link styling
+@import "base/_lists";                // HTML list elements
+@import "base/_media";                // Media elements like images, audio and video
+@import "base/_tables";               // Tables
+@import "base/_forms";                // Forms, input's and other form fields
 
 
 // =============================================================================
 // Components
 // =============================================================================
-@import "components/_typography";     // Basic typography
-@import "components/_media";          // Media elements like images, audio and video
-@import "components/_tables";         // Tables
-@import "components/_forms";          // Forms, input's and other form fields
-@import "components/_navigations";    // Navigations
+@import "objects/_navigations";          // Navigations
+@import "objects/_t3-general";        // TYPO3 element styling
 
 
 // =============================================================================
 // Helpers, placeholders and print styles
 // =============================================================================
 @import "_settings/_shared";          // SASS Placeholders
-@import "base/_helper";               // Helper classes for developement
-@import "base/_print";                // Print styles
+@import "generic/_helper";            // Helper classes for developement
+@import "generic/_print";             // Print styles

@@ -1,5 +1,5 @@
 // ==========================================================
-// _variables.scss
+// variables.scss
 //
 // Merges all listed stylesheets and does the SASS & Compass magic
 // DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
@@ -19,8 +19,8 @@
 // =============================================================================
 // Project Settings
 // =============================================================================
-$isResponsive:          0;      // If set to '1' CSS-Viewport-Rules are added
-$isOldIE:               1;      // If set to '0' it will ignore IE6 & IE7 Hacks while compiling
+$responsive:          	false;  // If set to 'true' CSS-Viewport-Rules are added
+$oldIE:                 true;   // If set to 'false' it will ignore IE6 & IE7 Hacks while compiling
 $direction:             ltr;    // set "dir" attribute in HTML to "ltr" (default) or "rtl"
 
 

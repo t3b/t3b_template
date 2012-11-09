@@ -6,9 +6,9 @@
  * ========================================================== */
 
 
-/* =============================================================================
-$ Variables
-================================================================================ */
+// =============================================================================
+// $ Variables
+// =============================================================================
 $columWidth:      ($layoutWidth + $columnGutter) / $totalColumns - $columnGutter !default;
 $grid-direction:  $start;
 
@@ -36,9 +36,9 @@ $ Grid Classes
   }
 
   // Creating .columns.offset-by-# classes
-  @for $i from 1 through $totalColumns - 1 {
-    &.offset-by-#{convert-number-to-word($i)} {
-      margin-#{$start}: gridCalc($i, $totalColumns) + ($columnGutter);
-    }
-  }
+  // @for $i from 1 through $totalColumns - 1 {
+  //   &.offset-by-#{convert-number-to-word($i)} {
+  //     margin-#{$start}: gridCalc($i, $totalColumns) + ($columnGutter);
+  //   }
+  // }
 }
