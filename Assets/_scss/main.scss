@@ -30,12 +30,12 @@
 @import "base/_media";                // Media elements like images, audio and video
 @import "base/_tables";               // Tables
 @import "base/_forms";                // Forms, input's and other form fields
-@import "base/_navigations";          // Navigations
 
 
 // =============================================================================
 // Components
 // =============================================================================
+@import "objects/_navigations";          // Navigations
 @import "objects/_t3-general";        // TYPO3 element styling
 
 
