@@ -19,7 +19,7 @@
   background-color: transparent;
   border: 0;
   overflow: hidden;
-  @if $isOldIE == 1 {
+  @if $oldIE == true {
     /* IE 6/7 fallback */
     *text-indent: -9999px;
   }
@@ -67,7 +67,7 @@
 
 /* Contain floats: h5bp.com/q */
 .clearfix {
-  @if $isOldIE == 1 {
+  @if $oldIE == true {
     *zoom:1;
   }
   &:before, &:after { content: ""; display: table; }

@@ -39,7 +39,7 @@ figcaption { /* 2 */
 img {
   font-style: italic; /* 3 */
   border: 0; /* 4 */
-  @if $isOldIE == 1 { -ms-interpolation-mode: bicubic; /* 5 */ }
+  @if $oldIE == true { -ms-interpolation-mode: bicubic; /* 5 */ }
 }
 
 

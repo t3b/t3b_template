@@ -67,7 +67,7 @@ pre,
 samp {
    /* Corrects font family set oddly in Safari 5 and Chrome. */
   font-family: $monoFontFamily;
-  @if $isOldIE == 1 { _font-family: 'courier new', monospace; }
+  @if $oldIE == true { _font-family: 'courier new', monospace; }
   font-size: 1em;
 }
 pre {
@@ -85,7 +85,7 @@ q {
   /* Sets consistent quote types. */
   quotes: "\201C" "\201D" "\2018" "\2019";
 
-  @if $isOldIE == 1 {
+  @if $oldIE == true {
     &:before,
     &:after {
       /* Addresses `quotes` property not supported in S4. */

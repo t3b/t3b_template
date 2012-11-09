@@ -74,7 +74,7 @@ fieldset {
   padding: 0.35em 0.625em 0.75em;
 }
 form {
-  @if $isOldIE == 1 {
+  @if $oldIE == true {
     /* Corrects margin displayed oddly in IE6/7. */
     margin: 0;
   }
@@ -85,7 +85,7 @@ legend {
   padding: 0;
   /* Corrects color not being inherited in IE6/7/8/9. */
   border: 0;
-  @if $isOldIE == 1 {
+  @if $oldIE == true {
     /* Corrects text not wrapping in FF3. */
     white-space: normal;
     /* Corrects alignment displayed oddly in IE6/7. */

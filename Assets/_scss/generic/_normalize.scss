@@ -1,4 +1,4 @@
-@if $isResponsive == 1 {
+@if $responsive == true {
   /* =============================================================================
   $ RWD Viewport rules
   ================================================================================ */
@@ -64,13 +64,13 @@ video {
  * 3. Forces vertical scrollbar to prevent jumpy page
  */
 html {
-  @if $isOldIE == 1 { font-size: 100%; /* 1 */ }
+  @if $oldIE == true { font-size: 100%; /* 1 */ }
   -webkit-text-size-adjust: 100%; /* 2 */
   -ms-text-size-adjust: 100%; /* 2 */
   overflow-y: scroll; /* 3 */
 }
 
-@if $isOldIE == 1 {
+@if $oldIE == true {
   /*
    * Addresses `font-family` inconsistency between `textarea` and other form
    * elements.
@@ -100,7 +100,7 @@ select,
 textarea {
   font-size: 100%; /* 1 */
   margin: 0; /* 2 */
-  @if $isOldIE == 1 {
+  @if $oldIE == true {
     vertical-align: baseline; /* 3 */
     *vertical-align: middle; /* 3 */
   }
@@ -130,7 +130,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
-  @if $isOldIE == 1 {
+  @if $oldIE == true {
     *overflow: visible;  /* 4 */
   }
 }
@@ -153,7 +153,7 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
-  @if $isOldIE == 1 {
+  @if $oldIE == true {
     *height: 13px; /* 3 */
     *width: 13px; /* 3 */
   }

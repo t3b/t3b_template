@@ -27,7 +27,7 @@ li > ol {
   margin-bottom:0;
 }
 
-@if $isOldIE == 1 {
+@if $oldIE == true {
   dd {
     /* Addresses margins set differently in IE6/7. */
     margin: 0 0 0 40px;

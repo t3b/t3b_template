@@ -22,7 +22,7 @@
 %inline-block {
 /* ================== Cross browser inline-block ================= */
   display: inline-block;
-  @if $isOldIE == 1 {
+  @if $oldIE == true {
     *display: inline;
     *zoom: 1;
   }
@@ -35,7 +35,7 @@
  * https://github.com/Schepp/box-sizing-polyfill
  */
   @include box-sizing(border-box);
-  @if $isOldIE == 1 {
+  @if $oldIE == true {
     /* URL has to be relative to the HTML Doc */
     *behavior: url('Assets/js/boxsizing.htc');
   }
