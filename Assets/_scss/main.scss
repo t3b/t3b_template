@@ -26,7 +26,10 @@
 // Layout
 // =============================================================================
 @import "base/_base";                 // Header, Footer, Logos and Chromeframe
+@import "base/_headings";             // Headings
 @import "base/_typography";           // Basic typography
+@import "base/_links";                // Link styling
+@import "base/_lists";                // HTML list elements
 @import "base/_media";                // Media elements like images, audio and video
 @import "base/_tables";               // Tables
 @import "base/_forms";                // Forms, input's and other form fields

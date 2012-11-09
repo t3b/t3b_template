@@ -6,10 +6,19 @@
  * ========================================================== */
 
 
-
 /* =============================================================================
 $ Site-wrapper
 ================================================================================ */
+body {
+  /* Addresses margins handled incorrectly in IE6/7. */
+  margin: 0;
+
+  font: $baseFontWeight #{$baseFontSize/16*100}%/$basicSpacing $baseFontFamily;
+  text-align: $start;
+  color: $baseTextColor;
+  -webkit-font-smoothing: antialiased;
+  background: $bodyBackground;
+}
 .wrapper {
   margin: 0 auto;
   width: $layoutWidth;
@@ -59,8 +68,6 @@ $ Chromeframe
   background: #faf6e8;
 
   font-size: 12px;
-  font-size: rs(12, $unit: rem);
-  color: darken(#faf6e8, 60%);
   line-height: 3.5em;
   text-align: center;
   color: darken(#faf6e8, 60%);

@@ -6,50 +6,6 @@
  * ========================================================== */
 
 
-
-/* =============================================================================
-$ Headings
-================================================================================ */
-h1, h2, h3,
-h4, h5, h6 {
-  font-family: $headingsFontFamily;
-  font-weight: $headingsFontWeight;
-  color: $headingsColor;
-  text-rendering: optimizeLegibility; // Optimized kerning for large font sizes
-  small {
-    font-size: 75%;
-    color: lighten($headingsColor, 20%);
-    line-height: 0;
-  }
-}
-h1, .h1 {
-  @include font-size(36);
-}
-h2, .h2 {
-  @include font-size(30);
-}
-h3, .h3 {
-  @include font-size(24);
-}
-h4, .h4 {
-  @include font-size(20);
-}
-h5, .h5 {
-  @include font-size(16);
-  margin: 0;
-}
-h6, .h6 {
-  @include font-size(14);
-  margin: 0;
-}
-
-hgroup {
-  h1, h2, h3,
-  h4, h5, h6 { margin-top: 0; }
-  .csc-firstHeader { margin-bottom: 0; }
-}
-
-
 /* =============================================================================
 $ Margins
 ================================================================================ */
@@ -63,37 +19,85 @@ menu { margin: 0 0 $basicSpacing +em; }
 
 
 /* =============================================================================
-$ Links
+$ Typography Elements
 ================================================================================ */
-a {
-  color: $linkColor;
-  text-decoration: none;
+b,
+strong {
+  /* Addresses style set to `bolder` in FF3+, S4/5, Chrome. */
+  font-weight: $bold;
+}
+small { font-size: 80%; }
 
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: underline;
-    color: $linkColorHover;
-  }
-  p & { /* Increasing the Clickable Area of Inline Links inside a paragraph */
-    margin: -.33em;
-    padding: .33em;
-    position: relative;
+abbr[title] {
+  /* Addresses styling not present in IE7/8/9, S5, Chrome. */
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+mark {
+  /* Addresses styling not present in IE6/7/8/9. */
+  background: $cd-primary;
+  color: color-adjust($cd-primary, 100%);
+}
+dfn {
+  /* Addresses styling not present in S5, Chrome. */
+  font-style: italic;
+}
+
+sub,
+sup {
+  /*
+   * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+   * gist.github.com/413930
+   */
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+$ Code & pre-formatted text elements
+================================================================================ */
+code,
+kbd,
+pre,
+samp {
+   /* Corrects font family set oddly in Safari 5 and Chrome. */
+  font-family: $monoFontFamily;
+  @if $isOldIE == 1 { _font-family: 'courier new', monospace; }
+  font-size: 1em;
+}
+pre {
+  /* Improves readability of pre-formatted text in all browsers. */
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+/* =============================================================================
+$ Quotes
+================================================================================ */
+q {
+  /* Sets consistent quote types. */
+  quotes: "\201C" "\201D" "\2018" "\2019";
+
+  @if $isOldIE == 1 {
+    &:before,
+    &:after {
+      /* Addresses `quotes` property not supported in S4. */
+      content: '';
+      content: none;
+    }
   }
 }
 
 
 /* =============================================================================
-$ Lists
-================================================================================ */
-li > ul,
-li > ol { /* Remove vertical spacing from nested lists */
-  margin-bottom:0;
-}
-
-
-/* =============================================================================
-$ HTML-Elements
+$ Seperators
 ================================================================================ */
 hr {
   display: block;
