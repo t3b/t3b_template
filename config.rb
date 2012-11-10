@@ -6,8 +6,8 @@
 # Require any additional compass plugins here.
 
 
-# TIMESTAMP FUNCTION
-require File.join(File.dirname(__FILE__), 'timestamp.rb')
+# RUBY FUNCTIONS
+require File.join(File.dirname(__FILE__), 't3b_frontend.rb')
 
 
 # COMPASS PATHS
