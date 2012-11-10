@@ -10,14 +10,12 @@
 // ==========================================================
 
 
-
 %reset-list {
 /* ========================== Reset list ========================= */
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
 
 %inline-block {
 /* ================== Cross browser inline-block ================= */
@@ -27,7 +25,6 @@
     *zoom: 1;
   }
 }
-
 
 %border-box {
 /* ================== Cross browser Border-box =================
@@ -41,13 +38,11 @@
   }
 }
 
-
 %replace {
 /* ========================= Text Replace ======================== */
   font: 0/0 a;
   text-shadow: none;
 }
-
 
 %hyphens {
 /* ====================== CSS3 Word-breaker ====================== */
