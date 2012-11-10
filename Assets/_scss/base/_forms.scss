@@ -9,6 +9,15 @@
 /* =============================================================================
 $ General styling of Input Fields
 ================================================================================ */
+label {
+  display: block;
+  font-weight: $bold;
+  @include font-size(14);
+  &[for] {
+    cursor: pointer;
+  }
+}
+
 /* ====================== Base input styles ====================== */
 textarea,
 input[type="email"],
@@ -90,14 +99,6 @@ legend {
     white-space: normal;
     /* Corrects alignment displayed oddly in IE6/7. */
     *margin-left: -7px;
-  }
-}
-label {
-  display: block;
-  font-weight: $bold;
-  @include font-size(14);
-  &[for] {
-    cursor: pointer;
   }
 }
 
