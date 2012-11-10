@@ -2,7 +2,7 @@
 
 _(Coming soon)_
 
-Requirements
+Dependencies
 -------------------------
 * SASS 3.2
 * Compass 0.12.2
