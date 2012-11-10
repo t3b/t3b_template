@@ -34,10 +34,10 @@ $ Contenttable-1 (Bordered Table w/ odd & even)
     padding: 0.5em;
   }
 
-  /*tr*/.tr-even { background: $contentBackground; }
-  /*tr*/.tr-odd { background: color-adjust($contentBackground, 5%); }
-  /*tr*/.tr-last td { border-bottom: 0; }
-  /*td*/.td-0 { border-left: 0; }
+  .tr-even { background: $contentBackground; }
+  .tr-odd { background: color-adjust($contentBackground, 5%); }
+  .tr-last td { border-bottom: 0; }
+  .td-0 { border-left: 0; }
 }
 
 
