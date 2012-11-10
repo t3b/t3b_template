@@ -6,6 +6,9 @@
 # Require any additional compass plugins here.
 
 
+# TIMESTAMP FUNCTION
+require File.join(File.dirname(__FILE__), 'timestamp.rb')
+
 
 # COMPASS PATHS
 # Set this to the root of your project when deployed:
