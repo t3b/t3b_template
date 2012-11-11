@@ -15,7 +15,12 @@ ol,
 ul,
 dl,
 figure,
-menu { margin: 0 0 $basicSpacing +em; }
+menu {
+  /* neutralizing UA-Style margins */
+  margin-top: 0;
+  @extend %sass-margin-bottom;
+}
+%sass-margin-bottom { margin-bottom: 0 0 $basicSpacing +em; }
 
 
 /* =============================================================================
