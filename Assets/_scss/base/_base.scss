@@ -1,13 +1,13 @@
-/* ==========================================================
- * base.scss
- *
- * Basic styling for this site (f.e. Header and Footer)
- * DOCS:
- * ========================================================== */
+// ==========================================================
+/* § base.scss */
+//
+// Basic styling for this site (f.e. Header and Footer)
+// DOCS:
+// ==========================================================
 
 
 /* =============================================================================
-$ Site-wrapper
+$ High level wrapper and elements
 ================================================================================ */
 body {
   /* Addresses margins handled incorrectly in IE6/7. */
@@ -16,7 +16,6 @@ body {
   font: $baseFontWeight #{$baseFontSize/16*100}%/$basicSpacing $baseFontFamily;
   text-align: $start;
   color: $baseTextColor;
-  -webkit-font-smoothing: antialiased;
   background: $bodyBackground;
 }
 .wrapper {

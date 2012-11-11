@@ -5,12 +5,12 @@
   @include viewport(device-width);
 }
 
-/* ==========================================================
- * normalize.scss
- *
- * Normalize the browser-default styling
- * DOCS: http://necolas.github.com/normalize.css/
- * ========================================================== */
+// ==========================================================
+/* § normalize.scss */
+//
+// Normalize the browser-default styling
+// DOCS: http://necolas.github.com/normalize.css/
+// ==========================================================
 
 
 /* =============================================================================
@@ -167,7 +167,7 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield; /* 1 */
   -webkit-box-sizing: content-box; /* 2 */
-     -moz-box-sizing: content-box;  
+     -moz-box-sizing: content-box;
           box-sizing: content-box;
 }
 

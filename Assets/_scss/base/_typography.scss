@@ -1,54 +1,57 @@
-/* ==========================================================
- * typography.scss
- *
- * Basic styling for typography elements
- * DOCS:
- * ========================================================== */
+// ==========================================================
+/* § typography.scss */
+//
+// Basic styling for typography elements
+// DOCS:
+// ==========================================================
 
 
 /* =============================================================================
 $ Margins
 ================================================================================ */
-p,
-pre,
-ol,
-ul,
-dl,
-figure,
-menu { margin: 0 0 $basicSpacing +em; }
+p, pre,
+ol, ul, dl,
+figure, menu {
+  /* neutralizing UA-Style margins */
+  margin-top: 0;
+  @extend %sass-margin-bottom;
+}
+/* Top margins */
+%sass-margin-top { margin-top: $basicSpacing +em; }
+
+/* Bottom margins */
+%sass-margin-bottom { margin-bottom: $basicSpacing +em; }
 
 
 /* =============================================================================
 $ Typography Elements
+  Contents: 1: Addresses style set to `bolder` in FF3+, S4/5, Chrome.
+            2: Addresses styling not present in IE7/8/9, S5, Chrome.
+            3: Addresses styling not present in IE6/7/8/9.
+            4: Addresses styling not present in S5, Chrome.
+            5: Prevents `sub` and `sup` affecting `line-height` in all browsers.
+               gist.github.com/413930
 ================================================================================ */
 b,
 strong {
-  /* Addresses style set to `bolder` in FF3+, S4/5, Chrome. */
-  font-weight: $bold;
+  font-weight: $bold; /* 1 */
 }
 small { font-size: 80%; }
 
-abbr[title] {
-  /* Addresses styling not present in IE7/8/9, S5, Chrome. */
+abbr[title] { /* 2 */
   border-bottom: 1px dotted;
   cursor: help;
 }
-mark {
-  /* Addresses styling not present in IE6/7/8/9. */
+mark { /* 3 */
   background: $cd-primary;
   color: color-adjust($cd-primary, 100%);
 }
 dfn {
-  /* Addresses styling not present in S5, Chrome. */
-  font-style: italic;
+  font-style: italic; /* 4 */
 }
 
 sub,
-sup {
-  /*
-   * Prevents `sub` and `sup` affecting `line-height` in all browsers.
-   * gist.github.com/413930
-   */
+sup { /* 5 */
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -104,8 +107,9 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px $basicBorderStyle $basicBorderColor;
-  margin: $basicSpacing +em 0 $basicSpacing +em;
   padding: 0;
+  @extend %sass-margin-top;
+  @extend %sass-margin-bottom;
 }
 
 
