@@ -9,18 +9,18 @@
 /* =============================================================================
 $ Margins
 ================================================================================ */
-p,
-pre,
-ol,
-ul,
-dl,
-figure,
-menu {
+p, pre,
+ol, ul, dl,
+figure, menu {
   /* neutralizing UA-Style margins */
   margin-top: 0;
   @extend %sass-margin-bottom;
 }
-%sass-margin-bottom { margin-bottom: 0 0 $basicSpacing +em; }
+/* Top margins */
+%sass-margin-top { margin-top: $basicSpacing +em; }
+
+/* Bottom margins */
+%sass-margin-bottom { margin-bottom: $basicSpacing +em; }
 
 
 /* =============================================================================
@@ -107,8 +107,9 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px $basicBorderStyle $basicBorderColor;
-  margin: $basicSpacing +em 0 $basicSpacing +em;
   padding: 0;
+  @extend %sass-margin-top;
+  @extend %sass-margin-bottom;
 }
 
 

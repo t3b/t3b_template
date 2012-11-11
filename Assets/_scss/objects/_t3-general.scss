@@ -43,7 +43,7 @@ $ CSC-Sitemap
 ================================================================================ */
 .csc-sitemap {
   list-style: disc;
-  margin: 0 0 0 1em;
+  @extend %sass-margin-bottom;
 }
 
 
