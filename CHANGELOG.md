@@ -1,3 +1,13 @@
+## 1.1.2
+**SCSS**
+* Added %placeholders for typographic margins
+* Added a generated CSS timestamp in main.scss header-comment
+* Set main.scss header-comment to !loud (will not get ignored while compiling)
+* Set checkbox margin in em's to enable a scalable layout
+* Cleaned up file-header comments for a cleaner css output
+* Removed CSS font-smoothing
+
+
 ## 1.1.1
 **Structure**
 * Created a /generic folder for files wich will be generated
