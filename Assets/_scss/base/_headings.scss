@@ -16,7 +16,7 @@ h4, h5, h6 {
   color: $headingsColor;
   /*
    * Optimized kerning for large font sizes
-   * use this only on large font-sizes like headers to avoid performance issues
+   * use this only on large font-sizes (f.e. headings) to avoid performance issues
    */
   text-rendering: optimizeLegibility;
   small {
