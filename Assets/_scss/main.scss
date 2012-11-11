@@ -1,6 +1,8 @@
-// ==========================================================
-// merged.scss
-// Base Version 1.1.1
+/*! ==========================================================
+ * FrontEnd Base Version 1.1.2
+ * Compiled on: #{timestamp()}
+ * ========================================================== */
+// main.scss
 //
 // Merges all listed stylesheets and does the SASS & Compass magic
 // DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#import
@@ -11,8 +13,8 @@
 // =============================================================================
 // SASS Setup
 // =============================================================================
-@import "compass/css3";               // Compass setup
-@import "_settings/_all";             // SASS Settings
+@import "compass/css3";               // Compass
+@import "_settings/_all";             // SASS Functions, Mixins and Variables
 
 
 // =============================================================================
@@ -25,11 +27,11 @@
 // =============================================================================
 // Layout
 // =============================================================================
-@import "base/_base";                 // Header, Footer, Logos and Chromeframe
-@import "base/_headings";             // Headings
+@import "base/_base";                 // High-level elements like `html`, `body`, etc.
+@import "base/_headings";             // Double-stranded heading hierarchy
 @import "base/_typography";           // Basic typography
-@import "base/_links";                // Link styling
-@import "base/_lists";                // HTML list elements
+@import "base/_links";                // High-level link styling
+@import "base/_lists";                // Styling for lists
 @import "base/_media";                // Media elements like images, audio and video
 @import "base/_tables";               // Tables
 @import "base/_forms";                // Forms, input's and other form fields
@@ -38,7 +40,7 @@
 // =============================================================================
 // Components
 // =============================================================================
-@import "objects/_navigations";          // Navigations
+@import "objects/_navigations";       // Navigations
 @import "objects/_t3-general";        // TYPO3 element styling
 
 

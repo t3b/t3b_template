@@ -6,6 +6,9 @@
 # Require any additional compass plugins here.
 
 
+# RUBY FUNCTIONS
+require File.join(File.dirname(__FILE__), 't3b_frontend.rb')
+
 
 # COMPASS PATHS
 # Set this to the root of your project when deployed:

@@ -1,9 +1,9 @@
-/* ==========================================================
- * headings.scss
- *
- * Styling for Headings and Sub-Headings
- * DOCS:
- * ========================================================== */
+// ==========================================================
+/* § headings.scss */
+//
+// Styling for Headings and Sub-Headings
+// DOCS:
+// ==========================================================
 
 
 /* =============================================================================
@@ -14,7 +14,11 @@ h4, h5, h6 {
   font-family: $headingsFontFamily;
   font-weight: $headingsFontWeight;
   color: $headingsColor;
-  text-rendering: optimizeLegibility; // Optimized kerning for large font sizes
+  /*
+   * Optimized kerning for large font sizes
+   * use this only on large font-sizes (f.e. headings) to avoid performance issues
+   */
+  text-rendering: optimizeLegibility;
   small {
     font-size: 75%;
     color: lighten($headingsColor, 20%);

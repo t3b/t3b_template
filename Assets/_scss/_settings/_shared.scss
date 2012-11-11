@@ -1,14 +1,13 @@
-/* ==========================================================
- * shared.scss
- *
- * Shared styles(%placeholders) to reduce duplicate code
- *
- * Usage:
- * @extend %name;
- *
- * DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#placeholder_selectors_
- * ========================================================== */
-
+// ==========================================================
+/* § shared.scss */
+//
+// Shared styles(%placeholders) to reduce duplicate code
+//
+// Usage:
+// @extend %name;
+//
+// DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#placeholder_selectors_
+// ==========================================================
 
 
 %reset-list {
@@ -18,7 +17,6 @@
   padding: 0;
 }
 
-
 %inline-block {
 /* ================== Cross browser inline-block ================= */
   display: inline-block;
@@ -27,7 +25,6 @@
     *zoom: 1;
   }
 }
-
 
 %border-box {
 /* ================== Cross browser Border-box =================
@@ -41,13 +38,11 @@
   }
 }
 
-
 %replace {
 /* ========================= Text Replace ======================== */
   font: 0/0 a;
   text-shadow: none;
 }
-
 
 %hyphens {
 /* ====================== CSS3 Word-breaker ====================== */

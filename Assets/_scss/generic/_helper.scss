@@ -1,18 +1,14 @@
-/* ==========================================================
- * helper.scss
- *
- * Helper Classes from the boilerplate project
- * DOCS: http://html5boilerplate.com/docs/css/#non-semantic-helper-classes
- * ========================================================== */
+// ==========================================================
+/* § helper.scss */
+//
+// Helper Classes from the boilerplate project
+// DOCS: http://html5boilerplate.com/docs/css/#non-semantic-helper-classes
+// ==========================================================
 
 
 /* Quick floats */
-.fl-r {
-  float: right;
-}
-.fl-l {
-  float: left;
-}
+.fl-r { float: right; }
+.fl-l { float: left; }
 
 /* For image replacement */
 .ir {
@@ -61,9 +57,7 @@
 }
 
 /* Hide visually and from screenreaders, but maintain layout */
-.invisible {
-  visibility: hidden;
-}
+.invisible { visibility: hidden; }
 
 /* Contain floats: h5bp.com/q */
 .clearfix {

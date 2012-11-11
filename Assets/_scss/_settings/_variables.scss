@@ -3,9 +3,9 @@
 //
 // Merges all listed stylesheets and does the SASS & Compass magic
 // DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
+// ==========================================================
 //
-//
-// Support-table for $isOldIE: 0;
+// Support-table for $oldIE: false;
 //
 // Google Chrome
 // Mozilla Firefox 4+
@@ -19,7 +19,7 @@
 // =============================================================================
 // Project Settings
 // =============================================================================
-$responsive:          	false;  // If set to 'true' CSS-Viewport-Rules are added
+$responsive:            false;  // If set to 'true' CSS-Viewport-Rules are added
 $oldIE:                 true;   // If set to 'false' it will ignore IE6 & IE7 Hacks while compiling
 $direction:             ltr;    // set "dir" attribute in HTML to "ltr" (default) or "rtl"
 
@@ -39,7 +39,7 @@ $columnGutter:          20;     // Inner spacing
 
 // ============================== Backgrounds =============================
 $bodyBackground:        #fff;   // Will be set on <body>
-$contentBackground:     $bodyBackground; // Used for generating some colors
+$contentBackground:     #fff;   // Used for generating some colors
 
 
 // =============================================================================
