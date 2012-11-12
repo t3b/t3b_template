@@ -24,7 +24,7 @@ $ Navigations
  *
  */
 .nav {
-  ul { @extend %reset-list; }
+  ul, ol { @extend %reset-list; }
   li { @extend %inline-block; }
   a {
     display: block;
@@ -64,7 +64,7 @@ $ Navigations
 /* ====================== Breadcrumb Navigation ====================== */
 /*.nav*/.breadcrumb {
   // Breadcrumb Navigation
-  ul { }
+  ol { }
   li { }
   a { }
 }
