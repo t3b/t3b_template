@@ -7,7 +7,7 @@
 
 
 # RUBY FUNCTIONS
-require File.join(File.dirname(__FILE__), 't3b_frontend.rb')
+require File.join(File.dirname(__FILE__), 'functions.rb')
 
 
 # COMPASS PATHS
