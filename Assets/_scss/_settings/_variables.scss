@@ -36,6 +36,7 @@ $query-smartphoneSmall: 320px;  // Phone - Portrait
 // ============================== Grid System =============================
 $totalColumns:          12;     // Number of columns
 $columnGutter:          20;     // Inner spacing
+$includeOffsetClasses:  true;  // If set to 'true' .columns.offset-by-# classes are added
 
 // ============================== Backgrounds =============================
 $bodyBackground:        #fff;   // Will be set on <body>
