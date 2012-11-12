@@ -39,11 +39,13 @@ h4, .h4 {
 }
 h5, .h5 {
   @include font-size(16);
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 h6, .h6 {
   @include font-size(14);
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 
