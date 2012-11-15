@@ -48,11 +48,7 @@ $ Logos
   @include img-wh('logo.png');
   background: image-url('logo.png');
 
-  .site-header & {
-    position: absolute;
-    top: 10px;
-    left: 0;
-  }
+  .site-header & { }
   .site-footer & { }
 }
 
