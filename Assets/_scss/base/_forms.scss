@@ -70,6 +70,10 @@ input[type="submit"] {
   font-size: .8em;
   line-height: 1;
   color: color-adjust($cd-primary, 100%);
+  &:hover {
+    text-decoration: none;
+    color: color-adjust($cd-primary, 80%);
+  }
 }
 
 
