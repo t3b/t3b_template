@@ -24,7 +24,6 @@ body {
   position: relative;
 }
 .site-header {
-  height: 100px; // A height should be set
 
   @extend %non-print; // Will be hidden on print
   .wrapper { }
