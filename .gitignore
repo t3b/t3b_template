@@ -21,6 +21,7 @@ Thumbs.db
 .svn
 .CVS
 
-# Ignore user generated files & Jade Templates
+# Ignore user generated files & Jade Testsuite-Assets
 Assets/css/*.css
-Jade/*
+Jade/*.html
+Jade/Testsuite/Assets/*

@@ -1,0 +1,55 @@
+!!! 5
+//if lt IE 7
+  html.no-js.lt-ie9.lt-ie8.lt-ie7(lang='de', dir='ltr')
+//if IE 7
+  html.no-js.lt-ie9.lt-ie8(lang='de', dir='ltr')
+//if IE 8
+  html.no-js.lt-ie9(lang='de', dir='ltr')
+//[if gt IE 8]><!
+html.no-js(lang='de', dir='ltr')
+  //<![endif]
+
+  //- <head>
+  include Partials/head
+    title t3b
+    //-meta(name='viewport', content='width=device-width')
+    style(type="text/css")
+      .demogrid .columns {
+        background: rgba(0,0,0,0.3);
+        color: #FFF;
+        text-align: center;
+        border-radius: 3px;
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .testsuite-sep {
+        border-top: 10px;
+      }
+  //- </head>
+  body
+    include Partials/header
+
+    //- Content here
+    div(class="site-content", role="main")
+      div(class="wrapper")
+        include Testsuite/typography
+        hr(class="testsuite-sep")
+
+        include Testsuite/grid
+        hr(class="testsuite-sep")
+
+        include Testsuite/tables
+        hr(class="testsuite-sep")
+
+        include Testsuite/media
+        hr(class="testsuite-sep")
+
+        include Testsuite/forms
+
+
+    include Partials/footer
+    include Partials/foot
+  //- </body>
