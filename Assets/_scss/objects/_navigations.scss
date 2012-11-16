@@ -46,7 +46,13 @@ $ Navigations
   ul {
     display: table;
     width: 100%;
-    > li {
+  }
+  @if $oldIE == true {
+    ul ul { display: block; }
+    li { display: table-cell; }
+    li li { display: list-item; }
+  } @else {
+    ul > li {
       display: table-cell;
     }
   }
