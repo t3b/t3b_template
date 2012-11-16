@@ -23,5 +23,3 @@ Thumbs.db
 
 # Ignore user generated files & Jade Testsuite-Assets
 Assets/css/*.css
-Jade/*.html
-Jade/Testsuite/Assets/*
