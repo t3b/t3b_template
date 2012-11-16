@@ -43,10 +43,12 @@ $ Navigations
 /* Force a nav to occupy 100% of the available width of its parent. Extends
  * Thanks to @pimpl for this idea! */
 .nav--fit {
-  display: table;
-  width: 100%;
-  > li {
-    display: table-cell;
+  ul {
+    display: table;
+    width: 100%;
+    > li {
+      display: table-cell;
+    }
   }
 }
 
