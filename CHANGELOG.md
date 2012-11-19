@@ -1,3 +1,16 @@
+## 1.1.3
+**SCSS**
+* Added .nav--fit helper class
+* Added variable driven offset-by-# classes insertion
+* Include a new HiDPI @media mixin
+* Declare margins & paddings in single-direction declarations
+* Scope link styles to links with a href attribute
+* Removed sample styles & positioning for header elements
+
+**JS**
+* Update to jQuery 1.8.3
+
+
 ## 1.1.2
 **SCSS**
 * Added %placeholders for typographic margins

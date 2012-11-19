@@ -1,5 +1,5 @@
 // ==========================================================
-/* § forms.scss */
+/* § /base/forms.scss */
 //
 // Basic styling for forms and inputs
 // DOCS:
@@ -53,6 +53,7 @@ textarea {
 input[type="checkbox"],
 input[type="radio"] {
   margin-right: .35em;
+  cursor: pointer;
 }
 
 /* ========================== Buttons ========================== */
@@ -70,6 +71,10 @@ input[type="submit"] {
   font-size: .8em;
   line-height: 1;
   color: color-adjust($cd-primary, 100%);
+  &:hover {
+    text-decoration: none;
+    color: color-adjust($cd-primary, 80%);
+  }
 }
 
 
