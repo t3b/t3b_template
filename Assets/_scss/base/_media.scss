@@ -42,6 +42,8 @@ img {
   font-style: italic; /* 3 */
   border: 0; /* 4 */
   @if $oldIE == true { -ms-interpolation-mode: bicubic; /* 5 */ }
+iframe {
+  @extend %sass-margin-bottom;
 }
 
 
@@ -49,6 +51,7 @@ img {
 $ Video
 ================================================================================ */
 video {
+  @extend %sass-margin-bottom;
   @extend %non-print; // Will be hidden on print
 
   &::-webkit-media-controls-panel {
@@ -73,6 +76,7 @@ video {
 $ Audio
 ================================================================================ */
 audio {
+  @extend %sass-margin-bottom;
   min-width: 65%;
 
   @extend %non-print; // Will be hidden on print
