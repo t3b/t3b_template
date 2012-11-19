@@ -46,7 +46,10 @@ $ Navigations
   ul {
     display: table;
     width: 100%;
-    ul { display: block; }
+    ul {
+      display: block;
+      width: auto;
+    }
   }
   @if $oldIE == true {
     li { display: table-cell; }
