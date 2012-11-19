@@ -1,5 +1,5 @@
 // ==========================================================
-/* § grid.scss */
+/* § /generic/grid.scss */
 //
 // Sets up the grid
 // DOCS:
@@ -12,9 +12,11 @@
 $columWidth:      ($layoutWidth + $columnGutter) / $totalColumns - $columnGutter !default;
 $grid-direction:  $start;
 
+
 /* =============================================================================
 $ Grid Classes
 ================================================================================ */
+/* ========================= Grid helper ========================= */
 .columns {
   // Base styles for .row .# classes
   float: $grid-direction;
@@ -27,18 +29,24 @@ $ Grid Classes
   }
   &.first { margin-#{$start}: 0; }
   &.last { margin-#{$end}: 0; }
+}
 
+/* ========================== Grid widths ======================== */
+.columns {
   // Creating .columns.# classes
   @for $i from 1 through $totalColumns {
     &.#{convert-number-to-word($i)} {
       width: gridCalc($i, $totalColumns);
     }
   }
+}
 
+@if ($includeOffsetClasses == true) {
+  /* ====================== Grid offset helpers ==================== */
   // Creating .columns.offset-by-# classes
-  // @for $i from 1 through $totalColumns - 1 {
-  //   &.offset-by-#{convert-number-to-word($i)} {
-  //     margin-#{$start}: gridCalc($i, $totalColumns) + ($columnGutter);
-  //   }
-  // }
+  @for $i from 1 through $totalColumns - 1 {
+    .offset-by-#{convert-number-to-word($i)} {
+      margin-#{$start}: gridCalc($i, $totalColumns) + ($columnGutter);
+    }
+  }
 }

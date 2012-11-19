@@ -1,5 +1,5 @@
 // ==========================================================
-/* § navigations.scss */
+/* § /objects/navigations.scss */
 //
 // Basic styling for all site-navigation elements
 // DOCS: http://csswizardry.com/2011/09/the-nav-abstraction/
@@ -24,7 +24,7 @@ $ Navigations
  *
  */
 .nav {
-  ul { @extend %reset-list; }
+  ul, ol { @extend %reset-list; }
   li { @extend %inline-block; }
   a {
     display: block;
@@ -35,19 +35,31 @@ $ Navigations
 
 /* ======================= Stacked Navigation ======================= */
 /* Throws the list into vertical mode - used for DropDowns etc. */
-/*.nav*/.stacked ul li {
+/*.nav*/.stacked li {
   display: list-item;
-  a { display: block; }
+}
+
+/* ========================= Fit Navigation ========================= */
+/* Force a nav to occupy 100% of the available width of its parent. Extends
+ * Thanks to @pimpl for this idea! */
+.nav--fit {
+  ul {
+    display: table;
+    width: 100%;
+    ul { display: block; }
+  }
+  @if $oldIE == true {
+    li { display: table-cell; }
+    li li { @extend %inline-block; }
+  } @else {
+    ul > li {
+      display: table-cell;
+    }
+  }
 }
 
 /* ======================== Main Navigation ========================= */
 /*.nav*/.site-nav {
-  // Main Navigation
-  .site-header & { // positioning on site-header
-    position: absolute;
-    right: 250px;
-    top: 30px;
-  }
   ul { }
   li { }
   a { }
@@ -55,7 +67,6 @@ $ Navigations
 
 /* ======================== Footer Navigation ======================== */
 /*.nav*/.footer-nav {
-  // Footer Navigation
   ul { }
   li { }
   a { }
@@ -63,8 +74,7 @@ $ Navigations
 
 /* ====================== Breadcrumb Navigation ====================== */
 /*.nav*/.breadcrumb {
-  // Breadcrumb Navigation
-  ul { }
+  ol { }
   li { }
   a { }
 }

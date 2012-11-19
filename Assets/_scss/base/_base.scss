@@ -1,5 +1,5 @@
 // ==========================================================
-/* § base.scss */
+/* § /base/base.scss */
 //
 // Basic styling for this site (f.e. Header and Footer)
 // DOCS:
@@ -24,7 +24,6 @@ body {
   position: relative;
 }
 .site-header {
-  height: 100px; // A height should be set
 
   @extend %non-print; // Will be hidden on print
   .wrapper { }
@@ -48,11 +47,7 @@ $ Logos
   @include img-wh('logo.png');
   background: image-url('logo.png');
 
-  .site-header & {
-    position: absolute;
-    top: 10px;
-    left: 0;
-  }
+  .site-header & { }
   .site-footer & { }
 }
 

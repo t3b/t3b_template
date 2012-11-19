@@ -126,7 +126,7 @@
     @media screen and (max-width:$query-smartphoneSmall) { @content; }
   }
   @else if $media == HDPI {
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) { @content; }
+    @media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) { @content; }
   }
 }
 
@@ -134,9 +134,9 @@
 // =============================================================================
 // CSS Viewport rule Mixin
 // =============================================================================
-// Basicly the same as <meta name="viewport" content="width=device-width"> 
+// Basicly the same as <meta name="viewport" content="width=device-width">
 // but the future proof way.
-// 
+//
 // DOCS: http://dev.w3.org/csswg/css-device-adapt/
 // =============================================================================
 @mixin viewport($arg) {
