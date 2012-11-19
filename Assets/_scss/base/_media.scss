@@ -9,12 +9,12 @@
 /* =============================================================================
 $ Attachements & Images
   Contents: 1: Make Images & Attachements responsive
-            2: Decrease font-size on figcaption elements
-            3: Styling the alt="" Text on images
+            2: Styling the alt="" Text on images
                http://csswizardry.com/2011/06/styling-alt-text-on-images/
-            4: Removes border when inside `a` element in IE6/7/8/9, FF3.
-            5: Improves image quality when scaled in IE7.
+            3: Removes border when inside `a` element in IE6/7/8/9, FF3.
+            4: Improves image quality when scaled in IE7.
                code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+            5: Decrease font-size on figcaption elements
 ================================================================================ */
 embed,
 iframe,
@@ -22,8 +22,15 @@ object,
 img { /* 1 */
   max-width: 100%;
 }
-img[height] { /* 1 */
-  height: auto;
+img {
+  font-style: italic; /* 2 */
+  border: 0; /* 3 */
+  @if $oldIE == true {
+    -ms-interpolation-mode: bicubic; /* 4 */
+  }
+  &[height] { /* 1 */
+    height: auto;
+  }
 }
 figure {
   /* Addresses margin not present in IE6/7/8/9, S5, O11. */
@@ -34,14 +41,10 @@ figure {
     display: block;
   }
 }
-figcaption { /* 2 */
+figcaption { /* 5 */
   font-size: ($baseFontSize - 2) +px;
   font-size: rs(($baseFontSize - 2), $unit: rem);
 }
-img {
-  font-style: italic; /* 3 */
-  border: 0; /* 4 */
-  @if $oldIE == true { -ms-interpolation-mode: bicubic; /* 5 */ }
 iframe {
   @extend %sass-margin-bottom;
 }
