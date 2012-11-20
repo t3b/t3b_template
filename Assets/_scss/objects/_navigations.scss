@@ -43,20 +43,24 @@ $ Navigations
 /* Force a nav to occupy 100% of the available width of its parent. Extends
  * Thanks to @pimpl for this idea! */
 .nav--fit {
-  ul {
-    display: table;
-    width: 100%;
-    ul {
-      display: block;
-      width: auto;
-    }
-  }
   @if $oldIE == true {
+    ul {
+      display: table;
+      width: 100%;
+      ul {
+        display: block;
+        width: auto;
+      }
+    }
     li { display: table-cell; }
     li li { @extend %inline-block; }
   } @else {
-    ul > li {
-      display: table-cell;
+    > ul {
+      display: table;
+      width: 100%;
+      > li {
+        display: table-cell;
+      }
     }
   }
 }
