@@ -42,7 +42,7 @@ $ Navigations
 /* ========================= Fit Navigation ========================= */
 /* Force a nav to occupy 100% of the available width of its parent. Extends
  * Thanks to @pimpl for this idea! */
-.nav--fit {
+/*.nav*/.nav--fit {
   @if $oldIE == true {
     ul {
       display: table;
