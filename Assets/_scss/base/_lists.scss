@@ -15,11 +15,12 @@ ul {
   padding: 0 0 0 40px;
 }
 
-nav ul,
-nav ol {
-  list-style: none;
-  list-style-image: none;
-}
+// Will be handled by the .nav abstraction
+// nav ul,
+// nav ol {
+//   list-style: none;
+//   list-style-image: none;
+// }
 
 li > ul,
 li > ol {
