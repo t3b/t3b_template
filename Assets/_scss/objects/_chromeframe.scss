@@ -1,0 +1,25 @@
+// ==========================================================
+/* § /objects/chromeframe.scss */
+//
+// Basic styling for Google's chromeframe
+// DOCS: https://developers.google.com/chrome/chrome-frame/
+// ==========================================================
+
+
+/* =============================================================================
+$ Chromeframe
+================================================================================ */
+/*<p>*/.chromeframe {
+  display: block;
+  height: 3.5em;
+  border-bottom: 1px $basicBorderStyle #e7db9c;
+  background: #faf6e8;
+
+  font-size: 12px;
+  line-height: 3.5em;
+  text-align: center;
+  color: darken(#faf6e8, 60%);
+
+  @extend %non-print; // Will be hidden on print
+  a { border-bottom: 1px dotted; }
+}
