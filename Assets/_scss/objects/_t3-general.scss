@@ -15,6 +15,9 @@ $ General stylings
 .align-right  { text-align: right; }
 .align-left   { text-align: left; }
 
+/* Fixes an TYPO3 IE8 float issue where images have no width */
+.csc-textpic-imagecolumn img { max-width: none; }
+
 
 /* =============================================================================
 $ CSC-Frames
