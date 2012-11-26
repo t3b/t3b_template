@@ -93,6 +93,6 @@ $linkColor:             lighten($cd-primary, 10%);
 $linkColorHover:        $cd-primary;
 
 // ================================ Borders ===============================
-$basicBorderColor:      darken($contentBackground, 20%);
+$basicBorderColor:      color-adjust($contentBackground, 20%);
 $basicBorderStyle:      solid;
 
