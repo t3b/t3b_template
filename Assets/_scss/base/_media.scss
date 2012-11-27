@@ -53,7 +53,6 @@ $ Video
 ================================================================================ */
 video {
   @extend %sass-margin-bottom;
-  @extend %non-print; // Will be hidden on print
 
   &::-webkit-media-controls-panel {
     background-color: rgba(0, 0, 0, .6);
@@ -80,7 +79,6 @@ audio {
   @extend %sass-margin-bottom;
   min-width: 65%;
 
-  @extend %non-print; // Will be hidden on print
   &::-webkit-media-controls-play-button:hover {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
