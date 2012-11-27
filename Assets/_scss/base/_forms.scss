@@ -119,6 +119,10 @@ $ Secific forms
 /*form*/.searchform {
   label { }
   input { }
-  input[type="search"] { }
+  input[type="search"],
+  input[type="text"] {
+    /* type="text" is used as a fallback for IE7 because it doesn't recognize type="search" */
+
+  }
   input[type="submit"] { }
 }
