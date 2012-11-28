@@ -36,7 +36,7 @@ input[type="week"] {
   border: 1px solid $basicBorderColor;
   font-size: 14px;
   font-size: rs(14, $unit: rem);
-  color: lighten( $baseTextColor, 5% );
+  color: lighten($baseTextColor, 5%);
 
   &:hover { border-color: darken($basicBorderColor, 20%); }
 }
@@ -71,10 +71,11 @@ input[type="submit"] {
   font-size: .8em;
   line-height: 1;
   color: color-adjust($cd-primary, 100%);
-  &:hover {
-    text-decoration: none;
-    color: color-adjust($cd-primary, 80%);
-  }
+}
+.btn:hover {
+  /* hover reset for the <a href="" class="btn"> element */
+  text-decoration: none;
+  color: color-adjust($cd-primary, 100%);
 }
 
 
@@ -90,8 +91,11 @@ fieldset {
 form {
   @if $oldIE == true {
     /* Corrects margin displayed oddly in IE6/7. */
-    margin: 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
+  @extend %sass-margin-bottom;
   ol,
   ul { @extend %reset-list; }
 }
@@ -115,6 +119,10 @@ $ Secific forms
 /*form*/.searchform {
   label { }
   input { }
-  input[type="search"] { }
+  input[type="search"],
+  input[type="text"] {
+    /* type="text" is used as a fallback for IE7 because it doesn't recognize type="search" */
+
+  }
   input[type="submit"] { }
 }

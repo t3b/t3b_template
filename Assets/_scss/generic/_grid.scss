@@ -21,15 +21,14 @@ $ Grid Classes
   // Base styles for .row .# classes
   float: $grid-direction;
   margin: 0 ($columnGutter / 2) +px;
-
-  // Layout modes and helper classes
-  &.centered {
-    margin: 0 auto;
-    float: none;
-  }
-  &.first { margin-#{$start}: 0; }
-  &.last { margin-#{$end}: 0; }
 }
+// Layout modes and helper classes
+.columns--centered {
+  margin: 0 auto;
+  float: none;
+}
+.columns--first { margin-#{$start}: 0; }
+.columns--last { margin-#{$end}: 0; }
 
 /* ========================== Grid widths ======================== */
 .columns {

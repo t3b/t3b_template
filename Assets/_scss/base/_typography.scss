@@ -9,13 +9,11 @@
 /* =============================================================================
 $ Margins
 ================================================================================ */
-p, pre,
-ol, ul, dl,
-figure, menu {
+p, pre, ol, ul, dl, figure, menu {
   /* neutralizing UA-Style margins */
   margin-top: 0;
-  @extend %sass-margin-bottom;
 }
+
 /* Top margins */
 %sass-margin-top { margin-top: $basicSpacing +em; }
 
@@ -32,6 +30,10 @@ $ Typography Elements
             5: Prevents `sub` and `sup` affecting `line-height` in all browsers.
                gist.github.com/413930
 ================================================================================ */
+p {
+  @extend %sass-margin-bottom;
+}
+
 b,
 strong {
   font-weight: $bold; /* 1 */
@@ -78,6 +80,7 @@ pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
+  @extend %sass-margin-bottom;
 }
 
 
