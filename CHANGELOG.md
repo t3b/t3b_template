@@ -5,7 +5,7 @@
 * Added the BEM-methodology to helper classes
 * Added [type="text"] as a fallback for the .searchform styling
 * Extended usage of %sass-margin's for a vertical rythm
-* Changed the nav abstraction to be used on the <ul> or <ol> element
+* Changed the nav abstraction to be used on the `<ul>` or `<ol>` element
 * Changed SASS @import order to be able to use color-adjust in _variables
 * Set typographic margins on each element instead of a stack using `@extend`
 * Moved Chromeframe styling into a seperate file
