@@ -9,12 +9,14 @@
 /* =============================================================================
 $ Attachements & Images
   Contents: 1: Make Images & Attachements responsive
-            2: Decrease font-size on figcaption elements
-            3: Styling the alt="" Text on images
+            2: Styling the alt="" Text on images
                http://csswizardry.com/2011/06/styling-alt-text-on-images/
-            4: Removes border when inside `a` element in IE6/7/8/9, FF3.
+            3: Removes border when inside `a` element in IE6/7/8/9, FF3.
+            4: Remove the gap between images and the bottom of their containers:
+               h5bp.com/i/440
             5: Improves image quality when scaled in IE7.
                code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+            6: Decrease font-size on figcaption elements
 ================================================================================ */
 embed,
 iframe,
@@ -22,24 +24,27 @@ object,
 img { /* 1 */
   max-width: 100%;
 }
-img[height] { /* 1 */
-  height: auto;
+img {
+  font-style: italic; /* 2 */
+  border: 0; /* 3 */
+  vertical-align: middle; /* 4 */
+  @if $oldIE == true {
+    -ms-interpolation-mode: bicubic; /* 5 */
+  }
+  &[height] { /* 1 */
+    height: auto;
+  }
 }
 figure {
   /* Addresses margin not present in IE6/7/8/9, S5, O11. */
   margin: 0;
-  > img {
-    display: block;
-  }
 }
-figcaption { /* 2 */
+figcaption { /* 6 */
   font-size: ($baseFontSize - 2) +px;
   font-size: rs(($baseFontSize - 2), $unit: rem);
 }
-img {
-  font-style: italic; /* 3 */
-  border: 0; /* 4 */
-  @if $oldIE == true { -ms-interpolation-mode: bicubic; /* 5 */ }
+iframe {
+  @extend %sass-margin-bottom;
 }
 
 
@@ -47,7 +52,7 @@ img {
 $ Video
 ================================================================================ */
 video {
-  @extend %non-print; // Will be hidden on print
+  @extend %sass-margin-bottom;
 
   &::-webkit-media-controls-panel {
     background-color: rgba(0, 0, 0, .6);
@@ -71,9 +76,9 @@ video {
 $ Audio
 ================================================================================ */
 audio {
+  @extend %sass-margin-bottom;
   min-width: 65%;
 
-  @extend %non-print; // Will be hidden on print
   &::-webkit-media-controls-play-button:hover {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);

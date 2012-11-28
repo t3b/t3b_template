@@ -1,5 +1,5 @@
 /*! ==========================================================
- * FrontEnd Base Version 1.1.3
+ * FrontEnd Base Version 1.1.4
  * Compiled on: #{timestamp()}
  * ========================================================== */
 // main.scss
@@ -22,6 +22,7 @@
 // =============================================================================
 @import "generic/_normalize";         // Normalize elements accross all browsers
 @import "generic/_grid";              // Grid
+@import "_settings/_shared";          // SASS Placeholders
 
 
 // =============================================================================
@@ -42,11 +43,11 @@
 // =============================================================================
 @import "objects/_navigations";       // Navigations
 @import "objects/_t3-general";        // TYPO3 element styling
+@import "objects/_chromeframe";       // Google's Chromeframe styling
 
 
 // =============================================================================
 // Helpers, placeholders and print styles
 // =============================================================================
-@import "_settings/_shared";          // SASS Placeholders
 @import "generic/_helper";            // Helper classes for developement
 @import "generic/_print";             // Print styles

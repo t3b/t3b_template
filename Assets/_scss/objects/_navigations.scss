@@ -13,18 +13,16 @@ $ Navigations
  * When used on an `ol` or `ul` wrapper, this class throws the list into horizontal mode
  * e.g.:
  *
-   <nav class="nav" role="navigation">
-     <ul>
-         <li><a href=#>Home</a></li>
-         <li><a href=#>About</a></li>
-         <li><a href=#>Portfolio</a></li>
-         <li><a href=#>Contact</a></li>
-     </ul>
-   </nav>
+   <ul class="nav">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
  *
  */
 .nav {
-  ul, ol { @extend %reset-list; }
+  @extend %reset-list;
   li { @extend %inline-block; }
   a {
     display: block;
@@ -35,7 +33,7 @@ $ Navigations
 
 /* ======================= Stacked Navigation ======================= */
 /* Throws the list into vertical mode - used for DropDowns etc. */
-/*.nav*/.stacked li {
+.nav--stacked li {
   display: list-item;
 }
 
@@ -43,16 +41,14 @@ $ Navigations
 /* Force a nav to occupy 100% of the available width of its parent. Extends
  * Thanks to @pimpl for this idea! */
 .nav--fit {
-  ul {
-    display: table;
-    width: 100%;
-    ul { display: block; }
-  }
+  display: table;
+  width: 100%;
+
   @if $oldIE == true {
     li { display: table-cell; }
     li li { @extend %inline-block; }
   } @else {
-    ul > li {
+    > li {
       display: table-cell;
     }
   }
@@ -60,21 +56,12 @@ $ Navigations
 
 /* ======================== Main Navigation ========================= */
 /*.nav*/.site-nav {
-  ul { }
   li { }
   a { }
 }
 
 /* ======================== Footer Navigation ======================== */
 /*.nav*/.footer-nav {
-  ul { }
-  li { }
-  a { }
-}
-
-/* ====================== Breadcrumb Navigation ====================== */
-/*.nav*/.breadcrumb {
-  ol { }
   li { }
   a { }
 }

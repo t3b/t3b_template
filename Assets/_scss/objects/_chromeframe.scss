@@ -1,0 +1,33 @@
+// ==========================================================
+/* § /objects/chromeframe.scss */
+//
+// Basic styling for Google's chromeframe
+// DOCS: https://developers.google.com/chrome/chrome-frame/
+// ==========================================================
+
+
+// =============================================================================
+// Variables
+// =============================================================================
+$chromeframeHeight:     3.5em;
+$chromeframeFontSize:   12px;
+$chromeframeBackground: #faf6e8;
+
+
+/* =============================================================================
+$ Chromeframe
+================================================================================ */
+/*<p>*/.chromeframe {
+  display: block;
+  height: $chromeframeHeight;
+  border-bottom: 1px $basicBorderStyle #e7db9c;
+  background: $chromeframeBackground;
+
+  font-size: chromeframeFontSize;
+  line-height: $chromeframeHeight;
+  text-align: center;
+  color: darken($chromeframeBackground, 60%);
+
+  @extend %non-print; // Will be hidden on print
+  a { border-bottom: 1px dotted; }
+}

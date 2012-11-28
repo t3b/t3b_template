@@ -45,9 +45,11 @@ $ Contenttable-1 (Bordered Table w/ odd & even)
 $ Contenttable-2 (Clean Table)
 ================================================================================ */
 /*table*/.contenttable-2 {
-  td, th { border-bottom: 1px solid $basicBorderColor; }
-  th { padding: 0 0.5em 0.5em; }
-  td { padding: 0.5em; }
+  td, th {
+    border-bottom: 1px solid $basicBorderColor;
+    padding: 0.5em;
+  }
+  th { padding-top: 0; }
 }
 
 

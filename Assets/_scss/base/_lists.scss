@@ -13,13 +13,15 @@ menu,
 ol,
 ul {
   padding: 0 0 0 40px;
+  @extend %sass-margin-bottom;
 }
 
-nav ul,
-nav ol {
-  list-style: none;
-  list-style-image: none;
-}
+// Will be handled by the .nav abstraction
+// nav ul,
+// nav ol {
+//   list-style: none;
+//   list-style-image: none;
+// }
 
 li > ul,
 li > ol {
@@ -27,6 +29,9 @@ li > ol {
   margin-bottom:0;
 }
 
+dl {
+  @extend %sass-margin-bottom;
+}
 @if $oldIE == true {
   dd {
     /* Addresses margins set differently in IE6/7. */
