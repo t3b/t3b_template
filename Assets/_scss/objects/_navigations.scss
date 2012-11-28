@@ -35,14 +35,14 @@ $ Navigations
 
 /* ======================= Stacked Navigation ======================= */
 /* Throws the list into vertical mode - used for DropDowns etc. */
-/*.nav*/.stacked li {
+.nav--stacked li {
   display: list-item;
 }
 
 /* ========================= Fit Navigation ========================= */
 /* Force a nav to occupy 100% of the available width of its parent. Extends
  * Thanks to @pimpl for this idea! */
-/*.nav*/.nav--fit {
+.nav--fit {
   @if $oldIE == true {
     ul {
       display: table;
