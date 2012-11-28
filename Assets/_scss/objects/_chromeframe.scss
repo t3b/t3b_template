@@ -20,7 +20,7 @@ $ Chromeframe
 /*<p>*/.chromeframe {
   display: block;
   height: $chromeframeHeight;
-  border-bottom: 1px $basicBorderStyle #e7db9c;
+  border-bottom: 1px solid #e7db9c;
   background: $chromeframeBackground;
 
   font-size: chromeframeFontSize;
