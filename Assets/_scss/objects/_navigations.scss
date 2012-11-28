@@ -13,18 +13,16 @@ $ Navigations
  * When used on an `ol` or `ul` wrapper, this class throws the list into horizontal mode
  * e.g.:
  *
-   <nav class="nav" role="navigation">
-     <ul>
-         <li><a href=#>Home</a></li>
-         <li><a href=#>About</a></li>
-         <li><a href=#>Portfolio</a></li>
-         <li><a href=#>Contact</a></li>
-     </ul>
-   </nav>
+   <ul class="nav">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
  *
  */
 .nav {
-  ul, ol { @extend %reset-list; }
+  @extend %reset-list;
   li { @extend %inline-block; }
   a {
     display: block;
@@ -43,38 +41,27 @@ $ Navigations
 /* Force a nav to occupy 100% of the available width of its parent. Extends
  * Thanks to @pimpl for this idea! */
 .nav--fit {
+  display: table;
+  width: 100%;
+
   @if $oldIE == true {
-    ul {
-      display: table;
-      width: 100%;
-      ul {
-        display: block;
-        width: auto;
-      }
-    }
     li { display: table-cell; }
     li li { @extend %inline-block; }
   } @else {
-    > ul {
-      display: table;
-      width: 100%;
-      > li {
-        display: table-cell;
-      }
+    > li {
+      display: table-cell;
     }
   }
 }
 
 /* ======================== Main Navigation ========================= */
 /*.nav*/.site-nav {
-  ul { }
   li { }
   a { }
 }
 
 /* ======================== Footer Navigation ======================== */
 /*.nav*/.footer-nav {
-  ul { }
   li { }
   a { }
 }
