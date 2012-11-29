@@ -9,19 +9,20 @@
 // =============================================================================
 // Image-Dimensions
 // =============================================================================
-// Usefull for image-replacement, see Usage below:
-//
-// .foo {
-//   @include img-wh('bar.png');
-//   background: image-url('bar.png');
-// }
-// =============================================================================
 @mixin img-wh($img) {
   width: image-width($img);
   height: image-height($img);
 }
 @mixin img-whr($img) {
   background-size: image-width($img)/2 image-height($img)/2;
+
+
+// =============================================================================
+// Image-Replacement Helper
+// =============================================================================
+@mixin image-replacement($img) {
+  @include img-wh('#{$img}');
+  background-image: image-url('#{$img}');
 }
 
 
