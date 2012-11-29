@@ -37,8 +37,6 @@ input[type="week"] {
   font-size: 14px;
   font-size: rs(14, $unit: rem);
   color: lighten($baseTextColor, 5%);
-
-  &:hover { border-color: darken($basicBorderColor, 20%); }
 }
 
 /* ======================== Textinputs ========================= */
