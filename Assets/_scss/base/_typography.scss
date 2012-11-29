@@ -39,13 +39,11 @@ $ Typography Elements
 p {
   @extend %sass-margin-bottom;
 }
-
 b,
 strong {
   font-weight: $bold; /* 1 */
 }
 small { font-size: 80%; }
-
 abbr[title] { /* 2 */
   border-bottom: 1px dotted;
   cursor: help;
@@ -57,7 +55,6 @@ mark { /* 3 */
 dfn {
   font-style: italic; /* 4 */
 }
-
 sub,
 sup { /* 5 */
   font-size: 75%;

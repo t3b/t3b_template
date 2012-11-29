@@ -15,20 +15,11 @@ ul {
   padding: 0 0 0 40px;
   @extend %sass-margin-bottom;
 }
-
-// Will be handled by the .nav abstraction
-// nav ul,
-// nav ol {
-//   list-style: none;
-//   list-style-image: none;
-// }
-
 li > ul,
 li > ol {
 	/* Remove vertical spacing from nested lists */
-  margin-bottom:0;
+  margin-bottom: 0;
 }
-
 dl {
   @extend %sass-margin-bottom;
 }
