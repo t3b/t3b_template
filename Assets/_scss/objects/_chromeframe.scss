@@ -20,10 +20,10 @@ $ Chromeframe
 /*<p>*/.chromeframe {
   display: block;
   height: $chromeframeHeight;
-  border-bottom: 1px solid #e7db9c;
+  border-bottom: 1px solid darken($chromeframeBackground, 20%);
   background: $chromeframeBackground;
 
-  font-size: chromeframeFontSize;
+  font-size: $chromeframeFontSize;
   line-height: $chromeframeHeight;
   text-align: center;
   color: darken($chromeframeBackground, 60%);
