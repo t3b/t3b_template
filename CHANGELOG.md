@@ -1,12 +1,25 @@
+## 1.1.5
+**SCSS**
+* Added a vrythm check for the font-size mixin
+* Added a .ir helper-mixin
+* Added a hdpi-image helper mixin
+* Added some typographic helper classes
+* Added a %cf placeholder for a quicker clearfix @ extend
+* Moved shared.scss to /generic
+* Removed OldIE-Class Mixins
+* Removed `<small>` styling inside headings
+* Removed `<audio>` and `<video>` styling
+
+
 ## 1.1.4
 **SCSS**
 * Added a missing img whitespace fix from normalize.css
 * Added variable-driven styling to the ChromeFrame object
 * Added the BEM-methodology to helper classes
-* Added [type="text"] as a fallback for the .searchform styling
+* Added `[type="text"]` as a fallback for the .searchform styling
 * Extended usage of %sass-margin's for a vertical rythm
 * Changed the nav abstraction to be used on the `<ul>` or `<ol>` element
-* Changed SASS @import order to be able to use color-adjust in _variables
+* Changed SASS `@import` order to be able to use color-adjust in _variables
 * Set typographic margins on each element instead of a stack using `@extend`
 * Moved Chromeframe styling into a seperate file
 
