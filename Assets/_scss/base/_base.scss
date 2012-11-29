@@ -44,8 +44,7 @@ $ Logos
 ================================================================================ */
 .siteLogo {
   display: block;
-  @include img-wh('logo.png');
-  background: image-url('logo.png');
+  @include image-replacement('logo.png');
 
   .site-header & { }
   .site-footer & { }

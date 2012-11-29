@@ -34,11 +34,9 @@ input[type="month"],
 input[type="time"],
 input[type="week"] {
   border: 1px solid $basicBorderColor;
-  font-size: 14px;
-  font-size: rs(14, $unit: rem);
+  @include font-size(14);
   color: lighten($baseTextColor, 5%);
-
-  &:hover { border-color: darken($basicBorderColor, 20%); }
+  padding: 0.35em 0.5em;
 }
 
 /* ======================== Textinputs ========================= */

@@ -15,10 +15,16 @@ p, pre, ol, ul, dl, figure, menu {
 }
 
 /* Top margins */
-%sass-margin-top { margin-top: $basicSpacing +em; }
+%sass-margin-top {
+  margin-top: $basicSpacing +em;
+  margin-top: $basicSpacing +rem;
+}
 
 /* Bottom margins */
-%sass-margin-bottom { margin-bottom: $basicSpacing +em; }
+%sass-margin-bottom {
+  margin-bottom: $basicSpacing +em;
+  margin-bottom: $basicSpacing +rem;
+}
 
 
 /* =============================================================================
@@ -33,13 +39,11 @@ $ Typography Elements
 p {
   @extend %sass-margin-bottom;
 }
-
 b,
 strong {
   font-weight: $bold; /* 1 */
 }
 small { font-size: 80%; }
-
 abbr[title] { /* 2 */
   border-bottom: 1px dotted;
   cursor: help;
@@ -51,7 +55,6 @@ mark { /* 3 */
 dfn {
   font-style: italic; /* 4 */
 }
-
 sub,
 sup { /* 5 */
   font-size: 75%;
@@ -114,6 +117,15 @@ hr {
   @extend %sass-margin-top;
   @extend %sass-margin-bottom;
 }
+
+
+/* =============================================================================
+$ Typographic Helper Classes
+================================================================================ */
+.align-center { text-align: center; }
+.align-right  { text-align: right; }
+.align-left   { text-align: left; }
+.intend { padding: 0 20px; }
 
 
 /* =============================================================================

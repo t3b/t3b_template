@@ -1,5 +1,5 @@
 /*! ==========================================================
- * FrontEnd Base Version 1.1.4
+ * FrontEnd Base Version 1.1.5
  * Compiled on: #{timestamp()}
  * ========================================================== */
 // main.scss
@@ -22,7 +22,7 @@
 // =============================================================================
 @import "generic/_normalize";         // Normalize elements accross all browsers
 @import "generic/_grid";              // Grid
-@import "_settings/_shared";          // SASS Placeholders
+@import "generic/_shared";            // SASS Placeholders
 
 
 // =============================================================================
@@ -47,7 +47,7 @@
 
 
 // =============================================================================
-// Helpers, placeholders and print styles
+// Helpers and print styles
 // =============================================================================
 @import "generic/_helper";            // Helper classes for developement
 @import "generic/_print";             // Print styles

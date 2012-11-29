@@ -9,11 +9,7 @@
 /* =============================================================================
 $ General stylings
 ================================================================================ */
-.intend { padding: 0 20px; }
 .csc-textpic-caption { font-size: $baseFontSize - 3+px; }
-.align-center { text-align: center; }
-.align-right  { text-align: right; }
-.align-left   { text-align: left; }
 
 /* Fixes an TYPO3 IE8 float issue where images have no width */
 .csc-textpic-imagecolumn img { max-width: none; }

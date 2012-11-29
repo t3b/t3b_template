@@ -9,19 +9,22 @@
 // =============================================================================
 // Image-Dimensions
 // =============================================================================
-// Usefull for image-replacement, see Usage below:
-//
-// .foo {
-//   @include img-wh('bar.png');
-//   background: image-url('bar.png');
-// }
-// =============================================================================
 @mixin img-wh($img) {
   width: image-width($img);
   height: image-height($img);
 }
-@mixin img-whr($img) {
+@mixin hdpi-img($img) {
   background-size: image-width($img)/2 image-height($img)/2;
+  background-image: image-url('#{$img}');
+}
+
+
+// =============================================================================
+// Image-Replacement Helper
+// =============================================================================
+@mixin image-replacement($img) {
+  @include img-wh('#{$img}');
+  background-image: image-url('#{$img}');
 }
 
 
@@ -32,10 +35,12 @@
 // single value, e.g.:
 // Thanks to Harry Roberts (@csswizardry)
 // =============================================================================
-@mixin font-size($size) {
+@mixin font-size($size, $append-vrythm: false) {
   font-size: $size +px;
   font-size: $size / $baseFontSize +rem;
-  line-height: ceil($size / $baseLineHeight) * ($baseLineHeight / $size);
+  @if $append-vrythm == true {
+    line-height: ceil($size / $baseLineHeight) * ($baseLineHeight / $size);
+  }
 }
 
 
@@ -60,33 +65,6 @@
     border-color: transparent transparent transparent $triangleColor;
   } @if ($triangleDirection == right) {
     border-color: transparent $triangleColor transparent transparent;
-  }
-}
-
-
-// =============================================================================
-// OldIE-Class Mixins
-// =============================================================================
-// .foo {
-//  display: block;
-//    @include ie6 {
-//      display: none;
-//    }
-//  }
-// =============================================================================
-@mixin ie6 {
-  .lt-ie7 & {
-    @content;
-  }
-}
-@mixin ie7 {
-  .lt-ie8 & {
-    @content;
-  }
-}
-@mixin ie8 {
-  .lt-ie9 & {
-    @content;
   }
 }
 
