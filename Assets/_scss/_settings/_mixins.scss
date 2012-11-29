@@ -13,8 +13,10 @@
   width: image-width($img);
   height: image-height($img);
 }
-@mixin img-whr($img) {
+@mixin hdpi-img($img) {
   background-size: image-width($img)/2 image-height($img)/2;
+  background-image: image-url('#{$img}');
+}
 
 
 // =============================================================================
