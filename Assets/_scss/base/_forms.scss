@@ -36,6 +36,7 @@ input[type="week"] {
   border: 1px solid $basicBorderColor;
   @include font-size(14);
   color: lighten($baseTextColor, 5%);
+  padding: 0.35em 0.5em;
 }
 
 /* ======================== Textinputs ========================= */
