@@ -32,10 +32,12 @@
 // single value, e.g.:
 // Thanks to Harry Roberts (@csswizardry)
 // =============================================================================
-@mixin font-size($size) {
+@mixin font-size($size, $append-vrythm: false) {
   font-size: $size +px;
   font-size: $size / $baseFontSize +rem;
-  line-height: ceil($size / $baseLineHeight) * ($baseLineHeight / $size);
+  @if $append-vrythm == true {
+    line-height: ceil($size / $baseLineHeight) * ($baseLineHeight / $size);
+  }
 }
 
 
