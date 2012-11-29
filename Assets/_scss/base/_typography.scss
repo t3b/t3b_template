@@ -15,10 +15,16 @@ p, pre, ol, ul, dl, figure, menu {
 }
 
 /* Top margins */
-%sass-margin-top { margin-top: $basicSpacing +em; }
+%sass-margin-top {
+  margin-top: $basicSpacing +em;
+  margin-top: $basicSpacing +rem;
+}
 
 /* Bottom margins */
-%sass-margin-bottom { margin-bottom: $basicSpacing +em; }
+%sass-margin-bottom {
+  margin-bottom: $basicSpacing +em;
+  margin-bottom: $basicSpacing +rem;
+}
 
 
 /* =============================================================================
