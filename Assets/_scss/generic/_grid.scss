@@ -32,7 +32,7 @@ $ Grid Classes
 .columns--last { margin-#{$end}: 0; }
 
 /* ========================== Grid widths ======================== */
-@include grid($gridStack);
+@include grid($gridStack,  $prefix: 'columns--');
 
 @if ($includeOffsetClasses == true) {
   /* ====================== Grid offset helpers ==================== */
