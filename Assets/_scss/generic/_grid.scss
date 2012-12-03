@@ -31,21 +31,11 @@ $ Grid Classes
 .columns--last { margin-#{$end}: 0; }
 
 /* ========================== Grid widths ======================== */
-.columns {
-  // Creating .columns.# classes
-  @for $i from 1 through $totalColumns {
-    &.#{convert-number-to-word($i)} {
-      width: gridCalc($i, $totalColumns);
     }
-  }
 }
+@include grid($gridStack);
 
 @if ($includeOffsetClasses == true) {
   /* ====================== Grid offset helpers ==================== */
   // Creating .columns.offset-by-# classes
-  @for $i from 1 through $totalColumns - 1 {
-    .offset-by-#{convert-number-to-word($i)} {
-      margin-#{$start}: gridCalc($i, $totalColumns) + ($columnGutter);
-    }
-  }
 }
