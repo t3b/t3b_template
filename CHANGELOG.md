@@ -1,3 +1,15 @@
+## 1.1.6
+**SCSS**
+* Added a more flexible grid setup with a grid-mixin
+* Added a %btn placeholder
+* Added default stylings for buttons and text inputs
+* Add a possible fix for a spacing issue in chrome for type="time" inputs
+* Changed the centered grid helper to single direction margins
+* Changed the grid width classes to the BEM namespace 'columns--'
+* Removed the ability to expand `<textarea>` horizontally
+* Removed `<figure>` from the margin reset
+
+
 ## 1.1.5
 **SCSS**
 * Added a vrythm check for the font-size mixin
