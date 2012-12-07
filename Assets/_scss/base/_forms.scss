@@ -71,7 +71,7 @@ input[type="radio"] {
 /* =============================================================================
 $ Buttons
 ================================================================================ */
-.btn,
+%btn,
 button,
 input[type="button"],
 input[type="reset"],
@@ -88,13 +88,16 @@ input[type="submit"] {
   line-height: 1;
   color: color-adjust($cd-primary, 100%);
 }
-.btn:link {
+.btn {
+  @extend %btn;
   @extend %inline-block;
-  color: color-adjust($cd-primary, 100%);
-  &:hover {
-    /* hover reset for the <a href="" class="btn"> element */
-    text-decoration: none;
+  &:link {
+    /* Fixes the color setting as a:link is in a higher priority */
     color: color-adjust($cd-primary, 100%);
+    &:hover {
+      text-decoration: none;
+      color: color-adjust($cd-primary, 100%);
+    }
   }
 }
 .btn--full {
