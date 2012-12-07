@@ -33,10 +33,13 @@ input[type="datetime-local"],
 input[type="month"],
 input[type="time"],
 input[type="week"] {
+  margin-bottom: 8px;
   border: 1px solid $basicBorderColor;
+  border-radius: $cd-borderRadius;
+  @include box-shadow(inset 0 1px 1px rgba(#000, 0.075));
+
   @include font-size(14);
   color: lighten($baseTextColor, 5%);
-  padding: 0.35em 0.5em;
 }
 
 /* ======================== Textinputs ========================= */
