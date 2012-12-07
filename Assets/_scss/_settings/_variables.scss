@@ -78,7 +78,7 @@ $halfSpacing:           $basicSpacing / 2;
 
 
 // =============================================================================
-// Colors
+// Corporate Design
 // =============================================================================
 // ======================== Coporate Design colors ========================
 $cd-primary:            #0097d7;
@@ -89,6 +89,13 @@ $cd-secondary:          #38464b;
 $cd-secondaryLight:     lighten($cd-secondary, 20%);
 $cd-secondaryDark:      darken($cd-secondary, 30%);
 
+// ============================= Other stuff ==============================
+$cd-borderRadius:       1px;
+
+
+// =============================================================================
+// Colors
+// =============================================================================
 // ================================= Links ================================
 $linkColor:             lighten($cd-primary, 10%);
 $linkColorHover:        $cd-primary;
@@ -96,4 +103,3 @@ $linkColorHover:        $cd-primary;
 // ================================ Borders ===============================
 $basicBorderColor:      color-adjust($contentBackground, 20%);
 $basicBorderStyle:      solid;
-
