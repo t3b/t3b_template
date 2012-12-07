@@ -87,6 +87,7 @@ input[type="submit"] {
   color: color-adjust($cd-primary, 100%);
 }
 .btn:link {
+  @extend %inline-block;
   color: color-adjust($cd-primary, 100%);
   &:hover {
     /* hover reset for the <a href="" class="btn"> element */
