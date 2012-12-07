@@ -77,9 +77,11 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
-  padding: 0.5em; // Set in em's so we can change the size of the button depending on the font-size
+  margin-bottom: $baseFontSize / 2 +px;
+  padding: 0.5em 0.75em; // Set in em's so we can change the size of the button depending on the font-size
 
   border: 0;
+  border-radius: $cd-borderRadius;
   background: $cd-primary;
 
   font-size: .8em;
@@ -99,6 +101,7 @@ input[type="submit"] {
   display: block;
   text-align: center;
   /**
+   * The following is so that `.btn--full` works properly on `input`s as well
    * as `a`s.
    */
   padding-right: 0;
