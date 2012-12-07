@@ -95,6 +95,16 @@ input[type="submit"] {
     color: color-adjust($cd-primary, 100%);
   }
 }
+.btn--full {
+  display: block;
+  text-align: center;
+  /**
+   * as `a`s.
+   */
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+}
 
 
 /* =============================================================================
