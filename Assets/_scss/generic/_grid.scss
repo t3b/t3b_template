@@ -20,7 +20,8 @@ $ Grid Classes
 [class^="column"] {
   // Base styles for .row .# classes
   float: $grid-direction;
-  margin: 0 ($columnGutter / 2) +px;
+  margin-left: ($columnGutter / 2) +px;
+  margin-right: ($columnGutter / 2) +px;
 }
 // Layout modes and helper classes
 .columns--centered {
