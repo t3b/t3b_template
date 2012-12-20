@@ -38,16 +38,13 @@
 @mixin grid($stack, $prefix: '', $property: 'width', $type: '') {
   // Depending on the $type it will adjust the calculation
   @if $type == 'offset' { // Calculation fix for all offset-by classes
-
     @each $i in $stack {
       .#{$prefix}#{convert-number-to-word($i)} {
         #{$property}: gridCalc($i, $totalColumns) + ($columnGutter);
       }
     }
-
   } @else { // Standard case
 
-    // Starts the loop
     @each $i in $stack {
       // Set the class-prefix and convert the passed number to their word equivalents
       .#{$prefix}#{convert-number-to-word($i)} {
@@ -55,7 +52,6 @@
         #{$property}: gridCalc($i, $totalColumns);
       }
     }
-
   }
 }
 
