@@ -44,7 +44,6 @@
       }
     }
   } @else { // Standard case
-
     @each $i in $stack {
       // Set the class-prefix and convert the passed number to their word equivalents
       .#{$prefix}#{convert-number-to-word($i)} {
@@ -151,6 +150,18 @@
       @-ms-viewport { width: $arg; }
        @-o-viewport { width: $arg; }
           @viewport { width: $arg; }
+}
+
+
+// =============================================================================
+// CSS Hyphens mixin
+// =============================================================================
+@mixin hyphens($arg) {
+  -webkit-hyphens: $arg;
+     -moz-hyphens: $arg;
+      -ms-hyphens: $arg;
+       -o-hyphens: $arg;
+          hyphens: $arg;
 }
 
 

@@ -49,9 +49,5 @@
 /* ====================== CSS3 Word-breaker ====================== */
   -ms-word-break: break-all;
       word-break: break-all;
-  -webkit-hyphens: auto;
-     -moz-hyphens: auto;
-      -ms-hyphens: auto;
-       -o-hyphens: auto;
-          hyphens: auto;
+  @include hyphens(auto);
 }
