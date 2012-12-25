@@ -36,17 +36,15 @@
 // @include grid(1 2 3 4 5 6 8 10 12, $prefix: 'm--', $property: 'height');
 // =============================================================================
 @mixin grid($stack, $prefix: '', $property: 'width', $type: '') {
-  // Depending on the $type it will adjust the calculation
-  @if $type == 'offset' { // Calculation fix for all offset-by classes
-    @each $i in $stack {
-      .#{$prefix}#{convert-number-to-word($i)} {
+  // Starts the loop
+  @each $i in $stack {
+    // Set the class-prefix and convert the passed number to their word equivalents
+    .#{$prefix}#{convert-number-to-word($i)} {
+      // Depending on the $type it will adjust the calculation
+      @if $type == 'offset' {
+        // Calculation fix for all offset-by classes
         #{$property}: gridCalc($i, $totalColumns) + ($columnGutter);
-      }
-    }
-  } @else { // Standard case
-    @each $i in $stack {
-      // Set the class-prefix and convert the passed number to their word equivalents
-      .#{$prefix}#{convert-number-to-word($i)} {
+      } @else { // Standard case
         // Sets the property and passes the calculation via the gridCalc function in _functions.scss
         #{$property}: gridCalc($i, $totalColumns);
       }
