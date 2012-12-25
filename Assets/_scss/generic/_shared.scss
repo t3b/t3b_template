@@ -35,7 +35,7 @@
   @include box-sizing(border-box);
   @if $oldIE == true {
     /* URL has to be relative to the HTML Doc */
-    *behavior: url('Assets/js/boxsizing.htc');
+    *behavior: url('#{$templatePath}Assets/boxsizing.htc');
   }
 }
 
