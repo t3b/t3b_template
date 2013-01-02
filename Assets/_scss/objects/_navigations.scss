@@ -55,13 +55,13 @@ $ Navigations
 /* ======================== Main Navigation ========================= */
 /*.nav*/.site-nav {
   li { }
-  a { }
+  a:link { }
   .active a { }
 }
 
 /* ======================== Footer Navigation ======================== */
 /*.nav*/.footer-nav {
   li { }
-  a { }
+  a:link { }
   .active a { }
 }
