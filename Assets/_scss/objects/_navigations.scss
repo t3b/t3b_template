@@ -26,9 +26,7 @@ $ Navigations
   li { @extend %inline-block; }
   a {
     display: block;
-    &:hover { }
   }
-  .active a { }
 }
 
 /* ======================= Stacked Navigation ======================= */
@@ -58,10 +56,12 @@ $ Navigations
 /*.nav*/.site-nav {
   li { }
   a { }
+  .active a { }
 }
 
 /* ======================== Footer Navigation ======================== */
 /*.nav*/.footer-nav {
   li { }
   a { }
+  .active a { }
 }
