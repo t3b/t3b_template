@@ -103,6 +103,10 @@ q {
     }
   }
 }
+blockquote {
+  @extend %sass-margin-top;
+  @extend %sass-margin-bottom;
+}
 
 
 /* =============================================================================
