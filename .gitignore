@@ -1,4 +1,4 @@
 # Ignore user generated files, Testsuite-Assets and experimental .kit support
 Assets/css/*.css
-Tests/*
+Docs/*
 *.kit
