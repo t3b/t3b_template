@@ -1,8 +1,8 @@
 @if $responsive == true {
   /* =============================================================================
-  $ RWD Viewport rules
+  $ CSS Viewport
   ================================================================================ */
-  @include viewport(device-width);
+  @include viewport($width: device-width, $zoom: 1, $orientation: '');
 }
 
 // ==========================================================

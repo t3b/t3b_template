@@ -142,12 +142,37 @@
 //
 // DOCS: http://dev.w3.org/csswg/css-device-adapt/
 // =============================================================================
-@mixin viewport($arg) {
-  @-webkit-viewport { width: $arg; }
-     @-moz-viewport { width: $arg; }
-      @-ms-viewport { width: $arg; }
-       @-o-viewport { width: $arg; }
-          @viewport { width: $arg; }
+@mixin viewport($width: '', $height: '', $zoom: '', $orientation: '') {
+  @-webkit-viewport {
+    @if $width != '' { width: $width; }
+    @if $height != '' { height: $height; }
+    @if $zoom != '' { zoom: $zoom; }
+    @if $orientation != '' { orientation: $orientation; }
+  }
+  @-moz-viewport {
+    @if $width != '' { width: $width; }
+    @if $height != '' { height: $height; }
+    @if $zoom != '' { zoom: $zoom; }
+    @if $orientation != '' { orientation: $orientation; }
+  }
+  @-ms-viewport {
+    @if $width != '' { width: $width; }
+    @if $height != '' { height: $height; }
+    @if $zoom != '' { zoom: $zoom; }
+    @if $orientation != '' { orientation: $orientation; }
+  }
+  @-o-viewport {
+    @if $width != '' { width: $width; }
+    @if $height != '' { height: $height; }
+    @if $zoom != '' { zoom: $zoom; }
+    @if $orientation != '' { orientation: $orientation; }
+  }
+  @viewport {
+    @if $width != '' { width: $width; }
+    @if $height != '' { height: $height; }
+    @if $zoom != '' { zoom: $zoom; }
+    @if $orientation != '' { orientation: $orientation; }
+  }
 }
 
 
