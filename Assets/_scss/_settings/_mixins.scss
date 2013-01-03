@@ -82,15 +82,11 @@
   width: 0;
   height: 0;
   border: solid $triangleSize;
-  @if ($triangleDirection == top) {
-    border-color: $triangleColor transparent transparent transparent;
-  } @if ($triangleDirection == bottom) {
-    border-color: transparent transparent $triangleColor transparent;
   } @if ($triangleDirection == left) {
-    border-color: transparent transparent transparent $triangleColor;
-  } @if ($triangleDirection == right) {
-    border-color: transparent $triangleColor transparent transparent;
-  }
+  @if ($triangleDirection == top) { border-color: $triangleColor transparent transparent transparent; }
+  @if ($triangleDirection == bottom) { border-color: transparent transparent $triangleColor transparent; }
+  @if ($triangleDirection == left) { border-color: transparent transparent transparent $triangleColor; }
+  @if ($triangleDirection == right) { border-color: transparent $triangleColor transparent transparent; }
 }
 
 
