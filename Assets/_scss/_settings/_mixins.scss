@@ -35,7 +35,7 @@
 // e.g.:
 // @include grid(1 2 3 4 5 6 8 10 12, $prefix: 'm--', $property: 'height');
 // =============================================================================
-@mixin grid($stack, $prefix: '', $property: 'width', $type: '') {
+@mixin grid($stack: $gridStack, $prefix: '', $property: 'width', $type: '') {
   // Starts the loop
   @each $i in $stack {
     // Set the class-prefix and convert the passed number to their word equivalents

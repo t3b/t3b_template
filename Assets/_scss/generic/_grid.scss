@@ -33,9 +33,9 @@ $ Grid Classes
 .columns--last { margin-#{$end}: 0; }
 
 /* ========================== Grid widths ======================== */
-@include grid($gridStack,  $prefix: 'columns--');
+@include grid($prefix: 'columns--');
 
 @if ($includeOffsetClasses == true) {
   /* ====================== Grid offset helpers ==================== */
-  @include grid($gridStack, $prefix: 'offset-by-', $property: 'margin-#{$start}', $type: 'offset');
+  @include grid($prefix: 'offset-by-', $property: 'margin-#{$start}', $type: 'offset');
 }
