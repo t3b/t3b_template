@@ -62,7 +62,7 @@
 // =============================================================================
 @mixin font-size($size, $append-vrythm: false) {
   font-size: $size +px;
-  font-size: $size / $baseFontSize +rem;
+  font-size: ($size / 16)*1rem;
   @if $append-vrythm == true {
     line-height: ceil($size / $baseLineHeight) * ($baseLineHeight / $size);
   }
