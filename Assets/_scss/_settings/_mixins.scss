@@ -82,7 +82,6 @@
   width: 0;
   height: 0;
   border: solid $triangleSize;
-  } @if ($triangleDirection == left) {
   @if ($triangleDirection == top) { border-color: $triangleColor transparent transparent transparent; }
   @if ($triangleDirection == bottom) { border-color: transparent transparent $triangleColor transparent; }
   @if ($triangleDirection == left) { border-color: transparent transparent transparent $triangleColor; }
@@ -118,13 +117,13 @@
   @if $media == tablet {
     @media screen and (min-width:$query-smartphoneLarge +1px) and (max-width:$query-tablet) { @content; }
   }
-  @else if $media == smartphoneLarge {
+  @if $media == smartphoneLarge {
     @media screen and (min-width:$query-smartphoneSmall +1px) and (max-width:$query-smartphoneLarge) { @content; }
   }
-  @else if $media == smartphoneSmall {
+  @if $media == smartphoneSmall {
     @media screen and (max-width:$query-smartphoneSmall) { @content; }
   }
-  @else if $media == HDPI {
+  @if $media == HDPI {
     @media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) { @content; }
   }
 }
