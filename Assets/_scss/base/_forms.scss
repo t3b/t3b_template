@@ -86,7 +86,7 @@ input[type="submit"] {
   background: $cd-primary;
 
   font-size: .8em;
-  /* Normalize the font-weight accross <input>, <button> and the .btn clas */
+  /* Normalize the font-weight accross <input>, <button> and the .btn class */
   font-weight: normal;
   line-height: 1;
   color: color-adjust($cd-primary, 100%);
