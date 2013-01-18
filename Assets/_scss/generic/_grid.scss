@@ -18,7 +18,7 @@ $ Grid Classes
 ================================================================================ */
 /* ========================= Grid helper ========================= */
 [class^="columns--"] {
-  // Base styles for .row .# classes
+  // Base styles for .columns--# classes
   float: $grid-direction;
   margin-left: ($columnGutter / 2) +px;
   margin-right: ($columnGutter / 2) +px;
