@@ -80,9 +80,7 @@ samp {
 }
 pre {
   /* Improves readability of pre-formatted text in all browsers. */
-  white-space: pre;
   white-space: pre-wrap;
-  word-wrap: break-word;
   @extend %sass-margin-bottom;
 }
 
@@ -113,6 +111,12 @@ blockquote {
 $ Seperators
 ================================================================================ */
 hr {
+  /*
+  * Address differences between Firefox and other browsers.
+  */
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+
   display: block;
   height: 1px;
   border: 0;
