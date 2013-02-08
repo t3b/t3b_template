@@ -1,4 +1,9 @@
-# Ignore user generated files, Testsuite-Assets and experimental .kit support
+# User generated CSS files
 Ressources/Public/Stylesheets/*.css
+
+# Unfinished extension structure and documentation
+Configuration/*
 Docs/*
+
+# Experimental .kit support
 *.kit
