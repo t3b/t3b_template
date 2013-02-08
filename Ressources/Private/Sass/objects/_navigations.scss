@@ -1,0 +1,69 @@
+/*!
+ * Navigation abstraction object
+ *
+ * @package #{$package_name()}
+ * @path objects/_navigations.scss
+ * @author Tyll Weiß <t.weiss@exinit.de>
+ * @link http://csswizardry.com/2011/09/the-nav-abstraction/
+ */
+
+
+/* =============================================================================
+$ Navigations
+================================================================================ */
+/**
+ * When used on an `ol` or `ul` wrapper, this class throws the list into horizontal mode
+ * e.g.:
+ *
+   <ul class="nav">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+.nav {
+  @extend %reset-list;
+  li { @extend %inline-block; }
+  a {
+    display: block;
+  }
+}
+
+/* ======================= Stacked Navigation ======================= */
+/* Throws the list into vertical mode - used for DropDowns etc. */
+.nav--stacked li {
+  display: list-item;
+}
+
+/* ========================= Fit Navigation ========================= */
+/* Force a nav to occupy 100% of the available width of its parent. Extends
+ * Thanks to @pimpl for this idea! */
+.nav--fit {
+  display: table;
+  width: 100%;
+
+  @if $oldIE == true {
+    li { display: table-cell; }
+    li li { @extend %inline-block; }
+  } @else {
+    > li {
+      display: table-cell;
+    }
+  }
+}
+
+/* ======================== Main Navigation ========================= */
+/*.nav*/.site-nav {
+  li { }
+  a:link { }
+  .active a { }
+}
+
+/* ======================== Footer Navigation ======================== */
+/*.nav*/.footer-nav {
+  li { }
+  a:link { }
+  .active a { }
+}

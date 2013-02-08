@@ -1,0 +1,166 @@
+/*!
+ * Basic styling for forms and inputs
+ *
+ * @package #{$package_name()}
+ * @path base/_forms.scss
+ * @author Tyll Weiß <t.weiss@exinit.de>
+ */
+
+
+/* =============================================================================
+$ General styling of Input Fields
+================================================================================ */
+label {
+  display: block;
+  font-weight: $bold;
+  @include font-size(14);
+  &[for] {
+    cursor: pointer;
+  }
+}
+
+/* ====================== Base input styles ====================== */
+textarea,
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"] {
+  margin-bottom: $baseFontSize / 2 +px;
+  padding: 0.35em 0.5em;
+
+  background: $contentBackground;
+  border: 1px solid $basicBorderColor;
+  border-radius: $cd-borderRadius;
+  @include box-shadow(inset 0 1px 1px rgba(#000, 0.075));
+
+  @include font-size(14);
+  color: lighten($baseTextColor, 5%);
+}
+
+input::-webkit-datetime-edit {
+  /* A possible shadow-dom fix for webkit control spacing on input[type=time] */
+  margin-top: -.17em;
+  margin-bottom: -.17em;
+}
+
+
+/* ======================== Textinputs ========================= */
+textarea {
+  min-height: 70px;
+
+  resize: vertical; /* So users cannot expand the textarea over its boundaries */
+  overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9. */
+  vertical-align: top; /* Improves readability and alignment in all browsers. */
+}
+
+/* ========================= Checkboxes ======================== */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: .35em;
+  cursor: pointer;
+}
+
+
+/* =============================================================================
+$ Buttons
+================================================================================ */
+%btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  margin-bottom: $baseFontSize / 2 +px;
+  padding: 0.5em 0.75em; // Set in em's so we can change the size of the button depending on the font-size
+
+  border: 0;
+  border-radius: $cd-borderRadius;
+  background: $cd-primary;
+
+  font-size: .8em;
+  /* Normalize the font-weight accross <input>, <button> and the .btn class */
+  font-weight: normal;
+  line-height: 1;
+  color: color-adjust($cd-primary, 100%);
+}
+.btn {
+  @extend %btn;
+  @extend %inline-block;
+  &:link {
+    /* Fixes the color setting as a:link is in a higher priority */
+    color: color-adjust($cd-primary, 100%);
+    &:hover {
+      text-decoration: none;
+      color: color-adjust($cd-primary, 100%);
+    }
+  }
+}
+.btn--full {
+  display: block;
+  text-align: center;
+  /**
+   * The following is so that `.btn--full` works properly on `input`s as well
+   * as `a`s.
+   */
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+}
+
+
+/* =============================================================================
+$ General styling of Form Fields
+================================================================================ */
+fieldset {
+  /* Define consistent border, margin, and padding. */
+  border: 1px $basicBorderStyle $basicBorderColor;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+form {
+  @if $oldIE == true {
+    /* Corrects margin displayed oddly in IE6/7. */
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @extend %sass-margin-bottom;
+  ol,
+  ul { @extend %reset-list; }
+}
+legend {
+  padding: 0;
+  /* Corrects color not being inherited in IE6/7/8/9. */
+  border: 0;
+  @if $oldIE == true {
+    /* Corrects text not wrapping in FF3. */
+    white-space: normal;
+    /* Corrects alignment displayed oddly in IE6/7. */
+    *margin-left: -7px;
+  }
+}
+
+
+/* =============================================================================
+$ Secific forms
+================================================================================ */
+// /* ========================= Searchform ======================== */
+// /*form*/.searchform {
+//   label { }
+//   input { }
+//   input[type="search"],
+//   input[type="text"] {
+//     /* type="text" is used as a fallback for IE7 because it doesn't recognize type="search" */
+//
+//   }
+//   input[type="submit"] { }
+// }

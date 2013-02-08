@@ -1,0 +1,57 @@
+@charset "UTF-8";
+$package_name: t3b_frontend;
+/*!
+ * Compiled on: #{timestamp()}
+ * Base stylesheet for this template-package
+ *
+ * @package #{$package_name()}
+ * @path /main.scss
+ * @author Tyll Weiß <t.weiss@exinit.de>
+ * @version 1.1.7
+
+
+ */
+
+
+// =============================================================================
+// SASS Setup
+// =============================================================================
+@import "compass/css3";               // Compass
+@import "_settings/_all";             // SASS Functions, Mixins and Variables
+
+
+// =============================================================================
+// Generic
+// =============================================================================
+@import "generic/_normalize";         // Normalize elements accross all browsers
+@import "generic/_grid";              // Grid
+@import "generic/_shared";            // SASS Placeholders
+
+
+// =============================================================================
+// Layout
+// =============================================================================
+@import "base/_base";                 // High-level elements like `html`, `body`, etc.
+@import "base/_headings";             // Double-stranded heading hierarchy
+@import "base/_typography";           // Basic typography
+@import "base/_links";                // High-level link styling
+@import "base/_lists";                // Styling for lists
+@import "base/_media";                // Media elements like images, audio and video
+@import "base/_tables";               // Tables
+@import "base/_forms";                // Forms, input's and other form fields
+
+
+// =============================================================================
+// Components
+// =============================================================================
+@import "objects/_navigations";       // Navigations
+@import "objects/_t3-general";        // TYPO3 element styling
+@import "objects/_chromeframe";       // Google's Chromeframe styling
+
+
+// =============================================================================
+// Helpers and print styles
+// =============================================================================
+@import "generic/_helper";            // Helper classes for developement
+@import "generic/_print";             // Print styles
+@import "generic/_debug";             // CSS Debug rules

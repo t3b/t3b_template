@@ -1,0 +1,12 @@
+//
+// Combines all SASS related settings into one @import
+//
+// @package #{$package_name()}
+// @path  _settings/_all.sass
+// @author Tyll Weiß <t.weiss@exinit.de>
+//
+
+
+@import "_functions";             // SASS Functions
+@import "_variables";             // SASS Settings
+@import "_mixins";                // SASS Mixins

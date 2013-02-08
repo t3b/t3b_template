@@ -1,0 +1,52 @@
+/*!
+ * High-level wrapper elements, logos and CI related stuff
+ *
+ * @package #{$package_name()}
+ * @path base/_base.scss
+ * @author Tyll Weiß <t.weiss@exinit.de>
+ */
+
+
+/* =============================================================================
+$ High level wrapper and elements
+================================================================================ */
+body {
+  /* Addresses margins handled incorrectly in IE6/7. */
+  margin: 0;
+
+  font: $baseFontWeight #{$baseFontSize/16*100}%/$basicSpacing $baseFontFamily;
+  text-align: $start;
+  color: $baseTextColor;
+  background: $bodyBackground;
+}
+.wrapper {
+  margin: 0 auto;
+  width: $layoutWidth;
+  position: relative;
+}
+.site-header {
+
+  @extend %non-print; // Will be hidden on print
+  .wrapper { }
+}
+.site-content {
+
+  .wrapper { }
+}
+.site-footer {
+
+  @extend %non-print; // Will be hidden on print
+  .wrapper { }
+}
+
+
+/* =============================================================================
+$ Logos
+================================================================================ */
+.siteLogo {
+  display: block;
+  @include image-replacement('logo.png');
+
+  .site-header & { }
+  .site-footer & { }
+}
