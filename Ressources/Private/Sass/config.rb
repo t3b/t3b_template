@@ -22,8 +22,9 @@ javascripts_dir = "../../Public/Javascripts"
 
 # COMPASS MODE
 # Development
-output_style = :compressed
+output_style = :nested
 environment = :development
+# sass_options = { :debug_info => true }
 
 # Production
 # output_style = :compressed
