@@ -18,6 +18,17 @@ $grid-direction:  $start;
 $ Grid Classes
 ================================================================================ */
 /* ========================= Grid helper ========================= */
+/**
+ * All divs with classes wich begins with the columns-- namespace will get the basic
+ * grid column styling, below is an example & recommended markup grid
+ *
+  <div class="row clearfix">
+    <div class="columns--first columns--three"> </div>
+    <div class="columns--six"> </div>
+    <div class="columns--last columns--three"> </div>
+  </div>
+ *
+ */
 [class^="columns--"] {
   // Base styles for .columns--# classes
   float: $grid-direction;
