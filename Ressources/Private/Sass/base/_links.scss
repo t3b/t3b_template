@@ -1,0 +1,40 @@
+/*!
+ * Basic styling for anchor tags
+ *
+ * @package #{$package_name()}
+ * @path base/_links.scss
+ * @author Tyll Weiß <t.weiss@exinit.de>
+ */
+
+
+/* =============================================================================
+$ Links
+================================================================================ */
+a {
+  color: $linkColor;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+    color: $linkColorHover;
+  }
+  &:focus {
+    /* Addresses `outline` inconsistency between Chrome and other browsers. */
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -1px;
+  }
+  &:active,
+  &:hover {
+    /* Improves readability when focused and also mouse hovered in all browsers. */
+    outline: 0;
+  }
+  p & {
+    /* Increasing the Clickable Area of Inline Links inside a paragraph */
+    margin: -.33em;
+    padding: .33em;
+    position: relative;
+  }
+}

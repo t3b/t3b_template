@@ -1,0 +1,56 @@
+/*!
+ * Styling for typo3 related classes
+ *
+ * @package #{$package_name()}
+ * @path objects/_t3-general.scss
+ * @author Tyll Weiß <t.weiss@exinit.de>
+ */
+
+
+/* =============================================================================
+$ General stylings
+================================================================================ */
+.csc-textpic-caption { @include font-size(($baseFontSize - 3)); }
+
+/* Fixes an TYPO3 IE8 float issue where images have no width */
+.csc-textpic-imagecolumn img { max-width: none; }
+
+
+/* =============================================================================
+$ CSC-Frames
+================================================================================ */
+.csc-frame-rulerBefore { border-top: 1px $basicBorderStyle $basicBorderColor; }
+.csc-frame-rulerAfter { border-bottom: 1px $basicBorderStyle $basicBorderColor; }
+
+.csc-frame-indent { padding: 0 $layoutWidth / 10; }
+.csc-frame-indent3366 { padding-left: $layoutWidth / 3; }
+.csc-frame-indent6633 { padding-right: $layoutWidth / 3; }
+
+.csc-frame-frame1 { }
+.csc-frame-frame2 { }
+
+
+/* =============================================================================
+$ CSC-Menu
+================================================================================ */
+.csc-menu {
+  li { }
+  a { }
+}
+
+
+/* =============================================================================
+$ CSC-Sitemap
+================================================================================ */
+.csc-sitemap {
+  @extend %sass-margin-bottom;
+}
+
+
+/* =============================================================================
+$ CSC-Uploads
+================================================================================ */
+.csc-uploads {
+  .csc-uploads-icon { }
+  .csc-uploads-fileName { }
+}

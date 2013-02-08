@@ -1,0 +1,32 @@
+/*!
+ * Basic styling for lists and definition elements
+ *
+ * @package #{$package_name()}
+ * @path base/_lists.scss
+ * @author Tyll Weiß <t.weiss@exinit.de>
+ */
+
+
+/* =============================================================================
+$ Lists
+================================================================================ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+  @extend %sass-margin-bottom;
+}
+li > ul,
+li > ol {
+	/* Remove vertical spacing from nested lists */
+  margin-bottom: 0;
+}
+dl {
+  @extend %sass-margin-bottom;
+}
+@if $oldIE == true {
+  dd {
+    /* Addresses margins set differently in IE6/7. */
+    margin: 0 0 0 40px;
+  }
+}

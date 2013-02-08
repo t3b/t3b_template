@@ -1,0 +1,34 @@
+/*!
+ * Chromeframe object - Used for Google's Chromeframe project
+ *
+ * @package #{$package_name()}
+ * @path objects/_chromeframe.scss
+ * @author Tyll Weiß <t.weiss@exinit.de>
+ */
+
+
+// =============================================================================
+// Variables
+// =============================================================================
+$chromeframeHeight:     3.5em;
+$chromeframeFontSize:   12px;
+$chromeframeBackground: #faf6e8;
+
+
+/* =============================================================================
+$ Chromeframe
+================================================================================ */
+/*<p>*/.chromeframe {
+  display: block;
+  height: $chromeframeHeight;
+  border-bottom: 1px solid darken($chromeframeBackground, 20%);
+  background: $chromeframeBackground;
+
+  font-size: $chromeframeFontSize;
+  line-height: $chromeframeHeight;
+  text-align: center;
+  color: darken($chromeframeBackground, 60%);
+
+  @extend %non-print; // Will be hidden on print
+  a { border-bottom: 1px dotted; }
+}

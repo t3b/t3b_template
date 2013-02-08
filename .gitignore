@@ -1,3 +1,4 @@
-# Ignore user generated files & Jade Testsuite-Assets
-Assets/css/*.css
-Tests/*
+# Ignore user generated files, Testsuite-Assets and experimental .kit support
+Ressources/Public/Stylesheets/*.css
+Docs/*
+*.kit

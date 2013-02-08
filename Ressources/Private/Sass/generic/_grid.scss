@@ -1,0 +1,42 @@
+/*!
+ * Gernerated- & Helper-classes for a column based grid
+ *
+ * @package #{$package_name()}
+ * @path generic/_grid.scss
+ * @author Tyll Weiß <t.weiss@exinit.de>
+ */
+
+
+// =============================================================================
+// $ Variables
+// =============================================================================
+$columWidth:      ($layoutWidth + $columnGutter) / $totalColumns - $columnGutter !default;
+$grid-direction:  $start;
+
+
+/* =============================================================================
+$ Grid Classes
+================================================================================ */
+/* ========================= Grid helper ========================= */
+[class^="columns--"] {
+  // Base styles for .columns--# classes
+  float: $grid-direction;
+  margin-left: ($columnGutter / 2) +px;
+  margin-right: ($columnGutter / 2) +px;
+}
+// Layout modes and helper classes
+.columns--centered {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+.columns--first { margin-#{$start}: 0; }
+.columns--last { margin-#{$end}: 0; }
+
+/* ========================== Grid widths ======================== */
+@include grid($prefix: 'columns--');
+
+@if ($includeOffsetClasses == true) {
+  /* ====================== Grid offset helpers ==================== */
+  @include grid($prefix: 'offset-by-', $property: 'margin-#{$start}', $type: 'offset');
+}
