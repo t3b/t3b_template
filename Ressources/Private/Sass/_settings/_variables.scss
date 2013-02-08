@@ -19,7 +19,7 @@
 // =============================================================================
 // Project Settings
 // =============================================================================
-$templatePath:          "fileadmin/templates/TemplateName/"; // Relative to the html doc - Used for oldIE's boxsizing.htc behavior file
+$templatePath:          "typo3conf/ext/t3b_frontend"; // Relative to the html doc - Used for oldIE's boxsizing.htc behavior file
 $responsive:            false;  // If set to 'true' CSS-Viewport-Rules are added
 $oldIE:                 true;   // If set to 'false' IE6 & IE7 Hacks will be ignored while compiling
 $direction:             ltr;    // set "dir" attribute in HTML to "ltr" (default) or "rtl"

@@ -14,15 +14,15 @@ require File.join(File.dirname(__FILE__), 'functions.rb')
 # Set this to the root of your project when deployed:
 http_path       = "/"
 
-sass_dir        = "Assets/_scss"
-css_dir         = "Assets/css"
-images_dir      = "Assets/img"
-javascripts_dir = "Assets/js"
+sass_dir        = "/"
+css_dir         = "../../Public/Stylesheets"
+images_dir      = "../../Public/Images"
+javascripts_dir = "../../Public/Javascripts"
 
 
 # COMPASS MODE
 # Development
-output_style = :expanded
+output_style = :compressed
 environment = :development
 
 # Production
