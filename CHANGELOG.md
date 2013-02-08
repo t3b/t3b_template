@@ -1,3 +1,27 @@
+## 1.1.7
+**Structure**
+* Set the file-structure to the extbase scheme
+* Change the file-header structure to the phpDoc scheme
+
+**HTML**
+*	Add initial-scale=1" to the meta viewport tag
+
+**SCSS**
+* Added a hyphens @mixin
+* Added a $templatePath variable
+* Added a $package_name variable to quickly change the @package tag
+* Added the debug.scss file from inuit
+* Added the SASS source map option in the config file
+* Update normalize.css to 2.1.0
+* Extend the @viewport mixin to support all major descriptors of the spec
+* Fixed a bug in the rem font-size calculation
+* Replaced the .columns main class with an CSS `[class^=]` selector
+
+**JS**
+* Update to jQuery 1.9.1
+* Remove the app.js file
+
+
 ## 1.1.6
 **SCSS**
 * Added a more flexible grid setup with a grid @mixin
