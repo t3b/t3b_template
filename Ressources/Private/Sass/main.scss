@@ -1,9 +1,10 @@
 @charset "UTF-8";
+$package_name: t3b_frontend;
 /*!
  * Compiled on: #{timestamp()}
  * Base stylesheet for this template-package
  *
- * @package t3b_frontend
+ * @package #{$package_name()}
  * @path /main.scss
  * @author Tyll Weiß <t.weiss@exinit.de>
  * @version 1.1.6

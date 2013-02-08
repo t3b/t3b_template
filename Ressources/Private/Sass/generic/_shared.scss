@@ -1,7 +1,7 @@
 /*!
  * Shared styles(%placeholders) to reduce duplicate code
  *
- * @package t3b_frontend
+ * @package #{$package_name()}
  * @path generic/_shared.scss
  * @author Tyll Weiß <t.weiss@exinit.de>
  * @link http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#placeholder_selectors_
@@ -33,7 +33,7 @@
   @include box-sizing(border-box);
   @if $oldIE == true {
     /* URL has to be relative to the HTML Doc */
-    *behavior: url('#{$templatePath}Assets/boxsizing.htc');
+    *behavior: url('#{$templatePath}Ressource/Public/boxsizing.htc');
   }
 }
 
