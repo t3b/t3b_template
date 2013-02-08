@@ -1,23 +1,22 @@
-// ==========================================================
-// variables.scss
 //
 // Variables, variables, variables!
-// DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
-// ==========================================================
+//
+// @package nk_common
+// @path settings/_variables.sass
+// @author Tyll Weiß <t.weiss@exinit.de>
+// @link http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
+//
+
+
+// =============================================================================
+// Project Settings
 //
 // Support-table for $oldIE: false;
-//
 // Google Chrome
 // Mozilla Firefox 4+
 // Apple Safari 5+
 // Opera 12+
 // Internet Explorer 8+
-//
-// ==========================================================
-
-
-// =============================================================================
-// Project Settings
 // =============================================================================
 $templatePath:          "typo3conf/ext/t3b_frontend"; // Relative to the html doc - Used for oldIE's boxsizing.htc behavior file
 $responsive:            false;  // If set to 'true' CSS-Viewport-Rules are added

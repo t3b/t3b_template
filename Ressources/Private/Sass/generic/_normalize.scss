@@ -5,12 +5,14 @@
 //   @include viewport($width: device-width, $zoom: 1, $orientation: '', $user-zoom: '');
 // }
 
-// ==========================================================
-/* § /generic/normalize.scss */
-//
-// Normalize the browser-default styling
-// DOCS: http://necolas.github.com/normalize.css/
-// ==========================================================
+/*!
+ * A cut-down version of normalize.css
+ *
+ * @package t3b_frontend
+ * @path generic/_normalize.scss
+ * @author Tyll Weiß <t.weiss@exinit.de>
+ * @link http://necolas.github.com/normalize.css/
+ */
 
 
 /* =============================================================================

@@ -1,13 +1,11 @@
-// ==========================================================
-/* § shared.scss */
-//
-// Shared styles(%placeholders) to reduce duplicate code
-//
-// Usage:
-// @extend %name;
-//
-// DOCS: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#placeholder_selectors_
-// ==========================================================
+/*!
+ * Shared styles(%placeholders) to reduce duplicate code
+ *
+ * @package t3b_frontend
+ * @path generic/_shared.scss
+ * @author Tyll Weiß <t.weiss@exinit.de>
+ * @link http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#placeholder_selectors_
+ */
 
 
 %reset-list {
