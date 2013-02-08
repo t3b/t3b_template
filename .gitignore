@@ -1,8 +1,12 @@
 # User generated CSS files
 Ressources/Public/Stylesheets/*.css
 
-# Unfinished extension structure and documentation
+# Unfinished extension structure
 Configuration/*
+ext_emconf.php
+ext_localconf.php
+
+# Unfinished extension documentation
 Docs/*
 
 # Experimental .kit support
