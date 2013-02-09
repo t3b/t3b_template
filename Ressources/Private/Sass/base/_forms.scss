@@ -95,8 +95,7 @@ input[type="submit"] {
 .btn {
   @extend %btn;
   @extend %inline-block;
-  &:link {
-    /* Fixes the color setting as a:link is in a higher priority */
+  & {
     color: color-adjust($cd-primary, 100%);
     &:hover {
       text-decoration: none;
