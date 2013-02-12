@@ -94,7 +94,11 @@ input[type="submit"] {
 }
 .btn {
   @extend %btn;
-  @extend %inline-block;
+  display: inline-block;
+  @if $oldIE == true {
+    *display: inline;
+    *zoom: 1;
+  }
   & {
     color: color-adjust($cd-primary, 100%);
     &:hover {

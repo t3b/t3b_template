@@ -16,15 +16,6 @@
   padding-left: 0;
 }
 
-%inline-block {
-/* ================== Cross browser inline-block ================= */
-  display: inline-block;
-  @if $oldIE == true {
-    *display: inline;
-    *zoom: 1;
-  }
-}
-
 %border-box {
 /* ================== Cross browser Border-box =================
  * Includes boxsizing.htc behavior for IE7 and below
