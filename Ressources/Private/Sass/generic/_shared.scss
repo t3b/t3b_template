@@ -16,18 +16,6 @@
   padding-left: 0;
 }
 
-%border-box {
-/* ================== Cross browser Border-box =================
- * Includes boxsizing.htc behavior for IE7 and below
- * https://github.com/Schepp/box-sizing-polyfill
- */
-  @include box-sizing(border-box);
-  @if $oldIE == true {
-    /* URL has to be relative to the HTML Doc */
-    *behavior: url('#{$templatePath}Ressource/Public/boxsizing.htc');
-  }
-}
-
 %hyphens {
 /* ====================== CSS3 Word-breaker ====================== */
   -ms-word-break: break-all;
