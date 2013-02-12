@@ -28,12 +28,6 @@
   }
 }
 
-%replace {
-/* ========================= Text Replace ======================== */
-  font: 0/0 a;
-  text-shadow: none;
-}
-
 %hyphens {
 /* ====================== CSS3 Word-breaker ====================== */
   -ms-word-break: break-all;
