@@ -25,7 +25,7 @@ $ Navigations
  */
 .nav {
   @extend %reset-list;
-  li { @extend %inline-block; }
+  li { display: inline-block; }
   a {
     display: block;
   }
@@ -46,7 +46,7 @@ $ Navigations
 
   @if $oldIE == true {
     li { display: table-cell; }
-    li li { @extend %inline-block; }
+    li li { display: inline-block; }
   } @else {
     > li {
       display: table-cell;
