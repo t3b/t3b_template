@@ -10,8 +10,6 @@
 /* =============================================================================
 $ General stylings
 ================================================================================ */
-.csc-textpic-caption { @include font-size(($baseFontSize - 3)); }
-
 /* Fixes an TYPO3 IE8 float issue where images have no width */
 .csc-textpic-imagecolumn img { max-width: none; }
 
