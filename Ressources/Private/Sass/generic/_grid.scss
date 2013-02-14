@@ -32,8 +32,8 @@ $ Grid Classes
 [class^="columns--"] {
   // Base styles for .columns--# classes
   float: $grid-direction;
-  margin-left: ($columnGutter / 2) +px;
-  margin-right: ($columnGutter / 2) +px;
+  padding-left: ($columnGutter / 2) +px;
+  padding-right: ($columnGutter / 2) +px;
 }
 // Layout modes and helper classes
 .columns--centered {
@@ -41,8 +41,8 @@ $ Grid Classes
   margin-right: auto;
   float: none;
 }
-.columns--first { margin-#{$start}: 0; }
-.columns--last { margin-#{$end}: 0; }
+.columns--first { padding-#{$start}: 0; }
+.columns--last { padding-#{$end}: 0; }
 
 /* ========================== Grid widths ======================== */
 @include grid($prefix: 'columns--');
