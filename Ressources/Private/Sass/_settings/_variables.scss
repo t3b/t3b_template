@@ -20,7 +20,7 @@
 // =============================================================================
 $templatePath:          "typo3conf/ext/#{$package_name}/"; // Relative to the html doc - Used for oldIE's boxsizing.htc behavior file
 // $responsive:            false;  // If set to 'true' CSS-Viewport-Rules are added
-$oldIE:                 true;   // If set to 'false' IE6 & IE7 Hacks will be ignored while compiling
+$oldIE:                 false;   // If set to 'false' IE6 & IE7 Hacks will be ignored while compiling
 $direction:             ltr;    // set "dir" attribute in HTML to "ltr" (default) or "rtl"
 $debug-mode:            false;  // If set to 'true' a basic markup check via CSS will be injected
 $setBorder-Box:         false;  // If set to 'true' the css layout mode will be 'border-box'
