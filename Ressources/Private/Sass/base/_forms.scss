@@ -137,8 +137,6 @@ form {
     margin-right: 0;
   }
   @extend %sass-margin-bottom;
-  ol,
-  ul { @extend %reset-list; }
 }
 legend {
   padding: 0;
