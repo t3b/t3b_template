@@ -23,6 +23,7 @@ $package_name: t3b_frontend;
 // =============================================================================
 // Generic
 // =============================================================================
+@import "generic/_head";              // Declarations wich should be put at the top
 @import "generic/_normalize";         // Normalize elements accross all browsers
 @import "generic/_shared";            // SASS Placeholders
 @import "generic/_grid";              // Grid
