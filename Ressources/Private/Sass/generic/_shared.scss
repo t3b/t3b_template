@@ -18,9 +18,13 @@
   padding-left: 0;
 }
 
-%hyphens {
-/* ====================== CSS3 Word-breaker ====================== */
-  -ms-word-break: break-all;
-      word-break: break-all;
-  @include hyphens(auto);
+/* ====================== CSS3 Word-breaker ======================
+ * Break strings when their length exceeds the width of their container.
+ */
+.text-break,
+%text-break {
+  word-break: break-all;
+  word-break: break-word;
+  word-wrap: break-word;
+  @include hyphens(manual);
 }
