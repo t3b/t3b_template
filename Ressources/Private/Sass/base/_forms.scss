@@ -34,6 +34,7 @@ input[type="datetime-local"],
 input[type="month"],
 input[type="time"],
 input[type="week"] {
+  display: inline-block;
   margin-bottom: $baseLineHeight / 2 +px;
   padding: 0.35em 0.4em;
 
