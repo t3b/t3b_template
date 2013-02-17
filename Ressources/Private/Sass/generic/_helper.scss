@@ -13,7 +13,8 @@
 .fl-l { float: left; }
 
 /* For image replacement */
-.ir {
+.ir,
+.image-replacement {
   background-color: transparent;
   border: 0;
   overflow: hidden;
