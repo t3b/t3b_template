@@ -62,8 +62,8 @@
 .invisible { visibility: hidden; }
 
 /* Contain floats: h5bp.com/q */
-.clearfix,
-%cf {
+.cf,
+.clearfix {
   @if $oldIE == true {
     *zoom:1;
   }
