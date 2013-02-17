@@ -156,3 +156,39 @@ legend {
     *margin-left: -7px;
   }
 }
+
+
+/* =============================================================================
+$ Form-Inline abstraction
+================================================================================ */
+/* Display a <form> and all it's content in a horizontal order
+ * e.g.
+  <form class="form--inline">
+    <label>Username: </label>
+    <input type="text" placeholder="Username...">
+    <label>Password: </label>
+    <input type="password" placeholder="Password...">
+    <label class="label--checkbox">
+      <input type="checkbox">Remember me
+    </label>
+    <button type="submit">Sign in</button>
+  </form>
+ */
+.form--inline {
+  label {
+    display: inline-block;
+    margin-#{$end}: .3em;
+  }
+  .label--checkbox {
+    input { margin-right: .35em; }
+    margin-#{$end}: 1em;
+  }
+  input { margin-#{$end}: 1em; }
+  button,
+  input,
+  select,
+  textarea {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+}
