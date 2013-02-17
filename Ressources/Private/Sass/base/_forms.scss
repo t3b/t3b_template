@@ -35,8 +35,9 @@ input[type="month"],
 input[type="time"],
 input[type="week"] {
   display: inline-block;
+  height: $baseLineHeight +px;
+  padding: 0 0.4em;
   margin-bottom: $baseLineHeight / 2 +px;
-  padding: 0.35em 0.4em;
 
   background: $contentBackground;
   border: 1px solid $basicBorderColor;
@@ -56,6 +57,7 @@ input::-webkit-datetime-edit {
 
 /* ======================== Textinputs ========================= */
 textarea {
+  height: auto; /* Reset height since textareas have the attribute rows="" */
   min-height: 70px;
 
   resize: vertical; /* So users cannot expand the textarea over its boundaries */
