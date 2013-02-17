@@ -22,13 +22,18 @@ $ Grid Classes
  * All divs with classes wich begins with the columns-- namespace will get the basic
  * grid column styling, below is an example & recommended markup grid
  *
-  <div class="row clearfix">
-    <div class="columns--first columns--three"> </div>
+  <div class="gw clearfix">
+    <div class="columns--three"> </div>
     <div class="columns--six"> </div>
-    <div class="columns--last columns--three"> </div>
+    <div class="columns--three"> </div>
   </div>
  *
  */
+.gw,
+.grid-wrapper {
+  margin-left: -($columnGutter / 2) +px;
+  margin-right: -($columnGutter / 2) +px;
+}
 [class^="columns--"] {
   // Base styles for .columns--# classes
   float: $grid-direction;
@@ -41,8 +46,6 @@ $ Grid Classes
   margin-right: auto;
   float: none;
 }
-.columns--first { padding-#{$start}: 0; }
-.columns--last { padding-#{$end}: 0; }
 
 /* ========================== Grid widths ======================== */
 @include grid($prefix: 'columns--');
