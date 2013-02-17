@@ -57,6 +57,7 @@ input::-webkit-datetime-edit {
 
 /* ======================== Textinputs ========================= */
 textarea {
+  display: block;
   height: auto; /* Reset height since textareas have the attribute rows="" */
   min-height: 70px;
 
@@ -190,6 +191,7 @@ $ Form-Inline abstraction
   input,
   select,
   textarea {
+    display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
   }
