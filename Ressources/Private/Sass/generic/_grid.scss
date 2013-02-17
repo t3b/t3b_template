@@ -19,8 +19,8 @@ $ Grid Classes
 ================================================================================ */
 /* ========================= Grid helper ========================= */
 /**
- * All divs with classes wich begins with the columns-- namespace will get the basic
- * grid column styling, below is an example & recommended markup grid
+ * A basic grid system wich is dependent on the border-box layout mode
+ * e.g.
  *
   <div class="gw">
     <div class="gi columns--three"> </div>
