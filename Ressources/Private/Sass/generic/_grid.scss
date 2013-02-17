@@ -22,7 +22,7 @@ $ Grid Classes
  * All divs with classes wich begins with the columns-- namespace will get the basic
  * grid column styling, below is an example & recommended markup grid
  *
-  <div class="gw clearfix">
+  <div class="gw">
     <div class="columns--three"> </div>
     <div class="columns--six"> </div>
     <div class="columns--three"> </div>
@@ -31,6 +31,7 @@ $ Grid Classes
  */
 .gw,
 .grid-wrapper {
+  @extend .cf;
   margin-left: -($columnGutter / 2) +px;
   margin-right: -($columnGutter / 2) +px;
 }
