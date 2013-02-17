@@ -18,90 +18,90 @@
 // Opera 12+
 // Internet Explorer 8+
 // =============================================================================
-$templatePath:          "typo3conf/ext/#{$package_name}/"; // Relative to the html doc - Used for oldIE's boxsizing.htc behavior file
-// $responsive:            false;  // If set to 'true' CSS-Viewport-Rules are added
-$oldIE:                 false;   // If set to 'false' IE6 & IE7 Hacks will be ignored while compiling
-$direction:             ltr;    // set "dir" attribute in HTML to "ltr" (default) or "rtl"
-$debug-mode:            false;  // If set to 'true' a basic markup check via CSS will be injected
-$setBorder-Box:         true;  // If set to 'true' the css layout mode will be 'border-box'
+$templatePath:          "typo3conf/ext/#{$package_name}/" !default; // Relative to the html doc - Used for oldIE's boxsizing.htc behavior file
+// $responsive:            false !default;  // If set to 'true' CSS-Viewport-Rules are added
+$oldIE:                 false !default;   // If set to 'false' IE6 & IE7 Hacks will be ignored while compiling
+$direction:             ltr !default;    // set "dir" attribute in HTML to "ltr" (default) or "rtl"
+$debug-mode:            false !default;  // If set to 'true' a basic markup check via CSS will be injected
+$setBorder-Box:         true !default;  // If set to 'true' the css layout mode will be 'border-box'
 
 
 // =============================================================================
 // Layout
 // =============================================================================
 // ================================ Widths ================================
-$layoutWidth:           960px;  // Used for calculating the grid
-$query-tablet:          800px;  // Tablets
-$query-smartphoneLarge: 480px;  // Phone - Landscape
-$query-smartphoneSmall: 320px;  // Phone - Portrait
+$layoutWidth:           960px !default;  // Used for calculating the grid
+$query-tablet:          800px !default;  // Tablets
+$query-smartphoneLarge: 480px !default;  // Phone - Landscape
+$query-smartphoneSmall: 320px !default;  // Phone - Portrait
 
 // ============================== Grid System =============================
-$totalColumns:          12;     // Number of columns
-$columnGutter:          20;     // Inner spacing
-$gridStack:             1 2 3 4 5 6 7 8 9 10 11 12; // Grid Width classes
-$includeOffsetClasses:  false;  // If set to 'true' .columns.offset-by-# classes are added
+$totalColumns:          12 !default;     // Number of columns
+$columnGutter:          20 !default;     // Inner spacing
+$gridStack:             1 2 3 4 5 6 7 8 9 10 11 12 !default; // Grid Width classes
+$includeOffsetClasses:  false !default;  // If set to 'true' .columns.offset-by-# classes are added
 
 // ============================== Backgrounds =============================
-$bodyBackground:        #fff;   // Will be set on <body>
-$contentBackground:     #fff;   // Used for generating some colors
+$bodyBackground:        #fff !default;   // Will be set on <body>
+$contentBackground:     #fff !default;   // Used for generating some colors
 
 
 // =============================================================================
 // Typography
 // =============================================================================
 // ============================== Font familys ============================
-$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serifFontFamily:       Georgia, "Times New Roman", Times, serif;
-$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
+$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
+$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace !default;
 
 // ============================== Font weights ============================
 // NOTE:
 // Font-weights below are used to handle webfonts - if this layout doesnt
 // use a webfont, dont change them
-$bold:                  700;
-$regular:               400;
-$light:                 300;
+$bold:                  700 !default;
+$regular:               400 !default;
+$light:                 300 !default;
 
 // ========================== Base font settings ==========================
-$baseFontSize:          16; // Set in px
-$baseLineHeight:        24; // Set in px
-$baseFontFamily:        $sansFontFamily;
-$baseFontWeight:        $regular;
-$baseTextColor:         #3C474B;
+$baseFontSize:          16 !default; // Set in px
+$baseLineHeight:        24 !default; // Set in px
+$baseFontFamily:        $sansFontFamily !default;
+$baseFontWeight:        $regular !default;
+$baseTextColor:         #3C474B !default;
 
 // =============================== Headings ===============================
-$headingsFontFamily:    inherit; // empty to use $baseFontFamily
-$headingsFontWeight:    $bold;
-$headingsColor:         #000;
+$headingsFontFamily:    inherit !default; // empty to use $baseFontFamily
+$headingsFontWeight:    $bold !default;
+$headingsColor:         #000 !default;
 
 // =============================== Spacings ===============================
-$basicSpacing:          $baseLineHeight / $baseFontSize;
-$halfSpacing:           $basicSpacing / 2;
+$basicSpacing:          $baseLineHeight / $baseFontSize !default;
+$halfSpacing:           $basicSpacing / 2 !default;
 
 
 // =============================================================================
 // Corporate Design
 // =============================================================================
 // ======================== Coporate Design colors ========================
-$cd-primary:            #0097d7;
-$cd-primaryLight:       lighten($cd-primary, 20%);
-$cd-primaryDark:        darken($cd-primary, 30%);
+$cd-primary:            #0097d7 !default;
+$cd-primaryLight:       lighten($cd-primary, 20%) !default;
+$cd-primaryDark:        darken($cd-primary, 30%) !default;
 
-$cd-secondary:          #38464b;
-$cd-secondaryLight:     lighten($cd-secondary, 20%);
-$cd-secondaryDark:      darken($cd-secondary, 30%);
+$cd-secondary:          #38464b !default;
+$cd-secondaryLight:     lighten($cd-secondary, 20%) !default;
+$cd-secondaryDark:      darken($cd-secondary, 30%) !default;
 
 // ============================= Other stuff ==============================
-$cd-borderRadius:       1px;
+$cd-borderRadius:       1px !default;
 
 
 // =============================================================================
 // Colors
 // =============================================================================
 // ================================= Links ================================
-$linkColor:             lighten($cd-primary, 10%);
-$linkColorHover:        $cd-primary;
+$linkColor:             lighten($cd-primary, 10%) !default;
+$linkColorHover:        $cd-primary !default;
 
 // ================================ Borders ===============================
-$basicBorderColor:      color-adjust($contentBackground, 20%);
-$basicBorderStyle:      solid;
+$basicBorderColor:      color-adjust($contentBackground, 20%) !default;
+$basicBorderStyle:      solid !default;
