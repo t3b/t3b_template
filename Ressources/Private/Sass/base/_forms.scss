@@ -34,8 +34,8 @@ input[type="datetime-local"],
 input[type="month"],
 input[type="time"],
 input[type="week"] {
-  margin-bottom: $baseFontSize / 2 +px;
-  padding: 0.35em 0.5em;
+  margin-bottom: $baseLineHeight / 2 +px;
+  padding: 0.35em 0.4em;
 
   background: $contentBackground;
   border: 1px solid $basicBorderColor;
