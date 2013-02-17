@@ -15,20 +15,19 @@
 // }
 
 
-@if $setBorder-Box == true {
+
 /* =============================================================================
 $ Border-Box
 ================================================================================ */
-  * {
-    @include box-sizing(border-box);
-    @if $oldIE == true {
-      /* Cross browser Border-box
-       *
-       * Includes boxsizing.htc behavior for IE7 and below
-       * The URL has to be relative to the HTML Doc
-       * https://github.com/Schepp/box-sizing-polyfill
-       */
-      *behavior: url('#{$templatePath}Ressource/Public/boxsizing.htc');
-    }
+* {
+  @include box-sizing(border-box);
+  @if $oldIE == true {
+    /* Cross browser Border-box
+     *
+     * Includes boxsizing.htc behavior for IE7 and below
+     * The URL has to be relative to the HTML Doc
+     * https://github.com/Schepp/box-sizing-polyfill
+     */
+    *behavior: url('#{$templatePath}Ressource/Public/boxsizing.htc');
   }
 }

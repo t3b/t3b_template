@@ -23,7 +23,6 @@ $templatePath:          "typo3conf/ext/#{$package_name}/" !default; // Relative 
 $oldIE:                 false !default;   // If set to 'false' IE6 & IE7 Hacks will be ignored while compiling
 $direction:             ltr !default;    // set "dir" attribute in HTML to "ltr" (default) or "rtl"
 $debug-mode:            false !default;  // If set to 'true' a basic markup check via CSS will be injected
-$setBorder-Box:         true !default;  // If set to 'true' the css layout mode will be 'border-box'
 
 
 // =============================================================================
