@@ -140,9 +140,15 @@ form {
   @extend %sass-margin-bottom;
 }
 legend {
+  display: block;
+  width: 100%;
+  @extend %sass-margin-bottom;
+
+  @include font-size(($baseFontSize + 4));
+  color: $headingsColor;
+  border-bottom: 1px $basicBorderStyle $basicBorderColor;
+
   padding: 0;
-  /* Corrects color not being inherited in IE6/7/8/9. */
-  border: 0;
   @if $oldIE == true {
     /* Corrects text not wrapping in FF3. */
     white-space: normal;
