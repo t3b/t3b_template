@@ -22,7 +22,6 @@ $templatePath:          "typo3conf/ext/#{$package_name}/" !default; // Relative 
 // $responsive:            false !default;  // If set to 'true' CSS-Viewport-Rules are added
 $oldIE:                 false !default;   // If set to 'false' IE6 & IE7 Hacks will be ignored while compiling
 $direction:             ltr !default;    // set "dir" attribute in HTML to "ltr" (default) or "rtl"
-$debug-mode:            false !default;  // If set to 'true' a basic markup check via CSS will be injected
 
 
 // =============================================================================
