@@ -8,18 +8,9 @@
 
 
 /* =============================================================================
-$ General styling of Input Fields
+$ Text inputs, checkboxes and other form elements
 ================================================================================ */
-label {
-  display: block;
-  font-weight: $bold;
-  @include font-size(14, $append-vrythm: true);
-  &[for] {
-    cursor: pointer;
-  }
-}
-
-/* ====================== Base input styles ====================== */
+/* ======================== Textinputs ========================= */
 textarea,
 input[type="email"],
 input[type="number"],
@@ -47,15 +38,6 @@ input[type="week"] {
   @include font-size(14);
   color: lighten($baseTextColor, 5%);
 }
-
-input::-webkit-datetime-edit {
-  /* A possible shadow-dom fix for webkit control spacing on input[type=time] */
-  margin-top: -.17em;
-  margin-bottom: -.17em;
-}
-
-
-/* ======================== Textinputs ========================= */
 textarea {
   display: block;
   height: auto; /* Reset height since textareas have the attribute rows="" */
@@ -64,6 +46,12 @@ textarea {
   resize: vertical; /* So users cannot expand the textarea over its boundaries */
   overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9. */
   vertical-align: top; /* Improves readability and alignment in all browsers. */
+}
+
+input::-webkit-datetime-edit {
+  /* A possible shadow-dom fix for webkit control spacing on input[type=time] */
+  margin-top: -.17em;
+  margin-bottom: -.17em;
 }
 
 /* ========================= Checkboxes ======================== */
@@ -125,7 +113,7 @@ input[type="submit"] {
 
 
 /* =============================================================================
-$ General styling of Form Fields
+$ Form elements
 ================================================================================ */
 fieldset {
   /* Define consistent border, margin, and padding. */
@@ -141,6 +129,16 @@ form {
     margin-right: 0;
   }
   @extend %sass-margin-bottom;
+}
+
+/* ==================== Labels and Legends ===================== */
+label {
+  display: block;
+  font-weight: $bold;
+  @include font-size(14, $append-vrythm: true);
+  &[for] {
+    cursor: pointer;
+  }
 }
 legend {
   display: block;
