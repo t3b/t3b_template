@@ -11,21 +11,33 @@
 /* =============================================================================
 $ Margins
 ================================================================================ */
-p, pre, ol, ul, dl, menu {
-  /* neutralizing UA-Style margins */
-  margin-top: 0;
-}
+/* =================== UA-Style margin-reset =================== */
+p, pre, ol,
+ul, dl, menu { margin-top: 0; }
 
-/* Top margins */
+/* ======================== Top margins ======================== */
+/* Basic spacing */
 %sass-margin-top {
   margin-top: $basicSpacing +em;
   margin-top: $basicSpacing +rem;
 }
+/* Half spacing */
+%sass-half-margin-top {
+  margin-top: $halfSpacing +em;
+  margin-top: $halfSpacing +rem;
+}
 
-/* Bottom margins */
+/* ====================== Bottom margins ======================= */
+/* Basic spacing */
 %sass-margin-bottom {
   margin-bottom: $basicSpacing +em;
   margin-bottom: $basicSpacing +rem;
+}
+
+/* Half spacing */
+%sass-half-margin-bottom {
+  margin-bottom: $halfSpacing +em;
+  margin-bottom: $halfSpacing +rem;
 }
 
 
