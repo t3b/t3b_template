@@ -17,25 +17,25 @@ ul, dl, menu { margin-top: 0; }
 
 /* ======================== Top margins ======================== */
 /* Basic spacing */
-%sass-margin-top {
+%margin-top,
   margin-top: $basicSpacing +em;
   margin-top: $basicSpacing +rem;
 }
 /* Half spacing */
-%sass-half-margin-top {
+%half-margin-top,
   margin-top: $halfSpacing +em;
   margin-top: $halfSpacing +rem;
 }
 
 /* ====================== Bottom margins ======================= */
 /* Basic spacing */
-%sass-margin-bottom {
+%margin-bottom,
   margin-bottom: $basicSpacing +em;
   margin-bottom: $basicSpacing +rem;
 }
 
 /* Half spacing */
-%sass-half-margin-bottom {
+%half-margin-bottom,
   margin-bottom: $halfSpacing +em;
   margin-bottom: $halfSpacing +rem;
 }
@@ -51,7 +51,7 @@ $ Typography Elements
                gist.github.com/413930
 ================================================================================ */
 p {
-  @extend %sass-margin-bottom;
+  @extend %margin-bottom;
 }
 b,
 strong {
@@ -95,7 +95,7 @@ samp {
 pre {
   /* Improves readability of pre-formatted text in all browsers. */
   white-space: pre-wrap;
-  @extend %sass-margin-bottom;
+  @extend %margin-bottom;
 }
 
 
@@ -116,8 +116,8 @@ q {
   }
 }
 blockquote {
-  @extend %sass-margin-top;
-  @extend %sass-margin-bottom;
+  @extend %margin-top;
+  @extend %margin-bottom;
 }
 
 
@@ -136,8 +136,8 @@ hr {
   border: 0;
   border-top: 1px $basicBorderStyle $basicBorderColor;
   padding: 0;
-  @extend %sass-margin-top;
-  @extend %sass-margin-bottom;
+  @extend %margin-top;
+  @extend %margin-bottom;
 }
 
 

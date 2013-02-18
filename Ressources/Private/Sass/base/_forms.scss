@@ -128,7 +128,7 @@ form {
     margin-left: 0;
     margin-right: 0;
   }
-  @extend %sass-margin-bottom;
+  @extend %margin-bottom;
 }
 
 /* ==================== Labels and Legends ===================== */
@@ -143,7 +143,7 @@ label {
 legend {
   display: block;
   width: 100%;
-  @extend %sass-margin-bottom;
+  @extend %margin-bottom;
 
   @include font-size(($baseFontSize + 4));
   color: $headingsColor;

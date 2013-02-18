@@ -14,7 +14,7 @@ menu,
 ol,
 ul {
   padding: 0 0 0 40px;
-  @extend %sass-margin-bottom;
+  @extend %margin-bottom;
 }
 li > ul,
 li > ol {
@@ -22,7 +22,7 @@ li > ol {
   margin-bottom: 0;
 }
 dl {
-  @extend %sass-margin-bottom;
+  @extend %margin-bottom;
 }
 @if $oldIE == true {
   dd {
