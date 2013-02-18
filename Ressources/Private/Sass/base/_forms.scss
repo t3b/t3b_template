@@ -161,9 +161,10 @@ legend {
 
 /* =============================================================================
 $ Form-Inline abstraction
-================================================================================ */
-/* Display a <form> and all it's content in a horizontal order
+================================================================================
+ * Display a <form> and all it's content in a horizontal order
  * e.g.
+ *
   <form class="form--inline">
     <label>Username: </label>
     <input type="text" placeholder="Username...">
@@ -174,7 +175,7 @@ $ Form-Inline abstraction
     </label>
     <button type="submit">Sign in</button>
   </form>
- */
+================================================================================ */
 .form--inline {
   label {
     display: inline-block;
