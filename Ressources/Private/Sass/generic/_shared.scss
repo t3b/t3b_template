@@ -8,8 +8,8 @@
  */
 
 
-.reset-list,
-%reset-list {
+%reset-list,
+.reset-list {
 /* ========================== Reset list =========================
  * Resets the standard list styles of a <ul> or <ol>
  */
@@ -22,8 +22,8 @@
 /* ====================== CSS3 Word-breaker ======================
  * Break strings when their length exceeds the width of their container.
  */
-.text-break,
-%text-break {
+%text-break,
+.text-break {
   word-break: break-all;
   word-break: break-word;
   word-wrap: break-word;
