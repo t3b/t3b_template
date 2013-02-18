@@ -10,22 +10,20 @@
 
 /* =============================================================================
 $ Navigations
-================================================================================ */
-/**
+================================================================================
  * When used on an `ol` or `ul` wrapper, this class throws the list into horizontal mode
  * e.g.:
  *
-   <ul class="nav">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- */
+  <ul class="nav">
+      <li><a href=#>Home</a></li>
+      <li><a href=#>About</a></li>
+      <li><a href=#>Portfolio</a></li>
+      <li><a href=#>Contact</a></li>
+  </ul>
+================================================================================ */
 .nav {
   @extend %reset-list;
-  li { @extend %inline-block; }
+  li { display: inline-block; }
   a {
     display: block;
   }
@@ -46,7 +44,7 @@ $ Navigations
 
   @if $oldIE == true {
     li { display: table-cell; }
-    li li { @extend %inline-block; }
+    li li { display: inline-block; }
   } @else {
     > li {
       display: table-cell;
@@ -57,13 +55,13 @@ $ Navigations
 /* ======================== Main Navigation ========================= */
 /*.nav*/.site-nav {
   li { }
-  a:link { }
+  a { }
   .active a { }
 }
 
 /* ======================== Footer Navigation ======================== */
 /*.nav*/.footer-nav {
   li { }
-  a:link { }
+  a { }
   .active a { }
 }

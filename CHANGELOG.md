@@ -1,3 +1,21 @@
+## 1.1.8
+**SCSS**
+* Added a _head.scss
+* Added the form--inline abstraction
+* Added half margin extends to _typography.scss
+* Added a .print-hidden class
+* Disable support for oldIE by default
+* Enable box-sizing: border-box; by default
+* All grid widths are now percentages
+* Scoped all variables inside _variables.scss to !default
+* Renamed all grid related classes
+* Renamed .siteLogo to .site-logo
+* Renamed %hyphens to %text-break
+* Removed the %inline-block and %replace placeholder
+
+**HTML**
+* Enabled the Chromeframe information toolbar for > IE8
+
 ## 1.1.7
 **Structure**
 * Set the file-structure to the extbase scheme

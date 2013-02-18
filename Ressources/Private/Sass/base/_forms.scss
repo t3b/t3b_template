@@ -8,18 +8,9 @@
 
 
 /* =============================================================================
-$ General styling of Input Fields
+$ Text inputs, checkboxes and other form elements
 ================================================================================ */
-label {
-  display: block;
-  font-weight: $bold;
-  @include font-size(14);
-  &[for] {
-    cursor: pointer;
-  }
-}
-
-/* ====================== Base input styles ====================== */
+/* ======================== Textinputs ========================= */
 textarea,
 input[type="email"],
 input[type="number"],
@@ -34,8 +25,10 @@ input[type="datetime-local"],
 input[type="month"],
 input[type="time"],
 input[type="week"] {
-  margin-bottom: $baseFontSize / 2 +px;
-  padding: 0.35em 0.5em;
+  display: inline-block;
+  height: $baseLineHeight +px;
+  padding: 0 0.4em;
+  margin-bottom: $baseLineHeight / 2 +px;
 
   background: $contentBackground;
   border: 1px solid $basicBorderColor;
@@ -45,21 +38,20 @@ input[type="week"] {
   @include font-size(14);
   color: lighten($baseTextColor, 5%);
 }
-
-input::-webkit-datetime-edit {
-  /* A possible shadow-dom fix for webkit control spacing on input[type=time] */
-  margin-top: -.17em;
-  margin-bottom: -.17em;
-}
-
-
-/* ======================== Textinputs ========================= */
 textarea {
+  display: block;
+  height: auto; /* Reset height since textareas have the attribute rows="" */
   min-height: 70px;
 
   resize: vertical; /* So users cannot expand the textarea over its boundaries */
   overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9. */
   vertical-align: top; /* Improves readability and alignment in all browsers. */
+}
+
+input::-webkit-datetime-edit {
+  /* A possible shadow-dom fix for webkit control spacing on input[type=time] */
+  margin-top: -.17em;
+  margin-bottom: -.17em;
 }
 
 /* ========================= Checkboxes ======================== */
@@ -94,9 +86,12 @@ input[type="submit"] {
 }
 .btn {
   @extend %btn;
-  @extend %inline-block;
-  &:link {
-    /* Fixes the color setting as a:link is in a higher priority */
+  display: inline-block;
+  @if $oldIE == true {
+    *display: inline;
+    *zoom: 1;
+  }
+  & {
     color: color-adjust($cd-primary, 100%);
     &:hover {
       text-decoration: none;
@@ -118,13 +113,13 @@ input[type="submit"] {
 
 
 /* =============================================================================
-$ General styling of Form Fields
+$ Form elements
 ================================================================================ */
 fieldset {
   /* Define consistent border, margin, and padding. */
-  border: 1px $basicBorderStyle $basicBorderColor;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 form {
   @if $oldIE == true {
@@ -133,14 +128,28 @@ form {
     margin-left: 0;
     margin-right: 0;
   }
-  @extend %sass-margin-bottom;
-  ol,
-  ul { @extend %reset-list; }
+  @extend %margin-bottom;
+}
+
+/* ==================== Labels and Legends ===================== */
+label {
+  display: block;
+  font-weight: $bold;
+  @include font-size(14, $append-vrythm: true);
+  &[for] {
+    cursor: pointer;
+  }
 }
 legend {
+  display: block;
+  width: 100%;
+  @extend %margin-bottom;
+
+  @include font-size(($baseFontSize + 4));
+  color: $headingsColor;
+  border-bottom: 1px $basicBorderStyle $basicBorderColor;
+
   padding: 0;
-  /* Corrects color not being inherited in IE6/7/8/9. */
-  border: 0;
   @if $oldIE == true {
     /* Corrects text not wrapping in FF3. */
     white-space: normal;
@@ -151,16 +160,38 @@ legend {
 
 
 /* =============================================================================
-$ Secific forms
+$ Form-Inline abstraction
+================================================================================
+ * Display a <form> and all it's content in a horizontal order
+ * e.g.
+ *
+  <form class="form--inline">
+    <label>Username: </label>
+    <input type="text" placeholder="Username...">
+    <label>Password: </label>
+    <input type="password" placeholder="Password...">
+    <label class="label--checkbox">
+      <input type="checkbox">Remember me
+    </label>
+    <button type="submit">Sign in</button>
+  </form>
 ================================================================================ */
-// /* ========================= Searchform ======================== */
-// /*form*/.searchform {
-//   label { }
-//   input { }
-//   input[type="search"],
-//   input[type="text"] {
-//     /* type="text" is used as a fallback for IE7 because it doesn't recognize type="search" */
-//
-//   }
-//   input[type="submit"] { }
-// }
+.form--inline {
+  label {
+    display: inline-block;
+    margin-#{$end}: .3em;
+  }
+  .label--checkbox {
+    input { margin-right: .35em; }
+    margin-#{$end}: 1em;
+  }
+  input { margin-#{$end}: 1em; }
+  button,
+  input,
+  select,
+  textarea {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+}
