@@ -9,43 +9,6 @@
 
 
 /* =============================================================================
-$ Margins
-================================================================================ */
-/* =================== UA-Style margin-reset =================== */
-p, pre, ol,
-ul, dl, menu { margin-top: 0; }
-
-/* ======================== Top margins ======================== */
-/* Basic spacing */
-%margin-top,
-.basic_spacing-top {
-  margin-top: $basicSpacing +em;
-  margin-top: $basicSpacing +rem;
-}
-/* Half spacing */
-%half-margin-top,
-.half-basic_spacing-top {
-  margin-top: $halfSpacing +em;
-  margin-top: $halfSpacing +rem;
-}
-
-/* ====================== Bottom margins ======================= */
-/* Basic spacing */
-%margin-bottom,
-.basic_spacing-bottom {
-  margin-bottom: $basicSpacing +em;
-  margin-bottom: $basicSpacing +rem;
-}
-
-/* Half spacing */
-%half-margin-bottom,
-.basic_spacing-bottom {
-  margin-bottom: $halfSpacing +em;
-  margin-bottom: $halfSpacing +rem;
-}
-
-
-/* =============================================================================
 $ Typography Elements
   Contents: 1: Addresses style set to `bolder` in FF3+, S4/5, Chrome.
             2: Addresses styling not present in IE7/8/9, S5, Chrome.
@@ -146,15 +109,6 @@ hr {
 
 
 /* =============================================================================
-$ Typographic Helper Classes
-================================================================================ */
-.align-center { text-align: center; }
-.align-right  { text-align: right; }
-.align-left   { text-align: left; }
-.intend { padding: 0 1.5em; }
-
-
-/* =============================================================================
 $ Text-Selection
 ================================================================================ */
 ::-moz-selection,
@@ -162,4 +116,58 @@ $ Text-Selection
   background: $cd-primary;
   color: color-adjust($cd-primary, 100%);
   text-shadow: none;
+}
+
+
+/* =============================================================================
+$ Typographic Helper Classes
+================================================================================ */
+/* ======================= Basic helpers ======================= */
+.align-center { text-align: center; }
+.align-right  { text-align: right; }
+.align-left   { text-align: left; }
+.intend { padding: 0 1.5em; }
+
+/* ====================== CSS3 Word-breaker ======================
+ * Break strings when their length exceeds the width of their container.
+ */
+%text-break,
+.text-break {
+  word-break: break-all;
+  word-break: break-word;
+  word-wrap: break-word;
+  @include hyphens(manual);
+}
+
+/* =================== UA-Style margin-reset =================== */
+p, pre, ol,
+ul, dl, menu { margin-top: 0; }
+
+/* ======================== Top margins ======================== */
+/* Basic spacing */
+%margin-top,
+.basic_spacing-top {
+  margin-top: $basicSpacing +em;
+  margin-top: $basicSpacing +rem;
+}
+/* Half spacing */
+%half-margin-top,
+.half-basic_spacing-top {
+  margin-top: $halfSpacing +em;
+  margin-top: $halfSpacing +rem;
+}
+
+/* ====================== Bottom margins ======================= */
+/* Basic spacing */
+%margin-bottom,
+.basic_spacing-bottom {
+  margin-bottom: $basicSpacing +em;
+  margin-bottom: $basicSpacing +rem;
+}
+
+/* Half spacing */
+%half-margin-bottom,
+.basic_spacing-bottom {
+  margin-bottom: $halfSpacing +em;
+  margin-bottom: $halfSpacing +rem;
 }
