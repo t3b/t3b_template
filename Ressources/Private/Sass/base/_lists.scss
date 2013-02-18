@@ -21,15 +21,7 @@ li > ol {
 	/* Remove vertical spacing from nested lists */
   margin-bottom: 0;
 }
-dl {
-  @extend %margin-bottom;
-}
-@if $oldIE == true {
-  dd {
-    /* Addresses margins set differently in IE6/7. */
-    margin: 0 0 0 40px;
-  }
-}
+
 
 /* ======================== Reset list ========================= */
 %reset-list,
@@ -41,4 +33,18 @@ dl {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+}
+
+
+/* =============================================================================
+$ Definitions
+================================================================================ */
+dl {
+  @extend %margin-bottom;
+}
+@if $oldIE == true {
+  dd {
+    /* Addresses margins set differently in IE6/7. */
+    margin: 0 0 0 40px;
+  }
 }
