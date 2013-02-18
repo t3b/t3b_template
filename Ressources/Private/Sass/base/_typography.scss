@@ -18,11 +18,13 @@ ul, dl, menu { margin-top: 0; }
 /* ======================== Top margins ======================== */
 /* Basic spacing */
 %margin-top,
+.basic_spacing-top {
   margin-top: $basicSpacing +em;
   margin-top: $basicSpacing +rem;
 }
 /* Half spacing */
 %half-margin-top,
+.half-basic_spacing-top {
   margin-top: $halfSpacing +em;
   margin-top: $halfSpacing +rem;
 }
@@ -30,12 +32,14 @@ ul, dl, menu { margin-top: 0; }
 /* ====================== Bottom margins ======================= */
 /* Basic spacing */
 %margin-bottom,
+.basic_spacing-bottom {
   margin-bottom: $basicSpacing +em;
   margin-bottom: $basicSpacing +rem;
 }
 
 /* Half spacing */
 %half-margin-bottom,
+.basic_spacing-bottom {
   margin-bottom: $halfSpacing +em;
   margin-bottom: $halfSpacing +rem;
 }
