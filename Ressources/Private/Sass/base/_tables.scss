@@ -24,7 +24,36 @@ th, td { vertical-align: top; }
 
 
 /* =============================================================================
-$ Contenttable-1 (Bordered Table w/ odd & even)
+$ Contenttable-1
+================================================================================
+* Extends the basic border styles
+* Bordered table with an odd & even changing background-color e.g.
+<table class="contenttable-1">
+  <thead>
+    <tr>
+      <th class="td-0">Name</th>
+      <th>Age</th>
+      <th>Residence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="tr-odd">
+      <td class="td-0">Max Mustermann</td>
+      <td>20</td>
+      <td>Berlin</td>
+    </tr>
+    <tr class="tr-even">
+      <td class="td-0">Max Mustermann</td>
+      <td>20</td>
+      <td>Berlin</td>
+    </tr>
+    <tr class="tr-odd tr-last">
+      <td class="td-0">Max Mustermann</td>
+      <td>20</td>
+      <td>Berlin</td>
+    </tr>
+  </tbody>
+</table>
 ================================================================================ */
 /*table*/.contenttable-1 {
   border: 1px solid $basicBorderColor;
@@ -43,7 +72,36 @@ $ Contenttable-1 (Bordered Table w/ odd & even)
 
 
 /* =============================================================================
-$ Contenttable-2 (Clean Table)
+$ Contenttable-2
+================================================================================
+* Extends the basic border styles
+* Clean table with borders below each row e.g.
+<table class="contenttable-2">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Residence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Max Mustermann</td>
+      <td>20</td>
+      <td>Berlin</td>
+    </tr>
+    <tr>
+      <td>Max Mustermann</td>
+      <td>20</td>
+      <td>Berlin</td>
+    </tr>
+    <tr>
+      <td>Max Mustermann</td>
+      <td>20</td>
+      <td>Berlin</td>
+    </tr>
+  </tbody>
+</table>
 ================================================================================ */
 /*table*/.contenttable-2 {
   td, th {
@@ -55,7 +113,36 @@ $ Contenttable-2 (Clean Table)
 
 
 /* =============================================================================
-$ Contenttable-3 (Clean Table (condensed))
+$ Contenttable-3
+================================================================================
+* Extends the basic border styles
+* Clean condensed table with borders below each row e.g.
+<table class="contenttable-3">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Residence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Max Mustermann</td>
+      <td>20</td>
+      <td>Berlin</td>
+    </tr>
+    <tr>
+      <td>Max Mustermann</td>
+      <td>20</td>
+      <td>Berlin</td>
+    </tr>
+    <tr>
+      <td>Max Mustermann</td>
+      <td>20</td>
+      <td>Berlin</td>
+    </tr>
+  </tbody>
+</table>
 ================================================================================ */
 /*table*/.contenttable-3 {
   td, th {
