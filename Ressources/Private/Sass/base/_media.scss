@@ -42,11 +42,10 @@ figure {
   margin: 0;
 }
 figcaption { /* 6 */
-  font-size: ($baseFontSize - 2) +px;
-  font-size: rs(($baseFontSize - 2), $unit: rem);
+  @include font-size(($baseFontSize - 2));
 }
 iframe {
-  @extend %sass-margin-bottom;
+  @extend %margin-bottom;
 }
 
 
@@ -54,7 +53,7 @@ iframe {
 $ Video
 ================================================================================ */
 video {
-  @extend %sass-margin-bottom;
+  @extend %margin-bottom;
 }
 
 
@@ -62,7 +61,7 @@ video {
 $ Audio
 ================================================================================ */
 audio {
-  @extend %sass-margin-bottom;
+  @extend %margin-bottom;
   min-width: 65%;
 
   &:not([controls]) {

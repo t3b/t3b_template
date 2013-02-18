@@ -56,5 +56,9 @@
   a[href^="#"]:after {  // Don't show links for images, or javascript/internal links
     content: "";
   }
-  %non-print { display: none; }
+  %non-print,
+  .print-hidden {
+    display: none;
+    visibility: hidden;
+  }
 }

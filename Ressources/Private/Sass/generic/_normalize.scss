@@ -1,16 +1,9 @@
-// @if $responsive == true {
-//   /* =============================================================================
-//   $ CSS Viewport
-//   ================================================================================ */
-//   @include viewport($width: device-width, $zoom: 1, $orientation: '', $user-zoom: '');
-// }
-
 /*!
  * A cut-down version of normalize.css
  *
  * @package #{$package_name()}
  * @path generic/_normalize.scss
- * @author Tyll Weiß <t.weiss@exinit.de>
+ * @author Nicolas Gallagher
  * @link http://necolas.github.com/normalize.css/
  */
 

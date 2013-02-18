@@ -24,9 +24,9 @@
 
 
 // =============================================================================
-// Grid Calc
+// Offset Grid Calc
 // =============================================================================
-@function gridCalc($colNumber, $totalColumns) {
+@function offsetCalc($colNumber, $totalColumns) {
   @return ($columWidth * $colNumber) + ($columnGutter * ($colNumber - 1));
 }
 
