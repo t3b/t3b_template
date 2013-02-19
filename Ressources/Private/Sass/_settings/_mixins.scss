@@ -11,6 +11,9 @@
 // =============================================================================
 // Image-Dimensions
 // =============================================================================
+// Get the dimensions of an image inside the 'images_dir' as specified in the
+// config.rb file
+// =============================================================================
 @mixin img-wh($img) {
   width: image-width($img);
   height: image-height($img);
@@ -23,6 +26,14 @@
 
 // =============================================================================
 // Image-Replacement Helper
+// =============================================================================
+// A image-replacement mixin wich should be used with the .ir rule inside
+// _generic/_helper.scss - You should also set a display mode for the rule
+// e.g.:
+// .site-logo {
+//   display: block;
+//   @include image-replacement('logo.png');
+// }
 // =============================================================================
 @mixin image-replacement($img) {
   @include img-wh('#{$img}');
@@ -68,6 +79,8 @@
 // =============================================================================
 // CSS3 Triangle
 // =============================================================================
+// Create a css arrow as per http://cssarrowplease.com/
+// e.g.:
 // .foo {
 //   @include css-triangle(5px, #fff, bottom);
 // }
@@ -78,31 +91,21 @@
   width: 0;
   height: 0;
   border: solid $triangleSize;
-  @if ($triangleDirection == top) { border-color: $triangleColor transparent transparent transparent; }
+  @if ($triangleDirection == top)    { border-color: $triangleColor transparent transparent transparent; }
   @if ($triangleDirection == bottom) { border-color: transparent transparent $triangleColor transparent; }
-  @if ($triangleDirection == left) { border-color: transparent transparent transparent $triangleColor; }
-  @if ($triangleDirection == right) { border-color: transparent $triangleColor transparent transparent; }
+  @if ($triangleDirection == left)   { border-color: transparent transparent transparent $triangleColor; }
+  @if ($triangleDirection == right)  { border-color: transparent $triangleColor transparent transparent; }
 }
 
 
 // =============================================================================
 // Media Queries
 // =============================================================================
+// A media-query mixin wich holds some usefull presets such as the
+// High DPI media-query wich should be used to retinafy your css backgrounds
+// e.g.:
 // .foo {
-//   float: left;
-//   width: 1000px;
 //   background: image-url('foo.png') center center no-repeat;
-//
-//   @include respondTo(tablet) {
-//     float: none;
-//     width: 600px;
-//   }
-//   @include respondTo(smartphoneLarge) {
-//     width: 480px;
-//   }
-//   @include respondTo(smartphoneSmall) {
-//     width: 280px;
-//   }
 //   @include respondTo(HDPI) {
 //     background-image: image-url('hdpi/foo.png');
 //     @include img-whr('hdpi/foo.png');
@@ -130,8 +133,10 @@
 // =============================================================================
 // Basicly the same as <meta name="viewport" content="width=device-width">
 // but the future proof way.
+// e.g.:
+// @include viewport($width: device-width, $zoom: 1);
 //
-// DOCS: http://dev.w3.org/csswg/css-device-adapt/
+// @link http://dev.w3.org/csswg/css-device-adapt/
 // =============================================================================
 @mixin viewport($width: '', $height: '', $zoom: '', $orientation: '', $user-zoom: '') {
   @-webkit-viewport {
