@@ -22,24 +22,24 @@ h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 h1, .h1 {
-  @include font-size(36, $append-vrythm: true);
+  @include font-size($h1-size, $append-vrythm: true);
 }
 h2, .h2 {
-  @include font-size(30, $append-vrythm: true);
+  @include font-size($h2-size, $append-vrythm: true);
 }
 h3, .h3 {
-  @include font-size(24, $append-vrythm: true);
+  @include font-size($h3-size, $append-vrythm: true);
 }
 h4, .h4 {
-  @include font-size(20, $append-vrythm: true);
+  @include font-size($h4-size, $append-vrythm: true);
 }
 h5, .h5 {
-  @include font-size(16, $append-vrythm: true);
+  @include font-size($h5-size, $append-vrythm: true);
   margin-top: 0;
   margin-bottom: 0;
 }
 h6, .h6 {
-  @include font-size(14, $append-vrythm: true);
+  @include font-size($h6-size, $append-vrythm: true);
   margin-top: 0;
   margin-bottom: 0;
 }
