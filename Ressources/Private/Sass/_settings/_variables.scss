@@ -10,6 +10,14 @@
 
 // =============================================================================
 // Project Settings
+// =============================================================================
+// The template-root path, used to generate the box-sizing.htc path
+$templatePath:          "typo3conf/ext/#{$package_name}/" !default;
+
+// Is this project a responsive one?
+$responsive:            false !default;
+
+// Does this project need support for older browsers e.g. IE7?
 //
 // Support-table for $oldIE: false;
 // Google Chrome
@@ -17,11 +25,10 @@
 // Apple Safari 5+
 // Opera 12+
 // Internet Explorer 8+
-// =============================================================================
-$templatePath:          "typo3conf/ext/#{$package_name}/" !default; // Relative to the html doc - Used for oldIE's boxsizing.htc behavior file
-// $responsive:            false !default;  // If set to 'true' CSS-Viewport-Rules are added
-$oldIE:                 false !default;   // If set to 'false' IE6 & IE7 Hacks will be ignored while compiling
-$direction:             ltr !default;    // set "dir" attribute in HTML to "ltr" (default) or "rtl"
+$oldIE:                 false !default;
+
+// Reading direction of this project
+$direction:             ltr !default;
 
 
 // =============================================================================
