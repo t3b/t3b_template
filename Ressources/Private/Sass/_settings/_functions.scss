@@ -38,7 +38,11 @@
 
 
 // =============================================================================
-// Text direction check - Based on code from suit (@necolas), https://github.com/necolas/suit
+// Text direction check
+// =============================================================================
+// Based on code from the suit main package wich was removed some days after
+// public testing
+// @link https://github.com/necolas/suit
 // =============================================================================
 $direction: ltr !default;
 $start: left !default;
