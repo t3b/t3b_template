@@ -43,7 +43,7 @@ $ Definitions
 dl {
   @extend %margin-bottom;
 }
-@if $oldIE == true {
+@if $oldIE {
   dd {
     /*
      * Addresses margins set differently in IE6/7.

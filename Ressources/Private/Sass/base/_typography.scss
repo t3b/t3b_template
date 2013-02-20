@@ -58,7 +58,7 @@ samp {
    * Corrects font family set oddly in Safari 5 and Chrome.
    */
   font-family: $monoFontFamily;
-  @if $oldIE == true { _font-family: 'courier new', monospace; }
+  @if $oldIE { _font-family: 'courier new', monospace; }
   font-size: 1em;
 }
 pre {
@@ -79,7 +79,7 @@ q {
    */
   quotes: "\201C" "\201D" "\2018" "\2019";
 
-  @if $oldIE == true {
+  @if $oldIE {
     &:before,
     &:after {
       /*

@@ -51,7 +51,7 @@ $ Grid Classes
 /* ========================== Grid widths ======================== */
 @include grid($prefix: 'gi--');
 
-@if ($includeOffsetClasses == true) {
+@if $includeOffsetClasses {
   /* ====================== Grid offset helpers ==================== */
   @include grid($prefix: 'offset-by-', $property: 'margin-#{$start}');
 }

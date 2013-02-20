@@ -30,7 +30,7 @@ img {
   font-style: italic; /* 2 */
   border: 0; /* 3 */
   vertical-align: middle; /* 4 */
-  @if $oldIE == true {
+  @if $oldIE {
     -ms-interpolation-mode: bicubic; /* 5 */
   }
   &[height] { /* 1 */

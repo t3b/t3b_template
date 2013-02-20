@@ -60,13 +60,13 @@ video {
  * 3. Forces vertical scrollbar to prevent jumpy page
  */
 html {
-  @if $oldIE == true { font-size: 100%; /* 1 */ }
+  @if $oldIE { font-size: 100%; /* 1 */ }
   -webkit-text-size-adjust: 100%; /* 2 */
   -ms-text-size-adjust: 100%; /* 2 */
   overflow-y: scroll; /* 3 */
 }
 
-@if $oldIE == true {
+@if $oldIE {
   /*
    * Addresses `font-family` inconsistency between `textarea` and other form
    * elements.
@@ -97,7 +97,7 @@ textarea {
   font-size: 100%; /* 1 */
   margin: 0; /* 2 */
   vertical-align: baseline; /* 3 */
-  @if $oldIE == true {
+  @if $oldIE {
     *vertical-align: middle; /* 3 */
   }
 }
@@ -138,7 +138,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
-  @if $oldIE == true {
+  @if $oldIE {
     *overflow: visible;  /* 4 */
   }
 }
@@ -161,7 +161,7 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
-  @if $oldIE == true {
+  @if $oldIE {
     *height: 13px; /* 3 */
     *width: 13px; /* 3 */
   }

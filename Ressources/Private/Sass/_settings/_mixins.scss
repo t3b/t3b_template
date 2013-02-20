@@ -70,7 +70,7 @@
 @mixin font-size($size, $append-vrythm: false) {
   font-size: $size +px;
   font-size: ($size / 16)*1rem;
-  @if $append-vrythm == true {
+  @if $append-vrythm {
     line-height: ceil($size / $baseLineHeight) * ($baseLineHeight / $size);
   }
 }
@@ -108,41 +108,41 @@
 //
 // @link http://dev.w3.org/csswg/css-device-adapt/
 // =============================================================================
-@mixin viewport($width: '', $height: '', $zoom: '', $orientation: '', $user-zoom: '') {
+@mixin viewport($width: false, $height: false, $zoom: false, $orientation: false, $user-zoom: false) {
   @-webkit-viewport {
-    @if $width       != '' { width: $width; }
-    @if $height      != '' { height: $height; }
-    @if $zoom        != '' { zoom: $zoom; }
-    @if $orientation != '' { orientation: $orientation; }
-    @if $user-zoom   != '' { user-zoom: $user-zoom; }
+    @if $width       { width: $width; }
+    @if $height      { height: $height; }
+    @if $zoom        { zoom: $zoom; }
+    @if $orientation { orientation: $orientation; }
+    @if $user-zoom   { user-zoom: $user-zoom; }
   }
   @-moz-viewport {
-    @if $width       != '' { width: $width; }
-    @if $height      != '' { height: $height; }
-    @if $zoom        != '' { zoom: $zoom; }
-    @if $orientation != '' { orientation: $orientation; }
-    @if $user-zoom   != '' { user-zoom: $user-zoom; }
+    @if $width       { width: $width; }
+    @if $height      { height: $height; }
+    @if $zoom        { zoom: $zoom; }
+    @if $orientation { orientation: $orientation; }
+    @if $user-zoom   { user-zoom: $user-zoom; }
   }
   @-ms-viewport {
-    @if $width       != '' { width: $width; }
-    @if $height      != '' { height: $height; }
-    @if $zoom        != '' { zoom: $zoom; }
-    @if $orientation != '' { orientation: $orientation; }
-    @if $user-zoom   != '' { user-zoom: $user-zoom; }
+    @if $width       { width: $width; }
+    @if $height      { height: $height; }
+    @if $zoom        { zoom: $zoom; }
+    @if $orientation { orientation: $orientation; }
+    @if $user-zoom   { user-zoom: $user-zoom; }
   }
   @-o-viewport {
-    @if $width       != '' { width: $width; }
-    @if $height      != '' { height: $height; }
-    @if $zoom        != '' { zoom: $zoom; }
-    @if $orientation != '' { orientation: $orientation; }
-    @if $user-zoom   != '' { user-zoom: $user-zoom; }
+    @if $width       { width: $width; }
+    @if $height      { height: $height; }
+    @if $zoom        { zoom: $zoom; }
+    @if $orientation { orientation: $orientation; }
+    @if $user-zoom   { user-zoom: $user-zoom; }
   }
   @viewport {
-    @if $width       != '' { width: $width; }
-    @if $height      != '' { height: $height; }
-    @if $zoom        != '' { zoom: $zoom; }
-    @if $orientation != '' { orientation: $orientation; }
-    @if $user-zoom   != '' { user-zoom: $user-zoom; }
+    @if $width       { width: $width; }
+    @if $height      { height: $height; }
+    @if $zoom        { zoom: $zoom; }
+    @if $orientation { orientation: $orientation; }
+    @if $user-zoom   { user-zoom: $user-zoom; }
   }
 }
 

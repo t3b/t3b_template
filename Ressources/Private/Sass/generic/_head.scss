@@ -10,11 +10,11 @@
 
 // Disabled until the WP8 CSS Viewport bug is fixed.
 // http://mattstow.com/responsive-design-in-ie10-on-windows-phone-8.html
-// @if $responsive == true {
+// @if $responsive {
 //   /* =============================================================================
 //   $ CSS Viewport
 //   ================================================================================ */
-//   @include viewport($width: device-width, $zoom: 1, $orientation: '', $user-zoom: '');
+//   @include viewport($width: device-width, $zoom: 1);
 // }
 
 
@@ -24,7 +24,7 @@ $ Border-Box
 ================================================================================ */
 * {
   @include box-sizing(border-box);
-  @if $oldIE == true {
+  @if $oldIE {
     /* Cross browser Border-box
      *
      * Includes boxsizing.htc behavior for IE7 and below

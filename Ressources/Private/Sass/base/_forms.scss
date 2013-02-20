@@ -93,7 +93,7 @@ input[type="submit"] {
 .btn {
   @extend %btn;
   display: inline-block;
-  @if $oldIE == true {
+  @if $oldIE {
     *display: inline;
     *zoom: 1;
   }
@@ -130,7 +130,7 @@ fieldset {
   padding: 0;
 }
 form {
-  @if $oldIE == true {
+  @if $oldIE {
     /*
      * Corrects margin displayed oddly in IE6/7.
      */
@@ -160,7 +160,7 @@ legend {
   border-bottom: 1px $basicBorderStyle $basicBorderColor;
 
   padding: 0;
-  @if $oldIE == true {
+  @if $oldIE {
     /*
      * Corrects text not wrapping in FF3.
      */
