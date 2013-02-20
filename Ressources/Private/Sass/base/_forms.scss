@@ -39,7 +39,6 @@ input[type="week"] {
   color: lighten($baseTextColor, 5%);
 }
 textarea {
-  display: block;
   height: auto; /* Reset height since textareas have the attribute rows="" */
   min-height: ($baseLineHeight *3) +px; /* Set a min-height for textareas of 3 rows */
 
