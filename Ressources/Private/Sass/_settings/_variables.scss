@@ -36,9 +36,6 @@ $direction:             ltr !default;
 // =============================================================================
 // ================================ Widths ================================
 $layoutWidth:           960px !default;  // Used for calculating the grid
-$query-tablet:          800px !default;  // Tablets
-$query-smartphoneLarge: 480px !default;  // Phone - Landscape
-$query-smartphoneSmall: 320px !default;  // Phone - Portrait
 
 // ============================== Grid System =============================
 $totalColumns:          12 !default;     // Number of columns

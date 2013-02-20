@@ -99,36 +99,6 @@
 
 
 // =============================================================================
-// Media Queries
-// =============================================================================
-// A media-query mixin wich holds some usefull presets such as the
-// High DPI media-query wich should be used to retinafy your css backgrounds
-// e.g.:
-// .foo {
-//   background: image-url('foo.png') center center no-repeat;
-//   @include respondTo(HDPI) {
-//     background-image: image-url('hdpi/foo.png');
-//     @include img-whr('hdpi/foo.png');
-//   }
-// }
-// =============================================================================
-@mixin respondTo($media) {
-  @if $media == tablet {
-    @media screen and (min-width:$query-smartphoneLarge +1px) and (max-width:$query-tablet) { @content; }
-  }
-  @if $media == smartphoneLarge {
-    @media screen and (min-width:$query-smartphoneSmall +1px) and (max-width:$query-smartphoneLarge) { @content; }
-  }
-  @if $media == smartphoneSmall {
-    @media screen and (max-width:$query-smartphoneSmall) { @content; }
-  }
-  @if $media == HDPI {
-    @media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) { @content; }
-  }
-}
-
-
-// =============================================================================
 // CSS Viewport rule Mixin
 // =============================================================================
 // Basicly the same as <meta name="viewport" content="width=device-width">
