@@ -11,7 +11,9 @@
 $ High level wrapper and elements
 ================================================================================ */
 body {
-  /* Addresses margins handled incorrectly in IE6/7. */
+  /*
+   * Addresses margins handled incorrectly in IE6/7.
+   */
   margin: 0;
 
   font: $baseFontWeight #{$baseFontSize/16*100}%/$basicSpacing $baseFontFamily;

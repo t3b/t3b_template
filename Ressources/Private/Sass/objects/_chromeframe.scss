@@ -18,7 +18,7 @@ $chromeframeBackground: #faf6e8;
 /* =============================================================================
 $ Chromeframe
 ================================================================================ */
-/*<p>*/.chromeframe {
+.chromeframe {
   display: block;
   height: $chromeframeHeight;
   border-bottom: 1px solid darken($chromeframeBackground, 20%);

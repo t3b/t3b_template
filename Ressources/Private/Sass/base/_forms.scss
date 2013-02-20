@@ -48,7 +48,9 @@ textarea {
 }
 
 input::-webkit-datetime-edit {
-  /* A possible shadow-dom fix for webkit control spacing on input[type=time] */
+  /*
+   * A possible shadow-dom fix for webkit control spacing on input[type=time]
+   */
   margin-top: -.17em;
   margin-bottom: -.17em;
 }
@@ -71,14 +73,19 @@ input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
   margin-bottom: $baseFontSize / 2 +px;
-  padding: 0.5em 0.75em; // Set in em's so we can change the size of the button depending on the font-size
+  /*
+   * Set in em's so we can change the size of the button depending on the font-size
+   */
+  padding: 0.5em 0.75em;
 
   border: 0;
   border-radius: $cd-borderRadius;
   background: $cd-primary;
 
   font-size: .8em;
-  /* Normalize the font-weight accross <input>, <button> and the .btn class */
+  /*
+   * Normalize the font-weight accross <input>, <button> and the .btn class
+   */
   font-weight: normal;
   line-height: 1;
   color: color-adjust($cd-primary, 100%);
@@ -101,7 +108,7 @@ input[type="submit"] {
 .btn--full {
   display: block;
   text-align: center;
-  /**
+  /*
    * The following is so that `.btn--full` works properly on `input`s as well
    * as `a`s.
    */
@@ -115,14 +122,18 @@ input[type="submit"] {
 $ Form elements
 ================================================================================ */
 fieldset {
-  /* Define consistent border, margin, and padding. */
+  /*
+   * Reset border, margin, and padding to define a consistend style accross all browsers
+   */
   border: 0;
   margin: 0;
   padding: 0;
 }
 form {
   @if $oldIE == true {
-    /* Corrects margin displayed oddly in IE6/7. */
+    /*
+     * Corrects margin displayed oddly in IE6/7.
+     */
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
@@ -150,9 +161,13 @@ legend {
 
   padding: 0;
   @if $oldIE == true {
-    /* Corrects text not wrapping in FF3. */
+    /*
+     * Corrects text not wrapping in FF3.
+     */
     white-space: normal;
-    /* Corrects alignment displayed oddly in IE6/7. */
+    /*
+     * Corrects alignment displayed oddly in IE6/7.
+     */
     *margin-left: -7px;
   }
 }

@@ -21,18 +21,24 @@ a {
     color: $linkColorHover;
   }
   &:focus {
-    /* Addresses `outline` inconsistency between Chrome and other browsers. */
+    /*
+     * Addresses `outline` inconsistency between Chrome and other browsers.
+     */
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -1px;
   }
   &:active,
   &:hover {
-    /* Improves readability when focused and also mouse hovered in all browsers. */
+    /*
+     * Improves readability when focused and also mouse hovered in all browsers.
+     */
     outline: 0;
   }
   p & {
-    /* Increasing the Clickable Area of Inline Links inside a paragraph */
+    /*
+     * Increasing the Clickable Area of Inline Links inside a paragraph
+     */
     margin: -.33em;
     padding: .33em;
     position: relative;

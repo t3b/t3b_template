@@ -18,7 +18,9 @@ ul {
 }
 li > ul,
 li > ol {
-	/* Remove vertical spacing from nested lists */
+	/*
+   * Remove vertical spacing from nested lists
+   */
   margin-bottom: 0;
 }
 
@@ -26,9 +28,9 @@ li > ol {
 /* ======================== Reset list ========================= */
 %reset-list,
 .reset-list {
-/*
- * Resets the standard list styles of a <ul> or <ol>
- */
+  /*
+   * Resets the standard list styles of a <ul> or <ol>
+   */
   list-style: none;
   margin-bottom: 0;
   padding-left: 0;
@@ -43,7 +45,9 @@ dl {
 }
 @if $oldIE == true {
   dd {
-    /* Addresses margins set differently in IE6/7. */
+    /*
+     * Addresses margins set differently in IE6/7.
+     */
     margin: 0 0 0 40px;
   }
 }

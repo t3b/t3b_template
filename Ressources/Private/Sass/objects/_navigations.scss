@@ -30,14 +30,18 @@ $ Navigations
 }
 
 /* ======================= Stacked Navigation ======================= */
-/* Throws the list into vertical mode - used for DropDowns etc. */
+/*
+ * Throws the list into vertical mode - used for DropDowns etc.
+ */
 .nav--stacked li {
   display: list-item;
 }
 
 /* ========================= Fit Navigation ========================= */
-/* Force a nav to occupy 100% of the available width of its parent. Extends
- * Thanks to @pimpl for this idea! */
+/*
+ * Force a nav to occupy 100% of the available width of its parent.
+ * Thanks to @pimpl for this idea!
+ */
 .nav--fit {
   display: table;
   width: 100%;
@@ -47,14 +51,14 @@ $ Navigations
 }
 
 /* ======================== Main Navigation ========================= */
-/*.nav*/.site-nav {
+.site-nav {
   li { }
   a { }
   .active a { }
 }
 
 /* ======================== Footer Navigation ======================== */
-/*.nav*/.footer-nav {
+.footer-nav {
   li { }
   a { }
   .active a { }
