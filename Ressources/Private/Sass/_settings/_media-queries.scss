@@ -22,7 +22,7 @@ $units: 1px !default; // default units for 'screen' mixins - it must include a d
 // @include min-screen(width) {}              // shortcut for @media screen and (min-width ...)
 // @include max-screen(width) {}              // shortcut for @media screen and (max-width ...)
 // @include screen(min-width, max-width) {}   // shortcut for @media screen and (min-width ...) and (max-width ...)
-// @include retina {}                         // devices with retina
+// @include hdpi {}                           // devices with high-density screens
 
 
 // =============================================================================
