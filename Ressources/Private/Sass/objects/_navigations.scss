@@ -41,14 +41,8 @@ $ Navigations
 .nav--fit {
   display: table;
   width: 100%;
-
-  @if $oldIE == true {
-    li { display: table-cell; }
-    li li { display: inline-block; }
-  } @else {
-    > li {
-      display: table-cell;
-    }
+  > li {
+    display: table-cell;
   }
 }
 
