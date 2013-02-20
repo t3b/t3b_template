@@ -37,7 +37,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'cms' => '',
 			'extbase' => '',
 			'fluid' => '',
-			'nk_config' => '',
+			't3b_config' => '',
 			'gridelements' => '',
 			'dam_pages' => '1.0.1'
 		),
