@@ -80,7 +80,7 @@ input[type="submit"] {
 
   border: 0;
   border-radius: $cd-borderRadius;
-  background: $cd-primary;
+  background: $buttonBackground;
 
   font-size: .8em;
   /*
@@ -88,8 +88,9 @@ input[type="submit"] {
    */
   font-weight: normal;
   line-height: 1;
-  color: color-adjust($cd-primary, 100%);
+  color: color-adjust($buttonColor, 100%);
 }
+
 
 
 /* =============================================================================

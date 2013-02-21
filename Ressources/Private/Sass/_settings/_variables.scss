@@ -9,7 +9,7 @@
 
 
 // =============================================================================
-// Project Settings
+// Project settings
 // =============================================================================
 // The template-root path, used to generate the box-sizing.htc path
 $templatePath:          "typo3conf/ext/#{$package_name}/" !default;
@@ -94,7 +94,7 @@ $h6-size:               14 !default;
 
 
 // =============================================================================
-// Corporate Design
+// Corporate design
 // =============================================================================
 // ======================== Coporate Design colors ========================
 $cd-primary:            #0097d7 !default;
@@ -110,11 +110,15 @@ $cd-borderRadius:       1px !default;
 
 
 // =============================================================================
-// Colors
+// Design Colors amd other style related variables
 // =============================================================================
 // ================================= Links ================================
 $linkColor:             lighten($cd-primary, 10%) !default;
 $linkColorHover:        $cd-primary !default;
+
+// ================================ Buttons ===============================
+$buttonBackground:      $cd-primary !default;
+$buttonColor:           color-adjust($cd-primary, 100%) !default;
 
 // ================================ Borders ===============================
 $basicBorderColor:      color-adjust($contentBackground, 20%) !default;
