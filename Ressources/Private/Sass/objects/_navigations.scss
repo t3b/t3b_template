@@ -9,7 +9,7 @@
 
 
 /* =============================================================================
-$ Navigations
+$ Navigation Object
 ================================================================================
  * When used on an `ol` or `ul` wrapper, this class throws the list into horizontal mode
  * e.g.:
@@ -29,16 +29,14 @@ $ Navigations
   }
 }
 
-/* ======================= Stacked Navigation ======================= */
-/*
+/* ======================= Stacked Navigation =======================
  * Throws the list into vertical mode - used for DropDowns etc.
  */
 .nav--stacked li {
   display: list-item;
 }
 
-/* ========================= Fit Navigation ========================= */
-/*
+/* ========================= Fit Navigation =========================
  * Force a nav to occupy 100% of the available width of its parent.
  * Thanks to @pimpl for this idea!
  */
