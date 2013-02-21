@@ -44,7 +44,8 @@ $package_name: t3b_frontend;
 // =============================================================================
 // Components
 // =============================================================================
-@import "objects/_navigations";       // Navigations
+@import "objects/_buttons";           // Button object and its modifiers
+@import "objects/_navigations";       // Navigation object and its modifiers
 @import "objects/_t3-general";        // TYPO3 element styling
 @import "objects/_chromeframe";       // Google's Chromeframe styling
 

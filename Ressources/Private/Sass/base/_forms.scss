@@ -90,32 +90,6 @@ input[type="submit"] {
   line-height: 1;
   color: color-adjust($cd-primary, 100%);
 }
-.btn {
-  @extend %btn;
-  display: inline-block;
-  @if $oldIE {
-    *display: inline;
-    *zoom: 1;
-  }
-  & {
-    color: color-adjust($cd-primary, 100%);
-    &:hover {
-      text-decoration: none;
-      color: color-adjust($cd-primary, 100%);
-    }
-  }
-}
-.btn--full {
-  display: block;
-  text-align: center;
-  /*
-   * The following is so that `.btn--full` works properly on `input`s as well
-   * as `a`s.
-   */
-  padding-right: 0;
-  padding-left: 0;
-  width: 100%;
-}
 
 
 /* =============================================================================
