@@ -11,26 +11,24 @@
 /* =============================================================================
 $ Navigation Object
 ================================================================================
- * When used on an `ol` or `ul` wrapper, this class throws the list into horizontal mode
+ * Throws a list into horizontal mode
  * e.g.:
  *
   <ul class="nav">
-      <li><a href=#>Home</a></li>
-      <li><a href=#>About</a></li>
-      <li><a href=#>Portfolio</a></li>
-      <li><a href=#>Contact</a></li>
+      <li><a href="">Home</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Products</a></li>
+      <li><a href="">Contact</a></li>
   </ul>
 ================================================================================ */
 .nav {
   @extend %reset-list;
   li { display: inline-block; }
-  a {
-    display: block;
-  }
+  a { display: block; }
 }
 
 /* ======================= Stacked Navigation =======================
- * Throws the list into vertical mode - used for DropDowns etc.
+ * Throws a list into vertical mode
  */
 .nav--stacked li {
   display: list-item;
