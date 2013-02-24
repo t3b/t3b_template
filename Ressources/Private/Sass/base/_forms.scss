@@ -48,7 +48,7 @@ textarea {
 }
 
 input::-webkit-datetime-edit {
-  /*
+  /**
    * A possible shadow-dom fix for webkit control spacing on input[type=time]
    */
   margin-top: -.17em;
@@ -73,7 +73,7 @@ input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
   margin-bottom: $baseFontSize / 2 +px;
-  /*
+  /**
    * Set in em's so we can change the size of the button depending on the font-size
    */
   padding: 0.5em 0.75em;
@@ -83,7 +83,7 @@ input[type="submit"] {
   background: $buttonBackground;
 
   font-size: .8em;
-  /*
+  /**
    * Normalize the font-weight accross <input>, <button> and the .btn class
    */
   font-weight: normal;
@@ -97,7 +97,7 @@ input[type="submit"] {
 $ Form elements
 ================================================================================ */
 fieldset {
-  /*
+  /**
    * Reset border, margin, and padding to define a consistend style accross all browsers
    */
   border: 0;
@@ -106,7 +106,7 @@ fieldset {
 }
 form {
   @if $oldIE {
-    /*
+    /**
      * Corrects margin displayed oddly in IE6/7.
      */
     margin-top: 0;
@@ -136,11 +136,11 @@ legend {
 
   padding: 0;
   @if $oldIE {
-    /*
+    /**
      * Corrects text not wrapping in FF3.
      */
     white-space: normal;
-    /*
+    /**
      * Corrects alignment displayed oddly in IE6/7.
      */
     *margin-left: -7px;

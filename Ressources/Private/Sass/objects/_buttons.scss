@@ -36,9 +36,9 @@ $ Button Object
 .btn--full {
   display: block;
   text-align: center;
-  /*
-   * The following is so that `.btn--full` works properly on `input`s as well
-   * as `a`s.
+  /**
+   * The following is so that this class works properly on inputs as well
+   * as anchor tags.
    */
   padding-right: 0;
   padding-left: 0;

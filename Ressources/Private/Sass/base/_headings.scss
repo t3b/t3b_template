@@ -15,7 +15,7 @@ h4, h5, h6 {
   font-family: $headingsFontFamily;
   font-weight: $headingsFontWeight;
   color: $headingsColor;
-  /*
+  /**
    * Optimized kerning for large font sizes
    * use this only on large font-sizes (f.e. headings) to avoid performance issues
    */

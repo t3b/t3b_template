@@ -25,7 +25,8 @@ $ Border-Box
 * {
   @include box-sizing(border-box);
   @if $oldIE {
-    /* Cross browser Border-box
+    /**
+     * Cross browser Border-box
      *
      * Includes boxsizing.htc behavior for IE7 and below
      * The URL has to be relative to the HTML Doc

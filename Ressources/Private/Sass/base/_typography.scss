@@ -54,7 +54,7 @@ code,
 kbd,
 pre,
 samp {
-  /*
+  /**
    * Corrects font family set oddly in Safari 5 and Chrome.
    */
   font-family: $monoFontFamily;
@@ -62,7 +62,7 @@ samp {
   font-size: 1em;
 }
 pre {
-  /*
+  /**
    * Improves readability of pre-formatted text in all browsers.
    */
   white-space: pre-wrap;
@@ -74,7 +74,7 @@ pre {
 $ Quotes
 ================================================================================ */
 q {
-  /*
+  /**
    * Sets consistent quote types.
    */
   quotes: "\201C" "\201D" "\2018" "\2019";
@@ -100,7 +100,7 @@ blockquote {
 $ Seperators
 ================================================================================ */
 hr {
-  /*
+  /**
   * Address differences between Firefox and other browsers.
   */
   -moz-box-sizing: content-box;
@@ -139,7 +139,7 @@ $ Typographic Helper Classes
 /* ====================== CSS3 Word-breaker ====================== */
 %text-break,
 .text-break {
-  /*
+  /**
    * Break strings when their length exceeds the width of their container.
    */
   word-break: break-all;

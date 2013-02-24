@@ -38,7 +38,7 @@ img {
   }
 }
 figure {
-  /*
+  /**
    * Addresses margin not present in IE6/7/8/9, S5, O11.
    */
   margin: 0;
@@ -67,11 +67,11 @@ audio {
   min-width: 65%;
 
   &:not([controls]) {
-    /*
+    /**
      * Prevents modern browsers from displaying `audio` without controls.
      */
     display: none;
-    /*
+    /**
      * Remove excess height in iOS5 devices.
      */
     height: 0;
@@ -84,7 +84,7 @@ $ SVG
 ================================================================================ */
 svg {
   &:not(:root) {
-    /*
+    /**
      * Corrects overflow displayed oddly in IE9.
      */
     overflow: hidden;
