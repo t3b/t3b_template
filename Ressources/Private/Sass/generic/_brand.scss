@@ -1,0 +1,28 @@
+/*!
+ * Gernerated classes for brand related styling
+ *
+ * @package #{$package_name()}
+ * @path generic/_brand.scss
+ * @author Tyll Weiß <t.weiss@exinit.de>
+ */
+
+
+
+/* =============================================================================
+$ Brand styles & helper classes
+================================================================================ */
+.brand {
+  font-family: $brandFontFamily;
+  color: $brandColor;
+}
+.brand-color { color: $brandColor; }
+.brand-face { font-family: $brandFontFamily; }
+
+.brand-logo {
+  // If you want to use the image-replacement technique,
+  // replace 'false' with the image-name of your brand logo
+  @include image-replacement(false, $display-mode: inline-block);
+
+  .site-header & { }
+  .site-footer & { }
+}

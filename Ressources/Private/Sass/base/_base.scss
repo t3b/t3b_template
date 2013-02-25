@@ -40,15 +40,3 @@ body {
   @extend %non-print; // Will be hidden on print
   .wrapper { }
 }
-
-
-/* =============================================================================
-$ Logos
-================================================================================ */
-.site-logo {
-  display: block;
-  @include image-replacement('logo.png');
-
-  .site-header & { }
-  .site-footer & { }
-}
