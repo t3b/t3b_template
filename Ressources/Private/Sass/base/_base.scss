@@ -16,7 +16,7 @@ body {
    */
   margin: 0;
 
-  font: $baseFontWeight #{$baseFontSize/16*100}%/$basicSpacing $baseFontFamily;
+  font: $baseFontWeight #{$baseFontSize/16*100}%/#{$baseLineHeight/$baseFontSize} $baseFontFamily;
   text-align: $start;
   color: $baseTextColor;
   background: $bodyBackground;
