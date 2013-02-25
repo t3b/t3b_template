@@ -19,10 +19,9 @@ $ Button Object
 .btn {
   @extend %btn;
   display: inline-block;
-  color: $buttonColor;
+  &,
   &:hover {
     text-decoration: none;
-    color: $buttonColor;
   }
   @if $oldIE {
     *display: inline;
