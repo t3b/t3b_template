@@ -30,8 +30,8 @@ abbr[title] { /* 2 */
   cursor: help;
 }
 mark { /* 3 */
-  background: $cd-primary;
-  color: color-adjust($cd-primary, 100%);
+  background: $brandColor;
+  color: color-adjust($brandColor, 100%);
 }
 dfn {
   font-style: italic; /* 4 */
@@ -121,8 +121,8 @@ $ Text-Selection
 ================================================================================ */
 ::-moz-selection,
 ::selection {
-  background: $cd-primary;
-  color: color-adjust($cd-primary, 100%);
+  background: $brandColor;
+  color: color-adjust($brandColor, 100%);
   text-shadow: none;
 }
 

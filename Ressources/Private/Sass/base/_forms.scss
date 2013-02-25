@@ -32,7 +32,7 @@ input[type="week"] {
 
   background: $contentBackground;
   border: 1px solid $basicBorderColor;
-  border-radius: $cd-borderRadius;
+  border-radius: $brandBorderRadius;
   @include box-shadow(inset 0 1px 1px rgba(#000, 0.075));
 
   @include font-size(14);
@@ -79,7 +79,7 @@ input[type="submit"] {
   padding: 0.5em 0.75em;
 
   border: 0;
-  border-radius: $cd-borderRadius;
+  border-radius: $brandBorderRadius;
   background: $buttonBackground;
 
   font-size: .8em;

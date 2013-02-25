@@ -94,24 +94,22 @@ $h6-size:               14 !default;
 
 
 // =============================================================================
-// Corporate design
+// Brand related variables
 // =============================================================================
-// ======================== Coporate Design colors ========================
-$cd-primary:            #0097d7 !default;
-
-// ============================= Other stuff ==============================
-$cd-borderRadius:       1px !default;
+$brandColor:            #0097d7 !default;
+$brandFontFamily:       $sansFontFamily !default;
+$brandBorderRadius:     1px !default;
 
 
 // =============================================================================
 // Design Colors amd other style related variables
 // =============================================================================
 // ================================= Links ================================
-$linkColor:             $cd-primary !default;
+$linkColor:             $brandColor !default;
 
 // ================================ Buttons ===============================
-$buttonBackground:      $cd-primary !default;
-$buttonColor:           color-adjust($cd-primary, 100%) !default;
+$buttonBackground:      $brandColor !default;
+$buttonColor:           color-adjust($brandColor, 100%) !default;
 
 // ================================ Borders ===============================
 $basicBorderColor:      color-adjust($contentBackground, 20%) !default;
