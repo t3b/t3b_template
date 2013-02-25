@@ -67,7 +67,7 @@
 // default property is set to 'font-size'
 // e.g.:
 // .lead {
-//   @include rem($value: 18, $property: font-size);
+//   @include rem($property: font-size, $value: 18);
 // }
 // =============================================================================
 @mixin rem($value, $property: font-size) {
