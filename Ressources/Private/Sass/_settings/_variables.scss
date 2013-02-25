@@ -98,12 +98,6 @@ $h6-size:               14 !default;
 // =============================================================================
 // ======================== Coporate Design colors ========================
 $cd-primary:            #0097d7 !default;
-$cd-primaryLight:       lighten($cd-primary, 20%) !default;
-$cd-primaryDark:        darken($cd-primary, 30%) !default;
-
-$cd-secondary:          #38464b !default;
-$cd-secondaryLight:     lighten($cd-secondary, 20%) !default;
-$cd-secondaryDark:      darken($cd-secondary, 30%) !default;
 
 // ============================= Other stuff ==============================
 $cd-borderRadius:       1px !default;
