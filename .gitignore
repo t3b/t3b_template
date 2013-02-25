@@ -6,6 +6,3 @@ Configuration/*
 
 # Unfinished extension documentation
 Docs/*
-
-# Experimental .kit support
-*.kit
