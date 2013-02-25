@@ -41,7 +41,13 @@ $ Navigation Object
 .nav--fit {
   display: table;
   width: 100%;
-  > li {
-    display: table-cell;
+
+  @if $oldIE == true {
+    li { display: table-cell; }
+    li li { display: inline-block; }
+  } @else {
+    > li {
+      display: table-cell;
+    }
   }
 }
