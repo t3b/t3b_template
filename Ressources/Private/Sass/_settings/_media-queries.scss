@@ -1,0 +1,57 @@
+//
+// Media-Query SASS Mixins
+//
+// @package #{$package_name()}
+// @path settings/_media-queries.scss
+// @author Rafal Bromirski <http://paranoida.com/>, Tyll Weiß <t.weiss@exinit.de>
+// @license MIT <http://opensource.org/licenses/MIT>
+// @link https://github.com/paranoida/sass-mediaqueries
+// @version 2.1 (developed on 16/02/2013)
+//
+
+
+// =============================================================================
+// Variables
+// =============================================================================
+$units: 1px !default; // default units for 'screen' mixins - it must include a digit!
+
+
+// =============================================================================
+// Aviable mixins
+// =============================================================================
+// @include min-screen(width) {}              // shortcut for @media screen and (min-width ...)
+// @include max-screen(width) {}              // shortcut for @media screen and (max-width ...)
+// @include screen(min-width, max-width) {}   // shortcut for @media screen and (min-width ...) and (max-width ...)
+// @include hdpi {}                           // devices with high-density screens
+
+
+// =============================================================================
+// Screen
+// =============================================================================
+@mixin screen($res-min, $res-max) {
+  @media screen and ( min-width: if(unitless($res-min), $res-min*$units, $res-min) ) and ( max-width: if(unitless($res-max), $res-max*$units, $res-max) ) {
+    @content;
+  }
+}
+
+@mixin max-screen($res) {
+  @media screen and ( max-width: if(unitless($res), $res*$units, $res) ) {
+    @content;
+  }
+}
+
+@mixin min-screen($res) {
+  @media screen and ( min-width: if(unitless($res), $res*$units, $res) ) {
+    @content;
+  }
+}
+
+
+// =============================================================================
+// HDPI
+// =============================================================================
+@mixin hdpi {
+  @media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    @content;
+  }
+}

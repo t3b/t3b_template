@@ -1,5 +1,5 @@
 /*!
- * Navigation abstraction object
+ * Navigation abstraction
  *
  * @package #{$package_name()}
  * @path objects/_navigations.scss
@@ -9,58 +9,52 @@
 
 
 /* =============================================================================
-$ Navigations
+$ Navigation Object
 ================================================================================
- * When used on an `ol` or `ul` wrapper, this class throws the list into horizontal mode
+ * Throws a list into horizontal mode
  * e.g.:
  *
   <ul class="nav">
-      <li><a href=#>Home</a></li>
-      <li><a href=#>About</a></li>
-      <li><a href=#>Portfolio</a></li>
-      <li><a href=#>Contact</a></li>
+      <li><a href="">Home</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Products</a></li>
+      <li><a href="">Contact</a></li>
   </ul>
 ================================================================================ */
 .nav {
   @extend %reset-list;
   li { display: inline-block; }
-  a {
-    display: block;
-  }
+  a { display: block; }
 }
 
-/* ======================= Stacked Navigation ======================= */
-/* Throws the list into vertical mode - used for DropDowns etc. */
+/* ======================= Stacked Navigation =======================
+ * Throws a list into vertical mode
+ */
 .nav--stacked li {
   display: list-item;
 }
 
-/* ========================= Fit Navigation ========================= */
-/* Force a nav to occupy 100% of the available width of its parent. Extends
- * Thanks to @pimpl for this idea! */
+/* ========================= Fit Navigation =========================
+ * Force a nav to occupy 100% of the available width of its parent.
+ * Thanks to @pimpl for this idea!
+ */
 .nav--fit {
   display: table;
   width: 100%;
-
-  @if $oldIE == true {
-    li { display: table-cell; }
-    li li { display: inline-block; }
-  } @else {
-    > li {
-      display: table-cell;
-    }
+  > li {
+    display: table-cell;
   }
 }
 
 /* ======================== Main Navigation ========================= */
-/*.nav*/.site-nav {
+.site-nav {
   li { }
   a { }
   .active a { }
 }
 
 /* ======================== Footer Navigation ======================== */
-/*.nav*/.footer-nav {
+.footer-nav {
   li { }
   a { }
   .active a { }

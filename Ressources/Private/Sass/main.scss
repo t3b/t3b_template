@@ -7,7 +7,6 @@ $package_name: t3b_frontend;
  * @package #{$package_name()}
  * @path /main.scss
  * @author Tyll Weiß <t.weiss@exinit.de>
- * @version 1.1.8
 
 
  */
@@ -26,6 +25,7 @@ $package_name: t3b_frontend;
 @import "generic/_head";              // Declarations wich should be put at the top
 @import "generic/_normalize";         // Normalize elements accross all browsers
 @import "generic/_grid";              // Grid
+@import "generic/_t3-general";        // TYPO3 element styling
 
 
 // =============================================================================
@@ -44,9 +44,8 @@ $package_name: t3b_frontend;
 // =============================================================================
 // Components
 // =============================================================================
-@import "objects/_navigations";       // Navigations
-@import "objects/_t3-general";        // TYPO3 element styling
-@import "objects/_chromeframe";       // Google's Chromeframe styling
+@import "objects/_buttons";           // Button object and its modifiers
+@import "objects/_navigations";       // Navigation object and its modifiers
 
 
 // =============================================================================

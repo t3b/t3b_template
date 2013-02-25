@@ -11,6 +11,9 @@
 // =============================================================================
 // Image-Dimensions
 // =============================================================================
+// Get the dimensions of an image inside the 'images_dir' as specified in the
+// config.rb file
+// =============================================================================
 @mixin img-wh($img) {
   width: image-width($img);
   height: image-height($img);
@@ -24,6 +27,14 @@
 // =============================================================================
 // Image-Replacement Helper
 // =============================================================================
+// A image-replacement mixin wich should be used with the .ir rule inside
+// _generic/_helper.scss - You should also set a display mode for the rule
+// e.g.:
+// .site-logo {
+//   display: block;
+//   @include image-replacement('logo.png');
+// }
+// =============================================================================
 @mixin image-replacement($img) {
   @include img-wh('#{$img}');
   background-image: image-url('#{$img}');
@@ -35,21 +46,15 @@
 // =============================================================================
 // Generates gird classes, with a bunch of options like setting a prefix or the property
 // e.g.:
-// @include grid(1 2 3 4 5 6 8 10 12, $prefix: 'm--', $property: 'height');
+// @include grid(1 2 3 4 5 6 8 10 12, $prefix: 'm--');
 // =============================================================================
-@mixin grid($stack: $gridStack, $prefix: '', $property: 'width', $type: '') {
+@mixin grid($stack: $gridStack, $prefix: '', $property: 'width') {
   // Starts the loop
   @each $i in $stack {
     // Set the class-prefix and convert the passed number to their word equivalents
     .#{$prefix}#{convert-number-to-word($i)} {
-      // Depending on the $type it will adjust the calculation
-      @if $type == 'offset' {
-        // Calculation fix for all offset-by classes
-        #{$property}: offsetCalc($i, $totalColumns) + ($columnGutter);
-      } @else { // Standard case
-        // Sets the property and passes the calculation via the gridCalc function in _functions.scss
-        #{$property}: percentage($i / $totalColumns);
-      }
+      // Sets the property and passes the calculation via the gridCalc function in _functions.scss
+      #{$property}: percentage($i / $totalColumns);
     }
   }
 }
@@ -65,7 +70,7 @@
 @mixin font-size($size, $append-vrythm: false) {
   font-size: $size +px;
   font-size: ($size / 16)*1rem;
-  @if $append-vrythm == true {
+  @if $append-vrythm {
     line-height: ceil($size / $baseLineHeight) * ($baseLineHeight / $size);
   }
 }
@@ -74,6 +79,8 @@
 // =============================================================================
 // CSS3 Triangle
 // =============================================================================
+// Create a css arrow as per http://cssarrowplease.com/
+// e.g.:
 // .foo {
 //   @include css-triangle(5px, #fff, bottom);
 // }
@@ -84,50 +91,10 @@
   width: 0;
   height: 0;
   border: solid $triangleSize;
-  @if ($triangleDirection == top) { border-color: $triangleColor transparent transparent transparent; }
+  @if ($triangleDirection == top)    { border-color: $triangleColor transparent transparent transparent; }
   @if ($triangleDirection == bottom) { border-color: transparent transparent $triangleColor transparent; }
-  @if ($triangleDirection == left) { border-color: transparent transparent transparent $triangleColor; }
-  @if ($triangleDirection == right) { border-color: transparent $triangleColor transparent transparent; }
-}
-
-
-// =============================================================================
-// Media Queries
-// =============================================================================
-// .foo {
-//   float: left;
-//   width: 1000px;
-//   background: image-url('foo.png') center center no-repeat;
-//
-//   @include respondTo(tablet) {
-//     float: none;
-//     width: 600px;
-//   }
-//   @include respondTo(smartphoneLarge) {
-//     width: 480px;
-//   }
-//   @include respondTo(smartphoneSmall) {
-//     width: 280px;
-//   }
-//   @include respondTo(HDPI) {
-//     background-image: image-url('hdpi/foo.png');
-//     @include img-whr('hdpi/foo.png');
-//   }
-// }
-// =============================================================================
-@mixin respondTo($media) {
-  @if $media == tablet {
-    @media screen and (min-width:$query-smartphoneLarge +1px) and (max-width:$query-tablet) { @content; }
-  }
-  @if $media == smartphoneLarge {
-    @media screen and (min-width:$query-smartphoneSmall +1px) and (max-width:$query-smartphoneLarge) { @content; }
-  }
-  @if $media == smartphoneSmall {
-    @media screen and (max-width:$query-smartphoneSmall) { @content; }
-  }
-  @if $media == HDPI {
-    @media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) { @content; }
-  }
+  @if ($triangleDirection == left)   { border-color: transparent transparent transparent $triangleColor; }
+  @if ($triangleDirection == right)  { border-color: transparent $triangleColor transparent transparent; }
 }
 
 
@@ -136,44 +103,46 @@
 // =============================================================================
 // Basicly the same as <meta name="viewport" content="width=device-width">
 // but the future proof way.
+// e.g.:
+// @include viewport($width: device-width, $zoom: 1);
 //
-// DOCS: http://dev.w3.org/csswg/css-device-adapt/
+// @link http://dev.w3.org/csswg/css-device-adapt/
 // =============================================================================
-@mixin viewport($width: '', $height: '', $zoom: '', $orientation: '', $user-zoom: '') {
+@mixin viewport($width: false, $height: false, $zoom: false, $orientation: false, $user-zoom: false) {
   @-webkit-viewport {
-    @if $width != '' { width: $width; }
-    @if $height != '' { height: $height; }
-    @if $zoom != '' { zoom: $zoom; }
-    @if $orientation != '' { orientation: $orientation; }
-    @if $user-zoom != '' { user-zoom: $user-zoom; }
+    @if $width       { width: $width; }
+    @if $height      { height: $height; }
+    @if $zoom        { zoom: $zoom; }
+    @if $orientation { orientation: $orientation; }
+    @if $user-zoom   { user-zoom: $user-zoom; }
   }
   @-moz-viewport {
-    @if $width != '' { width: $width; }
-    @if $height != '' { height: $height; }
-    @if $zoom != '' { zoom: $zoom; }
-    @if $orientation != '' { orientation: $orientation; }
-    @if $user-zoom != '' { user-zoom: $user-zoom; }
+    @if $width       { width: $width; }
+    @if $height      { height: $height; }
+    @if $zoom        { zoom: $zoom; }
+    @if $orientation { orientation: $orientation; }
+    @if $user-zoom   { user-zoom: $user-zoom; }
   }
   @-ms-viewport {
-    @if $width != '' { width: $width; }
-    @if $height != '' { height: $height; }
-    @if $zoom != '' { zoom: $zoom; }
-    @if $orientation != '' { orientation: $orientation; }
-    @if $user-zoom != '' { user-zoom: $user-zoom; }
+    @if $width       { width: $width; }
+    @if $height      { height: $height; }
+    @if $zoom        { zoom: $zoom; }
+    @if $orientation { orientation: $orientation; }
+    @if $user-zoom   { user-zoom: $user-zoom; }
   }
   @-o-viewport {
-    @if $width != '' { width: $width; }
-    @if $height != '' { height: $height; }
-    @if $zoom != '' { zoom: $zoom; }
-    @if $orientation != '' { orientation: $orientation; }
-    @if $user-zoom != '' { user-zoom: $user-zoom; }
+    @if $width       { width: $width; }
+    @if $height      { height: $height; }
+    @if $zoom        { zoom: $zoom; }
+    @if $orientation { orientation: $orientation; }
+    @if $user-zoom   { user-zoom: $user-zoom; }
   }
   @viewport {
-    @if $width != '' { width: $width; }
-    @if $height != '' { height: $height; }
-    @if $zoom != '' { zoom: $zoom; }
-    @if $orientation != '' { orientation: $orientation; }
-    @if $user-zoom != '' { user-zoom: $user-zoom; }
+    @if $width       { width: $width; }
+    @if $height      { height: $height; }
+    @if $zoom        { zoom: $zoom; }
+    @if $orientation { orientation: $orientation; }
+    @if $user-zoom   { user-zoom: $user-zoom; }
   }
 }
 

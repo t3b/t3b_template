@@ -26,7 +26,7 @@ th, td { vertical-align: top; }
 /* =============================================================================
 $ Contenttable-1
 ================================================================================
- * Extends the basic border styles
+ * Extends the basic table styles
  * Bordered table with an odd & even changing background-color e.g.
  *
   <table class="contenttable-1">
@@ -56,7 +56,7 @@ $ Contenttable-1
     </tbody>
   </table>
 ================================================================================ */
-/*table*/.contenttable-1 {
+.contenttable-1 {
   border: 1px solid $basicBorderColor;
   border-collapse: separate;
   td, th {
@@ -75,7 +75,7 @@ $ Contenttable-1
 /* =============================================================================
 $ Contenttable-2
 ================================================================================
- * Extends the basic border styles
+ * Extends the basic table styles
  * Clean table with borders below each row e.g.
  *
   <table class="contenttable-2">
@@ -105,7 +105,7 @@ $ Contenttable-2
     </tbody>
   </table>
 ================================================================================ */
-/*table*/.contenttable-2 {
+.contenttable-2 {
   td, th {
     border-bottom: 1px solid $basicBorderColor;
     padding: 0.5em;
@@ -117,7 +117,7 @@ $ Contenttable-2
 /* =============================================================================
 $ Contenttable-3
 ================================================================================
- * Extends the basic border styles
+ * Extends the basic table styles
  * Clean condensed table with borders below each row e.g.
  *
   <table class="contenttable-3">
@@ -147,7 +147,7 @@ $ Contenttable-3
     </tbody>
   </table>
 ================================================================================ */
-/*table*/.contenttable-3 {
+.contenttable-3 {
   td, th {
     border-bottom: 1px solid $basicBorderColor;
     padding: 0.25em 0.5em 0.25em;

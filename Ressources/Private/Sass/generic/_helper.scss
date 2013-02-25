@@ -8,17 +8,21 @@
  */
 
 
-/* Quick floats */
+/**
+ * Quick floats
+ */
 .fl-r { float: right; }
 .fl-l { float: left; }
 
-/* For image replacement */
+/**
+ * For image replacement
+ */
 .ir,
 .image-replacement {
   background-color: transparent;
   border: 0;
   overflow: hidden;
-  @if $oldIE == true {
+  @if $oldIE {
     /* IE 6/7 fallback */
     *text-indent: -9999px;
   }
@@ -30,13 +34,17 @@
   }
 }
 
-/* Hide from both screenreaders and browsers: h5bp.com/u */
+/**
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+/**
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -48,7 +56,9 @@
   width: 1px;
 }
 
-/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+/**
+ * Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p
+ */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -59,13 +69,17 @@
   width: auto;
 }
 
-/* Hide visually and from screenreaders, but maintain layout */
+/**
+ * Hide visually and from screenreaders, but maintain layout
+ */
 .invisible { visibility: hidden; }
 
-/* Contain floats: h5bp.com/q */
+/**
+ * Contain floats: h5bp.com/q
+ */
 .cf,
 .clearfix {
-  @if $oldIE == true {
+  @if $oldIE {
     *zoom:1;
   }
   &:before, &:after { content: ""; display: table; }

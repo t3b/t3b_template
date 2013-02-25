@@ -28,7 +28,7 @@ input[type="week"] {
   display: inline-block;
   height: $baseLineHeight +px;
   padding: 0 0.4em;
-  margin-bottom: $baseLineHeight / 2 +px;
+  margin-bottom: $halfSpacing +em;
 
   background: $contentBackground;
   border: 1px solid $basicBorderColor;
@@ -39,9 +39,8 @@ input[type="week"] {
   color: lighten($baseTextColor, 5%);
 }
 textarea {
-  display: block;
   height: auto; /* Reset height since textareas have the attribute rows="" */
-  min-height: 70px;
+  min-height: ($baseLineHeight *3) +px; /* Set a min-height for textareas of 3 rows */
 
   resize: vertical; /* So users cannot expand the textarea over its boundaries */
   overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9. */
@@ -49,7 +48,9 @@ textarea {
 }
 
 input::-webkit-datetime-edit {
-  /* A possible shadow-dom fix for webkit control spacing on input[type=time] */
+  /**
+   * A possible shadow-dom fix for webkit control spacing on input[type=time]
+   */
   margin-top: -.17em;
   margin-bottom: -.17em;
 }
@@ -72,58 +73,42 @@ input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
   margin-bottom: $baseFontSize / 2 +px;
-  padding: 0.5em 0.75em; // Set in em's so we can change the size of the button depending on the font-size
+  /**
+   * Set in em's so we can change the size of the button depending on the font-size
+   */
+  padding: 0.5em 0.75em;
 
   border: 0;
   border-radius: $cd-borderRadius;
-  background: $cd-primary;
+  background: $buttonBackground;
 
   font-size: .8em;
-  /* Normalize the font-weight accross <input>, <button> and the .btn class */
+  /**
+   * Normalize the font-weight accross <input>, <button> and the .btn class
+   */
   font-weight: normal;
   line-height: 1;
-  color: color-adjust($cd-primary, 100%);
+  color: color-adjust($buttonColor, 100%);
 }
-.btn {
-  @extend %btn;
-  display: inline-block;
-  @if $oldIE == true {
-    *display: inline;
-    *zoom: 1;
-  }
-  & {
-    color: color-adjust($cd-primary, 100%);
-    &:hover {
-      text-decoration: none;
-      color: color-adjust($cd-primary, 100%);
-    }
-  }
-}
-.btn--full {
-  display: block;
-  text-align: center;
-  /**
-   * The following is so that `.btn--full` works properly on `input`s as well
-   * as `a`s.
-   */
-  padding-right: 0;
-  padding-left: 0;
-  width: 100%;
-}
+
 
 
 /* =============================================================================
 $ Form elements
 ================================================================================ */
 fieldset {
-  /* Define consistent border, margin, and padding. */
+  /**
+   * Reset border, margin, and padding to define a consistend style accross all browsers
+   */
   border: 0;
   margin: 0;
   padding: 0;
 }
 form {
-  @if $oldIE == true {
-    /* Corrects margin displayed oddly in IE6/7. */
+  @if $oldIE {
+    /**
+     * Corrects margin displayed oddly in IE6/7.
+     */
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
@@ -150,10 +135,14 @@ legend {
   border-bottom: 1px $basicBorderStyle $basicBorderColor;
 
   padding: 0;
-  @if $oldIE == true {
-    /* Corrects text not wrapping in FF3. */
+  @if $oldIE {
+    /**
+     * Corrects text not wrapping in FF3.
+     */
     white-space: normal;
-    /* Corrects alignment displayed oddly in IE6/7. */
+    /**
+     * Corrects alignment displayed oddly in IE6/7.
+     */
     *margin-left: -7px;
   }
 }
