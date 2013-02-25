@@ -56,7 +56,7 @@ $ Contenttable-1
     </tbody>
   </table>
 ================================================================================ */
-/*table*/.contenttable-1 {
+.contenttable-1 {
   border: 1px solid $basicBorderColor;
   border-collapse: separate;
   td, th {
@@ -105,7 +105,7 @@ $ Contenttable-2
     </tbody>
   </table>
 ================================================================================ */
-/*table*/.contenttable-2 {
+.contenttable-2 {
   td, th {
     border-bottom: 1px solid $basicBorderColor;
     padding: 0.5em;
@@ -147,7 +147,7 @@ $ Contenttable-3
     </tbody>
   </table>
 ================================================================================ */
-/*table*/.contenttable-3 {
+.contenttable-3 {
   td, th {
     border-bottom: 1px solid $basicBorderColor;
     padding: 0.25em 0.5em 0.25em;
