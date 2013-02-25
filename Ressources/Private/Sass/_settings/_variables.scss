@@ -72,7 +72,7 @@ $baseFontWeight:        $regular !default;
 $baseTextColor:         #3C474B !default;
 
 // =============================== Spacings ===============================
-$basicSpacing:          $baseLineHeight / $baseFontSize !default;
+$basicSpacing:          $baseLineHeight !default;
 $halfSpacing:           $basicSpacing / 2 !default;
 
 

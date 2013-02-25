@@ -28,7 +28,7 @@ input[type="week"] {
   display: inline-block;
   height: $baseLineHeight +px;
   padding: 0 0.4em;
-  margin-bottom: $halfSpacing +em;
+  @include rem($value: $halfSpacing, $property: margin-bottom);
 
   background: $contentBackground;
   border: 1px solid $basicBorderColor;

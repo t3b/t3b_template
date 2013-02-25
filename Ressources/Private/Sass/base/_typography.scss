@@ -156,27 +156,23 @@ ul, dl, menu { margin-top: 0; }
 /* Basic spacing */
 %margin-top,
 .basic_spacing-top {
-  margin-top: $basicSpacing +em;
-  margin-top: $basicSpacing +rem;
+  @include rem($value: $basicSpacing, $property: margin-top);
 }
 /* Half spacing */
 %half-margin-top,
 .half-basic_spacing-top {
-  margin-top: $halfSpacing +em;
-  margin-top: $halfSpacing +rem;
+  @include rem($value: $halfSpacing, $property: margin-top);
 }
 
 /* ====================== Bottom margins ======================= */
 /* Basic spacing */
 %margin-bottom,
 .basic_spacing-bottom {
-  margin-bottom: $basicSpacing +em;
-  margin-bottom: $basicSpacing +rem;
+  @include rem($value: $basicSpacing, $property: margin-bottom);
 }
 
 /* Half spacing */
 %half-margin-bottom,
 .basic_spacing-bottom {
-  margin-bottom: $halfSpacing +em;
-  margin-bottom: $halfSpacing +rem;
+  @include rem($value: $halfSpacing, $property: margin-bottom);
 }
