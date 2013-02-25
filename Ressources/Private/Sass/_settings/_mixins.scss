@@ -27,17 +27,21 @@
 // =============================================================================
 // Image-Replacement Helper
 // =============================================================================
-// A image-replacement mixin wich should be used with the .ir rule inside
-// _generic/_helper.scss - You should also set a display mode for the rule
+// A image-replacement mixin wich generates the image-dimensions as CSS rules and
+// @extends the .ir rule inside the _helper.scss file.
+// Default $display-mode is set to 'block'.
 // e.g.:
 // .site-logo {
-//   display: block;
 //   @include image-replacement('logo.png');
 // }
 // =============================================================================
-@mixin image-replacement($img) {
-  @include img-wh('#{$img}');
-  background-image: image-url('#{$img}');
+@mixin image-replacement($img, $display-mode: block) {
+  @if $img { // Output the image dimensions if an image is passed as an argument
+    display: $display-mode;
+    @include img-wh('#{$img}');
+    @extend .ir;
+    background-image: image-url('#{$img}');
+  }
 }
 
 
