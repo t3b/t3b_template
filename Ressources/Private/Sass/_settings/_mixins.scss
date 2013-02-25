@@ -63,13 +63,28 @@
 // =============================================================================
 // REM Unit Mixin
 // =============================================================================
+// Creates a property independent 'rem' calculation with a pixel fallback,
+// default property is set to 'font-size'
+// e.g.:
+// .lead {
+//   @include rem($value: 18, $property: font-size);
+// }
+// =============================================================================
+@mixin rem($value, $property: font-size) {
+  #{$property}: $value +px;
+  #{$property}: ($value / 16)*1rem;
+}
+
+
+// =============================================================================
+// Font-Size Mixin
+// =============================================================================
 // Create a fully formed type style (sizing and vertical rhythm) by passing in a
 // single value
 // Thanks to Harry Roberts (@csswizardry)
 // =============================================================================
 @mixin font-size($size, $append-vrythm: false) {
-  font-size: $size +px;
-  font-size: ($size / 16)*1rem;
+  @include rem($value: $size);
   @if $append-vrythm {
     line-height: ceil($size / $baseLineHeight) * ($baseLineHeight / $size);
   }
