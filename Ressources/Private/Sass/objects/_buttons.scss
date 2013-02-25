@@ -19,13 +19,13 @@ $ Button Object
 .btn {
   @extend %btn;
   display: inline-block;
-  &,
-  &:hover {
-    text-decoration: none;
-  }
   @if $oldIE {
     *display: inline;
     *zoom: 1;
+  }
+  &,
+  &:hover {
+    text-decoration: none;
   }
 }
 
