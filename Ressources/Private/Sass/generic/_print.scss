@@ -65,7 +65,7 @@
   a[href^="#"]:after {
     content: "";
   }
-  %non-print,
+  %print-hidden,
   .print-hidden {
     display: none;
     visibility: hidden;
