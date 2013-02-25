@@ -8,15 +8,6 @@
 
 
 /* =============================================================================
-$ General stylings
-================================================================================ */
-/**
- * Fixes an TYPO3 4.6 IE8 float issue where images have no width
- */
-.csc-textpic-imagecolumn img { max-width: none; }
-
-
-/* =============================================================================
 $ CSC-Frames
 ================================================================================ */
 .csc-frame-rulerBefore { border-top: 1px $basicBorderStyle $basicBorderColor; }
