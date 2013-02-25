@@ -35,13 +35,9 @@ h4, .h4 {
 }
 h5, .h5 {
   @include font-size($h5-size, $append-vrythm: true);
-  margin-top: 0;
-  margin-bottom: 0;
 }
 h6, .h6 {
   @include font-size($h6-size, $append-vrythm: true);
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 
