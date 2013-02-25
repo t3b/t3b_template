@@ -113,8 +113,7 @@ $cd-borderRadius:       1px !default;
 // Design Colors amd other style related variables
 // =============================================================================
 // ================================= Links ================================
-$linkColor:             lighten($cd-primary, 10%) !default;
-$linkColorHover:        $cd-primary !default;
+$linkColor:             $cd-primary !default;
 
 // ================================ Buttons ===============================
 $buttonBackground:      $cd-primary !default;
