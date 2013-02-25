@@ -16,8 +16,6 @@ table {
   @extend %margin-bottom;
   border-collapse: collapse;
   border-spacing: 0;
-
-  caption { text-align: $start; }
 }
 th { text-align: $start; }
 th, td { vertical-align: top; }
