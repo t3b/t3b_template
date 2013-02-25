@@ -1,3 +1,20 @@
+## 1.1.9
+**General**
+* Added a basic ext_ file setup
+* Renamed the vendor/ directory to Libaries/
+
+**SCSS**
+* Added a slightly changed version of @paranoida's SASS Media-Queries
+* Added heading-size variables
+* Added button style variables
+* Added a min-height for all textareas of 3 rows
+* Outsourced the button object into objects/_buttons.scss
+* Changed the prefix for all width classes to 'gi'
+* Corrected the offset-by- grid calculation to output percentages
+* Removed the deprecated offsetCalc function
+* Removed $oldIE support for the _navigations.scss object
+
+
 ## 1.1.8
 **SCSS**
 * Added a _head.scss
@@ -15,6 +32,7 @@
 
 **HTML**
 * Enabled the Chromeframe information toolbar for > IE8
+
 
 ## 1.1.7
 **Structure**
