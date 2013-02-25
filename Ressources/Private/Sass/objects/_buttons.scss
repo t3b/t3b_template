@@ -1,0 +1,46 @@
+/*!
+ * Button abstraction
+ *
+ * @package #{$package_name()}
+ * @path objects/_buttons.scss
+ * @author Tyll Weiß <t.weiss@exinit.de>
+ * @link http://csswizardry.com/2011/09/the-nav-abstraction/
+ */
+
+
+/* =============================================================================
+$ Button Object
+================================================================================
+ * Display an anchor tag as a button
+ * e.g.
+ *
+  <a class="btn">A Special link</a>
+================================================================================ */
+.btn {
+  @extend %btn;
+  display: inline-block;
+  color: $buttonColor;
+  &:hover {
+    text-decoration: none;
+    color: $buttonColor;
+  }
+  @if $oldIE {
+    *display: inline;
+    *zoom: 1;
+  }
+}
+
+/* ================== Full width button abstraction =================
+ * Set a button to the full-width of it's parent
+ */
+.btn--full {
+  display: block;
+  text-align: center;
+  /**
+   * The following is so that this class works properly on inputs as well
+   * as anchor tags.
+   */
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+}

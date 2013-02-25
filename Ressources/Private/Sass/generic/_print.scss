@@ -11,7 +11,10 @@
 @media print {
   * {
     background: transparent !important;
-    color: black !important;  // Black prints faster: h5bp.com/s
+    /**
+     * Black prints faster: h5bp.com/s
+     */
+    color: black !important;
     box-shadow:none !important;
     text-shadow: none !important;
   }
@@ -24,7 +27,10 @@
     border: 1px solid #999;
     page-break-inside: avoid;
   }
-  thead {  // h5bp.com/t
+  thead {
+    /**
+     * h5bp.com/t
+     */
     display: table-header-group;
   }
   tr,
@@ -51,9 +57,12 @@
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
+  /**
+   * Don't show links for images, or javascript/internal links
+   */
   .ir a:after,
   a[href^="javascript:"]:after,
-  a[href^="#"]:after {  // Don't show links for images, or javascript/internal links
+  a[href^="#"]:after {
     content: "";
   }
   %non-print,

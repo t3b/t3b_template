@@ -1,10 +1,8 @@
 # User generated CSS files
 Ressources/Public/Stylesheets/*.css
 
-# Unfinished extension structure
+# Unfinished extension configuration
 Configuration/*
-ext_emconf.php
-ext_localconf.php
 
 # Unfinished extension documentation
 Docs/*

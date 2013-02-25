@@ -12,7 +12,7 @@
 $ Normalize HTML5 display definitions
 ================================================================================ */
 
-/*
+/**
  * Corrects `block` display not defined in IE6/7/8/9 & FF3.
  */
 article,
@@ -30,7 +30,7 @@ summary {
   display: block;
 }
 
-/*
+/**
  * Corrects `inline-block` display not defined in IE 8/9.
  */
 audio,
@@ -39,7 +39,7 @@ video {
     display: inline-block;
 }
 
-/*
+/**
  * Addresses styling for `hidden` attribute not present in IE7/8/9, FF3, S4.
  * Known issue: no IE6 support.
  */
@@ -52,7 +52,7 @@ video {
  Normalize Base
 ================================================================================ */
 
-/*
+/**
  * 1. Corrects text resizing oddly in IE6/7 when body `font-size` is set using
  *    `em` units.
  * 2. Prevents iOS text size adjust after orientation change, without disabling
@@ -60,14 +60,14 @@ video {
  * 3. Forces vertical scrollbar to prevent jumpy page
  */
 html {
-  @if $oldIE == true { font-size: 100%; /* 1 */ }
+  @if $oldIE { font-size: 100%; /* 1 */ }
   -webkit-text-size-adjust: 100%; /* 2 */
   -ms-text-size-adjust: 100%; /* 2 */
   overflow-y: scroll; /* 3 */
 }
 
-@if $oldIE == true {
-  /*
+@if $oldIE {
+  /**
    * Addresses `font-family` inconsistency between `textarea` and other form
    * elements.
    */
@@ -85,7 +85,7 @@ html {
  Normalize Forms
 ================================================================================ */
 
-/*
+/**
  * 1. Corrects font size not being inherited in all browsers.
  * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome.
  * 3. Improves appearance and consistency in all browsers.
@@ -97,12 +97,12 @@ textarea {
   font-size: 100%; /* 1 */
   margin: 0; /* 2 */
   vertical-align: baseline; /* 3 */
-  @if $oldIE == true {
+  @if $oldIE {
     *vertical-align: middle; /* 3 */
   }
 }
 
-/*
+/**
  * Addresses FF3/4 setting `line-height` on `input` using `!important` in the
  * UA stylesheet.
  */
@@ -123,7 +123,7 @@ select {
     text-transform: none;
 }
 
-/*
+/**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
  *    and `video` controls.
  * 2. Corrects inability to style clickable `input` types in iOS.
@@ -138,12 +138,12 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
-  @if $oldIE == true {
+  @if $oldIE {
     *overflow: visible;  /* 4 */
   }
 }
 
-/*
+/**
  * Re-set default cursor for disabled elements.
  */
 button[disabled],
@@ -151,7 +151,7 @@ html input[disabled] {
   cursor: default;
 }
 
-/*
+/**
  * 1. Addresses box sizing set to content-box in IE8/9.
  * 2. Removes excess padding in IE8/9.
  * 3. Removes excess padding in IE7.
@@ -161,13 +161,13 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
-  @if $oldIE == true {
+  @if $oldIE {
     *height: 13px; /* 3 */
     *width: 13px; /* 3 */
   }
 }
 
-/*
+/**
  * 1. Addresses `appearance` set to `searchfield` in S5, Chrome.
  * 2. Addresses `box-sizing` set to `border-box` in S5, Chrome (include `-moz`
  *    to future-proof).
@@ -179,7 +179,7 @@ input[type="search"] {
           box-sizing: content-box;
 }
 
-/*
+/**
  * Removes inner padding and search cancel button in S5, Chrome on OS X.
  */
 input[type="search"]::-webkit-search-cancel-button,
@@ -187,7 +187,7 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/*
+/**
  * Removes inner padding and border in FF3+.
  */
 button::-moz-focus-inner,
