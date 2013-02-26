@@ -10,7 +10,6 @@
 // =============================================================================
 // $ Variables
 // =============================================================================
-$columWidth:      ($layoutWidth + $columnGutter) / $totalColumns - $columnGutter !default;
 $grid-direction:  $start;
 
 
@@ -22,9 +21,9 @@ $ Grid Classes
  * e.g.
  *
   <div class="gw">
-    <div class="gi gi--three"> </div>
-    <div class="gi gi--six"> </div>
-    <div class="gi gi--three"> </div>
+    <div class="gi one-third"> </div>
+    <div class="gi one-third"> </div>
+    <div class="gi one-third"> </div>
   </div>
 ================================================================================ */
 /* ========================= Grid helper ========================= */
@@ -46,12 +45,4 @@ $ Grid Classes
   margin-left: auto;
   margin-right: auto;
   float: none;
-}
-
-/* ========================== Grid widths ======================== */
-@include grid($prefix: 'gi--');
-
-@if $includeOffsetClasses {
-  /* ====================== Grid offset classes ==================== */
-  @include grid($prefix: 'offset-by-', $property: 'margin-#{$start}');
 }

@@ -9,21 +9,6 @@
 
 
 // =============================================================================
-// Convert number to word
-// =============================================================================
-@function convert-number-to-word($num) {
-  $count: 1;
-  @each $word in one,two,three,four,five,six,seven,eight,nine,ten,eleven,
-    twelve,thirteen,fourteen,fifteen,sixteen,seventeen,eighteen,nineteen,
-    twenty,twentyone,twentytwo,twentythree,twentyfour {
-    @if ($count == $num) { @return $word; }
-    $count: $count + 1;
-  }
-  @return "invalid";
-}
-
-
-// =============================================================================
 // Relative Size
 // =============================================================================
 // Desired font-size ÷ font-size of containing element, or more succinctly:
