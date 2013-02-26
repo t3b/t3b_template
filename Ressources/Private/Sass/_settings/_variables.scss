@@ -36,10 +36,10 @@ $direction:             ltr !default;
 // =============================================================================
 // Layout
 // =============================================================================
-// Basic layout width
+// Basic layout width - will be set on the '.wrapper' class
 $layoutWidth:           960px !default;
 
-// Should this layout be centered inside the browser?
+// Is this layout centered? If set to 'true' the '.wrapper' class will be centered
 $centeredLayout:        true !default;
 
 // Inner spacing for all grid-items
