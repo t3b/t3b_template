@@ -9,7 +9,7 @@
 
 
 /* =============================================================================
-$ Brand styles & helper classes
+$ Brand styles
 ================================================================================ */
 .brand {
   font-family: $brandFontFamily;
@@ -23,8 +23,5 @@ $ Brand styles & helper classes
   // replace 'false' with the image-name of your brand logo
   // e.g.:
   // @include image-replacement('brand_logo.gif', $display-mode: inline-block);
-  @include image-replacement(false, $display-mode: inline-block);
-
-  .site-header & { }
-  .site-footer & { }
+  @include image-replacement($image: false, $display-mode: inline-block);
 }

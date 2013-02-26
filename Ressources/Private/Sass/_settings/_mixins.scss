@@ -35,12 +35,12 @@
 //   @include image-replacement('logo.png');
 // }
 // =============================================================================
-@mixin image-replacement($img, $display-mode: block) {
-  @if $img { // Output the image dimensions if an image is passed as an argument
+@mixin image-replacement($image, $display-mode: block) {
+  @if $image { // Output the image dimensions if an image is passed as an argument
     display: $display-mode;
-    @include img-wh('#{$img}');
+    @include img-wh('#{$image}');
     @extend .ir;
-    background-image: image-url('#{$img}');
+    background-image: image-url('#{$image}');
   }
 }
 
