@@ -39,6 +39,9 @@ $direction:             ltr !default;
 // Basic layout width
 $layoutWidth:           960px !default;
 
+// Should this layout be centered inside the browser?
+$centeredLayout:        true !default;
+
 // Inner spacing for all grid-items
 $columnGutter:          20 !default;
 

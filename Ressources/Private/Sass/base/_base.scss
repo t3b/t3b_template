@@ -22,7 +22,7 @@ body {
   background: $bodyBackground;
 }
 .wrapper {
-  margin: 0 auto;
+  @if $centeredLayout { margin-left: auto; margin-right: auto; }
   width: $layoutWidth;
   position: relative;
 }
