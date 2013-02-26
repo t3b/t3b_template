@@ -21,6 +21,8 @@ $ Brand styles & helper classes
 .brand-logo {
   // If you want to use the image-replacement technique,
   // replace 'false' with the image-name of your brand logo
+  // e.g.:
+  // @include image-replacement('brand_logo.gif', $display-mode: inline-block);
   @include image-replacement(false, $display-mode: inline-block);
 
   .site-header & { }
