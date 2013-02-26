@@ -80,7 +80,7 @@ $halfSpacing:           $basicSpacing / 2 !default;
 // Headings
 // =============================================================================
 // =============================== Headings ===============================
-$headingsFontFamily:    inherit !default; // empty to use $baseFontFamily
+$headingsFontFamily:    false !default;
 $headingsFontWeight:    $bold !default;
 $headingsColor:         #000 !default;
 
