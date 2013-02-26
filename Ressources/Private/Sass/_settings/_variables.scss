@@ -61,7 +61,7 @@ $contentBackground:     #fff !default;
 // Font-family stack variables to standardize the font-setting
 $sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
-$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace !default; // Used on elements like <code> etc.
+$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace !default; // Set on elements like <code> etc.
 
 // Font-weights below are used to handle webfonts - if this layout doesnt
 // use a webfont, dont change them
