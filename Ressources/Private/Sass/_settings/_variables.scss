@@ -106,6 +106,14 @@ $brandFontFamily:       $sansFontFamily !default;
 // have a consistent setting.
 $brandBorderRadius:     1px !default;
 
+// If you want to use the image-replacement technique for your brand logo,
+// set this to the image-name of your brand logo e.g.:
+// $brand-logo_image:      'brand-logo.png';
+//
+// Be aware that you need to place the image inside your images_dir as
+// specified inside the config.rb
+$brand-logo_image:      false !default;
+
 
 // =============================================================================
 // Design related variables

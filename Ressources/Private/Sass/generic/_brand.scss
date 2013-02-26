@@ -23,5 +23,5 @@ $ Brand styles
   // replace 'false' with the image-name of your brand logo
   // e.g.:
   // @include image-replacement('brand_logo.gif', $display-mode: inline-block);
-  @include image-replacement($image: false, $display-mode: inline-block);
+  @include image-replacement($image: $brand-logo_image, $display-mode: inline-block);
 }
