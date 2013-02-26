@@ -11,13 +11,14 @@
 // =============================================================================
 // Project settings
 // =============================================================================
-// The template-root path, used to generate the box-sizing.htc path
+// The template-root path, used to generate the box-sizing.htc path,
+// this has to be relative to the .html document
 $templatePath:          "typo3conf/ext/#{$package_name}/" !default;
 
 // Is this project a responsive one?
 $responsive:            false !default;
 
-// Does this project need support for older browsers e.g. IE7?
+// Does this stylesheet need support for older browsers?
 //
 // Support-table for $oldIE: false;
 // Google Chrome
@@ -27,48 +28,54 @@ $responsive:            false !default;
 // Internet Explorer 8+
 $oldIE:                 false !default;
 
-// Reading direction of this project
+// Reading direction of this project,
+// if set to 'rtl' texts, labels and the grid will be aligned on the right side of the document
 $direction:             ltr !default;
 
 
 // =============================================================================
 // Layout
 // =============================================================================
-// ================================ Widths ================================
+// Basic layout width
 $layoutWidth:           960px !default;
 
-// ============================== Grid System =============================
-$columnGutter:          20 !default;     // Inner spacing
+// Inner spacing for all grid-items
+$columnGutter:          20 !default;
 
-// ============================== Backgrounds =============================
-$bodyBackground:        #fff !default;   // Will be set on <body>
-$contentBackground:     #fff !default;   // Used for generating some colors
+// The background wich will be set on the <body> element, you can also pass in
+// other arguments e.g.:
+// $bodyBackground: image-url('body-bg.gif') top left repeat-x #fff;
+$bodyBackground:        #fff !default;
+
+// Used to generate some colors, this does not have any direct effect on
+// the .site-content container or its background.
+$contentBackground:     #fff !default;
 
 
 // =============================================================================
-// Typography
+// Base Typesetting
 // =============================================================================
-// ============================== Font familys ============================
+// Font-family stack variables to standardize the font-setting
 $sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
-$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace !default; // Used on elements like <code> etc.
 
-// ============================== Font weights ============================
-// NOTE:
 // Font-weights below are used to handle webfonts - if this layout doesnt
 // use a webfont, dont change them
 $bold:                  700 !default;
 $regular:               400 !default;
 $light:                 300 !default;
 
-// ========================== Base font settings ==========================
-$baseFontSize:          16 !default; // Set in px
-$baseLineHeight:        24 !default; // Set in px
+// Base font settings wich will be set on the '<body>' element,
+// '$baseFontSize' and '$baseLineHeight' are set in pixels
+$baseFontSize:          16 !default;
+$baseLineHeight:        24 !default;
 $baseFontFamily:        $sansFontFamily !default;
 $baseFontWeight:        $regular !default;
 $baseTextColor:         #3C474B !default;
 
-// =============================== Spacings ===============================
+// Typographic spacings (in pixels),
+// these default values will output a basic vertical rythm based on your '$baseLineHeight'
 $basicSpacing:          $baseLineHeight !default;
 $halfSpacing:           $basicSpacing / 2 !default;
 
@@ -76,12 +83,17 @@ $halfSpacing:           $basicSpacing / 2 !default;
 // =============================================================================
 // Headings
 // =============================================================================
-// =============================== Headings ===============================
+// If all headings use a different font-family than the '$baseFontFamily'
+// change this variable from 'false' to a proper font-stack
 $headingsFontFamily:    false !default;
+
+// Font-weight of all headings
 $headingsFontWeight:    $bold !default;
+
+// The color for all headings
 $headingsColor:         #000 !default;
 
-// ============================== Font-Sizes ==============================
+// Heading font-sizes (in pixels)
 $h1-size:               36 !default;
 $h2-size:               30 !default;
 $h3-size:               24 !default;
@@ -99,8 +111,8 @@ $brandColor:            #0097d7 !default;
 // Your main brand Font-Family
 $brandFontFamily:       $sansFontFamily !default;
 
-// If your layout makes use of rounded corners, you can specify an Border-Radius here to
-// have a consistent setting.
+// If your layout makes use of rounded corners, you can specify an Border-Radius
+// here to have a consistent setting.
 $brandBorderRadius:     1px !default;
 
 // If you want to use the image-replacement technique for your brand logo,
@@ -115,13 +127,13 @@ $brand-logo_image:      false !default;
 // =============================================================================
 // Design related variables
 // =============================================================================
-// ================================= Links ================================
+// Default color for all anchors and links
 $linkColor:             $brandColor !default;
 
-// ================================ Buttons ===============================
+// Default background and color for submit buttons and the 'btn' object
 $buttonBackground:      $brandColor !default;
 $buttonColor:           color-adjust($brandColor, 100%) !default;
 
-// ================================ Borders ===============================
+// Default styling for horizontal rules
 $basicBorderColor:      color-adjust($contentBackground, 20%) !default;
 $basicBorderStyle:      solid !default;
