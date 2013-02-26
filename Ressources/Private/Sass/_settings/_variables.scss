@@ -35,13 +35,10 @@ $direction:             ltr !default;
 // Layout
 // =============================================================================
 // ================================ Widths ================================
-$layoutWidth:           960px !default;  // Used for calculating the grid
+$layoutWidth:           960px !default;
 
 // ============================== Grid System =============================
-$totalColumns:          12 !default;     // Number of columns
 $columnGutter:          20 !default;     // Inner spacing
-$gridStack:             1 2 3 4 5 6 7 8 9 10 11 12 !default; // Grid Width classes
-$includeOffsetClasses:  false !default;  // If set to 'true' .columns.offset-by-# classes are added
 
 // ============================== Backgrounds =============================
 $bodyBackground:        #fff !default;   // Will be set on <body>
