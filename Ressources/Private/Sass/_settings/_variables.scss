@@ -28,8 +28,8 @@ $responsive:            false !default;
 // Internet Explorer 8+
 $oldIE:                 false !default;
 
-// Reading direction of this project,
-// if set to 'rtl' texts, labels and the grid will be aligned on the right side of the document
+// Reading direction of this project, if set to 'rtl' texts, labels
+// and the grid will be aligned to the right side of the document
 $direction:             ltr !default;
 
 
@@ -50,7 +50,7 @@ $columnGutter:          20px !default;
 // $bodyBackground: image-url('body-bg.gif') top left repeat-x #fff;
 $bodyBackground:        #fff !default;
 
-// Used to generate some colors, this does not have any direct effect on
+// Used to generate some colors, this doesn't have any direct effect on
 // the .site-content container or its background.
 $contentBackground:     #fff !default;
 
@@ -61,10 +61,9 @@ $contentBackground:     #fff !default;
 // Font-family stack variables to standardize the font-setting
 $sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
-$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace !default; // Set on elements like <code> etc.
+$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace !default; // Will be set on elements like <code> etc.
 
-// Font-weights below are used to handle webfonts - if this layout doesnt
-// use a webfont, dont change them
+// The font-weights below are used to handle webfonts and consistent stylings
 $bold:                  700 !default;
 $regular:               400 !default;
 $light:                 300 !default;
@@ -77,8 +76,8 @@ $baseFontFamily:        $sansFontFamily !default;
 $baseFontWeight:        $regular !default;
 $baseTextColor:         #3C474B !default;
 
-// Typographic spacings (in pixels),
-// these default values will output a basic vertical rythm based on your '$baseLineHeight'
+// Typographic spacings (in pixels), these default values will
+// output a basic vertical rythm based on your '$baseLineHeight'
 $basicSpacing:          $baseLineHeight !default;
 $halfSpacing:           $basicSpacing / 2 !default;
 
@@ -90,10 +89,10 @@ $halfSpacing:           $basicSpacing / 2 !default;
 // change this variable from 'false' to a proper font-stack
 $headingsFontFamily:    false !default;
 
-// Font-weight of all headings
+// Font-weight fpr all headings
 $headingsFontWeight:    $bold !default;
 
-// The color for all headings
+// Color for all headings
 $headingsColor:         #000 !default;
 
 // Heading font-sizes (in pixels)
@@ -123,7 +122,7 @@ $brandBorderRadius:     1px !default;
 // $brand-logo_image:      'brand-logo.png';
 //
 // Be aware that you need to place the image inside your images_dir as
-// specified inside the config.rb
+// specified inside the config.rb - otherwise compass will throw an error
 $brand-logo_image:      false !default;
 
 
@@ -137,6 +136,6 @@ $linkColor:             $brandColor !default;
 $buttonBackground:      $brandColor !default;
 $buttonColor:           color-adjust($brandColor, 100%) !default;
 
-// Default styling for horizontal rules
+// Default styling for horizontal rules and bordered elements like tables
 $basicBorderColor:      color-adjust($contentBackground, 20%) !default;
 $basicBorderStyle:      solid !default;
