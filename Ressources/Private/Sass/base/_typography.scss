@@ -156,24 +156,24 @@ ul, dl, menu { margin-top: 0; }
 /* Basic spacing */
 %margin-top,
 .basic_spacing-top {
-  @include rem($property: margin-top, $value: $basicSpacing);
+  @include rem(margin-top, $basicSpacing);
 }
 
 /* Half spacing */
 %half-margin-top,
 .half-basic_spacing-top {
-  @include rem($property: margin-top, $value: $halfSpacing);
+  @include rem(margin-top, $halfSpacing);
 }
 
 /* ====================== Bottom margins ======================= */
 /* Basic spacing */
 %margin-bottom,
 .basic_spacing-bottom {
-  @include rem($property: margin-bottom, $value: $basicSpacing);
+  @include rem(margin-bottom, $basicSpacing);
 }
 
 /* Half spacing */
 %half-margin-bottom,
 .basic_spacing-bottom {
-  @include rem($property: margin-bottom, $value: $halfSpacing);
+  @include rem(margin-bottom, $halfSpacing);
 }

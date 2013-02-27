@@ -55,7 +55,7 @@
 //   @include rem($property: font-size, $value: 18);
 // }
 // =============================================================================
-@mixin rem($value, $property: font-size) {
+@mixin rem($property: font-size, $value: 16) {
   #{$property}: $value +px;
   #{$property}: ($value / 16)*1rem;
 }
