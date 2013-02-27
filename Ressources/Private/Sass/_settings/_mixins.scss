@@ -69,7 +69,7 @@
 // Thanks to Harry Roberts (@csswizardry)
 // =============================================================================
 @mixin font-size($size, $append-vrythm: false) {
-  @include rem($value: $size);
+  @include rem(font-size, $size);
   @if $append-vrythm {
     line-height: ceil($size / $baseLineHeight) * ($baseLineHeight / $size);
   }
