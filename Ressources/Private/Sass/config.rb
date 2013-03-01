@@ -1,7 +1,7 @@
 #
 # Compass Configuration file
 #
-# @author Tyll Weiß <t.weiss@exinit.de>
+# @author Tyll Weiß <inkdpixels@gmail.com>
 # @link http://compass-style.org/help/tutorials/configuration-reference/
 #
 
