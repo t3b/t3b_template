@@ -173,6 +173,6 @@ ul, dl, menu { margin-top: 0; }
 
 /* Half spacing */
 %half-margin-bottom,
-.basic_spacing-bottom {
+.half_spacing-bottom {
   @include rem(margin-bottom, $halfSpacing);
 }
