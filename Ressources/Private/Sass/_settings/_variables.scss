@@ -33,25 +33,25 @@ $direction:             ltr !default;
 
 
 // =============================================================================
-// Layout
+// Brand related variables
 // =============================================================================
-// Basic layout width - will be set on the '.wrapper' class
-$layoutWidth:           960px !default;
+// Your main brand color
+$brandColor:            #0097d7 !default;
 
-// Is this layout centered? If set to 'true' the '.wrapper' class will be centered
-$centeredLayout:        true !default;
+// Your main brand Font-Family
+$brandFontFamily:       "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
-// Inner spacing for all grid-items
-$columnGutter:          20px !default;
+// If your layout makes use of rounded corners, you can specify an Border-Radius
+// here to have a consistent setting.
+$brandBorderRadius:     1px !default;
 
-// The background wich will be set on the <body> element, you can also pass in
-// other arguments e.g.:
-// $bodyBackground: image-url('body-bg.gif') top left repeat-x #fff;
-$bodyBackground:        #fff !default;
-
-// Used to generate some colors, this doesn't have any direct effect on
-// the .site-content container or its background.
-$contentBackground:     #fff !default;
+// If you want to use the image-replacement technique for your brand logo,
+// set this to the image-name of your brand logo e.g.:
+// $brand-logo_image:      'brand-logo.png';
+//
+// Be aware that you need to place the image inside your images_dir as
+// specified inside the config.rb - otherwise compass will throw an error
+$brand-logo_image:      false !default;
 
 
 // =============================================================================
@@ -104,25 +104,25 @@ $h6-size:               14 !default;
 
 
 // =============================================================================
-// Brand related variables
+// Layout
 // =============================================================================
-// Your main brand color
-$brandColor:            #0097d7 !default;
+// Basic layout width - will be set on the '.wrapper' class
+$layoutWidth:           960px !default;
 
-// Your main brand Font-Family
-$brandFontFamily:       $sansFontFamily !default;
+// Is this layout centered? If set to 'true' the '.wrapper' class will be centered
+$centeredLayout:        true !default;
 
-// If your layout makes use of rounded corners, you can specify an Border-Radius
-// here to have a consistent setting.
-$brandBorderRadius:     1px !default;
+// Inner spacing for all grid-items
+$columnGutter:          20px !default;
 
-// If you want to use the image-replacement technique for your brand logo,
-// set this to the image-name of your brand logo e.g.:
-// $brand-logo_image:      'brand-logo.png';
-//
-// Be aware that you need to place the image inside your images_dir as
-// specified inside the config.rb - otherwise compass will throw an error
-$brand-logo_image:      false !default;
+// The background wich will be set on the <body> element, you can also pass in
+// other arguments e.g.:
+// $bodyBackground: image-url('body-bg.gif') top left repeat-x #fff;
+$bodyBackground:        #fff !default;
+
+// Used to generate some colors, this doesn't have any direct effect on
+// the .site-content container or its background.
+$contentBackground:     #fff !default;
 
 
 // =============================================================================
