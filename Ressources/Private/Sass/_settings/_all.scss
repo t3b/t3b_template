@@ -6,7 +6,7 @@
 //
 
 
-@import "_functions";             // SASS Functions
-@import "_variables";             // SASS Settings
-@import "_mixins";                // SASS Mixins
-@import "_media-queries";         // Media-Query SASS Mixins
+@import "_functions",
+        "_variables",
+        "_mixins",
+        "_media-queries";
