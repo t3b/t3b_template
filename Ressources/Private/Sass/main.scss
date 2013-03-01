@@ -15,43 +15,68 @@ $package_name: t3b_frontend;
 // =============================================================================
 // SASS Setup
 // =============================================================================
-@import "compass/css3";               // Compass
-@import "_settings/_all";             // SASS Functions, Mixins and Variables
+// 1. "compass/css3"            - All compass CSS3 mixins and functions
+// 2. "_settings/_all"          - Mixins, functions and default vars from t3b_frontend
+// =============================================================================
+@import "compass/css3",
+        "_settings/_all";
 
 
 // =============================================================================
 // Generic
 // =============================================================================
-@import "generic/_head";              // Declarations wich should be put at the top
-@import "generic/_normalize";         // Normalize elements accross all browsers
-@import "generic/_widths";            // Widths in a human readable format
-@import "generic/_t3-general";        // TYPO3 element styling
-@import "generic/_brand";             // Brand related styling
+// 1. "generic/_head"           - Declarations wich should be put at the top of the document
+// 2. "generic/_normalize"      - Nicolas Gallagher's normalize.css
+// 3. "generic/_widths"         - Human readable width classes from inuit.css
+// 4. "generic/_t3-general"     - TYPO3 related classes
+// 5. "generic/_brand"          - Generated brand classes like colors, font-familys & logos
+// =============================================================================
+@import "generic/_head",
+        "generic/_normalize",
+        "generic/_widths",
+        "generic/_t3-general",
+        "generic/_brand";
 
 
 // =============================================================================
-// Layout
+// Basic HTML element styling
 // =============================================================================
-@import "base/_base";                 // High-level elements like `html`, `body`, etc.
-@import "base/_headings";             // Double-stranded heading hierarchy
-@import "base/_typography";           // Basic typography
-@import "base/_links";                // High-level link styling
-@import "base/_lists";                // Styling for lists
-@import "base/_media";                // Media elements like images, audio and video
-@import "base/_tables";               // Tables
-@import "base/_forms";                // Forms, input's and other form fields
+// 1. "base/_base"              - High-level wrapper elements and classes
+// 2. "base/_headings"          - Double-stranded heading hierarchy
+// 3. "base/_typography"        - Typography related elements
+// 4. "base/_links"             - Anchor tag & Links
+// 5. "base/_lists"             - Lists & definitions
+// 6. "base/_media"             - Images, audio & video
+// 7. "base/_tables"            - Tables
+// 8. "base/_forms"             - Forms, input's and other form related elements
+// =============================================================================
+@import "base/_base",
+        "base/_headings",
+        "base/_typography",
+        "base/_links",
+        "base/_lists",
+        "base/_media",
+        "base/_tables",
+        "base/_forms";
 
 
 // =============================================================================
-// Components
+// Objects
 // =============================================================================
-@import "objects/_buttons";           // Button object and its modifiers
-@import "objects/_navigations";       // Navigation object and its modifiers
-@import "objects/_grid";              // Grid
+// 1. "objects/_buttons"        - Button object and it's modifiers
+// 2. "objects/_navigations"    - Navigation object and it's modifiers
+// 3. "objects/_grid"           - Grid object and it's modifiers
+// =============================================================================
+@import "objects/_buttons",
+        "objects/_navigations",
+        "objects/_grid";
 
 
 // =============================================================================
 // Helpers and print styles
 // =============================================================================
-@import "generic/_helper";            // Helper classes for developement
-@import "generic/_print";             // Print styles
+// 1. "generic/_helper"         - Usefull helper classes
+// 2. "generic/_print"          - Print styles
+// =============================================================================
+@import "generic/_helper",
+        "generic/_print";
