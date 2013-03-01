@@ -20,7 +20,7 @@ body {
   color: $baseTextColor;
   background: $bodyBackground;
 }
-.wrapper {
+.site-wrapper {
   @if $centeredLayout { margin-left: auto; margin-right: auto; }
   width: $layoutWidth;
   position: relative;
