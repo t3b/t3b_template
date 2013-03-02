@@ -27,6 +27,11 @@ $responsive:            false !default;
 // Internet Explorer 8+
 $oldIE:                 false !default;
 
+// Compass legacy support
+$legacy-support-for-ie6: false !default;
+$legacy-support-for-ie7: false !default;
+$legacy-support-for-ie8: true !default;
+
 // Reading direction of this project, if set to 'rtl' texts, labels
 // and the grid will be aligned to the right side of the document
 $direction:             ltr !default;
