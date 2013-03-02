@@ -29,8 +29,8 @@ abbr[title] { /* 2 */
   cursor: help;
 }
 mark { /* 3 */
-  background: $brandColor;
-  color: color-adjust($brandColor, 100%);
+  background: $brand-color;
+  color: color-adjust($brand-color, 100%);
 }
 dfn {
   font-style: italic; /* 4 */
@@ -56,7 +56,7 @@ samp {
   /**
    * Corrects font family set oddly in Safari 5 and Chrome.
    */
-  font-family: $monoFontFamily;
+  font-family: $mono-font-family;
   @if $oldIE { _font-family: 'courier new', monospace; }
   font-size: 1em;
 }
@@ -108,7 +108,7 @@ hr {
   display: block;
   height: 0;
   border: 0;
-  border-top: 1px $basicBorderStyle $basicBorderColor;
+  border-top: 1px $basic-border-style $basic-border-color;
   padding: 0;
   @extend %margin-top;
   @extend %margin-bottom;
@@ -120,8 +120,8 @@ $ Text-Selection
 ================================================================================ */
 ::-moz-selection,
 ::selection {
-  background: $brandColor;
-  color: color-adjust($brandColor, 100%);
+  background: $brand-color;
+  color: color-adjust($brand-color, 100%);
   text-shadow: none;
 }
 
@@ -155,24 +155,24 @@ ul, dl, menu { margin-top: 0; }
 /* Basic spacing */
 %margin-top,
 .basic_spacing-top {
-  @include rem(margin-top, $basicSpacing);
+  @include rem(margin-top, $basic-spacing);
 }
 
 /* Half spacing */
 %half-margin-top,
 .half-basic_spacing-top {
-  @include rem(margin-top, $halfSpacing);
+  @include rem(margin-top, $half-spacing);
 }
 
 /* ====================== Bottom margins ======================= */
 /* Basic spacing */
 %margin-bottom,
 .basic_spacing-bottom {
-  @include rem(margin-bottom, $basicSpacing);
+  @include rem(margin-bottom, $basic-spacing);
 }
 
 /* Half spacing */
 %half-margin-bottom,
 .half_spacing-bottom {
-  @include rem(margin-bottom, $halfSpacing);
+  @include rem(margin-bottom, $half-spacing);
 }

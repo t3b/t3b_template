@@ -31,6 +31,6 @@ $ Border-Box
      * The URL has to be relative to the HTML Doc
      * https://github.com/Schepp/box-sizing-polyfill
      */
-    *behavior: url('#{$templatePath}Ressource/Public/boxsizing.htc');
+    *behavior: url('#{$template-path}Ressource/Public/boxsizing.htc');
   }
 }

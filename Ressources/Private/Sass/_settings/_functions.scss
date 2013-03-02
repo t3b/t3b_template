@@ -16,7 +16,7 @@
 // Based on the relative-size function from Stitch, http://stitchcss.com/
 // To use rems, pass in `rem` as the last parameter
 // =============================================================================
-@function rs($target, $context: $baseFontSize, $unit: em) {
+@function rs($target, $context: $base-font-size, $unit: em) {
   @return #{$target/$context}$unit;
 }
 

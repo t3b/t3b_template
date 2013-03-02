@@ -12,7 +12,7 @@
 // =============================================================================
 // The template-root path, used to generate the box-sizing.htc path,
 // this has to be relative to the .html document
-$templatePath:          "typo3conf/ext/#{$package_name}/" !default;
+$template-path:          "typo3conf/ext/#{$package_name}/" !default;
 
 // Is this project a responsive one?
 $responsive:            false !default;
@@ -36,14 +36,14 @@ $direction:             ltr !default;
 // Brand related variables
 // =============================================================================
 // Your main brand color
-$brandColor:            #0097d7 !default;
+$brand-color:            #0097d7 !default;
 
 // Your main brand Font-Family
-$brandFontFamily:       "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$brand-font-family:       "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
 // If your layout makes use of rounded corners, you can specify an Border-Radius
 // here to have a consistent setting.
-$brandBorderRadius:     1px !default;
+$brand-border-radius:     1px !default;
 
 // If you want to use the image-replacement technique for your brand logo,
 // set this to the image-name of your brand logo e.g.:
@@ -58,9 +58,9 @@ $brand-logo_image:      false !default;
 // Base Typesetting
 // =============================================================================
 // Font-family stack variables to standardize the font-setting
-$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
-$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace !default; // Will be set on elements like <code> etc.
+$sans-font-family:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$serif-font-family:       Georgia, "Times New Roman", Times, serif !default;
+$mono-font-family:        Menlo, Monaco, Consolas, "Courier New", monospace !default; // Will be set on elements like <code> etc.
 
 // The font-weights below are used to handle webfonts and consistent stylings
 $bold:                  700 !default;
@@ -68,31 +68,31 @@ $regular:               400 !default;
 $light:                 300 !default;
 
 // Base font settings wich will be set on the '<body>' element,
-// '$baseFontSize' and '$baseLineHeight' are set in pixels
-$baseFontSize:          16 !default;
-$baseLineHeight:        24 !default;
-$baseFontFamily:        $sansFontFamily !default;
-$baseFontWeight:        $regular !default;
-$baseTextColor:         #3C474B !default;
+// '$base-font-size' and '$base-line-height' are set in pixels
+$base-font-size:          16 !default;
+$base-line-height:        24 !default;
+$base-font-family:        $sans-font-family !default;
+$base-font-weight:        $regular !default;
+$base-text-color:         #3C474B !default;
 
 // Typographic spacings (in pixels), these default values will
-// output a basic vertical rythm based on your '$baseLineHeight'
-$basicSpacing:          $baseLineHeight !default;
-$halfSpacing:           $basicSpacing / 2 !default;
+// output a basic vertical rythm based on your '$base-line-height'
+$basic-spacing:          $base-line-height !default;
+$half-spacing:           $basic-spacing / 2 !default;
 
 
 // =============================================================================
 // Headings
 // =============================================================================
-// If all headings use a different font-family than the '$baseFontFamily'
+// If all headings use a different font-family than the '$base-font-family'
 // change this variable from 'false' to a proper font-stack
-$headingsFontFamily:    false !default;
+$headings-font-family:    false !default;
 
 // Font-weight fpr all headings
-$headingsFontWeight:    $bold !default;
+$headings-font-weight:    $bold !default;
 
 // Color for all headings
-$headingsColor:         #000 !default;
+$headings-color:         #000 !default;
 
 // Heading font-sizes (in pixels)
 $h1-size:               36 !default;
@@ -107,34 +107,34 @@ $h6-size:               14 !default;
 // Layout
 // =============================================================================
 // Basic layout width (in pixels) - will be set on the '.site-wrapper' class
-$layoutWidth:           rs(960) !default;
+$layout-width:           rs(960) !default;
 
 // Is this layout centered? If set to 'true' the '.wrapper' class will be centered
-$centeredLayout:        true !default;
+$centered-layout:        true !default;
 
 // Inner spacing for all grid-items
-$columnGutter:          20px !default;
+$column-gutter:          20px !default;
 
 // The background wich will be set on the <body> element, you can also pass in
 // other arguments e.g.:
-// $bodyBackground: image-url('body-bg.gif') top left repeat-x #fff;
-$bodyBackground:        #fff !default;
+// $body-background: image-url('body-bg.gif') top left repeat-x #fff;
+$body-background:        #fff !default;
 
 // Used to generate some colors, this doesn't have any direct effect on
 // the .site-content container or its background.
-$contentBackground:     #fff !default;
+$content-background:     #fff !default;
 
 
 // =============================================================================
 // Design related variables
 // =============================================================================
 // Default color for all anchors and links
-$linkColor:             $brandColor !default;
+$link-color:             $brand-color !default;
 
 // Default background and color for submit buttons and the 'btn' object
-$buttonBackground:      $brandColor !default;
-$buttonColor:           color-adjust($brandColor, 100%) !default;
+$button-background:      $brand-color !default;
+$button-color:           color-adjust($brand-color, 100%) !default;
 
 // Default styling for horizontal rules and bordered elements like tables
-$basicBorderColor:      color-adjust($contentBackground, 20%) !default;
-$basicBorderStyle:      solid !default;
+$basic-border-color:      color-adjust($content-background, 20%) !default;
+$basic-border-style:      solid !default;

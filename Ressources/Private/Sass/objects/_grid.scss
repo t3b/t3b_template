@@ -28,15 +28,15 @@ $ Grid Classes
 .gw,
 .grid-wrapper {
   @extend .cf;
-  margin-left: -($columnGutter / 2);
-  margin-right: -($columnGutter / 2);
+  margin-left: -($column-gutter / 2);
+  margin-right: -($column-gutter / 2);
 }
 .gi,
 .grid-item {
   // Base styles for .gi--# classes
   float: $grid-direction;
-  padding-left: ($columnGutter / 2);
-  padding-right: ($columnGutter / 2);
+  padding-left: ($column-gutter / 2);
+  padding-right: ($column-gutter / 2);
 }
 
 /* =================== Grid item abstractions ==================== */

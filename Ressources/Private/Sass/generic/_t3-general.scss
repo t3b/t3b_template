@@ -9,8 +9,8 @@
 /* =============================================================================
 $ CSC-Frames
 ================================================================================ */
-.csc-frame-rulerBefore { border-top: 1px $basicBorderStyle $basicBorderColor; }
-.csc-frame-rulerAfter { border-bottom: 1px $basicBorderStyle $basicBorderColor; }
+.csc-frame-rulerBefore { border-top: 1px $basic-border-style $basic-border-color; }
+.csc-frame-rulerAfter { border-bottom: 1px $basic-border-style $basic-border-color; }
 
 .csc-frame-indent { padding: 0 10%; }
 .csc-frame-indent3366 { padding-left: 33.333%; }

@@ -70,7 +70,7 @@
 @mixin font-size($size, $append-vrythm: false) {
   @include rem(font-size, $size);
   @if $append-vrythm {
-    line-height: ceil($size / $baseLineHeight) * ($baseLineHeight / $size);
+    line-height: ceil($size / $base-line-height) * ($base-line-height / $size);
   }
 }
 
@@ -84,16 +84,16 @@
 //   @include css-triangle(5px, #fff, bottom);
 // }
 // =============================================================================
-@mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
+@mixin cssTriangle($triangle-size, $triangle-color, $triangle-direction) {
   content: "";
   display: block;
   width: 0;
   height: 0;
-  border: solid $triangleSize;
-  @if ($triangleDirection == top)    { border-color: $triangleColor transparent transparent transparent; }
-  @if ($triangleDirection == bottom) { border-color: transparent transparent $triangleColor transparent; }
-  @if ($triangleDirection == left)   { border-color: transparent transparent transparent $triangleColor; }
-  @if ($triangleDirection == right)  { border-color: transparent $triangleColor transparent transparent; }
+  border: solid $triangle-size;
+  @if ($triangle-direction == top)    { border-color: $triangle-color transparent transparent transparent; }
+  @if ($triangle-direction == bottom) { border-color: transparent transparent $triangle-color transparent; }
+  @if ($triangle-direction == left)   { border-color: transparent transparent transparent $triangle-color; }
+  @if ($triangle-direction == right)  { border-color: transparent $triangle-color transparent transparent; }
 }
 
 

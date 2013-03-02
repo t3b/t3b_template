@@ -54,16 +54,16 @@ $ Contenttable-1
   </table>
 ================================================================================ */
 .contenttable-1 {
-  border: 1px solid $basicBorderColor;
+  border: 1px solid $basic-border-color;
   border-collapse: separate;
   td, th {
-    border-left: 1px solid $basicBorderColor;
-    border-bottom: 1px solid $basicBorderColor;
+    border-left: 1px solid $basic-border-color;
+    border-bottom: 1px solid $basic-border-color;
     padding: 0.5em;
   }
 
-  .tr-even { background: $contentBackground; }
-  .tr-odd { background: color-adjust($contentBackground, 5%); }
+  .tr-even { background: $content-background; }
+  .tr-odd { background: color-adjust($content-background, 5%); }
   .tr-last td { border-bottom: 0; }
   .td-0 { border-left: 0; }
 }
@@ -104,7 +104,7 @@ $ Contenttable-2
 ================================================================================ */
 .contenttable-2 {
   td, th {
-    border-bottom: 1px solid $basicBorderColor;
+    border-bottom: 1px solid $basic-border-color;
     padding: 0.5em;
   }
   th { padding-top: 0; }
@@ -146,7 +146,7 @@ $ Contenttable-3
 ================================================================================ */
 .contenttable-3 {
   td, th {
-    border-bottom: 1px solid $basicBorderColor;
+    border-bottom: 1px solid $basic-border-color;
     padding: 0.25em 0.5em 0.25em;
   }
   th { padding-top: 0; }

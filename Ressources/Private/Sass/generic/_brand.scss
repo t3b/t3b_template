@@ -11,11 +11,11 @@
 $ Brand styles
 ================================================================================ */
 .brand {
-  font-family: $brandFontFamily;
-  color: $brandColor;
+  font-family: $brand-font-family;
+  color: $brand-color;
 }
-.brand-color { color: $brandColor; }
-.brand-face { font-family: $brandFontFamily; }
+.brand-color { color: $brand-color; }
+.brand-face { font-family: $brand-font-family; }
 
 .brand-logo {
   // If you want to use the image-replacement technique,

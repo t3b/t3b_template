@@ -43,7 +43,7 @@ figure {
   margin: 0;
 }
 figcaption { /* 6 */
-  @include font-size(($baseFontSize - 2));
+  @include font-size(($base-font-size - 2));
 }
 iframe {
   @extend %margin-bottom;

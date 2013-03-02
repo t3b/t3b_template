@@ -15,14 +15,14 @@ body {
    */
   margin: 0;
 
-  font: $baseFontWeight #{$baseFontSize/16*100}%/#{$baseLineHeight/$baseFontSize} $baseFontFamily;
+  font: $base-font-weight #{$base-font-size/16*100}%/#{$base-line-height/$base-font-size} $base-font-family;
   text-align: $start;
-  color: $baseTextColor;
-  background: $bodyBackground;
+  color: $base-text-color;
+  background: $body-background;
 }
 .site-wrapper {
-  @if $centeredLayout { margin-left: auto; margin-right: auto; }
-  width: $layoutWidth;
+  @if $centered-layout { margin-left: auto; margin-right: auto; }
+  width: $layout-width;
   position: relative;
 }
 .site-header { }
