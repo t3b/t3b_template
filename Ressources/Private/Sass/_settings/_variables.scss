@@ -138,3 +138,10 @@ $button-color:           color-adjust($brand-color, 100%) !default;
 // Default styling for horizontal rules and bordered elements like tables
 $basic-border-color:      color-adjust($content-background, 20%) !default;
 $basic-border-style:      solid !default;
+
+
+// =============================================================================
+// Compass default variables
+// =============================================================================
+// Sets the default border-radius for the compass mixin 'border-radius'
+$default-border-radius:   $brand-border-radius;
