@@ -18,9 +18,5 @@ $ Brand styles
 .brand-face { font-family: $brand-font-family; }
 
 .brand-logo {
-  // If you want to use the image-replacement technique,
-  // replace 'false' with the image-name of your brand logo
-  // e.g.:
-  // @include image-replacement('brand_logo.gif', $display-mode: inline-block);
   @include image-replacement($image: $brand-logo_image, $display-mode: inline-block);
 }
