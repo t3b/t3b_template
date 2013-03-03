@@ -19,9 +19,6 @@ a {
     text-decoration: underline;
   }
   &:focus {
-    /**
-     * Addresses `outline` inconsistency between Chrome and other browsers.
-     */
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -1px;
