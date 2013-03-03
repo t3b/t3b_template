@@ -170,7 +170,7 @@ $ Form-Inline abstraction
     margin-#{$end}: .3em;
   }
   .label--checkbox {
-    input { margin-right: .35em; }
+    input { margin-#{$end}: .35em; }
     margin-#{$end}: 1em;
   }
   input { margin-#{$end}: 1em; }
