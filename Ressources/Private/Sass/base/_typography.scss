@@ -160,7 +160,7 @@ ul, dl, menu { margin-top: 0; }
 
 /* Half spacing */
 %half-margin-top,
-.half-basic_spacing-top {
+.half_spacing-top {
   @include rem(margin-top, $half-spacing);
 }
 
