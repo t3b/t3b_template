@@ -30,8 +30,8 @@
 // @extends the .ir rule inside the _helper.scss file.
 // Default $display-mode is set to 'block'.
 // e.g.:
-// .site-logo {
-//   @include image-replacement('logo.png');
+// .image {
+//   @include image-replacement('image.png');
 // }
 // =============================================================================
 @mixin image-replacement($image, $display-mode: block) {
