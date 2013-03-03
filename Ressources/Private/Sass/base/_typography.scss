@@ -17,6 +17,7 @@ $ Typography Elements
                gist.github.com/413930
 ================================================================================ */
 p {
+  @extend %reset-margin-top;
   @extend %margin-bottom;
 }
 b,
@@ -65,6 +66,7 @@ pre {
    * Improves readability of pre-formatted text in all browsers.
    */
   white-space: pre-wrap;
+  @extend %reset-margin-top;
   @extend %margin-bottom;
 }
 
@@ -147,9 +149,8 @@ $ Typographic Helper Classes
   @include hyphens(manual);
 }
 
-/* =================== UA-Style margin-reset =================== */
-p, pre, ol,
-ul, dl, menu { margin-top: 0; }
+/* ======================= Margin-reset ======================== */
+%reset-margin-top { margin-top: 0; }
 
 /* ======================== Top margins ======================== */
 /* Basic spacing */

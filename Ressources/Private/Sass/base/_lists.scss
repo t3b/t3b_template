@@ -13,6 +13,7 @@ menu,
 ol,
 ul {
   padding: 0 0 0 40px;
+  @extend %reset-margin-top;
   @extend %margin-bottom;
 }
 li > ul,
@@ -40,6 +41,7 @@ li > ol {
 $ Definitions
 ================================================================================ */
 dl {
+  @extend %reset-margin-top;
   @extend %margin-bottom;
 }
 @if $oldIE {
