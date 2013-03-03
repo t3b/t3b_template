@@ -8,7 +8,7 @@
 
 
 // =============================================================================
-// Image-Dimensions
+// Image-Dimensions Mixin
 // =============================================================================
 // Get the dimensions of an image inside the 'images_dir' as specified in the
 // config.rb file
@@ -24,7 +24,7 @@
 
 
 // =============================================================================
-// Image-Replacement Helper
+// Image-Replacement Mixin
 // =============================================================================
 // A image-replacement mixin wich generates the image-dimensions as CSS rules and
 // @extends the .ir rule inside the _helper.scss file.
@@ -76,7 +76,7 @@
 
 
 // =============================================================================
-// CSS3 Triangle
+// Triangle Mixin
 // =============================================================================
 // Create a css arrow as per http://cssarrowplease.com/
 // e.g.:
@@ -98,7 +98,7 @@
 
 
 // =============================================================================
-// CSS Viewport rule Mixin
+// Viewport Mixin
 // =============================================================================
 // Basicly the same as <meta name="viewport" content="width=device-width">
 // but the future proof way.
@@ -147,7 +147,7 @@
 
 
 // =============================================================================
-// CSS Hyphens mixin
+// Hyphens mixin
 // =============================================================================
 @mixin hyphens($arg) {
   -webkit-hyphens: $arg;
