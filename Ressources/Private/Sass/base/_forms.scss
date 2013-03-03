@@ -71,7 +71,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
-  margin-bottom: $base-font-size / 2 +px;
+  @include rem(margin-bottom, $half-spacing);
   /**
    * Set in em's so we can change the size of the button depending on the font-size
    */
