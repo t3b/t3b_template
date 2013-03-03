@@ -58,7 +58,7 @@ samp {
    * Corrects font family set oddly in Safari 5 and Chrome.
    */
   font-family: $mono-font-family;
-  @if $oldIE { _font-family: 'courier new', monospace; }
+  @if $legacy-normalizecss { _font-family: 'courier new', monospace; }
   font-size: 1em;
 }
 pre {
@@ -80,7 +80,7 @@ q {
    */
   quotes: "\201C" "\201D" "\2018" "\2019";
 
-  @if $oldIE {
+  @if $legacy-normalizecss {
     &:before,
     &:after {
       /*

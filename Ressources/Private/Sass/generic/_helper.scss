@@ -21,7 +21,7 @@
   background-color: transparent;
   border: 0;
   overflow: hidden;
-  @if $oldIE {
+  @if $legacy-support-for-ie7 {
     /* IE 6/7 fallback */
     *text-indent: -9999px;
   }
@@ -78,7 +78,7 @@
  */
 .cf,
 .clearfix {
-  @if $oldIE {
+  @if $legacy-support-for-ie7 {
     *zoom:1;
   }
   &:before, &:after { content: ""; display: table; }

@@ -43,7 +43,7 @@ $ Navigation Object
   display: table;
   width: 100%;
 
-  @if $oldIE == true {
+  @if $legacy-support-for-ie7 {
     li { display: table-cell; }
     li li { display: inline-block; }
   } @else {

@@ -23,7 +23,7 @@ $ Border-Box
 ================================================================================ */
 *, *:before, *:after {
   @include box-sizing(border-box);
-  @if $oldIE {
+  @if $legacy-support-for-ie7 {
     /**
      * Cross browser Border-box
      *

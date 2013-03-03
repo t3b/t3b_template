@@ -17,20 +17,18 @@ $template-path:         "typo3conf/ext/#{$package_name}/" !default;
 // Is this project a responsive one?
 $responsive:            false !default;
 
-// Does this stylesheet need support for older browsers?
-//
-// Support-table for $oldIE: false;
+// Legacy browser support
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$legacy-support-for-ie8: true;
+
+// Browser support for 'false'
 // Google Chrome
 // Mozilla Firefox 4+
 // Apple Safari 5+
 // Opera 12+
 // Internet Explorer 8+
-$oldIE:                 false !default;
-
-// Compass legacy support
-$legacy-support-for-ie6: false !default;
-$legacy-support-for-ie7: false !default;
-$legacy-support-for-ie8: true !default;
+$legacy-normalizecss:   false !default;
 
 // Reading direction of this project, if set to 'rtl' texts, labels
 // and the grid will be aligned to the right side of the document

@@ -104,7 +104,7 @@ fieldset {
   padding: 0;
 }
 form {
-  @if $oldIE {
+  @if $legacy-normalizecss {
     /**
      * Corrects margin displayed oddly in IE6/7.
      */
@@ -134,7 +134,7 @@ legend {
   border-bottom: 1px $basic-border-style $basic-border-color;
 
   padding: 0;
-  @if $oldIE {
+  @if $legacy-normalizecss {
     /**
      * Corrects text not wrapping in FF3.
      */
