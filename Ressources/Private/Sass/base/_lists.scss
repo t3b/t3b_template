@@ -12,7 +12,7 @@ $ Lists
 menu,
 ol,
 ul {
-  padding: 0 0 0 40px;
+  padding: 0 0 0 rs(40);
   @extend %reset-margin-top;
   @extend %margin-bottom;
 }
