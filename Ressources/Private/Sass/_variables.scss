@@ -110,6 +110,7 @@ $h6-size:               14;
 // Layout
 // =============================================================================
 // Basic layout width (in pixels) - will be set on the '.site-wrapper' class
+// The value is wrapped in the relative-size function wich converts pixels into em's
 $layout-width:          rs(960);
 
 // Is this layout centered? If set to 'true' the '.wrapper' class will be centered
