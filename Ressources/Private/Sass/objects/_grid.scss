@@ -37,10 +37,3 @@ $ Grid Classes
   padding-left: ($column-gutter / 2);
   padding-right: ($column-gutter / 2);
 }
-
-/* =================== Grid item abstractions ==================== */
-.grid-item--centered {
-  margin-left: auto;
-  margin-right: auto;
-  float: none;
-}
