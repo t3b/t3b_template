@@ -14,6 +14,9 @@
 // this has to be relative to the .html document
 $template-path:         "typo3conf/ext/#{$package_name}/" !default;
 
+// Set the box-sizing of all elements to 'border-box'
+$global-border-box:     true !default;
+
 // Is this project a responsive one?
 $responsive:            false !default;
 
