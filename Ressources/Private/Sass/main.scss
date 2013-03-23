@@ -19,7 +19,8 @@ $package_name: t3b_frontend;
 // 2. "_settings/_all"          - Mixins, functions and default vars from t3b_frontend
 // =============================================================================
 @import "compass/css3",
-        "_settings/_all";
+        "_settings/_all",
+        "_variables";
 
 
 // =============================================================================
