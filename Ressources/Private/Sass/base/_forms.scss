@@ -166,7 +166,6 @@ $ Form-Inline abstraction
 ================================================================================ */
 .form--inline {
   label {
-    display: inline-block;
     margin-#{$end}: .3em;
   }
   .label--checkbox {
@@ -174,6 +173,7 @@ $ Form-Inline abstraction
     margin-#{$end}: 1em;
   }
   input { margin-#{$end}: 1em; }
+  label,
   button,
   input,
   select,
