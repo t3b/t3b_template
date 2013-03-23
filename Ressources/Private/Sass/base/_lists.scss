@@ -75,14 +75,14 @@ $ Horizontal definition abstraction
 .dl--horizontal {
   @extend .cf;
   dt {
-    float: left;
+    float: $start;
     width: 19%;
     overflow: hidden;
-    clear: left;
-    text-align: right;
+    clear: $start;
+    text-align: $end;
     @extend .text-break;
   }
   dd {
-    margin-left: 21%;
+    margin-#{$start}: 21%;
   }
 }
