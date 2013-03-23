@@ -44,8 +44,8 @@ dl {
   @extend %reset-margin-top;
   @extend %margin-bottom;
 }
-@if $legacy-normalizecss {
-  dd {
+dd {
+  @if $legacy-normalizecss {
     /**
      * Addresses margins set differently in IE6/7.
      */
