@@ -1,10 +1,10 @@
-/*!
+@if compass-env() == 'development' {/*!
  * Declarations wich should be put at the top of the document e.g.
  * @font-face declarations and CSS viewports
  *
  * @package #{$package_name()}
  * @path generic/_head.scss
- */
+ */}
 
 
 // Disabled until the WP8 CSS Viewport bug is fixed.

@@ -1,10 +1,10 @@
-/*!
+@if compass-env() == 'development' {/*!
  * Basic styling for media elements e.g.
  * <img>, <video>, <svg>, <augio>
  *
  * @package #{$package_name()}
  * @path base/_media.scss
- */
+ */}
 
 
 /* =============================================================================

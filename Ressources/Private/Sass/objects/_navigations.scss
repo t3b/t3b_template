@@ -1,4 +1,4 @@
-/*!
+@if compass-env() == 'development' {/*!
  * A modified version of the navigation object from
  * inuit.css <https://github.com/csswizardry/inuit.css/>
  *
@@ -6,7 +6,7 @@
  * @path objects/_navigations.scss
  * @license Apache License, Version 2.0.
  * @link http://csswizardry.com/2011/09/the-nav-abstraction/
- */
+ */}
 
 
 /* =============================================================================

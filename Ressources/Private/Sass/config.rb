@@ -31,7 +31,10 @@ javascripts_dir = "../../Public/Javascripts"
 # =============================================================================
 # COMPASS COMPRESSION SETTINGS
 # =============================================================================
+# CSS Output style - Options are the following: ':nested', ':expanded', ':compact' or ':compressed'
 output_style = :compressed
+
+# Compass Environment - Setting this to ':production' will remove all sub file-header comments
 environment = :development
 
 # Uncomment this line and set the output style to ":nested" to enable SASS Sourcemaps in Chrome

@@ -1,4 +1,4 @@
-/*!
+@if compass-env() == 'development' {/*!
  * Basic button structural styling from
  * inuit.css <https://github.com/csswizardry/inuit.css/>
  *
@@ -6,7 +6,7 @@
  * @path objects/_buttons.scss
  * @license Apache License, Version 2.0.
  * @link http://csswizardry.com/2011/09/the-nav-abstraction/
- */
+ */}
 
 
 /* =============================================================================

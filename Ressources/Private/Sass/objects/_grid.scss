@@ -1,9 +1,9 @@
-/*!
+@if compass-env() == 'development' {/*!
  * Gernerated- & Helper-classes for a column based grid
  *
  * @package #{$package_name()}
  * @path generic/_grid.scss
- */
+ */}
 
 
 // =============================================================================

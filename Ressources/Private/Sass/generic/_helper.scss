@@ -1,10 +1,10 @@
-/*!
+@if compass-env() == 'development' {/*!
  * Helper Classes from the boilerplate project
  *
  * @package #{$package_name()}
  * @path generic/_helper.scss
  * @link http://html5boilerplate.com/docs/css/#non-semantic-helper-classes
- */
+ */}
 
 
 /**

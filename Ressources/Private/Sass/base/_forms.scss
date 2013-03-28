@@ -1,9 +1,9 @@
-/*!
+@if compass-env() == 'development' {/*!
  * Basic styling for forms and inputs
  *
  * @package #{$package_name()}
  * @path base/_forms.scss
- */
+ */}
 
 
 /* =============================================================================
