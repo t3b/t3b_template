@@ -150,16 +150,27 @@ $basic-border-style:    solid;
 // =============================================================================
 // Forms
 // =============================================================================
-$text-input-height:     $base-line-height +px; // The height of the element itself
-$text-input-spacing:    $half-spacing; // The basic bottom-margin on all text-inputs
+// The height of the element itself
+$text-input-height:     $base-line-height +px;
+
+// The basic bottom-margin on all text-inputs
+$text-input-spacing:    $half-spacing;
+
 $text-input-border:     1px solid $basic-border-color;
 $text-input-borderRadius: $brand-border-radius;
 $text-input-boxShadow:  inset 0 1px 1px rgba(#000, 0.075);
-
 $text-input-fontSize:   14;
 $text-input-color:      lighten($base-text-color, 5%);
 
-// Default background and color for submit buttons and the 'btn' object
+
+// =============================================================================
+// Buttons
+// =============================================================================
+// The basic bottom-margin on all text-inputs
+$button-spacing:        $half-spacing;
+// Set in em's so we can change the size of the button depending on the font-size
+$button-inner-spacing:  0.5em 0.75em;
+$button-font-size:      .8em;
 $button-background:     $brand-color;
 $button-color:          color-adjust($brand-color, 100%);
 

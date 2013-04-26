@@ -70,17 +70,17 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
-  @include rem(margin-bottom, $half-spacing);
+  @include rem(margin-bottom, $button-spacing);
   /**
    * Set in em's so we can change the size of the button depending on the font-size
    */
-  padding: 0.5em 0.75em;
+  padding: $button-inner-spacing;
 
   border: 0;
   border-radius: $brand-border-radius;
   background: $button-background;
 
-  font-size: .8em;
+  font-size: $button-font-size;
   /**
    * Normalize the font-weight accross <input>, <button> and the .btn class
    */

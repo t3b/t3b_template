@@ -15,9 +15,9 @@ $global-border-box:     true !default;
 $responsive:            false !default;
 
 // Legacy browser support
-$legacy-support-for-ie6: false;
-$legacy-support-for-ie7: false;
-$legacy-support-for-ie8: true;
+$legacy-support-for-ie6: false !default;
+$legacy-support-for-ie7: false !default;
+$legacy-support-for-ie8: true !default;
 $legacy-normalizecss:   false !default;
 
 $direction:             ltr !default;
@@ -83,13 +83,30 @@ $mq-unit:               1px !default;
 // Design related variables
 // =============================================================================
 $link-color:            $brand-color !default;
-$button-background:     $brand-color !default;
-$button-color:          color-adjust($brand-color, 100%) !default;
 $basic-border-color:    color-adjust($content-background, 20%) !default;
 $basic-border-style:    solid !default;
 
 
 // =============================================================================
+// Forms
+// =============================================================================
+$text-input-height:     $base-line-height +px !default;
+$text-input-spacing:    $half-spacing !default;
+$text-input-border:     1px solid $basic-border-color !default;
+$text-input-borderRadius: $brand-border-radius !default;
+$text-input-boxShadow:  inset 0 1px 1px rgba(#000, 0.075) !default;
+
+$text-input-fontSize:   14 !default;
+$text-input-color:      lighten($base-text-color, 5%) !default;
+
+$button-spacing:        $half-spacing !default;
+$button-inner-spacing:  0.5em 0.75em !default;
+$button-font-size:      .8em !default;
+$button-background:     $brand-color !default;
+$button-color:          color-adjust($brand-color, 100%) !default;
+
+
+// =============================================================================
 // Compass default variables
 // =============================================================================
-$default-border-radius: $brand-border-radius;
+$default-border-radius: $brand-border-radius !default;
