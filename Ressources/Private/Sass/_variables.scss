@@ -142,13 +142,17 @@ $mq-unit:               1px;
 // Default color for all anchors and links
 $link-color:            $brand-color;
 
-// Default background and color for submit buttons and the 'btn' object
-$button-background:     $brand-color;
-$button-color:          color-adjust($brand-color, 100%);
-
 // Default styling for horizontal rules and bordered elements like tables
 $basic-border-color:    color-adjust($content-background, 20%);
 $basic-border-style:    solid;
+
+
+// =============================================================================
+// Forms
+// =============================================================================
+// Default background and color for submit buttons and the 'btn' object
+$button-background:     $brand-color;
+$button-color:          color-adjust($brand-color, 100%);
 
 
 // =============================================================================
