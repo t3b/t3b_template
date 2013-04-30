@@ -1,0 +1,15 @@
+{namespace t3bc=T3b\T3bCommon\ViewHelpers}
+
+<t3bc:resource.css src="EXT:t3b_frontend/Resources/Public/Stylesheets/main.css" />
+<t3bc:resource.js src="EXT:t3b_frontend/Resources/Public/Javascripts/Libaries/modernizr-2.6.2.min.js" />
+
+
+<f:render partial="Page/Header" arguments="{_all}" />
+<div class="site-content" role="main">
+	<div class="site-wrapper">
+		<!-- TYPO3SEARCH_begin -->
+		<f:render section="Main" arguments="{_all}" />
+		<!-- TYPO3SEARCH_end -->
+	</div>
+</div>
+<f:render partial="Page/Footer" arguments="{_all}" />
