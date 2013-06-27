@@ -12,41 +12,36 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'T3B FrontEnd Package',
-	'description' => 'Base template configuration for website',
-	'category' => 'T3B',
+	'description' => 'Templates, images, SASS and CSS for this site',
+	'category' => 'misc',
 	'author' => 'Tyll Weiß',
 	'author_email' => 'inkdpixels@googlemail.com',
 	'author_company' => '',
 	'shy' => '',
-	'dependencies' => 'cms,extbase,fluid,t3b_config,t3b_common,t3b_templating',
-	'conflicts' => '',
 	'priority' => '',
 	'module' => '',
 	'state' => 'alpha',
 	'internal' => '',
-	'uploadfolder' => 0,
+	'uploadfolder' => 1,
 	'createDirs' => '',
 	'modify_tables' => '',
-	'clearCacheOnLoad' => 1,
+	'clearCacheOnLoad' => 0,
 	'lockType' => '',
-	'version' => '1.1.9',
+	'version' => '1.1.2',
 	'constraints' => array(
 		'depends' => array(
-			'php' => '5.3.0-0.0.0',
-			'typo3' => '4.6.0-0.0.0',
-			'cms' => '',
-			'extbase' => '',
-			'fluid' => '',
-			't3b_config' => '',
-			'gridelements' => '',
-			'dam_pages' => '1.0.1'
+			'typo3' => '6.0.0',
+				'extbase' => '6.0.0',
+				'fluid' => '6.0.0',
+			't3b_templating' => '',
+			't3b_common' => '',
+			'fluidpages' => '',
 		),
 		'conflicts' => array(
 		),
 		'suggests' => array(
+			't3b_config' => '',
 		),
-	),
-	'suggests' => array(
 	)
 );
 
