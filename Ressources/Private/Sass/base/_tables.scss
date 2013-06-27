@@ -9,24 +9,34 @@
 /* =============================================================================
 $ Tables
 ================================================================================ */
+// Table reset
 table {
-  width: 100%;
-  margin-top: 0;
-  @extend %margin-bottom;
+  max-width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
 }
-th { text-align: $start; }
-th, td { vertical-align: top; }
+th {
+  text-align: $start;
+  vertical-align: bottom;
+}
+td { vertical-align: top; }
+
+// Base class for all table-styles
+.table {
+  width: 100%;
+  margin-top: 0;
+  @extend %margin-bottom;
+  td, th { padding: 0.5em; }
+}
 
 
 /* =============================================================================
-$ Contenttable-1
+$ Table bordered
 ================================================================================
- * Extends the basic table styles
- * Bordered table with an odd & even changing background-color e.g.
+ * Extends the base '.table' class to an basic bordered table
+ * e.g.
  *
-  <table class="contenttable-1">
+  <table class="table table--bordered">
     <thead>
       <tr>
         <th class="td-0">Name</th>
@@ -35,17 +45,17 @@ $ Contenttable-1
       </tr>
     </thead>
     <tbody>
-      <tr class="tr-odd">
+      <tr>
         <td class="td-0">Max Mustermann</td>
         <td>20</td>
         <td>Berlin</td>
       </tr>
-      <tr class="tr-even">
+      <tr>
         <td class="td-0">Max Mustermann</td>
         <td>20</td>
         <td>Berlin</td>
       </tr>
-      <tr class="tr-odd tr-last">
+      <tr class="tr-last">
         <td class="td-0">Max Mustermann</td>
         <td>20</td>
         <td>Berlin</td>
@@ -53,29 +63,25 @@ $ Contenttable-1
     </tbody>
   </table>
 ================================================================================ */
-.contenttable-1 {
+.table--bordered {
   border: 1px solid $basic-border-color;
   border-collapse: separate;
   td, th {
     border-left: 1px solid $basic-border-color;
     border-bottom: 1px solid $basic-border-color;
-    padding: 0.5em;
   }
-
-  .tr-even { background: $content-background; }
-  .tr-odd { background: color-adjust($content-background, 5%); }
   .tr-last td { border-bottom: 0; }
   .td-0 { border-left: 0; }
 }
 
 
 /* =============================================================================
-$ Contenttable-2
+$ Table striped
 ================================================================================
- * Extends the basic table styles
- * Clean table with borders below each row e.g.
+ * Extends the base '.table' class to an clean table with
+ * borders below each row e.g.
  *
-  <table class="contenttable-2">
+  <table class="table table--striped">
     <thead>
       <tr>
         <th>Name</th>
@@ -102,22 +108,19 @@ $ Contenttable-2
     </tbody>
   </table>
 ================================================================================ */
-.contenttable-2 {
-  td, th {
-    border-bottom: 1px solid $basic-border-color;
-    padding: 0.5em;
-  }
+.table--striped {
+  td, th { border-bottom: 1px solid $basic-border-color; }
   th { padding-top: 0; }
 }
 
 
 /* =============================================================================
-$ Contenttable-3
+$ Table condensed
 ================================================================================
- * Extends the basic table styles
- * Clean condensed table with borders below each row e.g.
+ * Extends the base '.table' class to an condensed table
+ * e.g.
  *
-  <table class="contenttable-3">
+  <table class="table table--condensed">
     <thead>
       <tr>
         <th>Name</th>
@@ -144,10 +147,45 @@ $ Contenttable-3
     </tbody>
   </table>
 ================================================================================ */
-.contenttable-3 {
-  td, th {
-    border-bottom: 1px solid $basic-border-color;
-    padding: 0.25em 0.5em 0.25em;
-  }
-  th { padding-top: 0; }
+.table--condensed {
+  td, th { padding: 0.25em 0.5em 0.25em; }
+}
+
+
+/* =============================================================================
+$ Table zebra
+================================================================================
+ * Extends the base '.table' class to an 'zebra'-styled table with
+ * odd & even changing background-colors e.g.
+ *
+  <table class="table table--zebra">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Residence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="tr-odd">
+        <td>Max Mustermann</td>
+        <td>20</td>
+        <td>Berlin</td>
+      </tr>
+      <tr class="tr-even">
+        <td>Max Mustermann</td>
+        <td>20</td>
+        <td>Berlin</td>
+      </tr>
+      <tr class="tr-odd">
+        <td>Max Mustermann</td>
+        <td>20</td>
+        <td>Berlin</td>
+      </tr>
+    </tbody>
+  </table>
+================================================================================ */
+.table--zebra {
+  .tr-even { background: $content-background; }
+  .tr-odd { background: color-adjust($content-background, 5%); }
 }
