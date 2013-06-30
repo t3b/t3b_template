@@ -1,6 +1,6 @@
 {
 	"name": "t3b_frontend",
-	"description": "Templates, images, SASS and CSS for this site",
+	"description": "A Kickstarter Template-Extension wich is based on Fluid and Compass",
 	"version": "1.1.2",
 	"homepage": "https://github.com/t3b/t3b_frontend",
 	"author": {
