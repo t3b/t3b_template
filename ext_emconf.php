@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'T3B FrontEnd Package',
-	'description' => 'Templates, images, SASS and CSS for this site',
+	'description' => 'A Kickstarter Template-Extension wich is based on Fluid and Compass',
 	'category' => 'misc',
 	'author' => 'Tyll Weiß',
 	'author_email' => 'inkdpixels@googlemail.com',
