@@ -1,7 +1,7 @@
 {
 	"name": "t3b_template",
 	"description": "A Kickstarter Template-Extension wich is based on Fluid and Compass",
-	"version": "1.1.2",
+	"version": "1.2.0",
 	"homepage": "https://github.com/t3b/t3b_template",
 	"author": {
 		"name": "Tylls Weiß",

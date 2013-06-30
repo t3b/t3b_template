@@ -1,3 +1,30 @@
+## 1.2.0
+**General**
+* Added t3b_common & t3b_templating as dependencies
+* Added a basic Fluid based template setup
+* Added a automated build process based on Grunt.js
+* Renamed this extension from t3b_frontend to t3b_template
+
+**HTML/Fluid**
+* Added a standard grid-element (Two-Columns)
+* Added a standard grid-element (Three-Columns)
+* Added a standard grid-element (Four-Columns)
+* Switched the `.site-content` `div`-element to an `main`-element
+* Removed the chromeframe toolbar
+* Removed the commented jQuery CDN snippet from h5bp
+* Removed the commented RWD meta viewport tag
+
+**SCSS**
+* Added a `_brand.scss` file for all brand related styles
+* Added a `_defaults.scss` variable file and a seperate project variable file
+* Added a `rem` unit @mixin
+* Added a enhanced version of the image-replacement @mixin
+* Fixed the body line-height calculation
+* Embraced the use of `em` and `rem` as the unit of choice
+* Renamed `%non-print` to `%print-hidden`
+* Renamed all `$variables` into the scheme wich compass uses
+* Removed the old grid system in favor of the widths object from [inuit.css](https://github.com/csswizardry/inuit.css/)
+
 ## 1.1.9
 **General**
 * Added a basic ext_ file setup
