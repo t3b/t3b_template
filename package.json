@@ -1,8 +1,8 @@
 {
-	"name": "t3b_frontend",
+	"name": "t3b_template",
 	"description": "A Kickstarter Template-Extension wich is based on Fluid and Compass",
 	"version": "1.1.2",
-	"homepage": "https://github.com/t3b/t3b_frontend",
+	"homepage": "https://github.com/t3b/t3b_template",
 	"author": {
 		"name": "Tylls Weiß",
 		"email" : "inkdpixels@gmail.com",
@@ -10,10 +10,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/t3b/t3b_frontend.git"
+		"url": "git://github.com/t3b/t3b_template.git"
 	},
 	"bugs": {
-		"url": "https://github.com/t3b/t3b_frontend/issues"
+		"url": "https://github.com/t3b/t3b_template/issues"
 	},
 	"keywords": [
     "typo3", "t3b", "extension", "fluid", "sass"

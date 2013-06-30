@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 				src: ['<%= globalConfig.private %>/Layouts/*.html'],
 				overwrite: true, // overwrite matched source files
 				replacements: [{
-					from: 'EXT:t3b_frontend',
+					from: 'EXT:t3b_template',
 					to: 'EXT:<%= pkg.name %>'
 				}]
 			},

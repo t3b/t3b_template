@@ -1,12 +1,12 @@
 # Set the correct paths for EXT/t3b_templating
 plugin.tx_t3btemplating.view {
-	templateRootPath = EXT:t3b_frontend/Resources/Private/Templates/
-	partialRootPath = EXT:t3b_frontend/Resources/Private/Partials/
-	layoutRootPath = EXT:t3b_frontend/Resources/Private/Layouts/
+	templateRootPath = EXT:t3b_template/Resources/Private/Templates/
+	partialRootPath = EXT:t3b_template/Resources/Private/Partials/
+	layoutRootPath = EXT:t3b_template/Resources/Private/Layouts/
 }
 
 # Set a website icon (favicon)
-# plugin.t3b_config.settings.page.shortcutIcon = EXT:t3b_frontend/Resources/Public/Images/favicon.ico
+# plugin.t3b_config.settings.page.shortcutIcon = EXT:t3b_template/Resources/Public/Images/favicon.ico
 
 # Set the max image-width for css_styled_content (This should have same value as the variable '$layout-width' in /Ressources/Private/Sass/_variables.scss)
 # styles.content.imgtext.maxW = 960

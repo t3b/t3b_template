@@ -1,7 +1,7 @@
 <?php
 
 ########################################################################
-# Extension Manager/Repository config file for ext "t3b_frontend".
+# Extension Manager/Repository config file for ext "t3b_template".
 #
 # Auto generated 20-02-2013 17:01
 #
@@ -11,7 +11,7 @@
 ########################################################################
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'T3B FrontEnd Package',
+	'title' => 'T3B Template Package',
 	'description' => 'A Kickstarter Template-Extension wich is based on Fluid and Compass',
 	'category' => 'misc',
 	'author' => 'Tyll Weiß',
