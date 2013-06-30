@@ -1,7 +1,6 @@
 module.exports = function(grunt) {
 	// Project paths.
 	var globalConfig = {
-		extname: 't3b_frontend',
 		private: 'Ressources/Private',
 		public: 'Ressources/Public'
 	};
