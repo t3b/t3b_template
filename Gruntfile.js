@@ -53,14 +53,17 @@ module.exports = function(grunt) {
 				src: ['<%= globalConfig.private %>/Sass/main.scss'],
 				overwrite: true, // overwrite matched source files
 				replacements: [{
-					from: '$package_name: t3b_frontend;',
-					to: '$package_name: <%= pkg.name %>;'
+					from: 'pkg.name',
+					to: '<%= pkg.name %>'
 				}, {
 					from: 'pkg.author.name',
 					to: '<%= pkg.author.name %>'
 				}, {
 					from: 'pkg.author.email',
 					to: '<%= pkg.author.email %>'
+				}, {
+					from: 'pkg.homepage',
+					to: '<%= pkg.homepage %>'
 				}]
 			}
 		},
