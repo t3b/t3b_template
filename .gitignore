@@ -3,3 +3,6 @@ Ressources/Public/Stylesheets/*.css
 
 # Unfinished extension documentation
 Docs/*
+
+# Node.js modules
+node_modules/*
