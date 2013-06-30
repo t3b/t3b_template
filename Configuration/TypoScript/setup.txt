@@ -1,2 +1,3 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:faehre_template/Configuration/TypoScript/Includes/FluidPages.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:faehre_template/Configuration/TypoScript/Includes/FluidContent.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:faehre_template/Configuration/TypoScript/Includes/Page.ts">
