@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 		},
 
 		clean: {
-			compass: ['<%= globalConfig.public %>/Stylesheets/*.css']
+			compass: ['<%= compass.options.cssDir %>/*.css']
 		},
 
 		replace: {
@@ -59,7 +59,7 @@ module.exports = function(grunt) {
 				}]
 			},
 			compass: {
-				src: ['<%= globalConfig.private %>/Sass/main.scss'],
+				src: ['<%= compass.options.sassDir %>/main.scss'],
 				overwrite: true, // overwrite matched source files
 				replacements: [{
 					from: 'pkg_name',
