@@ -52,7 +52,7 @@ module.exports = function(grunt) {
 				src: ['<%= globalConfig.private %>/Sass/main.scss'],
 				overwrite: true, // overwrite matched source files
 				replacements: [{
-					from: 'pkg.name',
+					from: 'pkg_name',
 					to: '<%= pkg.name %>'
 				}, {
 					from: 'pkg.author.name',
