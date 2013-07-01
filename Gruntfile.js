@@ -67,10 +67,36 @@ module.exports = function(grunt) {
 			}
 		},
 
+		jshint: {
+      options: {
+        browser: true,
+        curly: false,
+        devel: true,
+        eqeqeq: false,
+        eqnull: true,
+        expr: true,
+        evil: true,
+        smarttabs: true,
+        globals: {
+          Modernizr: true,
+          define: true,
+          require: true
+        }
+      },
+      files: [
+        'Gruntfile.js',
+        '<%= globalConfig.private %>/Javascripts/*.js'
+      ]
+    },
+
 		watch: {
 			compass: {
-				files: ['<%= globalConfig.private %>/Sass/**/*.scss'],
+				files: ['<%= globalConfig.sassDir %>/Sass/**/*.scss'],
 				tasks: ['compass']
+			},
+			jshint : {
+				files: ['<%= jshint.files %>'],
+				tasks: ['jshint']
 			}
 		}
 	});
@@ -79,7 +105,7 @@ module.exports = function(grunt) {
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	// Default grunt task.
-	grunt.registerTask('default', ['compass:dev']);
+	grunt.registerTask('default', ['compass:dev', 'jshint']);
 	// Initialize task (Should be run after installing the extension)
 	grunt.registerTask('init', ['replace', 'compass:dev']);
 	// Deploy task
