@@ -1,4 +1,6 @@
 module.exports = function(grunt) {
+	'use strict';
+
 	// Project paths.
 	var globalConfig = {
 		private: 'Ressources/Private',
