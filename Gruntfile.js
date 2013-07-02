@@ -42,6 +42,14 @@ module.exports = function(grunt) {
 		},
 
 		replace: {
+			extname: {
+				src: ['ext_tables.php'],
+				overwrite: true, // overwrite matched source files
+				replacements: [{
+					from: 't3b_template',
+					to: '<%= pkg.name %>'
+				}]
+			},
 			extpaths: {
 				src: ['Configuration/TypoScript/*.ts', 'Configuration/TypoScript/*.txt', '<%= globalConfig.private %>/Layouts/*.html'],
 				overwrite: true, // overwrite matched source files
