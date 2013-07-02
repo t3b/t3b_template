@@ -102,7 +102,7 @@ module.exports = function(grunt) {
 		watch: {
 			compass: {
 				files: ['<%= globalConfig.sassDir %>/Sass/**/*.scss'],
-				tasks: ['compass']
+				tasks: ['compass:dev']
 			},
 			jshint : {
 				files: ['<%= jshint.files %>'],
