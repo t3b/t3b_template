@@ -12,7 +12,10 @@ $ Links
 a {
   color: $link-color;
   text-decoration: none;
-
+  /**
+   * Remove the gray background color from active links in IE 10.
+   */
+  background: transparent;
   &:hover,
   &:active,
   &:focus {
