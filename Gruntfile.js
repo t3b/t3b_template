@@ -100,6 +100,9 @@ module.exports = function(grunt) {
     },
 
 		watch: {
+			options: {
+	      nospawn: true,
+	    },
 			compass: {
 				files: ['<%= compass.options.sassDir %>/**/*.scss'],
 				tasks: ['compass:dev']
