@@ -78,31 +78,31 @@ module.exports = function(grunt) {
 		},
 
 		jshint: {
-      options: {
-        browser: true,
-        curly: false,
-        devel: true,
-        eqeqeq: false,
-        eqnull: true,
-        expr: true,
-        evil: true,
-        smarttabs: true,
-        globals: {
-          Modernizr: true,
-          define: true,
-          require: true
-        }
-      },
-      files: [
-        'Gruntfile.js',
-        '<%= globalConfig.private %>/Javascripts/*.js'
-      ]
-    },
+			options: {
+				browser: true,
+				curly: false,
+				devel: true,
+				eqeqeq: false,
+				eqnull: true,
+				expr: true,
+				evil: true,
+				smarttabs: true,
+				globals: {
+					Modernizr: true,
+					define: true,
+					require: true
+				}
+			},
+			files: [
+				'Gruntfile.js',
+				'<%= globalConfig.private %>/Javascripts/*.js'
+			]
+		},
 
 		watch: {
 			options: {
-	      nospawn: true,
-	    },
+				nospawn: true,
+			},
 			compass: {
 				files: ['<%= compass.options.sassDir %>/**/*.scss'],
 				tasks: ['compass:dev']
