@@ -12,6 +12,10 @@ module.exports = function(grunt) {
 		globalConfig: globalConfig,
 		pkg: grunt.file.readJSON('package.json'),
 
+
+		// Grunt-Contrib-Compass
+		// Compiles .scss/.sass files to .css using Compass
+		// https://github.com/gruntjs/grunt-contrib-compass
 		compass: {
 			options: {
 				// Specify the config.rb filepath
@@ -37,10 +41,18 @@ module.exports = function(grunt) {
 			}
 		},
 
+
+		// Grunt-Contrib-Clean
+		// Cleans files and folders
+		// https://github.com/gruntjs/grunt-contrib-clean
 		clean: {
 			compass: ['<%= compass.options.cssDir %>/*.css']
 		},
 
+
+		// Grunt-Replace
+		// Replace inline patterns with variables.
+		// https://npmjs.org/package/grunt-replace
 		replace: {
 			extname: {
 				src: ['ext_tables.php'],
@@ -77,6 +89,10 @@ module.exports = function(grunt) {
 			}
 		},
 
+
+		// Grunt-Controb-JSHint
+		// Validate files with JSHint.
+		// https://github.com/gruntjs/grunt-contrib-jshint
 		jshint: {
 			options: {
 				browser: true,
@@ -99,6 +115,10 @@ module.exports = function(grunt) {
 			]
 		},
 
+
+		// Grunt-Controb-Watch
+		// Run tasks whenever watched files change.
+		// https://github.com/gruntjs/grunt-contrib-watch
 		watch: {
 			options: {
 				nospawn: true,
@@ -114,13 +134,21 @@ module.exports = function(grunt) {
 		}
 	});
 
+
 	// Load all grunt-plugins that are specified in the 'package.json' file.
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	// Default grunt task.
+	// Compiles all .scss/.sass files with ':dev' options and
+	// validates all js-files with JSHint.
 	grunt.registerTask('default', ['compass:dev', 'jshint']);
-	// Initialize task (Should be run after installing the extension)
+
+	// Initialize task.
+	// Replaces all t3b_template strings and other meta-data with the data
+	// specified inside the 'package.json'. (Should be run after installing the extension)
 	grunt.registerTask('init', ['replace', 'compass:dev']);
+
 	// Deploy task
+	// Recompiles all .scss/.sass files with ':prod' options (Minified)
 	grunt.registerTask('deploy', ['clean:compass', 'compass:prod']);
 };
