@@ -3,8 +3,8 @@ module.exports = function(grunt) {
 
 	// Project paths.
 	var globalConfig = {
-		private: 'Ressources/Private',
-		public: 'Ressources/Public'
+		private: 'Resources/Private',
+		public: 'Resources/Public'
 	};
 
 	// Project configuration.
