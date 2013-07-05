@@ -172,7 +172,7 @@ $button-spacing:        $half-spacing;
 $button-inner-spacing:  0.5em 0.75em;
 $button-font-size:      .8em;
 $button-background:     $brand-color;
-$button-color:          color-adjust($brand-color, 100%);
+$button-color:          color-adjust($button-background, 100%);
 
 
 // =============================================================================

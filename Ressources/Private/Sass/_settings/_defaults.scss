@@ -103,7 +103,7 @@ $button-spacing:        $half-spacing !default;
 $button-inner-spacing:  0.5em 0.75em !default;
 $button-font-size:      .8em !default;
 $button-background:     $brand-color !default;
-$button-color:          color-adjust($brand-color, 100%) !default;
+$button-color:          color-adjust($button-background, 100%) !default;
 
 
 // =============================================================================
