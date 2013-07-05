@@ -1,0 +1,50 @@
+@if compass-env() == 'development' {/*!
+ * Basic styling for headings and sub-headings
+ *
+ * @package #{$package_name()}
+ * @path base/_headings.scss
+ */}
+
+
+/* =============================================================================
+$ Headings
+================================================================================ */
+h1, h2, h3,
+h4, h5, h6 {
+  @if $headings-font-family { font-family: $headings-font-family; }
+  font-weight: $headings-font-weight;
+  color: $headings-color;
+  /**
+   * Optimized kerning for large font sizes
+   * use this only on large font-sizes (f.e. headings) to avoid performance issues
+   */
+  text-rendering: optimizeLegibility;
+}
+h1, .h1 {
+  @include font-size($h1-size, $append-vrythm: true);
+}
+h2, .h2 {
+  @include font-size($h2-size, $append-vrythm: true);
+}
+h3, .h3 {
+  @include font-size($h3-size, $append-vrythm: true);
+}
+h4, .h4 {
+  @include font-size($h4-size, $append-vrythm: true);
+}
+h5, .h5 {
+  @include font-size($h5-size, $append-vrythm: true);
+}
+h6, .h6 {
+  @include font-size($h6-size, $append-vrythm: true);
+}
+
+
+/* =============================================================================
+$ Sub-Headings
+================================================================================ */
+hgroup {
+  h1, h2, h3,
+  h4, h5, h6 { margin-top: 0; }
+  .csc-firstHeader { margin-bottom: 0; }
+}

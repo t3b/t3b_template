@@ -1,0 +1,191 @@
+@if compass-env() == 'development' {/*!
+ * Basic styling and extended classes for tables
+ *
+ * @package #{$package_name()}
+ * @path base/_tables.scss
+ */}
+
+
+/* =============================================================================
+$ Tables
+================================================================================ */
+// Table reset
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  text-align: $start;
+  vertical-align: bottom;
+}
+td { vertical-align: top; }
+
+// Base class for all table-styles
+.table {
+  width: 100%;
+  margin-top: 0;
+  @extend %margin-bottom;
+  td, th { padding: 0.5em; }
+}
+
+
+/* =============================================================================
+$ Table bordered
+================================================================================
+ * Extends the base '.table' class to an basic bordered table
+ * e.g.
+ *
+  <table class="table table--bordered">
+    <thead>
+      <tr>
+        <th class="td-0">Name</th>
+        <th>Age</th>
+        <th>Residence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-0">Max Mustermann</td>
+        <td>20</td>
+        <td>Berlin</td>
+      </tr>
+      <tr>
+        <td class="td-0">Max Mustermann</td>
+        <td>20</td>
+        <td>Berlin</td>
+      </tr>
+      <tr class="tr-last">
+        <td class="td-0">Max Mustermann</td>
+        <td>20</td>
+        <td>Berlin</td>
+      </tr>
+    </tbody>
+  </table>
+================================================================================ */
+.table--bordered {
+  border: 1px solid $basic-border-color;
+  border-collapse: separate;
+  td, th {
+    border-left: 1px solid $basic-border-color;
+    border-bottom: 1px solid $basic-border-color;
+  }
+  .tr-last td { border-bottom: 0; }
+  .td-0 { border-left: 0; }
+}
+
+
+/* =============================================================================
+$ Table striped
+================================================================================
+ * Extends the base '.table' class to an clean table with
+ * borders below each row e.g.
+ *
+  <table class="table table--striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Residence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Max Mustermann</td>
+        <td>20</td>
+        <td>Berlin</td>
+      </tr>
+      <tr>
+        <td>Max Mustermann</td>
+        <td>20</td>
+        <td>Berlin</td>
+      </tr>
+      <tr>
+        <td>Max Mustermann</td>
+        <td>20</td>
+        <td>Berlin</td>
+      </tr>
+    </tbody>
+  </table>
+================================================================================ */
+.table--striped {
+  td, th { border-bottom: 1px solid $basic-border-color; }
+  th { padding-top: 0; }
+}
+
+
+/* =============================================================================
+$ Table condensed
+================================================================================
+ * Extends the base '.table' class to an condensed table
+ * e.g.
+ *
+  <table class="table table--condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Residence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Max Mustermann</td>
+        <td>20</td>
+        <td>Berlin</td>
+      </tr>
+      <tr>
+        <td>Max Mustermann</td>
+        <td>20</td>
+        <td>Berlin</td>
+      </tr>
+      <tr>
+        <td>Max Mustermann</td>
+        <td>20</td>
+        <td>Berlin</td>
+      </tr>
+    </tbody>
+  </table>
+================================================================================ */
+.table--condensed {
+  td, th { padding: 0.25em 0.5em 0.25em; }
+}
+
+
+/* =============================================================================
+$ Table zebra
+================================================================================
+ * Extends the base '.table' class to an 'zebra'-styled table with
+ * odd & even changing background-colors e.g.
+ *
+  <table class="table table--zebra">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Residence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="tr-odd">
+        <td>Max Mustermann</td>
+        <td>20</td>
+        <td>Berlin</td>
+      </tr>
+      <tr class="tr-even">
+        <td>Max Mustermann</td>
+        <td>20</td>
+        <td>Berlin</td>
+      </tr>
+      <tr class="tr-odd">
+        <td>Max Mustermann</td>
+        <td>20</td>
+        <td>Berlin</td>
+      </tr>
+    </tbody>
+  </table>
+================================================================================ */
+.table--zebra {
+  .tr-even { background: $content-background; }
+  .tr-odd { background: color-adjust($content-background, 5%); }
+}

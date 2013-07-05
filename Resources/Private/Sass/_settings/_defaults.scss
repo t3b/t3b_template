@@ -1,0 +1,112 @@
+//
+// Variables, variables, variables!
+//
+// @package #{$package_name()}
+// @path settings/_variables.sass
+// @link http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
+//
+
+
+// =============================================================================
+// Project settings
+// =============================================================================
+$template-path:         "typo3conf/ext/#{$package_name}/" !default;
+$global-border-box:     true !default;
+$responsive:            false !default;
+
+// Legacy browser support
+$legacy-support-for-ie6: false !default;
+$legacy-support-for-ie7: false !default;
+$legacy-support-for-ie8: true !default;
+$legacy-normalizecss:   false !default;
+
+$direction:             ltr !default;
+
+
+// =============================================================================
+// Brand related variables
+// =============================================================================
+$brand-color:           #0097d7 !default;
+$brand-font-family:     "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$brand-border-radius:   1px !default;
+$brand-logo_image:      false !default;
+
+
+// =============================================================================
+// Base Typesetting
+// =============================================================================
+$sans-font-family:      "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$serif-font-family:     Georgia, "Times New Roman", Times, serif !default;
+$mono-font-family:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
+
+$bold:                  700 !default;
+$regular:               400 !default;
+$light:                 300 !default;
+
+$base-font-size:        16 !default;
+$base-line-height:      24 !default;
+$base-font-family:      $sans-font-family !default;
+$base-font-weight:      $regular !default;
+$base-text-color:       #3C474B !default;
+
+$basic-spacing:         $base-line-height !default;
+$half-spacing:          $basic-spacing / 2 !default;
+
+
+// =============================================================================
+// Headings
+// =============================================================================
+$headings-font-family:  false !default;
+$headings-font-weight:  $bold !default;
+$headings-color:        #000 !default;
+
+$h1-size:               36 !default;
+$h2-size:               30 !default;
+$h3-size:               24 !default;
+$h4-size:               20 !default;
+$h5-size:               16 !default;
+$h6-size:               14 !default;
+
+
+// =============================================================================
+// Layout
+// =============================================================================
+$layout-width:          rs(960) !default;
+$centered-layout:       true !default;
+$column-gutter:         20px !default;
+$body-background:       #fff !default;
+$content-background:    #fff !default;
+$mq-unit:               1px !default;
+
+
+// =============================================================================
+// Design related variables
+// =============================================================================
+$link-color:            $brand-color !default;
+$basic-border-color:    color-adjust($content-background, 20%) !default;
+$basic-border-style:    solid !default;
+
+
+// =============================================================================
+// Forms
+// =============================================================================
+$text-input-height:     $base-line-height +px !default;
+$text-input-spacing:    $half-spacing !default;
+$text-input-border:     1px solid $basic-border-color !default;
+$text-input-borderRadius: $brand-border-radius !default;
+$text-input-boxShadow:  inset 0 1px 1px rgba(#000, 0.075) !default;
+
+$text-input-fontSize:   14 !default;
+$text-input-color:      lighten($base-text-color, 5%) !default;
+
+$button-spacing:        $half-spacing !default;
+$button-inner-spacing:  0.5em 0.75em !default;
+$button-font-size:      .8em !default;
+$button-background:     $brand-color !default;
+$button-color:          color-adjust($brand-color, 100%) !default;
+
+
+// =============================================================================
+// Compass default variables
+// =============================================================================
+$default-border-radius: $brand-border-radius !default;

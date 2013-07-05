@@ -1,0 +1,168 @@
+//
+// SASS Mixins
+//
+// @package #{$package_name()}
+// @path settings/_mixins.scss
+// @link http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#mixins
+//
+
+
+// =============================================================================
+// Image-Dimensions Mixin
+// =============================================================================
+// Get the dimensions of an image inside the 'images_dir' as specified in the
+// config.rb file
+// =============================================================================
+@mixin img-wh($img) {
+  width: image-width($img);
+  height: image-height($img);
+}
+@mixin hdpi-img($img) {
+  background-size: image-width($img)/2 image-height($img)/2;
+  background-image: image-url('#{$img}');
+}
+
+
+// =============================================================================
+// Image-Replacement Mixin
+// =============================================================================
+// A image-replacement mixin wich generates the image-dimensions as CSS rules and
+// @extends the .ir rule inside the _helper.scss file.
+// Default $display-mode is set to 'block'.
+// e.g.:
+// .image {
+//   @include image-replacement('image.png');
+// }
+// =============================================================================
+@mixin image-replacement($image, $display-mode: block) {
+  @if $image { // Output the image dimensions if an image is passed as an argument
+    display: $display-mode;
+    @include img-wh('#{$image}');
+    @extend .ir;
+    background-image: image-url('#{$image}');
+  }
+}
+
+
+// =============================================================================
+// REM Unit Mixin
+// =============================================================================
+// Creates a property independent 'rem' calculation with a pixel fallback,
+// default property is set to 'font-size'
+// e.g.:
+// .lead {
+//   @include rem($property: font-size, $value: 18);
+// }
+// =============================================================================
+@mixin rem($property: font-size, $value: 16) {
+  #{$property}: $value +px;
+  #{$property}: ($value / 16)*1rem;
+}
+
+
+// =============================================================================
+// Font-Size Mixin
+// =============================================================================
+// Create a fully formed type style (sizing and vertical rhythm) by passing in a
+// single value
+// Thanks to Harry Roberts (@csswizardry)
+// =============================================================================
+@mixin font-size($size, $append-vrythm: false) {
+  @include rem(font-size, $size);
+  @if $append-vrythm {
+    line-height: ceil($size / $base-line-height) * ($base-line-height / $size);
+  }
+}
+
+
+// =============================================================================
+// Triangle Mixin
+// =============================================================================
+// Create a css arrow as per http://cssarrowplease.com/
+// e.g.:
+// .foo {
+//   @include css-triangle(5px, #fff, bottom);
+// }
+// =============================================================================
+@mixin cssTriangle($triangle-size, $triangle-color, $triangle-direction) {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: solid $triangle-size;
+  @if ($triangle-direction == top)    { border-color: $triangle-color transparent transparent transparent; }
+  @if ($triangle-direction == bottom) { border-color: transparent transparent $triangle-color transparent; }
+  @if ($triangle-direction == left)   { border-color: transparent transparent transparent $triangle-color; }
+  @if ($triangle-direction == right)  { border-color: transparent $triangle-color transparent transparent; }
+}
+
+
+// =============================================================================
+// Viewport Mixin
+// =============================================================================
+// Basicly the same as <meta name="viewport" content="width=device-width">
+// but the future proof way.
+// e.g.:
+// @include viewport($width: device-width, $zoom: 1);
+//
+// @link http://dev.w3.org/csswg/css-device-adapt/
+// =============================================================================
+@mixin viewport($width: false, $height: false, $zoom: false, $orientation: false, $user-zoom: false) {
+  @-webkit-viewport {
+    @if $width       { width: $width; }
+    @if $height      { height: $height; }
+    @if $zoom        { zoom: $zoom; }
+    @if $orientation { orientation: $orientation; }
+    @if $user-zoom   { user-zoom: $user-zoom; }
+  }
+  @-moz-viewport {
+    @if $width       { width: $width; }
+    @if $height      { height: $height; }
+    @if $zoom        { zoom: $zoom; }
+    @if $orientation { orientation: $orientation; }
+    @if $user-zoom   { user-zoom: $user-zoom; }
+  }
+  @-ms-viewport {
+    @if $width       { width: $width; }
+    @if $height      { height: $height; }
+    @if $zoom        { zoom: $zoom; }
+    @if $orientation { orientation: $orientation; }
+    @if $user-zoom   { user-zoom: $user-zoom; }
+  }
+  @-o-viewport {
+    @if $width       { width: $width; }
+    @if $height      { height: $height; }
+    @if $zoom        { zoom: $zoom; }
+    @if $orientation { orientation: $orientation; }
+    @if $user-zoom   { user-zoom: $user-zoom; }
+  }
+  @viewport {
+    @if $width       { width: $width; }
+    @if $height      { height: $height; }
+    @if $zoom        { zoom: $zoom; }
+    @if $orientation { orientation: $orientation; }
+    @if $user-zoom   { user-zoom: $user-zoom; }
+  }
+}
+
+
+// =============================================================================
+// Hyphens mixin
+// =============================================================================
+@mixin hyphens($arg) {
+  -webkit-hyphens: $arg;
+     -moz-hyphens: $arg;
+      -ms-hyphens: $arg;
+       -o-hyphens: $arg;
+          hyphens: $arg;
+}
+
+
+// =============================================================================
+// Input placeholder Mixin
+// =============================================================================
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder { color: $color; }
+  &:-moz-placeholder { color: $color; }
+  &:-ms-input-placeholder { color: $color; }
+}

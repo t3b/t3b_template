@@ -1,0 +1,71 @@
+@if compass-env() == 'development' {/*!
+ * Print styles - Inlined to avoid another HTTP connection
+ *
+ * @package #{$package_name()}
+ * @path generic/_print.scss
+ * @link http://h5bp.com/r
+ */}
+
+
+@media print {
+  * {
+    background: transparent !important;
+    /**
+     * Black prints faster: h5bp.com/s
+     */
+    color: black !important;
+    box-shadow:none !important;
+    text-shadow: none !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    /**
+     * h5bp.com/t
+     */
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2, h3 {
+    page-break-after: avoid;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /**
+   * Don't show links for images, or javascript/internal links
+   */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  %print-hidden,
+  .print-hidden {
+    display: none;
+  }
+}

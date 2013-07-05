@@ -1,0 +1,55 @@
+//
+// SASS Functions
+//
+// @package #{$package_name()}
+// @path  _settings/_functions.sass
+// @link http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#function_directives
+//
+
+
+// =============================================================================
+// Relative Size
+// =============================================================================
+// Desired font-size ÷ font-size of containing element, or more succinctly:
+// target ÷ context = result
+
+// Based on the relative-size function from Stitch, http://stitchcss.com/
+// To use rems, pass in `rem` as the last parameter
+// =============================================================================
+@function rs($target, $context: $base-font-size, $unit: em) {
+  @return #{$target/$context}$unit;
+}
+
+
+// =============================================================================
+// Text direction check
+// =============================================================================
+// Based on code from the suit main package wich was removed some days after
+// public testing
+// @link https://github.com/necolas/suit
+// =============================================================================
+$direction: ltr !default;
+$start: left !default;
+$end: right !default;
+@if $direction == rtl {
+  $start: right;
+  $end: left;
+}
+
+
+// =============================================================================
+// Color-Adjust
+// =============================================================================
+// Adjust color based on lightness
+// Helps to better adjust site-wide colors for light and dark themes
+
+// Based on code from suit (@necolas), https://github.com/necolas/suit
+// =============================================================================
+@function color-adjust($color, $contrast: 100%) {
+  @if (lightness($color) > 50) {
+    @return darken($color, $contrast)
+  }
+  @else {
+    @return lighten($color, $contrast)
+  }
+}

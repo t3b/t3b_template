@@ -1,0 +1,89 @@
+@charset "UTF-8";
+$package_name: pkg_name;
+/*!
+ * Compiled on: #{timestamp()}
+ * Base stylesheet for pkg.homepage
+ *
+ * @package #{$package_name()}
+ * @path /main.scss
+ * @author pkg.author.name <pkg.author.email>
+
+
+ */
+
+
+// =============================================================================
+// SASS Setup
+// =============================================================================
+// 1. "compass/css3"            - All compass CSS3 mixins and functions
+// 2. "_settings/_all"          - Mixins, functions and default vars from t3b_template
+// =============================================================================
+@import "compass/css3",
+        "_settings/_all",
+        "_variables";
+
+
+// =============================================================================
+// Generic
+// =============================================================================
+// 1. "generic/_head"           - Declarations wich should be put at the top of the document
+// 2. "generic/_normalize"      - Nicolas Gallagher's normalize.css
+// 3. "generic/_widths"         - Human readable width classes from inuit.css
+// 4. "generic/_t3-general"     - TYPO3 related classes
+// 5. "generic/_brand"          - Generated brand classes like colors, font-families & logos
+// =============================================================================
+@import "generic/_head",
+        "generic/_normalize",
+        "generic/_widths",
+        "generic/_t3-general",
+        "generic/_brand";
+
+
+// =============================================================================
+// Basic HTML element styling
+// =============================================================================
+// 1. "base/_base"              - High-level wrapper elements and classes
+// 2. "base/_headings"          - Double-stranded heading hierarchy
+// 3. "base/_typography"        - Typography related elements
+// 4. "base/_links"             - Anchor tag & Links
+// 5. "base/_lists"             - Lists & definitions
+// 6. "base/_media"             - Images, audio & video
+// 7. "base/_tables"            - Tables
+// 8. "base/_forms"             - Forms, input's and other form related elements
+// =============================================================================
+@import "base/_base",
+        "base/_headings",
+        "base/_typography",
+        "base/_links",
+        "base/_lists",
+        "base/_media",
+        "base/_tables",
+        "base/_forms";
+
+
+// =============================================================================
+// Objects
+// =============================================================================
+// 1. "objects/_buttons"        - Button object and it's modifiers
+// 2. "objects/_navigations"    - Navigation object and it's modifiers
+// 3. "objects/_grid"           - Grid object and it's modifiers
+// =============================================================================
+@import "objects/_buttons",
+        "objects/_navigations",
+        "objects/_grid";
+
+
+// =============================================================================
+// Site dependent styles
+// =============================================================================
+@import "_styles";
+
+
+// =============================================================================
+// Helpers and print styles
+// =============================================================================
+// 1. "generic/_helper"         - Usefull helper classes
+// 2. "generic/_print"          - Print styles
+// =============================================================================
+@import "generic/_helper",
+        "generic/_print";

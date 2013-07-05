@@ -1,0 +1,14 @@
+@if compass-env() == 'development' {/*!
+ * Site dependent styles
+ *
+ * @package #{$package_name()}
+ * @path /_styles.scss
+ */}
+
+
+/* =============================================================================
+$ High level wrapper and elements
+================================================================================ */
+.site-header { }
+.site-content { }
+.site-footer { }
