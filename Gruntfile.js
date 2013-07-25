@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 		compass: {
 			options: {
 				// Specify the config.rb filepath
-				config: '<%= globalConfig.private %>/Sass/config.rb',
+				config: '<%= globalConfig.private %>/Sass/Config.rb',
 
 				// Override Configuration paths as all grunt paths are relative to the Gruntfile
 				sassDir: '<%= globalConfig.private %>/Sass',
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
 				}]
 			},
 			compass: {
-				src: ['<%= compass.options.sassDir %>/main.scss'],
+				src: ['<%= compass.options.sassDir %>/Main.scss'],
 				overwrite: true, // overwrite matched source files
 				replacements: [{
 					from: 'pkg_name',

@@ -1,0 +1,12 @@
+//
+// Combines all SASS related settings into one @import
+//
+// @package #{$package_name()}
+// @path  _Settings/_All.sass
+//
+
+
+@import "_Functions",
+        "_Defaults",
+        "_Mixins",
+        "_MediaQueries";

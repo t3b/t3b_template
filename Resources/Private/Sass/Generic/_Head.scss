@@ -3,7 +3,7 @@
  * @font-face declarations and CSS viewports
  *
  * @package #{$package_name()}
- * @path generic/_head.scss
+ * @path Generic/_Head.scss
  */}
 
 
@@ -31,7 +31,7 @@
        * The URL has to be relative to the HTML Doc
        * https://github.com/Schepp/box-sizing-polyfill
        */
-      *behavior: url('#{$template-path}Ressource/Public/boxsizing.htc');
+      *behavior: url('#{$template-path}Ressource/Public/BoxSizing.htc');
     }
   }
 }
