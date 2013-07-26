@@ -3,8 +3,13 @@ module.exports = function(grunt) {
 
 	// Project paths.
 	var path = {
-		private: 'Resources/Private',
-		public: 'Resources/Public'
+		private:	'Resources/Private',
+		public:		'Resources/Public',
+		sass:			'<%= path.private %>/Sass',
+		css:			'<%= path.public %>/Stylesheets',
+		images:		'<%= path.public %>/Images',
+		privateJs:'<%= path.private %>/Javascripts',
+		publicJs: '<%= path.public %>/Javascripts'
 	};
 
 	// Project configuration.
@@ -19,13 +24,13 @@ module.exports = function(grunt) {
 		compass: {
 			options: {
 				// Specify the config.rb filepath
-				config: '<%= path.private %>/Sass/Config.rb',
+				config: '<%= path.sass %>/Config.rb',
 
 				// Override Configuration paths as all grunt paths are relative to the Gruntfile
-				sassDir: '<%= path.private %>/Sass',
-				cssDir: '<%= path.public %>/Stylesheets',
-				imagesDir: '<%= path.public %>/Images',
-				javascriptsDir: '<%= path.private %>/Javascripts'
+				sassDir: '<%= path.sass %>',
+				cssDir: '<%= path.css %>',
+				imagesDir: '<%= path.images %>',
+				javascriptsDir: '<%= path.privateJs %>'
 			},
 			dev: {
 				options: {
@@ -46,7 +51,7 @@ module.exports = function(grunt) {
 		// Cleans files and folders
 		// https://github.com/gruntjs/grunt-contrib-clean
 		clean: {
-			compass: ['<%= compass.options.cssDir %>/*.css']
+			compass: ['<%= path.css %>/*.css']
 		},
 
 
@@ -71,7 +76,7 @@ module.exports = function(grunt) {
 				}]
 			},
 			compass: {
-				src: ['<%= compass.options.sassDir %>/Main.scss'],
+				src: ['<%= path.sass %>/Main.scss'],
 				overwrite: true, // overwrite matched source files
 				replacements: [{
 					from: 'pkg_name',
@@ -102,8 +107,8 @@ module.exports = function(grunt) {
 		// Crawls through source files, gathers up references to Modernizr tests and outputs a clean Modernizr build
 		// https://github.com/Modernizr/grunt-modernizr
 		modernizr: {
-			devFile : '<%= path.private %>/Javascripts/Libaries/Modernizr-2.6.2.js',
-			outputFile : '<%= path.public %>/Javascripts/Libaries/Modernizr-2.6.2.min.js',
+			devFile : '<%= path.privateJs %>/Libaries/Modernizr-2.6.2.js',
+			outputFile : '<%= path.publicJs %>/Libaries/Modernizr-2.6.2.min.js',
 
 			// Based on default settings on http://modernizr.com/download/
 			extra : {
@@ -155,7 +160,7 @@ module.exports = function(grunt) {
 			},
 			files: [
 				'Gruntfile.js',
-				'<%= path.private %>/Javascripts/*.js'
+				'<%= path.privateJs %>/*.js'
 			]
 		},
 
@@ -168,7 +173,7 @@ module.exports = function(grunt) {
 				nospawn: true,
 			},
 			compass: {
-				files: ['<%= compass.options.sassDir %>/**/*.scss'],
+				files: ['<%= path.sass %>/**/*.scss'],
 				tasks: ['compass:dev']
 			},
 			jshint : {
