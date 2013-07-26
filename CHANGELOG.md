@@ -1,3 +1,18 @@
+## 1.2.1
+**General**
+* Added a commented viewport meta tag to the template configuration
+* Fixed the FlduiContent and FluidPages path setup
+
+**HTML/Fluid**
+* Added an example page-template file
+* Migrated to the use of VHS:Asset viewhelper
+
+**Grunt**
+* Added JSHint and Modernizr
+* Added `grunt init` - An automated replace of the package name and the extension paths
+* Renamed the `globalConfig` variable to `path`
+
+
 ## 1.2.0
 **General**
 * Added t3b_common & t3b_templating as dependencies
@@ -24,6 +39,7 @@
 * Renamed `%non-print` to `%print-hidden`
 * Renamed all `$variables` into the scheme wich compass uses
 * Removed the old grid system in favor of the widths object from [inuit.css](https://github.com/csswizardry/inuit.css/)
+
 
 ## 1.1.9
 **General**
