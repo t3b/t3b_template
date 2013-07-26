@@ -97,7 +97,7 @@ module.exports = function(grunt) {
 				overwrite: true, // overwrite matched source files
 				replacements: [{
 					from: 'Resources/Private/Javascripts/Libaries/Modernizr-2.6.2.js',
-					to: 'Resources/Public/Javascripts/Libaries/Modernizr-2.6.2.min.js'
+					to: 'Resources/Public/Javascripts/Libaries/Modernizr-Custom.js'
 				}]
 			}
 		},
@@ -108,7 +108,7 @@ module.exports = function(grunt) {
 		// https://github.com/Modernizr/grunt-modernizr
 		modernizr: {
 			devFile : '<%= path.privateJs %>/Libaries/Modernizr-2.6.2.js',
-			outputFile : '<%= path.publicJs %>/Libaries/Modernizr-2.6.2.min.js',
+			outputFile : '<%= path.publicJs %>/Libaries/Modernizr-Custom.js',
 
 			// Based on default settings on http://modernizr.com/download/
 			extra : {
