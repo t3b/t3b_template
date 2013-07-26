@@ -2,14 +2,14 @@ module.exports = function(grunt) {
 	'use strict';
 
 	// Project paths.
-	var globalConfig = {
+	var path = {
 		private: 'Resources/Private',
 		public: 'Resources/Public'
 	};
 
 	// Project configuration.
 	grunt.initConfig({
-		globalConfig: globalConfig,
+		path: path,
 		pkg: grunt.file.readJSON('package.json'),
 
 
@@ -19,13 +19,13 @@ module.exports = function(grunt) {
 		compass: {
 			options: {
 				// Specify the config.rb filepath
-				config: '<%= globalConfig.private %>/Sass/Config.rb',
+				config: '<%= path.private %>/Sass/Config.rb',
 
 				// Override Configuration paths as all grunt paths are relative to the Gruntfile
-				sassDir: '<%= globalConfig.private %>/Sass',
-				cssDir: '<%= globalConfig.public %>/Stylesheets',
-				imagesDir: '<%= globalConfig.public %>/Images',
-				javascriptsDir: '<%= globalConfig.private %>/Javascripts'
+				sassDir: '<%= path.private %>/Sass',
+				cssDir: '<%= path.public %>/Stylesheets',
+				imagesDir: '<%= path.public %>/Images',
+				javascriptsDir: '<%= path.private %>/Javascripts'
 			},
 			dev: {
 				options: {
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 				}]
 			},
 			extpaths: {
-				src: ['Configuration/TypoScript/*.ts', 'Configuration/TypoScript/*.txt', '<%= globalConfig.private %>/Layouts/*.html'],
+				src: ['Configuration/TypoScript/*.ts', 'Configuration/TypoScript/*.txt', '<%= path.private %>/Layouts/*.html'],
 				overwrite: true, // overwrite matched source files
 				replacements: [{
 					from: 'EXT:t3b_template',
@@ -88,7 +88,7 @@ module.exports = function(grunt) {
 				}]
 			},
 			modernizr: {
-				src: ['<%= globalConfig.private %>/Layouts/Page.html'],
+				src: ['<%= path.private %>/Layouts/Page.html'],
 				overwrite: true, // overwrite matched source files
 				replacements: [{
 					from: 'Resources/Private/Javascripts/Libaries/Modernizr-2.6.2.js',
@@ -102,8 +102,8 @@ module.exports = function(grunt) {
 		// Crawls through source files, gathers up references to Modernizr tests and outputs a clean Modernizr build
 		// https://github.com/Modernizr/grunt-modernizr
 		modernizr: {
-			devFile : '<%= globalConfig.private %>/Javascripts/Libaries/Modernizr-2.6.2.js',
-			outputFile : '<%= globalConfig.public %>/Javascripts/Libaries/Modernizr-2.6.2.min.js',
+			devFile : '<%= path.private %>/Javascripts/Libaries/Modernizr-2.6.2.js',
+			outputFile : '<%= path.public %>/Javascripts/Libaries/Modernizr-2.6.2.min.js',
 
 			// Based on default settings on http://modernizr.com/download/
 			extra : {
@@ -155,7 +155,7 @@ module.exports = function(grunt) {
 			},
 			files: [
 				'Gruntfile.js',
-				'<%= globalConfig.private %>/Javascripts/*.js'
+				'<%= path.private %>/Javascripts/*.js'
 			]
 		},
 
