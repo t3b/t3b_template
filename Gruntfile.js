@@ -86,7 +86,51 @@ module.exports = function(grunt) {
 					from: 'pkg.homepage',
 					to: '<%= pkg.homepage %>'
 				}]
+			},
+			modernizr: {
+				src: ['<%= globalConfig.private %>/Layouts/Page.html'],
+				overwrite: true, // overwrite matched source files
+				replacements: [{
+					from: 'Resources/Private/Javascripts/Libaries/Modernizr-2.6.2.js',
+					to: 'Resources/Public/Javascripts/Libaries/Modernizr-2.6.2.min.js'
+				}]
 			}
+		},
+
+
+		// Grunt-Modernizr
+		// Crawls through source files, gathers up references to Modernizr tests and outputs a clean Modernizr build
+		// https://github.com/Modernizr/grunt-modernizr
+		modernizr: {
+			devFile : '<%= globalConfig.private %>/Javascripts/Libaries/Modernizr-2.6.2.js',
+			outputFile : '<%= globalConfig.public %>/Javascripts/Libaries/Modernizr-2.6.2.min.js',
+
+			// Based on default settings on http://modernizr.com/download/
+			extra : {
+					"shiv" : true,
+					"printshiv" : false,
+					"load" : true,
+					"mq" : false,
+					"cssclasses" : true
+			},
+
+			// Based on default settings on http://modernizr.com/download/
+			extensibility : {
+					"addtest" : false,
+					"prefixed" : false,
+					"teststyles" : false,
+					"testprops" : false,
+					"testallprops" : false,
+					"hasevents" : false,
+					"prefixes" : false,
+					"domprefixes" : false
+			},
+
+			"files" : [
+            "**/*.{js,css,scss}",
+            "!node_modules/**/*",
+            "!{Gruntfile,grunt}.js"
+        ],
 		},
 
 
@@ -146,9 +190,10 @@ module.exports = function(grunt) {
 	// Initialize task.
 	// Replaces all t3b_template strings and other meta-data with the data
 	// specified inside the 'package.json'. (Should be run after installing the extension)
-	grunt.registerTask('init', ['replace', 'compass:dev']);
+	grunt.registerTask('init', ['replace:extname', 'replace:extpaths', 'replace:compass', 'compass:dev']);
 
 	// Deploy task
-	// Recompiles all .scss/.sass files with ':prod' options (Minified)
-	grunt.registerTask('deploy', ['clean:compass', 'compass:prod']);
+	// Recompiles all .scss/.sass files with ':prod' options (Minified) and creates an
+	// custom Modernizr build and changes the affected paths
+	grunt.registerTask('deploy', ['clean:compass', 'compass:prod', 'modernizr', 'replace:modernizr']);
 };
