@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 		// Cleans files and folders
 		// https://github.com/gruntjs/grunt-contrib-clean
 		clean: {
-			compass: ['<%= path.css %>/*.css']
+			css: ['<%= path.css %>/*.css']
 		},
 
 
@@ -200,5 +200,5 @@ module.exports = function(grunt) {
 	// Deploy task
 	// Recompiles all .scss/.sass files with ':prod' options (Minified) and creates an
 	// custom Modernizr build and changes the affected paths
-	grunt.registerTask('deploy', ['clean:compass', 'compass:prod', 'modernizr', 'replace:modernizr']);
+	grunt.registerTask('deploy', ['clean:css', 'compass:prod', 'modernizr', 'replace:modernizr']);
 };
