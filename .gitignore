@@ -1,6 +1,9 @@
 # User generated CSS files
 Resources/Public/Stylesheets/*.css
 
+# Custom generated Modernizr file
+Resources/Public/Javascripts/Libaries/Modernizr-custom.js
+
 # Unfinished extension documentation
 Docs/*
 
