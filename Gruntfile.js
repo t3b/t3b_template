@@ -93,7 +93,7 @@ module.exports = function(grunt) {
 				}]
 			},
 			modernizr: {
-				src: ['<%= path.private %>/Layouts/Page.html'],
+				src: ['<%= path.private %>/Layouts/*.html'],
 				overwrite: true, // overwrite matched source files
 				replacements: [{
 					from: 'Resources/Private/Javascripts/Libaries/Modernizr-2.6.2.js',
