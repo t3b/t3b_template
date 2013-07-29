@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 
 
 		// Grunt-Contrib-Compass
-		// Compiles .scss/.sass files to .css using Compass
+		// Compiles .scss/.sass files to .css using Compass.
 		// https://github.com/gruntjs/grunt-contrib-compass
 		compass: {
 			options: {
@@ -48,10 +48,10 @@ module.exports = function(grunt) {
 
 
 		// Grunt-Contrib-Clean
-		// Cleans files and folders
+		// Cleans files and folders.
 		// https://github.com/gruntjs/grunt-contrib-clean
 		clean: {
-			compass: ['<%= path.css %>/*.css']
+			css: ['<%= path.css %>/*.css']
 		},
 
 
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
 		replace: {
 			extname: {
 				src: ['ext_tables.php'],
-				overwrite: true, // overwrite matched source files
+				overwrite: true,
 				replacements: [{
 					from: 't3b_template',
 					to: '<%= pkg.name %>'
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
 			},
 			extpaths: {
 				src: ['Configuration/TypoScript/*.ts', 'Configuration/TypoScript/*.txt', '<%= path.private %>/Layouts/*.html'],
-				overwrite: true, // overwrite matched source files
+				overwrite: true,
 				replacements: [{
 					from: 'EXT:t3b_template',
 					to: 'EXT:<%= pkg.name %>'
@@ -77,7 +77,7 @@ module.exports = function(grunt) {
 			},
 			compass: {
 				src: ['<%= path.sass %>/Main.scss'],
-				overwrite: true, // overwrite matched source files
+				overwrite: true,
 				replacements: [{
 					from: 'pkg_name',
 					to: '<%= pkg.name %>'
@@ -93,8 +93,8 @@ module.exports = function(grunt) {
 				}]
 			},
 			modernizr: {
-				src: ['<%= path.private %>/Layouts/Page.html'],
-				overwrite: true, // overwrite matched source files
+				src: ['<%= path.private %>/Layouts/*.html'],
+				overwrite: true,
 				replacements: [{
 					from: 'Resources/Private/Javascripts/Libaries/Modernizr-2.6.2.js',
 					to: 'Resources/Public/Javascripts/Libaries/Modernizr-Custom.js'
@@ -104,7 +104,7 @@ module.exports = function(grunt) {
 
 
 		// Grunt-Modernizr
-		// Crawls through source files, gathers up references to Modernizr tests and outputs a clean Modernizr build
+		// Crawls through source files, gathers up references to Modernizr tests and outputs a clean Modernizr build.
 		// https://github.com/Modernizr/grunt-modernizr
 		modernizr: {
 			devFile : '<%= path.privateJs %>/Libaries/Modernizr-2.6.2.js',
@@ -139,7 +139,7 @@ module.exports = function(grunt) {
 		},
 
 
-		// Grunt-Controb-JSHint
+		// Grunt-Contrib-JSHint
 		// Validate files with JSHint.
 		// https://github.com/gruntjs/grunt-contrib-jshint
 		jshint: {
@@ -165,12 +165,12 @@ module.exports = function(grunt) {
 		},
 
 
-		// Grunt-Controb-Watch
+		// Grunt-Contrib-Watch
 		// Run tasks whenever watched files change.
 		// https://github.com/gruntjs/grunt-contrib-watch
 		watch: {
 			options: {
-				nospawn: true,
+				nospawn: true
 			},
 			compass: {
 				files: ['<%= path.sass %>/**/*.scss'],
@@ -189,16 +189,16 @@ module.exports = function(grunt) {
 
 	// Default grunt task.
 	// Compiles all .scss/.sass files with ':dev' options and
-	// validates all js-files with JSHint.
+	// validates all js-files inside Resources/Private/Javascripts with JSHint.
 	grunt.registerTask('default', ['compass:dev', 'jshint']);
 
 	// Initialize task.
 	// Replaces all t3b_template strings and other meta-data with the data
-	// specified inside the 'package.json'. (Should be run after installing the extension)
+	// specified inside the 'package.json'. (Should be run after downloading the extension).
 	grunt.registerTask('init', ['replace:extname', 'replace:extpaths', 'replace:compass', 'compass:dev']);
 
 	// Deploy task
-	// Recompiles all .scss/.sass files with ':prod' options (Minified) and creates an
-	// custom Modernizr build and changes the affected paths
-	grunt.registerTask('deploy', ['clean:compass', 'compass:prod', 'modernizr', 'replace:modernizr']);
+	// Recompiles all .scss/.sass files with ':prod' options (Minified), creates an
+	// custom Modernizr build and changes the affected paths in all Fluid Layouts.
+	grunt.registerTask('deploy', ['clean:css', 'compass:prod', 'modernizr', 'replace:modernizr']);
 };
