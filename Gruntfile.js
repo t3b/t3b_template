@@ -97,7 +97,7 @@ module.exports = function(grunt) {
 				overwrite: true,
 				replacements: [{
 					from: 'Resources/Private/Javascripts/Libaries/Modernizr-2.6.2.js',
-					to: 'Resources/Public/Javascripts/Libaries/Modernizr-Custom.js'
+					to: '<%= path.publicJs %>/Libaries/Modernizr-Custom.js'
 				}]
 			}
 		},
