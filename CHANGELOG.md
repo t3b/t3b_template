@@ -1,7 +1,7 @@
 ## 1.2.1
 **General**
 * Added a commented viewport meta tag to the template configuration
-* Fixed the FlduiContent and FluidPages path setup
+* Fixed the FluidContent and FluidPages path setup
 
 **HTML/Fluid**
 * Added an example page-template file
