@@ -107,20 +107,19 @@ module.exports = function(grunt) {
 		// Crawls through source files, gathers up references to Modernizr tests and outputs a clean Modernizr build.
 		// https://github.com/Modernizr/grunt-modernizr
 		modernizr: {
-			devFile : '<%= path.privateJs %>/Libaries/Modernizr-2.6.2.js',
-			outputFile : '<%= path.publicJs %>/Libaries/Modernizr-Custom.js',
+			devFile: '<%= path.privateJs %>/Libaries/Modernizr-2.6.2.js',
+			outputFile: '<%= path.publicJs %>/Libaries/Modernizr-Custom.js',
 
 			// Based on default settings on http://modernizr.com/download/
-			extra : {
+			extra: {
 					"shiv" : true,
 					"printshiv" : false,
 					"load" : true,
 					"mq" : false,
 					"cssclasses" : true
 			},
-
 			// Based on default settings on http://modernizr.com/download/
-			extensibility : {
+			extensibility: {
 					"addtest" : false,
 					"prefixed" : false,
 					"teststyles" : false,
@@ -130,8 +129,7 @@ module.exports = function(grunt) {
 					"prefixes" : false,
 					"domprefixes" : false
 			},
-
-			"files" : [
+			files: [
 						"**/*.{js,css,scss}",
 						"!node_modules/**/*",
 						"!{Gruntfile,grunt}.js"
