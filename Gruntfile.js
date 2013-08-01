@@ -165,6 +165,21 @@ module.exports = function(grunt) {
 		},
 
 
+		// Grunt-ImageOptim
+		// Lossless optimisation of images
+		// https://github.com/gruntjs/grunt-contrib-watch
+		imageoptim: {
+			files: [
+				'<%= path.images %>'
+			],
+			options: {
+				imageAlpha: true,
+				jpegMini: false,
+				quitAfter: true
+			}
+		},
+
+
 		// Grunt-Contrib-Watch
 		// Run tasks whenever watched files change.
 		// https://github.com/gruntjs/grunt-contrib-watch
