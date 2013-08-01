@@ -185,11 +185,11 @@ module.exports = function(grunt) {
 			options: {
 				nospawn: true
 			},
-			compass: {
+			sass: {
 				files: ['<%= path.sass %>/**/*.scss'],
 				tasks: ['compass:dev']
 			},
-			jshint : {
+			js: {
 				files: ['<%= jshint.files %>'],
 				tasks: ['jshint']
 			}
