@@ -1,0 +1,3 @@
+[submodule "Resources/Private/Javascripts/Libaries/Modernizr"]
+	path = Resources/Private/Javascripts/Libaries/Modernizr
+	url = https://github.com/Modernizr/Modernizr.git

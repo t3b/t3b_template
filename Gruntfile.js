@@ -96,7 +96,7 @@ module.exports = function(grunt) {
 				src: ['<%= path.private %>/Layouts/*.html'],
 				overwrite: true,
 				replacements: [{
-					from: 'Resources/Private/Javascripts/Libaries/Modernizr-2.6.2.js',
+					from: 'Resources/Private/Javascripts/Libaries/Modernizr/modernizr.js',
 					to: '<%= path.publicJs %>/Libaries/Modernizr-Custom.js'
 				}]
 			}
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
 		// Crawls through source files, gathers up references to Modernizr tests and outputs a clean Modernizr build.
 		// https://github.com/Modernizr/grunt-modernizr
 		modernizr: {
-			devFile: '<%= path.privateJs %>/Libaries/Modernizr-2.6.2.js',
+			devFile: '<%= path.privateJs %>/Libaries/Modernizr/modernizr.js',
 			outputFile: '<%= path.publicJs %>/Libaries/Modernizr-Custom.js',
 
 			// Based on default settings on http://modernizr.com/download/
