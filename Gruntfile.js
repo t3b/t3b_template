@@ -3,11 +3,11 @@ module.exports = function(grunt) {
 
 	// Project paths.
 	var path = {
-		private:	'Resources/Private',
-		public:		'Resources/Public',
-		sass:			'<%= path.private %>/Sass',
-		css:			'<%= path.public %>/Stylesheets',
-		images:		'<%= path.public %>/Images',
+		private:  'Resources/Private',
+		public:   'Resources/Public',
+		sass:     '<%= path.private %>/Sass',
+		css:      '<%= path.public %>/Stylesheets',
+		images:   '<%= path.public %>/Images',
 		privateJs:'<%= path.private %>/Javascripts',
 		publicJs: '<%= path.public %>/Javascripts'
 	};
