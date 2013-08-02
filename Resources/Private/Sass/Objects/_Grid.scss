@@ -1,5 +1,5 @@
 @if compass-env() == 'development' {/*!
- * Gernerated- & Helper-classes for a column based grid
+ * Grid object wich makes use of the width classes in generic/_widths.scss
  *
  * @package #{$package_name()}
  * @path Objects/_Grid.scss
