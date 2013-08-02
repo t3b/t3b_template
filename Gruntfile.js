@@ -112,27 +112,27 @@ module.exports = function(grunt) {
 
 			// Based on default settings on http://modernizr.com/download/
 			extra: {
-					"shiv" : true,
-					"printshiv" : false,
-					"load" : true,
-					"mq" : false,
-					"cssclasses" : true
+					shiv: true,
+					printshiv: false,
+					load: true,
+					mq: false,
+					cssclasses: true
 			},
 			// Based on default settings on http://modernizr.com/download/
 			extensibility: {
-					"addtest" : false,
-					"prefixed" : false,
-					"teststyles" : false,
-					"testprops" : false,
-					"testallprops" : false,
-					"hasevents" : false,
-					"prefixes" : false,
-					"domprefixes" : false
+					addtest: false,
+					prefixed: false,
+					teststyles: false,
+					testprops: false,
+					testallprops: false,
+					hasevents: false,
+					prefixes: false,
+					domprefixes: false
 			},
 			files: [
-						"**/*.{js,css,scss}",
-						"!node_modules/**/*",
-						"!{Gruntfile,grunt}.js"
+						'**/*.{js,css,scss}',
+						'!node_modules/**/*',
+						'!{Gruntfile,grunt}.js'
 				],
 		},
 
