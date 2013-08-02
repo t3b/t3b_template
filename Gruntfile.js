@@ -133,7 +133,7 @@ module.exports = function(grunt) {
 				'**/*.{js,css,scss}',
 				'!node_modules/**/*',
 				'!{Gruntfile,grunt}.js'
-			],
+			]
 		},
 
 
