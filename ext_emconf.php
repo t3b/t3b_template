@@ -36,6 +36,8 @@ $EM_CONF[$_EXTKEY] = array(
 			't3b_templating' => '',
 			't3b_common' => '',
 			'fluidpages' => '',
+			'fluidcontent' => '',
+			'vhs' => '',
 		),
 		'conflicts' => array(
 		),
