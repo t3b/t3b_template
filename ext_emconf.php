@@ -38,6 +38,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'fluidpages' => '',
 			'fluidcontent' => '',
 			'vhs' => '',
+			'flux' => '',
 		),
 		'conflicts' => array(
 		),
