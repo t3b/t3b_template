@@ -10,11 +10,16 @@
 // =============================================================================
 // Relative Size
 // =============================================================================
-// Desired font-size ÷ font-size of containing element, or more succinctly:
-// target ÷ context = result
-
-// Based on the relative-size function from Stitch, http://stitchcss.com/
-// To use rems, pass in `rem` as the last parameter
+// @description Calculates em's based on pixel values
+//
+// @param target, context, unit
+// @returns
+//   1.1875em
+//
+// @example
+//   .selector {
+//     font-size: rs(19, 16);
+//   }
 // =============================================================================
 @function rs($target, $context: $base-font-size, $unit: em) {
   @return #{$target/$context}$unit;
@@ -24,8 +29,10 @@
 // =============================================================================
 // Text direction check
 // =============================================================================
-// Based on code from the suit main package wich was removed some days after
-// public testing
+// @description
+// Checks the reading-direction of the site based on the '$direction' variable
+// and sets the correct $start and $end variables
+// @author necolas
 // @link https://github.com/necolas/suit
 // =============================================================================
 $direction: ltr !default;
@@ -40,10 +47,19 @@ $end: right !default;
 // =============================================================================
 // Color-Adjust
 // =============================================================================
-// Adjust color based on lightness
-// Helps to better adjust site-wide colors for light and dark themes
-
-// Based on code from suit (@necolas), https://github.com/necolas/suit
+// @description
+// Adjust a color based on the lightness wich is passed as a second parameter
+// @author necolas
+// @link https://github.com/necolas/suit
+//
+// @param color, contrast
+// @returns
+//   #FFF
+//
+// @example
+//   .selector {
+//     background: color-adjust(#0097d7, 100%);
+//   }
 // =============================================================================
 @function color-adjust($color, $contrast: 100%) {
   @if (lightness($color) > 50) {
