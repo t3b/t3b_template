@@ -284,10 +284,10 @@
 //
 // @example
 //   .selector {
-//     @include placeholder(#ccc);
+//     @include placeholder-color(#ccc);
 //   }
 // =============================================================================
-@mixin placeholder($color) {
+@mixin placeholder-color($color) {
   &::-webkit-input-placeholder { color: $color; }
   &:-moz-placeholder { color: $color; }
   &:-ms-input-placeholder { color: $color; }
