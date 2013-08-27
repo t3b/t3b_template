@@ -21,8 +21,8 @@
 //     font-size: rs(19, 16);
 //   }
 // =============================================================================
-@function rs($target, $context: $base-font-size, $unit: em) {
-  @return #{$target/$context}$unit;
+@function rs($target-size, $context: $base-font-size, $unit: em) {
+  @return #{$target-size/$context}$unit;
 }
 
 

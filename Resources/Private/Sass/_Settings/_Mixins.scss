@@ -13,7 +13,7 @@
 // @description
 // Get the dimensions of an image-file located in the 'images_dir'
 //
-// @param img
+// @param file-name
 // @returns
 //   width: 200px;
 //   height: 75px;
@@ -23,9 +23,9 @@
 //     @include img-wh('brand-logo.png');
 //   }
 // =============================================================================
-@mixin img-wh($img) {
-  width: image-width($img);
-  height: image-height($img);
+@mixin img-wh($file-name) {
+  width: image-width($file-name);
+  height: image-height($file-name);
 }
 
 
@@ -36,7 +36,7 @@
 // Get the dimensions of an image-file located in the 'images_dir' and create
 // output wich displays an image optimized for high density screens
 //
-// @param img
+// @param file-name
 // @returns
 //   background-size: 200px 75px;
 //   background-image: url('../Images/brand-logo_@2.png');
@@ -46,9 +46,9 @@
 //     @include hdpi-img('brand-logo.png');
 //   }
 // =============================================================================
-@mixin hdpi-img($img) {
-  background-size: image-width($img)/2 image-height($img)/2;
-  background-image: image-url('#{$img}');
+@mixin hdpi-img($file-name) {
+  background-size: image-width($file-name)/2 image-height($file-name)/2;
+  background-image: image-url('#{$file-name}');
 }
 
 
@@ -60,7 +60,7 @@
 // @extends the .ir rule inside the _helper.scss file.
 // Default $display-mode is set to 'block'.
 //
-// @param image, display-mode
+// @param file-name, display-mode
 // @returns
 //   display: block;
 //   width: 200px;
@@ -72,12 +72,12 @@
 //     @include image-replacement('image.png');
 //   }
 // =============================================================================
-@mixin image-replacement($image, $display-mode: block) {
+@mixin image-replacement($file-name, $display-mode: block) {
   @if $image { // Output the image dimensions if an image is passed as an argument
     display: $display-mode;
-    @include img-wh('#{$image}');
+    @include img-wh('#{$file-name}');
     @extend .ir;
-    background-image: image-url('#{$image}');
+    background-image: image-url('#{$file-name}');
   }
 }
 
@@ -113,7 +113,7 @@
 // single value
 // @author CSSWizardry
 //
-// @param size, append-vrythm
+// @param font-size, append-vrythm
 // @returns
 //   font-size: 1rem;
 //   font-size: 16px;
@@ -124,10 +124,10 @@
 //     @include rem($size: 16, $append-vrythm: true);
 //   }
 // =============================================================================
-@mixin font-size($size, $append-vrythm: false) {
-  @include rem(font-size, $size);
+@mixin font-size($font-size, $append-vrythm: false) {
+  @include rem(font-size, $font-size);
   @if $append-vrythm {
-    line-height: ceil($size / $base-line-height) * ($base-line-height / $size);
+    line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
   }
 }
 
@@ -140,10 +140,10 @@
 // @param size, append-vrythm
 // @returns
 //   content: "";
-//   cdisplay: block;
-//   cwidth: 0;
-//   cheight: 0;
-//   cborder: solid 5px;
+//   display: block;
+//   width: 0;
+//   height: 0;
+//   border: solid 5px;
 //   border-color: #FFF transparent transparent transparent;
 //
 // @example
@@ -248,7 +248,7 @@
 // Adds all missing vendor prefixes for the CSS Hyphens property
 // @link http://www.w3.org/TR/css3-text/#hyphenation
 //
-// @param arg
+// @param value
 // @returns
 //   -webkit-hyphens: $arg;
 //      -moz-hyphens: $arg;
@@ -261,12 +261,12 @@
 //     @include hyphens(break-word);
 //   }
 // =============================================================================
-@mixin hyphens($arg) {
-  -webkit-hyphens: $arg;
-     -moz-hyphens: $arg;
-      -ms-hyphens: $arg;
-       -o-hyphens: $arg;
-          hyphens: $arg;
+@mixin hyphens($value) {
+  -webkit-hyphens: $value;
+     -moz-hyphens: $value;
+      -ms-hyphens: $value;
+       -o-hyphens: $value;
+          hyphens: $value;
 }
 
 
