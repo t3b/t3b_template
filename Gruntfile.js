@@ -179,6 +179,16 @@ module.exports = function(grunt) {
 		},
 
 
+		// Grunt-Shell
+		// Run shell commands.
+		// https://npmjs.org/package/grunt-shell
+		shell: {
+			gitSubmoduleUpdate: {
+				command: 'git submodule init && git submodule update'
+			}
+		},
+
+
 		// Grunt-Contrib-Watch
 		// Run tasks whenever watched files change.
 		// https://github.com/gruntjs/grunt-contrib-watch
@@ -209,7 +219,7 @@ module.exports = function(grunt) {
 	// Initialize task.
 	// Replaces all t3b_template strings and other meta-data with the data
 	// specified inside the 'package.json'. (Should be run after downloading the extension).
-	grunt.registerTask('init', ['replace:extname', 'replace:extpaths', 'replace:compass', 'compass:dev']);
+	grunt.registerTask('init', ['replace:extname', 'replace:extpaths', 'replace:compass', 'compass:dev', 'shell:gitSubmoduleUpdate']);
 
 	// Deploy task
 	// Recompiles all .scss/.sass files with ':prod' options (Minified), creates an
