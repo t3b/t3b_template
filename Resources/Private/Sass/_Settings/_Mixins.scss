@@ -73,7 +73,7 @@
 //   }
 // =============================================================================
 @mixin image-replacement($file-name, $display-mode: block) {
-  @if $image { // Output the image dimensions if an image is passed as an argument
+  @if $ile-name { // Output the image dimensions if an image is passed as an argument
     display: $display-mode;
     @include img-wh('#{$file-name}');
     @extend .ir;
