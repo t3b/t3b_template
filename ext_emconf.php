@@ -33,7 +33,6 @@ $EM_CONF[$_EXTKEY] = array(
 			'typo3' => '6.0.0',
 			'extbase' => '6.0.0',
 			'fluid' => '6.0.0',
-			't3b_templating' => '',
 			't3b_common' => '',
 			'fluidpages' => '',
 			'fluidcontent' => '',
