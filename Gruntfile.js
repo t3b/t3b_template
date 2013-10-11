@@ -68,7 +68,7 @@ module.exports = function(grunt) {
 				}]
 			},
 			extpaths: {
-				src: ['Configuration/TypoScript/*.ts', 'Configuration/TypoScript/*.txt', '<%= path.private %>/Layouts/*.html'],
+				src: ['Configuration/TypoScript/*.ts', 'Configuration/TypoScript/Includes/*.ts', 'Configuration/TypoScript/*.txt', '<%= path.private %>/Layouts/*.html'],
 				overwrite: true,
 				replacements: [{
 					from: 'EXT:t3b_template',
