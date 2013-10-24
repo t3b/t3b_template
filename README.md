@@ -5,7 +5,7 @@ It includes a base HTML5-Template with Modernizr, Stylesheet and an optional usa
 
 ## Installation
 [Download](https://github.com/t3b/t3b_template/archive/master.zip) the extension, unzip it and rename the `t3b` directory prefix.
-Customize the title, description, project homepage, author and author-email inside the `ext_emconf.php` as well as the `package.json`-file located in `/`.
+Customize the title, description, project homepage, author and author-email inside the `package.json`-file located in `/`.
 
 Optionally you can use [Grunt.js](gruntjs.com) to automate the following build process.
 `cd` into the extension folder and run `npm_install` to download grunt and it's dependencies, afterwards run `grunt init`.
