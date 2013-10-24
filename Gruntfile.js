@@ -59,37 +59,27 @@ module.exports = function(grunt) {
 		// Replace inline patterns with variables.
 		// https://npmjs.org/package/grunt-replace
 		replace: {
-			extname: {
-				src: ['ext_tables.php'],
+			init: {
+				src: ['**/*.php', '**/*.txt', '**/*.ts', '**/*.html', '**/*.scss'],
 				overwrite: true,
 				replacements: [{
-					from: 't3b_template',
-					to: '<%= pkg.name %>'
-				}]
-			},
-			extpaths: {
-				src: ['Configuration/TypoScript/*.ts', 'Configuration/TypoScript/Includes/*.ts', 'Configuration/TypoScript/*.txt', '<%= path.private %>/Layouts/*.html'],
-				overwrite: true,
-				replacements: [{
-					from: 'EXT:t3b_template',
-					to: 'EXT:<%= pkg.name %>'
-				}]
-			},
-			compass: {
-				src: ['<%= path.sass %>/Main.scss'],
-				overwrite: true,
-				replacements: [{
-					from: 'pkg_name',
+					from: '<!= pkg.name !>',
 					to: '<%= pkg.name %>'
 				}, {
-					from: 'pkg.author.name',
+					from: '<!= pkg.description !>',
+					to: '<%= pkg.description %>'
+				}, {
+					from: '<!= pkg.homepage !>',
+					to: '<%= pkg.homepage %>'
+				}, {
+					from: '<!= pkg.version !>',
+					to: '<%= pkg.version %>'
+				}, {
+					from: '<!= pkg.author.name !>',
 					to: '<%= pkg.author.name %>'
 				}, {
-					from: 'pkg.author.email',
+					from: '<!= pkg.author.email !>',
 					to: '<%= pkg.author.email %>'
-				}, {
-					from: 'pkg.homepage',
-					to: '<%= pkg.homepage %>'
 				}]
 			},
 			modernizr: {
@@ -219,7 +209,7 @@ module.exports = function(grunt) {
 	// Initialize task.
 	// Replaces all t3b_template strings and other meta-data with the data
 	// specified inside the 'package.json'. (Should be run after downloading the extension).
-	grunt.registerTask('init', ['replace:extname', 'replace:extpaths', 'replace:compass', 'compass:dev', 'shell:gitSubmoduleUpdate']);
+	grunt.registerTask('init', ['replace:init', 'compass:dev', 'shell:gitSubmoduleUpdate']);
 
 	// Deploy task
 	// Recompiles all .scss/.sass files with ':prod' options (Minified), creates an

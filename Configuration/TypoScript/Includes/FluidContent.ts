@@ -1,5 +1,5 @@
-plugin.tx_fluidcontent.collections.t3b_template {
-	templateRootPath = EXT:t3b_template/Resources/Private/Elements/
-	partialRootPath = EXT:t3b_template/Resources/Private/Partials/
-	layoutRootPath = EXT:t3b_template/Resources/Private/Layouts/
+plugin.tx_fluidcontent.collections.<!= pkg.name !> {
+	templateRootPath = EXT:<!= pkg.name !>/Resources/Private/Elements/
+	partialRootPath = EXT:<!= pkg.name !>/Resources/Private/Partials/
+	layoutRootPath = EXT:<!= pkg.name !>/Resources/Private/Layouts/
 }

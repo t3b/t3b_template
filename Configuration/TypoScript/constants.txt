@@ -1,5 +1,5 @@
 # Set a website icon (favicon)
-# plugin.t3b_config.settings.page.shortcutIcon = EXT:t3b_template/Resources/Public/Images/favicon.ico
+# plugin.t3b_config.settings.page.shortcutIcon = EXT:<!= pkg.name !>/Resources/Public/Images/favicon.ico
 
 # Set the max image-width for css_styled_content (This should have same value as the variable '$layout-width' in /Resources/Private/Sass/_variables.scss)
 # styles.content.imgtext.maxW = 960

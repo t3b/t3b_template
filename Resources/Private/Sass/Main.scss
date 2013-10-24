@@ -1,12 +1,12 @@
 @charset "UTF-8";
-$package_name: pkg_name;
+$package_name: <!= pkg.name !>;
 /*!
  * Compiled on: #{timestamp()}
- * Base stylesheet for pkg.homepage
+ * Base stylesheet for <!= pkg.homepage !>
  *
  * @package #{$package_name()}
  * @path /Main.scss
- * @author pkg.author.name <pkg.author.email>
+ * @author <!= pkg.author.name !> <<!= pkg.author.email !>>
 
 
  */

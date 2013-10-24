@@ -1,7 +1,7 @@
 <?php
 
 ########################################################################
-# Extension Manager/Repository config file for ext "t3b_template".
+# Extension Manager/Repository config file for ext "<!= pkg.name !>".
 #
 # Auto generated 20-02-2013 17:01
 #
@@ -11,11 +11,11 @@
 ########################################################################
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'T3B Template Package',
-	'description' => 'A Kickstarter Template-Extension wich is based on Fluid and Compass',
+	'title' => '<!= pkg.name !>',
+	'description' => '<!= pkg.description !>',
 	'category' => 'misc',
-	'author' => 'Tyll Weiß',
-	'author_email' => 'inkdpixels@googlemail.com',
+	'author' => '<!= pkg.author.name !>',
+	'author_email' => '<!= pkg.author.name.email !>',
 	'author_company' => '',
 	'shy' => '',
 	'priority' => '',
@@ -27,7 +27,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'modify_tables' => '',
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
-	'version' => '1.2.1',
+	'version' => '<!= pkg.version !>',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '6.0.0',
