@@ -28,7 +28,6 @@
   ],
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-cli": "~0.1.0",
     "matchdep": "~0.1.2",
     "grunt-contrib-compass": "~0.4.1",
     "grunt-contrib-watch": "~0.5.1",
