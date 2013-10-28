@@ -39,6 +39,6 @@
     "grunt-shell": "~0.3.1"
   },
   "scripts": {
-    "test": "grunt"
+    "test": "grunt travis && cd Resources/Private/Sass && compass compile"
   }
 }
