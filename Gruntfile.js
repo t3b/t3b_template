@@ -175,6 +175,9 @@ module.exports = function(grunt) {
 		shell: {
 			gitSubmoduleUpdate: {
 				command: 'git submodule init && git submodule update'
+			},
+			testCompass: {
+				command: 'cd Resources/Private/Sass && compass compile'
 			}
 		},
 
@@ -219,5 +222,5 @@ module.exports = function(grunt) {
 	// Travis CI task
 	// Replaces all replace strings with the standard meta data stored in the package.json
 	// and tests all JS files with JSHint, this task is used by Travis CI.
-	grunt.registerTask('travis', ['replace:init', 'jshint']);
+	grunt.registerTask('travis', ['replace:init', 'jshint', 'shell:testCompass']);
 };
