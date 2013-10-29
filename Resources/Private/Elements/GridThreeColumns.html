@@ -2,38 +2,40 @@
 
 <f:layout name="Content" />
 
-<f:section name="Configuration">
-	<flux:flexform id="three-columns" label="Three Columns (1 | 1 | 1)" description="Provides three columns to be filled with content elements.">
-		<flux:flexform.grid>
-			<flux:flexform.grid.row>
-				<flux:flexform.grid.column>
-					<flux:flexform.content name="first" label="First column" />
-				</flux:flexform.grid.column>
-				<flux:flexform.grid.column>
-					<flux:flexform.content name="second" label="Second column" />
-				</flux:flexform.grid.column>
-				<flux:flexform.grid.column>
-					<flux:flexform.content name="third" label="Third column" />
-				</flux:flexform.grid.column>
-			</flux:flexform.grid.row>
-		</flux:flexform.grid>
-	</flux:flexform>
-</f:section>
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:flux="http://fedext.net/ns/flux/ViewHelpers" xmlns:v="http://fedext.net/ns/vhs/ViewHelpers" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	<f:section name="Configuration">
+		<flux:flexform id="three-columns" label="Three Columns (1 | 1 | 1)" description="Provides three columns to be filled with content elements.">
+			<flux:flexform.grid>
+				<flux:flexform.grid.row>
+					<flux:flexform.grid.column>
+						<flux:flexform.content name="first" label="First column" />
+					</flux:flexform.grid.column>
+					<flux:flexform.grid.column>
+						<flux:flexform.content name="second" label="Second column" />
+					</flux:flexform.grid.column>
+					<flux:flexform.grid.column>
+						<flux:flexform.content name="third" label="Third column" />
+					</flux:flexform.grid.column>
+				</flux:flexform.grid.row>
+			</flux:flexform.grid>
+		</flux:flexform>
+	</f:section>
 
-<f:section name="Preview">
-	<flux:widget.grid />
-</f:section>
+	<f:section name="Preview">
+		<flux:widget.grid />
+	</f:section>
 
-<f:section name="Main">
-	<div class="grid">
-		<div class="gi one-third">
-			<flux:flexform.renderContent area="first" />
+	<f:section name="Main">
+		<div class="grid">
+			<div class="gi one-third">
+				<flux:flexform.renderContent area="first" />
+			</div>
+			<div class="gi one-third">
+				<flux:flexform.renderContent area="second" />
+			</div>
+			<div class="gi one-third">
+				<flux:flexform.renderContent area="third" />
+			</div>
 		</div>
-		<div class="gi one-third">
-			<flux:flexform.renderContent area="second" />
-		</div>
-		<div class="gi one-third">
-			<flux:flexform.renderContent area="third" />
-		</div>
-	</div>
-</f:section>
+	</f:section>
+</div>

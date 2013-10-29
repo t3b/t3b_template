@@ -3,16 +3,18 @@
 
 <f:layout name="Page" />
 
-<f:section name="Configuration">
-	<flux:flexform id="standard-page" label="Standard page">
-		<flux:flexform.grid>
-			<flux:flexform.grid.row>
-				<flux:flexform.grid.column colPos="0" name="Main Content" />
-			</flux:flexform.grid.row>
-		</flux:flexform.grid>
-	</flux:flexform>
-</f:section>
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:flux="http://fedext.net/ns/flux/ViewHelpers" xmlns:v="http://fedext.net/ns/vhs/ViewHelpers" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	<f:section name="Configuration">
+		<flux:flexform id="standard-page" label="Standard page">
+			<flux:flexform.grid>
+				<flux:flexform.grid.row>
+					<flux:flexform.grid.column colPos="0" name="Main Content" />
+				</flux:flexform.grid.row>
+			</flux:flexform.grid>
+		</flux:flexform>
+	</f:section>
 
-<f:section name="Main">
-	<vhs:page.content.render column="0" />
-</f:section>
+	<f:section name="Main">
+		<vhs:page.content.render column="0" />
+	</f:section>
+</div>
