@@ -19,6 +19,21 @@ body {
   text-align: $start;
   color: $base-text-color;
   background: $body-background;
+  @if compass-env() == 'development' {
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 99999;
+      padding: 5px 10px;
+      content: 'Development';
+      border: 2px solid #000;
+      background: red;
+      text-transform: uppercase;
+      color: #000;
+      font-weight: $bold;
+    }
+  }
 }
 .site-wrapper {
   @if $centered-layout { margin-left: auto; margin-right: auto; }
