@@ -14,7 +14,7 @@ $template-path:         "typo3conf/ext/#{$package_name}/" !default;
 $global-border-box:     true !default;
 $responsive:            false !default;
 
-// Legacy browser support
+// Legacy browser support.
 $legacy-support-for-ie6: false !default;
 $legacy-support-for-ie7: false !default;
 $legacy-support-for-ie8: true !default;
