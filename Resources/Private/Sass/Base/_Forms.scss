@@ -25,7 +25,7 @@ input[type="month"],
 input[type="time"],
 input[type="week"] {
   height: $text-input-height;
-  padding: 0 0.4em;
+  padding: 0 .4em;
   @include rem(margin-bottom, $half-spacing);
 
   background: $content-background;
