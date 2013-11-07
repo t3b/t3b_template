@@ -39,6 +39,6 @@
     "grunt-shell": "~0.3.1"
   },
   "scripts": {
-    "test": "grunt travis"
+    "test": "grunt travis --verbose"
   }
 }
