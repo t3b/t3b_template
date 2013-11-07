@@ -60,7 +60,7 @@ module.exports = function(grunt) {
 		// https://npmjs.org/package/grunt-replace
 		replace: {
 			init: {
-				src: ['**/*.php', '**/*.txt', '**/*.ts', '**/*.html', '**/*.scss'],
+				src: ['**/*.php', '**/*.txt', '**/*.ts', '**/*.html', '**/*.scss', '!node_modules/**/*', '!<%= path.privateJs %>/Libaries/**/*'],
 				overwrite: true,
 				replacements: [{
 					from: '<!= pkg.name !>',
