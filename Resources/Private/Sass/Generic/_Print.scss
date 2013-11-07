@@ -1,10 +1,10 @@
-@if compass-env() == 'development' {/*!
+/*!
  * Print styles - Inlined to avoid another HTTP connection
  *
  * @package #{$package_name()}
  * @path Generic/_Print.scss
  * @link http://h5bp.com/r
- */}
+ */
 
 
 @media print {
