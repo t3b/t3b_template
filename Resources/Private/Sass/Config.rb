@@ -11,15 +11,20 @@
 
 
 # =============================================================================
-# RUBY FUNCTIONS
+# SASS SCRIPT FUNCTIONS
 # =============================================================================
-# Timestamp function
-#
-# @author 'Hopper' <http://stackoverflow.com/users/1026353/hopper>
-# @link http://stackoverflow.com/questions/13022461/add-timestamps-to-compiled-sass-scss
 module Sass::Script::Functions
+    # Timestamp function
+    #
+    # @author 'Hopper' <http://stackoverflow.com/users/1026353/hopper>
+    # @link http://stackoverflow.com/questions/13022461/add-timestamps-to-compiled-sass-scss
     def timestamp()
         return Sass::Script::String.new(Time.now.to_s)
+    end
+
+    # Get the name of the extension name(Root folder name)
+    def ext_directory()
+        return Sass::Script::String.new(File.basename(File.expand_path('../../../..', __FILE__)))
     end
 end
 

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-$package_name: <!= pkg.name !>;
+$package_name: #{ext_directory()};
 /*!
  * Compiled on: #{timestamp()}
  * Base stylesheet for <!= pkg.homepage !>
