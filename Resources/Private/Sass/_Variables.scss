@@ -1,7 +1,7 @@
 //
 // Variables, variables, variables!
 //
-// @package #{$package_name()}
+// @package #{ext_directory()}
 // @path /_Variables.sass
 // @link http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
 //
@@ -12,7 +12,7 @@
 // =============================================================================
 // The template-root path, used to generate the box-sizing.htc path,
 // this has to be relative to the .html document.
-$template-path:         "typo3conf/ext/#{$package_name}/";
+$template-path:         "typo3conf/ext/#{ext_directory()}/";
 
 // Set the box-sizing of all elements to 'border-box'.
 $global-border-box:     true;

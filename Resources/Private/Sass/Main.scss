@@ -1,10 +1,9 @@
 @charset "UTF-8";
-$package_name: #{ext_directory()};
 /*!
  * Compiled on: #{timestamp()}
  * Base stylesheet for <!= pkg.homepage !>
  *
- * @package #{$package_name()}
+ * @package #{ext_directory()}
  * @path /Main.scss
  * @author <!= pkg.author.name !> <<!= pkg.author.email !>>
 
