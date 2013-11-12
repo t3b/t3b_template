@@ -11,10 +11,12 @@ module.exports = function(grunt) {
 		privateJs:'<%= path.private %>/Javascripts',
 		publicJs: '<%= path.public %>/Javascripts'
 	};
+	var currentDate = grunt.template.today('dd-mm-yyyy hh:MM');
 
 	// Project configuration.
 	grunt.initConfig({
 		path: path,
+		currentDate: currentDate,
 		pkg: grunt.file.readJSON('package.json'),
 
 
@@ -80,6 +82,9 @@ module.exports = function(grunt) {
 				}, {
 					from: '<!= pkg.author.email !>',
 					to: '<%= pkg.author.email %>'
+				}, {
+					from: '<!= date !>',
+					to: '<%= currentDate %>'
 				}]
 			},
 			modernizr: {

@@ -3,7 +3,7 @@
 ########################################################################
 # Extension Manager/Repository config file for ext "<!= pkg.name !>".
 #
-# Auto generated 20-02-2013 17:01
+# Auto generated <!= date !>
 #
 # Manual updates:
 # Only the data in the array - everything else is removed by next
