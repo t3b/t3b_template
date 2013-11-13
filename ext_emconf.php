@@ -13,7 +13,7 @@
 $EM_CONF[$_EXTKEY] = array(
 	'title' => '<!= pkg.name !>',
 	'description' => '<!= pkg.description !>',
-	'category' => 'misc',
+	'category' => 'templates',
 	'author' => '<!= pkg.author.name !>',
 	'author_email' => '<!= pkg.author.name.email !>',
 	'author_company' => '',
