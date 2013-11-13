@@ -33,7 +33,6 @@ $EM_CONF[$_EXTKEY] = array(
 			'typo3' => '6.0.0',
 			'extbase' => '6.0.0',
 			'fluid' => '6.0.0',
-			't3b_common' => '',
 			'fluidpages' => '',
 			'fluidcontent' => '',
 			'vhs' => '',
@@ -43,6 +42,7 @@ $EM_CONF[$_EXTKEY] = array(
 		),
 		'suggests' => array(
 			't3b_config' => '',
+			't3b_common' => '',
 		),
 	)
 );
