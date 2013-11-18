@@ -146,6 +146,7 @@ module.exports = function(grunt) {
 				expr: true,
 				evil: true,
 				smarttabs: true,
+				reporter: require('jshint-stylish'),
 				globals: {
 					Modernizr: true,
 					define: true,
