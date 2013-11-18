@@ -34,7 +34,7 @@
 // =============================================================================
 // @description
 // Get the dimensions of an image-file located in the 'images_dir' and create
-// output wich displays an image optimized for high density screens
+// output which displays an image optimized for high density screens
 //
 // @param file-name
 // @returns
@@ -56,7 +56,7 @@
 // Image-Replacement Mixin
 // =============================================================================
 // @description
-// A image-replacement mixin wich generates the image-dimensions as CSS rules and
+// A image-replacement mixin which generates the image-dimensions as CSS rules and
 // @extends the .ir rule inside the _helper.scss file.
 // Default $display-mode is set to 'block'.
 //

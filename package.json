@@ -1,6 +1,6 @@
 {
   "name": "t3b_template",
-  "description": "A Kickstarter Template-Extension wich is based on Fluid and Compass",
+  "description": "A Kickstarter Template-Extension which is based on Fluid and Compass",
   "version": "1.2.1",
   "homepage": "https://github.com/t3b/t3b_template",
   "author": {

@@ -1,5 +1,5 @@
 /*!
- * Grid object wich makes use of the width classes in generic/_widths.scss
+ * Grid object which makes use of the width classes in generic/_widths.scss
  *
  * @package #{ext_directory()}
  * @path Objects/_Grid.scss
@@ -15,7 +15,7 @@ $grid-direction:  $start;
 /* =============================================================================
 $ Grid Classes
 ================================================================================
- * A basic grid system wich is dependent on the border-box layout mode
+ * A basic grid system which is dependent on the border-box layout mode
  * e.g.
  *
   <div class="g">

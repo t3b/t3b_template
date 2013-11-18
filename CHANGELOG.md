@@ -37,7 +37,7 @@
 * Fixed the body line-height calculation
 * Embraced the use of `em` and `rem` as the unit of choice
 * Renamed `%non-print` to `%print-hidden`
-* Renamed all `$variables` into the scheme wich compass uses
+* Renamed all `$variables` into the scheme which compass uses
 * Removed the old grid system in favor of the widths object from [inuit.css](https://github.com/csswizardry/inuit.css/)
 
 
@@ -164,7 +164,7 @@
 
 ## 1.1.1
 **Structure**
-* Created a `/generic/` folder for files wich will be generated
+* Created a `/generic/` folder for files which will be generated
 * Moved all `/component/` files to `/base/`
 * Renamed `/modules/` to `/objects/`
 
