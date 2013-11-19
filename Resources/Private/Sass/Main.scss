@@ -27,12 +27,14 @@
 // =============================================================================
 // 1. "Generic/_Head"           - Declarations which should be put at the top of the document
 // 2. "Generic/_Normalize"      - Nicolas Gallagher's normalize.css
-// 3. "Generic/_Widths"         - Human readable width classes from inuit.css
-// 4. "Generic/_T3General"      - TYPO3 related classes
-// 5. "Generic/_Brand"          - Generated brand classes like colors, font-families & logos
+// 3. "Generic/_Debug"          - Debug code wich applies if the compass env is set to 'development'
+// 4. "Generic/_Widths"         - Human readable width classes from inuit.css
+// 5. "Generic/_T3General"      - TYPO3 related classes
+// 6. "Generic/_Brand"          - Generated brand classes like colors, font-families & logos
 // =============================================================================
 @import "Generic/_Head",
         "Generic/_Normalize",
+        "Generic/_Debug",
         "Generic/_Widths",
         "Generic/_T3General",
         "Generic/_Brand";
