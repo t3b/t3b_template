@@ -1,3 +1,4 @@
+@if compass-env() == 'development' {
 /*!
  * Debug code wich applies if the compass env is set to 'development'
  *
@@ -9,21 +10,19 @@
 /* =============================================================================
 $ Environment banner
 ================================================================================ */
-body {
-  @if compass-env() == 'development' {
-    &::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 99999;
-      padding: 5px 10px;
-      content: 'Development';
-      border: 2px solid #000;
-      background: red;
-      text-transform: uppercase;
-      color: #000;
-      font-weight: $bold;
-      font-size: 10px;
-    }
-  }
+body::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  padding: 5px 10px;
+  content: 'Development';
+  border: 2px solid #000;
+  background: red;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: $bold;
+  font-size: 10px;
 }
+
+} // endif
