@@ -11,7 +11,7 @@
 ########################################################################
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => '<!= pkg.name !>',
+	'title' => '<!= pkg.homepage !> Templates',
 	'description' => '<!= pkg.description !>',
 	'category' => 'templates',
 	'author' => '<!= pkg.author.name !>',
