@@ -235,7 +235,7 @@ module.exports = function(grunt) {
 	// Deploy task
 	// Recompiles all .scss/.sass files with ':prod' options (Minified), creates an
 	// custom Modernizr build and changes the affected paths in all Fluid Layouts.
-	grunt.registerTask('deploy', ['clean:css', 'compass:prod', 'modernizr', 'replace:modernizr']);
+	grunt.registerTask('deploy', ['clean:css', 'compass:prod', 'modernizr', 'replace:modernizr', 'imageoptim']);
 
 	// Travis CI task
 	// Replaces all replace strings with the standard meta data stored in the package.json
