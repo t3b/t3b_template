@@ -1,6 +1,9 @@
 module.exports = function(grunt) {
 	'use strict';
 
+	// Display the execution time of grunt tasks 
+	require('time-grunt')(grunt);
+
 	// Project paths.
 	var path = {
 		private:  'Resources/Private',

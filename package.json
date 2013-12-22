@@ -42,5 +42,8 @@
 	},
 	"scripts": {
 		"test": "grunt travis --verbose"
+	},
+	"dependencies": {
+		"time-grunt": "~0.2.5"
 	}
 }
