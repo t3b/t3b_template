@@ -130,7 +130,7 @@ module.exports = function(grunt) {
 			files: [
 				'**/*.{js,css,scss}',
 				'!node_modules/**/*',
-				'!{Gruntfile,grunt}.js',
+				'!Gruntfile.js',
 				'!<%= path.privateJs %>/Libaries/Modernizr/**/*'
 			]
 		},
