@@ -4,23 +4,29 @@ module.exports = function(grunt) {
 	// Display the execution time of grunt tasks 
 	require('time-grunt')(grunt);
 
-	// Project paths.
-	var path = {
-		private:  'Resources/Private',
-		public:   'Resources/Public',
-		sass:     '<%= path.private %>/Sass',
-		css:      '<%= path.public %>/Stylesheets',
-		images:   '<%= path.public %>/Images',
-		privateJs:'<%= path.private %>/Javascripts',
-		publicJs: '<%= path.public %>/Javascripts'
-	};
-	var currentDate = grunt.template.today('dd-mm-yyyy hh:MM');
+	var path = { // Project paths.
+			private:  'Resources/Private',
+			public:   'Resources/Public',
+			sass:     '<%= path.private %>/Sass',
+			css:      '<%= path.public %>/Stylesheets',
+			images:   '<%= path.public %>/Images',
+			privateJs:'<%= path.private %>/Javascripts',
+			publicJs: '<%= path.public %>/Javascripts'
+		},
+		currentDate = grunt.template.today('dd-mm-yyyy hh:MM'), // Returns the current dateTime
+		packageJSON = grunt.file.readJSON('package.json'), // Returns the 'package.json' contents
+		packageIsDefault = (packageJSON.name === 't3b_template') ? true : false; // Check if the defaults in 'package.json' are customized.
+
+	if (packageIsDefault) {
+		grunt.log.subhead('Running Grunt-Tasks in "T3B-Dev" mode');
+	}
 
 	// Project configuration.
 	grunt.initConfig({
+		// Passing some variables into the initConfig object.
 		path: path,
 		currentDate: currentDate,
-		pkg: grunt.file.readJSON('package.json'),
+		pkg: packageJSON,
 
 
 		// Grunt-Contrib-Compass
@@ -238,7 +244,13 @@ module.exports = function(grunt) {
 	// Initialize task.
 	// Replaces all t3b_template strings and other meta-data with the data
 	// specified inside the 'package.json'. (Should be run after downloading the extension).
-	grunt.registerTask('init', ['replace:init', 'compass:dev', 'shell:gitSubmoduleUpdate', 'clean:gitHooks', 'shell:hookUpGit', 'clean:cleanGitHookSamples']);
+	grunt.registerTask('init', function() {
+		// Check if the package.json contents are defaults; If 'false' replace all '<!=  !>' strings and set up the git hooks.
+		if (!packageIsDefault) {
+			grunt.task.run(['replace:init', 'clean:gitHooks', 'shell:hookUpGit', 'clean:cleanGitHookSamples']);
+		}
+		grunt.task.run(['compass:dev', 'shell:gitSubmoduleUpdate']);
+	});
 
 	// Deploy task
 	// Recompiles all .scss/.sass files with ':prod' options (Minified), creates an
