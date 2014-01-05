@@ -41,7 +41,8 @@
 		"grunt-css-metrics": "~0.1.2"
 	},
 	"scripts": {
-		"test": "grunt travis --verbose"
+		"test": "grunt travis --verbose",
+		"postinstall": "grunt init"
 	},
 	"dependencies": {
 		"time-grunt": "~0.2.5"

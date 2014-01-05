@@ -260,5 +260,5 @@ module.exports = function(grunt) {
 	// Travis CI task
 	// Replaces all replace strings with the standard meta data stored in the package.json
 	// and tests all JS files with JSHint, this task is used by Travis CI.
-	grunt.registerTask('travis', ['replace:init', 'compass:prod', 'jshint']);
+	grunt.registerTask('travis', ['replace:init', 'jshint']);
 };
