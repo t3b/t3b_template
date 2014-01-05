@@ -15,7 +15,7 @@ jsLintResult=$?
 SRC_PATTERN=".scss"
 git diff --cached --name-only | if grep "$SRC_PATTERN"
 then
-    grunt analyse:css
+    grunt cssmetrics
 fi
 cssAnalysisResult=$?
 
