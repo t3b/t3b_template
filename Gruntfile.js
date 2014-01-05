@@ -56,7 +56,9 @@ module.exports = function(grunt) {
 		// Cleans files and folders.
 		// https://github.com/gruntjs/grunt-contrib-clean
 		clean: {
-			css: ['<%= path.css %>/*.css']
+			css: ['<%= path.css %>/*.css'],
+			gitHooks: ['.git/hooks/'],
+			cleanGitHookSamples: ['git-hooks/']
 		},
 
 
@@ -199,6 +201,9 @@ module.exports = function(grunt) {
 		shell: {
 			gitSubmoduleUpdate: {
 				command: 'git submodule init && git submodule update'
+			},
+			hookUpGit: {
+				command: 'mkir && cp git-hooks/pre-commit .git/hooks/'
 			}
 		},
 
@@ -233,7 +238,7 @@ module.exports = function(grunt) {
 	// Initialize task.
 	// Replaces all t3b_template strings and other meta-data with the data
 	// specified inside the 'package.json'. (Should be run after downloading the extension).
-	grunt.registerTask('init', ['replace:init', 'compass:dev', 'shell:gitSubmoduleUpdate']);
+	grunt.registerTask('init', ['replace:init', 'compass:dev', 'shell:gitSubmoduleUpdate', 'clean:gitHooks', 'shell:hookUpGit', 'clean:cleanGitHookSamples']);
 
 	// Deploy task
 	// Recompiles all .scss/.sass files with ':prod' options (Minified), creates an
