@@ -143,10 +143,8 @@ $ Typographic Helper Classes
   /**
    * Break strings when their length exceeds the width of their container.
    */
-  word-break: break-all;
-  word-break: break-word;
   word-wrap: break-word;
-  @include hyphens(manual);
+  @include hyphens(auto);
 }
 
 /* ======================= Margin-reset ======================== */
