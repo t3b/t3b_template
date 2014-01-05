@@ -21,7 +21,9 @@ module.exports = function(grunt) {
 		grunt.log.subhead('Running Grunt-Tasks in "T3B-Dev" mode');
 	}
 
-	// Project configuration.
+	/**
+	 * Project configuration.
+	 */
 	grunt.initConfig({
 		// Passing some variables into the initConfig object.
 		path: path,
@@ -29,9 +31,11 @@ module.exports = function(grunt) {
 		pkg: packageJSON,
 
 
-		// Grunt-Contrib-Compass
-		// Compiles .scss/.sass files to .css using Compass.
-		// https://github.com/gruntjs/grunt-contrib-compass
+		/**
+		 * Grunt-Contrib-Compass
+		 * Compiles .scss/.sass files to .css using Compass.
+		 * https://github.com/gruntjs/grunt-contrib-compass
+		 */
 		compass: {
 			options: {
 				// Specify the config.rb filepath
@@ -58,9 +62,11 @@ module.exports = function(grunt) {
 		},
 
 
-		// Grunt-Contrib-Clean
-		// Cleans files and folders.
-		// https://github.com/gruntjs/grunt-contrib-clean
+		/**
+		 * Grunt-Contrib-Clean
+		 * Cleans files and folders.
+		 * https://github.com/gruntjs/grunt-contrib-clean
+		 */
 		clean: {
 			css: ['<%= path.css %>/*.css'],
 			gitHooks: ['.git/hooks/'],
@@ -68,9 +74,11 @@ module.exports = function(grunt) {
 		},
 
 
-		// Grunt-Replace
-		// Replace inline patterns with variables.
-		// https://npmjs.org/package/grunt-replace
+		/**
+		 * Grunt-Replace
+		 * Replace inline patterns with variables.
+		 * https://npmjs.org/package/grunt-replace
+		 */
 		replace: {
 			init: {
 				src: ['**/*.php', '**/*.txt', '**/*.ts', '**/*.html', '**/*.scss', '!node_modules/**/*', '!<%= path.privateJs %>/Libaries/**/*'],
@@ -109,9 +117,11 @@ module.exports = function(grunt) {
 		},
 
 
-		// Grunt-Modernizr
-		// Crawls through source files, gathers up references to Modernizr tests and outputs a clean Modernizr build.
-		// https://github.com/Modernizr/grunt-modernizr
+		/**
+		 * Grunt-Modernizr
+		 * Crawls through source files, gathers up references to Modernizr tests and outputs a clean Modernizr build.
+		 * https://github.com/Modernizr/grunt-modernizr
+		 */
 		modernizr: {
 			devFile: '<%= path.privateJs %>/Libaries/Modernizr/modernizr.js',
 			outputFile: '<%= path.publicJs %>/Libaries/Modernizr-Custom.js',
@@ -144,9 +154,11 @@ module.exports = function(grunt) {
 		},
 
 
-		// Grunt-Contrib-JSHint
-		// Validate files with JSHint.
-		// https://github.com/gruntjs/grunt-contrib-jshint
+		/**
+		 * Grunt-Contrib-JSHint
+		 * Validate files with JSHint.
+		 * https://github.com/gruntjs/grunt-contrib-jshint
+		 */
 		jshint: {
 			options: {
 				browser: true,
@@ -171,9 +183,11 @@ module.exports = function(grunt) {
 		},
 
 
-		// Grunt-CSS-Metrics
-		// Grunt task to analyse css files and log simple metrics.
-		// https://github.com/phamann/grunt-css-metrics
+		/**
+		 * Grunt-CSS-Metrics
+		 * Grunt task to analyse css files and log simple metrics.
+		 * https://github.com/phamann/grunt-css-metrics
+		 */
 		cssmetrics: {
 			common: {
 				src: ['<%= path.css %>/*.css'],
@@ -186,9 +200,11 @@ module.exports = function(grunt) {
 		},
 
 
-		// Grunt-ImageOptim
-		// Lossless optimisation of images
-		// https://github.com/gruntjs/grunt-contrib-watch
+		/**
+		 * Grunt-ImageOptim
+		 * Lossless optimisation of images
+		 * https://github.com/gruntjs/grunt-contrib-watch
+		 */
 		imageoptim: {
 			files: [
 				'<%= path.images %>'
@@ -201,9 +217,11 @@ module.exports = function(grunt) {
 		},
 
 
-		// Grunt-Shell
-		// Run shell commands.
-		// https://npmjs.org/package/grunt-shell
+		/**
+		 * Grunt-Shell
+		 * Run shell commands.
+		 * https://npmjs.org/package/grunt-shell
+		 */
 		shell: {
 			gitSubmoduleUpdate: {
 				command: 'git submodule init && git submodule update'
@@ -214,9 +232,11 @@ module.exports = function(grunt) {
 		},
 
 
-		// Grunt-Contrib-Watch
-		// Run tasks whenever watched files change.
-		// https://github.com/gruntjs/grunt-contrib-watch
+		/**
+		 * Grunt-Contrib-Watch
+		 * Run tasks whenever watched files change.
+		 * https://github.com/gruntjs/grunt-contrib-watch
+		 */
 		watch: {
 			options: {
 				nospawn: true
@@ -233,17 +253,23 @@ module.exports = function(grunt) {
 	});
 
 
-	// Load all grunt-plugins that are specified in the 'package.json' file.
+	/**
+	 * Load all grunt-plugins that are specified in the 'package.json' file.
+	 */
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-	// Default grunt task.
-	// Compiles all .scss/.sass files with ':dev' options and
-	// validates all js-files inside Resources/Private/Javascripts with JSHint.
+	/**
+	 * Default grunt task.
+	 * Compiles all .scss/.sass files with ':dev' options and
+	 * validates all js-files inside Resources/Private/Javascripts with JSHint.
+	 */
 	grunt.registerTask('default', ['compass:dev', 'jshint']);
 
-	// Initialize task.
-	// Replaces all t3b_template strings and other meta-data with the data
-	// specified inside the 'package.json'. (Should be run after downloading the extension).
+	/**
+	 * Initialize task.
+	 * Replaces all t3b_template strings and other meta-data with the data
+	 * specified inside the 'package.json'. (Should be run after downloading the extension).
+	 */
 	grunt.registerTask('init', function() {
 		// Check if the package.json contents are defaults; If 'false' replace all '<!=  !>' strings and set up the git hooks.
 		if (!packageIsDefault) {
@@ -252,13 +278,17 @@ module.exports = function(grunt) {
 		grunt.task.run(['compass:dev', 'shell:gitSubmoduleUpdate']);
 	});
 
-	// Deploy task
-	// Recompiles all .scss/.sass files with ':prod' options (Minified), creates an
-	// custom Modernizr build and changes the affected paths in all Fluid Layouts.
+	/**
+	 * Deploy task
+	 * Recompiles all .scss/.sass files with ':prod' options (Minified), creates an
+	 * custom Modernizr build and changes the affected paths in all Fluid Layouts.
+	 */
 	grunt.registerTask('deploy', ['clean:css', 'compass:prod', 'modernizr', 'replace:modernizr', 'imageoptim']);
 
-	// Travis CI task
-	// Replaces all replace strings with the standard meta data stored in the package.json
-	// and tests all JS files with JSHint, this task is used by Travis CI.
+	/**
+	 * Travis CI task
+	 * Replaces all replace strings with the standard meta data stored in the package.json
+	 * and tests all JS files with JSHint, this task is used by Travis CI.
+	 */
 	grunt.registerTask('travis', ['replace:init', 'jshint']);
 };
