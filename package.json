@@ -42,7 +42,7 @@
 	},
 	"scripts": {
 		"test": "grunt travis --verbose",
-		"postinstall": "grunt init"
+		"postinstall": "grunt init && git submodule init && git submodule update"
 	},
 	"dependencies": {
 		"time-grunt": "~0.2.5"

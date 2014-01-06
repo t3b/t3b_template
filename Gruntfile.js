@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 	'use strict';
 
-	// Display the execution time of grunt tasks 
+	// Display the execution time of grunt tasks
 	require('time-grunt')(grunt);
 
 	var path = { // Project paths.
@@ -223,9 +223,6 @@ module.exports = function(grunt) {
 		 * https://npmjs.org/package/grunt-shell
 		 */
 		shell: {
-			gitSubmoduleUpdate: {
-				command: 'git submodule init && git submodule update'
-			},
 			hookUpGit: {
 				command: 'mkir && cp git-hooks/pre-commit .git/hooks/'
 			}
@@ -275,7 +272,7 @@ module.exports = function(grunt) {
 		if (!packageIsDefault) {
 			grunt.task.run(['replace:init', 'clean:gitHooks', 'shell:hookUpGit', 'clean:cleanGitHookSamples']);
 		}
-		grunt.task.run(['compass:dev', 'shell:gitSubmoduleUpdate']);
+		grunt.task.run(['compass:dev']);
 	});
 
 	/**
