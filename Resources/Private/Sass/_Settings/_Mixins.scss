@@ -24,8 +24,8 @@
 //   }
 // =============================================================================
 @mixin img-wh($file-name) {
-  width: image-width($file-name);
-  height: image-height($file-name);
+	width: image-width($file-name);
+	height: image-height($file-name);
 }
 
 
@@ -47,8 +47,8 @@
 //   }
 // =============================================================================
 @mixin hdpi-img($file-name) {
-  background-size: image-width($file-name)/2 image-height($file-name)/2;
-  background-image: image-url('#{$file-name}');
+	background-size: image-width($file-name)/2 image-height($file-name)/2;
+	background-image: image-url('#{$file-name}');
 }
 
 
@@ -73,12 +73,12 @@
 //   }
 // =============================================================================
 @mixin image-replacement($file-name, $display-mode: block) {
-  @if $file-name { // Output the image dimensions if an image is passed as an argument
-    display: $display-mode;
-    @include img-wh('#{$file-name}');
-    @extend .ir;
-    background-image: image-url('#{$file-name}');
-  }
+	@if $file-name { // Output the image dimensions if an image is passed as an argument
+		display: $display-mode;
+		@include img-wh('#{$file-name}');
+		@extend .ir;
+		background-image: image-url('#{$file-name}');
+	}
 }
 
 
@@ -100,8 +100,8 @@
 //   }
 // =============================================================================
 @mixin rem($property: font-size, $value: 16) {
-  #{$property}: $value +px;
-  #{$property}: ($value / 16)*1rem;
+	#{$property}: $value +px;
+	#{$property}: ($value / 16)*1rem;
 }
 
 
@@ -125,10 +125,10 @@
 //   }
 // =============================================================================
 @mixin font-size($font-size, $append-vrythm: false) {
-  @include rem(font-size, $font-size);
-  @if $append-vrythm {
-    line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
-  }
+	@include rem(font-size, $font-size);
+	@if $append-vrythm {
+		line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+	}
 }
 
 
@@ -156,15 +156,15 @@
 //   }
 // =============================================================================
 @mixin cssTriangle($triangle-size, $triangle-color, $triangle-direction) {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: solid $triangle-size;
-  @if ($triangle-direction == top)    { border-color: $triangle-color transparent transparent transparent; }
-  @if ($triangle-direction == bottom) { border-color: transparent transparent $triangle-color transparent; }
-  @if ($triangle-direction == left)   { border-color: transparent transparent transparent $triangle-color; }
-  @if ($triangle-direction == right)  { border-color: transparent $triangle-color transparent transparent; }
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border: solid $triangle-size;
+	@if ($triangle-direction == top)    { border-color: $triangle-color transparent transparent transparent; }
+	@if ($triangle-direction == bottom) { border-color: transparent transparent $triangle-color transparent; }
+	@if ($triangle-direction == left)   { border-color: transparent transparent transparent $triangle-color; }
+	@if ($triangle-direction == right)  { border-color: transparent $triangle-color transparent transparent; }
 }
 
 
@@ -203,41 +203,41 @@
 //   @include viewport($width: device-width, $zoom: 1);
 // =============================================================================
 @mixin viewport($width: false, $height: false, $zoom: false, $orientation: false, $user-zoom: false) {
-  @-webkit-viewport {
-    @if $width       { width: $width; }
-    @if $height      { height: $height; }
-    @if $zoom        { zoom: $zoom; }
-    @if $orientation { orientation: $orientation; }
-    @if $user-zoom   { user-zoom: $user-zoom; }
-  }
-  @-moz-viewport {
-    @if $width       { width: $width; }
-    @if $height      { height: $height; }
-    @if $zoom        { zoom: $zoom; }
-    @if $orientation { orientation: $orientation; }
-    @if $user-zoom   { user-zoom: $user-zoom; }
-  }
-  @-ms-viewport {
-    @if $width       { width: $width; }
-    @if $height      { height: $height; }
-    @if $zoom        { zoom: $zoom; }
-    @if $orientation { orientation: $orientation; }
-    @if $user-zoom   { user-zoom: $user-zoom; }
-  }
-  @-o-viewport {
-    @if $width       { width: $width; }
-    @if $height      { height: $height; }
-    @if $zoom        { zoom: $zoom; }
-    @if $orientation { orientation: $orientation; }
-    @if $user-zoom   { user-zoom: $user-zoom; }
-  }
-  @viewport {
-    @if $width       { width: $width; }
-    @if $height      { height: $height; }
-    @if $zoom        { zoom: $zoom; }
-    @if $orientation { orientation: $orientation; }
-    @if $user-zoom   { user-zoom: $user-zoom; }
-  }
+	@-webkit-viewport {
+		@if $width       { width: $width; }
+		@if $height      { height: $height; }
+		@if $zoom        { zoom: $zoom; }
+		@if $orientation { orientation: $orientation; }
+		@if $user-zoom   { user-zoom: $user-zoom; }
+	}
+	@-moz-viewport {
+		@if $width       { width: $width; }
+		@if $height      { height: $height; }
+		@if $zoom        { zoom: $zoom; }
+		@if $orientation { orientation: $orientation; }
+		@if $user-zoom   { user-zoom: $user-zoom; }
+	}
+	@-ms-viewport {
+		@if $width       { width: $width; }
+		@if $height      { height: $height; }
+		@if $zoom        { zoom: $zoom; }
+		@if $orientation { orientation: $orientation; }
+		@if $user-zoom   { user-zoom: $user-zoom; }
+	}
+	@-o-viewport {
+		@if $width       { width: $width; }
+		@if $height      { height: $height; }
+		@if $zoom        { zoom: $zoom; }
+		@if $orientation { orientation: $orientation; }
+		@if $user-zoom   { user-zoom: $user-zoom; }
+	}
+	@viewport {
+		@if $width       { width: $width; }
+		@if $height      { height: $height; }
+		@if $zoom        { zoom: $zoom; }
+		@if $orientation { orientation: $orientation; }
+		@if $user-zoom   { user-zoom: $user-zoom; }
+	}
 }
 
 
@@ -262,11 +262,11 @@
 //   }
 // =============================================================================
 @mixin hyphens($value) {
-  -webkit-hyphens: $value;
-     -moz-hyphens: $value;
-      -ms-hyphens: $value;
-       -o-hyphens: $value;
-          hyphens: $value;
+	-webkit-hyphens: $value;
+		 -moz-hyphens: $value;
+			-ms-hyphens: $value;
+			 -o-hyphens: $value;
+					hyphens: $value;
 }
 
 
@@ -288,7 +288,7 @@
 //   }
 // =============================================================================
 @mixin placeholder-color($color) {
-  &::-webkit-input-placeholder { color: $color; }
-  &:-moz-placeholder { color: $color; }
-  &:-ms-input-placeholder { color: $color; }
+	&::-webkit-input-placeholder { color: $color; }
+	&:-moz-placeholder { color: $color; }
+	&:-ms-input-placeholder { color: $color; }
 }

@@ -11,18 +11,18 @@
 $ Environment banner
 ================================================================================ */
 body::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 99999;
-  padding: 5px 10px;
-  content: 'Development';
-  border: 2px solid #000;
-  background: red;
-  text-transform: uppercase;
-  color: #000;
-  font-weight: $bold;
-  font-size: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 99999;
+	padding: 5px 10px;
+	content: 'Development';
+	border: 2px solid #000;
+	background: red;
+	text-transform: uppercase;
+	color: #000;
+	font-weight: $bold;
+	font-size: 10px;
 }
 
 } // endif

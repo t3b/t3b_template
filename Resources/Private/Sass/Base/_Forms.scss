@@ -24,40 +24,40 @@ input[type="datetime-local"],
 input[type="month"],
 input[type="time"],
 input[type="week"] {
-  height: $text-input-height;
-  padding: .2em .4em;
-  @include rem(margin-bottom, $half-spacing);
+	height: $text-input-height;
+	padding: .2em .4em;
+	@include rem(margin-bottom, $half-spacing);
 
-  background: $content-background;
-  border: $text-input-border;
-  border-radius: $text-input-borderRadius;
-  @include box-shadow($text-input-boxShadow);
+	background: $content-background;
+	border: $text-input-border;
+	border-radius: $text-input-borderRadius;
+	@include box-shadow($text-input-boxShadow);
 
-  @include font-size($text-input-fontSize);
-  color: $text-input-color;
+	@include font-size($text-input-fontSize);
+	color: $text-input-color;
 }
 textarea {
-  height: auto; /* Reset height since textareas have the attribute rows="" */
-  min-height: ($base-line-height *3) +px; /* Set a min-height for textareas of 3 rows */
+	height: auto; /* Reset height since textareas have the attribute rows="" */
+	min-height: ($base-line-height *3) +px; /* Set a min-height for textareas of 3 rows */
 
-  resize: vertical; /* So users cannot expand the textarea over its boundaries */
-  overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9. */
-  vertical-align: top; /* Improves readability and alignment in all browsers. */
+	resize: vertical; /* So users cannot expand the textarea over its boundaries */
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9. */
+	vertical-align: top; /* Improves readability and alignment in all browsers. */
 }
 
 input::-webkit-datetime-edit {
-  /**
-   * A possible shadow-dom fix for webkit control spacing on input[type=time]
-   */
-  margin-top: -.17em;
-  margin-bottom: -.17em;
+	/**
+	 * A possible shadow-dom fix for webkit control spacing on input[type=time]
+	 */
+	margin-top: -.17em;
+	margin-bottom: -.17em;
 }
 
 /* ========================= Checkboxes ======================== */
 input[type="checkbox"],
 input[type="radio"] {
-  margin-right: .35em;
-  cursor: pointer;
+	margin-right: .35em;
+	cursor: pointer;
 }
 
 
@@ -69,24 +69,24 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  cursor: pointer;
-  @include rem(margin-bottom, $button-spacing);
-  /**
-   * Set in em's so we can change the size of the button depending on the font-size
-   */
-  padding: $button-inner-spacing;
+	cursor: pointer;
+	@include rem(margin-bottom, $button-spacing);
+	/**
+	 * Set in em's so we can change the size of the button depending on the font-size
+	 */
+	padding: $button-inner-spacing;
 
-  border: 0;
-  border-radius: $brand-border-radius;
-  background: $button-background;
+	border: 0;
+	border-radius: $brand-border-radius;
+	background: $button-background;
 
-  font-size: $button-font-size;
-  /**
-   * Normalize the font-weight accross <input>, <button> and the .btn class
-   */
-  font-weight: normal;
-  line-height: 1;
-  color: $button-color;
+	font-size: $button-font-size;
+	/**
+	 * Normalize the font-weight accross <input>, <button> and the .btn class
+	 */
+	font-weight: normal;
+	line-height: 1;
+	color: $button-color;
 }
 
 
@@ -95,54 +95,54 @@ input[type="submit"] {
 $ Form elements
 ================================================================================ */
 fieldset {
-  /**
-   * Reset border, margin, and padding to define a consistend style accross all browsers
-   */
-  border: 0;
-  margin: 0;
-  padding: 0;
+	/**
+	 * Reset border, margin, and padding to define a consistend style accross all browsers
+	 */
+	border: 0;
+	margin: 0;
+	padding: 0;
 }
 form {
-  @if $legacy-normalizecss {
-    /**
-     * Corrects margin displayed oddly in IE6/7.
-     */
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  @extend %margin-bottom;
+	@if $legacy-normalizecss {
+		/**
+		 * Corrects margin displayed oddly in IE6/7.
+		 */
+		margin-top: 0;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	@extend %margin-bottom;
 }
 
 /* ==================== Labels and Legends ===================== */
 label {
-  display: block;
-  font-weight: $bold;
-  @include font-size(14, $append-vrythm: true);
-  &[for] {
-    cursor: pointer;
-  }
+	display: block;
+	font-weight: $bold;
+	@include font-size(14, $append-vrythm: true);
+	&[for] {
+		cursor: pointer;
+	}
 }
 legend {
-  display: block;
-  width: 100%;
-  @extend %margin-bottom;
+	display: block;
+	width: 100%;
+	@extend %margin-bottom;
 
-  @include font-size($h4-size);
-  color: $headings-color;
-  border-bottom: 1px $basic-border-style $basic-border-color;
+	@include font-size($h4-size);
+	color: $headings-color;
+	border-bottom: 1px $basic-border-style $basic-border-color;
 
-  padding: 0;
-  @if $legacy-normalizecss {
-    /**
-     * Corrects text not wrapping in FF3.
-     */
-    white-space: normal;
-    /**
-     * Corrects alignment displayed oddly in IE6/7.
-     */
-    *margin-left: -7px;
-  }
+	padding: 0;
+	@if $legacy-normalizecss {
+		/**
+		 * Corrects text not wrapping in FF3.
+		 */
+		white-space: normal;
+		/**
+		 * Corrects alignment displayed oddly in IE6/7.
+		 */
+		*margin-left: -7px;
+	}
 }
 
 
@@ -152,33 +152,33 @@ $ Form-Inline abstraction
  * Display a <form> and all it's content in a horizontal order
  * e.g.
  *
-  <form class="form--inline">
-    <label>Username: </label>
-    <input type="text" placeholder="Username...">
-    <label>Password: </label>
-    <input type="password" placeholder="Password...">
-    <label class="label--checkbox">
-      <input type="checkbox">Remember me
-    </label>
-    <button type="submit">Sign in</button>
-  </form>
+	<form class="form--inline">
+		<label>Username: </label>
+		<input type="text" placeholder="Username...">
+		<label>Password: </label>
+		<input type="password" placeholder="Password...">
+		<label class="label--checkbox">
+			<input type="checkbox">Remember me
+		</label>
+		<button type="submit">Sign in</button>
+	</form>
 ================================================================================ */
 .form--inline {
-  label {
-    margin-#{$end}: .3em;
-  }
-  .label--checkbox {
-    input { margin-#{$end}: .35em; }
-    margin-#{$end}: 1em;
-  }
-  input { margin-#{$end}: 1em; }
-  label,
-  button,
-  input,
-  select,
-  textarea {
-    display: inline-block;
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
+	label {
+		margin-#{$end}: .3em;
+	}
+	.label--checkbox {
+		input { margin-#{$end}: .35em; }
+		margin-#{$end}: 1em;
+	}
+	input { margin-#{$end}: 1em; }
+	label,
+	button,
+	input,
+	select,
+	textarea {
+		display: inline-block;
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
 }

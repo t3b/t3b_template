@@ -262,12 +262,14 @@ module.exports = function(grunt) {
 	 */
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
+
 	/**
 	 * Default grunt task.
 	 * Compiles all .scss/.sass files with ':dev' options and
 	 * validates all js-files inside Resources/Private/Javascripts with JSHint.
 	 */
 	grunt.registerTask('default', ['compass:dev', 'jshint']);
+
 
 	/**
 	 * Initialize task.
@@ -287,12 +289,14 @@ module.exports = function(grunt) {
 		grunt.task.run(['compass:dev']);
 	});
 
+
 	/**
 	 * Deploy task
 	 * Recompiles all .scss/.sass files with ':prod' options (Minified), creates an
 	 * custom Modernizr build and changes the affected paths in all Fluid Layouts.
 	 */
 	grunt.registerTask('deploy', ['clean:css', 'compass:prod', 'modernizr', 'replace:modernizr', 'imageoptim']);
+
 
 	/**
 	 * Travis CI task

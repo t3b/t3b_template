@@ -15,24 +15,24 @@ $ Navigation Object
  * Throws a list into horizontal mode
  * e.g.:
  *
-  <ul class="nav">
-      <li><a href="">Home</a></li>
-      <li><a href="">About</a></li>
-      <li><a href="">Products</a></li>
-      <li><a href="">Contact</a></li>
-  </ul>
+	<ul class="nav">
+			<li><a href="">Home</a></li>
+			<li><a href="">About</a></li>
+			<li><a href="">Products</a></li>
+			<li><a href="">Contact</a></li>
+	</ul>
 ================================================================================ */
 .nav {
-  @extend %reset-list;
-  li { display: inline-block; }
-  a { display: block; }
+	@extend %reset-list;
+	li { display: inline-block; }
+	a { display: block; }
 }
 
 /* ======================= Stacked Navigation =======================
  * Throws a list into vertical mode
  */
 .nav--stacked li {
-  display: list-item;
+	display: list-item;
 }
 
 /* ========================= Fit Navigation =========================
@@ -40,15 +40,15 @@ $ Navigation Object
  * Thanks to @pimpl for this idea!
  */
 .nav--fit {
-  display: table;
-  width: 100%;
+	display: table;
+	width: 100%;
 
-  @if $legacy-support-for-ie7 {
-    li { display: table-cell; }
-    li li { display: inline-block; }
-  } @else {
-    > li {
-      display: table-cell;
-    }
-  }
+	@if $legacy-support-for-ie7 {
+		li { display: table-cell; }
+		li li { display: inline-block; }
+	} @else {
+		> li {
+			display: table-cell;
+		}
+	}
 }

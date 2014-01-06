@@ -18,20 +18,20 @@
 
 
 @if $global-border-box {
-  /* =============================================================================
-  $ Border-Box
-  ================================================================================ */
-  *, *:before, *:after {
-    @include box-sizing(border-box);
-    @if $legacy-support-for-ie7 {
-      /**
-       * Cross browser Border-box
-       *
-       * Includes boxsizing.htc behavior for IE7 and below
-       * The URL has to be relative to the HTML Doc
-       * https://github.com/Schepp/box-sizing-polyfill
-       */
-      *behavior: url('#{$template-path}Ressource/Public/BoxSizing.htc');
-    }
-  }
+	/* =============================================================================
+	$ Border-Box
+	================================================================================ */
+	*, *:before, *:after {
+		@include box-sizing(border-box);
+		@if $legacy-support-for-ie7 {
+			/**
+			 * Cross browser Border-box
+			 *
+			 * Includes boxsizing.htc behavior for IE7 and below
+			 * The URL has to be relative to the HTML Doc
+			 * https://github.com/Schepp/box-sizing-polyfill
+			 */
+			*behavior: url('#{$template-path}Ressource/Public/BoxSizing.htc');
+		}
+	}
 }

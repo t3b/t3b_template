@@ -22,7 +22,7 @@
 //   }
 // =============================================================================
 @function rs($target-size, $context: $base-font-size, $unit: em) {
-  @return #{$target-size/$context}$unit;
+	@return #{$target-size/$context}$unit;
 }
 
 
@@ -39,8 +39,8 @@ $direction: ltr !default;
 $start: left !default;
 $end: right !default;
 @if $direction == rtl {
-  $start: right;
-  $end: left;
+	$start: right;
+	$end: left;
 }
 
 
@@ -62,10 +62,10 @@ $end: right !default;
 //   }
 // =============================================================================
 @function color-adjust($color, $contrast: 100%) {
-  @if (lightness($color) > 50) {
-    @return darken($color, $contrast)
-  }
-  @else {
-    @return lighten($color, $contrast)
-  }
+	@if (lightness($color) > 50) {
+		@return darken($color, $contrast)
+	}
+	@else {
+		@return lighten($color, $contrast)
+	}
 }

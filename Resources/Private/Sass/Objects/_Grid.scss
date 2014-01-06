@@ -18,22 +18,22 @@ $ Grid Classes
  * A basic grid system which is dependent on the border-box layout mode
  * e.g.
  *
-  <div class="g">
-    <div class="gi one-third"> </div>
-    <div class="gi one-third"> </div>
-    <div class="gi one-third"> </div>
-  </div>
+	<div class="g">
+		<div class="gi one-third"> </div>
+		<div class="gi one-third"> </div>
+		<div class="gi one-third"> </div>
+	</div>
 ================================================================================ */
 .g,
 .grid {
-  @extend .cf;
-  margin-left: -($column-gutter / 2);
-  margin-right: -($column-gutter / 2);
+	@extend .cf;
+	margin-left: -($column-gutter / 2);
+	margin-right: -($column-gutter / 2);
 }
 .gi,
 .grid__item {
-  // Base styles for .gi--# classes
-  float: $grid-direction;
-  padding-left: ($column-gutter / 2);
-  padding-right: ($column-gutter / 2);
+	// Base styles for .gi--# classes
+	float: $grid-direction;
+	padding-left: ($column-gutter / 2);
+	padding-right: ($column-gutter / 2);
 }

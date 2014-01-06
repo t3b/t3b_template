@@ -21,15 +21,15 @@ $ CSC-Frames
 $ CSC-Tables
 ================================================================================ */
 .contenttable-1 {
-  @extend .table;
-  @extend .table--bordered;
+	@extend .table;
+	@extend .table--bordered;
 }
 .contenttable-2 {
-  @extend .table;
-  @extend .table--striped;
+	@extend .table;
+	@extend .table--striped;
 }
 .contenttable-3 {
-  @extend .table;
-  @extend .table--striped;
-  @extend .table--condensed;
+	@extend .table;
+	@extend .table--striped;
+	@extend .table--condensed;
 }

@@ -15,32 +15,32 @@ $ Button Object
  * Display an anchor tag as a button
  * e.g.
  *
-  <a class="btn">A Special link</a>
+	<a class="btn">A Special link</a>
 ================================================================================ */
 .btn {
-  @extend %btn;
-  display: inline-block;
-  @if $legacy-support-for-ie7 {
-    *display: inline;
-    *zoom: 1;
-  }
-  &,
-  &:hover {
-    text-decoration: none;
-  }
+	@extend %btn;
+	display: inline-block;
+	@if $legacy-support-for-ie7 {
+		*display: inline;
+		*zoom: 1;
+	}
+	&,
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 /* ================== Full width button abstraction =================
  * Set a button to the full-width of it's parent
  */
 .btn--full {
-  display: block;
-  text-align: center;
-  /**
-   * The following is so that this class works properly on inputs as well
-   * as anchor tags.
-   */
-  padding-right: 0;
-  padding-left: 0;
-  width: 100%;
+	display: block;
+	text-align: center;
+	/**
+	 * The following is so that this class works properly on inputs as well
+	 * as anchor tags.
+	 */
+	padding-right: 0;
+	padding-left: 0;
+	width: 100%;
 }

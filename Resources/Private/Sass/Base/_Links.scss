@@ -10,35 +10,35 @@
 $ Links
 ================================================================================ */
 a {
-  color: $link-color;
-  text-decoration: none;
-  /**
-   * Remove the gray background color from active links in IE 10.
-   */
-  background: transparent;
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: underline;
-  }
-  &:focus {
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -1px;
-  }
-  &:active,
-  &:hover {
-    /**
-     * Improves readability when focused and also mouse hovered in all browsers.
-     */
-    outline: 0;
-  }
-  p & {
-    /**
-     * Increasing the Clickable Area of Inline Links inside a paragraph
-     */
-    margin: -.33em;
-    padding: .33em;
-    position: relative;
-  }
+	color: $link-color;
+	text-decoration: none;
+	/**
+	 * Remove the gray background color from active links in IE 10.
+	 */
+	background: transparent;
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: underline;
+	}
+	&:focus {
+		outline: thin dotted;
+		outline: 5px auto -webkit-focus-ring-color;
+		outline-offset: -1px;
+	}
+	&:active,
+	&:hover {
+		/**
+		 * Improves readability when focused and also mouse hovered in all browsers.
+		 */
+		outline: 0;
+	}
+	p & {
+		/**
+		 * Increasing the Clickable Area of Inline Links inside a paragraph
+		 */
+		margin: -.33em;
+		padding: .33em;
+		position: relative;
+	}
 }
