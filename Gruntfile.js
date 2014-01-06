@@ -15,11 +15,17 @@ module.exports = function(grunt) {
 		},
 		currentDate = grunt.template.today('dd-mm-yyyy hh:MM'), // Returns the current dateTime
 		packageJSON = grunt.file.readJSON('package.json'), // Returns the 'package.json' contents
-		packageIsDefault = (packageJSON.name === 't3b_template') ? true : false; // Check if the defaults in 'package.json' are customized.
+		packageIsDefault = (packageJSON.name === 't3b_template') ? true : false,
+		env = grunt.option('env') || 'dev'; // Check if the defaults in 'package.json' are customized.
 
+	// Print out a warning message if the package.json contents aren't customized.
 	if (packageIsDefault) {
-		grunt.log.subhead('Running Grunt-Tasks in "T3B-Dev" mode');
+		grunt.log.subhead('Please edit the package.json contents.');
 	}
+
+	// Print out a message which displays the specified env.
+	grunt.log.subhead('Running Grunt-Tasks in "' + env + '" mode!');
+
 
 	/**
 	 * Project configuration.
