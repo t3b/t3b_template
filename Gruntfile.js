@@ -268,10 +268,15 @@ module.exports = function(grunt) {
 	 * specified inside the 'package.json'. (Should be run after downloading the extension).
 	 */
 	grunt.registerTask('init', function() {
+		// Copy the git hooks as they are not present by default.
+		grunt.task.run(['clean:gitHooks', 'shell:hookUpGit']);
+
 		// Check if the package.json contents are defaults; If 'false' replace all '<!=  !>' strings and set up the git hooks.
 		if (!packageIsDefault) {
-			grunt.task.run(['replace:init', 'clean:gitHooks', 'shell:hookUpGit', 'clean:cleanGitHookSamples']);
+			grunt.task.run(['replace:init', 'clean:cleanGitHookSamples']);
 		}
+
+		// Create the base Stylesheet to prevent errors from ext:vhs(File not found).
 		grunt.task.run(['compass:dev']);
 	});
 
