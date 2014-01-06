@@ -225,7 +225,7 @@ module.exports = function(grunt) {
 		 */
 		shell: {
 			hookUpGit: {
-				command: 'mkir && cp git-hooks/pre-commit .git/hooks/'
+				command: 'mkdir .git/hooks/ && cp git-hooks/pre-commit .git/hooks/'
 			}
 		},
 
