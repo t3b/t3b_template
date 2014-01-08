@@ -15,8 +15,8 @@ module.exports = function(grunt) {
 		},
 		currentDate = grunt.template.today('dd-mm-yyyy hh:MM'), // Returns the current dateTime
 		packageJSON = grunt.file.readJSON('package.json'), // Returns the 'package.json' contents
-		packageIsDefault = (packageJSON.name === 't3b_template') ? true : false,
-		env = grunt.option('env') || 'dev'; // Check if the defaults in 'package.json' are customized.
+		packageIsDefault = (packageJSON.name === 't3b_template') ? true : false, // Check if the defaults in 'package.json' are customized.
+		env = grunt.option('env') || 'dev'; // Create an 'env' grunt option, if not specified in the bash this will return 'dev' as a standard.
 
 	// Print out a warning message if the package.json contents aren't customized.
 	if (packageIsDefault) {
