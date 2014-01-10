@@ -11,9 +11,8 @@ It includes a base HTML5-Template with Modernizr, Stylesheet and an optional usa
 Customize the title, description, project homepage, author and author-email inside the `package.json`-file located in `/`.
 
 Optionally you can use [Grunt.js](http://gruntjs.com) to automate the following build process.
-`cd` into the extension folder and run `npm install` to download grunt and it's dependencies, afterwards run `grunt init`.
-This will customize the file-paths and replace all meta-data stored in the extension files with
-those you've just set in the `package.json`-file as well as compile an stylesheet using [Compass](http://compass-style.org/).
+`cd` into the extension folder and run `npm install` to download grunt and it's dependencies, afterwards it will automatically run `grunt init`.
+This will customize the file-paths and replace all meta-data stored in the extension files with those you've just set in the `package.json`-file as well as compile an stylesheet using [Compass](http://compass-style.org/).
 
 After you've made these changes, import the extension into your TYPO3-System.
 
