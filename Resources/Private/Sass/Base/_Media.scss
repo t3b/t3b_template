@@ -40,7 +40,7 @@ figure {
 	/**
 	 * Addresses margin not present in IE6/7/8/9, S5, O11.
 	 */
-	margin: 0;
+	margin: 1em 40px;
 }
 figcaption { /* 6 */
 	@include font-size(($base-font-size - 2));
