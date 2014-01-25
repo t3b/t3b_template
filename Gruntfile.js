@@ -231,10 +231,10 @@ module.exports = function(grunt) {
 			hookUpGit: {
 				command: 'rm -rf .git/hooks/ && mkdir .git/hooks/ && cp git-hooks/pre-commit .git/hooks/',
 				options: {
-	                stdout: true,
-	                stderr: true,
-	                failOnError: true
-	            },
+					stdout: true,
+					stderr: true,
+					failOnError: true
+				},
 			}
 		},
 
