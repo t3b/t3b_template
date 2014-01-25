@@ -75,9 +75,7 @@ module.exports = function(grunt) {
 		 * https://github.com/gruntjs/grunt-contrib-clean
 		 */
 		clean: {
-			css: ['<%= path.css %>/*.css'],
-			gitHooks: ['.git/hooks/'],
-			cleanGitHookSamples: ['git-hooks/']
+			css: ['<%= path.css %>/*.css']
 		},
 
 
@@ -231,7 +229,12 @@ module.exports = function(grunt) {
 		 */
 		shell: {
 			hookUpGit: {
-				command: 'mkdir .git/hooks/ && cp git-hooks/pre-commit .git/hooks/'
+				command: 'rm -rf .git/hooks/ && mkdir .git/hooks/ && cp git-hooks/pre-commit .git/hooks/',
+				options: {
+	                stdout: true,
+	                stderr: true,
+	                failOnError: true
+	            },
 			}
 		},
 
@@ -278,11 +281,11 @@ module.exports = function(grunt) {
 	 */
 	grunt.registerTask('init', function() {
 		// Copy the git hooks as they are not present by default.
-		grunt.task.run(['clean:gitHooks', 'shell:hookUpGit']);
+		grunt.task.run(['shell:hookUpGit']);
 
 		// Check if the package.json contents are defaults; If 'false' replace all '<!=  !>' strings and set up the git hooks.
 		if (!packageIsDefault) {
-			grunt.task.run(['replace:init', 'clean:cleanGitHookSamples']);
+			grunt.task.run(['replace:init']);
 		}
 
 		// Create the base Stylesheet to prevent errors from ext:vhs(File not found).
