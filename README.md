@@ -3,7 +3,7 @@
 Status](https://travis-ci.org/t3b/t3b_template.png?branch=master)](https://travis-ci.org/t3b/t3b_template)
 
 A Kickstarter Template-Extension for [TYPO3](http://typo3.org/) based on the Fluid template-engine and [Compass](http://compass-style.org/)/[Sass](http://sass-lang.com/).
-It includes a base HTML5-Template with Modernizr, Stylesheet and an optional usable Build process based on [Grunt.js](gruntjs.com).
+It includes a base HTML5-Template with Modernizr, Stylesheet and an optional usable Build process based on [Grunt.js](http://gruntjs.com).
 
 
 ## Installation
