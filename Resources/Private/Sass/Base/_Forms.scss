@@ -10,20 +10,9 @@
 $ Text inputs, checkboxes and other form elements
 ================================================================================ */
 /* ======================== Textinputs ========================= */
-textarea,
-input[type="email"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="url"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="time"],
-input[type="week"] {
+%text-input,
+.text-input,
+textarea {
 	height: $text-input-height;
 	padding: .2em .4em;
 	@include rem(margin-bottom, $half-spacing);
@@ -40,7 +29,7 @@ textarea {
 	height: auto; /* Reset height since textareas have the attribute rows="" */
 	min-height: ($base-line-height *3) +px; /* Set a min-height for textareas of 3 rows */
 
-	resize: vertical; /* So users cannot expand the textarea over its boundaries */
+	resize: vertical; /* So users cannot expand the textarea over it's boundaries */
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9. */
 	vertical-align: top; /* Improves readability and alignment in all browsers. */
 }
