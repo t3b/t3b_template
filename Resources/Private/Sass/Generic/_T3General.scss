@@ -15,21 +15,3 @@ $ CSC-Frames
 .csc-frame-indent { padding: 0 10%; }
 .csc-frame-indent3366 { padding-left: 33.333%; }
 .csc-frame-indent6633 { padding-right: 33.333%; }
-
-
-/* =============================================================================
-$ CSC-Tables
-================================================================================ */
-.contenttable-1 {
-	@extend .table;
-	@extend .table--bordered;
-}
-.contenttable-2 {
-	@extend .table;
-	@extend .table--striped;
-}
-.contenttable-3 {
-	@extend .table;
-	@extend .table--striped;
-	@extend .table--condensed;
-}
