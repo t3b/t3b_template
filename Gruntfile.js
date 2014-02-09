@@ -115,7 +115,7 @@ module.exports = function(grunt) {
 				src: ['<%= path.private %>/Layouts/*.html'],
 				overwrite: true,
 				replacements: [{
-					from: 'Resources/Private/Javascripts/Libaries/Modernizr/modernizr.js',
+					from: '<%= modernizr.devFile %>',
 					to: '<%= modernizr.outputFile %>'
 				}]
 			},
