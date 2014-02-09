@@ -193,9 +193,14 @@ module.exports = function(grunt) {
 				smarttabs: true,
 				reporter: require('jshint-stylish'),
 				globals: {
+					// Modernizr
 					Modernizr: true,
+
+					// RequireJS
+					module: true,
+					require: true,
+					requirejs: true,
 					define: true,
-					require: true
 				}
 			},
 			files: [
