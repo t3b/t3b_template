@@ -86,7 +86,16 @@ module.exports = function(grunt) {
 		 */
 		replace: {
 			init: {
-				src: ['**/*.php', '**/*.txt', '**/*.ts', '**/*.html', '**/*.scss', '!node_modules/**/*', '!<%= path.privateJs %>/Libaries/**/*'],
+				src: [
+					'**/*.php',
+					'**/*.txt',
+					'**/*.ts',
+					'**/*.html',
+					'**/*.scss',
+					'!node_modules/**/*',
+					'!<%= path.privateJs %>/Libaries/**/*',
+					'!<%= path.publicJs %>/Libaries/**/*'
+				],
 				overwrite: true,
 				replacements: [{
 					from: '<!= pkg.name !>',
@@ -162,7 +171,8 @@ module.exports = function(grunt) {
 				'**/*.{js,css,scss}',
 				'!node_modules/**/*',
 				'!Gruntfile.js',
-				'!<%= path.privateJs %>/Libaries/Modernizr/**/*'
+				'!<%= path.privateJs %>/Libaries/**/*',
+				'!<%= path.publicJs %>/Libaries/**/*'
 			]
 		},
 
@@ -191,7 +201,9 @@ module.exports = function(grunt) {
 			},
 			files: [
 				'Gruntfile.js',
-				'<%= path.privateJs %>/*.js'
+				'<%= path.privateJs %>/*.js',
+				'!<%= path.privateJs %>/Libaries/**/*',
+				'!<%= path.publicJs %>/Libaries/**/*'
 			]
 		},
 
