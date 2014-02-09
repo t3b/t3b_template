@@ -118,6 +118,14 @@ module.exports = function(grunt) {
 					from: 'Resources/Private/Javascripts/Libaries/Modernizr/modernizr.js',
 					to: '<%= modernizr.outputFile %>'
 				}]
+			},
+			dev: {
+				src: ['<%= path.private %>/Layouts/*.html'],
+				overwrite: true,
+				replacements: [{
+					from: '<%= modernizr.outputFile %>',
+					to: '<%= modernizr.devFile %>'
+				}]
 			}
 		},
 
@@ -299,6 +307,13 @@ module.exports = function(grunt) {
 	 * custom Modernizr build and changes the affected paths in all Fluid Layouts.
 	 */
 	grunt.registerTask('deploy', ['clean:css', 'compass:prod', 'modernizr', 'replace:deploy', 'imageoptim']);
+
+
+	/**
+	 * UnDeploy task
+	 * Revert all changes made by the deploy task.
+	 */
+	grunt.registerTask('undeploy', ['clean:css', 'compass:dev', 'replace:dev']);
 
 
 	/**
