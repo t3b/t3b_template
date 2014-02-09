@@ -183,7 +183,11 @@ module.exports = function(grunt) {
 		 */
 		jshint: {
 			options: {
+				// Environments
 				browser: true,
+				jquery: true,
+
+				// Enforcing options
 				curly: false,
 				devel: true,
 				eqeqeq: false,
@@ -191,7 +195,11 @@ module.exports = function(grunt) {
 				expr: true,
 				evil: true,
 				smarttabs: true,
+
+				// Use the stylish JSHint output
 				reporter: require('jshint-stylish'),
+
+				// Globals
 				globals: {
 					// Modernizr
 					Modernizr: true,
