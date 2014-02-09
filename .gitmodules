@@ -1,3 +1,6 @@
 [submodule "Resources/Private/Javascripts/Libaries/Modernizr"]
 	path = Resources/Private/Javascripts/Libaries/Modernizr
 	url = https://github.com/Modernizr/Modernizr.git
+[submodule "Resources/Private/Javascripts/Libaries/RequireJS"]
+	path = Resources/Private/Javascripts/Libaries/RequireJS
+	url = https://github.com/jrburke/requirejs.git
