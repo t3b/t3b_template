@@ -35,7 +35,6 @@ module.exports = function(grunt) {
 		path: path,
 		currentDate: currentDate,
 		pkg: packageJSON,
-		packageIsDefault: packageIsDefault,
 
 
 		/**
