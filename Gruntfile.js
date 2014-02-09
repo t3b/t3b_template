@@ -111,7 +111,7 @@ module.exports = function(grunt) {
 					to: '<%= currentDate %>'
 				}]
 			},
-			modernizr: {
+			deploy: {
 				src: ['<%= path.private %>/Layouts/*.html'],
 				overwrite: true,
 				replacements: [{
@@ -298,7 +298,7 @@ module.exports = function(grunt) {
 	 * Recompiles all .scss/.sass files with ':prod' options (Minified), creates an
 	 * custom Modernizr build and changes the affected paths in all Fluid Layouts.
 	 */
-	grunt.registerTask('deploy', ['clean:css', 'compass:prod', 'modernizr', 'replace:modernizr', 'imageoptim']);
+	grunt.registerTask('deploy', ['clean:css', 'compass:prod', 'modernizr', 'replace:deploy', 'imageoptim']);
 
 
 	/**
