@@ -116,7 +116,7 @@ module.exports = function(grunt) {
 				overwrite: true,
 				replacements: [{
 					from: 'Resources/Private/Javascripts/Libaries/Modernizr/modernizr.js',
-					to: '<%= path.publicJs %>/Libaries/Modernizr-Custom.js'
+					to: '<%= modernizr.outputFile %>'
 				}]
 			}
 		},
