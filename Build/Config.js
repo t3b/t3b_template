@@ -3,7 +3,7 @@
 var pkg = require('../package');
 
 module.exports = {
-  paths : {
+	paths : {
 		private:  'Resources/Private',
 		sass:     'Resources/Private/Sass',
 		privateJs:'Resources/Private/Javascripts',
