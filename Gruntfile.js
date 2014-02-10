@@ -1,33 +1,34 @@
-// Initialize all vars.
-var config = {},
-		currentDate,
-		packageJSON,
-		packageIsDefault,
-		env;
-
-// Project configuration.
-config = {
-  paths : {
-		private:  'Resources/Private',
-		public:   'Resources/Public',
-		sass:     '<%= config.paths.private %>/Sass',
-		css:      '<%= config.paths.public %>/Stylesheets',
-		images:   '<%= config.paths.public %>/Images',
-		privateJs:'<%= config.paths.private %>/Javascripts',
-		publicJs: '<%= config.paths.public %>/Javascripts'
-	}
-};
-
 module.exports = function(grunt) {
 	'use strict';
+
+	// Initialize all vars.
+	var config = {},
+			currentDate,
+			packageIsDefault;
+
+	// Project configuration.
+	config = {
+	  paths : {
+			private:  'Resources/Private',
+			public:   'Resources/Public',
+			sass:     '<%= config.paths.private %>/Sass',
+			css:      '<%= config.paths.public %>/Stylesheets',
+			images:   '<%= config.paths.public %>/Images',
+			privateJs:'<%= config.paths.private %>/Javascripts',
+			publicJs: '<%= config.paths.public %>/Javascripts'
+		},
+		pkg: grunt.file.readJSON('package.json'), // Return all 'package.json' contents
+		env: grunt.option('env') || 'dev' // Create an 'env' grunt option, if not specified in the bash this will return 'dev' as a standard.
+	};
 
 	// Display the execution time of grunt tasks
 	require('time-grunt')(grunt);
 
-	currentDate = grunt.template.today('dd-mm-yyyy hh:MM'), // Returns the current dateTime
-	packageJSON = grunt.file.readJSON('package.json'), // Returns the 'package.json' contents
-	packageIsDefault = (packageJSON.name === 't3b_template') ? true : false, // Check if the defaults in 'package.json' are customized.
-	env = grunt.option('env') || 'dev'; // Create an 'env' grunt option, if not specified in the bash this will return 'dev' as a standard.
+	// Returns the current dateTime
+	currentDate = grunt.template.today('dd-mm-yyyy hh:MM');
+
+	// Check if the defaults in 'package.json' are customized.
+	packageIsDefault = (config.pkg.name === 't3b_template') ? true : false;
 
 	// Print out a warning message if the package.json contents aren't customized.
 	if (packageIsDefault) {
@@ -35,7 +36,7 @@ module.exports = function(grunt) {
 	}
 
 	// Print out a message which displays the specified env.
-	grunt.log.subhead('Running Grunt-Tasks in "' + env + '" mode!');
+	grunt.log.subhead('Running Grunt-Tasks in "' + config.env + '" mode!');
 
 
 	/**
@@ -45,7 +46,7 @@ module.exports = function(grunt) {
 		// Passing some variables into the initConfig object.
 		config: config,
 		currentDate: currentDate,
-		pkg: packageJSON,
+		pkg: config.pkg,
 
 
 		/**
