@@ -3,7 +3,10 @@
  * @description Pass in options for RequireJS like paths, shims or the baseUrl
  */
 require.config({
-	paths: { }
+	paths: { },
+
+	// Append a date on each requested script to prevent caching issues.
+	urlArgs: 'bust=' + (new Date()).getDate()
 });
 
 
