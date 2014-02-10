@@ -1,22 +1,33 @@
+// Initialize all vars.
+var config = {},
+		currentDate,
+		packageJSON,
+		packageIsDefault,
+		env;
+
+// Project configuration.
+config = {
+  paths : {
+		private:  'Resources/Private',
+		public:   'Resources/Public',
+		sass:     '<%= config.paths.private %>/Sass',
+		css:      '<%= config.paths.public %>/Stylesheets',
+		images:   '<%= config.paths.public %>/Images',
+		privateJs:'<%= config.paths.private %>/Javascripts',
+		publicJs: '<%= config.paths.public %>/Javascripts'
+	}
+};
+
 module.exports = function(grunt) {
 	'use strict';
 
 	// Display the execution time of grunt tasks
 	require('time-grunt')(grunt);
 
-	var path = { // Project paths.
-			private:  'Resources/Private',
-			public:   'Resources/Public',
-			sass:     '<%= path.private %>/Sass',
-			css:      '<%= path.public %>/Stylesheets',
-			images:   '<%= path.public %>/Images',
-			privateJs:'<%= path.private %>/Javascripts',
-			publicJs: '<%= path.public %>/Javascripts'
-		},
-		currentDate = grunt.template.today('dd-mm-yyyy hh:MM'), // Returns the current dateTime
-		packageJSON = grunt.file.readJSON('package.json'), // Returns the 'package.json' contents
-		packageIsDefault = (packageJSON.name === 't3b_template') ? true : false, // Check if the defaults in 'package.json' are customized.
-		env = grunt.option('env') || 'dev'; // Create an 'env' grunt option, if not specified in the bash this will return 'dev' as a standard.
+	currentDate = grunt.template.today('dd-mm-yyyy hh:MM'), // Returns the current dateTime
+	packageJSON = grunt.file.readJSON('package.json'), // Returns the 'package.json' contents
+	packageIsDefault = (packageJSON.name === 't3b_template') ? true : false, // Check if the defaults in 'package.json' are customized.
+	env = grunt.option('env') || 'dev'; // Create an 'env' grunt option, if not specified in the bash this will return 'dev' as a standard.
 
 	// Print out a warning message if the package.json contents aren't customized.
 	if (packageIsDefault) {
@@ -32,7 +43,7 @@ module.exports = function(grunt) {
 	 */
 	grunt.initConfig({
 		// Passing some variables into the initConfig object.
-		path: path,
+		config: config,
 		currentDate: currentDate,
 		pkg: packageJSON,
 
@@ -45,13 +56,13 @@ module.exports = function(grunt) {
 		compass: {
 			options: {
 				// Specify the config.rb filepath
-				config: '<%= path.sass %>/Config.rb',
+				config: '<%= config.paths.sass %>/Config.rb',
 
 				// Override Configuration paths as all grunt paths are relative to the Gruntfile
-				sassDir: '<%= path.sass %>',
-				cssDir: '<%= path.css %>',
-				imagesDir: '<%= path.images %>',
-				javascriptsDir: '<%= path.privateJs %>'
+				sassDir: '<%= config.paths.sass %>',
+				cssDir: '<%= config.paths.css %>',
+				imagesDir: '<%= config.paths.images %>',
+				javascriptsDir: '<%= config.paths.privateJs %>'
 			},
 			dev: {
 				options: {
@@ -74,7 +85,7 @@ module.exports = function(grunt) {
 		 * https://github.com/gruntjs/grunt-contrib-clean
 		 */
 		clean: {
-			css: ['<%= path.css %>/*.css']
+			css: ['<%= config.paths.css %>/*.css']
 		},
 
 
@@ -92,8 +103,8 @@ module.exports = function(grunt) {
 					'**/*.html',
 					'**/*.scss',
 					'!node_modules/**/*',
-					'!<%= path.privateJs %>/Libaries/**/*',
-					'!<%= path.publicJs %>/Libaries/**/*'
+					'!<%= config.paths.privateJs %>/Libaries/**/*',
+					'!<%= config.paths.publicJs %>/Libaries/**/*'
 				],
 				overwrite: true,
 				replacements: [{
@@ -120,7 +131,7 @@ module.exports = function(grunt) {
 				}]
 			},
 			deploy: {
-				src: ['<%= path.private %>/Layouts/*.html'],
+				src: ['<%= config.paths.private %>/Layouts/*.html'],
 				overwrite: true,
 				replacements: [{
 					from: '<%= modernizr.devFile %>',
@@ -128,7 +139,7 @@ module.exports = function(grunt) {
 				}]
 			},
 			dev: {
-				src: ['<%= path.private %>/Layouts/*.html'],
+				src: ['<%= config.paths.private %>/Layouts/*.html'],
 				overwrite: true,
 				replacements: [{
 					from: '<%= modernizr.outputFile %>',
@@ -144,8 +155,8 @@ module.exports = function(grunt) {
 		 * https://github.com/Modernizr/grunt-modernizr
 		 */
 		modernizr: {
-			devFile: '<%= path.privateJs %>/Libaries/Modernizr/modernizr.js',
-			outputFile: '<%= path.publicJs %>/Libaries/Modernizr-Custom.js',
+			devFile: '<%= config.paths.privateJs %>/Libaries/Modernizr/modernizr.js',
+			outputFile: '<%= config.paths.publicJs %>/Libaries/Modernizr-Custom.js',
 
 			// Based on default settings on http://modernizr.com/download/
 			extra: {
@@ -220,9 +231,9 @@ module.exports = function(grunt) {
 			},
 			files: [
 				'Gruntfile.js',
-				'<%= path.privateJs %>/*.js',
-				'!<%= path.privateJs %>/Libaries/**/*',
-				'!<%= path.publicJs %>/Libaries/**/*'
+				'<%= config.paths.privateJs %>/*.js',
+				'!<%= config.paths.privateJs %>/Libaries/**/*',
+				'!<%= config.paths.publicJs %>/Libaries/**/*'
 			]
 		},
 
@@ -234,7 +245,7 @@ module.exports = function(grunt) {
 		 */
 		cssmetrics: {
 			common: {
-				src: ['<%= path.css %>/*.css'],
+				src: ['<%= config.paths.css %>/*.css'],
 				options: {
 					quiet: false,
 					maxRules: 4096, // Maximum CSS rules which IE can handle http://goo.gl/irqrnO
@@ -251,7 +262,7 @@ module.exports = function(grunt) {
 		 */
 		imageoptim: {
 			files: [
-				'<%= path.images %>'
+				'<%= config.paths.images %>'
 			],
 			options: {
 				imageAlpha: true,
@@ -288,7 +299,7 @@ module.exports = function(grunt) {
 				nospawn: true
 			},
 			sass: {
-				files: ['<%= path.sass %>/**/*.scss'],
+				files: ['<%= config.paths.sass %>/**/*.scss'],
 				tasks: ['compass:dev']
 			},
 			js: {
