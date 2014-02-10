@@ -30,11 +30,6 @@ module.exports = function(grunt) {
 	// Check if the defaults in 'package.json' are customized.
 	packageIsDefault = (config.pkg.name === 't3b_template') ? true : false;
 
-	// Print out a warning message if the package.json contents aren't customized.
-	if (packageIsDefault) {
-		grunt.log.subhead('Please edit the package.json contents.');
-	}
-
 	// Print out a message which displays the specified env.
 	grunt.log.subhead('Running Grunt-Tasks in "' + config.env + '" mode!');
 
