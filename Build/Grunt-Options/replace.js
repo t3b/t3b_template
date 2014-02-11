@@ -1,7 +1,7 @@
 /**
  * Grunt-Replace
- * Replace inline patterns with variables.
- * https://npmjs.org/package/grunt-replace
+ * @description Replace inline patterns with variables.
+ * @docs https://npmjs.org/package/grunt-replace
  */
 
 var config = require('../Config');

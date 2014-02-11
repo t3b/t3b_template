@@ -1,7 +1,7 @@
 /**
  * Grunt-Contrib-JSHint
- * Validate files with JSHint.
- * https://github.com/gruntjs/grunt-contrib-jshint
+ * @description Validate files with JSHint.
+ * @docs https://github.com/gruntjs/grunt-contrib-jshint
  */
 
 var config = require('../Config');

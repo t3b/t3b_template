@@ -1,7 +1,7 @@
 /**
  * Grunt-Contrib-Watch
- * Run tasks whenever watched files change.
- * https://github.com/gruntjs/grunt-contrib-watch
+ * @description Run tasks whenever watched files change.
+ * @docs https://github.com/gruntjs/grunt-contrib-watch
  */
 
 var config = require('../Config');

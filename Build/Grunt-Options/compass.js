@@ -1,7 +1,7 @@
 /**
  * Grunt-Contrib-Compass
- * Compiles .scss/.sass files to .css using Compass.
- * https://github.com/gruntjs/grunt-contrib-compass
+ * @description Compiles .scss/.sass files to .css using Compass.
+ * @docs https://github.com/gruntjs/grunt-contrib-compass
  */
 
 var config = require('../Config');

@@ -1,7 +1,7 @@
 /**
  * Grunt-CSS-Metrics
- * Grunt task to analyse css files and log simple metrics.
- * https://github.com/phamann/grunt-css-metrics
+ * @description Grunt task to analyse css files and log simple metrics.
+ * @docs https://github.com/phamann/grunt-css-metrics
  */
 
 var config = require('../Config');

@@ -1,7 +1,7 @@
 /**
  * Grunt-Shell
- * Run shell commands.
- * https://npmjs.org/package/grunt-shell
+ * @description Run shell commands.
+ * @docs https://github.com/sindresorhus/grunt-shell
  */
 
 var config = require('../Config');

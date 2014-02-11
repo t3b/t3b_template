@@ -1,7 +1,7 @@
 /**
  * Grunt-Modernizr
- * Crawls through source files, gathers up references to Modernizr tests and outputs a clean Modernizr build.
- * https://github.com/Modernizr/grunt-modernizr
+ * @description Crawls through source files, gathers up references to Modernizr tests and outputs a clean Modernizr build.
+ * @docs https://github.com/Modernizr/grunt-modernizr
  */
 
 var config = require('../Config');

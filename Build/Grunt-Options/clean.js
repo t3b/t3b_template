@@ -1,7 +1,7 @@
 /**
  * Grunt-Contrib-Clean
- * Cleans files and folders.
- * https://github.com/gruntjs/grunt-contrib-clean
+ * @description Cleans files and folders.
+ * @docs https://github.com/gruntjs/grunt-contrib-clean
  */
 
 var config = require('../Config');

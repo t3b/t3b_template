@@ -1,7 +1,7 @@
 /**
  * Grunt-ImageOptim
- * Lossless optimisation of images
- * https://github.com/gruntjs/grunt-contrib-watch
+ * @description Lossless optimisation of images
+ * @docs https://github.com/gruntjs/grunt-contrib-watch
  */
 
 var config = require('../Config');
