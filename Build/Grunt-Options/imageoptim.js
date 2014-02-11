@@ -7,7 +7,7 @@
 var config = require('../Config');
 
 module.exports = {
-	files: [
+	src: [
 		config.ImagesDir
 	],
 	options: {
