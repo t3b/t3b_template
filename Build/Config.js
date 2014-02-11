@@ -17,10 +17,10 @@ module.exports = {
 		distDir : 'Resources/Public/Javascripts'
 	},
 	Modernizr : {
-		extra : { // Based on default settings on http://modernizr.com/download/
+		extra : { // Slightly modified default settings of http://modernizr.com/download/
 			shiv: true,
 			printshiv: false,
-			load: true,
+			load: false,
 			mq: false,
 			cssclasses: true
 		},
