@@ -45,6 +45,7 @@ module.exports = {
 	},
 	files: [
 		'Gruntfile.js',
+		'Build/**/*.js',
 		config.JavaScripts.devDir + '/*.js',
 		'!' + config.JavaScripts.devDir + '/Libaries/**/*',
 		'!' + config.JavaScripts.distDir + '/Libaries/**/*'
