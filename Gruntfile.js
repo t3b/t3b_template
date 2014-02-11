@@ -3,15 +3,8 @@ var config = require('./Build/Config');
 module.exports = function(grunt) {
 	'use strict';
 
-	// Initialize all vars.
-	var env = grunt.option('env') || 'dev'; // Create an 'env' grunt option, if not specified in the bash this will return 'dev' as a standard.
-
 	// Display the execution time of grunt tasks
 	require('time-grunt')(grunt);
-
-	// Print out a message which displays the specified env.
-	grunt.log.subhead('Running Grunt-Tasks in "' + config.env + '" mode!');
-
 
 	/**
 	 * Load all grunt-tasks in 'Build/Grunt-Options'.
