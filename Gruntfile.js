@@ -28,10 +28,9 @@ module.exports = function(grunt) {
 
 	/**
 	 * Travis CI task
-	 * Replaces all replace strings with the standard meta data stored in the package.json
-	 * and tests all JS files with JSHint, this task is used by Travis CI.
+	 * Test all specified grunt tasks.
 	 */
-	grunt.registerTask('travis', ['replace:init', 'jshint']);
+	grunt.registerTask('travis', ['init', 'replace:init', 'jshint', 'deploy', 'undeploy']);
 
 
 	/**
