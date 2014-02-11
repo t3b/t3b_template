@@ -23,7 +23,7 @@ module.exports = {
 			environment: 'development'
 		}
 	},
-	prod: {
+	deploy: {
 		options: {
 			imagesDir: config.Images.distDir,
 			outputStyle: 'compressed',

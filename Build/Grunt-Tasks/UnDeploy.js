@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 	'use strict';
 
 	grunt.registerTask('undeploy', function() {
-		grunt.task.run(['clean:css']);
+		grunt.task.run(['clean:stylesheets']);
 		grunt.task.run(['compass:dev']);
 		grunt.task.run(['replace:dev']);
 	});
