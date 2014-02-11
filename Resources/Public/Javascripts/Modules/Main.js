@@ -1,7 +1,7 @@
 "use strict";
 
-define([''], function() {
-	var MainFn = function() { };
+define(function(require) {
+	var mainFn = function() { };
 
-	return MainFn;
+	return mainFn;
 });

@@ -14,6 +14,6 @@ require.config({
  * RequireJS calls
  * @description Call the needed AMD modules.
  */
-require(['Modules/Main'], function(MainFn) {
-	new MainFn;
+require(['Modules/Main'], function(mainFn) {
+	new mainFn;
 });
