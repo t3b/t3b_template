@@ -4,7 +4,8 @@
  * @docs https://github.com/Modernizr/grunt-modernizr
  */
 
-var config = require('../Config');
+var config = require('../Config'),
+		modernizrConfig = require('../ModernizrConfig');
 
 module.exports = {
 	main: {
@@ -12,12 +13,12 @@ module.exports = {
 		outputFile: config.JavaScripts.distDir + '/Libaries/Modernizr-Custom.js',
 
 		// Based on default settings on http://modernizr.com/download/
-		extra: config.Modernizr.extra,
+		extra: modernizrConfig.extra,
 		// Based on default settings on http://modernizr.com/download/
-		extensibility: config.Modernizr.extensibility,
-		tests : config.Modernizr.tests,
-		customTests : config.Modernizr.customTests,
-		matchCommunityTests : config.Modernizr.matchCommunityTests,
+		extensibility: modernizrConfig.extensibility,
+		tests : modernizrConfig.tests,
+		customTests : modernizrConfig.customTests,
+		matchCommunityTests : modernizrConfig.matchCommunityTests,
 		files : {
 			"src": [
 				'**/*.{js,css,scss}',

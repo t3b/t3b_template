@@ -1,7 +1,6 @@
 // Project configuration.
 
-var pkg = require('../package'),
-		modernizrConfig = require('./ModernizrConfig');
+var pkg = require('../package');
 
 module.exports = {
 	package : pkg,
@@ -17,7 +16,6 @@ module.exports = {
 		devDir :'Resources/Private/Javascripts',
 		distDir : 'Resources/Public/Javascripts'
 	},
-	Modernizr : modernizrConfig,
 	Images : {
 		devDir : 'Resources/Private/Images',
 		distDir : 'Resources/Public/Images',
