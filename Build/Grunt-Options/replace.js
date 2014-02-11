@@ -24,22 +24,22 @@ module.exports = function(grunt) {
 			overwrite: true,
 			replacements: [{
 				from: '<!= pkg.name !>',
-				to: '<%= config.pkg.name %>'
+				to: config.package.name
 			}, {
 				from: '<!= pkg.description !>',
-				to: '<%= config.pkg.description %>'
+				to: config.package.description
 			}, {
 				from: '<!= pkg.homepage !>',
-				to: '<%= config.pkg.homepage %>'
+				to: config.package.homepage
 			}, {
 				from: '<!= pkg.version !>',
-				to: '<%= config.pkg.version %>'
+				to: config.package.version
 			}, {
 				from: '<!= pkg.author.name !>',
-				to: '<%= config.pkg.author.name %>'
+				to: config.package.author.name
 			}, {
 				from: '<!= pkg.author.email !>',
-				to: '<%= config.pkg.author.email %>'
+				to: config.package.author.email
 			}, {
 				from: '<!= date !>',
 				to: grunt.template.today('dd-mm-yyyy hh:MM')

@@ -3,6 +3,7 @@
 var pkg = require('../package');
 
 module.exports = {
+	package : pkg,
 	paths : {
 		private:  'Resources/Private',
 		public:   'Resources/Public',
