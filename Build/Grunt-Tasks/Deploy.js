@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 	"use strict";
 
 	grunt.registerTask("deploy", function() {
-		// prevent 'imagemin' from executing if the build gets tested on travis to suppress errors.
+		// Prevent 'imagemin' from executing if the build gets tested on travis to suppress errors.
 		if(grunt.option('env') !== 'travis') {
 			grunt.task.run(["imagemin"]);
 		}
