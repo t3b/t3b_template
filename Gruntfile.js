@@ -6,9 +6,7 @@ module.exports = function(grunt) {
 	// Display the execution time of grunt tasks
 	require('time-grunt')(grunt);
 
-	/**
-	 * Load all grunt-tasks in 'Build/Grunt-Options'.
-	 */
+	// Load all grunt-tasks in 'Build/Grunt-Options'.
 	var gruntOptionsObj = require('load-grunt-configs')(grunt, {
 		config : {
 			src: "Build/Grunt-Options/*.js"
@@ -16,10 +14,7 @@ module.exports = function(grunt) {
 	});
 	grunt.initConfig(gruntOptionsObj);
 
-
-	/**
-	 * Load all grunt-plugins that are specified in the 'package.json' file.
-	 */
+	// Load all grunt-plugins that are specified in the 'package.json' file.
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 
