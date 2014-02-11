@@ -15,8 +15,8 @@ module.exports = {
 			'**/*.html',
 			'**/*.scss',
 			'!node_modules/**/*',
-			'!' + config.paths.privateJs + '/Libaries/**/*',
-			'!' + config.paths.publicJs + '/Libaries/**/*'
+			'!' + config.JavaScripts.devDir + '/Libaries/**/*',
+			'!' + config.JavaScripts.distDir + '/Libaries/**/*'
 		],
 		overwrite: true,
 		replacements: [{

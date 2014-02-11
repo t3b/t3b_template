@@ -45,8 +45,8 @@ module.exports = {
 	},
 	files: [
 		'Gruntfile.js',
-		config.paths.prfivateJs + '/*.js',
-		'!' + config.paths.privateJs + '/Libaries/**/*',
-		'!' + config.paths.publicJs + '/Libaries/**/*'
+		config.JavaScripts.devDir + '/*.js',
+		'!' + config.JavaScripts.devDir + '/Libaries/**/*',
+		'!' + config.JavaScripts.distDir + '/Libaries/**/*'
 	]
 };

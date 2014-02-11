@@ -8,7 +8,7 @@ var config = require('../Config');
 
 module.exports = {
 	common: {
-		src: [config.paths.css + '/*.css'],
+		src: [config.Sass.cssDir + '/*.css'],
 		options: {
 			quiet: false,
 			maxRules: 4096, // Maximum CSS rules which IE can handle http://goo.gl/irqrnO

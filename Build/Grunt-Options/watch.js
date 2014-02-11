@@ -11,7 +11,7 @@ module.exports = {
 		nospawn: true
 	},
 	sass: {
-		files: [config.paths.sass + '/**/*.scss'],
+		files: [config.Sass.sassDir + '/**/*.scss'],
 		tasks: ['compass:dev']
 	},
 	js: {

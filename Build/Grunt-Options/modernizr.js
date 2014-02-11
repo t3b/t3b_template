@@ -7,8 +7,8 @@
 var config = require('../Config');
 
 module.exports = {
-	devFile: config.paths.privateJs + '/Libaries/Modernizr/modernizr.js',
-	outputFile: config.paths.publicJs + '/Libaries/Modernizr-Custom.js',
+	devFile: config.JavaScripts.devDir + '/Libaries/Modernizr/modernizr.js',
+	outputFile: config.JavaScripts.distDir + '/Libaries/Modernizr-Custom.js',
 
 	// Based on default settings on http://modernizr.com/download/
 	extra: {
@@ -33,7 +33,7 @@ module.exports = {
 		'**/*.{js,css,scss}',
 		'!node_modules/**/*',
 		'!Gruntfile.js',
-		'!' + config.paths.privateJs + '/Libaries/**/*',
-		'!' + config.paths.publicJs + '/Libaries/**/*'
+		'!' + config.JavaScripts.devDir + '/Libaries/**/*',
+		'!' + config.JavaScripts.distDir + '/Libaries/**/*'
 	]
 };

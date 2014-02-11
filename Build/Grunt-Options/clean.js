@@ -7,5 +7,5 @@
 var config = require('../Config');
 
 module.exports = {
-	css: [config.paths.css + '/*.css']
+	css: [config.Sass.cssDir + '/*.css']
 };

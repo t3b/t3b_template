@@ -8,7 +8,7 @@ var config = require('../Config');
 
 module.exports = {
 	files: [
-		config.paths.images
+		config.ImagesDir
 	],
 	options: {
 		imageAlpha: true,
