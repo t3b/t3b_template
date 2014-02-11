@@ -1,0 +1,33 @@
+{
+  // Environments
+	"browser": true,
+	"jquery": true,
+
+	// Enforcing options
+	"camelcase": true,
+	"curly": true,
+	"devel": true,
+	"eqeqeq": true,
+	"eqnull": true,
+	"immed": true,
+	"latedef": true,
+	"undef": true,
+	"strict": true,
+	"newcap": true,
+	"noarg": true,
+	"expr": true,
+	"evil": true,
+	"smarttabs": true,
+
+  // Globals
+	"globals": {
+		// Modernizr
+		"Modernizr": true,
+
+		// RequireJS
+		"module": true,
+		"require": true,
+		"requirejs": true,
+		"define": true
+	}
+}

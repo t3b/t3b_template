@@ -8,40 +8,8 @@ var config = require('../Config');
 
 module.exports = {
 	options: {
-		// Environments
-		browser: true,
-		jquery: true,
-
-		// Enforcing options
-		camelcase: true,
-		curly: true,
-		devel: true,
-		eqeqeq: true,
-		eqnull: true,
-		immed: true,
-		latedef: true,
-		undef: true,
-		strict: true,
-		newcap: true,
-		noarg: true,
-		expr: true,
-		evil: true,
-		smarttabs: true,
-
-		// Use the stylish JSHint output
-		reporter: require('jshint-stylish'),
-
-		// Globals
-		globals: {
-			// Modernizr
-			Modernizr: true,
-
-			// RequireJS
-			module: true,
-			require: true,
-			requirejs: true,
-			define: true,
-		}
+		jshintrc: 'Build/JSHintConfig.js',
+		reporter: require('jshint-stylish') // Use a more readable JSHint output theme
 	},
 	files: [
 		'Gruntfile.js',
