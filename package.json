@@ -42,7 +42,7 @@
     "grunt-contrib-imagemin": "~0.5.0"
   },
   "scripts": {
-    "test": "grunt travis --verbose",
+    "test": "grunt travis --verbose --env=travis",
     "postinstall": "grunt init && git submodule init && git submodule update"
   },
   "dependencies": {
