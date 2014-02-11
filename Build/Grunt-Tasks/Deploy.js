@@ -9,6 +9,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('deploy', function() {
 		grunt.task.run(['clean:css']);
+		grunt.task.run(['imagemin']);
 		grunt.task.run(['compass:prod']);
 		grunt.task.run(['modernizr']);
 		grunt.task.run(['replace:deploy']);

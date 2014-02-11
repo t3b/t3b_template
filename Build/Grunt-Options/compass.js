@@ -14,7 +14,7 @@ module.exports = {
 		// Override Configuration paths as all grunt paths are relative to the Gruntfile
 		sassDir: config.Sass.sassDir,
 		cssDir: config.Sass.cssDir,
-		imagesDir: config.ImagesDir,
+		imagesDir: config.Images.devDir,
 		javascriptsDir: config.JavaScripts.devDir
 	},
 	dev: {
@@ -25,6 +25,7 @@ module.exports = {
 	},
 	prod: {
 		options: {
+			imagesDir: config.Images.distDir,
 			outputStyle: 'compressed',
 			environment: 'production'
 		}
