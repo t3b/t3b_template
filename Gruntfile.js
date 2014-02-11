@@ -4,8 +4,7 @@ module.exports = function(grunt) {
 	'use strict';
 
 	// Initialize all vars.
-	var currentDate = grunt.template.today('dd-mm-yyyy hh:MM'), // Returns the current dateTime
-			env = grunt.option('env') || 'dev'; // Create an 'env' grunt option, if not specified in the bash this will return 'dev' as a standard.
+	var env = grunt.option('env') || 'dev'; // Create an 'env' grunt option, if not specified in the bash this will return 'dev' as a standard.
 
 	// Display the execution time of grunt tasks
 	require('time-grunt')(grunt);
