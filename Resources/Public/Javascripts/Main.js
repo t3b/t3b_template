@@ -6,7 +6,7 @@ require.config({
 	paths: { },
 
 	// Append a date on each requested script to prevent caching issues.
-	urlArgs: 'bust=' + (new Date()).getDate()
+	urlArgs: "bust=" + (new Date()).getDate()
 });
 
 
@@ -14,6 +14,6 @@ require.config({
  * RequireJS calls
  * @description Call the needed AMD modules.
  */
-require(['Modules/Main'], function(mainFn) {
+require(["Modules/Main"], function(mainFn) {
 	new mainFn;
 });

@@ -4,18 +4,18 @@
  * @docs https://github.com/gruntjs/grunt-contrib-imagemin
  */
 
-var config = require('../Config');
+var config = require("../Config");
 
 module.exports = {
-	images: {
-		options: {
-			optimizationLevel: config.Images.optimizationLevel
+	"images" : {
+		"options" : {
+			"optimizationLevel" : config.Images.optimizationLevel
 		},
-		files: [{
-			expand: true,
-			cwd: config.Images.devDir,
-			src: ['**/*.{png,jpg,gif}'],
-			dest: config.Images.distDir
+		"files" : [{
+			"expand" : true,
+			"cwd" : config.Images.devDir,
+			"src" : ["**/*.{png,jpg,gif}"],
+			"dest" : config.Images.distDir
 		}]
 	}
 };

@@ -4,30 +4,30 @@
  * @docs https://github.com/gruntjs/grunt-contrib-compass
  */
 
-var config = require('../Config');
+var config = require("../Config");
 
 module.exports = {
-	options: {
+	"options" : {
 		// Specify the config.rb filepath
-		config: config.Sass.sassDir + '/Config.rb',
+		"config" : config.Sass.sassDir + "/Config.rb",
 
 		// Override Configuration paths as all grunt paths are relative to the Gruntfile
-		sassDir: config.Sass.sassDir,
-		cssDir: config.Sass.cssDir,
-		imagesDir: config.Images.devDir,
-		javascriptsDir: config.JavaScripts.devDir
+		"sassDir" : config.Sass.sassDir,
+		"cssDir" : config.Sass.cssDir,
+		"imagesDir" : config.Images.devDir,
+		"javascriptsDir" : config.JavaScripts.devDir
 	},
-	dev: {
-		options: {
-			outputStyle: 'compact',
-			environment: 'development'
+	"dev" : {
+		"options" : {
+			"outputStyle" : "compact",
+			"environment" : "development"
 		}
 	},
-	deploy: {
-		options: {
-			imagesDir: config.Images.distDir,
-			outputStyle: 'compressed',
-			environment: 'production'
+	"deploy" : {
+		"options" : {
+			"imagesDir" : config.Images.distDir,
+			"outputStyle" : "compressed",
+			"environment" : "production"
 		}
 	}
 };

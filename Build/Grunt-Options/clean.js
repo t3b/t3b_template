@@ -4,8 +4,8 @@
  * @docs https://github.com/gruntjs/grunt-contrib-clean
  */
 
-var config = require('../Config');
+var config = require("../Config");
 
 module.exports = {
-	stylesheets: [config.Sass.cssDir + '/*.css']
+	"stylesheets" : [config.Sass.cssDir + "/*.css"]
 };

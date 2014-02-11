@@ -1,21 +1,21 @@
-var config = require('./Build/Config');
+var config = require("./Build/Config");
 
 module.exports = function(grunt) {
-	'use strict';
+	"use strict";
 
 	// Display the execution time of grunt tasks
-	require('time-grunt')(grunt);
+	require("time-grunt")(grunt);
 
 	// Load all grunt-tasks in 'Build/Grunt-Options'.
-	var gruntOptionsObj = require('load-grunt-configs')(grunt, {
-		config : {
+	var gruntOptionsObj = require("load-grunt-configs")(grunt, {
+		"config" : {
 			src: "Build/Grunt-Options/*.js"
 		}
 	});
 	grunt.initConfig(gruntOptionsObj);
 
 	// Load all grunt-plugins that are specified in the 'package.json' file.
-	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+	require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
 
 	/**
@@ -23,19 +23,19 @@ module.exports = function(grunt) {
 	 * Compiles all .scss/.sass files with ':dev' options and
 	 * validates all js-files inside Resources/Private/Javascripts with JSHint.
 	 */
-	grunt.registerTask('default', ['compass:dev', 'jshint']);
+	grunt.registerTask("default", ["compass:dev", "jshint"]);
 
 
 	/**
 	 * Travis CI task
 	 * Test all specified grunt tasks.
 	 */
-	grunt.registerTask('travis', ['init', 'replace:init', 'jshint', 'deploy', 'undeploy']);
+	grunt.registerTask("travis", ["init", "replace:init", "jshint", "deploy", "undeploy"]);
 
 
 	/**
 	 * Load custom tasks
 	 * Load all Grunt-Tasks inside the 'Build/Grunt-Tasks' dir.
 	 */
-	grunt.loadTasks('Build/Grunt-Tasks');
+	grunt.loadTasks("Build/Grunt-Tasks");
 };

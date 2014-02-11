@@ -4,18 +4,18 @@
  * @docs https://github.com/gruntjs/grunt-contrib-watch
  */
 
-var config = require('../Config');
+var config = require("../Config");
 
 module.exports = {
-	options: {
-		nospawn: true
+	"options" : {
+		"nospawn" : true
 	},
-	sass: {
-		files: [config.Sass.sassDir + '/**/*.scss'],
-		tasks: ['compass:dev']
+	"sass" : {
+		"files" : [config.Sass.sassDir + "/**/*.scss"],
+		"tasks" : ["compass:dev"]
 	},
-	js: {
-		files: ['<%= jshint.files %>'],
-		tasks: ['jshint']
+	"js" : {
+		"files" : ["<%= jshint.files %>"],
+		"tasks" : ["jshint"]
 	}
 };

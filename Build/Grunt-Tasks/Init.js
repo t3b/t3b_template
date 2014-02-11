@@ -4,21 +4,21 @@
  * specified inside the 'package.json'. (Should be run after downloading the extension).
  */
 
-var config = require('../Config');
+var config = require("../Config");
 
 module.exports = function(grunt) {
-	'use strict';
+	"use strict";
 
-	grunt.registerTask('init', function() {
+	grunt.registerTask("init", function() {
 		// Copy the git hooks as they are not present by default.
-		grunt.task.run(['shell:hookUpGit']);
+		grunt.task.run(["shell:hookUpGit"]);
 
 		// Check if the package.json contents are defaults; If 'false' replace all '<!=  !>' strings and set up the git hooks.
 		if (!config.packageIsDefault) {
-			grunt.task.run(['replace:init']);
+			grunt.task.run(["replace:init"]);
 		}
 
 		// Create the base Stylesheet to prevent errors from ext:vhs(File not found).
-		grunt.task.run(['compass:dev']);
+		grunt.task.run(["compass:dev"]);
 	});
 };

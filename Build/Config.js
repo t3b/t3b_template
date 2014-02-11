@@ -1,25 +1,25 @@
 // Project configuration.
 
-var pkg = require('../package');
+var pkg = require("../package");
 
 module.exports = {
-	package : pkg,
-	paths : {
-		private:  'Resources/Private',
-		public:   'Resources/Public',
+	"package" : pkg,
+	"paths" : {
+		"private":  "Resources/Private",
+		"public":   "Resources/Public",
 	},
-	Sass : {
-		sassDir : 'Resources/Private/Sass',
-		cssDir : 'Resources/Public/Stylesheets'
+	"Sass" : {
+		"sassDir" : "Resources/Private/Sass",
+		"cssDir" : "Resources/Public/Stylesheets"
 	},
-	JavaScripts : {
-		devDir :'Resources/Private/Javascripts',
-		distDir : 'Resources/Public/Javascripts'
+	"JavaScripts" : {
+		"devDir" :"Resources/Private/Javascripts",
+		"distDir" : "Resources/Public/Javascripts"
 	},
-	Images : {
-		devDir : 'Resources/Private/Images',
-		distDir : 'Resources/Public/Images',
-		optimizationLevel : 5
+	"Images" : {
+		"devDir" : "Resources/Private/Images",
+		"distDir" : "Resources/Public/Images",
+		"optimizationLevel" : 5
 	},
-	packageIsDefault : (pkg.name === 't3b_template') ? true : false // Check if the defaults in 'package.json' are customized.
+	"packageIsDefault" : (pkg.name === "t3b_template") ? true : false // Check if the defaults in 'package.json' are customized.
 };
