@@ -1,5 +1,5 @@
 /**
- * Grunt-Contrib-iImagemin
+ * Grunt-Contrib-Imagemin
  * @description Minify PNG, JPEG and GIF images
  * @docs https://github.com/gruntjs/grunt-contrib-imagemin
  */
