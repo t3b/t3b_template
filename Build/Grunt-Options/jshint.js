@@ -8,7 +8,7 @@ var config = require("../Config");
 
 module.exports = {
 	"options" : {
-		"jshintrc" : "Build/JSHintConfig.js",
+		"jshintrc" : "Build/JSHintConfig.json",
 		"reporter" : require("jshint-stylish") // Use a more readable JSHint output theme
 	},
 	"files" : [
