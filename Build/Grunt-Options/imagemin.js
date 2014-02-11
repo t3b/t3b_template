@@ -9,7 +9,7 @@ var config = require('../Config');
 module.exports = {
 	images: {
 		options: {
-			optimizationLevel: 5
+			optimizationLevel: config.Images.optimizationLevel
 		},
 		files: [{
 			expand: true,
