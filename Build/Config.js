@@ -13,8 +13,11 @@ module.exports = {
 		"cssDir" : "Resources/Public/Stylesheets"
 	},
 	"JavaScripts" : {
-		"devDir" :"Resources/Private/Javascripts",
-		"distDir" : "Resources/Public/Javascripts"
+		"devDir" : "Resources/Private/Javascripts",
+		"distDir" : "Resources/Public/Javascripts",
+		"config" : "Resources/Private/Javascripts/Main.js",
+		"requireJS" : "Resources/Private/Javascripts/Libaries/RequireJS/require",
+		"compileDistFile" : "Resources/Public/Javascripts/Main.min.js"
 	},
 	"Images" : {
 		"devDir" : "Resources/Private/Images",

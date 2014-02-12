@@ -20,6 +20,9 @@ module.exports = function(grunt) {
 		// Generate a custom modernizr build.
 		grunt.task.run(["modernizr"]);
 
+		// Generate a requireJS build to avoid too many http requests on the live server.
+		grunt.task.run(["requirejs"]);
+
 		// Replace paths to match the build files.
 		grunt.task.run(["replace:deploy"]);
 	});
