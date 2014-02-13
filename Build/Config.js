@@ -24,5 +24,5 @@ module.exports = {
 		"distDir" : "Resources/Public/Images",
 		"optimizationLevel" : 5
 	},
-	"packageIsDefault" : (pkg.name === "t3b_template") ? true : false // Check if the defaults in 'package.json' are customized.
+	"packageIsDefault" : pkg.name === "t3b_template" // Check if the defaults in 'package.json' are customized.
 };
