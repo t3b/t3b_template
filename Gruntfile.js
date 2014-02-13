@@ -1,5 +1,3 @@
-var config = require("./Build/Config");
-
 module.exports = function(grunt) {
 	"use strict";
 
