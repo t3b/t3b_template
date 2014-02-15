@@ -49,8 +49,8 @@ module.exports = function(grunt) {
 			"src" : [config.paths.private + "/Layouts/*.html"],
 			"overwrite" : true,
 			"replacements" : [{
-				"from" : "<%= modernizr.devFile %>",
-				"to" : "<%= modernizr.outputFile %>"
+				"from" : config.JavaScripts.modernizr.devSourceFile,
+				"to" : config.JavaScripts.modernizr.buildDistFile
 			}]
 		},
 		"dev" : {
