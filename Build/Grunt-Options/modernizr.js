@@ -9,8 +9,8 @@ var config = require("../Config"),
 
 module.exports = {
 	"main" : {
-		"devFile" : config.JavaScripts.devDir + "/Libaries/Modernizr/modernizr.js",
-		"outputFile" : config.JavaScripts.distDir + "/Libaries/Modernizr-Custom.js",
+		"devFile" : config.JavaScripts.modernizr.devSourceFile,
+		"outputFile" : config.JavaScripts.modernizr.buildDistFile,
 
 		// Based on default settings on http://modernizr.com/download/
 		"extra" : modernizrConfig.extra,

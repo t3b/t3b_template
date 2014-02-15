@@ -22,6 +22,10 @@ module.exports = {
 		},
 		"jsHint" : {
 			"config" : "Build/JSHintConfig.json"
+		},
+		"modernizr" : {
+			"devSourceFile" : "Resources/Private/Javascripts/Libaries/Modernizr/modernizr.js",
+			"buildDistFile" : "Resources/Public/Javascripts/Libaries/Modernizr-Custom.js"
 		}
 	},
 	"Images" : {
