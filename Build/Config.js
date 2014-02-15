@@ -1,4 +1,7 @@
-// Project configuration.
+/**
+ * Config
+ * @description Configure grunt tasks & options.
+ */
 
 var pkg = require("../package");
 
