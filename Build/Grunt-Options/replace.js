@@ -63,8 +63,8 @@ module.exports = function(grunt) {
 			"src" : [config.paths.private + "/Layouts/*.html"],
 			"overwrite" : true,
 			"replacements" : [{
-				"from" : "<%= modernizr.outputFile %>",
-				"to" : "<%= modernizr.devFile %>"
+				"from" : config.JavaScripts.modernizr.buildDistFile,
+				"to" : config.JavaScripts.modernizr.devSourceFile
 			}, {
 				"from" : config.JavaScripts.requireJS.compileDistFile,
 				"to" : config.JavaScripts.devDir + "/" + config.JavaScripts.requireJS.libSourceFile
