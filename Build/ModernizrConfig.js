@@ -1,12 +1,14 @@
 module.exports = {
-	"extra" : { // Slightly modified default settings of http://modernizr.com/download/
+	// Slightly modified default settings of http://modernizr.com/download/
+	"extra" : {
 		"shiv": true,
 		"printshiv": false,
 		"load": false,
 		"mq": false,
 		"cssclasses": true
 	},
-	"extensibility" : { // Based on default settings on http://modernizr.com/download/
+	// Based on default settings on http://modernizr.com/download/
+	"extensibility" : {
 		"addtest": false,
 		"prefixed": false,
 		"teststyles": false,
@@ -16,7 +18,10 @@ module.exports = {
 		"prefixes": false,
 		"domprefixes": false
 	},
-	"tests" : [], // Define any tests you want to implicitly include.
-	"customTests" : [], // Have custom Modernizr tests? Add paths to their location here.
-	"matchCommunityTests" : false // When parseFiles = true, matchCommunityTests = true will attempt to match user-contributed tests.
+	// Define any tests you want to implicitly include.
+	"tests" : [],
+	// Have custom Modernizr tests? Add paths to their location here.
+	"customTests" : [],
+	// matchCommunityTests = true will attempt to match user-contributed tests.
+	"matchCommunityTests" : false
 };
