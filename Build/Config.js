@@ -15,9 +15,11 @@ module.exports = {
 	"JavaScripts" : {
 		"devDir" : "Resources/Private/Javascripts",
 		"distDir" : "Resources/Public/Javascripts",
-		"config" : "Resources/Private/Javascripts/Main.js",
-		"requireJS" : "Resources/Private/Javascripts/Libaries/RequireJS/require",
-		"compileDistFile" : "Resources/Public/Javascripts/Main.min.js",
+		"requireJS" : {
+			"config" : "Resources/Private/Javascripts/Main.js",
+			"libSourceFile" : "Libaries/RequireJS/require",
+			"compileDistFile" : "Resources/Public/Javascripts/Main.min.js"
+		},
 		"jsHintConfig" : "Build/JSHintConfig.json"
 	},
 	"Images" : {

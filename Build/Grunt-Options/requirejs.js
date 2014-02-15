@@ -9,9 +9,9 @@ var config = require("../Config");
 module.exports = {
   deploy: {
     options: {
-      mainConfigFile: config.JavaScripts.config,
-      include: [config.JavaScripts.requirejs],
-      out: config.JavaScripts.compileDistFile,
+      mainConfigFile: config.JavaScripts.requireJS.config,
+      include: [config.JavaScripts.requireJS.libSourceFile],
+      out: config.JavaScripts.requireJS.compileDistFile,
 
       // Wrap in an IIFE
 			wrap: true,
