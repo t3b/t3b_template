@@ -19,7 +19,7 @@ module.exports = {
 		"devDir" : "Resources/Private/Javascripts",
 		"distDir" : "Resources/Public/Javascripts",
 		"requireJS" : {
-			"config" : "Resources/Private/Javascripts/Main.js",
+			"config" : "Resources/Private/Javascripts/Main",
 			"libSourceFile" : "Libaries/RequireJS/require",
 			"compileDistFile" : "Resources/Public/Javascripts/Main.min.js"
 		},

@@ -9,7 +9,7 @@ var config = require("../Config");
 module.exports = {
   deploy: {
     options: {
-      mainConfigFile: config.JavaScripts.requireJS.config,
+      mainConfigFile: config.JavaScripts.requireJS.config + ".js",
       include: [config.JavaScripts.requireJS.libSourceFile],
       out: config.JavaScripts.requireJS.compileDistFile,
 

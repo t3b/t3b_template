@@ -51,6 +51,12 @@ module.exports = function(grunt) {
 			"replacements" : [{
 				"from" : config.JavaScripts.modernizr.devSourceFile,
 				"to" : config.JavaScripts.modernizr.buildDistFile
+			}, {
+				"from" : config.JavaScripts.devDir + "/" + config.JavaScripts.requireJS.libSourceFile,
+				"to" : config.JavaScripts.requireJS.compileDistFile
+			}, {
+				"from" : "data-main=\"typo3conf/ext/" + config.package.name + "/" + config.JavaScripts.requireJS.config + "\"",
+				"to" : "data-mainJs"
 			}]
 		},
 		"dev" : {
@@ -59,6 +65,12 @@ module.exports = function(grunt) {
 			"replacements" : [{
 				"from" : "<%= modernizr.outputFile %>",
 				"to" : "<%= modernizr.devFile %>"
+			}, {
+				"from" : config.JavaScripts.requireJS.compileDistFile,
+				"to" : config.JavaScripts.devDir + "/" + config.JavaScripts.requireJS.libSourceFile
+			}, {
+				"from" : "data-mainJs",
+				"to" : "data-main=\"typo3conf/ext/" + config.package.name + "/" + config.JavaScripts.requireJS.config + "\""
 			}]
 		}
 	};
