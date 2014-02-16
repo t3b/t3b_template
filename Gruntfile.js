@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 	grunt.initConfig(gruntOptionsObj);
 
 	// Load all grunt-plugins that are specified in the 'package.json' file.
-	require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
+	require('jit-grunt')(grunt);
 
 
 	/**
