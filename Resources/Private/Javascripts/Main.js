@@ -4,9 +4,9 @@
  */
 require.config({
 	paths: {
-		"jquery" : "Libaries/jquery/jquery"
+		"main" : "Modules/Main"
 	},
-	include: ["Modules/Main"], // Array of entry points which should be included in the optimized final build.
+	include: ["main"], // Array of entry points which should be included in the optimized final build.
 
 	// Append a date on each requested script to prevent caching issues.
 	urlArgs: "bust=" + (new Date()).getDate()
@@ -17,7 +17,7 @@ require.config({
  * RequireJS calls
  * @description Call the needed AMD modules.
  */
-require(["Modules/Main"], function(MainFn) {
+require(["main"], function(MainFn) {
 	"use strict";
 
 	new MainFn();
