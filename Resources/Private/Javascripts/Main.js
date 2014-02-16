@@ -4,9 +4,12 @@
  */
 require.config({
 	paths: {
-		"main" : "Modules/Main"
+		"mainModule" : "Modules/Main"
 	},
-	include: ["main"], // Array of entry points which should be included in the optimized final build.
+
+	// Array of entry points which should be included in the optimized final build.
+	// The preset entry point is this file.
+	include: ["Main"],
 
 	// Append a date on each requested script to prevent caching issues.
 	urlArgs: "bust=" + (new Date()).getDate()
@@ -17,7 +20,7 @@ require.config({
  * RequireJS calls
  * @description Call the needed AMD modules.
  */
-require(["main"], function(MainFn) {
+require(["mainModule"], function(MainFn) {
 	"use strict";
 
 	new MainFn();
