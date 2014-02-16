@@ -12,7 +12,7 @@ require.config({
 	include: ["Main"],
 
 	// Append a date on each requested script to prevent caching issues.
-	urlArgs: "bust=" + (new Date()).getDate()
+	urlArgs: "bust=" + Date.now()
 });
 
 
