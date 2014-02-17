@@ -4,37 +4,41 @@
  */
 
 var pkg = require("../package");
+var configCreator = function() {
+	"use strict";
 
-module.exports = {
-	"package" : pkg,
-	"paths" : {
-		"private":  "Resources/Private",
-		"public":   "Resources/Public",
-	},
-	"Sass" : {
-		"sassDir" : "Resources/Private/Sass",
-		"cssDir" : "Resources/Public/Stylesheets"
-	},
-	"JavaScripts" : {
-		"devDir" : "Resources/Private/Javascripts",
-		"distDir" : "Resources/Public/Javascripts",
-		"requireJS" : {
-			"config" : "Main",
-			"libSourceFile" : "Libaries/RequireJS/require",
-			"compileDistFile" : "Resources/Public/Javascripts/Main.min.js"
-		},
-		"jsHint" : {
-			"config" : "Build/JSHintConfig.json"
-		},
-		"modernizr" : {
-			"devSourceFile" : "Resources/Private/Javascripts/Libaries/Modernizr/modernizr.js",
-			"buildDistFile" : "Resources/Public/Javascripts/Libaries/Modernizr-Custom.js"
-		}
-	},
-	"Images" : {
-		"devDir" : "Resources/Private/Images",
-		"distDir" : "Resources/Public/Images",
+	this.package = pkg,
+	this.paths = {
+		"private" : "Resources/Private",
+		"public" : "Resources/Public",
+	};
+	this.Sass = {
+		"sassDir" : this.paths.private + "/Sass",
+		"cssDir" : this.paths.public + "/Stylesheets"
+	};
+	this.JavaScripts = {};
+	this.JavaScripts.paths = {
+		"devDir" : this.paths.private + "/Javascripts",
+		"distDir" : this.paths.public + "/Javascripts"
+	};
+	this.JavaScripts.requireJS = {
+		"config" : "Main",
+		"libSourceFile" : "Libaries/RequireJS/require", // Relative to the "config" file
+		"compileDistFile" : this.JavaScripts.paths.distDir + "/Main.min.js"
+	};
+	this.JavaScripts.jsHint = {
+		"config" : "Build/JSHintConfig.json"
+	};
+	this.JavaScripts.modernizr = {
+		"devSourceFile" : this.JavaScripts.paths.devDir + "/Libaries/Modernizr/modernizr.js",
+		"buildDistFile" : this.JavaScripts.paths.distDir + "/Libaries/Modernizr-Custom.js"
+	};
+	this.Images = {
+		"devDir" : this.paths.private + "/Images",
+		"distDir" : this.paths.public + "/Images",
 		"optimizationLevel" : 5
-	},
-	"packageIsDefault" : pkg.name === "t3b_template" // Check if the defaults in 'package.json' are customized.
+	};
+	this.packageIsDefault = this.package.name === "t3b_template"; // Check if the defaults in 'package.json' are customized.
 };
+
+module.exports = new configCreator();
