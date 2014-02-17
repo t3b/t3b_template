@@ -19,14 +19,6 @@ module.exports = {
 		"tests" : modernizrConfig.tests,
 		"customTests" : modernizrConfig.customTests,
 		"matchCommunityTests" : modernizrConfig.matchCommunityTests,
-		"files" : {
-			"src" : [
-				"**/*.{js,css,scss}",
-				"!node_modules/**/*",
-				"!Gruntfile.js",
-				"!" + config.JavaScripts.devDir + "/Libaries/**/*",
-				"!" + config.JavaScripts.distDir + "/Libaries/**/*"
-			]
-		}
+		"files" : config.JavaScripts.modernizr.files
 	}
 };

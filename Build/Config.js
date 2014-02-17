@@ -38,7 +38,16 @@ var configCreator = function() {
 	};
 	this.JavaScripts.modernizr = {
 		"devSourceFile" : this.JavaScripts.paths.devDir + "/Libaries/Modernizr/modernizr.js",
-		"buildDistFile" : this.JavaScripts.paths.distDir + "/Libaries/Modernizr-Custom.js"
+		"buildDistFile" : this.JavaScripts.paths.distDir + "/Libaries/Modernizr-Custom.js",
+		"files" : {
+			"src" : [
+				"**/*.{js,css,scss}",
+				"!node_modules/**/*",
+				"!Gruntfile.js",
+				"!" + this.JavaScripts.paths.devDir + "/Libaries/**/*",
+				"!" + this.JavaScripts.paths.distDir + "/Libaries/**/*"
+			]
+		}
 	};
 	this.Images = {
 		"devDir" : this.paths.private + "/Images",
