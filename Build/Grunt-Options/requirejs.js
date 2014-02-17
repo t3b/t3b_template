@@ -7,13 +7,13 @@
 var config = require("../Config");
 
 module.exports = {
-  deploy: {
-    options: {
-      mainConfigFile: config.JavaScripts.devDir + "/" + config.JavaScripts.requireJS.config + ".js",
-      include: [config.JavaScripts.requireJS.libSourceFile, config.JavaScripts.requireJS.config],
-      out: config.JavaScripts.requireJS.compileDistFile,
+	deploy: {
+		options: {
+			mainConfigFile: config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.config + ".js",
+			include: [config.JavaScripts.requireJS.libSourceFile, config.JavaScripts.requireJS.config],
+			out: config.JavaScripts.requireJS.compileDistFile,
 
-      // Wrap in an IIFE
+			// Wrap in an IIFE
 			wrap: true,
 
 			// Generate source maps for the build.
@@ -23,8 +23,8 @@ module.exports = {
 			preserveLicenseComments: false,
 
 			// Uglify the build with 'uglify2'.
-			optimize: 'uglify2'
-    }
-  }
+			optimize: 'uglify2',
+		}
+	}
 };
 
