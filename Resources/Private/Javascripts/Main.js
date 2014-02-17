@@ -7,10 +7,6 @@ require.config({
 		"mainModule" : "Modules/Main"
 	},
 
-	// Array of entry points which should be included in the optimized final build.
-	// The preset entry point is this file.
-	include: ["Main"],
-
 	// Append a date on each requested script to prevent caching issues.
 	urlArgs: "bust=" + Date.now()
 });
