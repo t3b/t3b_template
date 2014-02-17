@@ -11,11 +11,5 @@ module.exports = {
 		"jshintrc" : config.JavaScripts.jsHint.config,
 		"reporter" : require("jshint-stylish") // Use a more readable JSHint output theme
 	},
-	"files" : [
-		"Gruntfile.js",
-		"Build/**/*.js",
-		config.JavaScripts.devDir + "/*.js",
-		"!" + config.JavaScripts.devDir + "/Libaries/**/*",
-		"!" + config.JavaScripts.distDir + "/Libaries/**/*"
-	]
+	"files" : config.JavaScripts.jsHint.files
 };

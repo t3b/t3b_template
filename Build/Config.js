@@ -27,7 +27,14 @@ var configCreator = function() {
 		"compileDistFile" : this.JavaScripts.paths.distDir + "/Main.min.js"
 	};
 	this.JavaScripts.jsHint = {
-		"config" : "Build/JSHintConfig.json"
+		"config" : "Build/JSHintConfig.json",
+		"files" : [
+			"Gruntfile.js",
+			"Build/**/*.js",
+			this.JavaScripts.paths.devDir + "/**/*.js",
+			"!" + this.JavaScripts.paths.devDir + "/Libaries/**/*",
+			"!" + this.JavaScripts.paths.distDir + "/Libaries/**/*"
+		]
 	};
 	this.JavaScripts.modernizr = {
 		"devSourceFile" : this.JavaScripts.paths.devDir + "/Libaries/Modernizr/modernizr.js",
