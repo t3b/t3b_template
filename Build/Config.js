@@ -24,7 +24,8 @@ var configCreator = function() {
 	this.JavaScripts.requireJS = {
 		"config" : "Main",
 		"libSourceFile" : "Libaries/RequireJS/require", // Relative to the "config" file
-		"compileDistFile" : this.JavaScripts.paths.distDir + "/Main.min.js"
+		"compileDistFile" : this.JavaScripts.paths.distDir + "/Main.min.js",
+		"removeLoggingStatements" : true
 	};
 	this.JavaScripts.jsHint = {
 		"config" : "Build/JSHintConfig.json",

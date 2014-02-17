@@ -23,8 +23,17 @@ module.exports = {
 			preserveLicenseComments: false,
 
 			// Uglify the build with 'uglify2'.
-			optimize: 'uglify2',
+			optimize: "uglify2",
+
+			// Remove 'console.log(...)' statements if set to true in the grunt config.
+			onBuildRead: function (moduleName, path, contents) {
+				"use strict";
+				if(config.JavaScripts.requireJS.removeLoggingStatements) {
+					return contents.replace(/console.log(.*);/g, '');
+				} else {
+					return contents;
+				}
+			}
 		}
 	}
 };
-
