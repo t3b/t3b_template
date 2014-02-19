@@ -13,6 +13,9 @@ module.exports = {
 			include: [config.JavaScripts.requireJS.libSourceFile, config.JavaScripts.requireJS.config],
 			out: config.JavaScripts.requireJS.compileDistFile,
 
+      // Include all require files in nested files.
+      findNestedDependencies: true,
+
 			// Wrap in an IIFE
 			wrap: true,
 
