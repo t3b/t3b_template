@@ -55,11 +55,11 @@ environment = :development
 # =============================================================================
 # COMPASS SETTINGS
 # =============================================================================
-# To disable debugging comments that display the original location of your selectors. Uncomment:
+# Disable debugging comments that display the original location of the selectors.
 line_comments = false
 
-# To enable relative paths to assets via compass helper functions. Uncomment:
+# Enable relative paths to assets via compass helper functions.
 relative_assets = true
 
-# disable the asset cache buster
+# Disable the asset cache buster
 asset_cache_buster :none
