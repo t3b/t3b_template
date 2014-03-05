@@ -3,11 +3,10 @@
  * @description Configure grunt tasks & options.
  */
 
-var pkg = require("../package");
 var configCreator = function() {
 	"use strict";
 
-	this.package = pkg,
+	this.package = require("../package"),
 	this.paths = {
 		"private" : "Resources/Private",
 		"public" : "Resources/Public",
