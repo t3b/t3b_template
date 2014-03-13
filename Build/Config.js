@@ -22,8 +22,10 @@ var ConfigCreator = function() {
 	};
 	this.JavaScripts.requireJS = {
 		"config" : "Main",
-		"libSourceFile" : "Libaries/RequireJS/require", // Relative to the "config" file
+		"libSourceFile" : "Libaries/RequireJS/require", // Relative to the "config" file.
+		"almondSourceFile" : "Libaries/Almond/almond", // Relative to the "config" file.
 		"compileDistFile" : this.JavaScripts.paths.distDir + "/Main.min.js",
+		"useAlmondOnBuild" : true,
 		"removeLoggingStatements" : true
 	};
 	this.JavaScripts.jsHint = {

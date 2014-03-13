@@ -10,11 +10,11 @@ module.exports = {
 	deploy: {
 		options: {
 			mainConfigFile: config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.config + ".js",
-			include: [config.JavaScripts.requireJS.libSourceFile, config.JavaScripts.requireJS.config],
+			include: [(config.JavaScripts.requireJS.useAlmondOnBuild) ? config.JavaScripts.requireJS.almondSourceFile : config.JavaScripts.requireJS.libSourceFile, config.JavaScripts.requireJS.config],
 			out: config.JavaScripts.requireJS.compileDistFile,
 
-      // Include all require files in nested files.
-      findNestedDependencies: true,
+			// Include all require files in nested files.
+			findNestedDependencies: true,
 
 			// Wrap in an IIFE
 			wrap: true,
