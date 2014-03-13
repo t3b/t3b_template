@@ -68,7 +68,7 @@ module.exports = function(grunt) {
 				"to" : config.JavaScripts.modernizr.devSourceFile
 			}, {
 				"from" : config.JavaScripts.requireJS.compileDistFile,
-				"to" : config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.libSourceFile
+				"to" : config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.libSourceFile + '.js'
 			}, {
 				"from" : "data-mainJs",
 				"to" : "data-main=\"typo3conf/ext/" + config.package.name + "/" + config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.config + "\""
