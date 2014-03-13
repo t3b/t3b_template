@@ -16,10 +16,8 @@ require.config({
  * RequireJS calls
  * @description Require and fire off the main/initial file of the application.
  */
-require(function(require) {
+require(["mainModule"], function(MainFn) {
 	"use strict";
-
-	var MainFn = require("mainModule");
 
 	new MainFn();
 });
