@@ -12,14 +12,15 @@ module.exports = function(grunt) {
 	return {
 		"init" : {
 			"src" : [
-				"**/*.php",
-				"**/*.txt",
-				"**/*.ts",
-				"**/*.html",
-				"**/*.scss",
-				"!node_modules/**/*",
-				"!" + config.JavaScripts.devDir + "/Libaries/**/*",
-				"!" + config.JavaScripts.distDir + "/Libaries/**/*"
+				"ext_emconf.php",
+				"ext_tables.php",
+				"Configuration/**/*.ts",
+				"Configuration/**/*.txt",
+				config.paths.private + "/Elements/**/*.html",
+				config.paths.private + "/Layouts/**/*.html",
+				config.paths.private + "/Partials/**/*.html",
+				config.paths.private + "/Templates/**/*.html",
+				config.paths.private + "/Sass/**/*.scss",
 			],
 			"overwrite" : true,
 			"replacements" : [{

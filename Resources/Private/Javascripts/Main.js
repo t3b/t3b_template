@@ -14,10 +14,12 @@ require.config({
 
 /**
  * RequireJS calls
- * @description Call the needed AMD modules.
+ * @description Require and fire off the main/initial file of the application.
  */
-require(["mainModule"], function(MainFn) {
+require(function(require) {
 	"use strict";
+
+	var MainFn = require("mainModule");
 
 	new MainFn();
 });

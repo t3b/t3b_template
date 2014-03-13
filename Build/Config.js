@@ -3,7 +3,7 @@
  * @description Configure grunt tasks & options.
  */
 
-var configCreator = function() {
+var ConfigCreator = function() {
 	"use strict";
 
 	this.package = require("../package"),
@@ -57,4 +57,4 @@ var configCreator = function() {
 	this.packageIsDefault = this.package.name === "t3b_template"; // Check if the defaults in 'package.json' are customized.
 };
 
-module.exports = new configCreator();
+module.exports = new ConfigCreator();
