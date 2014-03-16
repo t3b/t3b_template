@@ -4,7 +4,8 @@
  * specified inside the 'package.json'. (Should be run after downloading the extension).
  */
 
-var config = require("../Config");
+var fs = require('fs'),
+		config = require("../Config");
 
 module.exports = function(grunt) {
 	"use strict";
@@ -27,6 +28,8 @@ module.exports = function(grunt) {
 		}
 
 		// Create the base Stylesheet to prevent errors from ext:vhs(File not found).
-		grunt.task.run(["compass:dev"]);
+		if (!fs.existsSync(config.Sass.cssDir + "/Main.css")) {
+			grunt.task.run(["compass:dev"]);
+		}
 	});
 };
