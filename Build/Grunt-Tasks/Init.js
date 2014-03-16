@@ -10,9 +10,13 @@ module.exports = function(grunt) {
 	"use strict";
 
 	grunt.registerTask("init", function() {
+		/*
+		 * Check if the package.json contents are defaults; If 'false'
+		 *		=> replace all '<!=  !>' strings and set up the git hooks.
+		 *		=> remove the default git history.
+		 */
 		if (!config.packageIsDefault) {
-			// Check if the package.json contents are defaults; If 'false' replace all '<!=  !>' strings and set up the git hooks.
-			grunt.task.run(["replace:init"]);
+			grunt.task.run(["replace:init", "clean:gitFolder"]);
 		} else {
 			// Copy the git hooks as they are not present by default.
 			grunt.task.run(["shell:hookUpGit"]);

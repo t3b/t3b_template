@@ -7,5 +7,6 @@
 var config = require("../Config");
 
 module.exports = {
+	"gitFolder" : '.git/',
 	"stylesheets" : [config.Sass.cssDir + "/*.css"]
 };
