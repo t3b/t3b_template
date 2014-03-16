@@ -5,7 +5,7 @@
  */
 
 var fs = require('fs'),
-		config = require("../Config");
+	config = require("../Config");
 
 module.exports = function(grunt) {
 	"use strict";
