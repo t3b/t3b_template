@@ -53,10 +53,10 @@ module.exports = function(grunt) {
 				"from" : config.JavaScripts.modernizr.devSourceFile,
 				"to" : config.JavaScripts.modernizr.buildDistFile
 			}, {
-				"from" : config.JavaScripts.devDir + "/" + config.JavaScripts.requireJS.libSourceFile,
+				"from" : config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.libSourceFile + ".js",
 				"to" : config.JavaScripts.requireJS.compileDistFile
 			}, {
-				"from" : "data-main=\"typo3conf/ext/" + config.package.name + "/" + config.JavaScripts.requireJS.config + "\"",
+				"from" : "data-main=\"typo3conf/ext/" + config.package.name + "/" + config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.config + "\"",
 				"to" : "data-mainJs"
 			}]
 		},
@@ -68,10 +68,10 @@ module.exports = function(grunt) {
 				"to" : config.JavaScripts.modernizr.devSourceFile
 			}, {
 				"from" : config.JavaScripts.requireJS.compileDistFile,
-				"to" : config.JavaScripts.devDir + "/" + config.JavaScripts.requireJS.libSourceFile
+				"to" : config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.libSourceFile + '.js'
 			}, {
 				"from" : "data-mainJs",
-				"to" : "data-main=\"typo3conf/ext/" + config.package.name + "/" + config.JavaScripts.requireJS.config + "\""
+				"to" : "data-main=\"typo3conf/ext/" + config.package.name + "/" + config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.config + "\""
 			}]
 		}
 	};

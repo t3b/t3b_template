@@ -10,12 +10,12 @@ module.exports = function(grunt) {
 	"use strict";
 
 	grunt.registerTask("init", function() {
-		// Copy the git hooks as they are not present by default.
-		grunt.task.run(["shell:hookUpGit"]);
-
-		// Check if the package.json contents are defaults; If 'false' replace all '<!=  !>' strings and set up the git hooks.
 		if (!config.packageIsDefault) {
+			// Check if the package.json contents are defaults; If 'false' replace all '<!=  !>' strings and set up the git hooks.
 			grunt.task.run(["replace:init"]);
+		} else {
+			// Copy the git hooks as they are not present by default.
+			grunt.task.run(["shell:hookUpGit"]);
 		}
 
 		// Create the base Stylesheet to prevent errors from ext:vhs(File not found).

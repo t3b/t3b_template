@@ -3,11 +3,10 @@
  * @description Configure grunt tasks & options.
  */
 
-var pkg = require("../package");
 var ConfigCreator = function() {
 	"use strict";
 
-	this.package = pkg,
+	this.package = require("../package"),
 	this.paths = {
 		"private" : "Resources/Private",
 		"public" : "Resources/Public",
@@ -23,8 +22,10 @@ var ConfigCreator = function() {
 	};
 	this.JavaScripts.requireJS = {
 		"config" : "Main",
-		"libSourceFile" : "Libaries/RequireJS/require", // Relative to the "config" file
+		"libSourceFile" : "Libaries/RequireJS/require", // Relative to the "config" file.
+		"almondSourceFile" : "Libaries/Almond/almond", // Relative to the "config" file.
 		"compileDistFile" : this.JavaScripts.paths.distDir + "/Main.min.js",
+		"useAlmondOnBuild" : true,
 		"removeLoggingStatements" : true
 	};
 	this.JavaScripts.jsHint = {

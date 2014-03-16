@@ -4,3 +4,6 @@
 [submodule "Resources/Private/Javascripts/Libaries/RequireJS"]
 	path = Resources/Private/Javascripts/Libaries/RequireJS
 	url = https://github.com/jrburke/requirejs.git
+[submodule "Resources/Private/Javascripts/Libaries/Almond"]
+	path = Resources/Private/Javascripts/Libaries/Almond
+	url = https://github.com/jrburke/almond.git
