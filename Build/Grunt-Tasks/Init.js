@@ -11,6 +11,9 @@ module.exports = function(grunt) {
 	"use strict";
 
 	grunt.registerTask("init", function() {
+		// Fetch / Update all git submodules.
+		grunt.task.run('shell:initGitSubmodules');
+
 		if (!config.packageIsDefault) {
 			/*
 			 * If the package.json contents are edited:
