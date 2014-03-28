@@ -1,3 +1,1 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:<!= pkg.name !>/Configuration/TypoScript/Includes/FluidPages.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:<!= pkg.name !>/Configuration/TypoScript/Includes/FluidContent.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:<!= pkg.name !>/Configuration/TypoScript/Includes/Page.ts">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:<!= pkg.name !>/Configuration/TypoScript/Includes" extension"ts">
