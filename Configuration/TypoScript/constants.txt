@@ -3,3 +3,6 @@
 
 # Set the max image-width for css_styled_content (This should have same value as the variable '$layout-width' in /Resources/Private/Sass/_variables.scss)
 # styles.content.imgtext.maxW = 960
+
+# Internal Image-Rendering method for reponsive image solutions - Possible values (default | srcset | picture | data)
+# styles.content.imgtext.layoutKey = default
