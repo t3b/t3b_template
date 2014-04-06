@@ -6,6 +6,7 @@
 var ConfigCreator = function() {
 	"use strict";
 
+	this.defaultName = "t3b_template",
 	this.package = require("../package"),
 	this.paths = {
 		"private" : "Resources/Private",
@@ -22,8 +23,8 @@ var ConfigCreator = function() {
 	};
 	this.JavaScripts.requireJS = {
 		"config" : "Main",
-		"libSourceFile" : "Libaries/RequireJS/require", // Relative to the "config" file.
-		"almondSourceFile" : "Libaries/Almond/almond", // Relative to the "config" file.
+		"libSourceFile" : "Libaries/requirejs/require", // Relative to the "config" file.
+		"almondSourceFile" : "Libaries/almond/almond", // Relative to the "config" file.
 		"compileDistFile" : this.JavaScripts.paths.distDir + "/Main.min.js",
 		"useAlmondOnBuild" : true,
 		"removeLoggingStatements" : true
@@ -39,7 +40,7 @@ var ConfigCreator = function() {
 		]
 	};
 	this.JavaScripts.modernizr = {
-		"devSourceFile" : this.JavaScripts.paths.devDir + "/Libaries/Modernizr/modernizr.js",
+		"devSourceFile" : this.JavaScripts.paths.devDir + "/Libaries/modernizr/modernizr.js",
 		"buildDistFile" : this.JavaScripts.paths.distDir + "/Libaries/Modernizr-Custom.js",
 		"files" : {
 			"src" : [
@@ -56,7 +57,7 @@ var ConfigCreator = function() {
 		"distDir" : this.paths.public + "/Images",
 		"optimizationLevel" : 5
 	};
-	this.packageIsDefault = this.package.name === "t3b_template"; // Check if the defaults in 'package.json' are customized.
+	this.packageIsDefault = this.package.name === this.defaultName; // Check if the defaults in 'package.json' are customized.
 };
 
 module.exports = new ConfigCreator();

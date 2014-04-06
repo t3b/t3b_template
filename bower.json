@@ -1,0 +1,19 @@
+{
+  "name": "t3b_template",
+  "dependencies": {
+    "almond ": "0.2.9",
+    "modernizr": "2.7.2",
+    "requirejs": "2.1.11"
+  },
+  "exportsOverride": {
+    "almond": {
+      "Javascripts/Libaries": "almond.js"
+    },
+    "modernizr": {
+      "Javascripts/Libaries": "modernizr.js"
+    },
+    "requirejs": {
+      "Javascripts/Libaries": "require.js"
+    }
+  }
+}
