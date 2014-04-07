@@ -17,14 +17,6 @@ module.exports = {
 			"failOnError" : true
 		}
 	},
-	"initGitSubmodules" : {
-		"command" : "git submodule init && git submodule update",
-		"options" : {
-			"stdout" : true,
-			"stderr" : true,
-			"failOnError" : true
-		}
-	},
 	"hookUpGit" : {
 		"command" : "mkdir .git/hooks/ && cp Build/Git-Hooks/pre-commit .git/hooks/",
 		"options" : {
