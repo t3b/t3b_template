@@ -5,7 +5,8 @@
  */
 
 var fs = require('fs'),
-	config = require("../Config");
+	config = require("../Config"),
+	helpers = require("../Libary/Helpers");
 
 module.exports = function(grunt) {
 	"use strict";
@@ -22,7 +23,7 @@ module.exports = function(grunt) {
 			 *		=> #2: Copy a bare version of the extensions '.gitignore' into the root.
 			 */
 			grunt.task.run(["replace:init", "clean:gitFolder"]); // #1
-			fs.createReadStream("Build/Templates/.gitignore").pipe(fs.createWriteStream('.gitignore')); // #2
+			helpers.copyFile("Build/Templates/.gitignore", ".gitignore"); // #2
 		} else {
 			/*
 			 * If the package.json contents are defaults:
