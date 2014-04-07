@@ -6,8 +6,16 @@
 var ConfigCreator = function() {
 	"use strict";
 
-	this.defaultName = "t3b_template",
+	// Contents of the package.json.
 	this.package = require("../package"),
+
+
+	// Default Settings.
+	this.defaultName = "t3b_template",
+	this.packageIsDefault = this.package.name === this.defaultName; // Check if the defaults in 'package.json' are customized.
+
+
+	// General Paths/Structure of the extension.
 	this.paths = {
 		"private" : "Resources/Private",
 		"public" : "Resources/Public",
@@ -21,6 +29,9 @@ var ConfigCreator = function() {
 		"devDir" : this.paths.private + "/Javascripts",
 		"distDir" : this.paths.public + "/Javascripts"
 	};
+
+
+	// RequireJS settings.
 	this.JavaScripts.requireJS = {
 		"config" : "Main",
 		"libSourceFile" : "Libaries/requirejs/require", // Relative to the "config" file.
@@ -29,6 +40,9 @@ var ConfigCreator = function() {
 		"useAlmondOnBuild" : true,
 		"removeLoggingStatements" : true
 	};
+
+
+	// JSHint settings.
 	this.JavaScripts.jsHint = {
 		"config" : "Build/JSHintConfig.json",
 		"files" : [
@@ -39,6 +53,9 @@ var ConfigCreator = function() {
 			"!" + this.JavaScripts.paths.distDir + "/Libaries/**/*"
 		]
 	};
+
+
+	// Modernizr settings.
 	this.JavaScripts.modernizr = {
 		"devSourceFile" : this.JavaScripts.paths.devDir + "/Libaries/modernizr/modernizr.js",
 		"buildDistFile" : this.JavaScripts.paths.distDir + "/Libaries/Modernizr-Custom.js",
@@ -52,12 +69,14 @@ var ConfigCreator = function() {
 			]
 		}
 	};
+
+
+	// Image compression settings.
 	this.Images = {
 		"devDir" : this.paths.private + "/Images",
 		"distDir" : this.paths.public + "/Images",
 		"optimizationLevel" : 5
 	};
-	this.packageIsDefault = this.package.name === this.defaultName; // Check if the defaults in 'package.json' are customized.
 };
 
 module.exports = new ConfigCreator();
