@@ -21,9 +21,11 @@ module.exports = function(grunt) {
 			 *		=> #1: replace all '<!=  !>' strings and set up the git hooks.
 			 *		=> #1: remove the default git history.
 			 *		=> #2: Copy a bare version of the extensions '.gitignore' into the root.
+			 *		=> #3: Remove other files which aren't suitable for customized extensions.
 			 */
 			grunt.task.run(["replace:init", "clean:gitFolder"]); // #1
 			helpers.copyFile("Build/Templates/.gitignore", ".gitignore"); // #2
+			helpers.deleteFiles([".travis.yml", "CHANGELOG.md", "README.md"]); // #3
 		} else {
 			/*
 			 * If the package.json contents are defaults:
