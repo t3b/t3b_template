@@ -18,7 +18,7 @@ module.exports = {
 		}
 	},
 	"hookUpGit" : {
-		"command" : "mkdir .git/hooks/ && cp Build/Git-Hooks/pre-commit .git/hooks/",
+		"command" : isWin ? "mkdir .git\\hooks\\ && xcopy Build\\Git-Hooks .git\\hooks\\  /E /C /H /R /K /O /Y" : "mkdir .git/hooks/ && cp Build/Git-Hooks/pre-commit .git/hooks/",
 		"options" : {
 			"stdout" : true,
 			"stderr" : true,
