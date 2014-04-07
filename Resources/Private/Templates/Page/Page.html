@@ -1,9 +1,9 @@
 {namespace flux=Tx_Flux_ViewHelpers}
-{namespace vhs=Tx_Vhs_ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
 
 <f:layout name="Page" />
 
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:flux="http://fedext.net/ns/flux/ViewHelpers" xmlns:vhs="http://fedext.net/ns/vhs/ViewHelpers" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:flux="http://fedext.net/ns/flux/ViewHelpers" xmlns:v="http://fedext.net/ns/vhs/ViewHelpers" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 	<f:section name="Configuration">
 		<flux:flexform id="standard-page" label="Standard page">
 			<flux:flexform.grid>
@@ -15,6 +15,6 @@
 	</f:section>
 
 	<f:section name="Main">
-		<vhs:page.content.render column="0" />
+		<v:page.content.render column="0" />
 	</f:section>
 </div>
