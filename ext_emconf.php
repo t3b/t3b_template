@@ -30,13 +30,13 @@ $EM_CONF[$_EXTKEY] = array(
 	'version' => '<!= pkg.version !>',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '6.0.0',
+			'typo3' => '6.2.0',
 			'extbase' => '6.0.0',
 			'fluid' => '6.0.0',
-			'fluidpages' => '',
-			'fluidcontent' => '',
-			'vhs' => '',
-			'flux' => '',
+			'fluidpages' => '3.0.0',
+			'fluidcontent' => '4.0.0',
+			'vhs' => '1.8.5',
+			'flux' => '7.0.0',
 		),
 		'conflicts' => array(
 		),
