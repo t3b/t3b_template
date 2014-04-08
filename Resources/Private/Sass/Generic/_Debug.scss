@@ -19,6 +19,7 @@ body::before {
 	content: 'Development';
 	border: 2px solid #000;
 	background: red;
+	pointer-events: none;
 	text-transform: uppercase;
 	color: #000;
 	font-weight: $bold;
