@@ -4,7 +4,12 @@
  * @docs https://npmjs.org/package/grunt-replace
  */
 
-var config = require("../Config");
+var config = require("../Config"),
+	deployStrings = {
+		requireJSLibSourceFile: config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.libSourceFile + ".js",
+		requireJsAttributeDeploy: "data-main=\"typo3conf/ext/" + config.package.name + "/" + config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.config + "\"",
+		requireJsAttributeLive: "data-mainJs"
+	};
 
 module.exports = function(grunt) {
 	"use strict";
@@ -67,11 +72,11 @@ module.exports = function(grunt) {
 				"from" : config.JavaScripts.modernizr.devSourceFile,
 				"to" : config.JavaScripts.modernizr.buildDistFile
 			}, {
-				"from" : config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.libSourceFile + ".js",
+				"from" : deployStrings.requireJSLibSourceFile,
 				"to" : config.JavaScripts.requireJS.compileDistFile
 			}, {
-				"from" : "data-main=\"typo3conf/ext/" + config.package.name + "/" + config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.config + "\"",
-				"to" : "data-mainJs"
+				"from" : deployStrings.requireJsAttributeDeploy,
+				"to" : deployStrings.requireJsAttributeLive
 			}]
 		},
 		"dev" : {
@@ -82,10 +87,10 @@ module.exports = function(grunt) {
 				"to" : config.JavaScripts.modernizr.devSourceFile
 			}, {
 				"from" : config.JavaScripts.requireJS.compileDistFile,
-				"to" : config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.libSourceFile + '.js'
+				"to" : deployStrings.requireJSLibSourceFile
 			}, {
-				"from" : "data-mainJs",
-				"to" : "data-main=\"typo3conf/ext/" + config.package.name + "/" + config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.config + "\""
+				"from" : deployStrings.requireJsAttributeLive,
+				"to" : deployStrings.requireJsAttributeDeploy
 			}]
 		}
 	};
