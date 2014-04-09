@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 			 */
 			grunt.task.run(["replace:init", "clean:gitFolder"]); // #1
 			helpers.copyFile("Build/Templates/.gitignore", ".gitignore"); // #2
-			helpers.deleteFiles([".travis.yml", "CHANGELOG.md", "README.md"]); // #3
+			helpers.deleteFiles([".travis.yml", "CHANGELOG.md", "CONTRIBUTORS.md", "README.md"]); // #3
 		} else {
 			/*
 			 * If the package.json contents are defaults:
