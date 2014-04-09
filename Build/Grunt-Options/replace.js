@@ -53,6 +53,9 @@ module.exports = function(grunt) {
 				"from" : "<!= pkg.author.email !>",
 				"to" : config.package.author.email
 			}, {
+				"from" : "<!= pkg.author.company !>",
+				"to" : config.package.author.company
+			}, {
 				"from" : "<!= date !>",
 				"to" : grunt.template.today("dd-mm-yyyy hh:MM")
 			}]

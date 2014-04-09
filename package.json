@@ -2,10 +2,11 @@
   "name": "t3b_template",
   "description": "A Kickstarter Template-Extension which is based on Fluid and Compass",
   "version": "1.2.1",
-  "homepage": "https://github.com/t3b/t3b_template",
+  "homepage": "github.com/t3b/t3b_template",
   "author": {
     "name": "Tylls Weiß",
     "email": "inkdpixels@gmail.com",
+    "company": "",
     "url": "https://github.com/Inkdpixels"
   },
   "repository": {
