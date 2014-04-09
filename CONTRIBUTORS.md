@@ -15,6 +15,6 @@ Also, a huge thanks to
 Name                           | URL
 -------------                  | -------------
 sitegeist media solutions GmbH | [sitegeist](http://sitegeist.de/)
-Exinit GmbH & Co. KG           | [sitegeist](http://exinit.de/)
+Exinit GmbH & Co. KG           | [exinit](http://exinit.de/)
 
 for their interest in further development and appreciation in form of development time on this project.
