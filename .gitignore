@@ -4,9 +4,6 @@ Docs/*
 # Node.js modules
 node_modules/*
 
-# Bower components (Please specify a custom location within the 'bower.json' as we dont want to polute the extension with unnecessary files)
-bower_components/*
-
 # Source-/Generated-files which shouldn't pollute the source repository
 Resources/Private/Javascripts/Libaries/almond/*
 Resources/Private/Javascripts/Libaries/modernizr/*

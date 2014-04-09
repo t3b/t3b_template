@@ -9,7 +9,8 @@ var config = require("../Config");
 module.exports = {
 	install: {
 		options: {
-			targetDir: './' + config.paths.private
+			targetDir: './' + config.paths.private,
+			cleanBowerDir: true
 		}
 	}
 };
