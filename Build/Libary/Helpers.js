@@ -4,6 +4,7 @@
  */
 
 var fs = require('fs'),
+	config = require("../Config"),
 	helpers = {
 		'copyFile' : function(source, dist) {
 			"use strict";
@@ -16,6 +17,11 @@ var fs = require('fs'),
 			files.forEach(function(file){
 				fs.unlink(file);
 			});
+		},
+		'isPackageDefault' : function() {
+			"use strict";
+
+			return config.package.name === "t3b_template";
 		}
 	};
 
