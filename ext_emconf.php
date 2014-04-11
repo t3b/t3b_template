@@ -11,7 +11,7 @@
 ########################################################################
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => '<!= pkg.homepage !> Templates',
+	'title' => 'Templates for <!= pkg.homepage !>',
 	'description' => '<!= pkg.description !>',
 	'category' => 'templates',
 	'author' => '<!= pkg.author.name !>',
@@ -35,7 +35,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'fluid' => '6.0.0',
 			'fluidpages' => '3.0.0',
 			'fluidcontent' => '4.0.0',
-			'vhs' => '1.8.5',
+			'vhs' => '',
 			'flux' => '7.0.0',
 		),
 		'conflicts' => array(

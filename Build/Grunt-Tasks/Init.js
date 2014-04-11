@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 		// Replace general text-strings and paths.
 		grunt.task.run("replace:preInit");
 
-		if (!config.packageIsDefault) {
+		if (!helpers.isPackageDefault()) {
 			/*
 			 * If the package.json contents are edited:
 			 *		=> #1: replace all '<!=  !>' strings and set up the git hooks.

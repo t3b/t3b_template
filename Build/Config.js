@@ -10,11 +10,6 @@ var ConfigCreator = function() {
 	this.package = require("../package"),
 
 
-	// Default Settings.
-	this.defaultName = "t3b_template",
-	this.packageIsDefault = this.package.name === this.defaultName; // Check if the defaults in 'package.json' are customized.
-
-
 	// General Paths/Structure of the extension.
 	this.paths = {
 		"private" : "Resources/Private",
