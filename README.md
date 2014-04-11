@@ -24,7 +24,7 @@ After you've made these changes, import the extension into your TYPO3-System.
 
 
 ## Documentation
-[The t3b_template wiki](https://github.com/t3b/t3b_template/wiki)
+[Head over to the t3b_template wiki](https://github.com/t3b/t3b_template/wiki)
 
 
 ## License
