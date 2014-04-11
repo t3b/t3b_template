@@ -45,8 +45,7 @@
     "grunt-bower-task": "~0.3.4"
   },
   "scripts": {
-    "test": "grunt travis --verbose --env=travis",
-    "postinstall": "grunt init"
+    "test": "grunt travis --verbose --env=travis"
   },
   "dependencies": {
     "time-grunt": "~0.2.5"
