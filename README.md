@@ -28,5 +28,5 @@ After you've made these changes, import the extension into your TYPO3-System.
 
 
 ## License
-Copyright (c) 2012 TYPO3 Base-Team.
-Licensed under the MIT, GPL licenses.
+Copyright (c) 2012-2014 Tyll Weiß.
+Licensed under the [MIT licenses](https://github.com/t3b/t3b_template/blob/master/LICENSE.md).
