@@ -59,6 +59,7 @@ var ConfigCreator = function() {
 				"**/*.{js,css,scss}",
 				"!node_modules/**/*",
 				"!Gruntfile.js",
+				"!Build/**/*",
 				"!" + this.JavaScripts.paths.devDir + "/Libaries/**/*",
 				"!" + this.JavaScripts.paths.distDir + "/Libaries/**/*"
 			]
