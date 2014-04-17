@@ -1,5 +1,7 @@
 {namespace v=Tx_Vhs_ViewHelpers}
 
+<v:var.set name="pageUids" value="{v:var.typoscript(path: 'plugin.<!= pkg.name !>.pageUids')}" />
+
 <v:page.header.meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <v:asset.style  name="BaseStylesheet" path="EXT:<!= pkg.name !>/Resources/Public/Stylesheets/Main.css" standalone="1" />
