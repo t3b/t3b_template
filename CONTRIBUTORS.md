@@ -10,7 +10,7 @@ Tyll Weiß      | [GitHub](https://github.com/Inkdpixels)
 
 for their contributions of code, bugfixes, documentation, and general encouragement.
 
-Also, a huge thanks to
+Also, huge thanks to
 
 Name                           | URL
 -------------                  | -------------
