@@ -29,7 +29,7 @@ $direction:             ltr !default;
 $brand-color:           #0097d7 !default;
 $brand-font-family:     "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $brand-border-radius:   1px !default;
-$brand-logo_image:      false !default;
+$brand-logo: (image: false, width: 200px, height: 200px);
 
 
 // =============================================================================

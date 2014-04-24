@@ -17,5 +17,5 @@ $ Brand styles
 .brandColor { color: $brand-color; }
 .brandFace { font-family: $brand-font-family; }
 .brandLogo {
-	@include image-replacement($file-name: $brand-logo_image, $display-mode: inline-block, $width: $brand-logo_image-width, $height: $brand-logo_image-height);
+	@include image-replacement($file-name: map-get($brand-logo, image), $display-mode: inline-block, $width: map-get($brand-logo, width), $height: map-get($brand-logo, height));
 }

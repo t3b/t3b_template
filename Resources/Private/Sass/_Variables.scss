@@ -55,14 +55,11 @@ $brand-font-family:     "Helvetica Neue", Helvetica, Arial, sans-serif;
 $brand-border-radius:   1px;
 
 // If you want to use the image-replacement technique for your brand logo,
-// set this to the image-name of your brand logo e.g.:
-// $brand-logo_image:      'brand-logo.png';
+// set the 'image' key to the image-name of your brand logo e.g.:
+// $brand-logo: (image: 'logo.png', width: 200px, height: 200px);
 //
-// Be aware that you need to place the image inside your images_dir as
-// specified inside the config.rb - otherwise Sass will throw an error.
-$brand-logo_image:      'logo.png';
-$brand-logo_image-height: 200px;
-$brand-logo_image-width: 200px;
+// Be aware that you need to specify the dimensions of your logo, otherwise it won't be displayed.
+$brand-logo: (image: false, width: 200px, height: 200px);
 
 
 // =============================================================================
