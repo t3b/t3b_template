@@ -22,10 +22,6 @@
 	border: 0;
 	overflow: hidden;
 	font: 0/0 a;
-	@if $legacy-support-for-ie7 {
-		/* IE 6/7 fallback */
-		*text-indent: -9999px;
-	}
 }
 
 /**
@@ -73,9 +69,6 @@
  */
 .cf,
 .clearfix {
-	@if $legacy-support-for-ie7 {
-		*zoom:1;
-	}
 	&:before, &:after { content: ""; display: table; }
 	&:after { clear: both; }
 }

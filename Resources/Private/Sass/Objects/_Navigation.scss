@@ -42,13 +42,7 @@ $ Navigation Object
 .nav--fit {
 	display: table;
 	width: 100%;
-
-	@if $legacy-support-for-ie7 {
-		li { display: table-cell; }
-		li li { display: inline-block; }
-	} @else {
-		> li {
-			display: table-cell;
-		}
+	> li {
+		display: table-cell;
 	}
 }

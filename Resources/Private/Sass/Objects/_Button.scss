@@ -20,10 +20,6 @@ $ Button Object
 .btn {
 	@extend %btn;
 	display: inline-block;
-	@if $legacy-support-for-ie7 {
-		*display: inline;
-		*zoom: 1;
-	}
 	&,
 	&:hover {
 		text-decoration: none;

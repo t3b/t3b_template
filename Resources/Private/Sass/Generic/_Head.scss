@@ -26,13 +26,11 @@
 		-webkit-box-sizing: border-box;
 			 -moz-box-sizing: border-box;
 						box-sizing: border-box;
-		@if $legacy-support-for-ie7 { *behavior: url('#{$template-path}Ressource/Public/BoxSizing.htc'); }
 	}
 	*:before,
 	*:after {
 		-webkit-box-sizing: border-box;
 			 -moz-box-sizing: border-box;
 						box-sizing: border-box;
-		@if $legacy-support-for-ie7 { *behavior: url('#{$template-path}Ressource/Public/BoxSizing.htc'); }
 	}
 }
