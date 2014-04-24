@@ -13,17 +13,17 @@ $ Text inputs, checkboxes and other form elements
 %textInput,
 .textInput,
 textarea {
-	height: $text-input-height;
+	height: map-get($textInput, height);
 	padding: .2em .4em;
-	@include rem(margin-bottom, $half-spacing);
+	@include rem(margin-bottom, map-get($textInput, bottomSpacing));
 
 	background: $content-background;
-	border: $text-input-border;
-	border-radius: $text-input-borderRadius;
-	box-shadow: $text-input-boxShadow;
+	border: map-get($textInput, border);
+	border-radius: map-get($textInput, borderRadius);
+	box-shadow: map-get($textInput, boxShadow);
 
-	@include font-size($text-input-fontSize);
-	color: $text-input-color;
+	@include font-size(map-get($textInput, fontSize));
+	color: map-get($textInput, color);
 }
 textarea {
 	height: auto; /* Reset height since textareas have the attribute rows="" */
