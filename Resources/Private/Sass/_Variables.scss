@@ -171,9 +171,10 @@ $text-input-color:      lighten($base-text-color, 5%);
 // Buttons
 // =============================================================================
 // The basic bottom-margin on all text-inputs.
-$button-spacing:        $half-spacing;
-// Set in em's so we can change the size of the button depending on the font-size.
-$button-inner-spacing:  0.5em 0.75em;
-$button-font-size:      .8em;
-$button-background:     map-get($brand-colors, primary);
-$button-color:          color-adjust($button-background, 100%);
+$button: (
+	bottomSpacing: $half-spacing,
+	innerPadding: 0.5em 0.75em, // Set in em's so we can change the size of the button depending on the font-size.
+	fontSize: .8em,
+	background: map-get($brand-colors, primary),
+	textColor: color-adjust(map-get($brand-colors, primary), 100%)
+);

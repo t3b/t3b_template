@@ -59,23 +59,23 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	cursor: pointer;
-	@include rem(margin-bottom, $button-spacing);
+	@include rem(margin-bottom, map-get($button, bottomSpacing));
 	/**
 	 * Set in em's so we can change the size of the button depending on the font-size
 	 */
-	padding: $button-inner-spacing;
+	padding: map-get($button, innerPadding);
 
 	border: 0;
 	border-radius: $brand-border-radius;
-	background: $button-background;
+	background: map-get($button, background);
 
-	font-size: $button-font-size;
+	font-size: map-get($button, fontSize);
 	/**
 	 * Normalize the font-weight accross <input>, <button> and the .btn class
 	 */
 	font-weight: normal;
 	line-height: 1;
-	color: $button-color;
+	color: map-get($button, textColor);
 }
 
 
