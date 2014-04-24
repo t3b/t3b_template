@@ -1,7 +1,7 @@
 /**
  * Grunt-Contrib-copy
- * @description Cleans files and folders.
- * @docs https://github.com/gruntjs/grunt-contrib-clean
+ * @description Copy files and folders.
+ * @docs https://github.com/gruntjs/grunt-contrib-copy
  */
 
 var config = require("../Config");
