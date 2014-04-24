@@ -12,9 +12,13 @@ $ Brand styles
 ================================================================================ */
 .brand {
 	font-family: $brand-font-family;
-	color: $brand-color;
+	color: map-get($brand-colors, primary);
 }
-.brandColor { color: $brand-color; }
+@each $key, $value in $brand-colors {
+    .brandColor-#{$key} {
+        color: $value;
+    }
+}
 .brandFace { font-family: $brand-font-family; }
 .brandLogo {
 	@include image-replacement($file-name: map-get($brand-logo, image), $display-mode: inline-block, $width: map-get($brand-logo, width), $height: map-get($brand-logo, height));

@@ -30,8 +30,8 @@ abbr[title] { /* 2 */
 	cursor: help;
 }
 mark { /* 3 */
-	background: $brand-color;
-	color: color-adjust($brand-color, 100%);
+	background: map-get($brand-colors, primary);
+	color: color-adjust(map-get($brand-colors, primary), 100%);
 }
 dfn {
 	font-style: italic; /* 4 */
@@ -123,8 +123,8 @@ $ Text-Selection
 ================================================================================ */
 ::-moz-selection,
 ::selection {
-	background: $brand-color;
-	color: color-adjust($brand-color, 100%);
+	background: map-get($brand-colors, primary);
+	color: color-adjust(map-get($brand-colors, primary), 100%);
 	text-shadow: none;
 }
 

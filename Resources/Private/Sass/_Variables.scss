@@ -39,8 +39,11 @@ $direction:             ltr;
 // =============================================================================
 // Brand related variables
 // =============================================================================
-// Your main brand color
-$brand-color:           #0097d7;
+// Your brand colors, for each of these keys, a class text-color helper-class will be generated.
+// f.e. `.brandColor-primary { color: #0097d7; }`
+$brand-colors: (
+	primary: #0097d7
+);
 
 // Your main brand Font-Family
 $brand-font-family:     "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -141,7 +144,7 @@ $mq-unit:               1px;
 // Design related variables
 // =============================================================================
 // Default color for all anchors and links.
-$link-color:            $brand-color;
+$link-color:            map-get($brand-colors, primary);
 
 // Default styling for horizontal rules and bordered elements like tables.
 $basic-border-color:    color-adjust($content-background, 20%);
@@ -172,5 +175,5 @@ $button-spacing:        $half-spacing;
 // Set in em's so we can change the size of the button depending on the font-size.
 $button-inner-spacing:  0.5em 0.75em;
 $button-font-size:      .8em;
-$button-background:     $brand-color;
+$button-background:     map-get($brand-colors, primary);
 $button-color:          color-adjust($button-background, 100%);
