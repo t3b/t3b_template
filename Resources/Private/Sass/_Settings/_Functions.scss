@@ -89,3 +89,38 @@ $end: right !default;
 		@return lighten($color, $contrast)
 	}
 }
+
+
+// =============================================================================
+// Map-Fetch
+// =============================================================================
+// @description
+// Navigate a nested maps with map-fetch() in Sass
+// @author jlong
+// @link https://gist.github.com/jlong/8760275
+//
+// @param map, keys
+// @returns
+//   value
+//
+// @example
+//   @each $key, $value in map-get($headings, elements) {
+//     #{$key}, .#{$key} {
+//       font-size: map-fetch($headings, elements $key font-size) +px;
+//      }
+//    }
+// =============================================================================
+@function map-fetch($map, $keys) {
+  $key: nth($keys, 1);
+  $length: length($keys);
+  $value: map-get($map, $key);
+  @if ($length > 1) {
+    $rest: ();
+    @for $i from 2 through $length {
+      $rest: append($rest, nth($keys, $i))
+    }
+    @return map-fetch($value, $rest)
+  } @else {
+    @return $value;
+  }
+}
