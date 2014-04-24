@@ -156,13 +156,13 @@ $basic-border-style:    solid;
 // =============================================================================
 // The height of the element itself.
 $textInput: (
-	height: $base-line-height +px,
-	bottomSpacing: $half-spacing,
-	border: 1px solid $basic-border-color,
-	borderRadius: $brand-border-radius,
-	boxShadow: inset 0 1px 1px rgba(#000, 0.075),
-	fontSize: 14,
-	color: lighten($base-text-color, 5%)
+	height:               $base-line-height +px,
+	bottomSpacing:        $half-spacing,
+	border:               1px solid $basic-border-color,
+	borderRadius:         $brand-border-radius,
+	boxShadow:            inset 0 1px 1px rgba(#000, 0.075),
+	fontSize:             14,
+	color:                lighten($base-text-color, 5%)
 );
 
 
@@ -171,9 +171,9 @@ $textInput: (
 // =============================================================================
 // The basic bottom-margin on all text-inputs.
 $button: (
-	bottomSpacing: $half-spacing,
-	innerPadding: 0.5em 0.75em, // Set in em's so we can change the size of the button depending on the font-size.
-	fontSize: .8em,
-	background: map-get($brand-colors, primary),
-	textColor: color-adjust(map-get($brand-colors, primary), 100%)
+	bottomSpacing:        $half-spacing,
+	innerPadding:         .5em .75em, // Set in em's so we can change the size of the button depending on the font-size.
+	fontSize:             .8em,
+	background:           map-get($brand-colors, primary),
+	textColor:            color-adjust(map-get($brand-colors, primary), 100%)
 );
