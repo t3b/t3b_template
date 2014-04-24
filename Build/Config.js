@@ -17,7 +17,8 @@ var ConfigCreator = function() {
 	};
 	this.Sass = {
 		"sassDir" : this.paths.private + "/Sass",
-		"cssDir" : this.paths.public + "/Stylesheets"
+		"cssDir" : this.paths.public + "/Stylesheets",
+		"browserSupport" : ["last 2 version", "ie 8", "ie 9"] // Browsers which to support, and to prefix the CSS rules for.
 	};
 	this.JavaScripts = {};
 	this.JavaScripts.paths = {

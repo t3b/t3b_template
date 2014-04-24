@@ -23,14 +23,10 @@
 	================================================================================ */
 	// We are using a split border-box setting to improve performance - https://github.com/mdo/css-perf#box-sizing-resets
 	* {
-		-webkit-box-sizing: border-box;
-			 -moz-box-sizing: border-box;
-						box-sizing: border-box;
+			box-sizing: border-box;
 	}
 	*:before,
 	*:after {
-		-webkit-box-sizing: border-box;
-			 -moz-box-sizing: border-box;
-						box-sizing: border-box;
+			box-sizing: border-box;
 	}
 }

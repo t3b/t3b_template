@@ -12,7 +12,7 @@ module.exports = {
 	},
 	"sass" : {
 		"files" : [config.Sass.sassDir + "/**/*.scss"],
-		"tasks" : ["sass:dev"]
+		"tasks" : ["sass:dev", "autoprefixer"]
 	},
 	"js" : {
 		"files" : ["<%= jshint.files %>"],
