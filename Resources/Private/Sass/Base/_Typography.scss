@@ -145,7 +145,7 @@ $ Typographic Helper Classes
 	 * Break strings when their length exceeds the width of their container.
 	 */
 	word-wrap: break-word;
-	@include hyphens(auto);
+	hyphens: auto;
 }
 
 /* ======================= Margin-reset ======================== */
