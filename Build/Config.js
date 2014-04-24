@@ -69,7 +69,7 @@ var ConfigCreator = function() {
 
 	// Image compression settings.
 	this.Images = {
-		"devDir" : this.paths.private + "/Images",
+		"tempDir" : this.paths.public + "/tempImagesDir",
 		"distDir" : this.paths.public + "/Images",
 		"optimizationLevel" : 5
 	};

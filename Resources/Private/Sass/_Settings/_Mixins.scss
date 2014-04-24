@@ -8,28 +8,6 @@
 
 
 // =============================================================================
-// Image-Dimension Mixin
-// =============================================================================
-// @description
-// Get the dimensions of an image-file located in the 'images_dir'
-//
-// @param file-name
-// @returns
-//   width: 200px;
-//   height: 75px;
-//
-// @example
-//   .selector {
-//     @include img-wh('brand-logo.png');
-//   }
-// =============================================================================
-@mixin img-wh($file-name) {
-	width: image-width($file-name);
-	height: image-height($file-name);
-}
-
-
-// =============================================================================
 // High density Image-Dimensions Mixin
 // =============================================================================
 // @description
@@ -46,8 +24,8 @@
 //     @include hdpi-img('brand-logo.png');
 //   }
 // =============================================================================
-@mixin hdpi-img($file-name) {
-	background-size: image-width($file-name)/2 image-height($file-name)/2;
+@mixin hdpi-img($file-name, $width, $height) {
+	background-size: $width/2 $height/2;
 	background-image: image-url('#{$file-name}');
 }
 
@@ -72,12 +50,13 @@
 //     @include image-replacement('image.png');
 //   }
 // =============================================================================
-@mixin image-replacement($file-name, $display-mode: block) {
+@mixin image-replacement($file-name, $display-mode: block, $width: auto, $height: auto) {
 	@if $file-name { // Output the image dimensions if an image is passed as an argument
 		display: $display-mode;
-		@include img-wh('#{$file-name}');
-		@extend .ir;
+		width: $width;
+		height: $height;
 		background-image: image-url('#{$file-name}');
+		@extend .ir;
 	}
 }
 

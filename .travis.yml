@@ -6,7 +6,6 @@ before_install:
   - gem update --system
   - npm install -g grunt-cli
   - gem install sass
-  - gem install compass
 
 notifications:
   email: false

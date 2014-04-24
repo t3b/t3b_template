@@ -13,7 +13,7 @@ module.exports = {
 		},
 		"files" : [{
 			"expand" : true,
-			"cwd" : config.Images.devDir,
+			"cwd" : config.Images.tempDir,
 			"src" : ["**/*.{png,jpg,gif}"],
 			"dest" : config.Images.distDir
 		}]

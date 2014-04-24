@@ -1,6 +1,6 @@
-@if compass-env() == 'development' {
+@if $devMode {
 /*
- * Debug code wich applies if the compass env is set to 'development'
+ * Debug code wich applies if the $devMode variable is set to 'true'
  *
  * @package #{ext_directory()}
  * @path Generic/_Debug.scss

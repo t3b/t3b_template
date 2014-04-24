@@ -20,7 +20,7 @@ textarea {
 	background: $content-background;
 	border: $text-input-border;
 	border-radius: $text-input-borderRadius;
-	@include box-shadow($text-input-boxShadow);
+	box-shadow: $text-input-boxShadow;
 
 	@include font-size($text-input-fontSize);
 	color: $text-input-color;

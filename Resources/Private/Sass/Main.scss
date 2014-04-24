@@ -1,9 +1,8 @@
 @charset "UTF-8";
 /*!
- * Compiled on: #{timestamp()}
  * Base stylesheet for <!= pkg.homepage !>
  *
- * @package #{ext_directory()}
+ * @package <!= pkg.name !>
  * @path /Main.scss
  * @author <!= pkg.author.name !> <<!= pkg.author.email !>>
 
@@ -13,12 +12,10 @@
 // =============================================================================
 // SASS Setup
 // =============================================================================
-// 1. "compass/css3"            - All compass CSS3 mixins and functions
-// 2. "_Settings/_All"          - Mixins, functions and default vars from t3b_template
-// 3. "_Variables"              - Customized project variables
+// 1. "_Settings/_All"          - Mixins, functions and default vars from t3b_template
+// 2. "_Variables"              - Customized project variables
 // =============================================================================
-@import "compass/css3",
-        "_Settings/_All",
+@import "_Settings/_All",
         "_Variables";
 
 
@@ -27,7 +24,7 @@
 // =============================================================================
 // 1. "Generic/_Head"           - Declarations which should be put at the top of the document
 // 2. "Generic/_Normalize"      - Nicolas Gallagher's normalize.css
-// 3. "Generic/_Debug"          - Debug code wich applies if the compass env is set to 'development'
+// 3. "Generic/_Debug"          - Debug code wich applies if the $devMode variable is set to 'true'
 // 4. "Generic/_Widths"         - Human readable width classes from inuit.css
 // 5. "Generic/_T3General"      - TYPO3 related classes
 // 6. "Generic/_Brand"          - Generated brand classes like colors, font-families & logos

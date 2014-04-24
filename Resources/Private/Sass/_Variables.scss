@@ -10,6 +10,9 @@
 // =============================================================================
 // Project settings
 // =============================================================================
+// Are you working in dev mode?
+$devMode:               true;
+
 // The template-root path, used to generate the box-sizing.htc path,
 // this has to be relative to the .html document.
 $template-path:         "typo3conf/ext/#{ext_directory()}/";
@@ -56,8 +59,10 @@ $brand-border-radius:   1px;
 // $brand-logo_image:      'brand-logo.png';
 //
 // Be aware that you need to place the image inside your images_dir as
-// specified inside the config.rb - otherwise compass will throw an error.
-$brand-logo_image:      false;
+// specified inside the config.rb - otherwise Sass will throw an error.
+$brand-logo_image:      'logo.png';
+$brand-logo_image-height: 200px;
+$brand-logo_image-width: 200px;
 
 
 // =============================================================================
@@ -173,10 +178,3 @@ $button-inner-spacing:  0.5em 0.75em;
 $button-font-size:      .8em;
 $button-background:     $brand-color;
 $button-color:          color-adjust($button-background, 100%);
-
-
-// =============================================================================
-// Compass default variables
-// =============================================================================
-// Sets the default border-radius for the compass mixin 'border-radius'.
-$default-border-radius: $brand-border-radius;

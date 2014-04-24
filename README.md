@@ -3,7 +3,7 @@
 Status](https://travis-ci.org/t3b/t3b_template.png?branch=master)](https://travis-ci.org/t3b/t3b_template)
 
 A Kickstarter Template-Extension for [TYPO3](http://typo3.org/) which provides your with a clean and lean boilerplate for Fluid templates.
-Part of the boilerplate is an minimal [Compass](http://compass-style.org/)/[Sass](http://sass-lang.com/) base, a [RequireJS](http://requirejs.org/) boilerplate as well as an optional Build process based on [Grunt.js](http://gruntjs.com).
+Part of the boilerplate is an minimal [Sass](http://sass-lang.com/) base, a [RequireJS](http://requirejs.org/) boilerplate as well as an optional Build process based on [Grunt.js](http://gruntjs.com).
 
 
 ## Installation
@@ -18,8 +18,7 @@ Detailed information on what `grunt init` does, can be found in the [wiki](https
 
 
 ## Dependencies for the Build-Process
-* Sass 3.2.9 (Media Mark)
-* Compass 0.12.2 (Alnilam)
+* Sass 3.3.5
 * Grunt CLI and Node.js
 
 

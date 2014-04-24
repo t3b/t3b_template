@@ -8,6 +8,26 @@
 
 
 // =============================================================================
+// Image-Url
+// =============================================================================
+// @description
+// Return the path of an Image asset.
+//
+// @param imagePath
+// @returns
+//   string
+//
+// @example
+//   .selector {
+//     background-image: image-url("logo.png");
+//   }
+// =============================================================================
+@function image-url($imagePath) {
+  @return url(#{"../Images/" + $imagePath});
+}
+
+
+// =============================================================================
 // Relative Size
 // =============================================================================
 // @description Calculates em's based on pixel values

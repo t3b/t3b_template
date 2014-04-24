@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 
 		// Create the base Stylesheet to prevent errors from ext:vhs(File not found).
 		if (!fs.existsSync(config.Sass.cssDir + "/Main.css")) {
-			grunt.task.run(["compass:dev"]);
+			grunt.task.run(["sass:dev"]);
 		}
 
 		// Fetch all bower components.
