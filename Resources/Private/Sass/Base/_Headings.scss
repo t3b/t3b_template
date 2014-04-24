@@ -23,7 +23,7 @@ h4, h5, h6 {
 
 @each $key, $value in map-get($headings, elements) {
 	$headingFontSize: map-fetch($headings, elements $key font-size);
-	$additionalRules: map-remove(map-fetch($headings, elements $key), font-size);
+	$additionalRules: map-removeKeys(map-fetch($headings, elements $key), font-size color);
 	#{$key}, .#{$key} {
 		@include font-size($headingFontSize, $append-vrythm: false);
 		@each $declaration, $value in $additionalRules {

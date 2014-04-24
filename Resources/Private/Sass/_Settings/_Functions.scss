@@ -124,3 +124,30 @@ $end: right !default;
 		@return $value;
 	}
 }
+
+
+// =============================================================================
+// Map-RemoveKeys
+// =============================================================================
+// @description
+// Remove multiple keys in a Sass map at once.
+//
+// @param map, keys
+// @returns
+//   map
+//
+// @example
+//   $newDecalarationsMap: map-removeKeys($declarations, font-size margin-bottom);
+// =============================================================================
+@function map-removeKeys($map, $keys) {
+	$length: length($keys);
+	@if ($length > 1) {
+		$restMap: $map;
+		@each $key in $keys {
+			$restMap: map-remove($restMap, $key);
+		}
+		@return $restMap;
+	} @else {
+		@return map-remove($map, $keys);
+	}
+}
