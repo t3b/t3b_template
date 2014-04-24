@@ -15,9 +15,9 @@ $ Brand styles
 	color: map-get($brand-colors, primary);
 }
 @each $key, $value in $brand-colors {
-    .brandColor-#{$key} {
-        color: $value;
-    }
+	.brandColor-#{$key} {
+		color: $value;
+	}
 }
 .brandFace { font-family: $brand-font-family; }
 .brandLogo {
