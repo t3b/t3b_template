@@ -23,7 +23,7 @@ textarea {
 	box-shadow: map-get($textInput, boxShadow);
 
 	@include font-size(map-get($textInput, fontSize));
-	color: map-get($textInput, color);
+	color: map-get($textInput, textColor);
 }
 textarea {
 	height: auto; /* Reset height since textareas have the attribute rows="" */
