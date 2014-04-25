@@ -9,3 +9,5 @@ Resources/Private/Javascripts/Libaries/almond/*
 Resources/Private/Javascripts/Libaries/modernizr/*
 Resources/Private/Javascripts/Libaries/requirejs/*
 Resources/Public/Stylesheets/*
+Documentation/*.html
+Documentation/public

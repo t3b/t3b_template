@@ -10,14 +10,19 @@
 //
 
 
-// =============================================================================
-// Aviable mixins
-// =============================================================================
-// @include min-screen(width) {}              // shortcut for @media screen and (min-width ...)
-// @include max-screen(width) {}              // shortcut for @media screen and (max-width ...)
-// @include screen(min-width, max-width) {}   // shortcut for @media screen and (min-width ...) and (max-width ...)
-// @include hdpi {}                           // devices with high-density screens
+/*
+Media-Query SASS Mixins($target-size, $context, $unit)
 
+Wraps rules around the desired media query context.
+
+Markup:
+@include min-screen(width) {}             - shortcut for @media screen and (min-width ...)
+@include max-screen(width) {}             - shortcut for @media screen and (max-width ...)
+@include screen(min-width, max-width) {}  - shortcut for @media screen and (min-width ...) and (max-width ...)
+@include hdpi {}                          - devices with high-density screens
+
+Styleguide 1.2.6
+*/
 
 // =============================================================================
 // Screen

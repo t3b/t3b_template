@@ -129,49 +129,53 @@ $ Text-Selection
 }
 
 
-/* =============================================================================
-$ Typographic Helper Classes
-================================================================================ */
-/* ======================= Basic helpers ======================= */
+/*
+Typographic Helper Classes
+
+.align-center - Centers the text.
+.align-right - Aligns the text on it's right boundary.
+.align-left - Aligns the text on it's left boundary.
+.intend - Intends the element.
+.text-break - Break strings when their length exceeds the width of their container.
+.basic_spacing-top - Adds a basic typographic margin on the top.
+.basic_spacing-bottom - Adds a basic typographic margin on the bottom.
+.half_spacing-top - Adds a half sized typographic margin on the top.
+.half_spacing-bottom - Adds a half sized typographic margin on the bottom.
+
+
+Markup:
+<p class="{$modifiers}">I am an paragraph.</p>
+
+Styleguide 2.1.5
+*/
 .align-center { text-align: center; }
 .align-right  { text-align: right; }
 .align-left   { text-align: left; }
 .intend { padding: 0 1.5em; }
 
-/* ====================== CSS3 Word-breaker ====================== */
 %text-break,
 .text-break {
-	/**
-	 * Break strings when their length exceeds the width of their container.
-	 */
 	word-wrap: break-word;
 	hyphens: auto;
 }
 
-/* ======================= Margin-reset ======================== */
 %reset-margin-top { margin-top: 0; }
 
-/* ======================== Top margins ======================== */
-/* Basic spacing */
 %margin-top,
 .basic_spacing-top {
 	@include rem(margin-top, $basic-spacing);
 }
 
-/* Half spacing */
 %half-margin-top,
 .half_spacing-top {
 	@include rem(margin-top, $half-spacing);
 }
 
-/* ====================== Bottom margins ======================= */
-/* Basic spacing */
 %margin-bottom,
 .basic_spacing-bottom {
 	@include rem(margin-bottom, $basic-spacing);
 }
 
-/* Half spacing */
 %half-margin-bottom,
 .half_spacing-bottom {
 	@include rem(margin-bottom, $half-spacing);

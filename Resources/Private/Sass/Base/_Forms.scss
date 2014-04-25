@@ -1,18 +1,26 @@
 /*
- * Basic styling for forms and inputs
- *
- * @package #{ext_directory()}
- * @path Base/_Forms.scss
- */
+Basic styling for forms and inputs
+
+Styleguide 2.1
+*/
 
 
 /* =============================================================================
 $ Text inputs, checkboxes and other form elements
 ================================================================================ */
-/* ======================== Textinputs ========================= */
+/*
+Basic text input fields
+
+.textInput         - Base style class `.textInput`
+
+Markup:
+<input type="text" class="{$modifiers}" /><br>
+<textarea class="{$modifiers}" cols="40"></textarea>
+
+Styleguide 2.1.1
+*/
 %textInput,
-.textInput,
-textarea {
+.textInput {
 	height: map-get($textInput, height);
 	padding: .2em .4em;
 	@include rem(margin-bottom, map-get($textInput, bottomSpacing));

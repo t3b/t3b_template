@@ -1,55 +1,42 @@
-//
-// SASS Mixins
-//
-// @package #{ext_directory()}
-// @path _settings/_Mixins.scss
-// @link http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#mixins
-//
+/*
+SASS Mixins
+
+Styleguide 1.2
+*/
 
 
-// =============================================================================
-// High density Image-Dimensions Mixin
-// =============================================================================
-// @description
-// Get the dimensions of an image-file located in the 'images_dir' and create
-// output which displays an image optimized for high density screens
-//
-// @param file-name
-// @returns
-//   background-size: 200px 75px;
-//   background-image: url('../Images/brand-logo_@2.png');
-//
-// @example
-//   .selector {
-//     @include hdpi-img('brand-logo.png');
-//   }
-// =============================================================================
+/*
+High density Image-Dimensions Mixin($file-name, $width, $height)
+
+Create output which displays an image optimized for high density screens.
+
+Markup:
+.selector {
+	@include hdpi-img('brand-logo.png');
+}
+
+Styleguide 1.2.1
+*/
 @mixin hdpi-img($file-name, $width, $height) {
 	background-size: $width/2 $height/2;
 	background-image: image-url('#{$file-name}');
 }
 
 
-// =============================================================================
-// Image-Replacement Mixin
-// =============================================================================
-// @description
-// A image-replacement mixin which generates the image-dimensions as CSS rules and
-// @extends the .ir rule inside the _helper.scss file.
-// Default $display-mode is set to 'block'.
-//
-// @param file-name, display-mode
-// @returns
-//   display: block;
-//   width: 200px;
-//   height: 75px;
-//   background-image: url('../Images/image.png');
-//
-// @example
-//   .selector {
-//     @include image-replacement('image.png');
-//   }
-// =============================================================================
+/*
+Image-Replacement Mixin($imagePath)
+
+A image-replacement mixin which generates the image-dimensions as CSS rules and
+@extends the .ir rule inside the _helper.scss file.
+Default $display-mode is set to 'block'.
+
+Markup:
+.selector {
+  @include image-replacement('image.png');
+}
+
+Styleguide 1.2.2
+*/
 @mixin image-replacement($file-name, $display-mode: block, $width: auto, $height: auto) {
 	@if $file-name { // Output the image dimensions if an image is passed as an argument
 		display: $display-mode;
@@ -61,48 +48,36 @@
 }
 
 
-// =============================================================================
-// REM Unit Mixin
-// =============================================================================
-// @description
-// Creates a property independent 'rem' calculation with a pixel fallback,
-// default property is set to 'font-size'
-//
-// @param property, value
-// @returns
-//   font-size: 1.125rem;
-//   font-size: 18px;
-//
-// @example
-//   .selector {
-//     @include rem($property: font-size, $value: 18);
-//   }
-// =============================================================================
+/*
+REM Unit Mixin($property, $value)
+
+Creates a property independent 'rem' calculation with a pixel fallback, default property is set to 'font-size'.
+
+Markup:
+.selector {
+  @include rem($property: font-size, $value: 18);
+}
+
+Styleguide 1.2.3
+*/
 @mixin rem($property: font-size, $value: 16) {
 	#{$property}: $value +px;
 	#{$property}: ($value / 16)*1rem;
 }
 
 
-// =============================================================================
-// Font-Size Mixin
-// =============================================================================
-// @description
-// Create a fully formed type style (sizing and vertical rhythm) by passing in a
-// single value
-// @author CSSWizardry
-//
-// @param font-size, append-vrythm
-// @returns
-//   font-size: 1rem;
-//   font-size: 16px;
-//   line-height: 1;
-//
-// @example
-//   .selector {
-//     @include rem($size: 16, $append-vrythm: true);
-//   }
-// =============================================================================
+/*
+Font-Size Mixin($font-size, $append-vrythm)
+
+Create a fully formed type style (sizing and vertical rhythm) by passing in a single value.
+
+Markup:
+.selector {
+  @include rem($size: 16, $append-vrythm: true);
+}
+
+Styleguide 1.2.4
+*/
 @mixin font-size($font-size, $append-vrythm: false) {
 	@include rem(font-size, $font-size);
 	@if $append-vrythm {
@@ -111,29 +86,22 @@
 }
 
 
-// =============================================================================
-// Triangle Mixin
-// =============================================================================
-// @description Create a css arrow as per http://cssarrowplease.com/
-//
-// @param size, append-vrythm
-// @returns
-//   content: "";
-//   display: block;
-//   width: 0;
-//   height: 0;
-//   border: solid 5px;
-//   border-color: #FFF transparent transparent transparent;
-//
-// @example
-//   .selector:after {
-//     position: absolute;
-//     top: -5px;
-//     left: 50%;
-//     margin-left: -2.5px;
-//     @include css-triangle(5px, #fff, bottom);
-//   }
-// =============================================================================
+/*
+CSS Triangle Mixin($triangle-size, $triangle-color, $triangle-direction)
+
+Create a css arrow as per http://cssarrowplease.com/.
+
+Markup:
+.selector:after {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  margin-left: -2.5px;
+  @include css-triangle(5px, #fff, bottom);
+}
+
+Styleguide 1.2.5
+*/
 @mixin cssTriangle($triangle-size, $triangle-color, $triangle-direction) {
 	content: "";
 	display: block;

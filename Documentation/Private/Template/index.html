@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title><!= pkg.name !>: Living Styleguide</title>
+	<meta name="description" content="">
+	<meta name="generator" content="kss-node" />
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="public/kss.css">
+	<link rel="stylesheet" href="public/style.css">
+</head>
+<body class="kssBody">
+	<header class="kss___header" role="banner">
+		<h1><!= pkg.name !> Styleguide</h1>
+	</header>
+	<div class="g">
+		<div class="gi one-quarter">
+			<nav class="kss___navWrapper">
+				<ul class="nav nav--stacked kss___nav">
+					<li><a href="index.html">0.0: Overview</a></li>
+					{{#eachRoot}}
+					<li><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
+					{{/eachRoot}}
+				</ul>
+			</nav>
+		</div>
+		<main class="gi three-quarters" role="main">
+			<article class="kss___contentWrapper">
+				{{#if overview}}
+				{{html overview}}
+				{{else}}
+
+				{{#eachSection rootNumber}}
+				{{#whenDepth 1}}
+				<h1 class="kss-title" id="block-{{ reference }}">
+					<a class="kss-title__refLink" href="#block-{{ reference }}">#</a>
+					<span class="kss-ref">{{ reference }}.0</span> - {{ header }}
+				</h1>
+				{{else}}
+				<section class="kss-depth-{{ refDepth }}">
+					<h1 class="kss-title" id="block-{{ reference }}">
+						<a class="kss-title__refLink" href="#block-{{ reference }}">#</a>
+						<span class="kss-ref">{{ reference }}</span> - {{ header }}
+					</h1>
+					{{/whenDepth}}
+					{{#ifAny markup modifiers}}
+					<div class="kss-box">{{html description}}</div>
+					<div class="kss-styleguideSection">
+						<div class="kss-styleguideElement">
+							<div class="kss-styleguideElement__heading"><b>Default</b></div>
+							{{modifierMarkup}}
+						</div>
+						{{#eachModifier}}
+						<div class="kss-styleguideElement">
+							<div class="kss-styleguideElement__heading"><b>{{html description}}</b></div>
+							<div class="kss-styleguideElement__class">{{name}}</div>
+							{{modifierMarkup}}
+						</div>
+						{{/eachModifier}}
+					</div>
+					<div class="kss-markup">
+						<pre class="prettyprint lang-html">{{markup}}</pre>
+					</div>
+					{{else}}
+					{{#if description}}
+					{{html description}}
+					{{/if}}
+					{{/ifAny}}
+					{{#whenDepth 1}} {{else}}
+				</section>
+				{{/whenDepth}}
+				{{/eachSection}}
+				{{/if}}
+			</article>
+		</main>
+	</div>
+
+	<footer class="kss___footer" role="contentinfo">
+		This Extension is based on the <a href="https://github.com/t3b/t3b_template" target="_blank">t3b_template</a> boilerplate.
+	</footer>
+
+	<!-- SCRIPTS -->
+
+	<script src="public/prettify.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		// Ensure code blocks are highlighted properly...
+		$('pre>code').addClass('prettyprint');
+		prettyPrint();
+	});
+	</script>
+</body>
+</html>

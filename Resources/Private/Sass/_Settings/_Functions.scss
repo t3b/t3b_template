@@ -1,46 +1,40 @@
-//
-// SASS Functions
-//
-// @package #{ext_directory()}
-// @path  _Settings/_Functions.sass
-// @link http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#function_directives
-//
+/*
+SASS Functions
+
+Styleguide 1.1
+*/
 
 
-// =============================================================================
-// Image-Url
-// =============================================================================
-// @description
-// Return the path of an Image asset.
-//
-// @param imagePath
-// @returns
-//   string
-//
-// @example
-//   .selector {
-//     background-image: image-url("logo.png");
-//   }
-// =============================================================================
+/*
+Image-Url($imagePath)
+
+Return the path of an Image asset.
+
+Markup:
+.selector {
+	background-image: image-url("logo.png");
+}
+
+Styleguide 1.1.1
+*/
 @function image-url($imagePath) {
   @return url(#{"../Images/" + $imagePath});
 }
 
 
-// =============================================================================
-// Relative Size
-// =============================================================================
-// @description Calculates em's based on pixel values
-//
-// @param target-size, context, unit
-// @returns
-//   1.1875em
-//
-// @example
-//   .selector {
-//     font-size: rs(19, 16);
-//   }
-// =============================================================================
+
+/*
+Relative Size($target-size, $context, $unit)
+
+Calculates em's based on pixel values.
+
+Markup:
+.selector {
+	font-size: rs(19, 16);
+}
+
+Styleguide 1.1.2
+*/
 @function rs($target-size, $context: $base-font-size, $unit: em) {
 	@return #{$target-size/$context}$unit;
 }
@@ -64,23 +58,18 @@ $end: right !default;
 }
 
 
-// =============================================================================
-// Color-Adjust
-// =============================================================================
-// @description
-// Adjust a color based on the lightness which is passed as a second parameter
-// @author necolas
-// @link https://github.com/necolas/suit
-//
-// @param color, contrast
-// @returns
-//   #FFF
-//
-// @example
-//   .selector {
-//     background: color-adjust(#0097d7, 100%);
-//   }
-// =============================================================================
+/*
+Color-Adjust($color, $contrast)
+
+Adjust a color based on the lightness which is passed as a second parameter, this function was written by @necolas(https://github.com/necolas/).
+
+Markup:
+.selector {
+  background: color-adjust(#0097d7, 100%);
+}
+
+Styleguide 1.1.3
+*/
 @function color-adjust($color, $contrast: 100%) {
 	@if (lightness($color) > 50) {
 		@return darken($color, $contrast)
@@ -91,25 +80,20 @@ $end: right !default;
 }
 
 
-// =============================================================================
-// Map-Fetch
-// =============================================================================
-// @description
-// Navigate a nested maps with map-fetch() in Sass
-// @author jlong
-// @link https://gist.github.com/jlong/8760275
-//
-// @param map, keys
-// @returns
-//   value
-//
-// @example
-//   @each $key, $value in map-get($headings, elements) {
-//     #{$key}, .#{$key} {
-//       font-size: map-fetch($headings, elements $key font-size) +px;
-//      }
-//    }
-// =============================================================================
+/*
+Map-Fetch($map, $keys)
+
+Navigate a nested maps with map-fetch() in Sass, this function was written by @jlong(https://github.com/jlong/)
+
+Markup:
+@each $key, $value in map-get($headings, elements) {
+ .selector {
+   font-size: map-fetch($headings, elements $key font-size) +px;
+  }
+}
+
+Styleguide 1.1.4
+*/
 @function map-fetch($map, $keys) {
 	$key: nth($keys, 1);
 	$length: length($keys);
@@ -126,19 +110,16 @@ $end: right !default;
 }
 
 
-// =============================================================================
-// Map-RemoveKeys
-// =============================================================================
-// @description
-// Remove multiple keys in a Sass map at once.
-//
-// @param map, keys
-// @returns
-//   map
-//
-// @example
-//   $newDecalarationsMap: map-removeKeys($declarations, font-size margin-bottom);
-// =============================================================================
+/*
+Map-RemoveKeys($map, $keys)
+
+Remove multiple keys in a Sass map at once.
+
+Markup:
+$newDecalarationsMap: map-removeKeys($declarations, font-size margin-bottom);
+
+Styleguide 1.1.5
+*/
 @function map-removeKeys($map, $keys) {
 	$length: length($keys);
 	@if ($length > 1) {

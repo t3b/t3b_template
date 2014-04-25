@@ -21,6 +21,21 @@ h4, h5, h6 {
 	text-rendering: optimizeLegibility;
 }
 
+/*
+Heading modifiers
+
+.h1 - Style the `<h#>`-element like a standard `<h1>`-element.
+.h2 - Style the `<h#>`-element like a standard `<h2>`-element.
+.h3 - Style the `<h#>`-element like a standard `<h3>`-element.
+.h4 - Style the `<h#>`-element like a standard `<h4>`-element.
+.h5 - Style the `<h#>`-element like a standard `<h5>`-element.
+.h6 - Style the `<h#>`-element like a standard `<h6>`-element.
+
+Markup:
+<h1 class="{$modifiers}">I am an first-level heading</h1>
+
+Styleguide 2.1.2
+*/
 @each $key, $value in map-get($headings, elements) {
 	$headingFontSize: map-fetch($headings, elements $key font-size);
 	$additionalRules: map-removeKeys(map-fetch($headings, elements $key), font-size color);
