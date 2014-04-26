@@ -67,6 +67,7 @@
 	color: @baseTextColor;
 	border-color: @activeColor;
 	&:hover {
+		border-color: @activeColor;
 		cursor: default;
 		background: 0;
 	}
@@ -89,6 +90,10 @@
 		padding: 2px @baseSpacing/2 2px @baseIndent;
 		border-left: 2px solid #fff;
 		transition: .2s ease all;
+		&:hover {
+			text-decoration: none;
+			color: @baseTextColor;
+		}
 	}
 }
 .kss___navSub__item--active {
