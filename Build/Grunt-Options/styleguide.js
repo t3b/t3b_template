@@ -17,7 +17,7 @@ module.exports = {
 	},
 	all: {
 		files: [{
-			'Documentation': config.Sass.cssDir + "/**/*.css"
+			'Documentation': config.Sass.sassDir + "/**/*.scss"
 		}]
 	}
 };
