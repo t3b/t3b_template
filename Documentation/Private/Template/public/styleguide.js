@@ -13,16 +13,19 @@
 		scrollSpy = function () {
 			var scrollTop = $(window).scrollTop(),
 				$kssMenuSubAnchors = $kssMenuSub.find("a"),
+				currentTargetHash,
 				activeIndex;
 
 			// Get the new index for the new active subMenuItem.
 			$kssMenuSubAnchors.each(function (index) {
-				var $anchorTarget = $($(this).attr("href").replace(/\./g, "\\.")),
+				var anchorHash = $(this).attr("href"),
+					$anchorTarget = $(anchorHash.replace(/\./g, "\\.")),
 					offsetTop = $anchorTarget.offset().top,
 					offsetBottom = offsetTop + $anchorTarget.outerHeight(true);
 
 				if (offsetTop <= scrollTop && scrollTop < offsetBottom) {
 					activeIndex = index;
+					currentTargetHash = anchorHash;
 				}
 			});
 
@@ -30,6 +33,7 @@
 			$kssMenuSubItems.removeClass(kssMenuSubActiveClass);
 			if (typeof activeIndex !== "undefined") {
 				$kssMenuSubItems.eq(activeIndex).addClass(kssMenuSubActiveClass);
+				window.location.hash = currentTargetHash;
 			} else if(scrollTop < $($kssMenuSubAnchors.eq(0).attr("href").replace(/\./g, "\\.")).offset().top) {
 				$kssMenuSubItems.eq(0).addClass(kssMenuSubActiveClass)
 			}
