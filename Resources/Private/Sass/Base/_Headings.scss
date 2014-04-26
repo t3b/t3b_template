@@ -1,9 +1,10 @@
 /*
- * Basic styling for headings and sub-headings
- *
- * @package #{ext_directory()}
- * @path Base/_Headings.scss
- */
+Headings
+
+Basic styling for headings and sub-headings
+
+Styleguide 4
+*/
 
 
 /* =============================================================================
@@ -34,7 +35,7 @@ Heading modifiers
 Markup:
 <h1 class="{$modifiers}">I am an first-level heading</h1>
 
-Styleguide 2.1.2
+Styleguide 4.0.1
 */
 @each $key, $value in map-get($headings, elements) {
 	$headingFontSize: map-fetch($headings, elements $key font-size);

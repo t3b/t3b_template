@@ -1,9 +1,10 @@
 /*
- * Basic styling for lists and definition elements
- *
- * @package #{ext_directory()}
- * @path Base/_Lists.scss
- */
+Lists
+
+Basic styling for lists and definition elements
+
+Styleguide 5
+*/
 
 
 /* =============================================================================
@@ -72,7 +73,7 @@ Markup:
 	<dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
 </dl>
 
-Styleguide 2.1.3
+Styleguide 5.0.1
 */
 .dl--horizontal {
 	@extend .cf;

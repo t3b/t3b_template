@@ -10,17 +10,14 @@
  */
 
 //
-// SASS Functions & Mixins
+// SASS Functions, Mixins and Variables
 //
-// Styleguide 1
 //
 @import "_Settings/_All",
         "_Variables";
 
 //
 // Helper- & Generic-classes
-//
-// Styleguide 4
 //
 @import "Generic/_Head",
         "Generic/_Normalize",
@@ -31,8 +28,6 @@
 
 //
 // Base element stylings
-//
-// Styleguide 2
 //
 @import "Base/_Base",
         "Base/_Headings",
@@ -45,8 +40,6 @@
 
 //
 // Objects
-//
-// Styleguide 3
 //
 @import "Objects/_Button",
 	"Objects/_Form",

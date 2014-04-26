@@ -1,7 +1,7 @@
 //
 // SASS Mixins
 //
-// Styleguide 1.2
+// Styleguide 2
 //
 
 
@@ -15,7 +15,7 @@
 // 	@include hdpi-img('brand-logo.png');
 // }
 //
-// Styleguide 1.2.1
+// Styleguide 2.0.1
 //
 @mixin hdpi-img($file-name, $width, $height) {
 	background-size: $width/2 $height/2;
@@ -35,7 +35,7 @@
 //   @include image-replacement('image.png');
 // }
 //
-// Styleguide 1.2.2
+// Styleguide 2.0.2
 //
 @mixin image-replacement($file-name, $display-mode: block, $width: auto, $height: auto) {
 	@if $file-name { // Output the image dimensions if an image is passed as an argument
@@ -58,7 +58,7 @@
 //   @include rem($property: font-size, $value: 18);
 // }
 //
-// Styleguide 1.2.3
+// Styleguide 2.0.3
 //
 @mixin rem($property: font-size, $value: 16) {
 	#{$property}: $value +px;
@@ -76,7 +76,7 @@
 //   @include rem($size: 16, $append-vrythm: true);
 // }
 //
-// Styleguide 1.2.4
+// Styleguide 2.0.4
 //
 @mixin font-size($font-size, $append-vrythm: false) {
 	@include rem(font-size, $font-size);
@@ -100,7 +100,7 @@
 //   @include css-triangle(5px, #fff, bottom);
 // }
 //
-// Styleguide 1.2.5
+// Styleguide 2.0.5
 //
 @mixin cssTriangle($triangle-size, $triangle-color, $triangle-direction) {
 	content: "";
