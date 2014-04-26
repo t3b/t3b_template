@@ -9,20 +9,19 @@
 
  */
 
-/*
-SASS Functions & Mixins
-
-Styleguide 1
-*/
+//
+// SASS Functions & Mixins
+//
+// Styleguide 1
+//
 @import "_Settings/_All",
         "_Variables";
 
-
-/*
-Helper- & Generic-classes
-
-Styleguide 4
-*/
+//
+// Helper- & Generic-classes
+//
+// Styleguide 4
+//
 @import "Generic/_Head",
         "Generic/_Normalize",
         "Generic/_Debug",
@@ -30,12 +29,11 @@ Styleguide 4
         "Generic/_T3General",
         "Generic/_Brand";
 
-
-/*
-Base element stylings
-
-Styleguide 2
-*/
+//
+// Base element stylings
+//
+// Styleguide 2
+//
 @import "Base/_Base",
         "Base/_Headings",
         "Base/_Typography",
@@ -45,29 +43,23 @@ Styleguide 2
         "Base/_Tables",
         "Base/_Forms";
 
-
-/*
-Objects
-
-Styleguide 3
-*/
+//
+// Objects
+//
+// Styleguide 3
+//
 @import "Objects/_Button",
 	"Objects/_Form",
         "Objects/_Navigation",
         "Objects/_Grid";
 
-
-// =============================================================================
+//
 // Site dependent styles
-// =============================================================================
+//
 @import "_Styles";
 
-
-// =============================================================================
+//
 // Helpers and print styles
-// =============================================================================
-// 1. "Generic/_Helper"         - Usefull helper classes
-// 2. "Generic/_Print"          - Print styles
-// =============================================================================
+//
 @import "Generic/_Helper",
         "Generic/_Print";
