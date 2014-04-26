@@ -5,7 +5,6 @@
  */
 
 var config = require("../Config");
-
 module.exports = {
 	"options" : {
 		"nospawn" : true
@@ -17,5 +16,9 @@ module.exports = {
 	"js" : {
 		"files" : ["<%= jshint.files %>"],
 		"tasks" : ["jshint"]
+	},
+	"docs" : {
+		"files" : ["Documentation/Private/Template/**/*"],
+		"tasks" : ["styleguide"]
 	}
 };
