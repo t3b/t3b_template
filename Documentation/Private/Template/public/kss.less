@@ -3,6 +3,7 @@
 
 @baseBorderColor: #eee;
 @baseActionColor: #4183c4;
+@baseHoverColor: #d26911;
 @lightGrey: #f9f9f9;
 
 @baseFontSize: 16px;
@@ -39,17 +40,28 @@
 	padding: @baseSpacing*3 @baseIndent 0;
 	font-family: @baseFontFamily;
 	font-size: @baseFontSize;
-	li {
+	.kss___nav__item {
 		border-bottom: 1px solid @baseBorderColor;
-	}
-	a {
-		color: @baseActionColor;
-		padding: @baseSpacing 3px;
-		transition: .2s ease all;
-		&:hover {
-			text-decoration: none;
-			background: @lightGrey;
+		> a {
+			color: @baseActionColor;
+			padding: @baseSpacing 3px @baseSpacing @baseSpacing/2;
+			transition: .2s ease all;
+			border-left: 2px solid #FFF;
+			transition: .2s ease all;
+			&:hover {
+				text-decoration: none;
+				background: @lightGrey;
+				border-color: @lightGrey;
+				color: @baseTextColor;
+			}
+		}
+		&.kss___nav__item--active > a {
 			color: @baseTextColor;
+			border-color: @baseHoverColor;
+			&:hover {
+				cursor: default;
+				background: 0;
+			}
 		}
 	}
 }

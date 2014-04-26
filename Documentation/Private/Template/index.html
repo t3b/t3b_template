@@ -20,10 +20,10 @@
 	<div class="g">
 		<div class="gi one-quarter">
 			<nav class="kss___navWrapper">
-				<ul class="nav nav--stacked kss___nav">
-					<li><a href="index.html">0.0: Overview</a></li>
+				<ul class="nav nav--stacked kss___nav" data-kss-activeMenuIndex="{{rootNumber}}">
+					<li class="kss___nav__item kss___nav__item--root"><a href="index.html">0.0: Overview</a></li>
 					{{#eachRoot}}
-					<li><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
+					<li class="kss___nav__item"><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
 					{{/eachRoot}}
 				</ul>
 			</nav>
@@ -86,7 +86,8 @@
 	<!-- SCRIPTS -->
 
 	<script src="public/prettify.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="public/styleguide.js"></script>
 	<script>
 	$(document).ready(function(){
 		// Ensure code blocks are highlighted properly...
