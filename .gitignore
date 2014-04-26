@@ -8,6 +8,6 @@ node_modules/*
 Resources/Private/Javascripts/Libaries/almond/*
 Resources/Private/Javascripts/Libaries/modernizr/*
 Resources/Private/Javascripts/Libaries/requirejs/*
-Resources/Public/Stylesheets/*
+Resources/Public/Stylesheets/*.css
 Documentation/*.html
 Documentation/public
