@@ -1,33 +1,56 @@
+// Vars
+@baseFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@baseBorderColor: #eee;
+@baseActionColor: #4183c4;
+@lightGrey: #f9f9f9;
+
+@baseFontSize: 16px;
+@baseTextColor: #3c474b;
+@baseBorderRadius: 3px;
+@baseSpacing: 15px;
+@baseIndent: 20px;
+
+
+/* Base styles */
 .kssBody {
-	font-family: "Helvetica Neue";
-	overflow: hidden;
+	background: #FFF;
+	margin: 0;
 }
 
 /* Header */
 .kss___header {
 	position: relative;
-	margin-bottom: 20px;
-	padding: 20px;
-	border-bottom: 1px solid #eee;
+	margin-bottom: @baseSpacing*2;
+	padding: 26px @baseIndent*4 26px @baseIndent;
+	border-bottom: 1px solid @baseBorderColor;
+	font-family: @baseFontFamily;
 	h1 {
 		margin-top: 0;
 		margin-bottom: 0;
-		font-size: 20px;
+		font-size: @baseFontSize + 4;
 		font-weight: normal;
-		line-height: 28px;
+		line-height: 1;
+		color: @baseTextColor;
 	}
 }
 
 .kss___navWrapper {
-	padding-top: 45px;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding: @baseSpacing*3 @baseIndent 0;
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize;
 	li {
-		border-bottom: 1px solid #eee;
+		border-bottom: 1px solid @baseBorderColor;
 	}
 	a {
-		color: #4183c4;
-		padding: 10px 3px;
+		color: @baseActionColor;
+		padding: @baseSpacing 3px;
+		transition: .2s ease all;
+		&:hover {
+			text-decoration: none;
+			background: @lightGrey;
+			color: @baseTextColor;
+		}
 	}
 }
 
@@ -35,33 +58,53 @@
 
 /* Styleguide */
 .kss___contentWrapper {
-	padding-right: 80px;
+	padding-right: @baseIndent*4;
 }
-.kss-title {
+
+// Styleguide headings
+.kss-title,
+.kss___contentWrapper > h1 {
 	margin: 0;
-	padding: 10px;
-	position: relative;
-	color: #fff;
-	font-size: 12px;
-	background: #333;
-	border-top: 1px solid #000;
-}
-.kss___contentWrapper > .kss-title {
-	background: 0;
-	color: #333;
-	border: 0;
-	font-size: 2em;
+	font-family: @baseFontFamily;
 	font-weight: 300;
-	padding: 0;
-	margin: 45px 0 15px;
+	color: @baseTextColor;
+	line-height: 1.2;
+}
+.kss___contentWrapper > h1 {
+	margin: @baseSpacing*3 0 @baseSpacing;
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize*2;
+}
+.kss___contentWrapper > h2,
+.kss___contentWrapper > h3 {
+	margin: @baseSpacing*2 0 @baseSpacing/2;
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize + 4;
+	font-weight: 400;
+	color: @baseTextColor;
+}
+.kss___contentWrapper > p {
+	margin: 0 0 @baseSpacing;
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize;
+	color: @baseTextColor;
 }
 .kss-depth-2 > .kss-title {
-	background: 0;
-	color: #333;
-	border: 0;
-	font-size: 1.1em;
 	padding: 0;
-	margin: 0 0 7.5px;
+	margin: 0 0 @baseSpacing/2;
+	color: @baseTextColor;
+	font-size: @baseFontSize*1.1;
+}
+.kss-depth-3 > .kss-title {
+	position: relative;
+	margin: 0;
+	padding: 10px;
+	border-top: 1px solid #000;
+	border-radius: @baseBorderRadius @baseBorderRadius 0 0;
+	font-size: @baseFontSize - 2;
+	font-weight: bold;
+	color: #fff;
+	background: #333;
 }
 .kss-title__refLink {
 	display: none;
@@ -71,61 +114,91 @@
 	left: -30px;
 	top: 0;
 	text-align: center;
-	font-size: 18px;
+	font-size: @baseFontSize;
+	color: @baseTextColor;
 	padding-top: 6px;
-	.kss-title:hover & { display: block; }
-}
-.kss-box {
-	padding: 1px 20px;
-	background: #f1f1f1;
-	border-bottom: 1px solid #ddd;
-	p {
-		margin: 15px 0;
+	.kss-title:hover & {
+		display: block;
 	}
 }
+
+// Styleguide description box
+.kss-box {
+	padding: 1px @baseIndent;
+	background: #f1f1f1;
+	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	font-family: @baseFontFamily;
+	color: @baseTextColor;
+	p {
+		margin: @baseSpacing 0;
+	}
+	&:empty { display: none; }
+}
+
+// Code example
 .kss-styleguideSection {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-	border-radius: 2px;
+	border-left: 1px solid @baseBorderColor;
+	border-right: 1px solid @baseBorderColor;
 }
 .kss-styleguideElement {
 	position: relative;
-	padding: 20px;
-	border-bottom: 1px solid #eee;
+	padding: @baseIndent;
+	border-bottom: 1px solid @baseBorderColor;
 }
 .kss-styleguideElement__heading {
-	margin-bottom: 7.5px;
-	p { margin: 0; }
+	width: 75%;
+	margin-bottom: @baseSpacing/2;
+	font-family: @baseFontFamily;
+	color: @baseTextColor;
+	p {
+		margin: 0;
+	}
 }
 .kss-styleguideElement__class {
 	position: absolute;
 	top: 0;
 	right: 0;
-	padding: 5px 15px;
+	max-width: 25%;
+	padding: @baseSpacing/2 @baseSpacing;
+	border: 1px solid @baseBorderColor;
+	border-top: none;
+	font-family: @baseFontFamily;
 	font-size: 11px;
 	color: #999;
-	background: #f9f9f9;
-	border: 1px solid #eee;
-	border-top: none;
+	background: @lightGrey;
+	border-radius: 0 0 0 @baseBorderRadius;
+	transition: .2s ease all;
+	.kss-styleguideElement:hover & {
+		background: @baseActionColor;
+		border-color: @baseActionColor;
+		color: #FFF;
+	}
 }
 
 
 
 /* Prettify */
 .prettyprint {
-	margin: 15px 0 30px;
-	padding: 15px 15px;
+	margin: 0 0 @baseSpacing*3;
+	padding: @baseSpacing;
 	background: #edf6f8;
 	border: 1px solid #dde7ea;
-	font-size: 14px;
+	border-top: 0;
+	font-size: 12px;
+	line-height: 1.2;
+	border-radius: 0 0 @baseBorderRadius @baseBorderRadius;
 }
 .pln{color:#000}@media screen{.str{color:#080}.kwd{color:#008}.com{color:#800}.typ{color:#606}.lit{color:#066}.pun,.opn,.clo{color:#660}.tag{color:#008}.atn{color:#606}.atv{color:#080}.dec,.var{color:#606}.fun{color:red}}@media print,projection{.str{color:#060}.kwd{color:#006;font-weight:bold}.com{color:#600;font-style:italic}.typ{color:#404;font-weight:bold}.lit{color:#044}.pun,.opn,.clo{color:#440}.tag{color:#006;font-weight:bold}.atn{color:#404}.atv{color:#060}}ol.linenums{margin-top:0;margin-bottom:0}li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}
 
 
 /* Footer */
 .kss___footer {
-	margin-top: 20px;
-	padding: 20px;
-	border-top: 1px solid #eee;
+	margin-top: @baseSpacing*2;
+	padding: 26px @baseIndent;
+	border-top: 1px solid @baseBorderColor;
 	font-size: 11.5px;
+	font-family: @baseFontFamily;
+	color: @baseTextColor;
 }
