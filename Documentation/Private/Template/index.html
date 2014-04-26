@@ -26,6 +26,19 @@
 					<li class="kss___nav__item"><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
 					{{/eachRoot}}
 				</ul>
+				{{#if overview}}
+	            {{else}}
+	            <ul class="nav nav--stacked kss___navSub">
+	              {{#eachSection rootNumber}}
+	              {{#whenDepth 1}}
+	              {{else}}
+	              <li class="kss___navSub__item"><a href="#block-{{reference}}">
+	              	<span class="kss___navSub__item__ref">{{reference}}</span><span class="kss___navSub__item__header">{{header}}</span>
+	              </a></li>
+	              {{/whenDepth}}
+	              {{/eachSection}}
+	            </ul>
+	            {{/if}}
 			</nav>
 		</div>
 		<main class="gi three-quarters" role="main">
@@ -41,8 +54,8 @@
 					<span class="kss-ref">{{ reference }}.0</span> - {{ header }}
 				</h1>
 				{{else}}
-				<section class="kss-depth-{{ refDepth }}">
-					<h1 class="kss-title" id="block-{{ reference }}">
+				<section class="kss-depth-{{ refDepth }}" id="block-{{ reference }}">
+					<h1 class="kss-title">
 						<a class="kss-title__refLink" href="#block-{{ reference }}">#</a>
 						<span class="kss-ref">{{ reference }}</span> - {{ header }}
 					</h1>
