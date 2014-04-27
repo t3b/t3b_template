@@ -7,9 +7,6 @@ Styleguide 3
 */
 
 
-/* =============================================================================
-$ Text inputs, checkboxes and other form elements
-================================================================================ */
 /*
 Basic text input fields
 
@@ -52,17 +49,29 @@ input::-webkit-datetime-edit {
 	margin-bottom: -.17em;
 }
 
-/* ========================= Checkboxes ======================== */
+/*
+Checkboxes and radio buttons
+
+Markup:
+<label><input type="checkbox" /> I am an checkbox</label>
+<label><input type="radio" /> I am an radio buttons</label>
+
+Styleguide 3.0.2
+*/
 input[type="checkbox"],
 input[type="radio"] {
 	margin-right: .35em;
 	cursor: pointer;
 }
 
+/*
+Buttons
 
-/* =============================================================================
-$ Buttons
-================================================================================ */
+Markup:
+<input type="submit" value="Send" />
+
+Styleguide 3.0.3
+*/
 %btn,
 button,
 input[type="button"],
@@ -88,11 +97,9 @@ input[type="submit"] {
 	color: map-get($button, textColor);
 }
 
-
-
-/* =============================================================================
-$ Form elements
-================================================================================ */
+/*
+Form wrapper elements
+*/
 fieldset {
 	/**
 	 * Reset border, margin, and padding to define a consistend style accross all browsers
@@ -113,7 +120,14 @@ form {
 	@extend %margin-bottom;
 }
 
-/* ==================== Labels and Legends ===================== */
+/*
+Labels
+
+Markup:
+<label>I am an label</label>
+
+Styleguide 3.0.4
+*/
 label {
 	display: block;
 	font-weight: $bold;
@@ -122,6 +136,17 @@ label {
 		cursor: pointer;
 	}
 }
+
+/*
+Legends
+
+Markup:
+<fieldset>
+	<legend>I am an fieldset legend.</legend>
+</fieldset>
+
+Styleguide 3.0.5
+*/
 legend {
 	display: block;
 	width: 100%;

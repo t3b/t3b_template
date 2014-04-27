@@ -3,13 +3,33 @@
 
 Basic styling for lists and definition elements
 
-Styleguide 5
+Styleguide 6
 */
 
 
-/* =============================================================================
-$ Lists
-================================================================================ */
+/*
+Unordered- & Ordered-Lists
+
+.reset-list - Resets the standard list styles of an `<ul>` or `<ol>` element.
+
+Markup:
+<ul class="{$modifiers}">
+	<li>Unordered-List</li>
+	<li>I am the first list-element.</li>
+	<li>I am the second list-element.</li>
+	<li>I am the third list-element.</li>
+	<li>I am the fourth list-element.</li>
+</ul>
+<ol class="{$modifiers}">
+	<li>Ordered-List</li>
+	<li>I am the first list-element.</li>
+	<li>I am the second list-element.</li>
+	<li>I am the third list-element.</li>
+	<li>I am the fourth list-element.</li>
+</ol>
+
+Styleguide 6.0.1
+*/
 menu,
 ol,
 ul {
@@ -25,12 +45,13 @@ li > ol {
 	margin-bottom: 0;
 }
 
-
-/* ======================== Reset list ========================= */
+/*
+Reset-List helper class
+*/
 %reset-list,
 .reset-list {
 	/**
-	 * Resets the standard list styles of a <ul> or <ol>
+	 *
 	 */
 	list-style: none;
 	margin-bottom: 0;
@@ -38,25 +59,8 @@ li > ol {
 }
 
 
-/* =============================================================================
-$ Definitions
-================================================================================ */
-dl {
-	@extend %reset-margin-top;
-	@extend %margin-bottom;
-}
-dd {
-	@if $legacy-normalizecss {
-		/**
-		 * Addresses margins set differently in IE6/7.
-		 */
-		margin: 0 0 0 rs(40);
-	}
-}
-
-
 /*
-Horizontal definition abstraction
+Definitions.
 
 .dl--horizontal - Display a definition list in a horizontal order.
 
@@ -73,7 +77,23 @@ Markup:
 	<dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
 </dl>
 
-Styleguide 5.0.1
+Styleguide 6.0.3
+*/
+dl {
+	@extend %reset-margin-top;
+	@extend %margin-bottom;
+}
+dd {
+	@if $legacy-normalizecss {
+		/**
+		 * Addresses margins set differently in IE6/7.
+		 */
+		margin: 0 0 0 rs(40);
+	}
+}
+
+/*
+Horizontal definition abstraction
 */
 .dl--horizontal {
 	@extend .cf;

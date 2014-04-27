@@ -7,9 +7,19 @@ Styleguide 4
 */
 
 
-/* =============================================================================
-$ Headings
-================================================================================ */
+/*
+Headings
+
+Markup:
+<h1>I am an first-level heading</h1>
+<h2>I am an second-level heading</h2>
+<h3>I am an third-level heading</h3>
+<h4>I am an fourth-level heading</h4>
+<h5>I am an fifth-level heading</h5>
+<h6>I am an sixth-level heading</h6>
+
+Styleguide 4.0.1
+*/
 h1, h2, h3,
 h4, h5, h6 {
 	@if map-get($headings, fontFamily) { font-family: map-get($headings, fontFamily); }
@@ -35,7 +45,7 @@ Heading modifiers
 Markup:
 <h1 class="{$modifiers}">I am an first-level heading</h1>
 
-Styleguide 4.0.1
+Styleguide 4.0.2
 */
 @each $key, $value in map-get($headings, elements) {
 	$headingFontSize: map-fetch($headings, elements $key font-size);

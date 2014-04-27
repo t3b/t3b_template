@@ -1,9 +1,10 @@
 /*
- * Grid object which makes use of the width classes in generic/_widths.scss
- *
- * @package #{ext_directory()}
- * @path Objects/_Grid.scss
- */
+[OBJECT] Grid
+
+Grid object which makes use of the generated width classes.
+
+Styleguide 14
+*/
 
 
 // =============================================================================
@@ -12,18 +13,18 @@
 $grid-direction:  $start;
 
 
-/* =============================================================================
-$ Grid Classes
-================================================================================
- * A basic grid system which is dependent on the border-box layout mode
- * e.g.
- *
-	<div class="g">
-		<div class="gi one-third"> </div>
-		<div class="gi one-third"> </div>
-		<div class="gi one-third"> </div>
-	</div>
-================================================================================ */
+/*
+Grid
+
+Markup:
+<div class="g">
+	<div class="gi one-third">first collumn</div>
+	<div class="gi one-third">second collumn</div>
+	<div class="gi one-third">third collumn</div>
+</div>
+
+Styleguide 14.0.1
+*/
 .g,
 .grid {
 	@extend .cf;

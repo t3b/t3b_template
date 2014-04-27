@@ -1,18 +1,13 @@
 /*
- * Sizes which are used in conjunction with other objects and
- * abstractions like the grid system, from
- * inuit.css <https://github.com/csswizardry/inuit.css/>
- *
- * @package #{ext_directory()}
- * @path Generic/_Widths.scss
- * @license Apache License, Version 2.0.
- */
+[Generic] Widths
+
+Sizes which are used in conjunction with other objects and abstractions like the grid system.
+
+Styleguide 11
+*/
 
 
-
-// =============================================================================
-// $ Grid mixin
-// =============================================================================
+// Grid mixin
 @mixin grid-setup($namespace:  "") {
 	/**
 	* Whole
@@ -95,7 +90,56 @@
 }
 
 
-/* =============================================================================
-$ Widths
-================================================================================ */
+/*
+Widths
+
+.one-twelfth - One twelfth
+.one-tenth - One tenth
+.one-eighth - One eighth
+.one-sixth - One sixth
+.two-twelfths - Two twelfths
+.one-fifth - One fifth
+.two-tenths - Two tenths
+.one-quarter - One quarter
+.two-eighths - Two eighths
+.three-twelfths - Three twelfths
+.three-tenths - Three tenths
+.one-third - One third
+.two-sixths - Two sixths
+.four-twelfths - Four twelfths
+.three-eighths - Three eighths
+.two-fifths - Two fifths
+.four-tenths - Four tenths
+.five-twelfths - Five twelfths
+.one-half - One half
+.two-quarters - Two quarters
+.three-sixths - Three sixths
+.four-eighths - Four eighths
+.five-tenths - Five tenths
+.six-twelfths - Six twelfths
+.seven-twelfths - Seven twelfths
+.three-fifths - Three fifths
+.six-tenths - Six tenths
+.five-eighths - Five eighths
+.two-thirds - Two thirds
+.four-sixths - Four sixths
+.eight-twelfths - Eight twelfths
+.seven-tenths - Seven tenths
+.three-quarters - Three quarters
+.six-eighths - Six eighths
+.nine-twelfths - Nine twelfths
+.four-fifths - Four fifths
+.eight-tenths - Eight tenths
+.five-sixths - Five sixths
+.ten-twelfths - Ten twelfths
+.seven-eighths - Seven eighths
+.nine-tenths - Nine tenths
+.eleven-twelfths - Eleven twelfths
+.one-whole - One whole
+
+Markup:
+<div class="{$modifiers} kss___exampleWidth">.{$modifiers}</div>
+
+Styleguide 11.0.1
+*/
 @include grid-setup();

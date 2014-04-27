@@ -1,32 +1,29 @@
 /*
- * Declarations which should be put at the top of the document e.g.
- * @font-face declarations and CSS viewports
- *
- * @package #{ext_directory()}
- * @path Generic/_Head.scss
- */
+[Generic] Head
+
+Declarations which should be put at the top of the document e.g. @font-face declarations and CSS viewports
+*/
 
 
 // Disabled until the WP8 CSS Viewport bug is fixed.
 // http://mattstow.com/responsive-design-in-ie10-on-windows-phone-8.html
 // @if $responsive {
-//   /* =============================================================================
-//   $ CSS Viewport
-//   ================================================================================ */
+//   /*
+//   CSS Viewport
+//   */
 //   @viewport { width: device-width; zoom: 1; }
 // }
 
 
 @if $global-border-box {
-	/* =============================================================================
-	$ Border-Box
-	================================================================================ */
-	// We are using a split border-box setting to improve performance - https://github.com/mdo/css-perf#box-sizing-resets
+	/*
+	Global border-box
+	*/
 	* {
+		&,
+		&:before,
+		&:after {
 			box-sizing: border-box;
-	}
-	*:before,
-	*:after {
-			box-sizing: border-box;
+		}
 	}
 }

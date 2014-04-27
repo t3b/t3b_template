@@ -1,22 +1,25 @@
 /*
- * Basic button structural styling from
- * inuit.css <https://github.com/csswizardry/inuit.css/>
- *
- * @package #{ext_directory()}
- * @path Objects/_Buttons.scss
- * @license Apache License, Version 2.0.
- * @link http://csswizardry.com/2011/09/the-nav-abstraction/
- */
+[OBJECT] Button
+
+Basic button structural styling from inuit.css.
+
+Styleguide 12
+*/
 
 
-/* =============================================================================
-$ Button Object
-================================================================================
- * Display an anchor tag as a button
- * e.g.
- *
-	<a class="btn">A Special link</a>
-================================================================================ */
+
+/*
+Button Object
+
+Display an anchor tag as a button
+
+.btn--full - Set the button width to the width of it's parent element.
+
+Markup:
+<a class="btn {$modifiers}">A Special link</a>
+
+Styleguide 12.0.1
+*/
 .btn {
 	@extend %btn;
 	display: inline-block;
@@ -26,9 +29,6 @@ $ Button Object
 	}
 }
 
-/* ================== Full width button abstraction =================
- * Set a button to the full-width of it's parent
- */
 .btn--full {
 	display: block;
 	text-align: center;

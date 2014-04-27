@@ -1,25 +1,60 @@
 /*
- * Gernerated classes for brand related styling
- *
- * @package #{ext_directory()}
- * @path Generic/_Brand.scss
- */
+[Generic] Brand
+
+Helper classes for brand related stylings.
+
+Styleguide 9
+*/
 
 
 
-/* =============================================================================
-$ Brand styles
-================================================================================ */
+/*
+Base brand text styles
+
+Markup:
+<span class="brand">I am an paragraph.</span>
+
+Styleguide 9.0.1
+*/
 .brand {
 	font-family: $brand-font-family;
 	color: map-get($brand-colors, primary);
 }
+
+/*
+Base brand color helpers
+
+.brandColor-primary - test color.
+
+Markup:
+<span class="{$modifiers}">Brand color helpers.</span>
+
+Styleguide 9.0.2
+*/
 @each $key, $value in $brand-colors {
 	.brandColor-#{$key} {
 		color: $value;
 	}
 }
+
+/*
+Base brand font-family helper
+
+Markup:
+<span class="brandFace">This text will be set in teh brands font-family.</span>
+
+Styleguide 9.0.3
+*/
 .brandFace { font-family: $brand-font-family; }
+
+/*
+Brand logo
+
+Markup:
+<img class="brandLogo" />
+
+Styleguide 9.0.4
+*/
 .brandLogo {
 	@include image-replacement($file-name: map-get($brand-logo, image), $display-mode: inline-block, $width: map-get($brand-logo, width), $height: map-get($brand-logo, height));
 }

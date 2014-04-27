@@ -1,44 +1,38 @@
 /*
- * A modified version of the navigation object from
- * inuit.css <https://github.com/csswizardry/inuit.css/>
- *
- * @package #{ext_directory()}
- * @path Objects/_Navigations.scss
- * @license Apache License, Version 2.0.
- * @link http://csswizardry.com/2011/09/the-nav-abstraction/
- */
+[OBJECT] Navigation
+
+A modified version of the navigation object from inuit.css
+
+Styleguide 15
+*/
 
 
-/* =============================================================================
-$ Navigation Object
-================================================================================
- * Throws a list into horizontal mode
- * e.g.:
- *
-	<ul class="nav">
-			<li><a href="">Home</a></li>
-			<li><a href="">About</a></li>
-			<li><a href="">Products</a></li>
-			<li><a href="">Contact</a></li>
-	</ul>
-================================================================================ */
+
+/*
+Navigation
+
+.nav - Throws a list into horizontal mode.
+.nav.nav--stacked - Throws a list into vertical mode.
+.nav.nav--fit - Force a nav to occupy 100% of the available width of its parent.
+
+Markup:
+<ul class="{$modifiers}">
+	<li><a href="">Home</a></li>
+	<li><a href="">About</a></li>
+	<li><a href="">Products</a></li>
+	<li><a href="">Contact</a></li>
+</ul>
+
+Styleguide 15.0.1
+*/
 .nav {
 	@extend %reset-list;
 	li { display: inline-block; }
 	a { display: block; }
 }
-
-/* ======================= Stacked Navigation =======================
- * Throws a list into vertical mode
- */
 .nav--stacked li {
 	display: list-item;
 }
-
-/* ========================= Fit Navigation =========================
- * Force a nav to occupy 100% of the available width of its parent.
- * Thanks to @pimpl for this idea!
- */
 .nav--fit {
 	display: table;
 	width: 100%;

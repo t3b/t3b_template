@@ -1,28 +1,32 @@
 /*
- * Abstractions of the '<form>' element.
- *
- * @package #{ext_directory()}
- * @path Objects/_Form.scss
- */
+[OBJECT] Form
+
+Abstractions of the '<form>' element.
+
+Styleguide 13
+*/
 
 
-/* =============================================================================
-$ Form-Inline abstraction
-================================================================================
- * Display a <form> and all it's content in a horizontal order
- * e.g.
- *
-	<form class="form--inline">
-		<label>Username: </label>
-		<input type="text" placeholder="Username...">
-		<label>Password: </label>
-		<input type="password" placeholder="Password...">
-		<label class="label--checkbox">
-			<input type="checkbox">Remember me
-		</label>
-		<button type="submit">Sign in</button>
-	</form>
-================================================================================ */
+
+/*
+Form-Inline abstraction
+
+.form--inline - Display a `<form>` and all it's content in a horizontal order
+
+Markup:
+<form class="{$modifiers}">
+	<label>Username: </label>
+	<input type="text" placeholder="Username...">
+	<label>Password: </label>
+	<input type="password" placeholder="Password...">
+	<label class="label--checkbox">
+		<input type="checkbox">Remember me
+	</label>
+	<button type="submit">Sign in</button>
+</form>
+
+Styleguide 13.0.1
+*/
 .form--inline {
 	label {
 		margin-#{$end}: .3em;

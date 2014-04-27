@@ -1,15 +1,14 @@
 @if $devMode {
 /*
- * Debug code wich applies if the $devMode variable is set to 'true'
- *
- * @package #{ext_directory()}
- * @path Generic/_Debug.scss
- */
+[Generic] Debug
+
+Debug code wich applies if the $devMode variable is set to 'true'.
+*/
 
 
-/* =============================================================================
-$ Environment banner
-================================================================================ */
+/*
+Environment banner
+*/
 body::before {
 	position: absolute;
 	top: 0;
