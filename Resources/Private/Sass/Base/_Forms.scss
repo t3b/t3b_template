@@ -1,14 +1,14 @@
 /*
-[Base] Forms
+Form elements
 
 Basic styling for forms and inputs
 
-Styleguide 3
+Styleguide 2.1
 */
 
 
 /*
-Basic text input fields
+Text inputs
 
 .textInput         - Base style class `.textInput`
 
@@ -16,7 +16,7 @@ Markup:
 <input type="text" class="{$modifiers}" /><br>
 <textarea class="{$modifiers}" cols="40"></textarea>
 
-Styleguide 3.0.1
+Styleguide 2.1.1
 */
 %textInput,
 .textInput {
@@ -50,13 +50,13 @@ input::-webkit-datetime-edit {
 }
 
 /*
-Checkboxes and radio buttons
+Checkboxes / Radio buttons
 
 Markup:
 <label><input type="checkbox" /> I am an checkbox</label>
 <label><input type="radio" /> I am an radio buttons</label>
 
-Styleguide 3.0.2
+Styleguide 2.1.2
 */
 input[type="checkbox"],
 input[type="radio"] {
@@ -70,7 +70,7 @@ Buttons
 Markup:
 <input type="submit" value="Send" />
 
-Styleguide 3.0.3
+Styleguide 2.1.3
 */
 %btn,
 button,
@@ -126,7 +126,7 @@ Labels
 Markup:
 <label>I am an label</label>
 
-Styleguide 3.0.4
+Styleguide 2.1.4
 */
 label {
 	display: block;
@@ -145,7 +145,7 @@ Markup:
 	<legend>I am an fieldset legend.</legend>
 </fieldset>
 
-Styleguide 3.0.5
+Styleguide 2.1.5
 */
 legend {
 	display: block;

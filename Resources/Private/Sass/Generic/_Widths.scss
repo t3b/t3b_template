@@ -1,9 +1,7 @@
 /*
-[Generic] Widths
+Width helpers
 
-Sizes which are used in conjunction with other objects and abstractions like the grid system.
-
-Styleguide 11
+Styleguide 3.2
 */
 
 
@@ -91,7 +89,9 @@ Styleguide 11
 
 
 /*
-Widths
+Percentage classes
+
+Sizes which are used in conjunction with other objects and abstractions like the grid system.
 
 .one-twelfth - One twelfth
 .one-tenth - One tenth
@@ -140,6 +140,6 @@ Widths
 Markup:
 <div class="{$modifiers} kss___exampleWidth">.{$modifiers}</div>
 
-Styleguide 11.0.1
+Styleguide 3.2.1
 */
 @include grid-setup();

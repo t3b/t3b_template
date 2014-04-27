@@ -1,14 +1,4 @@
 /*
-[OBJECT] Button
-
-Basic button structural styling from inuit.css.
-
-Styleguide 12
-*/
-
-
-
-/*
 Button Object
 
 Display an anchor tag as a button
@@ -18,7 +8,7 @@ Display an anchor tag as a button
 Markup:
 <a class="btn {$modifiers}">A Special link</a>
 
-Styleguide 12.0.1
+Styleguide 4.1.1
 */
 .btn {
 	@extend %btn;

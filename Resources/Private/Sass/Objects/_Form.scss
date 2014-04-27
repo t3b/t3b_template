@@ -1,14 +1,4 @@
 /*
-[OBJECT] Form
-
-Abstractions of the '<form>' element.
-
-Styleguide 13
-*/
-
-
-
-/*
 Form-Inline abstraction
 
 .form--inline - Display a `<form>` and all it's content in a horizontal order
@@ -25,7 +15,7 @@ Markup:
 	<button type="submit">Sign in</button>
 </form>
 
-Styleguide 13.0.1
+Styleguide 4.1.2
 */
 .form--inline {
 	label {

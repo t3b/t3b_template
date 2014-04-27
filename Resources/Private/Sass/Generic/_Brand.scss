@@ -1,20 +1,20 @@
 /*
-[Generic] Brand
+Brand styles
 
 Helper classes for brand related stylings.
 
-Styleguide 9
+Styleguide 5
 */
 
 
 
 /*
-Base brand text styles
+Brand text styles
 
 Markup:
 <span class="brand">I am an paragraph.</span>
 
-Styleguide 9.0.1
+Styleguide 5.1.1
 */
 .brand {
 	font-family: $brand-font-family;
@@ -22,14 +22,14 @@ Styleguide 9.0.1
 }
 
 /*
-Base brand color helpers
+Brand color helpers
 
 .brandColor-primary - test color.
 
 Markup:
 <span class="{$modifiers}">Brand color helpers.</span>
 
-Styleguide 9.0.2
+Styleguide 5.1.2
 */
 @each $key, $value in $brand-colors {
 	.brandColor-#{$key} {
@@ -38,22 +38,22 @@ Styleguide 9.0.2
 }
 
 /*
-Base brand font-family helper
+Brand font-family helper
 
 Markup:
 <span class="brandFace">This text will be set in teh brands font-family.</span>
 
-Styleguide 9.0.3
+Styleguide 5.1.3
 */
 .brandFace { font-family: $brand-font-family; }
 
 /*
-Brand logo
+Brand logos
 
 Markup:
 <img class="brandLogo" />
 
-Styleguide 9.0.4
+Styleguide 5.1.4
 */
 .brandLogo {
 	@include image-replacement($file-name: map-get($brand-logo, image), $display-mode: inline-block, $width: map-get($brand-logo, width), $height: map-get($brand-logo, height));

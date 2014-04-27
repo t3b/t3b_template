@@ -1,9 +1,9 @@
 /*
-[Base] Typography
+Typographic elements
 
 Basic styling for all typographic related elements.
 
-Styleguide 8
+Styleguide 2.3
 */
 
 
@@ -13,7 +13,7 @@ Base paragraph
 Markup:
 <p>I am an paragraph.</p>
 
-Styleguide 8.0.1
+Styleguide 2.3.1
 */
 p {
 	@extend %reset-margin-top;
@@ -26,7 +26,7 @@ Bold and strong elements
 Markup:
 <b>This text should be displayed in a bolder font-weight than the standard one.</b>
 
-Styleguide 8.0.2
+Styleguide 2.3.2
 */
 b,
 strong {
@@ -39,7 +39,7 @@ Small text emphasis
 Markup:
 <small>This text should be smaller than the standard one.</small>
 
-Styleguide 8.0.3
+Styleguide 2.3.3
 */
 small { font-size: 80%; }
 
@@ -49,7 +49,7 @@ Abbreviation element
 Markup:
 <abbr title="The title of the abbreviation">This is an abbreviation.</abbr>
 
-Styleguide 8.0.4
+Styleguide 2.3.4
 */
 abbr[title] { /* Addresses styling not present in IE7/8/9, S5, Chrome. */
 	border-bottom: 1px dotted;
@@ -62,7 +62,7 @@ Marked text emphasis element
 Markup:
 <mark>This text should be displayed in a special manner.</mark>
 
-Styleguide 8.0.5
+Styleguide 2.3.5
 */
 mark { /* Addresses styling not present in IE6/7/8/9. */
 	background: map-get($brand-colors, primary);
@@ -75,7 +75,7 @@ Definition element
 Markup:
 <dfn>This text represents the defining instance of a term.</dfn>
 
-Styleguide 8.0.6
+Styleguide 2.3.6
 */
 dfn {
 	font-style: italic; /* Addresses styling not present in S5, Chrome. */
@@ -88,7 +88,7 @@ Markup:
 Regular text - <sup>this will be displayed higher and smaller than the main span of text.</sup><br>
 Regular text - <sub>this will be displayed lower and smaller than the main span of text.</sub>
 
-Styleguide 8.0.7
+Styleguide 2.3.7
 */
 sub,
 sup { /* Prevents `sub` and `sup` affecting `line-height` in all browsers. gist.github.com/413930 */
@@ -110,7 +110,7 @@ Markup:
 <samp>.css{ color: red; }</samp><br>
 <pre>.css{ color: red; }</pre>
 
-Styleguide 8.0.8
+Styleguide 2.3.8
 */
 code,
 kbd,
@@ -140,7 +140,7 @@ Markup:
 The following text <q>is an inline-quote</q>
 <blockquote>This text is a full quotation element</blockquote>
 
-Styleguide 8.0.9
+Styleguide 2.3.9
 */
 q {
 	/**
@@ -171,7 +171,7 @@ Horizontal ruler
 Markup:
 <hr>
 
-Styleguide 8.0.10
+Styleguide 2.3.10
 */
 %horizontal-ruler,
 hr {
@@ -219,7 +219,7 @@ Typographic Helper Classes
 Markup:
 <p class="{$modifiers}">I am an paragraph.</p>
 
-Styleguide 8.0.11
+Styleguide 2.3.11
 */
 .align-center { text-align: center; }
 .align-right  { text-align: right; }
