@@ -6,9 +6,9 @@ Form-Inline abstraction
 Markup:
 <form class="{$modifiers}">
 	<label>Username: </label>
-	<input type="text" placeholder="Username...">
+	<input class="textInput" type="text" placeholder="Username...">
 	<label>Password: </label>
-	<input type="password" placeholder="Password...">
+	<input class="textInput" type="password" placeholder="Password...">
 	<label class="label--checkbox">
 		<input type="checkbox">Remember me
 	</label>
