@@ -44,12 +44,17 @@ Heading modifiers
 
 Markup:
 <h1 class="{$modifiers}">I am an first-level heading</h1>
+<h2 class="{$modifiers}">I am an second-level heading</h2>
+<h3 class="{$modifiers}">I am an third-level heading</h3>
+<h4 class="{$modifiers}">I am an fourth-level heading</h4>
+<h5 class="{$modifiers}">I am an fifth-level heading</h5>
+<h6 class="{$modifiers}">I am an sixth-level heading</h6>
 
 Styleguide 2.2.2
 */
 @each $key, $value in map-get($headings, elements) {
 	$headingFontSize: map-fetch($headings, elements $key font-size);
-	$additionalRules: map-removeKeys(map-fetch($headings, elements $key), font-size color);
+	$additionalRules: map-removeKeys(map-fetch($headings, elements $key), font-size);
 	#{$key}, .#{$key} {
 		@include font-size($headingFontSize, $append-vrythm: false);
 		@each $declaration, $value in $additionalRules {
