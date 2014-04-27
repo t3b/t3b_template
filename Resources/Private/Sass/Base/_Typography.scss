@@ -100,43 +100,15 @@ sup { /* Prevents `sub` and `sup` affecting `line-height` in all browsers. gist.
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
-
 /*
-Horizontal ruler
-
-Markup:
-<hr>
-
-Styleguide 2.3.10
+Text-Selection
 */
-%horizontal-ruler,
-hr {
-	/**
-	* Address differences between Firefox and other browsers.
-	*/
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
-
-	display: block;
-	height: 0;
-	border: 0;
-	border-top: 1px $basic-border-style $basic-border-color;
-	padding: 0;
-	@extend %margin-top;
-	@extend %margin-bottom;
-}
-
-
-/* =============================================================================
-$ Text-Selection
-================================================================================ */
 ::-moz-selection,
 ::selection {
 	background: map-get($brand-colors, primary);
 	color: color-adjust(map-get($brand-colors, primary), 100%);
 	text-shadow: none;
 }
-
 
 /*
 Typographic Helper Classes
@@ -155,7 +127,7 @@ Typographic Helper Classes
 Markup:
 <p class="{$modifiers}">I am an paragraph.</p>
 
-Styleguide 2.3.11
+Styleguide 2.3.8
 */
 .align-center { text-align: center; }
 .align-right  { text-align: right; }
