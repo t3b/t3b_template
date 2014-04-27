@@ -92,11 +92,24 @@
 		padding: 2px @baseSpacing/2 2px @baseIndent;
 		border-left: 2px solid #fff;
 		transition: .2s ease all;
+		font-weight: 600;
 		&:hover {
 			text-decoration: none;
 			color: @baseTextColor;
 		}
 	}
+}
+.kss___navSub__item--2 {
+	> a {
+		margin-top: .5em;
+	}
+	&:first-child > a {
+		margin-top: 0;
+	}
+}
+.kss___navSub__item--3 > a {
+	padding-left: 30px;
+	font-weight: 400;
 }
 .kss___navSub__item--active {
 	> a {
