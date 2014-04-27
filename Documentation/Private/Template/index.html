@@ -27,18 +27,18 @@
 					{{/eachRoot}}
 				</ul>
 				{{#if overview}}
-	            {{else}}
-	            <ul class="nav nav--stacked kss___navSub">
-	              {{#eachSection rootNumber}}
-	              {{#whenDepth 1}}
-	              {{else}}
-	              <li class="kss___navSub__item"><a href="#block-{{reference}}">
-	              	<span class="kss___navSub__item__ref">{{reference}}</span><span class="kss___navSub__item__header">{{header}}</span>
-	              </a></li>
-	              {{/whenDepth}}
-	              {{/eachSection}}
-	            </ul>
-	            {{/if}}
+				{{else}}
+				<ul class="nav nav--stacked kss___navSub">
+					{{#eachSection rootNumber}}
+					{{#whenDepth 1}}
+					{{else}}
+					<li class="kss___navSub__item"><a href="#block-{{reference}}">
+						<span class="kss___navSub__item__ref">{{reference}}</span><span class="kss___navSub__item__header">{{header}}</span>
+					</a></li>
+					{{/whenDepth}}
+					{{/eachSection}}
+				</ul>
+				{{/if}}
 			</nav>
 		</div>
 		<main class="gi three-quarters" role="main">
