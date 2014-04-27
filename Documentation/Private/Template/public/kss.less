@@ -35,7 +35,12 @@
 		font-size: @baseFontSize + 4;
 		font-weight: normal;
 		line-height: 1;
-		color: @baseTextColor;
+		> a {
+			color: @baseTextColor;
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 }
 
