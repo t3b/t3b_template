@@ -1,5 +1,6 @@
 (function() {
-	var $kssMenu = $(".kss___nav"),
+	var $window = $(window),
+		$kssMenu = $(".kss___nav"),
 		$kssMenuItems = $kssMenu.find(".kss___nav__item"),
 		$kssMenuActiveItem = $kssMenuItems.eq($kssMenu.data("kss-activemenuindex"))
 		$kssMenuSub = $(".kss___navSub"),
@@ -8,10 +9,11 @@
 		kssMenuStickyClass = "kss___nav--sticky",
 		kssMenuSubActiveClass = "kss___navSub__item--active",
 		kssMenuOffset = $kssMenu.offset().top,
+		urlHash = window.location.hash,
 		scrollBuffer = false,
 
 		scrollSpy = function () {
-			var scrollTop = $(window).scrollTop(),
+			var scrollTop = $window.scrollTop(),
 				$kssMenuSubAnchors = $kssMenuSub.find("a"),
 				currentTargetHash,
 				activeIndex;
@@ -33,7 +35,7 @@
 			$kssMenuSubItems.removeClass(kssMenuSubActiveClass);
 			if (typeof activeIndex !== "undefined") {
 				$kssMenuSubItems.eq(activeIndex).addClass(kssMenuSubActiveClass);
-				window.location.hash = currentTargetHash;
+				urlHash = currentTargetHash;
 			} else if(scrollTop < $($kssMenuSubAnchors.eq(0).attr("href").replace(/\./g, "\\.")).offset().top) {
 				$kssMenuSubItems.eq(0).addClass(kssMenuSubActiveClass)
 			}
@@ -49,13 +51,13 @@
 	// Add the active class for the current item in the sideMenu.
 	$kssMenuActiveItem.addClass("kss___nav__item--active")
 
-    if ($kssMenuSub.length) {
+	if ($kssMenuSub.length) {
 		// Append the subMenu of the current item into the sideMenu.
 		$kssMenuSub.appendTo(".kss___nav__item--active");
 
 		// Set the active class on the current item.
 		scrollSpy();
-		$(window).on("scroll", function() {
+		$window.on("scroll", function() {
 			if (!scrollBuffer) {
 				scrollBuffer = setTimeout(function () {
 					scrollSpy();
