@@ -138,6 +138,7 @@
 // Styleguide headings
 .kss-title,
 .kss___contentWrapper > h1 {
+	position: relative;
 	margin: 0;
 	font-family: @baseFontFamily;
 	font-weight: 300;
@@ -148,6 +149,10 @@
 	margin: @baseSpacing*3 0 @baseSpacing;
 	font-family: @baseFontFamily;
 	font-size: @baseFontSize*2;
+	.kss-title__refLink {
+		padding-top: 11px;
+		font-weight: bold;
+	}
 }
 .kss___contentWrapper > h2,
 .kss___contentWrapper > h3 {
@@ -165,12 +170,22 @@
 }
 .kss-depth-2 > .kss-title {
 	padding: 0;
-	margin: 0 0 @baseSpacing/2;
+	margin: @baseSpacing*2 0 @baseSpacing/2;
 	color: @baseTextColor;
-	font-size: @baseFontSize*1.1;
+	font-size: @baseFontSize*1.5;
+	.kss-title__refLink {
+		display: block;
+		font-weight: bold;
+		color: @baseActionColor;
+	}
+}
+.kss-depth-2 > p {
+	margin: 0 0 @baseSpacing;
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize;
+	color: @baseTextColor;
 }
 .kss-depth-3 > .kss-title {
-	position: relative;
 	margin: 0;
 	padding: 10px;
 	border-top: 1px solid #000;
