@@ -3,10 +3,11 @@ Button Object
 
 Display an anchor tag as a button
 
-.btn--full - Set the button width to the width of it's parent element.
+.btn - Display an element as an button.
+.btn.btn--full - Set the button width to the width of it's parent element.
 
 Markup:
-<a class="btn {$modifiers}">A Special link</a>
+<a class="{$modifiers}">A Special link</a>
 
 Styleguide 4.1.1
 */
