@@ -16,6 +16,9 @@ module.exports = function(grunt) {
 			grunt.task.run(["copy:imagesDir", "imagemin", "clean:imagesTempDir"]);
 		}
 
+		// Compile the living styleguide.
+		grunt.task.run(["docs"]);
+
 		// Remove all stylesheets to force a new compilation.
 		grunt.task.run(["clean:stylesheets"]);
 		grunt.task.run(["sass:deploy", "autoprefixer"]);
