@@ -35,7 +35,10 @@
 			$kssMenuSubItems.removeClass(kssMenuSubActiveClass);
 			if (typeof activeIndex !== "undefined") {
 				$kssMenuSubItems.eq(activeIndex).addClass(kssMenuSubActiveClass);
-				history.pushState(null, null, currentTargetHash);
+				if(!(urlHash === currentTargetHash)) {
+					history.replaceState(null, null, currentTargetHash);
+					urlHash = currentTargetHash;
+				}
 			} else if(scrollTop < $($kssMenuSubAnchors.eq(0).attr("href").replace(/\./g, "\\.")).offset().top) {
 				$kssMenuSubItems.eq(0).addClass(kssMenuSubActiveClass)
 			}
