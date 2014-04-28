@@ -254,15 +254,16 @@
 	padding: @baseSpacing/2 @baseSpacing;
 	border: 1px solid @baseBorderColor;
 	border-top: none;
-	font-family: @baseFontFamily;
-	font-size: 11px;
+	font-family: monospace;
+	font-size: 12px;
+	font-weight: bold;
 	color: #999;
 	background: @lightGrey;
 	border-radius: 0 0 0 @baseBorderRadius;
 	transition: .2s ease all;
 	.kss-styleguideElement:hover & {
-		background: @baseActionColor;
-		border-color: @baseActionColor;
+		background: @activeColor;
+		border-color: @activeColor;
 		color: #FFF;
 	}
 }
