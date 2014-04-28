@@ -40,6 +40,9 @@ module.exports = function(grunt) {
 			grunt.task.run(["sass:dev"]);
 		}
 
+		// Create the initial living styleguide.
+		grunt.task.run("styleguide");
+
 		// Fetch all bower components.
 		grunt.task.run(["bower:install"]);
 	});
