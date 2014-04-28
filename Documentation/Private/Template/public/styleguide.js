@@ -49,10 +49,26 @@
 			} else {
 				$kssMenu.removeClass(kssMenuStickyClass);
 			}
+		},
+		formatTemplate = function() {
+			$('.kss-box').each(function(index, elem) {
+				var $this = $(elem),
+					isPureCodeMarker = '&lt;!= isPureCode !&gt;',
+					boxHtml = $this.html(),
+					isPureCode = boxHtml.search(isPureCodeMarker);
+
+				if(isPureCode > 1) {
+					$this.html(boxHtml.replace(isPureCodeMarker, '')).parent().addClass('kss___hideExamples');
+				}
+			});
+			//
 		};
 
 	// Add the active class for the current item in the sideMenu.
-	$kssMenuActiveItem.addClass("kss___nav__item--active")
+	$kssMenuActiveItem.addClass("kss___nav__item--active");
+
+	// Format the template.
+	formatTemplate();
 
 	if ($kssMenuSub.length) {
 		// Add the menu depth classes for each item.

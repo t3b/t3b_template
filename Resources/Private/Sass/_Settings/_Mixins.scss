@@ -9,6 +9,7 @@
 // High density Image-Dimensions Mixin($file-name, $width, $height)
 //
 // Creates the required rules for high density optimized images.
+// <!= isPureCode !>
 //
 // Markup:
 // .selector {
@@ -29,6 +30,7 @@
 // A image-replacement mixin which generates the image-dimensions as CSS rules and
 // @extends the .ir rule inside the _helper.scss file.
 // Default $display-mode is set to 'block'.
+// <!= isPureCode !>
 //
 // Markup:
 // .selector {
@@ -52,6 +54,7 @@
 // REM Unit Mixin($property, $value)
 //
 // Creates a property independent 'rem' calculation with a pixel fallback, default property is set to 'font-size'.
+// <!= isPureCode !>
 //
 // Markup:
 // .selector {
@@ -70,6 +73,7 @@
 // Font-Size Mixin($font-size, $append-vrythm)
 //
 // Creates a fully formed type style (sizing and vertical rhythm) by passing in a single value.
+// <!= isPureCode !>
 //
 // Markup:
 // .selector {
@@ -90,6 +94,7 @@
 // CSS Triangle Mixin($triangle-size, $triangle-color, $triangle-direction)
 //
 // Creates an css arrow as per http://cssarrowplease.com/.
+// <!= isPureCode !>
 //
 // Markup:
 // .selector:after {

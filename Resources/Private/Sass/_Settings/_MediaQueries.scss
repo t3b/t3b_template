@@ -14,6 +14,7 @@
 // Media-Query SASS Mixins($target-size, $context, $unit)
 //
 // Wraps rules around the desired media query context.
+// <!= isPureCode !>
 //
 // Markup:
 // @include min-screen(width) {}             - shortcut for @media screen and (min-width ...)
