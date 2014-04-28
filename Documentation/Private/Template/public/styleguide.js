@@ -61,7 +61,6 @@
 					$this.html(boxHtml.replace(isPureCodeMarker, '')).parent().addClass('kss___hideExamples');
 				}
 			});
-			//
 		};
 
 	// Add the active class for the current item in the sideMenu.
