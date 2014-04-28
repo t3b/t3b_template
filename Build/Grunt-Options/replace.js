@@ -32,11 +32,13 @@ module.exports = function(grunt) {
 				"ext_tables.php",
 				"Configuration/**/*.ts",
 				"Configuration/**/*.txt",
+				"Documentation/Private/Template/index.html",
 				config.paths.private + "/Elements/**/*.html",
 				config.paths.private + "/Layouts/**/*.html",
 				config.paths.private + "/Partials/**/*.html",
 				config.paths.private + "/Templates/**/*.html",
 				config.paths.private + "/Sass/**/*.scss",
+				config.paths.private + "/Sass/styleguide.md"
 			],
 			"overwrite" : true,
 			"replacements" : [{
