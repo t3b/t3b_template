@@ -8,7 +8,7 @@
 //
 // Image-Url($imagePath)
 //
-// Return the path of an Image asset.
+// Returns the path of an Image asset.
 //
 // Markup:
 // .selector {
@@ -40,15 +40,11 @@
 }
 
 
-// =============================================================================
+//
 // Text direction check
-// =============================================================================
-// @description
-// Checks the reading-direction of the site based on the '$direction' variable
-// and sets the correct $start and $end variables
-// @author necolas
-// @link https://github.com/necolas/suit
-// =============================================================================
+//
+// Checks the reading-direction of the site based on the '$direction' variable and sets the correct $start and $end variables
+//
 $direction: ltr !default;
 $start: left !default;
 $end: right !default;
@@ -61,7 +57,7 @@ $end: right !default;
 //
 // Color-Adjust($color, $contrast)
 //
-// Adjust a color based on the lightness which is passed as a second parameter, this function was written by @necolas(https://github.com/necolas/).
+// Adjusts a color based on the lightness which is passed as a second parameter, this function was written by @necolas(https://github.com/necolas/).
 //
 // Markup:
 // .selector {
@@ -83,7 +79,7 @@ $end: right !default;
 //
 // Map-Fetch($map, $keys)
 //
-// Navigate a nested maps with map-fetch() in Sass, this function was written by @jlong(https://github.com/jlong/)
+// Navigates through nested Sass maps, this function was written by @jlong(https://github.com/jlong/)
 //
 // Markup:
 // @each $key, $value in map-get($headings, elements) {
@@ -113,7 +109,7 @@ $end: right !default;
 //
 // Map-RemoveKeys($map, $keys)
 //
-// Remove multiple keys in a Sass map at once.
+// Removes multiple keys in a Sass map.
 //
 // Markup:
 // $newDecalarationsMap: map-removeKeys($declarations, font-size margin-bottom);

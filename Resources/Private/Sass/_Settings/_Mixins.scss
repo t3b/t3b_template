@@ -8,7 +8,7 @@
 //
 // High density Image-Dimensions Mixin($file-name, $width, $height)
 //
-// Create output which displays an image optimized for high density screens.
+// Creates the required rules for high density optimized images.
 //
 // Markup:
 // .selector {
@@ -69,7 +69,7 @@
 //
 // Font-Size Mixin($font-size, $append-vrythm)
 //
-// Create a fully formed type style (sizing and vertical rhythm) by passing in a single value.
+// Creates a fully formed type style (sizing and vertical rhythm) by passing in a single value.
 //
 // Markup:
 // .selector {
@@ -89,7 +89,7 @@
 //
 // CSS Triangle Mixin($triangle-size, $triangle-color, $triangle-direction)
 //
-// Create a css arrow as per http://cssarrowplease.com/.
+// Creates an css arrow as per http://cssarrowplease.com/.
 //
 // Markup:
 // .selector:after {
