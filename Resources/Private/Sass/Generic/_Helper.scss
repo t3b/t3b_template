@@ -87,7 +87,7 @@ Image replacement helper
 Hides the text of a container and displays a image instead, you will need to set dimensions, as well as an background-image to see this helper class in action.
 
 Markup:
-<span class="ir">This text won't be visible for a user, but can be accessed by robots & assistive devices.</span>
+<span class="ir" style="background-image: url('http://placehold.it/350x150'); width: 350px; height: 150px; display: inline-block;">This text won't be visible for a user, but can be accessed by robots & assistive devices.</span>
 
 Styleguide 3.1.4
 */
