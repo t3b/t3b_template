@@ -150,10 +150,6 @@
 	margin: @baseSpacing*3 0 @baseSpacing;
 	font-family: @baseFontFamily;
 	font-size: @baseFontSize*2;
-	.kss-title__refLink {
-		padding-top: 11px;
-		font-weight: bold;
-	}
 }
 .kss___contentWrapper > h2,
 .kss___contentWrapper > h3 {
@@ -174,11 +170,6 @@
 	margin: @baseSpacing*2 0 @baseSpacing/2;
 	color: @baseTextColor;
 	font-size: @baseFontSize*1.5;
-	.kss-title__refLink {
-		display: block;
-		font-weight: bold;
-		color: @baseActionColor;
-	}
 }
 .kss-depth-2 > p {
 	margin: 0 0 @baseSpacing;
@@ -204,11 +195,17 @@
 	left: -30px;
 	top: 0;
 	text-align: center;
-	font-size: @baseFontSize;
-	color: @baseTextColor;
-	padding-top: 6px;
+	color: @baseActionColor;
+	transition: .2s ease color;
+	&:hover {
+		text-decoration: none;
+		color: @baseTextColor;
+	}
 	.kss-title:hover & {
 		display: block;
+	}
+	.kss-depth-3 & {
+		padding-top: 11px;
 	}
 }
 
@@ -299,7 +296,7 @@
 
 
 // Example styles
-.kss___exampleWidth {
+.kss___exampleGridItem {
 	background: #ECECEC;
 	min-height: 32px;
 	font-size: 12px;
