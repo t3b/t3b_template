@@ -7,13 +7,36 @@ Display an anchor tag as a button
 .btn.btn--full - Set the button width to the width of it's parent element.
 
 Markup:
-<a class="{$modifiers}">A Special link</a>
+<button class="{$modifiers}">Send button</button>
+<input type="button" class="{$modifiers}" value="Button" />
+<input type="reset" class="{$modifiers}" value="Reset" />
+<input type="submit" class="{$modifiers}" value="Submit" />
+<a class="{$modifiers}">An anchor element.</a>
 
 Styleguide 4.1.1
 */
+%btn,
 .btn {
 	@extend %btn;
 	display: inline-block;
+	@include rem(margin-bottom, map-get($button, bottomSpacing));
+	/**
+	 * Set in em's so we can change the size of the button depending on the font-size
+	 */
+	padding: map-get($button, innerPadding);
+	border: 0;
+
+	background: map-get($button, background);
+	border-radius: $brand-border-radius;
+	cursor: pointer;
+
+	font-size: map-get($button, fontSize);
+	/**
+	 * Normalize the font-weight accross <input>, <button> and the .btn class
+	 */
+	font-weight: normal;
+	line-height: 1;
+	color: map-get($button, textColor);
 	&,
 	&:hover {
 		text-decoration: none;
