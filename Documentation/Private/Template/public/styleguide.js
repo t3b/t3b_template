@@ -1,8 +1,11 @@
-(function() {
+/* global prettyPrint */
+(function($) {
+	"use strict";
+
 	var $window = $(window),
 		$kssMenu = $(".kss___nav"),
 		$kssMenuItems = $kssMenu.find(".kss___nav__item"),
-		$kssMenuActiveItem = $kssMenuItems.eq($kssMenu.data("kss-activemenuindex"))
+		$kssMenuActiveItem = $kssMenuItems.eq($kssMenu.data("kss-activemenuindex")),
 		$kssMenuSub = $(".kss___navSub"),
 		$kssMenuSubItems = $kssMenuSub.find(".kss___navSub__item"),
 		$kssContentWrapper = $('.kss___contentWrapper'),
@@ -35,12 +38,12 @@
 			$kssMenuSubItems.removeClass(kssMenuSubActiveClass);
 			if (typeof activeIndex !== "undefined") {
 				$kssMenuSubItems.eq(activeIndex).addClass(kssMenuSubActiveClass);
-				if(!(urlHash === currentTargetHash)) {
+				if(urlHash !== currentTargetHash) {
 					history.replaceState(null, null, currentTargetHash);
 					urlHash = currentTargetHash;
 				}
 			} else if(scrollTop < $($kssMenuSubAnchors.eq(0).attr("href").replace(/\./g, "\\.")).offset().top) {
-				$kssMenuSubItems.eq(0).addClass(kssMenuSubActiveClass)
+				$kssMenuSubItems.eq(0).addClass(kssMenuSubActiveClass);
 			}
 
 			// Validate if the sideNav should be sticky or not.
@@ -99,4 +102,4 @@
 	// Ensure code blocks are highlighted properly...
 	$('pre>code').addClass('prettyprint');
 	prettyPrint();
-})();
+})(jQuery);
