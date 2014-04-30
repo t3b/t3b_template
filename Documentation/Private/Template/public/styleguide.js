@@ -95,4 +95,8 @@
 
 	// Set the height of the sideNav as a min-height on the contentWrapper.
 	$kssContentWrapper.css("min-height", $kssMenu.height());
+
+	// Ensure code blocks are highlighted properly...
+	$('pre>code').addClass('prettyprint');
+	prettyPrint();
 })();
