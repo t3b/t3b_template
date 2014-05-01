@@ -34,6 +34,9 @@
 				$(this).toggleClass('kss___header__toggleNav--active');
 				toggleMenu();
 			});
+			$kssSiteWrapper.on('click', function() {
+				closeMenu();
+			});
 
 			// Add the active class for the current item in the sideMenu.
 			$kssMenuActiveItem.addClass("kss___nav__item--active");
@@ -135,27 +138,38 @@
 			});
 		},
 		toggleMenu = function() {
-			$body.toggleClass(kssMenuIsOpenClass);
+			if($body.hasClass(kssMenuIsOpenClass)) {
+				closeMenu();
+			} else {
+				openMenu();
+			}
+		},
+		openMenu = function() {
+			$body.addClass(kssMenuIsOpenClass);
 
 			// Fallback for older browsers.
 			if(!Modernizr.csstransforms) {
-				if($kssMenuWrapper.is(':visible')) {
-					$kssMenuWrapper.animate({
-						left: '-' + kssMenuWrapperWidth
-					}, 400, function(){
-						$kssMenuWrapper.hide();
-					} );
-					$kssSiteWrapper.animate({
-						marginLeft: '0'
-					}, 400 );
-				} else {
-					$kssMenuWrapper.show().animate({
-						left: '0'
-					}, 400 );
-					$kssSiteWrapper.animate({
-						marginLeft: kssMenuWrapperWidth
-					}, 400 );
-				}
+				$kssMenuWrapper.show().animate({
+					left: '0'
+				}, 400 );
+				$kssSiteWrapper.animate({
+					marginLeft: kssMenuWrapperWidth
+				}, 400 );
+			}
+		},
+		closeMenu = function() {
+			$body.removeClass(kssMenuIsOpenClass);
+
+			// Fallback for older browsers.
+			if(!Modernizr.csstransforms) {
+				$kssMenuWrapper.animate({
+					left: '-' + kssMenuWrapperWidth
+				}, 400, function(){
+					$kssMenuWrapper.hide();
+				} );
+				$kssSiteWrapper.animate({
+					marginLeft: '0'
+				}, 400 );
 			}
 		};
 
