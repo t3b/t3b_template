@@ -15,6 +15,10 @@
 	<script src="../Resources/Private/Javascripts/Libaries/modernizr/modernizr.js"></script>
 </head>
 <body class="kssBody">
+	<header class="kss___header" role="banner">
+		<a href="#kss___nav" class="kss___header__toggleNav" data-action="toggle" data-axis="x" data-target="#kss___nav">&equiv;</a>
+		<h1><a href="index.html"><!= pkg.name !> Styleguide</a></h1>
+	</header>
 	<nav class="kss___navWrapper">
 		<ul class="nav nav--stacked kss___nav" id="kss___nav" data-kss-activeMenuIndex="{{rootNumber}}">
 			<li class="kss___nav__item kss___nav__item--root"><a href="index.html">0.0: Overview</a></li>
@@ -37,10 +41,6 @@
 		{{/if}}
 	</nav>
 	<div class="kss___siteWrapper">
-		<header class="kss___header" role="banner">
-			<a href="#kss___nav" class="kss___header__toggleNav" data-action="toggle" data-axis="x" data-target="#kss___nav">&equiv;</a>
-			<h1><a href="index.html"><!= pkg.name !> Styleguide</a></h1>
-		</header>
 		<main class="kss___contentWrapper" role="main">
 			{{#if overview}}
 			{{html overview}}

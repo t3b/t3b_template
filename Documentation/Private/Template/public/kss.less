@@ -35,8 +35,7 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 1;
-	margin-bottom: @baseSpacing*2;
+	z-index: 3;
 	padding: 26px @baseIndent*4 26px;
 	border-bottom: 1px solid @baseBorderColor;
 	font-family: @baseFontFamily;
@@ -85,7 +84,7 @@
   position: fixed;
   top: 0;
   height: 100%;
-  z-index: 999999;
+  z-index: 2;
   width: @navWidth;
   background: @darkBackgroundColor;
 	font-family: @baseFontFamily;
@@ -93,7 +92,7 @@
 }
 
 .kss___nav {
-	padding: 18px @baseIndent 0;
+	padding: @baseIndent*4 @baseIndent 0;
 }
 	.kss___nav__item {
 		border-bottom: 1px solid @darkActionColor;
