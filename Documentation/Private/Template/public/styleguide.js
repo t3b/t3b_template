@@ -15,6 +15,45 @@
 		urlHash = window.location.hash,
 		scrollBuffer = false,
 
+		init = function() {
+			// Add the active class for the current item in the sideMenu.
+			$kssMenuActiveItem.addClass("kss___nav__item--active");
+
+			// Format the template.
+			formatTemplate();
+
+			if ($kssMenuSub.length) {
+				// Add the menu depth classes for each item.
+				$kssMenuSubItems.each(function(index, elem) {
+					var $this = $(elem),
+						$referenceNum = $this.find('.kss___navSub__item__ref'),
+						depth = $referenceNum.html().split('.').length;
+					$this.addClass('kss___navSub__item--' + depth);
+				});
+
+				// Append the subMenu of the current item into the sideMenu.
+				$kssMenuSub.appendTo(".kss___nav__item--active");
+
+				// Set the active class on the current item.
+				scrollSpy();
+				$window.on("scroll", function() {
+					if (!scrollBuffer) {
+						scrollBuffer = setTimeout(function () {
+							scrollSpy();
+							scrollBuffer = false;
+						}, 60);
+					}
+				});
+			}
+
+			// Set the height of the sideNav as a min-height on the contentWrapper.
+			$kssContentWrapper.css("min-height", $kssMenu.height());
+
+			// Ensure code blocks are highlighted properly...
+			$('pre>code').addClass('prettyprint');
+			prettyPrint();
+		},
+
 		scrollSpy = function () {
 			var scrollTop = $window.scrollTop(),
 				$kssMenuSubAnchors = $kssMenuSub.find("a"),
@@ -66,40 +105,6 @@
 			});
 		};
 
-	// Add the active class for the current item in the sideMenu.
-	$kssMenuActiveItem.addClass("kss___nav__item--active");
+	init();
 
-	// Format the template.
-	formatTemplate();
-
-	if ($kssMenuSub.length) {
-		// Add the menu depth classes for each item.
-		$kssMenuSubItems.each(function(index, elem) {
-			var $this = $(elem),
-				$referenceNum = $this.find('.kss___navSub__item__ref'),
-				depth = $referenceNum.html().split('.').length;
-			$this.addClass('kss___navSub__item--' + depth);
-		});
-
-		// Append the subMenu of the current item into the sideMenu.
-		$kssMenuSub.appendTo(".kss___nav__item--active");
-
-		// Set the active class on the current item.
-		scrollSpy();
-		$window.on("scroll", function() {
-			if (!scrollBuffer) {
-				scrollBuffer = setTimeout(function () {
-					scrollSpy();
-					scrollBuffer = false;
-				}, 60);
-			}
-		});
-	}
-
-	// Set the height of the sideNav as a min-height on the contentWrapper.
-	$kssContentWrapper.css("min-height", $kssMenu.height());
-
-	// Ensure code blocks are highlighted properly...
-	$('pre>code').addClass('prettyprint');
-	prettyPrint();
 })(jQuery);
