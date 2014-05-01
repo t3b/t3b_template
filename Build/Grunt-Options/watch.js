@@ -11,7 +11,7 @@ module.exports = {
 	},
 	"sass" : {
 		"files" : [config.Sass.sassDir + "/**/*.scss"],
-		"tasks" : ["sass:dev", "autoprefixer"]
+		"tasks" : ["sass:dev", "autoprefixer:main"]
 	},
 	"js" : {
 		"files" : ["<%= jshint.files %>"],
@@ -19,6 +19,6 @@ module.exports = {
 	},
 	"docs" : {
 		"files" : ["Documentation/Private/Template/**/*"],
-		"tasks" : ["styleguide"]
+		"tasks" : ["styleguide", "autoprefixer:styleguide"]
 	}
 };
