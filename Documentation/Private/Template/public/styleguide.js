@@ -3,6 +3,7 @@
 	"use strict";
 
 	var $window = $(window),
+		$body = $('body'),
 		urlHash = window.location.hash,
 		scrollBuffer = false,
 
@@ -14,6 +15,7 @@
 		$kssMenuActiveItem = $kssMenuItems.eq($kssMenu.data("kss-activemenuindex")),
 		$kssMenuSub = $(".kss___navSub"),
 		$kssMenuSubItems = $kssMenuSub.find(".kss___navSub__item"),
+		kssMenuIsOpenClass = 'kss___navIsOpen',
 		kssMenuWrapperWidth = $kssMenuWrapper.outerWidth(),
 		kssMenuStickyClass = "kss___nav--sticky",
 		kssMenuSubActiveClass = "kss___navSub__item--active",
@@ -25,7 +27,10 @@
 
 		// Initial setup of the application.
 		init = function() {
-			$kssMenuToggle.on("click", function(){
+			$kssMenuToggle.on("click", function(event){
+				event.preventDefault();
+				event.stopImmediatePropagation();
+
 				$(this).toggleClass('kss___header__toggleNav--active');
 				toggleMenu();
 			});
@@ -116,22 +121,27 @@
 			});
 		},
 		toggleMenu = function() {
-			if($kssMenuWrapper.is(':visible')) {
-				$kssMenuWrapper.animate({
-					left: '-' + kssMenuWrapperWidth
-				}, 400, function(){
-					$kssMenuWrapper.hide();
-				} );
-				$kssSiteWrapper.animate({
-					marginLeft: '0'
-				}, 400 );
-			} else {
-				$kssMenuWrapper.show().animate({
-					left: '0'
-				}, 400 );
-				$kssSiteWrapper.animate({
-					marginLeft: kssMenuWrapperWidth
-				}, 400 );
+			$body.toggleClass(kssMenuIsOpenClass);
+
+			// Fallback for older browsers.
+			if(!Modernizr.csstransforms) {
+				if($kssMenuWrapper.is(':visible')) {
+					$kssMenuWrapper.animate({
+						left: '-' + kssMenuWrapperWidth
+					}, 400, function(){
+						$kssMenuWrapper.hide();
+					} );
+					$kssSiteWrapper.animate({
+						marginLeft: '0'
+					}, 400 );
+				} else {
+					$kssMenuWrapper.show().animate({
+						left: '0'
+					}, 400 );
+					$kssSiteWrapper.animate({
+						marginLeft: kssMenuWrapperWidth
+					}, 400 );
+				}
 			}
 		};
 

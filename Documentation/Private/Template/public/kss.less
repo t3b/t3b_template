@@ -16,6 +16,7 @@
 @baseSpacing: 15px;
 @baseIndent: 20px;
 
+@navWidth: 480px;
 
 //
 // Base element styles
@@ -79,12 +80,11 @@
 // Styleguide Navigation
 //
 .kss___navWrapper {
-  display: none;
   position: fixed;
   top: 0;
   height: 100%;
   z-index: 999999;
-  width: 480px;
+  width: @navWidth;
   background: @darkBackgroundColor;
 	font-family: @baseFontFamily;
 	font-size: @baseFontSize;
@@ -320,7 +320,7 @@
 // Styleguide Footer
 //
 .kss___footer {
-	margin-top: @baseSpacing*2;
+	margin-top: @baseSpacing*4;
 	padding: 26px @baseIndent;
 	background: @baseBackgroundColor;
 	border-top: 1px solid @baseBorderColor;
@@ -390,3 +390,53 @@ li.L6,
 li.L7,
 li.L8 {
   list-style-type: normal; }
+
+
+@keyframes menuSlideIn {
+  from {
+  	transform: translateX(-@navWidth);
+  }
+  to {
+  	transform: translateX(0);
+  }
+}
+@keyframes contentSlideOut {
+  from {
+  	transform: translateX(0);
+  }
+  to {
+  	transform: translateX(@navWidth);
+  }
+}
+
+@keyframes menuSlideOut {
+  from {
+  	transform: translateX(0);
+  }
+  to {
+  	transform: translateX(-@navWidth);
+  }
+}
+@keyframes contentSlideIn {
+  from {
+  	transform: translateX(@navWidth);
+  }
+  to {
+  	transform: translateX(0);
+  }
+}
+
+.kss___navWrapper {
+	animation: menuSlideOut .3s both;
+}
+.kss___siteWrapper {
+	animation: contentSlideIn .3s both;
+}
+.kss___navIsOpen {
+	.kss___navWrapper {
+		animation: menuSlideIn .3s both;
+	}
+	.kss___siteWrapper {
+		animation: contentSlideOut .3s both;
+	}
+}
