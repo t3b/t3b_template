@@ -61,7 +61,7 @@
 				{{/whenDepth}}
 				{{#ifAny markup modifiers}}
 				<div class="kss-box">{{html description}}{{#if modifiers}}
-					<table class="kss-box__modifierTable table table--condensed">
+					<table class="kss-box__modifierTable table">
 						<thead>
 							<tr>
 								<th colspan="2">Aviable modifiers</th>
@@ -71,7 +71,7 @@
 						<tbody>
 						{{#eachModifier}}
 							<tr>
-								<td>{{name}}</td>
+								<td><pre class="kss-box__modifierTable__modifierName">{{name}}</pre></td>
 								<td>{{html description}}</td>
 							</tr>
 						{{/eachModifier}}
