@@ -23,16 +23,8 @@
 			formatTemplate();
 
 			if ($kssMenuSub.length) {
-				// Add the menu depth classes for each item.
-				$kssMenuSubItems.each(function(index, elem) {
-					var $this = $(elem),
-						$referenceNum = $this.find('.kss___navSub__item__ref'),
-						depth = $referenceNum.html().split('.').length;
-					$this.addClass('kss___navSub__item--' + depth);
-				});
-
-				// Append the subMenu of the current item into the sideMenu.
-				$kssMenuSub.appendTo(".kss___nav__item--active");
+				// Render the submenu
+				renderSubMenu();
 
 				// Set the active class on the current item.
 				scrollSpy();
@@ -52,6 +44,19 @@
 			// Ensure code blocks are highlighted properly...
 			$('pre>code').addClass('prettyprint');
 			prettyPrint();
+		},
+
+		renderSubMenu = function() {
+			// Add the menu depth classes for each item.
+			$kssMenuSubItems.each(function(index, elem) {
+				var $this = $(elem),
+					$referenceNum = $this.find('.kss___navSub__item__ref'),
+					depth = $referenceNum.html().split('.').length;
+				$this.addClass('kss___navSub__item--' + depth);
+			});
+
+			// Append the subMenu of the current item into the sideMenu.
+			$kssMenuSub.appendTo(".kss___nav__item--active");
 		},
 
 		scrollSpy = function () {
