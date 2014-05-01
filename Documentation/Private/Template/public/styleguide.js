@@ -15,6 +15,7 @@
 		$kssMenuActiveItem = $kssMenuItems.eq($kssMenu.data("kss-activemenuindex")),
 		$kssMenuSub = $(".kss___navSub"),
 		$kssMenuSubItems = $kssMenuSub.find(".kss___navSub__item"),
+		kssMenuToggleActiveClass = 'kss___header__toggleNav--active',
 		kssMenuIsOpenClass = 'kss___navIsOpen',
 		kssMenuWrapperWidth = $kssMenuWrapper.outerWidth(),
 		kssMenuStickyClass = "kss___nav--sticky",
@@ -31,7 +32,6 @@
 				event.preventDefault();
 				event.stopImmediatePropagation();
 
-				$(this).toggleClass('kss___header__toggleNav--active');
 				toggleMenu();
 			});
 			$kssSiteWrapper.on('click', function() {
@@ -145,6 +145,7 @@
 			}
 		},
 		openMenu = function() {
+			$kssMenuToggle.addClass(kssMenuToggleActiveClass);
 			$body.addClass(kssMenuIsOpenClass);
 
 			// Fallback for older browsers.
@@ -158,6 +159,7 @@
 			}
 		},
 		closeMenu = function() {
+			$kssMenuToggle.removeClass(kssMenuToggleActiveClass);
 			$body.removeClass(kssMenuIsOpenClass);
 
 			// Fallback for older browsers.
