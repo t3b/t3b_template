@@ -112,6 +112,13 @@
 			}
 		},
 		formatTemplate = function() {
+			// Modify the page header.
+			var pageName = $kssContentWrapper.children('h1').find('.kss-header').html();
+			if(pageName) {
+				$('.kss_header__pageName').html(' - ' + pageName);
+			}
+
+			// Additional section formating
 			$('.kss-box > p').each(function(index, elem) {
 				var $this = $(elem),
 					text = $this.html(),

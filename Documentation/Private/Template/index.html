@@ -17,7 +17,7 @@
 <body class="kssBody">
 	<header class="kss___header" role="banner">
 		<a href="#kss___nav" class="kss___header__toggleNav" data-action="toggle" data-axis="x" data-target="#kss___nav">&equiv;</a>
-		<h1><a href="index.html"><!= pkg.name !> Styleguide</a></h1>
+		<h1><a href="index.html"><!= pkg.name !> Styleguide <span class="kss_header__pageName"></span></a></h1>
 	</header>
 	<nav class="kss___navWrapper">
 		<ul class="nav nav--stacked kss___nav" id="kss___nav" data-kss-activeMenuIndex="{{rootNumber}}">
@@ -50,7 +50,7 @@
 			{{#whenDepth 1}}
 			<h1 class="kss-title" id="block-{{ reference }}">
 				<a class="kss-title__refLink" href="#block-{{ reference }}">#</a>
-				<span class="kss-ref">{{ reference }}.0</span> - {{ header }}
+				<span class="kss-ref">{{ reference }}.0</span> - <span class="kss-header">{{ header }}</span>
 			</h1>
 			{{else}}
 			<section class="kss-depth-{{ refDepth }}" id="block-{{ reference }}">
