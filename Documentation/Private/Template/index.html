@@ -60,7 +60,23 @@
 				</h1>
 				{{/whenDepth}}
 				{{#ifAny markup modifiers}}
-				<div class="kss-box">{{html description}}</div>
+				<div class="kss-box">{{html description}}{{#if modifiers}}
+					<table class="kss-box__modifierTable table table--condensed">
+						<thead>
+							<tr>
+								<th colspan="2">Aviable modifiers</th>
+							</tr>
+						</thead>
+
+						<tbody>
+						{{#eachModifier}}
+							<tr>
+								<td>{{name}}</td>
+								<td>{{html description}}</td>
+							</tr>
+						{{/eachModifier}}
+						</tbody>
+					</table>{{/if}}</div>
 				<div class="kss-styleguideSection">
 					<div class="kss-styleguideElement cf">
 						<div class="kss-styleguideElement__heading"><b>Default</b></div>
