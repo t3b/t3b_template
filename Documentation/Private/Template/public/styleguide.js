@@ -3,19 +3,33 @@
 	"use strict";
 
 	var $window = $(window),
+		urlHash = window.location.hash,
+		scrollBuffer = false,
+
+		// Nav vars
+		$kssMenuToggle = $('.kss___header__toggleNav'),
+		$kssMenuWrapper = $(".kss___navWrapper"),
 		$kssMenu = $(".kss___nav"),
 		$kssMenuItems = $kssMenu.find(".kss___nav__item"),
 		$kssMenuActiveItem = $kssMenuItems.eq($kssMenu.data("kss-activemenuindex")),
 		$kssMenuSub = $(".kss___navSub"),
 		$kssMenuSubItems = $kssMenuSub.find(".kss___navSub__item"),
-		$kssContentWrapper = $('.kss___contentWrapper'),
+		kssMenuWrapperWidth = $kssMenuWrapper.outerWidth(),
 		kssMenuStickyClass = "kss___nav--sticky",
 		kssMenuSubActiveClass = "kss___navSub__item--active",
 		kssMenuOffset = $kssMenu.offset().top,
-		urlHash = window.location.hash,
-		scrollBuffer = false,
 
+		// Content related vars
+		$kssSiteWrapper = $('.kss___siteWrapper'),
+		$kssContentWrapper = $('.kss___contentWrapper'),
+
+		// Initial setup of the application.
 		init = function() {
+			$kssMenuToggle.on("click", function(){
+				$(this).toggleClass('kss___header__toggleNav--active');
+				toggleMenu();
+			});
+
 			// Add the active class for the current item in the sideMenu.
 			$kssMenuActiveItem.addClass("kss___nav__item--active");
 
@@ -42,7 +56,6 @@
 			$kssContentWrapper.css("min-height", $kssMenu.height());
 
 			// Ensure code blocks are highlighted properly...
-			$('pre>code').addClass('prettyprint');
 			prettyPrint();
 		},
 
@@ -89,13 +102,6 @@
 			} else if(scrollTop < $($kssMenuSubAnchors.eq(0).attr("href").replace(/\./g, "\\.")).offset().top) {
 				$kssMenuSubItems.eq(0).addClass(kssMenuSubActiveClass);
 			}
-
-			// Validate if the sideNav should be sticky or not.
-			if(scrollTop > kssMenuOffset) {
-				$kssMenu.addClass(kssMenuStickyClass);
-			} else {
-				$kssMenu.removeClass(kssMenuStickyClass);
-			}
 		},
 		formatTemplate = function() {
 			$('.kss-box').each(function(index, elem) {
@@ -108,8 +114,26 @@
 					$this.html(boxHtml.replace(isPureCodeMarker, '')).parent().addClass('kss___hideExamples');
 				}
 			});
+		},
+		toggleMenu = function() {
+			if($kssMenuWrapper.is(':visible')) {
+				$kssMenuWrapper.animate({
+					left: '-' + kssMenuWrapperWidth
+				}, 400, function(){
+					$kssMenuWrapper.hide();
+				} );
+				$kssSiteWrapper.animate({
+					marginLeft: '0'
+				}, 400 );
+			} else {
+				$kssMenuWrapper.show().animate({
+					left: '0'
+				}, 400 );
+				$kssSiteWrapper.animate({
+					marginLeft: kssMenuWrapperWidth
+				}, 400 );
+			}
 		};
 
 	init();
-
 })(jQuery);
