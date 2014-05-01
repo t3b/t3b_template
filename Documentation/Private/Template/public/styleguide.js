@@ -109,14 +109,28 @@
 			}
 		},
 		formatTemplate = function() {
-			$('.kss-box').each(function(index, elem) {
+			$('.kss-box > p').each(function(index, elem) {
 				var $this = $(elem),
-					isPureCodeMarker = '&lt;!= isPureCode !&gt;',
-					boxHtml = $this.html(),
-					isPureCode = boxHtml.search(isPureCodeMarker);
+					text = $this.html(),
+					regExp = /(^&lt;!= |, !&gt)/;
 
-				if(isPureCode > 1) {
-					$this.html(boxHtml.replace(isPureCodeMarker, '')).parent().addClass('kss___hideExamples');
+				if(regExp.test(text)) {
+					text = text.replace('&lt;!= ', '').replace(' !&gt;', '');
+					var $wrapper = $this.parent().parent(),
+						array = text.split(' || ');
+
+					// Check for code only sections.
+					if(array.indexOf('isPureCode') !== -1) {
+						$wrapper.addClass('kss___hideExamples');
+					}
+
+					// Set the optional 'css' code type on the prettyPrint element.
+					if(array.indexOf('type: css') !== -1) {
+						$wrapper.find('.kss-markup > pre').removeClass('lang-html').addClass('lang-css');
+					}
+
+					// Remove the marker element.
+					$this.remove();
 				}
 			});
 		},
