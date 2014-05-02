@@ -25,7 +25,11 @@
 	background: @baseBackgroundColor;
 	margin: 0;
 }
-
+* {
+	&,
+	&:before,
+	&:after { box-sizing: border-box; }
+}
 
 //
 // Styleguide Header
@@ -101,9 +105,11 @@
 }
 
 .kss___nav {
+	height: 100%;
 	margin: 0;
 	padding: @baseIndent*4 @baseIndent 0 0;
 	list-style: none;
+	overflow-x: scroll;
 	a {
 		display: block;
 		text-decoration: none;
