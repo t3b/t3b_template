@@ -9,7 +9,7 @@ var config = require("../Config");
 module.exports = {
 	options: {
 		template: {
-			src: 'Documentation/Private/Template'
+			src: 'Build/Templates/Kss-Node'
 		},
 		framework: {
 			name: 'kss'
