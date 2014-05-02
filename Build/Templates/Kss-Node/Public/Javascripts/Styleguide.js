@@ -76,6 +76,7 @@
 				event.preventDefault();
 				event.stopImmediatePropagation();
 
+				closeMenu();
 				scrollToElement($(this).attr("href").replace("#", ""));
 			});
 
