@@ -24,7 +24,6 @@
 .kssBody {
 	background: @baseBackgroundColor;
 	margin: 0;
-	overflow: hidden;
 }
 
 
@@ -48,6 +47,7 @@
 		line-height: 1;
 		> a {
 			color: @baseTextColor;
+			&,
 			&:hover {
 				text-decoration: none;
 			}
@@ -68,6 +68,7 @@
 		line-height: 74px;
 		font-size: 30px;
 		font-family: Arial;
+		color: @baseActionColor;
 		transition: .2s ease color;
 		text-decoration: none;
 		&:hover {
@@ -100,7 +101,13 @@
 }
 
 .kss___nav {
-	padding: @baseIndent*4 @baseIndent 0;
+	margin: 0;
+	padding: @baseIndent*4 @baseIndent 0 0;
+	list-style: none;
+	a {
+		display: block;
+		text-decoration: none;
+	}
 }
 	.kss___nav__item {
 		border-bottom: 1px solid @darkActionColor;
@@ -130,9 +137,11 @@
 	}
 
 .kss___navSub {
+	margin: 0;
 	font-size: 12px;
 	letter-spacing: .4px;
 	padding-bottom: @baseSpacing;
+	padding-left: 0;
 }
 	.kss___navSub__item {
 		display: table-row !important;
@@ -403,6 +412,7 @@ pre.prettyprint {
 	font-size: 12px;
 	border: 1px solid #E1E1E8;
 	border-top: 0;
+	margin: 0;
 }
 
 pre.prettyprint.linenums {
