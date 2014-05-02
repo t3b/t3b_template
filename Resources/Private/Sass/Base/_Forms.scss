@@ -11,6 +11,8 @@ Styleguide 2.1
 Text inputs
 
 .textInput         - Basic styling for text input elements.
+.textInput:hover   - Hover styling for basic text input elements.
+.textInput:focus   - Focused styling for basic text input elements.
 
 Markup:
 <input type="text" class="{$modifiers}" /><br>

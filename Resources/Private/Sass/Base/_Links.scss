@@ -11,7 +11,9 @@ Styleguide 2.7
 Standard anchors
 
 Markup:
-<a href="#">I am an anchor element.</a>
+<a href="#" class="{$modifiers}">I am an anchor element.</a>
+
+:hover   - Hover styling for anchor elements.
 
 Styleguide 2.7.1
 */
