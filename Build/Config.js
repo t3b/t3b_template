@@ -45,6 +45,7 @@ var ConfigCreator = function() {
 			"Gruntfile.js",
 			"Build/**/*.js",
 			this.JavaScripts.paths.devDir + "/**/*.js",
+			"!Build/Templates/Kss-Node/**/*",
 			"!" + this.JavaScripts.paths.devDir + "/Libaries/**/*",
 			"!" + this.JavaScripts.paths.distDir + "/Libaries/**/*"
 		]
