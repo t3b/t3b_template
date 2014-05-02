@@ -1,7 +1,7 @@
 /**
- * Grunt-Contrib-Clean
- * @description Cleans files and folders.
- * @docs https://github.com/gruntjs/grunt-contrib-clean
+ * Grunt-Styleguide
+ * @description Universal CSS styleguide generator for grunt. Easily integrate Styledocco or KSS styleguide generation into your development workflow.
+ * @docs https://github.com/indieisaconcept/grunt-styleguide
  */
 
 var config = require("../Config");
