@@ -10,6 +10,9 @@ module.exports = function(grunt) {
 		// Create the living CSS styleguide.
 		grunt.task.run(["styleguide"]);
 
+		// Prefix the docs stylesheet.
+		grunt.task.run("autoprefixer:styleguide");
+
 		// Replace general text-strings and paths.
 		grunt.task.run("css");
 	});
