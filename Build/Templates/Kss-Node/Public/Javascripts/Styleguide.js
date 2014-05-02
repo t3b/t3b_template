@@ -23,11 +23,17 @@
 		kssMenuOffset = $kssMenu.offset().top,
 
 		// Content related vars
+		$kssSiteHeader = $('.kss___header'),
 		$kssSiteWrapper = $('.kss___siteWrapper'),
 		$kssContentWrapper = $('.kss___contentWrapper'),
+		kssSiteHeaderHeight,
 
 		// Initial setup of the application.
 		init = function() {
+			// Set up some vars
+			kssSiteHeaderHeight = $kssSiteHeader[0].offsetHeight;
+
+			// Off-Canvas events
 			$kssMenuToggle.on("click", function(event){
 				event.preventDefault();
 				event.stopImmediatePropagation();
@@ -37,6 +43,11 @@
 			$kssSiteWrapper.on('click', function() {
 				closeMenu();
 			});
+
+			// Initial scroll to the given window.location hash.
+			if(urlHash) {
+				scrollToElement(urlHash.replace('#', ''));
+			}
 
 			// Add the active class for the current item in the sideMenu.
 			$kssMenuActiveItem.addClass("kss___nav__item--active");
@@ -60,13 +71,20 @@
 				});
 			}
 
+			// ScrollTo section events
+			$('.kss___navSub a, .kss-title__refLink').on('click', function(event) {
+				event.preventDefault();
+				event.stopImmediatePropagation();
+
+				scrollToElement($(this).attr('href').replace('#', ''));
+			});
+
 			// Set the height of the sideNav as a min-height on the contentWrapper.
 			$kssContentWrapper.css("min-height", $kssMenu.height());
 
 			// Ensure code blocks are highlighted properly.
 			prettyPrint();
 		},
-
 		renderSubMenu = function() {
 			// Add the menu depth classes for each item.
 			$kssMenuSubItems.each(function(index, elem) {
@@ -79,18 +97,17 @@
 			// Append the subMenu of the current item into the sideMenu.
 			$kssMenuSub.appendTo(".kss___nav__item--active");
 		},
-
 		scrollSpy = function () {
 			var scrollTop = $window.scrollTop(),
 				$kssMenuSubAnchors = $kssMenuSub.find("a"),
 				currentTargetHash,
 				activeIndex;
 
-			// Get the new index for the new active subMenuItem.
+			// Get the index for the new active subMenuItem.
 			$kssMenuSubAnchors.each(function (index) {
 				var anchorHash = $(this).attr("href"),
 					$anchorTarget = $(anchorHash.replace(/\./g, "\\.")),
-					offsetTop = $anchorTarget.offset().top,
+					offsetTop = $anchorTarget.offset().top  - kssSiteHeaderHeight,
 					offsetBottom = offsetTop + $anchorTarget.outerHeight(true);
 
 				if (offsetTop <= scrollTop && scrollTop < offsetBottom) {
@@ -110,6 +127,12 @@
 			} else if(scrollTop < $($kssMenuSubAnchors.eq(0).attr("href").replace(/\./g, "\\.")).offset().top) {
 				$kssMenuSubItems.eq(0).addClass(kssMenuSubActiveClass);
 			}
+		},
+		scrollToElement = function(id) {
+			var offset = document.getElementById(id).offsetTop - kssSiteHeaderHeight,
+				documentElements = $("html, body");
+
+			documentElements.animate({scrollTop:offset}, '500', 'swing');
 		},
 		formatTemplate = function() {
 			// Modify the page header.
