@@ -4,7 +4,7 @@
 
 	var KssStateGenerator = (function() {
 			var replaceRule = function(matched, stuff) {
-					return ".pseudo-class-" + matched.replace(':', '');
+					return ".pseudo-class-" + matched.replace(":", "");
 				},
 				ParseAndInsertRules = function() {
 					var idx, idxs, pseudos, rule, stylesheet, _i, _len, _len2, _ref, _ref2;
@@ -25,9 +25,9 @@
 
 			ParseAndInsertRules.prototype.insertRule = function(rule) {
 				var headEl, styleEl;
-				headEl = document.getElementsByTagName('head')[0];
-				styleEl = document.createElement('style');
-				styleEl.type = 'text/css';
+				headEl = document.getElementsByTagName("head")[0];
+				styleEl = document.createElement("style");
+				styleEl.type = "text/css";
 				if (styleEl.styleSheet) {
 					styleEl.styleSheet.cssText = rule;
 				} else {
