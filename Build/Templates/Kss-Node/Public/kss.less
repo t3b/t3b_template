@@ -406,55 +406,93 @@
 
 
 
-/* Pretty printing styles. Used with prettify.js.
+/**
+ * GitHub theme
  *
- * This version is slight modified based on the original version.
- *
- * Name:	Stanley Ng
- * Email: 	stanleyhlng@googlegroups.com
- *
- * Reference:
- * http://code.google.com/p/google-code-prettify/source/browse/trunk/src/prettify.css
+ * @author Craig Campbell
+ * @version 1.0.4
  */
-.pln{color:#48484C}.str{color:#D14}.kwd{color:#1E347B}.com{color:#93A1A1}.typ{color:teal}.lit{color:#195F91}.clo,.opn,.pun{color:#93A1A1}.tag{color:#008}.atn{color:teal}.atv{color:#D14}.dec,.var{color:teal}.fun{color:#DC322F}
-
-/* Put a border around prettyprinted code snippets. */
-pre.prettyprint {
+@prettyPrintBackground: #F7F7F9;
+pre.rainbow {
+	position: relative;
 	background-color: #F7F7F9;
-	padding: @baseIndent 0;
+	padding: @baseIndent/2 @baseIndent @baseIndent/2 0;
 	font-size: 12px;
 	border: 1px solid #E1E1E8;
 	border-top: 0;
 	margin: 0;
+	&:after {
+		content: '';
+		width: 33px;
+		height: 100%;
+		border-right: 1px solid #e5e5e5;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+	}
+	.line {
+		color: rgba(0,0,0,0.4);
+		display: inline-block;
+		width: 33px;
+		margin-right: 1.4em;
+		text-align: right;
+		padding-right: 10px;
+		font-family: Consolas,"Liberation Mono",Courier,monospace;
+		position: relative;
+		z-index: 1;
+		&:after {
+			content: attr(data-line);
+		}
+	}
 }
 
-pre.prettyprint.linenums {
-	box-shadow: 40px 0 0 #FBFBFC inset, 41px 0 0 #ECECF0 inset;
+pre .comment {
+    color: #998;
 }
 
-/* Specify class=linenums on a pre to get line numbering */
-ol.linenums {
-	color: #1E347B;
-	margin: 0 0 0 10px;
+pre .support {
+    color: #0086B3;
 }
 
-ol.linenums li {
-	color: #BEBEC5;
-	line-height: 18px;
-	padding-left: 12px;
-	text-shadow: 0 1px 0 #FFFFFF;
+pre .tag, pre .tag-name {
+    color: navy;
 }
 
-li.L0,
-li.L1,
-li.L2,
-li.L3,
-li.L5,
-li.L6,
-li.L7,
-li.L8 {
-	list-style-type: normal;
+pre .keyword, pre .css-property, pre .vendor-prefix, pre .sass, pre .class, pre .id, pre .css-value, pre .entity.function, pre .storage.function {
+    font-weight: bold;
 }
+
+pre .css-property, pre .css-value, pre .vendor-prefix, pre .support.namespace {
+    color: #333;
+}
+
+pre .constant.numeric, pre .keyword.unit, pre .hex-color {
+    font-weight: normal;
+    color: #099;
+}
+
+pre .entity.class {
+    color: #458;
+}
+
+pre .entity.id, pre .entity.function {
+    color: #900;
+}
+
+pre .attribute, pre .variable {
+    color: teal;
+}
+
+pre .string, pre .support.value  {
+    font-weight: normal;
+    color: #d14;
+}
+
+pre .regexp {
+    color: #009926;
+}
+
 
 
 @keyframes menuSlideIn {

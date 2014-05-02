@@ -80,7 +80,9 @@
 			});
 
 			// Ensure code blocks are highlighted properly.
-			prettyPrint();
+			$('.prettyprint.lang-html').attr('data-language', 'html');
+			$('.prettyprint.lang-css').attr('data-language', 'css');
+			//prettyPrint();
 		},
 		renderSubMenu = function() {
 			// Add the menu depth classes for each item.
