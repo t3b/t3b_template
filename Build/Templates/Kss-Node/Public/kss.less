@@ -84,14 +84,19 @@
 // Styleguide Navigation
 //
 .kss___navWrapper {
-  position: fixed;
-  top: 0;
-  height: 100%;
-  z-index: 2;
-  width: @navWidth;
-  background: @darkBackgroundColor;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	z-index: 2;
+	width: @navWidth;
+	background: @darkBackgroundColor;
 	font-family: @baseFontFamily;
 	font-size: @baseFontSize;
+	transform: translateX(-@navWidth);
+	animation: menuSlideOut .3s forwards;
+	.kss___navIsOpen & {
+		animation: menuSlideIn .3s forwards;
+	}
 }
 
 .kss___nav {
@@ -177,6 +182,10 @@
 .kss___siteWrapper {
 	position: relative;
 	background: #edf1f4;
+	animation: contentSlideIn .3s forwards;
+	.kss___navIsOpen & {
+		animation: contentSlideOut .3s forwards;
+	}
 }
 .kss___contentWrapper {
 	padding: @baseIndent*4 @baseIndent*4 0;
@@ -386,27 +395,29 @@
 
 /* Put a border around prettyprinted code snippets. */
 pre.prettyprint {
-  background-color: #F7F7F9;
-  padding: @baseIndent 0;
-  font-size: 12px;
-  border: 1px solid #E1E1E8;
-  border-top: 0;
+	background-color: #F7F7F9;
+	padding: @baseIndent 0;
+	font-size: 12px;
+	border: 1px solid #E1E1E8;
+	border-top: 0;
 }
 
 pre.prettyprint.linenums {
-  box-shadow: 40px 0 0 #FBFBFC inset, 41px 0 0 #ECECF0 inset;
+	box-shadow: 40px 0 0 #FBFBFC inset, 41px 0 0 #ECECF0 inset;
 }
 
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums {
-  color: #1E347B;
-  margin: 0 0 0 10px; }
+	color: #1E347B;
+	margin: 0 0 0 10px;
+}
 
 ol.linenums li {
-  color: #BEBEC5;
-  line-height: 18px;
-  padding-left: 12px;
-  text-shadow: 0 1px 0 #FFFFFF; }
+	color: #BEBEC5;
+	line-height: 18px;
+	padding-left: 12px;
+	text-shadow: 0 1px 0 #FFFFFF;
+}
 
 li.L0,
 li.L1,
@@ -416,54 +427,40 @@ li.L5,
 li.L6,
 li.L7,
 li.L8 {
-  list-style-type: normal; }
+	list-style-type: normal;
+}
 
 
 @keyframes menuSlideIn {
-  from {
-  	transform: translateX(-@navWidth);
-  }
-  to {
-  	transform: translateX(0);
-  }
+	from {
+		transform: translateX(-@navWidth);
+	}
+	to {
+		transform: translateX(0);
+	}
 }
 @keyframes contentSlideOut {
-  from {
-  	transform: translateX(0);
-  }
-  to {
-  	transform: translateX(@navWidth);
-  }
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(@navWidth);
+	}
 }
 
 @keyframes menuSlideOut {
-  from {
-  	transform: translateX(0);
-  }
-  to {
-  	transform: translateX(-@navWidth);
-  }
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-@navWidth);
+	}
 }
 @keyframes contentSlideIn {
-  from {
-  	transform: translateX(@navWidth);
-  }
-  to {
-  	transform: translateX(0);
-  }
-}
-
-.kss___navWrapper {
-	animation: menuSlideOut .3s both;
-}
-.kss___siteWrapper {
-	animation: contentSlideIn .3s both;
-}
-.kss___navIsOpen {
-	.kss___navWrapper {
-		animation: menuSlideIn .3s both;
+	from {
+		transform: translateX(@navWidth);
 	}
-	.kss___siteWrapper {
-		animation: contentSlideOut .3s both;
+	to {
+		transform: translateX(0);
 	}
 }
