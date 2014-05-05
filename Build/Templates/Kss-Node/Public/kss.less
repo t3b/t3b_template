@@ -496,6 +496,30 @@ pre .regexp {
 
 
 
+//
+// Disable the OffCanvas navigation of large screens.
+//
+@media screen and (min-width: 1300px) {
+	.kss___header {
+		padding-left: @baseSpacing;
+	}
+	.kss___header__toggleNav {
+		display: none;
+	}
+	.kss___navWrapper {
+		animation: none;
+		transform: none;
+	}
+	.kss___siteWrapper {
+		animation: none;
+		padding-left: 450px;
+	}
+}
+
+
+//
+// Slide-In/Out animations
+//
 @keyframes menuSlideIn {
 	from {
 		transform: translateX(-@navWidth);
