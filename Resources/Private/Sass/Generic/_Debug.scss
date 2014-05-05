@@ -10,7 +10,7 @@ Debug code wich applies if the $devMode variable is set to 'true'.
 Environment banner
 */
 body::before {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	z-index: 99999;

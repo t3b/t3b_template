@@ -12,5 +12,8 @@ module.exports = {
 	},
 	"main": {
 		src: config.Sass.cssDir + "/*.css"
+	},
+	"styleguide": {
+		src: "Documentation/public/*.css"
 	}
 };

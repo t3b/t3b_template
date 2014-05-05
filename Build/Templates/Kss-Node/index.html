@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title><!= pkg.name !>: Living Styleguide</title>
+	<meta name="description" content="">
+	<meta name="generator" content="kss-node" />
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="Public/kss.css">
+	<link rel="stylesheet" href="../Resources/Public/Stylesheets/Main.css">
+	<link rel="shortcut icon" href="../ext_icon.gif" />
+	<script src="../Resources/Private/Javascripts/Libaries/modernizr/modernizr.js"></script>
+</head>
+<body class="kssBody">
+	<header class="kss___header" role="banner">
+		<a href="#kss___nav" class="kss___header__toggleNav" data-action="toggle" data-axis="x" data-target="#kss___nav">&equiv;</a>
+		<h1><a href="index.html"><!= pkg.name !> Styleguide <span class="kss_header__pageName"></span></a></h1>
+	</header>
+	<nav class="kss___navWrapper">
+		<ul class="nav nav--stacked kss___nav" id="kss___nav" data-kss-activeMenuIndex="{{rootNumber}}">
+			<li class="kss___nav__item kss___nav__item--root"><a href="index.html">0.0: Overview</a></li>
+			{{#eachRoot}}
+			<li class="kss___nav__item"><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
+			{{/eachRoot}}
+		</ul>
+		{{#if overview}}
+		{{else}}
+		<ul class="nav nav--stacked kss___navSub">
+			{{#eachSection rootNumber}}
+			{{#whenDepth 1}}
+			{{else}}
+			<li class="kss___navSub__item"><a href="#block-{{reference}}">
+				<span class="kss___navSub__item__ref">{{reference}}</span><span class="kss___navSub__item__header">{{header}}</span>
+			</a></li>
+			{{/whenDepth}}
+			{{/eachSection}}
+		</ul>
+		{{/if}}
+	</nav>
+	<div class="kss___siteWrapper">
+		<main class="kss___contentWrapper" role="main">
+			{{#if overview}}
+			{{html overview}}
+			{{else}}
+
+			{{#eachSection rootNumber}}
+			{{#whenDepth 1}}
+			<h1 class="kss-title" id="block-{{ reference }}">
+				<a class="kss-title__refLink" href="#block-{{ reference }}">#</a>
+				<span class="kss-ref">{{ reference }}.0</span> - <span class="kss-header">{{ header }}</span>
+			</h1>
+			{{else}}
+			<section class="kss-depth-{{ refDepth }}" id="block-{{ reference }}">
+				<h1 class="kss-title">
+					<a class="kss-title__refLink" href="#block-{{ reference }}">#</a>
+					<span class="kss-ref">{{ reference }}</span> - {{ header }}
+				</h1>
+				{{/whenDepth}}
+				{{#ifAny markup modifiers}}
+				<div class="kss-box">{{html description}}{{#if modifiers}}
+					<table class="kss-box__modifierTable table">
+						<thead>
+							<tr>
+								<th colspan="2">Aviable modifiers</th>
+							</tr>
+						</thead>
+
+						<tbody>
+						{{#eachModifier}}
+							<tr>
+								<td class="kss-box__modifierTable__modifierName"><pre>{{name}}</pre></td>
+								<td>{{html description}}</td>
+							</tr>
+						{{/eachModifier}}
+						</tbody>
+					</table>{{/if}}</div>
+				<div class="kss-styleguideSection">
+					<div class="kss-styleguideElement cf">
+						<div class="kss-styleguideElement__heading"><b>Default</b></div>
+						{{modifierMarkup}}
+					</div>
+					{{#eachModifier}}
+					<div class="kss-styleguideElement cf">
+						<div class="kss-styleguideElement__heading"><b>{{html description}}</b></div>
+						<div class="kss-styleguideElement__class">{{name}}</div>
+						{{modifierMarkup}}
+					</div>
+					{{/eachModifier}}
+				</div>
+				<div class="kss-markup">
+					<pre class="prettyprint lang-html linenums">{{markup}}</pre>
+				</div>
+				{{else}}
+				{{#if description}}
+				{{html description}}
+				{{/if}}
+				{{/ifAny}}
+				{{#whenDepth 1}} {{else}}
+			</section>
+			{{/whenDepth}}
+			{{/eachSection}}
+			{{/if}}
+		</main>
+		<footer class="kss___footer" role="contentinfo">
+			This Extension is based on the <a href="https://github.com/t3b/t3b_template" target="_blank">t3b_template</a> boilerplate.
+		</footer>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="Public/Javascripts/Rainbow.js"></script>
+	<script src="Public/Javascripts/GenerateStateRules.js"></script>
+	<script src="Public/Javascripts/Styleguide.js"></script>
+
+	<script type="text/javascript"
+		src="../Resources/Private/Javascripts/Libaries/requirejs/require.js"
+		data-main="../Resources/Private/Javascripts/Main"></script>
+</body>
+</html>

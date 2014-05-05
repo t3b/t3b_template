@@ -11,14 +11,14 @@ module.exports = {
 	},
 	"sass" : {
 		"files" : [config.Sass.sassDir + "/**/*.scss"],
-		"tasks" : ["sass:dev", "autoprefixer"]
+		"tasks" : ["css"]
 	},
 	"js" : {
 		"files" : ["<%= jshint.files %>"],
 		"tasks" : ["jshint"]
 	},
 	"docs" : {
-		"files" : ["Documentation/Private/Template/**/*"],
-		"tasks" : ["styleguide"]
+		"files" : ["Build/Templates/Kss-Node/**/*"],
+		"tasks" : ["styleguide", "autoprefixer:styleguide"]
 	}
 };

@@ -32,7 +32,7 @@ module.exports = function(grunt) {
 				"ext_tables.php",
 				"Configuration/**/*.ts",
 				"Configuration/**/*.txt",
-				"Documentation/Private/Template/index.html",
+				"Build/Templates/Kss-Node/index.html",
 				config.paths.private + "/Elements/**/*.html",
 				config.paths.private + "/Layouts/**/*.html",
 				config.paths.private + "/Partials/**/*.html",

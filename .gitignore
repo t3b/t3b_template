@@ -11,4 +11,4 @@ Resources/Private/Javascripts/Libaries/requirejs/*
 Resources/Public/Stylesheets/*.css
 Resources/Public/Stylesheets/*.map
 Documentation/*.html
-Documentation/public
+Documentation/Public

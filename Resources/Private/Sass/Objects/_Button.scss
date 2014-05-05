@@ -3,8 +3,9 @@ Button Object
 
 Display an anchor tag as a button
 
-.btn - Display an element as an button.
+.btn           - Display an element as an button.
 .btn.btn--full - Set the button width to the width of it's parent element.
+.btn:hover     - Standard hover styling for buttons.
 
 Markup:
 <button class="{$modifiers}">Send button</button>
@@ -17,7 +18,6 @@ Styleguide 4.1.1
 */
 %btn,
 .btn {
-	@extend %btn;
 	display: inline-block;
 	@include rem(margin-bottom, map-get($button, bottomSpacing));
 	/**

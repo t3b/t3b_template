@@ -8,6 +8,6 @@ var config = require("../Config");
 
 module.exports = {
 	"gitFolder" : '.git/',
-	"stylesheets" : [config.Sass.cssDir + "/*.css"],
+	"stylesheets" : [config.Sass.cssDir + "/*.css", config.Sass.cssDir + "/*.css.map"],
 	"imagesTempDir": config.Images.tempDir
 };

@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 
 		// Remove all stylesheets to force a new compilation.
 		grunt.task.run(["clean:stylesheets"]);
-		grunt.task.run(["sass:deploy", "autoprefixer"]);
+		grunt.task.run(["sass:deploy", "autoprefixer:main"]);
 
 		// Generate a custom modernizr build.
 		grunt.task.run(["modernizr"]);

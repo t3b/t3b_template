@@ -9,7 +9,8 @@
 // Image-Url($imagePath)
 //
 // Returns the path of an Image asset.
-// <!= isPureCode !>
+//
+// <!= type: css || isPureCode !>
 //
 // Markup:
 // .selector {
@@ -28,7 +29,8 @@
 // Relative Size($target-size, $context, $unit)
 //
 // Calculates em's based on pixel values.
-// <!= isPureCode !>
+//
+// <!= type: css || isPureCode !>
 //
 // Markup:
 // .selector {
@@ -46,7 +48,6 @@
 // Text direction check
 //
 // Checks the reading-direction of the site based on the '$direction' variable and sets the correct $start and $end variables
-// <!= isPureCode !>
 //
 $direction: ltr !default;
 $start: left !default;
@@ -61,7 +62,8 @@ $end: right !default;
 // Color-Adjust($color, $contrast)
 //
 // Adjusts a color based on the lightness which is passed as a second parameter, this function was written by @necolas(https://github.com/necolas/).
-// <!= isPureCode !>
+//
+// <!= type: css || isPureCode !>
 //
 // Markup:
 // .selector {
@@ -84,7 +86,8 @@ $end: right !default;
 // Map-Fetch($map, $keys)
 //
 // Navigates through nested Sass maps, this function was written by @jlong(https://github.com/jlong/)
-// <!= isPureCode !>
+//
+// <!= type: css || isPureCode !>
 //
 // Markup:
 // @each $key, $value in map-get($headings, elements) {
@@ -115,7 +118,8 @@ $end: right !default;
 // Map-RemoveKeys($map, $keys)
 //
 // Removes multiple keys in a Sass map.
-// <!= isPureCode !>
+//
+// <!= type: css || isPureCode !>
 //
 // Markup:
 // $newDecalarationsMap: map-removeKeys($declarations, font-size margin-bottom);
