@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 		if (!helpers.isPackageDefault() || grunt.option('env') === 'travis') {
 			/*
 			 * If the package.json contents are edited:
-			 *		=> #1: replace all '<!=  !>' strings and set up the git hooks.
+			 *		=> #1: replace all '<!=  !>' strings.
 			 *		=> #1: remove the default git history.
 			 *		=> #2: Copy a bare version of the extensions '.gitignore' into the root.
 			 *		=> #3: Remove other files which aren't suitable for customized extensions.

@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 		// Prefix the docs stylesheet.
 		grunt.task.run("autoprefixer:styleguide");
 
-		// Replace general text-strings and paths.
+		// Compile the new stylesheets.
 		grunt.task.run("css");
 	});
 };
