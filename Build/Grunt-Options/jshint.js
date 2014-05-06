@@ -7,9 +7,9 @@
 var config = require("../Config");
 
 module.exports = {
-	"options" : {
-		"jshintrc" : config.JavaScripts.jsHint.config,
-		"reporter" : require("jshint-stylish") // Use a more readable JSHint output theme
+	options: {
+		jshintrc: config.JavaScripts.jsHint.config,
+		reporter: require("jshint-stylish") // Use a more readable JSHint output theme
 	},
-	"files" : config.JavaScripts.jsHint.files
+	files: config.JavaScripts.jsHint.files
 };

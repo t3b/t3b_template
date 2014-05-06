@@ -7,13 +7,13 @@
 var config = require("../Config");
 
 module.exports = {
-	"options": {
+	options: {
 		browsers: config.Sass.browserSupport
 	},
-	"main": {
+	main: {
 		src: config.Sass.cssDir + "/*.css"
 	},
-	"styleguide": {
+	styleguide: {
 		src: "Documentation/public/*.css"
 	}
 };

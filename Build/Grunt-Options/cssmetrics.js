@@ -7,12 +7,12 @@
 var config = require("../Config");
 
 module.exports = {
-	"common" : {
-		"src" : [config.Sass.cssDir + "/*.css"],
-		"options" : {
-			"quiet" : false,
-			"maxRules" : 4096, // Maximum CSS rules which IE can handle http://goo.gl/irqrnO
-			"maxFileSize" : 1048576 // 1 mb in bytes - A CSS file shouldn't exceed this limit.
+	common: {
+		src: [config.Sass.cssDir + "/*.css"],
+		options: {
+			quiet: false,
+			maxRules: 4096, // Maximum CSS rules which IE can handle http://goo.gl/irqrnO
+			maxFileSize: 1048576 // 1 mb in bytes - A CSS file shouldn't exceed this limit.
 		}
 	}
 };

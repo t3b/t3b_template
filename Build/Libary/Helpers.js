@@ -3,22 +3,22 @@
  * Helper-Functions which shoudl be aviable globally.
  */
 
-var fs = require('fs'),
+var fs = require("fs"),
 	config = require("../Config"),
 	helpers = {
-		'copyFile' : function(source, dist) {
+		copyFile : function(source, dist) {
 			"use strict";
 
 			fs.createReadStream(source).pipe(fs.createWriteStream(dist));
 		},
-		'deleteFiles' : function(files){
+		deleteFiles : function(files){
 			"use strict";
 
 			files.forEach(function(file){
 				fs.unlink(file);
 			});
 		},
-		'isPackageDefault' : function() {
+		isPackageDefault : function() {
 			"use strict";
 
 			return config.package.name === "t3b_template";

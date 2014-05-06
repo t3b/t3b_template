@@ -7,29 +7,29 @@
 var config = require("../Config");
 
 module.exports = {
-	"dev" : {
+	dev: {
 		options: {
-			style: 'expanded'
+			style: "expanded"
 		},
 		files: [{
 			expand: true,
 			cwd: config.Sass.sassDir,
-			src: ['*.scss'],
+			src: ["*.scss"],
 			dest: config.Sass.cssDir,
-			ext: '.css'
+			ext: ".css"
 		}]
 	},
-	"deploy" : {
+	deploy: {
 		options: {
-			style: 'compressed',
+			style: "compressed",
 			sourcemap: true
 		},
 		files: [{
 			expand: true,
 			cwd: config.Sass.sassDir,
-			src: ['*.scss'],
+			src: ["*.scss"],
 			dest: config.Sass.cssDir,
-			ext: '.css'
+			ext: ".css"
 		}]
 	},
 };

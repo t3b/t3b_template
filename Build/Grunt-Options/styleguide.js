@@ -9,15 +9,15 @@ var config = require("../Config");
 module.exports = {
 	options: {
 		template: {
-			src: 'Build/Templates/Kss-Node'
+			src: "Build/Templates/Kss-Node"
 		},
 		framework: {
-			name: 'kss'
+			name: "kss"
 		}
 	},
 	all: {
 		files: [{
-			'Documentation': config.Sass.sassDir + "/**/*.scss"
+			Documentation: config.Sass.sassDir + "/**/*.scss"
 		}]
 	}
 };

@@ -5,20 +5,20 @@
  */
 
 var config = require("../Config"),
-		modernizrConfig = require("../ModernizrConfig");
+	modernizrConfig = require("../ModernizrConfig");
 
 module.exports = {
-	"main" : {
-		"devFile" : config.JavaScripts.modernizr.devSourceFile,
-		"outputFile" : config.JavaScripts.modernizr.buildDistFile,
+	main: {
+		devFile: config.JavaScripts.modernizr.devSourceFile,
+		outputFile: config.JavaScripts.modernizr.buildDistFile,
 
 		// Based on default settings on http://modernizr.com/download/
-		"extra" : modernizrConfig.extra,
+		extra: modernizrConfig.extra,
 		// Based on default settings on http://modernizr.com/download/
-		"extensibility" : modernizrConfig.extensibility,
-		"tests" : modernizrConfig.tests,
-		"customTests" : modernizrConfig.customTests,
-		"matchCommunityTests" : modernizrConfig.matchCommunityTests,
-		"files" : config.JavaScripts.modernizr.files
+		extensibility: modernizrConfig.extensibility,
+		tests: modernizrConfig.tests,
+		customTests: modernizrConfig.customTests,
+		matchCommunityTests: modernizrConfig.matchCommunityTests,
+		files: config.JavaScripts.modernizr.files
 	}
 };

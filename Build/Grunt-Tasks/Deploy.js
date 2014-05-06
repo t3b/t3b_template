@@ -4,7 +4,7 @@
  * custom Modernizr build and changes the affected paths in all Fluid Layouts.
  */
 
-var fs = require('fs'),
+var fs = require("fs"),
 	config = require("../Config");
 
 module.exports = function(grunt) {

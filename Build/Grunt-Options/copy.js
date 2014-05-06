@@ -7,7 +7,7 @@
 var config = require("../Config");
 
 module.exports = {
-	"imagesDir": {
+	imagesDir: {
 		files: [{
 			expand: true,
 			cwd: config.Images.distDir + '/',

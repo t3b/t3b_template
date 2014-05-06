@@ -7,15 +7,15 @@
 var config = require("../Config");
 
 module.exports = {
-	"images" : {
-		"options" : {
-			"optimizationLevel" : config.Images.optimizationLevel
+	images : {
+		options : {
+			optimizationLevel: config.Images.optimizationLevel
 		},
-		"files" : [{
-			"expand" : true,
-			"cwd" : config.Images.tempDir,
-			"src" : ["**/*.{png,jpg,gif}"],
-			"dest" : config.Images.distDir
+		files: [{
+			expand: true,
+			cwd: config.Images.tempDir,
+			src: ["**/*.{png,jpg,gif}"],
+			dest: config.Images.distDir
 		}]
 	}
 };
