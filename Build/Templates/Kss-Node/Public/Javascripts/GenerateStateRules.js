@@ -24,15 +24,19 @@
 				};
 
 			ParseAndInsertRules.prototype.insertRule = function(rule) {
-				var headEl, styleEl;
+				var headEl,
+					styleEl;
+
 				headEl = document.getElementsByTagName("head")[0];
 				styleEl = document.createElement("style");
 				styleEl.type = "text/css";
+
 				if (styleEl.styleSheet) {
 					styleEl.styleSheet.cssText = rule;
 				} else {
 					styleEl.appendChild(document.createTextNode(rule));
 				}
+
 				return headEl.appendChild(styleEl);
 			};
 
