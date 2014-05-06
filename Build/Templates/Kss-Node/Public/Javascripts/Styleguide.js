@@ -51,6 +51,11 @@
 			// Add the active class for the current item in the sideMenu.
 			$kssMenuActiveItem.addClass("kss___nav__item--active");
 
+			// Add the 'root' class to the body if the current page is the index.html.
+			if($kssMenuActiveItem.hasClass('kss___nav__item--root')) {
+				$body.addClass('kssBody--root')
+			}
+
 			// Format the template.
 			formatTemplate();
 
