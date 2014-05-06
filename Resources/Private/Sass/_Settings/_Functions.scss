@@ -67,7 +67,7 @@ $end: right !default;
 //
 // Markup:
 // .selector {
-//   background: color-adjust(#0097d7, 100%);
+// 	background: color-adjust(#0097d7, 100%);
 // }
 //
 // Styleguide 1.1.3
@@ -91,9 +91,9 @@ $end: right !default;
 //
 // Markup:
 // @each $key, $value in map-get($headings, elements) {
-//  .selector {
-//    font-size: map-fetch($headings, elements $key font-size) +px;
-//   }
+// 	.selector {
+// 	 	font-size: map-fetch($headings, elements $key font-size) +px;
+// 	}
 // }
 //
 // Styleguide 1.1.4

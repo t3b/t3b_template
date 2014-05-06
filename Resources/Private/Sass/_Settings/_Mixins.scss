@@ -36,7 +36,7 @@
 //
 // Markup:
 // .selector {
-//   @include image-replacement('image.png');
+// 	@include image-replacement('image.png');
 // }
 //
 // Styleguide 1.2.2
@@ -61,7 +61,7 @@
 //
 // Markup:
 // .selector {
-//   @include rem($property: font-size, $value: 18);
+// 	@include rem($property: font-size, $value: 18);
 // }
 //
 // Styleguide 1.2.3
@@ -81,7 +81,7 @@
 //
 // Markup:
 // .selector {
-//   @include rem($size: 16, $append-vrythm: true);
+// 	@include rem($size: 16, $append-vrythm: true);
 // }
 //
 // Styleguide 1.2.4
@@ -103,11 +103,11 @@
 //
 // Markup:
 // .selector:after {
-//   position: absolute;
-//   top: -5px;
-//   left: 50%;
-//   margin-left: -2.5px;
-//   @include css-triangle(5px, #fff, bottom);
+// 	position: absolute;
+// 	top: -5px;
+// 	left: 50%;
+// 	margin-left: -2.5px;
+// 	@include css-triangle(5px, #fff, bottom);
 // }
 //
 // Styleguide 1.2.5
