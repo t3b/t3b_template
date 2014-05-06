@@ -1,4 +1,3 @@
-/* global prettyPrint */
 (function($) {
 	"use strict";
 
@@ -81,9 +80,7 @@
 			});
 
 			// Ensure code blocks are highlighted properly.
-			$('.prettyprint.lang-html').attr('data-language', 'html');
 			$('.prettyprint.lang-css').attr('data-language', 'css');
-			//prettyPrint();
 		},
 		renderSubMenu = function() {
 			// Add the menu depth classes for each item.
