@@ -102,6 +102,7 @@
 		scrollSpy = function () {
 			var scrollTop = $window.scrollTop(),
 				$kssMenuSubAnchors = $kssMenuSub.find("a"),
+				$kssFirstMenuSubAnchor = $kssMenuSubAnchors.eq(0),
 				currentTargetHash,
 				activeIndex;
 
@@ -119,6 +120,9 @@
 			});
 
 			// Set the active class on the subMenuItem.
+			if(!$kssFirstMenuSubAnchor.length) {
+				return;
+			}
 			$kssMenuSubItems.removeClass(kssMenuSubActiveClass);
 			if (typeof activeIndex !== "undefined") {
 				$kssMenuSubItems.eq(activeIndex).addClass(kssMenuSubActiveClass);
