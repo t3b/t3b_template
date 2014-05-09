@@ -18,7 +18,6 @@ if(config.JavaScripts.requireJS.useSingleFileBuild) {
 
 // The requireJS entry point/config should always be included.
 includeArray.push(config.JavaScripts.requireJS.config);
-console.log(includeArray)
 
 module.exports = {
 	deploy: {
