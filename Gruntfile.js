@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 	 * Compiles all .scss/.sass files with ':dev' options and
 	 * validates all js-files inside Resources/Private/Javascripts with JSHint.
 	 */
-	grunt.registerTask("default", ["sass:dev", "jshint"]);
+	grunt.registerTask("default", ["css", "jshint"]);
 
 
 	/**
