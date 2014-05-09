@@ -23,11 +23,14 @@ module.exports = function(grunt) {
 		grunt.task.run(["clean:stylesheets"]);
 		grunt.task.run(["sass:deploy", "autoprefixer:main"]);
 
+		// Optimize the projects js files a requireJS build to avoid too many http requests on the live server.
+		if(!config.JavaScripts.requireJS.useSingleFileBuild || grunt.option('env') === 'travis') {
+			grunt.task.run(["uglify:all"]);
+		}
+		grunt.task.run(["requirejs"]);
+
 		// Generate a custom modernizr build.
 		grunt.task.run(["modernizr"]);
-
-		// Generate a requireJS build to avoid too many http requests on the live server.
-		grunt.task.run(["requirejs"]);
 
 		// Replace paths to match the build files.
 		grunt.task.run(["replace:deploy"]);
