@@ -42,7 +42,6 @@ $EM_CONF[$_EXTKEY] = array(
 		),
 		'suggests' => array(
 			't3b_config' => '',
-			't3b_common' => '',
 		),
 	)
 );
