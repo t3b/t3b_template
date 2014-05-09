@@ -3,22 +3,25 @@
 // Styleguide Element
 //
 .kss-box { // Description wrapper
+	&:extend(.kssReset);
+	&:extend(.kssBaseTypo);
 	padding: 1px @baseIndent;
 	background: #f1f1f1;
 	border-right: 1px solid #ddd;
 	border-left: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
-	font-family: @baseFontFamily;
 	font-size: @baseFontSize - 2;
-	color: @baseTextColor;
 	p {
+		&:extend(.kssReset);
 		margin: @baseSpacing 0;
 	}
 	&:empty { display: none; }
 }
 .kss-box__modifierTable {
+	&:extend(.kssReset);
 	margin-top: @baseSpacing !important;
 	p {
+		&:extend(.kssReset);
 		margin: 0;
 	}
 	th,
@@ -26,6 +29,7 @@
 		padding: .15em 0 !important;
 		vertical-align: middle;
 		font-size: 12px;
+		line-height: @baseLineHeight;
 		font-weight: bold;
 	}
 }
@@ -41,25 +45,28 @@
 	}
 }
 .kss-styleguideSection { // Rendered example
+	&:extend(.kssReset);
 	background: @baseBackgroundColor;
 	border-left: 1px solid @baseBorderColor;
 	border-right: 1px solid @baseBorderColor;
 	.kss___hideExamples & { display: none; }
 }
 .kss-styleguideElement { // Modifier wrapper
+	&:extend(.kssReset);
 	position: relative;
 	padding: @baseIndent;
 	border-bottom: 1px solid @baseBorderColor;
 }
 	.kss-styleguideElement__heading {
+		&:extend(.kssReset);
+		&:extend(.kssBaseTypo);
 		margin-bottom: @baseSpacing/2;
-		font-family: @baseFontFamily;
-		color: @baseTextColor;
 		p {
 			margin: @baseIndent 0 0;
 		}
 	}
 .kss-styleguideElement__class {
+	&:extend(.kssReset);
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -68,6 +75,7 @@
 	border-top: none;
 	font-family: monospace;
 	font-size: 12px;
+	line-height: @baseLineHeight;
 	font-weight: bold;
 	color: #999;
 	background: @lightGrey;
@@ -80,5 +88,6 @@
 	}
 }
 .kss-markup {  // Markup wrapper
+	&:extend(.kssReset);
 	padding-bottom: @baseSpacing*3;
 }

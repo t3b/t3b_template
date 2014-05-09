@@ -1,45 +1,21 @@
 //
 // Styleguide Headings
 //
-.kss-title,
-.kss___contentWrapper > h1 {
-	position: relative;
-	margin: 0;
-	font-family: @baseFontFamily;
-	font-weight: 300;
-	color: @baseTextColor;
-	line-height: 1.2;
-}
-.kss___contentWrapper > h1 {
-	margin: @baseSpacing*3 0 @baseSpacing;
-	font-family: @baseFontFamily;
-	font-size: @baseFontSize*2;
-}
+
+.kss___contentWrapper > h1,
 .kss___contentWrapper > h2,
-.kss___contentWrapper > h3 {
-	margin: @baseSpacing*2 0 @baseSpacing/2;
-	font-family: @baseFontFamily;
-	font-size: @baseFontSize + 4;
-	font-weight: 400;
-	color: @baseTextColor;
-}
-.kss___contentWrapper > p {
-	margin: 0 0 @baseSpacing;
-	font-family: @baseFontFamily;
-	font-size: @baseFontSize;
-	color: @baseTextColor;
+.kss___contentWrapper > h3,
+.kss-title {
+	&:extend(.kssBaseTypo);
+	&:extend(.kssBaseTypo);
+	position: relative;
+	margin: 45px 0 15px;
+	font-size: 32px;
 }
 .kss-depth-2 > .kss-title {
-	padding: 0;
 	margin: @baseSpacing*2 0 @baseSpacing/2;
-	color: @baseTextColor;
 	font-size: @baseFontSize*1.5;
-}
-.kss-depth-2 > p {
-	margin: 0 0 @baseSpacing;
-	font-family: @baseFontFamily;
-	font-size: @baseFontSize;
-	color: @baseTextColor;
+	line-height: 1.2;
 }
 .kss-depth-3 > .kss-title {
 	margin: 0;
@@ -48,11 +24,103 @@
 	border-bottom: 0;
 	border-radius: @baseBorderRadius @baseBorderRadius 0 0;
 	font-size: @baseFontSize - 2;
-	font-weight: bold;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #fff;
+	background: #333;
+}
+
+.kss-title__refLink {
+	&:extend(.kssReset);
+	display: none;
+	position: absolute;
+	height: 100%;
+	width: 30px;
+	left: -30px;
+	top: 11%;
+	text-align: center;
+	color: @baseActionColor;
+	transition: .2s ease color;
+	&:hover {
+		text-decoration: none;
+		color: @baseTextColor;
+	}
+	.kss-title:hover & {
+		display: block;
+	}
+	.kss-depth-3 & {
+		padding-top: 9px;
+	}
+}
+
+
+// Root level content
+.kss___contentWrapper > h2,
+.kss___contentWrapper > h3 {
+	margin: @baseSpacing*2 0 @baseSpacing/2;
+	font-size: @baseFontSize + 4;
+	font-weight: 400;
+}
+.kss___contentWrapper > p {
+	&:extend(.kssBaseTypo);
+	&:extend(.kssBaseTypo);
+}
+.kss___contentWrapper > p {
+	margin: 0 0 @baseSpacing;
+}
+
+
+
+
+/*
+.kss-title,
+.kss___contentWrapper > h1 {
+	&:extend(.kssBaseTypo);
+	position: relative;
+	margin: 0;
+}
+.kss___contentWrapper > h1 {
+	&:extend(.kssReset);
+	margin: @baseSpacing*3 0 @baseSpacing;
+	font-size: @baseFontSize*2;
+}
+.kss___contentWrapper > h2,
+.kss___contentWrapper > h3 {
+	&:extend(.kssReset);
+	&:extend(.kssBaseTypo);
+	margin: @baseSpacing*2 0 @baseSpacing/2;
+	font-size: @baseFontSize + 4;
+	font-weight: 400;
+}
+.kss___contentWrapper > p {
+	&:extend(.kssReset);
+	&:extend(.kssBaseTypo);
+	margin: 0 0 @baseSpacing;
+}
+.kss-depth-2 > .kss-title {
+	&:extend(.kssReset);
+	margin: @baseSpacing*2 0 @baseSpacing/2;
+	font-size: @baseFontSize*1.5;
+}
+.kss-depth-2 > p {
+	&:extend(.kssReset);
+	&:extend(.kssBaseTypo);
+	margin: 0 0 @baseSpacing;
+}
+.kss-depth-3 > .kss-title {
+	&:extend(.kssReset);
+	margin: 0;
+	padding: 10px;
+	border: 1px solid #000;
+	border-bottom: 0;
+	border-radius: @baseBorderRadius @baseBorderRadius 0 0;
+	font-size: @baseFontSize - 2;
+	font-weight: 400;
 	color: #fff;
 	background: #333;
 }
 .kss-title__refLink {
+	&:extend(.kssReset);
 	display: none;
 	position: absolute;
 	height: 100%;
@@ -73,3 +141,4 @@
 		padding-top: 11px;
 	}
 }
+*/

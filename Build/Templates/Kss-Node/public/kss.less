@@ -11,6 +11,8 @@
 @lightGrey: #f9f9f9;
 
 @baseFontSize: 16px;
+@baseFontWeight: 300;
+@baseLineHeight: 1.4;
 @baseTextColor: #3c474b;
 @baseBorderRadius: 3px;
 @baseSpacing: 15px;
@@ -33,6 +35,7 @@
 // Styleguide Example/Additional element or modifier styles
 //
 .kss___exampleGridItem {
+	&:extend(.kssReset);
 	background: #ECECEC;
 	min-height: 32px;
 	font-size: 12px;

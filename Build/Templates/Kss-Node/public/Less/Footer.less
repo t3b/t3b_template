@@ -2,14 +2,14 @@
 // Styleguide Footer
 //
 .kss___footer {
+	&:extend(.kssReset);
+	&:extend(.kssBaseTypo);
 	display: block;
 	margin-top: @baseSpacing*4;
 	padding: 26px @baseIndent;
 	background: @baseBackgroundColor;
 	border-top: 1px solid @baseBorderColor;
 	font-size: 11.5px;
-	font-family: @baseFontFamily;
-	color: @baseTextColor;
 	a {
 		color: @baseActionColor;
 	}

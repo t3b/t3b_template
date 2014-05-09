@@ -7,10 +7,13 @@
  */
 @prettyPrintBackground: #F7F7F9;
 .kss-markup pre {
+	&:extend(.kssReset);
 	position: relative;
 	background-color: #F7F7F9;
 	padding: @baseIndent/2 @baseIndent @baseIndent/2 45px;
 	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.3;
 	border: 1px solid #E1E1E8;
 	border-top: 0;
 	margin: 0;
