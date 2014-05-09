@@ -7,10 +7,10 @@
 		<flux:flexform id="two-columns" label="[GRID] Two Columns (1 | 1)" description="Provides two columns to be filled with content elements.">
 			<flux:flexform.grid>
 				<flux:flexform.grid.row>
-					<flux:flexform.grid.column>
+					<flux:flexform.grid.column  style="width: 50%">
 						<flux:flexform.content name="FirstColumn" label="First column" />
 					</flux:flexform.grid.column>
-					<flux:flexform.grid.column>
+					<flux:flexform.grid.column  style="width: 50%">
 						<flux:flexform.content name="SecondColumn" label="Second column" />
 					</flux:flexform.grid.column>
 				</flux:flexform.grid.row>
@@ -19,6 +19,7 @@
 	</f:section>
 
 	<f:section name="Preview">
+		<strong>[GRID] Two Columns (1 | 1)</strong>
 		<flux:widget.grid />
 	</f:section>
 

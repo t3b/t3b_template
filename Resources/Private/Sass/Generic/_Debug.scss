@@ -1,17 +1,16 @@
-@if compass-env() == 'development' {
+@if $devMode {
 /*
- * Debug code wich applies if the compass env is set to 'development'
- *
- * @package #{ext_directory()}
- * @path Generic/_Debug.scss
- */
+[Generic] Debug
+
+Debug code wich applies if the $devMode variable is set to 'true'.
+*/
 
 
-/* =============================================================================
-$ Environment banner
-================================================================================ */
+/*
+Environment banner
+*/
 body::before {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	z-index: 99999;

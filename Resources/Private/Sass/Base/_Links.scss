@@ -1,14 +1,22 @@
 /*
- * Basic styling for anchor tags
- *
- * @package #{ext_directory()}
- * @path Base/_Links.scss
- */
+Anchors / Link elements
+
+Basic styling for anchor tags.
+
+Styleguide 2.7
+*/
 
 
-/* =============================================================================
-$ Links
-================================================================================ */
+/*
+Standard anchors
+
+Markup:
+<a href="#" class="{$modifiers}">I am an anchor element.</a>
+
+:hover   - Hover styling for anchor elements.
+
+Styleguide 2.7.1
+*/
 a {
 	color: $link-color;
 	text-decoration: none;

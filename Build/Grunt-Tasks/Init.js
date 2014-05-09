@@ -4,7 +4,7 @@
  * specified inside the 'package.json'. (Should be run after downloading the extension).
  */
 
-var fs = require('fs'),
+var fs = require("fs"),
 	config = require("../Config"),
 	helpers = require("../Libary/Helpers");
 
@@ -15,10 +15,10 @@ module.exports = function(grunt) {
 		// Replace general text-strings and paths.
 		grunt.task.run("replace:preInit");
 
-		if (!helpers.isPackageDefault()) {
+		if (!helpers.isPackageDefault() || grunt.option("env") === "travis") {
 			/*
 			 * If the package.json contents are edited:
-			 *		=> #1: replace all '<!=  !>' strings and set up the git hooks.
+			 *		=> #1: replace all '<!=  !>' strings.
 			 *		=> #1: remove the default git history.
 			 *		=> #2: Copy a bare version of the extensions '.gitignore' into the root.
 			 *		=> #3: Remove other files which aren't suitable for customized extensions.
@@ -37,8 +37,11 @@ module.exports = function(grunt) {
 
 		// Create the base Stylesheet to prevent errors from ext:vhs(File not found).
 		if (!fs.existsSync(config.Sass.cssDir + "/Main.css")) {
-			grunt.task.run(["compass:dev"]);
+			grunt.task.run(["css"]);
 		}
+
+		// Create the initial living styleguide.
+		grunt.task.run("styleguide");
 
 		// Fetch all bower components.
 		grunt.task.run(["bower:install"]);

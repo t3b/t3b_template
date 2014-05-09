@@ -1,14 +1,12 @@
 /*
- * Styling for typo3 related classes
- *
- * @package #{ext_directory()}
- * @path Generic/_T3General.scss
- */
+[Generic] TYPO3
 
+Styling for typo3 related classes
+*/
 
-/* =============================================================================
-$ CSC-Frames
-================================================================================ */
+/*
+CSC-Frames
+*/
 .csc-frame-rulerBefore:before {
 	content: '';
 	@extend %horizontal-ruler;

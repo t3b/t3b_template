@@ -4,8 +4,14 @@ Docs/*
 # Node.js modules
 node_modules/*
 
+# Composer dependency lock file
+composer.lock
+
 # Source-/Generated-files which shouldn't pollute the source repository
 Resources/Private/Javascripts/Libaries/almond/*
 Resources/Private/Javascripts/Libaries/modernizr/*
 Resources/Private/Javascripts/Libaries/requirejs/*
-Resources/Public/Stylesheets/*
+Resources/Public/Stylesheets/*.css
+Resources/Public/Stylesheets/*.map
+Documentation/*.html
+Documentation/Public

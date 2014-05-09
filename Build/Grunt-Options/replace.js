@@ -15,82 +15,84 @@ module.exports = function(grunt) {
 	"use strict";
 
 	return {
-		"preInit" : {
-			"src" : [
+		preInit: {
+			src: [
 				"bower.json"
 			],
-			"overwrite" : true,
-			"replacements" : [{
-				"from" : config.defaultName,
-				"to" : config.package.name
+			overwrite: true,
+			replacements: [{
+				from: config.defaultName,
+				to: config.package.name
 			}]
 		},
-		"init" : {
-			"src" : [
+		init: {
+			src: [
 				"bower.json",
 				"ext_emconf.php",
 				"ext_tables.php",
 				"Configuration/**/*.ts",
 				"Configuration/**/*.txt",
+				"Build/Templates/Kss-Node/index.html",
 				config.paths.private + "/Elements/**/*.html",
 				config.paths.private + "/Layouts/**/*.html",
 				config.paths.private + "/Partials/**/*.html",
 				config.paths.private + "/Templates/**/*.html",
 				config.paths.private + "/Sass/**/*.scss",
+				config.paths.private + "/Sass/styleguide.md"
 			],
-			"overwrite" : true,
-			"replacements" : [{
-				"from" : "<!= pkg.name !>",
-				"to" : config.package.name
+			overwrite: true,
+			replacements: [{
+				from: "<!= pkg.name !>",
+				to: config.package.name
 			}, {
-				"from" : "<!= pkg.description !>",
-				"to" : config.package.description
+				from: "<!= pkg.description !>",
+				to: config.package.description
 			}, {
-				"from" : "<!= pkg.homepage !>",
-				"to" : config.package.homepage
+				from: "<!= pkg.homepage !>",
+				to: config.package.homepage
 			}, {
-				"from" : "<!= pkg.version !>",
-				"to" : config.package.version
+				from: "<!= pkg.version !>",
+				to: config.package.version
 			}, {
-				"from" : "<!= pkg.author.name !>",
-				"to" : config.package.author.name
+				from: "<!= pkg.author.name !>",
+				to: config.package.author.name
 			}, {
-				"from" : "<!= pkg.author.email !>",
-				"to" : config.package.author.email
+				from: "<!= pkg.author.email !>",
+				to: config.package.author.email
 			}, {
-				"from" : "<!= pkg.author.company !>",
-				"to" : config.package.author.company
+				from: "<!= pkg.author.company !>",
+				to: config.package.author.company
 			}, {
-				"from" : "<!= date !>",
-				"to" : grunt.template.today("dd-mm-yyyy hh:MM")
+				from: "<!= date !>",
+				to: grunt.template.today("dd-mm-yyyy hh:MM")
 			}]
 		},
-		"deploy" : {
-			"src" : [config.paths.private + "/Layouts/*.html"],
-			"overwrite" : true,
-			"replacements" : [{
-				"from" : config.JavaScripts.modernizr.devSourceFile,
-				"to" : config.JavaScripts.modernizr.buildDistFile
+		deploy: {
+			src: [config.paths.private + "/Layouts/*.html"],
+			overwrite: true,
+			replacements: [{
+				from: config.JavaScripts.modernizr.devSourceFile,
+				to: config.JavaScripts.modernizr.buildDistFile
 			}, {
-				"from" : deployStrings.requireJSLibSourceFile,
-				"to" : config.JavaScripts.requireJS.compileDistFile
+				from: deployStrings.requireJSLibSourceFile,
+				to: config.JavaScripts.requireJS.compileDistFile
 			}, {
-				"from" : deployStrings.requireJsAttributeDeploy,
-				"to" : deployStrings.requireJsAttributeLive
+				from: deployStrings.requireJsAttributeDeploy,
+				to: deployStrings.requireJsAttributeLive
 			}]
 		},
-		"dev" : {
-			"src" : [config.paths.private + "/Layouts/*.html"],
-			"overwrite" : true,
-			"replacements" : [{
-				"from" : config.JavaScripts.modernizr.buildDistFile,
-				"to" : config.JavaScripts.modernizr.devSourceFile
+		dev: {
+			src: [config.paths.private + "/Layouts/*.html"],
+			overwrite: true,
+			replacements: [{
+				from: config.JavaScripts.modernizr.buildDistFile,
+				to: config.JavaScripts.modernizr.devSourceFile
 			}, {
-				"from" : config.JavaScripts.requireJS.compileDistFile,
-				"to" : deployStrings.requireJSLibSourceFile
+				from: config.JavaScripts.requireJS.compileDistFile,
+				to: deployStrings.requireJSLibSourceFile
 			}, {
-				"from" : deployStrings.requireJsAttributeLive,
-				"to" : deployStrings.requireJsAttributeDeploy
+				from: deployStrings.requireJsAttributeLive,
+				to: deployStrings.requireJsAttributeDeploy
 			}]
 		}
 	};

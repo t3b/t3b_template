@@ -1,14 +1,35 @@
 /*
- * Basic styling for lists and definition elements
- *
- * @package #{ext_directory()}
- * @path Base/_Lists.scss
- */
+List elements
+
+Basic styling for lists and definition elements
+
+Styleguide 2.8
+*/
 
 
-/* =============================================================================
-$ Lists
-================================================================================ */
+/*
+Unordered- & Ordered-Lists
+
+.reset-list - Resets the standard list styles of an `<ul>` or `<ol>` element.
+
+Markup:
+<ul class="{$modifiers}">
+	<li>Unordered-List</li>
+	<li>I am the first list-element.</li>
+	<li>I am the second list-element.</li>
+	<li>I am the third list-element.</li>
+	<li>I am the fourth list-element.</li>
+</ul>
+<ol class="{$modifiers}">
+	<li>Ordered-List</li>
+	<li>I am the first list-element.</li>
+	<li>I am the second list-element.</li>
+	<li>I am the third list-element.</li>
+	<li>I am the fourth list-element.</li>
+</ol>
+
+Styleguide 2.8.1
+*/
 menu,
 ol,
 ul {
@@ -24,22 +45,39 @@ li > ol {
 	margin-bottom: 0;
 }
 
-
-/* ======================== Reset list ========================= */
+/*
+Reset-List helper class
+*/
 %reset-list,
 .reset-list {
 	/**
-	 * Resets the standard list styles of a <ul> or <ol>
+	 *
 	 */
 	list-style: none;
 	margin-bottom: 0;
 	padding-left: 0;
 }
 
+/*
+Definitions.
 
-/* =============================================================================
-$ Definitions
-================================================================================ */
+.dl--horizontal - Display a definition list in a horizontal order.
+
+Markup:
+<dl class="{$modifiers}">
+	<dt>Description lists</dt>
+	<dd>A description list is perfect for defining terms.</dd>
+	<dt>Euismod</dt>
+	<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem.</dd>
+	<dd>Donec id elit non mi porta gravida at eget metus.</dd>
+	<dt>Malesuada porta</dt>
+	<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+	<dt>Felis euismod semper eget lacinia</dt>
+	<dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+</dl>
+
+Styleguide 2.8.3
+*/
 dl {
 	@extend %reset-margin-top;
 	@extend %margin-bottom;
@@ -53,25 +91,9 @@ dd {
 	}
 }
 
-
-/* =============================================================================
-$ Horizontal definition abstraction
-================================================================================
- * Display a definition list in a horizontal order
- * e.g.
- *
-<dl class="dl--horizontal">
-	<dt>Description lists</dt>
-	<dd>A description list is perfect for defining terms.</dd>
-	<dt>Euismod</dt>
-	<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-	<dd>Donec id elit non mi porta gravida at eget metus.</dd>
-	<dt>Malesuada porta</dt>
-	<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-	<dt>Felis euismod semper eget lacinia</dt>
-	<dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
-</dl>
-================================================================================ */
+/*
+Horizontal definition abstraction
+*/
 .dl--horizontal {
 	@extend .cf;
 	dt {

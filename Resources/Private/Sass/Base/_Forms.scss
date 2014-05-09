@@ -1,29 +1,38 @@
 /*
- * Basic styling for forms and inputs
- *
- * @package #{ext_directory()}
- * @path Base/_Forms.scss
- */
+Form elements
+
+Basic styling for forms and inputs
+
+Styleguide 2.1
+*/
 
 
-/* =============================================================================
-$ Text inputs, checkboxes and other form elements
-================================================================================ */
-/* ======================== Textinputs ========================= */
+/*
+Text inputs
+
+.textInput         - Basic styling for text input elements.
+.textInput:hover   - Hover styling for basic text input elements.
+.textInput:focus   - Focused styling for basic text input elements.
+
+Markup:
+<input type="text" class="{$modifiers}" /><br>
+<textarea class="{$modifiers}" cols="40"></textarea>
+
+Styleguide 2.1.1
+*/
 %textInput,
-.textInput,
-textarea {
-	height: $text-input-height;
+.textInput {
+	height: map-get($textInput, height);
 	padding: .2em .4em;
-	@include rem(margin-bottom, $half-spacing);
+	@include rem(margin-bottom, map-get($textInput, bottomSpacing));
 
 	background: $content-background;
-	border: $text-input-border;
-	border-radius: $text-input-borderRadius;
-	@include box-shadow($text-input-boxShadow);
+	border: map-get($textInput, border);
+	border-radius: map-get($textInput, borderRadius);
+	box-shadow: map-get($textInput, boxShadow);
 
-	@include font-size($text-input-fontSize);
-	color: $text-input-color;
+	@include font-size(map-get($textInput, fontSize));
+	color: map-get($textInput, textColor);
 }
 textarea {
 	height: auto; /* Reset height since textareas have the attribute rows="" */
@@ -42,47 +51,42 @@ input::-webkit-datetime-edit {
 	margin-bottom: -.17em;
 }
 
-/* ========================= Checkboxes ======================== */
+/*
+Checkboxes / Radio buttons
+
+Markup:
+<label><input type="checkbox" /> I am an checkbox</label>
+<label><input type="radio" /> I am an radio button</label>
+
+Styleguide 2.1.2
+*/
 input[type="checkbox"],
 input[type="radio"] {
 	margin-right: .35em;
 	cursor: pointer;
 }
 
+/*
+Buttons
 
-/* =============================================================================
-$ Buttons
-================================================================================ */
-%btn,
+For additional styling, please refer to the Button Object (4.1.1).
+
+Markup:
+<button>Send button</button>
+<input type="button" value="Button" />
+<input type="reset" value="Reset" />
+<input type="submit" value="Submit" />
+
+Styleguide 2.1.3
+*/
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
-	cursor: pointer;
-	@include rem(margin-bottom, $button-spacing);
-	/**
-	 * Set in em's so we can change the size of the button depending on the font-size
-	 */
-	padding: $button-inner-spacing;
+input[type="submit"] { }
 
-	border: 0;
-	border-radius: $brand-border-radius;
-	background: $button-background;
-
-	font-size: $button-font-size;
-	/**
-	 * Normalize the font-weight accross <input>, <button> and the .btn class
-	 */
-	font-weight: normal;
-	line-height: 1;
-	color: $button-color;
-}
-
-
-
-/* =============================================================================
-$ Form elements
-================================================================================ */
+/*
+Form wrapper elements
+*/
 fieldset {
 	/**
 	 * Reset border, margin, and padding to define a consistend style accross all browsers
@@ -103,7 +107,14 @@ form {
 	@extend %margin-bottom;
 }
 
-/* ==================== Labels and Legends ===================== */
+/*
+Labels
+
+Markup:
+<label>I am an label</label>
+
+Styleguide 2.1.4
+*/
 label {
 	display: block;
 	font-weight: $bold;
@@ -112,13 +123,24 @@ label {
 		cursor: pointer;
 	}
 }
+
+/*
+Legends
+
+Markup:
+<fieldset>
+	<legend>I am an fieldset legend.</legend>
+</fieldset>
+
+Styleguide 2.1.5
+*/
 legend {
 	display: block;
 	width: 100%;
 	@extend %margin-bottom;
 
-	@include font-size($h4-size);
-	color: $headings-color;
+	@include font-size(map-fetch($headings, elements h4 font-size));
+	color: map-get($headings, color);
 	border-bottom: 1px $basic-border-style $basic-border-color;
 
 	padding: 0;

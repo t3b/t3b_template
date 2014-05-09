@@ -1,0 +1,18 @@
+{
+  "name": "t3b/t3b_template",
+  "description": "A Kickstarter Template-Extension which is based on Fluid and Sass",
+  "require": {
+    "fluidtypo3/flux": "*",
+    "fluidtypo3/fluidpages": "*",
+    "fluidtypo3/fluidcontent": "*",
+    "fluidtypo3/vhs": "*"
+  },
+  "type": "typo3-cms-extension",
+  "keywords": ["TYPO3 CMS", "templating", "boilerplate", "bootstrap", "t3b", "fluidcontent", "fedext", "fluid", "sass", "grunt"],
+  "homepage": "https://github.com/t3b/t3b_template",
+  "license": "MIT",
+  "version": "1.0.0a",
+  "support": {
+    "issues": "https://github.com/t3b/t3b_template/issues"
+  }
+}

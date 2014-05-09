@@ -1,38 +1,50 @@
 /*
- * Basic button structural styling from
- * inuit.css <https://github.com/csswizardry/inuit.css/>
- *
- * @package #{ext_directory()}
- * @path Objects/_Buttons.scss
- * @license Apache License, Version 2.0.
- * @link http://csswizardry.com/2011/09/the-nav-abstraction/
- */
+Button Object
 
+Display an anchor tag as a button
 
-/* =============================================================================
-$ Button Object
-================================================================================
- * Display an anchor tag as a button
- * e.g.
- *
-	<a class="btn">A Special link</a>
-================================================================================ */
+.btn           - Display an element as an button.
+.btn.btn--full - Set the button width to the width of it's parent element.
+.btn:hover     - Standard hover styling for buttons.
+
+Markup:
+<button class="{$modifiers}">Send button</button>
+<input type="button" class="{$modifiers}" value="Button" />
+<input type="reset" class="{$modifiers}" value="Reset" />
+<input type="submit" class="{$modifiers}" value="Submit" />
+<a class="{$modifiers}">An anchor element.</a>
+
+Styleguide 4.1.1
+*/
+%btn,
 .btn {
-	@extend %btn;
 	display: inline-block;
-	@if $legacy-support-for-ie7 {
-		*display: inline;
-		*zoom: 1;
-	}
+	@include rem(margin-bottom, map-get($button, bottomSpacing));
+	/**
+	 * Set in em's so we can change the size of the button depending on the font-size
+	 */
+	padding: map-get($button, innerPadding);
+	border: 0;
+
+	background: map-get($button, background);
+	border-radius: $brand-border-radius;
+	cursor: pointer;
+
+	font-size: map-get($button, fontSize);
+	/**
+	 * Normalize some rules accross the targeted elements (<input>, <button> and the .btn class).
+	 */
+	font-weight: normal;
+	line-height: 1;
+	color: map-get($button, textColor);
+	vertical-align: top;
+
 	&,
 	&:hover {
 		text-decoration: none;
 	}
 }
 
-/* ================== Full width button abstraction =================
- * Set a button to the full-width of it's parent
- */
 .btn--full {
 	display: block;
 	text-align: center;

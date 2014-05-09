@@ -1,5 +1,7 @@
 {namespace v=Tx_Vhs_ViewHelpers}
 
+<v:var.set name="pageUids" value="{v:var.typoscript(path: 'plugin.<!= pkg.name !>.pageUids')}" />
+
 <v:page.header.meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <v:asset.style  name="BaseStylesheet" path="EXT:<!= pkg.name !>/Resources/Public/Stylesheets/Main.css" standalone="1" />
@@ -7,17 +9,10 @@
 
 
 <f:render partial="Page/Header" arguments="{_all}" />
-<main class="siteContent" role="main">
-	<div class="siteWrapper">
-		<!-- TYPO3SEARCH_begin -->
-		<f:render section="Main" arguments="{_all}" />
-		<!-- TYPO3SEARCH_end -->
-	</div>
-</main>
+<f:render section="Main" arguments="{_all}" />
 <f:render partial="Page/Footer" arguments="{_all}" />
 
 
 <script type="text/javascript"
 	src="typo3conf/ext/<!= pkg.name !>/Resources/Private/Javascripts/Libaries/requirejs/require.js"
 	data-main="typo3conf/ext/<!= pkg.name !>/Resources/Private/Javascripts/Main"></script>
-</script>

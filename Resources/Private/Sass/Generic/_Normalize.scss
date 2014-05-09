@@ -1,17 +1,15 @@
 /*
- * A cut-down version of normalize.css
- *
- * @package #{ext_directory()}
- * @path Generic/_Normalize.scss
- * @author Nicolas Gallagher
- * @link http://necolas.github.com/normalize.css/
- */
+[Generic] Normalize
+
+A cut-down version of normalize.css
+@author Nicolas Gallagher
+@link http://necolas.github.com/normalize.css/
+*/
 
 
-/* =============================================================================
-$ Normalize HTML5 display definitions
-================================================================================ */
-
+/*
+Normalize HTML5 display definitions
+*/
 /**
  * Corrects `block` display not defined in IE6/7/8/9 & FF3.
  */
@@ -49,10 +47,9 @@ video {
 }
 
 
-/* =============================================================================
- Normalize Base
-================================================================================ */
-
+/*
+Normalize Base
+*/
 /**
  * 1. Corrects text resizing oddly in IE6/7 when body `font-size` is set using
  *    `em` units.
@@ -82,10 +79,9 @@ html {
 }
 
 
-/* =============================================================================
- Normalize Forms
-================================================================================ */
-
+/*
+Normalize Forms
+*/
 /**
  * 1. Corrects font size not being inherited in all browsers.
  * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome.

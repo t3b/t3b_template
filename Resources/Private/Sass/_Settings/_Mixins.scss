@@ -1,129 +1,91 @@
 //
-// SASS Mixins
+// Mixins
 //
-// @package #{ext_directory()}
-// @path _settings/_Mixins.scss
-// @link http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#mixins
+// Styleguide 1.2
 //
 
 
-// =============================================================================
-// Image-Dimension Mixin
-// =============================================================================
-// @description
-// Get the dimensions of an image-file located in the 'images_dir'
 //
-// @param file-name
-// @returns
-//   width: 200px;
-//   height: 75px;
+// High density Image-Dimensions Mixin($file-name, $width, $height)
 //
-// @example
-//   .selector {
-//     @include img-wh('brand-logo.png');
-//   }
-// =============================================================================
-@mixin img-wh($file-name) {
-	width: image-width($file-name);
-	height: image-height($file-name);
-}
-
-
-// =============================================================================
-// High density Image-Dimensions Mixin
-// =============================================================================
-// @description
-// Get the dimensions of an image-file located in the 'images_dir' and create
-// output which displays an image optimized for high density screens
+// Creates the required rules for high density optimized images.
 //
-// @param file-name
-// @returns
-//   background-size: 200px 75px;
-//   background-image: url('../Images/brand-logo_@2.png');
+// <!= type: css || isPureCode !>
 //
-// @example
-//   .selector {
-//     @include hdpi-img('brand-logo.png');
-//   }
-// =============================================================================
-@mixin hdpi-img($file-name) {
-	background-size: image-width($file-name)/2 image-height($file-name)/2;
+// Markup:
+// .selector {
+// 	@include hdpi-img('brand-logo.png');
+// }
+//
+// Styleguide 1.2.1
+//
+@mixin hdpi-img($file-name, $width, $height) {
+	background-size: $width/2 $height/2;
 	background-image: image-url('#{$file-name}');
 }
 
 
-// =============================================================================
-// Image-Replacement Mixin
-// =============================================================================
-// @description
+//
+// Image-Replacement Mixin($imagePath)
+//
 // A image-replacement mixin which generates the image-dimensions as CSS rules and
 // @extends the .ir rule inside the _helper.scss file.
 // Default $display-mode is set to 'block'.
 //
-// @param file-name, display-mode
-// @returns
-//   display: block;
-//   width: 200px;
-//   height: 75px;
-//   background-image: url('../Images/image.png');
+// <!= type: css || isPureCode !>
 //
-// @example
-//   .selector {
-//     @include image-replacement('image.png');
-//   }
-// =============================================================================
-@mixin image-replacement($file-name, $display-mode: block) {
+// Markup:
+// .selector {
+// 	@include image-replacement('image.png');
+// }
+//
+// Styleguide 1.2.2
+//
+@mixin image-replacement($file-name, $display-mode: block, $width: auto, $height: auto) {
 	@if $file-name { // Output the image dimensions if an image is passed as an argument
 		display: $display-mode;
-		@include img-wh('#{$file-name}');
-		@extend .ir;
+		width: $width;
+		height: $height;
 		background-image: image-url('#{$file-name}');
+		@extend .ir;
 	}
 }
 
 
-// =============================================================================
-// REM Unit Mixin
-// =============================================================================
-// @description
-// Creates a property independent 'rem' calculation with a pixel fallback,
-// default property is set to 'font-size'
 //
-// @param property, value
-// @returns
-//   font-size: 1.125rem;
-//   font-size: 18px;
+// REM Unit Mixin($property, $value)
 //
-// @example
-//   .selector {
-//     @include rem($property: font-size, $value: 18);
-//   }
-// =============================================================================
+// Creates a property independent 'rem' calculation with a pixel fallback, default property is set to 'font-size'.
+//
+// <!= type: css || isPureCode !>
+//
+// Markup:
+// .selector {
+// 	@include rem($property: font-size, $value: 18);
+// }
+//
+// Styleguide 1.2.3
+//
 @mixin rem($property: font-size, $value: 16) {
 	#{$property}: $value +px;
 	#{$property}: ($value / 16)*1rem;
 }
 
 
-// =============================================================================
-// Font-Size Mixin
-// =============================================================================
-// @description
-// Create a fully formed type style (sizing and vertical rhythm) by passing in a
-// single value
-// @author CSSWizardry
 //
-// @param font-size, append-vrythm
-// @returns
-//   font-size: 1rem;
-//   font-size: 16px;
-//   line-height: 1;
+// Font-Size Mixin($font-size, $append-vrythm)
 //
-// @example
-//   .selector {
-//     @include rem($size: 16, $append-vrythm: true);
-//   }
-// =============================================================================
+// Creates a fully formed type style (sizing and vertical rhythm) by passing in a single value.
+//
+// <!= type: css || isPureCode !>
+//
+// Markup:
+// .selector {
+// 	@include rem($size: 16, $append-vrythm: true);
+// }
+//
+// Styleguide 1.2.4
+//
 @mixin font-size($font-size, $append-vrythm: false) {
 	@include rem(font-size, $font-size);
 	@if $append-vrythm {
@@ -132,29 +94,24 @@
 }
 
 
-// =============================================================================
-// Triangle Mixin
-// =============================================================================
-// @description Create a css arrow as per http://cssarrowplease.com/
 //
-// @param size, append-vrythm
-// @returns
-//   content: "";
-//   display: block;
-//   width: 0;
-//   height: 0;
-//   border: solid 5px;
-//   border-color: #FFF transparent transparent transparent;
+// CSS Triangle Mixin($triangle-size, $triangle-color, $triangle-direction)
 //
-// @example
-//   .selector:after {
-//     position: absolute;
-//     top: -5px;
-//     left: 50%;
-//     margin-left: -2.5px;
-//     @include css-triangle(5px, #fff, bottom);
-//   }
-// =============================================================================
+// Creates an css arrow as per http://cssarrowplease.com/.
+//
+// <!= type: css || isPureCode !>
+//
+// Markup:
+// .selector:after {
+// 	position: absolute;
+// 	top: -5px;
+// 	left: 50%;
+// 	margin-left: -2.5px;
+// 	@include css-triangle(5px, #fff, bottom);
+// }
+//
+// Styleguide 1.2.5
+//
 @mixin cssTriangle($triangle-size, $triangle-color, $triangle-direction) {
 	content: "";
 	display: block;
@@ -165,130 +122,4 @@
 	@if ($triangle-direction == bottom) { border-color: transparent transparent $triangle-color transparent; }
 	@if ($triangle-direction == left)   { border-color: transparent transparent transparent $triangle-color; }
 	@if ($triangle-direction == right)  { border-color: transparent $triangle-color transparent transparent; }
-}
-
-
-// =============================================================================
-// Viewport Mixin
-// =============================================================================
-// @description
-// Basicly the same as <meta name="viewport" content="width=device-width">
-// but the future proof way.
-// @link http://dev.w3.org/csswg/css-device-adapt/
-//
-// @param size, append-vrythm
-// @returns
-//   @-webkit-viewport {
-//     width: device-width;
-//     zoom: 1;
-//   }
-//   @-moz-viewport {
-//     width: device-width;
-//     zoom: 1;
-//   }
-//   @-ms-viewport {
-//     width: device-width;
-//     zoom: 1;
-//   }
-//   @-o-viewport {
-//     width: device-width;
-//     zoom: 1;
-//   }
-//   @viewport {
-//     width: device-width;
-//     zoom: 1;
-//   }
-//
-// @example
-//   @include viewport($width: device-width, $zoom: 1);
-// =============================================================================
-@mixin viewport($width: false, $height: false, $zoom: false, $orientation: false, $user-zoom: false) {
-	@-webkit-viewport {
-		@if $width       { width: $width; }
-		@if $height      { height: $height; }
-		@if $zoom        { zoom: $zoom; }
-		@if $orientation { orientation: $orientation; }
-		@if $user-zoom   { user-zoom: $user-zoom; }
-	}
-	@-moz-viewport {
-		@if $width       { width: $width; }
-		@if $height      { height: $height; }
-		@if $zoom        { zoom: $zoom; }
-		@if $orientation { orientation: $orientation; }
-		@if $user-zoom   { user-zoom: $user-zoom; }
-	}
-	@-ms-viewport {
-		@if $width       { width: $width; }
-		@if $height      { height: $height; }
-		@if $zoom        { zoom: $zoom; }
-		@if $orientation { orientation: $orientation; }
-		@if $user-zoom   { user-zoom: $user-zoom; }
-	}
-	@-o-viewport {
-		@if $width       { width: $width; }
-		@if $height      { height: $height; }
-		@if $zoom        { zoom: $zoom; }
-		@if $orientation { orientation: $orientation; }
-		@if $user-zoom   { user-zoom: $user-zoom; }
-	}
-	@viewport {
-		@if $width       { width: $width; }
-		@if $height      { height: $height; }
-		@if $zoom        { zoom: $zoom; }
-		@if $orientation { orientation: $orientation; }
-		@if $user-zoom   { user-zoom: $user-zoom; }
-	}
-}
-
-
-// =============================================================================
-// Hyphens mixin
-// =============================================================================
-// @description
-// Adds all missing vendor prefixes for the CSS Hyphens property
-// @link http://www.w3.org/TR/css3-text/#hyphenation
-//
-// @param value
-// @returns
-//   -webkit-hyphens: break-word;
-//      -moz-hyphens: break-word;
-//       -ms-hyphens: break-word;
-//        -o-hyphens: break-word;
-//           hyphens: break-word;
-//
-// @example
-//   .selector {
-//     @include hyphens(break-word);
-//   }
-// =============================================================================
-@mixin hyphens($value) {
-	-webkit-hyphens: $value;
-		 -moz-hyphens: $value;
-			-ms-hyphens: $value;
-			 -o-hyphens: $value;
-					hyphens: $value;
-}
-
-
-// =============================================================================
-// Input placeholder Mixin
-// =============================================================================
-// @description
-// Set a custom color for HTML placeholders
-//
-// @param color
-// @returns
-//   .selector::-webkit-input-placeholder { color: #ccc; }
-//   .selector:-moz-placeholder { color: #ccc; }
-//   .selector:-ms-input-placeholder { color: #ccc; }
-//
-// @example
-//   .selector {
-//     @include placeholder-color(#ccc);
-//   }
-// =============================================================================
-@mixin placeholder-color($color) {
-	&::-webkit-input-placeholder { color: $color; }
-	&:-moz-placeholder { color: $color; }
-	&:-ms-input-placeholder { color: $color; }
 }

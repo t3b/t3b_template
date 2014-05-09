@@ -1,0 +1,31 @@
+//
+// Rulers
+//
+// Styleguide 2.6
+//
+
+
+/*
+Horizontal ruler element
+
+Markup:
+<hr>
+
+Styleguide 2.6.1
+*/
+%horizontal-ruler,
+hr {
+	/**
+	* Address differences between Firefox and other browsers.
+	*/
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+
+	display: block;
+	height: 0;
+	border: 0;
+	border-top: 1px $basic-border-style $basic-border-color;
+	padding: 0;
+	@extend %margin-top;
+	@extend %margin-bottom;
+}

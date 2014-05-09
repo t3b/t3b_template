@@ -7,15 +7,19 @@
 var config = require("../Config");
 
 module.exports = {
-	"options" : {
-		"nospawn" : true
+	options: {
+		nospawn: true
 	},
-	"sass" : {
-		"files" : [config.Sass.sassDir + "/**/*.scss"],
-		"tasks" : ["compass:dev"]
+	sass: {
+		files: [config.Sass.sassDir + "/**/*.scss"],
+		tasks: ["css"]
 	},
-	"js" : {
-		"files" : ["<%= jshint.files %>"],
-		"tasks" : ["jshint"]
+	js: {
+		files: ["<%= jshint.files %>"],
+		tasks: ["jshint"]
+	},
+	docs: {
+		files: ["Build/Templates/Kss-Node/**/*"],
+		tasks: ["styleguide", "autoprefixer:styleguide"]
 	}
 };

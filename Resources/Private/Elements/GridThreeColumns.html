@@ -7,13 +7,13 @@
 		<flux:flexform id="three-columns" label="[GRID] Three Columns (1 | 1 | 1)" description="Provides three columns to be filled with content elements.">
 			<flux:flexform.grid>
 				<flux:flexform.grid.row>
-					<flux:flexform.grid.column>
+					<flux:flexform.grid.column  style="width: 33.333%">
 						<flux:flexform.content name="FirstColumn" label="First column" />
 					</flux:flexform.grid.column>
-					<flux:flexform.grid.column>
+					<flux:flexform.grid.column  style="width: 33.333%">
 						<flux:flexform.content name="SecondColumn" label="Second column" />
 					</flux:flexform.grid.column>
-					<flux:flexform.grid.column>
+					<flux:flexform.grid.column  style="width: 33.333%">
 						<flux:flexform.content name="ThirdColumn" label="Third column" />
 					</flux:flexform.grid.column>
 				</flux:flexform.grid.row>
@@ -22,6 +22,7 @@
 	</f:section>
 
 	<f:section name="Preview">
+		<strong>[GRID] Three Columns (1 | 1 | 1)</strong>
 		<flux:widget.grid />
 	</f:section>
 

@@ -1,24 +1,23 @@
 /*
- * Basic styling for media elements e.g.
- * <img>, <video>, <svg>, <augio>
- *
- * @package #{ext_directory()}
- * @path Base/_Media.scss
- */
+[Base] Media
+
+Basic styling for media elements.
+*/
 
 
-/* =============================================================================
-$ Attachements & Images
-	Contents: 1: Make Images & Attachements responsive
-						2: Styling the alt="" Text on images
-							 http://csswizardry.com/2011/06/styling-alt-text-on-images/
-						3: Removes border when inside `a` element in IE6/7/8/9, FF3.
-						4: Remove the gap between images and the bottom of their containers:
-							 h5bp.com/i/440
-						5: Improves image quality when scaled in IE7.
-							 code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
-						6: Decrease font-size on figcaption elements
-================================================================================ */
+/*
+Attachements & Images
+
+Contents: 1: Make Images & Attachements responsive
+					2: Styling the alt="" Text on images
+						 http://csswizardry.com/2011/06/styling-alt-text-on-images/
+					3: Removes border when inside `a` element in IE6/7/8/9, FF3.
+					4: Remove the gap between images and the bottom of their containers:
+						 h5bp.com/i/440
+					5: Improves image quality when scaled in IE7.
+						 code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+					6: Decrease font-size on figcaption elements
+*/
 embed,
 iframe,
 object,
@@ -49,18 +48,12 @@ iframe {
 	@extend %margin-bottom;
 }
 
-
-/* =============================================================================
-$ Video
-================================================================================ */
+/*
+Multimedia elements
+*/
 video {
 	@extend %margin-bottom;
 }
-
-
-/* =============================================================================
-$ Audio
-================================================================================ */
 audio {
 	@extend %margin-bottom;
 	min-width: 65%;
@@ -77,10 +70,9 @@ audio {
 	}
 }
 
-
-/* =============================================================================
-$ SVG
-================================================================================ */
+/*
+SVG element
+*/
 svg {
 	&:not(:root) {
 		/**
