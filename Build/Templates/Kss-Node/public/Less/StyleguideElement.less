@@ -1,0 +1,84 @@
+
+//
+// Styleguide Element
+//
+.kss-box { // Description wrapper
+	padding: 1px @baseIndent;
+	background: #f1f1f1;
+	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize - 2;
+	color: @baseTextColor;
+	p {
+		margin: @baseSpacing 0;
+	}
+	&:empty { display: none; }
+}
+.kss-box__modifierTable {
+	margin-top: @baseSpacing !important;
+	p {
+		margin: 0;
+	}
+	th,
+	td {
+		padding: .15em 0 !important;
+		vertical-align: middle;
+		font-size: 12px;
+		font-weight: bold;
+	}
+}
+.kss-box__modifierTable__modifierName {
+	width: 30%;
+	> pre {
+		padding: 5px 10px;
+		margin-right: @baseSpacing;
+		margin-bottom: 0;
+		font-weight: 400;
+		background-color: #F7F7F9;
+		border: 1px solid #E1E1E8;
+	}
+}
+.kss-styleguideSection { // Rendered example
+	background: @baseBackgroundColor;
+	border-left: 1px solid @baseBorderColor;
+	border-right: 1px solid @baseBorderColor;
+	.kss___hideExamples & { display: none; }
+}
+.kss-styleguideElement { // Modifier wrapper
+	position: relative;
+	padding: @baseIndent;
+	border-bottom: 1px solid @baseBorderColor;
+}
+	.kss-styleguideElement__heading {
+		margin-bottom: @baseSpacing/2;
+		font-family: @baseFontFamily;
+		color: @baseTextColor;
+		p {
+			margin: @baseIndent 0 0;
+		}
+	}
+.kss-styleguideElement__class {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: @baseSpacing/2 @baseSpacing;
+	border: 1px solid @baseBorderColor;
+	border-top: none;
+	font-family: monospace;
+	font-size: 12px;
+	font-weight: bold;
+	color: #999;
+	background: @lightGrey;
+	border-radius: 0 0 0 @baseBorderRadius;
+	transition: .2s ease all;
+	.kss-styleguideElement:hover & {
+		background: @baseActionColor;
+		border-color: @baseActionColor;
+		color: #FFF;
+	}
+}
+.kss-markup {  // Markup wrapper
+	padding-bottom: @baseSpacing*3;
+}

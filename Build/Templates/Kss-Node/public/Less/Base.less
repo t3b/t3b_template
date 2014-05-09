@@ -1,0 +1,73 @@
+//
+// Base element styles
+//
+.kssBody {
+	background: @baseBackgroundColor;
+	margin: 0;
+}
+* {
+	&,
+	&:before,
+	&:after { box-sizing: border-box; }
+}
+
+//
+// CSS Keyframe Animations
+//
+@keyframes menuSlideIn {
+	from {
+		transform: translateX(-@navWidth);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+@keyframes contentSlideOut {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(@navWidth);
+	}
+}
+
+@keyframes menuSlideOut {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-@navWidth);
+	}
+}
+@keyframes contentSlideIn {
+	from {
+		transform: translateX(@navWidth);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+//
+// Styleguide Contentwrapper
+//
+.kss___siteWrapper {
+	position: relative;
+	background: #edf1f4;
+	animation: contentSlideIn .3s forwards;
+	.kss___navIsOpen & {
+		animation: contentSlideOut .3s forwards;
+	}
+}
+.kss___contentWrapper {
+	display: block;
+	padding: @baseIndent*4 @baseIndent*4 0;
+}
+
+// Disable the OffCanvas navigation of large screens.
+@media screen and (min-width: @offCanvasBreakpoint) {
+	.kss___siteWrapper {
+		animation: none;
+		padding-left: 450px;
+	}
+}

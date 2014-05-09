@@ -1,0 +1,115 @@
+//
+// Styleguide Navigation
+//
+.kss___navWrapper {
+	display: block;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	z-index: 2;
+	width: @navWidth;
+	background: @darkBackgroundColor;
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize;
+	transform: translateX(-@navWidth);
+	animation: menuSlideOut .3s forwards;
+	.kss___navIsOpen & {
+		animation: menuSlideIn .3s forwards;
+	}
+}
+
+.kss___nav {
+	height: 100%;
+	margin: 0;
+	padding: @baseIndent*4 @baseIndent 0 0;
+	list-style: none;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	a {
+		display: block;
+		text-decoration: none;
+	}
+}
+	.kss___nav__item {
+		border-bottom: 1px solid @darkActionColor;
+		> a {
+			color: @baseBackgroundColor;
+			padding: @baseSpacing 3px @baseSpacing @baseSpacing;
+			transition: .2s ease all;
+			border-left: 3px solid @darkBackgroundColor;
+			transition: .2s ease all;
+			&:hover {
+				text-decoration: none;
+				background: @darkActionColor;
+				border-color: @darkActionColor;
+			}
+		}
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+	.kss___nav__item--active > a {
+		border-color: @baseActionColor;
+		&:hover {
+			border-color: @baseActionColor;
+			background: 0;
+			cursor: default;
+		}
+	}
+
+// Second level items
+.kss___navSub {
+	margin: 0;
+	font-size: 12px;
+	letter-spacing: .4px;
+	padding-bottom: @baseSpacing;
+	padding-left: 0;
+}
+	.kss___navSub__item {
+		display: table-row !important;
+		line-height: 1.2;
+		> a {
+			padding: 2px @baseSpacing/2 2px @baseSpacing*2;
+			border-left: 3px solid @darkBackgroundColor;
+			color: @baseBackgroundColor;
+			transition: .2s ease all;
+			font-weight: 600;
+			&:hover {
+				text-decoration: none;
+				opacity: 1;
+			}
+		}
+	}
+	.kss___navSub__item--2 {
+		> a {
+			margin-top: .5em;
+		}
+		&:first-child > a {
+			margin-top: 0;
+		}
+	}
+	.kss___navSub__item--3 > a {
+		opacity: .7;
+		padding-left: @baseSpacing*3;
+		font-weight: 300;
+	}
+	.kss___navSub__item--active {
+		> a {
+			border-color: @baseActionColor;
+		}
+	}
+	.kss___navSub__item__ref {
+		display: table-cell;
+		padding-right: @baseSpacing/2;
+	}
+	.kss___navSub__item__header {
+		display: table-cell;
+	}
+
+// Disable the OffCanvas navigation of large screens.
+@media screen and (min-width: @offCanvasBreakpoint) {
+	.kss___navWrapper {
+		animation: none;
+		transform: none;
+	}
+}
