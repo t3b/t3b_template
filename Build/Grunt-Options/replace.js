@@ -6,7 +6,7 @@
 
 var config = require("../Config"),
 	deployStrings = {
-		requireJSLibSourceFile: config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.libSourceFile + ".js",
+		requireJSLibSourceFile: config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.requireJsSourceFile + ".js",
 		requireJsAttributeDeploy: "data-main=\"typo3conf/ext/" + config.package.name + "/" + config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.config + "\"",
 		requireJsAttributeLive: "data-mainJs"
 	};

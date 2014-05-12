@@ -1,0 +1,149 @@
+//
+// Base element styles
+//
+.kssBody {
+	margin: 0;
+	background: @baseBackgroundColor;
+}
+
+// Hard CSS reset so we can start off fresh without
+// using styles from the extensions site stylesheet.
+// Usage: &:extend(.kssReset);
+.kssReset {
+	// General
+	box-sizing: border-box;
+	height: auto;
+	width: auto;
+	position: static;
+	top: auto;
+	bottom: auto;
+	left: auto;
+	right: auto;
+	clear: none;
+	clip: auto;
+	cursor: auto;
+	max-height: none;
+	max-width: none;
+	min-height: 0;
+	min-width: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	float: none;
+	opacity: 1;
+	pointer-events: auto;
+	resize: none;
+	speak: normal;
+	overflow-x: visible;
+	overflow-y: visible;
+	visibility: visible;
+	vertical-align: baseline;
+	z-index: auto;
+	zoom: 1;
+
+	// Typography
+	font-size: 100%;
+	//font: 0/0 a;
+	line-height: 1;
+	letter-spacing: normal;
+	color: #000;
+	text-decoration: none;
+	text-shadow: none;
+	text-transform: none;
+	text-align: left;
+	text-decoration: none;
+	text-indent: 0;
+	text-overflow: clip;
+	text-rendering: auto;
+	text-shadow: none;
+	word-break: normal;
+	word-spacing: 0;
+	word-wrap: normal;
+
+	// Tables
+	border-collapse: collapse;
+	border-spacing: 0;
+
+	// Lists
+	list-style: none;
+
+	backface-visibility: visible;
+	background: 0;
+	filter: none;
+	box-shadow: none;
+	transform: none;
+	transition: none;
+}
+
+// Usage: &:extend(.kssBaseTypo);
+.kssBaseTypo {
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize ;
+	font-weight: @baseFontWeight;
+	line-height: @baseLineHeight;
+	color: @baseTextColor;
+}
+
+//
+// CSS Keyframe Animations
+//
+@keyframes menuSlideIn {
+	from {
+		transform: translateX(-@navWidth);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+@keyframes contentSlideOut {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(@navWidth);
+	}
+}
+
+@keyframes menuSlideOut {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-@navWidth);
+	}
+}
+@keyframes contentSlideIn {
+	from {
+		transform: translateX(@navWidth);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+//
+// Styleguide Contentwrapper
+//
+.kss___siteWrapper {
+	&:extend(.kssReset);
+	position: relative;
+	background: #edf1f4;
+	animation: contentSlideIn .3s forwards;
+	.kss___navIsOpen & {
+		animation: contentSlideOut .3s forwards;
+	}
+}
+.kss___contentWrapper {
+	&:extend(.kssReset);
+	display: block;
+	padding: @baseIndent*4 @baseIndent*4 0;
+}
+
+// Disable the OffCanvas navigation of large screens.
+@media screen and (min-width: @offCanvasBreakpoint) {
+	.kss___siteWrapper {
+		animation: none;
+		padding-left: 450px;
+	}
+}

@@ -30,10 +30,11 @@ var ConfigCreator = function() {
 	// RequireJS settings.
 	this.JavaScripts.requireJS = {
 		config : "Main",
-		libSourceFile : "Libaries/requirejs/require", // Relative to the "config" file.
+		requireJsSourceFile : "Libaries/requirejs/require", // Relative to the "config" file.
 		almondSourceFile : "Libaries/almond/almond", // Relative to the "config" file.
-		compileDistFile : this.JavaScripts.paths.distDir + "/Main.min.js",
-		useAlmondOnBuild : true,
+		compileDistFile : this.JavaScripts.paths.distDir + "/Main.js",
+		useSingleFileBuild : true,
+		useAlmondOnBuild : true, // Won't affect anything if 'useSingleFileBuild' is set to false.
 		removeLoggingStatements : true
 	};
 

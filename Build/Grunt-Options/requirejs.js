@@ -4,13 +4,26 @@
  * @docs https://github.com/gruntjs/grunt-contrib-requirejs
 */
 
-var config = require("../Config");
+var config = require("../Config"),
+	includeArray = [];
+
+// Include the desired requireJS lib.
+if(config.JavaScripts.requireJS.useSingleFileBuild) {
+	if(config.JavaScripts.requireJS.useAlmondOnBuild) {
+		includeArray.push(config.JavaScripts.requireJS.almondSourceFile);
+	} else {
+		includeArray.push(config.JavaScripts.requireJS.requireJsSourceFile);
+	}
+}
+
+// The requireJS entry point/config should always be included.
+includeArray.push(config.JavaScripts.requireJS.config);
 
 module.exports = {
 	deploy: {
 		options: {
 			mainConfigFile: config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.config + ".js",
-			include: [(config.JavaScripts.requireJS.useAlmondOnBuild) ? config.JavaScripts.requireJS.almondSourceFile : config.JavaScripts.requireJS.libSourceFile, config.JavaScripts.requireJS.config],
+			include: includeArray,
 			out: config.JavaScripts.requireJS.compileDistFile,
 
 			// Include all require files in nested files.
