@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 
 		// Create the base Stylesheet to prevent errors from ext:vhs(File not found).
 		if (!fs.existsSync(config.Sass.cssDir + "/Main.css")) {
-			grunt.task.run(["css:dev"]);
+			grunt.task.run(["compile:css:dev"]);
 		}
 
 		// Create the initial living styleguide.

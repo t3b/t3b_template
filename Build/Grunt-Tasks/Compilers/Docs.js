@@ -14,6 +14,6 @@ module.exports = function(grunt) {
 		grunt.task.run("autoprefixer:styleguide");
 
 		// Compile the new stylesheets.
-		grunt.task.run("css:dev");
+		grunt.task.run("compile:css:dev");
 	});
 };

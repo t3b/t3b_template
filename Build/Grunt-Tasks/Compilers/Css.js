@@ -6,7 +6,7 @@
 module.exports = function(grunt) {
 	"use strict";
 
-	grunt.registerTask("css", function(mode) {
+	grunt.registerTask("compile:css", function(mode) {
 		mode = (!mode) ? "dev" : mode;
 
 		// (Re-)Compile the stylesheets.

@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 	grunt.registerTask("undeploy", function() {
 		// Remove all stylesheets and re-compile them with :dev options.
 		grunt.task.run(["clean:stylesheets"]);
-		grunt.task.run(["css:dev"]);
+		grunt.task.run(["compile:css:dev"]);
 
 		// Replace all paths pointing to the dist ressources with the dev equivalent.
 		grunt.task.run(["replace:dev"]);

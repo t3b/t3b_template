@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 		grunt.task.run(["compile:docs"]);
 
 		// Compile the stylesheets.
-		grunt.task.run(["css:deploy"]);
+		grunt.task.run(["compile:css:deploy"]);
 
 		// Optimize the projects js files a requireJS build to avoid too many http requests on the live server.
 		if(!config.JavaScripts.requireJS.useSingleFileBuild || grunt.option('env') === 'travis') {
