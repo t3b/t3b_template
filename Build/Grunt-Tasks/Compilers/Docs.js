@@ -1,12 +1,12 @@
 /**
- * Docs task.
+ * Compile:documentation task.
  * Create the extension documentation/styleguide.
  */
 
 module.exports = function(grunt) {
 	"use strict";
 
-	grunt.registerTask("docs", function() {
+	grunt.registerTask("compile:docs", function() {
 		// Create the living CSS styleguide.
 		grunt.task.run(["styleguide"]);
 

@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 		grunt.task.run(["compile:images"]);
 
 		// Compile the living styleguide.
-		grunt.task.run(["docs"]);
+		grunt.task.run(["compile:docs"]);
 
 		// Remove all stylesheets to force a new compilation.
 		grunt.task.run(["clean:stylesheets"]);
