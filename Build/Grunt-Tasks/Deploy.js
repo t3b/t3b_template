@@ -12,24 +12,24 @@ module.exports = function(grunt) {
 
 	grunt.registerTask("deploy", function() {
 		// Compile the living styleguide.
-		grunt.task.run(["compile:images"]);
+		grunt.task.run("compile:images");
 
 		// Compile the living styleguide.
-		grunt.task.run(["compile:docs"]);
+		grunt.task.run("compile:docs");
 
 		// Compile the stylesheets.
-		grunt.task.run(["compile:css:deploy"]);
+		grunt.task.run("compile:css:deploy");
 
 		// Optimize the projects js files a requireJS build to avoid too many http requests on the live server.
 		if(!config.JavaScripts.requireJS.useSingleFileBuild || grunt.option('env') === 'travis') {
-			grunt.task.run(["uglify:all"]);
+			grunt.task.run("uglify:all");
 		}
-		grunt.task.run(["requirejs"]);
+		grunt.task.run("requirejs");
 
 		// Generate a custom modernizr build.
-		grunt.task.run(["modernizr"]);
+		grunt.task.run("modernizr");
 
 		// Replace paths to match the build files.
-		grunt.task.run(["replace:deploy"]);
+		grunt.task.run("replace:deploy");
 	});
 };

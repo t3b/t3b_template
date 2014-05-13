@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask("compile:docs", function() {
 		// Create the living CSS styleguide.
-		grunt.task.run(["styleguide"]);
+		grunt.task.run("styleguide");
 
 		// Prefix the docs stylesheet.
 		grunt.task.run("autoprefixer:styleguide");
