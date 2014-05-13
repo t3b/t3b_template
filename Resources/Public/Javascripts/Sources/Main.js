@@ -3,6 +3,7 @@
  * @description Pass in options for RequireJS like paths, shims or the baseUrl
  */
 require.config({
+	shim: {},
 	paths: {
 		"mainModule" : "Modules/Main"
 	},
