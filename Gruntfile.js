@@ -43,5 +43,6 @@ module.exports = function(grunt) {
 	 * Load custom tasks
 	 * Load all Grunt-Tasks inside the 'Build/Grunt-Tasks' dir.
 	 */
+	grunt.loadTasks("Build/Grunt-Tasks/Compilers");
 	grunt.loadTasks("Build/Grunt-Tasks");
 };
