@@ -5,10 +5,24 @@
  */
 
 var config = require("../Config"),
+	requireTagParts = {
+		tagStart: '<script type="text/javascript" src="typo3conf/ext/' + config.package.name + '/',
+		unDeployAttribute: '" data-main="typo3conf/ext/' + config.package.name + '/' + config.JavaScripts.paths.devDir + '/' + config.JavaScripts.requireJS.config,
+		deployAttributes: {
+			singleFile:  '" data-mainJs="',
+			asyncModules:  '" data-main="typo3conf/ext/' + config.package.name + '/' + config.JavaScripts.paths.distDir + '/' + config.JavaScripts.requireJS.config,
+		},
+		tagEnd: '"></script>'
+	},
 	deployStrings = {
-		requireJSLibSourceFile: config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.requireJsSourceFile + ".js",
-		requireJsAttributeDeploy: "data-main=\"typo3conf/ext/" + config.package.name + "/" + config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.config + "\"",
-		requireJsAttributeLive: "data-mainJs"
+		deploy: {
+			rJs: (config.JavaScripts.requireJS.useSingleFileBuild) ?
+					requireTagParts.tagStart + config.JavaScripts.requireJS.compileDistFile + requireTagParts.deployAttributes.singleFile + requireTagParts.tagEnd :
+					requireTagParts.tagStart + config.JavaScripts.paths.distDir + '/' + config.JavaScripts.requireJS.requireJsSourceFile + '.js' + requireTagParts.deployAttributes.asyncModules + requireTagParts.tagEnd
+		},
+		unDeploy : {
+			rJs: requireTagParts.tagStart + config.JavaScripts.paths.devDir + '/' + config.JavaScripts.requireJS.requireJsSourceFile + '.js' + requireTagParts.unDeployAttribute + requireTagParts.tagEnd
+		}
 	};
 
 module.exports = function(grunt) {
@@ -74,11 +88,8 @@ module.exports = function(grunt) {
 				from: config.JavaScripts.modernizr.devSourceFile,
 				to: config.JavaScripts.modernizr.buildDistFile
 			}, {
-				from: deployStrings.requireJSLibSourceFile,
-				to: config.JavaScripts.requireJS.compileDistFile
-			}, {
-				from: deployStrings.requireJsAttributeDeploy,
-				to: deployStrings.requireJsAttributeLive
+				from: deployStrings.unDeploy.rJs,
+				to: deployStrings.deploy.rJs
 			}]
 		},
 		dev: {
@@ -88,11 +99,8 @@ module.exports = function(grunt) {
 				from: config.JavaScripts.modernizr.buildDistFile,
 				to: config.JavaScripts.modernizr.devSourceFile
 			}, {
-				from: config.JavaScripts.requireJS.compileDistFile,
-				to: deployStrings.requireJSLibSourceFile
-			}, {
-				from: deployStrings.requireJsAttributeLive,
-				to: deployStrings.requireJsAttributeDeploy
+				from: deployStrings.deploy.rJs,
+				to: deployStrings.unDeploy.rJs
 			}]
 		}
 	};
