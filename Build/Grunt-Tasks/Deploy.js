@@ -11,10 +11,8 @@ module.exports = function(grunt) {
 	"use strict";
 
 	grunt.registerTask("deploy", function() {
-		// Prevent 'imagemin' from executing if the build gets tested on travis to suppress errors.
-		if(grunt.option('env') !== 'travis') {
-			grunt.task.run(["copy:imagesDir", "imagemin", "clean:imagesTempDir"]);
-		}
+		// Compile the living styleguide.
+		grunt.task.run(["compile:images"]);
 
 		// Compile the living styleguide.
 		grunt.task.run(["docs"]);
