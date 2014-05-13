@@ -27,6 +27,7 @@ var ConfigCreator = function() {
 		return banner;
 	};
 
+
 	// General Paths/Structure of the extension.
 	this.paths = {
 		private : "Resources/Private",

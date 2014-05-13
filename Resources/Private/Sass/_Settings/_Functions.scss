@@ -20,6 +20,10 @@
 // Styleguide 1.1.1
 //
 @function image-url($imagePath) {
+	@if(type-of($imagePath) != "string") {
+		@warn 'Argument $imagePath of image-url() must be a string';
+	}
+
   @return url(#{"../Images/" + $imagePath});
 }
 
@@ -40,6 +44,19 @@
 // Styleguide 1.1.2
 //
 @function rs($target-size, $context: $base-font-size, $unit: em) {
+	@if(type-of($target-size) != "number") {
+		@warn 'Argument $target-size of rs() must be a number';
+	}
+	@if(type-of($context) != "number") {
+		@warn 'Argument $context of rs() must be a number';
+	}
+	@if(type-of($unit) != "string") {
+		@warn 'Argument $unit of rs() must be a string';
+	}
+	@if(not ($unit == "em" or $unit == "rem")) {
+		@warn 'Argument $unit of rs() must be either "em" or "rem"';
+	}
+
 	@return #{$target-size/$context}$unit;
 }
 
@@ -73,6 +90,13 @@ $end: right !default;
 // Styleguide 1.1.3
 //
 @function color-adjust($color, $contrast: 100%) {
+	@if(type-of($color) != "color") {
+		@warn 'Argument $color of color-adjust() must be a color';
+	}
+	@if(type-of($contrast) != "number") {
+		@warn 'Argument $contrast of color-adjust() must be a number';
+	}
+
 	@if (lightness($color) > 50) {
 		@return darken($color, $contrast)
 	}
@@ -99,6 +123,13 @@ $end: right !default;
 // Styleguide 1.1.4
 //
 @function map-fetch($map, $keys) {
+	@if(type-of($map) != "map") {
+		@warn 'Argument $map of map-fetch() must be a Sass map';
+	}
+	@if(type-of($keys) != "list") {
+		@warn 'Argument $keys of map-fetch() must be a Sass list';
+	}
+
 	$key: nth($keys, 1);
 	$length: length($keys);
 	$value: map-get($map, $key);
@@ -127,6 +158,13 @@ $end: right !default;
 // Styleguide 1.1.5
 //
 @function map-removeKeys($map, $keys) {
+	@if(type-of($map) != "map") {
+		@warn 'Argument $map of map-fetch() must be a Sass map';
+	}
+	@if(type-of($keys) != "list") {
+		@warn 'Argument $keys of map-fetch() must be a Sass list';
+	}
+
 	$length: length($keys);
 	@if ($length > 1) {
 		$restMap: $map;
