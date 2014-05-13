@@ -16,8 +16,8 @@ module.exports = {
 			cwd: config.JavaScripts.paths.devDir,
 			src: [
 				"**/*.js",
-				"!Libaries/almond/**/*.js",
-				"!Libaries/modernizr/**/*.js"
+				"!Vendor/almond/**/*.js",
+				"!Vendor/modernizr/**/*.js"
 			],
 			dest:  config.JavaScripts.paths.distDir
 		}]

@@ -26,16 +26,16 @@ var ConfigCreator = function() {
 	};
 	this.JavaScripts = {};
 	this.JavaScripts.paths = {
-		devDir : this.paths.private + "/Javascripts",
-		distDir : this.paths.public + "/Javascripts"
+		devDir : this.paths.public + "/Javascripts/Sources",
+		distDir : this.paths.public + "/Javascripts/Build"
 	};
 
 
 	// RequireJS settings.
 	this.JavaScripts.requireJS = {
 		config : "Main",
-		requireJsSourceFile : "Libaries/requirejs/require", // Relative to the "config" file.
-		almondSourceFile : "Libaries/almond/almond", // Relative to the "config" file.
+		requireJsSourceFile : "Vendor/requirejs/require", // Relative to the "config" file.
+		almondSourceFile : "Vendor/almond/almond", // Relative to the "config" file.
 		compileDistFile : this.JavaScripts.paths.distDir + "/Main.js",
 		useSingleFileBuild : true,
 		useAlmondOnBuild : true, // Won't affect anything if 'useSingleFileBuild' is set to false.
@@ -51,24 +51,24 @@ var ConfigCreator = function() {
 			"Build/**/*.js",
 			this.JavaScripts.paths.devDir + "/**/*.js",
 			"!Build/Templates/Kss-Node/**/*",
-			"!" + this.JavaScripts.paths.devDir + "/Libaries/**/*",
-			"!" + this.JavaScripts.paths.distDir + "/Libaries/**/*"
+			"!" + this.JavaScripts.paths.devDir + "/Vendor/**/*",
+			"!" + this.JavaScripts.paths.distDir + "/Vendor/**/*"
 		]
 	};
 
 
 	// Modernizr settings.
 	this.JavaScripts.modernizr = {
-		devSourceFile : this.JavaScripts.paths.devDir + "/Libaries/modernizr/modernizr.js",
-		buildDistFile : this.JavaScripts.paths.distDir + "/Libaries/Modernizr-Custom.js",
+		devSourceFile : this.JavaScripts.paths.devDir + "/Vendor/modernizr/modernizr.js",
+		buildDistFile : this.JavaScripts.paths.distDir + "/Vendor/Modernizr-Custom.js",
 		files : {
 			src : [
 				"**/*.{js,css,scss}",
 				"!node_modules/**/*",
 				"!Gruntfile.js",
 				"!Build/**/*",
-				"!" + this.JavaScripts.paths.devDir + "/Libaries/**/*",
-				"!" + this.JavaScripts.paths.distDir + "/Libaries/**/*"
+				"!" + this.JavaScripts.paths.devDir + "/Vendor/**/*",
+				"!" + this.JavaScripts.paths.distDir + "/Vendor/**/*"
 			]
 		}
 	};
