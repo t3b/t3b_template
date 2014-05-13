@@ -4,9 +4,6 @@
  * custom Modernizr build and changes the affected paths in all Fluid Layouts.
  */
 
-var fs = require("fs"),
-	config = require("../Config");
-
 module.exports = function(grunt) {
 	"use strict";
 
@@ -20,11 +17,8 @@ module.exports = function(grunt) {
 		// Compile the stylesheets.
 		grunt.task.run("compile:css:deploy");
 
-		// Optimize the projects js files a requireJS build to avoid too many http requests on the live server.
-		if(!config.JavaScripts.requireJS.useSingleFileBuild || grunt.option('env') === 'travis') {
-			grunt.task.run("uglify:all");
-		}
-		grunt.task.run("requirejs");
+		// Compile the stylesheets.
+		grunt.task.run("compile:js");
 
 		// Generate a custom modernizr build.
 		grunt.task.run("modernizr");
