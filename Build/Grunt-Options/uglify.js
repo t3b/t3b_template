@@ -8,13 +8,16 @@ var config = require("../Config");
 
 module.exports = {
 	all: {
+		options: {
+			banner: config.bannerComment
+		},
 		files: [{
 			expand: true,
 			cwd: config.JavaScripts.paths.devDir,
 			src: [
 				"**/*.js",
-				"!Libaries/almond/**/*.js",
-				"!Libaries/modernizr/**/*.js"
+				"!Vendor/almond/**/*.js",
+				"!Vendor/modernizr/**/*.js"
 			],
 			dest:  config.JavaScripts.paths.distDir
 		}]

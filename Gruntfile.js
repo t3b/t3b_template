@@ -25,14 +25,18 @@ module.exports = function(grunt) {
 	 * Compiles all .scss/.sass files with ':dev' options and
 	 * validates all js-files inside Resources/Private/Javascripts with JSHint.
 	 */
-	grunt.registerTask("default", ["sass:dev", "jshint"]);
+	grunt.registerTask("default", function() {
+		grunt.task.run(["css", "jshint"]);
+	});
 
 
 	/**
 	 * Travis CI task
 	 * Test all specified grunt tasks.
 	 */
-	grunt.registerTask("travis", ["init", "replace:init", "jshint", "deploy", "undeploy"]);
+	grunt.registerTask("travis", function() {
+		grunt.task.run(["init", "replace:init", "jshint", "deploy", "undeploy"]);
+	});
 
 
 	/**

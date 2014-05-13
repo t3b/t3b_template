@@ -7,13 +7,13 @@
   },
   "exportsOverride": {
     "almond": {
-      "Javascripts/Libaries": "almond.js"
+      "Javascripts/Sources/Vendor": "almond.js"
     },
     "modernizr": {
-      "Javascripts/Libaries": "modernizr.js"
+      "Javascripts/Sources/Vendor": "modernizr.js"
     },
     "requirejs": {
-      "Javascripts/Libaries": "require.js"
+      "Javascripts/Sources/Vendor": "require.js"
     }
   }
 }
