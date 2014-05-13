@@ -8,6 +8,9 @@ var config = require("../Config");
 
 module.exports = {
 	all: {
+		options: {
+			banner: config.bannerComment
+		},
 		files: [{
 			expand: true,
 			cwd: config.JavaScripts.paths.devDir,

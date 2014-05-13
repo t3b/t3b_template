@@ -7,7 +7,11 @@ var ConfigCreator = function() {
 	"use strict";
 
 	// Contents of the package.json.
-	this.package = require("../package"),
+	this.package = require("../package");
+
+
+	// Banner comment for compressed files.
+	this.bannerComment = '/*! ' + this.package.name + ' - Built on: <%= grunt.template.today("yyyy-mm-dd") %> */ \n';
 
 
 	// General Paths/Structure of the extension.
