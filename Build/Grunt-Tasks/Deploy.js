@@ -17,9 +17,8 @@ module.exports = function(grunt) {
 		// Compile the living styleguide.
 		grunt.task.run(["compile:docs"]);
 
-		// Remove all stylesheets to force a new compilation.
-		grunt.task.run(["clean:stylesheets"]);
-		grunt.task.run(["sass:deploy", "autoprefixer:main"]);
+		// Compile the stylesheets.
+		grunt.task.run(["css:deploy"]);
 
 		// Optimize the projects js files a requireJS build to avoid too many http requests on the live server.
 		if(!config.JavaScripts.requireJS.useSingleFileBuild || grunt.option('env') === 'travis') {
