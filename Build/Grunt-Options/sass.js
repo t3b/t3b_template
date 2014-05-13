@@ -7,6 +7,9 @@
 var config = require("../Config");
 
 module.exports = {
+	options: {
+		banner: config.bannerComment('Stylesheets for ' + config.package.homepage)
+	},
 	dev: {
 		options: {
 			style: "expanded"

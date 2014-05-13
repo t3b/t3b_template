@@ -9,7 +9,7 @@ var config = require("../Config");
 module.exports = {
 	all: {
 		options: {
-			banner: config.bannerComment
+			banner: config.bannerComment()
 		},
 		files: [{
 			expand: true,

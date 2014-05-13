@@ -8,8 +8,7 @@ node_modules/*
 composer.lock
 
 # Source-/Generated-files which shouldn't pollute the source repository
-Resources/Public/Javascripts/Build/*.js
-Resources/Public/Javascripts/Build/*.map
+Resources/Public/Javascripts/Build/**/*
 Resources/Public/Javascripts/Sources/Vendor/*
 Resources/Public/Stylesheets/*.css
 Resources/Public/Stylesheets/*.map

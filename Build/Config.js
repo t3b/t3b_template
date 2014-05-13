@@ -11,8 +11,21 @@ var ConfigCreator = function() {
 
 
 	// Banner comment for compressed files.
-	this.bannerComment = '/*! ' + this.package.name + ' - Built on: <%= grunt.template.today("yyyy-mm-dd") %> */ \n';
+	this.bannerComment = function(description) {
+		var banner;
 
+		// Add a delimiter between the description - if one was passed - and the build date.
+		description = (description) ? description + " - " : "";
+
+		banner = '/*!\n' +
+		         '* ' + description + 'Built on: <%= grunt.template.today("yyyy-mm-dd") %> \n' +
+		         '* \n' +
+		         '* @package ' + this.package.name + '\n' +
+		         '* @author ' + this.package.author.name + ' <' +  this.package.author.email + '>' + '\n' +
+		         '*/\n';
+
+		return banner;
+	};
 
 	// General Paths/Structure of the extension.
 	this.paths = {
