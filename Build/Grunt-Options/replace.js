@@ -51,8 +51,8 @@ module.exports = function(grunt) {
 				config.paths.private + "/Layouts/**/*.html",
 				config.paths.private + "/Partials/**/*.html",
 				config.paths.private + "/Templates/**/*.html",
-				config.paths.private + "/Sass/**/*.scss",
-				config.paths.private + "/Sass/styleguide.md"
+				config.Sass.sassDir + "/**/*.scss",
+				config.Sass.sassDir + "/styleguide.md"
 			],
 			overwrite: true,
 			replacements: [{
