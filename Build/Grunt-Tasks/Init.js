@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 		}
 
 		// Create the base Stylesheet to prevent errors from ext:vhs(File not found) as well as the living styleguide.
-		grunt.task.run("docs");
+		grunt.task.run("compile:docs");
 
 		// Fetch all bower components.
 		grunt.task.run("bower");
