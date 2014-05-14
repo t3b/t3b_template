@@ -12,7 +12,7 @@ module.exports = {
 	},
 	sass: {
 		files: [config.Sass.sassDir + "/**/*.scss"],
-		tasks: ["css"]
+		tasks: ["compile:css"]
 	},
 	js: {
 		files: ["<%= jshint.files %>"],
