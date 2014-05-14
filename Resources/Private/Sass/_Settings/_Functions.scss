@@ -24,7 +24,7 @@
 		@warn 'Argument $imagePath of image-url() must be a string';
 	}
 
-  @return url(#{"../Images/" + $imagePath});
+	@return url(#{"../Images/" + $imagePath});
 }
 
 
