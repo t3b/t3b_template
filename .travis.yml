@@ -13,3 +13,6 @@ notifications:
 branches:
   only:
     - development
+cache:
+  directories:
+    - node_modules
