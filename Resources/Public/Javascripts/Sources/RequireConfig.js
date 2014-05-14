@@ -5,7 +5,7 @@
 require.config({
 	shim: {},
 	paths: {
-		"mainModule" : "Modules/Main"
+		"myModule" : "Modules/Module"
 	},
 
 	// Append a date on each requested script to prevent caching issues.

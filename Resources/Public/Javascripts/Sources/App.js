@@ -2,8 +2,8 @@
  * Main.js
  * @description Require and execute the main application modules.
  */
-require(["mainModule"], function(MainFn) {
+require(["myModule"], function(module) {
 	"use strict";
 
-	new MainFn();
+	module.initialize();
 });
