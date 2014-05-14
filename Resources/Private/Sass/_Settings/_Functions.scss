@@ -159,10 +159,10 @@ $end: right !default;
 //
 @function map-removeKeys($map, $keys) {
 	@if(type-of($map) != "map") {
-		@warn 'Argument $map of map-fetch() must be a Sass map';
+		@warn 'Argument $map of map-removeKeys() must be a Sass map';
 	}
 	@if(type-of($keys) != "list") {
-		@warn 'Argument $keys of map-fetch() must be a Sass list';
+		@warn 'Argument $keys of map-removeKeys() must be a Sass list';
 	}
 
 	$length: length($keys);
