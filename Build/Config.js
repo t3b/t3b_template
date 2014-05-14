@@ -47,7 +47,7 @@ var ConfigCreator = function() {
 
 	// RequireJS settings.
 	this.JavaScripts.requireJS = {
-		config : "Main",
+		config : "RequireConfig",
 		requireJsSourceFile : "Vendor/requirejs/require", // Relative to the "config" file.
 		almondSourceFile : "Vendor/almond/almond", // Relative to the "config" file.
 		compileDistFile : this.JavaScripts.paths.distDir + "/Main.js",
