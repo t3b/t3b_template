@@ -33,25 +33,25 @@
     "grunt-bower-task": "~0.3.4",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-copy": "~0.5.0",
-    "grunt-contrib-imagemin": "~0.5.0",
-    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-imagemin": "~0.7.0",
+    "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-requirejs": "~0.4.1",
     "grunt-contrib-sass": "~0.7.3",
     "grunt-contrib-uglify": "^0.4.0",
-    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-watch": "~0.6.1",
     "grunt-css-metrics": "~0.1.2",
     "grunt-modernizr": "~0.5.1",
-    "grunt-shell": "~0.6.4",
+    "grunt-shell": "~0.7.0",
     "grunt-styleguide": "~0.2.15",
     "grunt-text-replace": "~0.3.11",
-    "jit-grunt": "~0.2.1",
-    "jshint-stylish": "~0.1.5",
-    "load-grunt-configs": "~0.3.1"
+    "jit-grunt": "~0.6.0",
+    "jshint-stylish": "~0.2.0",
+    "load-grunt-configs": "~0.4.0"
   },
   "scripts": {
     "test": "grunt travis --verbose --env=travis"
   },
   "dependencies": {
-    "time-grunt": "~0.2.5"
+    "time-grunt": "~0.3.1"
   }
 }
