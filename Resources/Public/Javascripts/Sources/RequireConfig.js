@@ -5,7 +5,6 @@
 require.config({
 	shim: {},
 	paths: {
-		"main" : "Main",
 		"mainModule" : "Modules/Main"
 	},
 
@@ -13,5 +12,5 @@ require.config({
 	urlArgs: "bust=" + Date.now(),
 
 	// Initialize the application with the main application file
-	deps: ["main"]
+	deps: ["App"]
 });
