@@ -161,8 +161,8 @@ $end: right !default;
 	@if(type-of($map) != "map") {
 		@warn 'Argument $map of map-removeKeys() must be a Sass map';
 	}
-	@if(type-of($keys) != "list") {
-		@warn 'Argument $keys of map-removeKeys() must be a Sass list';
+	@if(not (type-of($keys) == "list") and not (type-of($keys) == "string")) {
+		@warn 'Argument $keys of map-removeKeys() must be a Sass list or string';
 	}
 
 	$length: length($keys);
