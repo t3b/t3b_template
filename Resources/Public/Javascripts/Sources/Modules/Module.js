@@ -1,13 +1,13 @@
 define(function(require) {
 	"use strict";
 
-	var module;
-
-	module = {
-		initialize: function() {
-			console.log(this);
-		}
+	var App = function(el) {
+		this.el = el;
 	};
 
-	return module;
+	App.prototype.render = function() {
+		this.el.html('require.js up and running');
+	};
+
+	return App;
 });

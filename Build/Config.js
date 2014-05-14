@@ -41,7 +41,8 @@ var ConfigCreator = function() {
 	this.JavaScripts = {};
 	this.JavaScripts.paths = {
 		devDir : this.paths.public + "/Javascripts/Sources",
-		distDir : this.paths.public + "/Javascripts/Build"
+		distDir : this.paths.public + "/Javascripts/Build",
+		testsDir : this.paths.public + "/Javascripts/Tests",
 	};
 
 
@@ -93,6 +94,14 @@ var ConfigCreator = function() {
 		tempDir : this.paths.public + "/tempImagesDir",
 		distDir : this.paths.public + "/Images",
 		optimizationLevel : 5
+	};
+
+
+	// Karma settings.
+	this.karma = {
+		config : "Build/KarmaConfig.js",
+		port: 8000,
+		browsers: ['Chrome', 'Firefox', 'Safari', 'PhantomJS']
 	};
 };
 

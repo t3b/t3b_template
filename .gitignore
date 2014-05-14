@@ -9,8 +9,9 @@ composer.lock
 
 # Source-/Generated-files which shouldn't pollute the source repository
 Resources/Public/Javascripts/Build/**/*
+Resources/Public/Javascripts/Tests/Coverage
 Resources/Public/Javascripts/Sources/Vendor/*
 Resources/Public/Stylesheets/*.css
 Resources/Public/Stylesheets/*.map
 Documentation/*.html
-Documentation/Public
+Documentation/public
