@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 		grunt.task.run("sass:" + mode);
 
 		// Prefix the (re-)compiled stylesheets.
-		grunt.task.run("autoprefixer:main");
+		grunt.task.run("autoprefixer:css");
 	});
 };
 

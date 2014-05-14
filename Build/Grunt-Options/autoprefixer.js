@@ -10,10 +10,10 @@ module.exports = {
 	options: {
 		browsers: config.Sass.browserSupport
 	},
-	main: {
+	css: {
 		src: config.Sass.cssDir + "/*.css"
 	},
-	styleguide: {
+	docs: {
 		src: "Documentation/public/*.css"
 	}
 };

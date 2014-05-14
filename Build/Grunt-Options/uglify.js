@@ -7,7 +7,7 @@
 var config = require("../Config");
 
 module.exports = {
-	all: {
+	js: {
 		options: {
 			banner: config.bannerComment()
 		},

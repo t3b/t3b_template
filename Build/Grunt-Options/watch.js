@@ -10,7 +10,7 @@ module.exports = {
 	options: {
 		nospawn: true
 	},
-	sass: {
+	css: {
 		files: [config.Sass.sassDir + "/**/*.scss"],
 		tasks: ["compile:css"]
 	},
@@ -20,6 +20,6 @@ module.exports = {
 	},
 	docs: {
 		files: ["Build/Templates/Kss-Node/**/*"],
-		tasks: ["styleguide", "autoprefixer:styleguide"]
+		tasks: ["styleguide", "autoprefixer:docs"]
 	}
 };

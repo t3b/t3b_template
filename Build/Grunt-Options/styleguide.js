@@ -15,7 +15,7 @@ module.exports = {
 			name: "kss"
 		}
 	},
-	all: {
+	css: {
 		files: [{
 			Documentation: config.Sass.sassDir + "/**/*.scss"
 		}]

@@ -7,7 +7,7 @@
 var config = require("../Config");
 
 module.exports = {
-	common: {
+	css: {
 		src: [config.Sass.cssDir + "/*.css"],
 		options: {
 			quiet: false,

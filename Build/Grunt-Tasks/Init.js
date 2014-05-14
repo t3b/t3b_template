@@ -35,15 +35,10 @@ module.exports = function(grunt) {
 			grunt.task.run(["shell:deleteGitHooks", "shell:hookUpGit"]);
 		}
 
-		// Create the base Stylesheet to prevent errors from ext:vhs(File not found).
-		if (!fs.existsSync(config.Sass.cssDir + "/Main.css")) {
-			grunt.task.run("compile:css:dev");
-		}
-
-		// Create the initial living styleguide.
-		grunt.task.run("styleguide");
+		// Create the base Stylesheet to prevent errors from ext:vhs(File not found) as well as the living styleguide.
+		grunt.task.run("docs");
 
 		// Fetch all bower components.
-		grunt.task.run("bower:install");
+		grunt.task.run("bower");
 	});
 };

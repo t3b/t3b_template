@@ -7,7 +7,7 @@
 var config = require("../Config");
 
 module.exports = {
-	install: {
+	all: {
 		options: {
 			targetDir: './' + config.paths.public,
 			cleanBowerDir: true
