@@ -4,8 +4,7 @@
  */
 
 var config = require("./Config"),
-	javascriptSources = config.JavaScripts.paths.devDir + "/**/*.js",
-	coverageDir = config.JavaScripts.paths.testsDir + "/Coverage/";
+	javascriptSources = config.JavaScripts.paths.devDir + "/**/*.js";
 
 module.exports = function (karmaConfig) {
 	"use strict";
@@ -16,41 +15,36 @@ module.exports = function (karmaConfig) {
 		singleRun: true,
 		colors: true,
 		captureTimeout: 7000,
-		logLevel: karmaConfig.LOG_INFO,
+		logLevel: config.LOG_INFO,
 
 		frameworks: ["jasmine", "requirejs"],
-		reporters: ["progress", "coverage"],
 		plugins: ["karma-jasmine", "karma-requirejs", "karma-coverage", "karma-chrome-launcher", "karma-firefox-launcher", "karma-safari-launcher", "karma-phantomjs-launcher"],
+		reporters: ["progress", "coverage"],
 
-		// Generate the code coverage using Istanbul.
 		preprocessors: {
-			javascriptSources: 'coverage',
+			javascriptSources: "coverage",
 		},
 
-		// Define the location of the coverage results.
 		coverageReporter: {
 			reporters: [{
 				type: "text-summary",
-				dir: coverageDir
+				dir: config.karma.coverageDir
 			}, {
 				type: "html",
-				dir: coverageDir
+				dir: config.karma.coverageDir
 			}]
 		},
 
-		// List of files to load in the browser.
+		// List of files to load in the browser
 		files: [{
 			pattern: javascriptSources,
 			included: false
 		}, {
-			pattern: config.JavaScripts.paths.testsDir + "/**/*.js",
+			pattern: config.karma.testsDir + "/Specs/**/*.js",
 			included: false
-		}, config.JavaScripts.paths.testsDir + "/Test-App.js"],
-
-		// list of files to exclude
-		exclude: [
-			config.JavaScripts.paths.devDir + "/App.js"
-		]
+		}, {
+			pattern: config.karma.testsDir + "/SpecList.js",
+			included: false
+		}, config.karma.testsDir + "/Test-App.js"]
 	});
 };
-

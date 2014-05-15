@@ -41,8 +41,7 @@ var ConfigCreator = function() {
 	this.JavaScripts = {};
 	this.JavaScripts.paths = {
 		devDir : this.paths.public + "/Javascripts/Sources",
-		distDir : this.paths.public + "/Javascripts/Build",
-		testsDir : this.paths.public + "/Javascripts/Tests",
+		distDir : this.paths.public + "/Javascripts/Build"
 	};
 
 
@@ -101,7 +100,9 @@ var ConfigCreator = function() {
 	this.karma = {
 		config : "Build/KarmaConfig.js",
 		port: 8000,
-		browsers: ['Chrome', 'Firefox', 'Safari', 'PhantomJS']
+		browsers: ['Chrome', 'Firefox', 'Safari', 'PhantomJS'],
+		coverageDir: this.paths.public + "/Javascripts/Tests/Coverages/",
+		testsDir : this.paths.public + "/Javascripts/Tests"
 	};
 };
 

@@ -1,25 +1,30 @@
-/**
- * Test-App.js
- * @description Set the requireJS environment, load each test spec and fire off karma.
- */
-
-(function() {
-	"use strict";
+// jshint camelcase: false
+(function () {
+	'use strict';
 
 	// Make async
 	window.__karma__.loaded = function () {};
 
 	require.config({
-		// Set baseUrl for Karma
-		baseUrl: "/base/Resources/Public/Javascripts/Sources",
 
-		deps: ["RequireConfig"],
+		// Set baseUrl for Karma
+		baseUrl: 'base/Resources/Public/Javascripts/Sources',
+
+		deps: ['RequireConfig'],
+
+		// Location of tests
+		paths: {
+
+			// Location of tests
+			spec: '../Tests/SpecList',
+			specs: '../Tests/Specs'
+		}
 	});
 
-	require(["../Tests/SpecList"], function (specList) {
+	require(['spec'], function (spec) {
 
 		// Load all specs
-		require(specList.specs, function () {
+		require(spec.specs, function () {
 
 			// Start Karma
 			window.__karma__.start();

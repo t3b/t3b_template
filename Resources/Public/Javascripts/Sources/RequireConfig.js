@@ -2,10 +2,11 @@
  * RequireJS configuration
  * @description Pass in options for RequireJS like paths, shims or the baseUrl
  */
+
 require.config({
 	shim: {},
 	paths: {
-		"myModule" : "Modules/Module"
+		myModule: "Modules/Module"
 	},
 
 	// Append a date on each requested script to prevent caching issues.

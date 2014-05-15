@@ -2,8 +2,9 @@
  * Main.js
  * @description Require and execute the main application modules.
  */
-require(["myModule"], function(Module) {
+
+require(["myModule"], function(module) {
 	"use strict";
 
-	new Module();
+	console.log(module);
 });
