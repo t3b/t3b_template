@@ -5,6 +5,6 @@
 
 define({
 	specs: [
-		"specs/example.spec"
+		"../Tests/Specs/Example.spec"
 	]
 });
