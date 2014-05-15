@@ -35,7 +35,7 @@ module.exports = function(grunt) {
 	 * Test all specified grunt tasks.
 	 */
 	grunt.registerTask("travis", function() {
-		grunt.task.run(["init", "replace:init", "jshint", "deploy", "undeploy"]);
+		grunt.task.run(["init", "replace:init", "jshint", "connect:karma", "karma:ci", "deploy", "undeploy"]);
 	});
 
 
