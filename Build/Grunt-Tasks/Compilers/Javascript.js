@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 	grunt.registerTask("compile:js", function() {
 		// Optimize all js files if the 'useSingleFileBuild' option is 'false'.
 		if(!config.JavaScripts.requireJS.useSingleFileBuild || grunt.option('env') === 'travis') {
-			grunt.task.run("uglify:all");
+			grunt.task.run("uglify:js");
 		}
 
 		// Optimize the project via the r.js optimizer.
