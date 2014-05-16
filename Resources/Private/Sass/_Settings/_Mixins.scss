@@ -49,6 +49,9 @@
 //
 @mixin image-replacement($file-name, $display-mode: block, $width: auto, $height: auto) {
 	@if $file-name { // Output the image dimensions if an image is passed as an argument
+		@if(not ($display-mode == "block") and not ($display-mode == "inline-block")) {
+			@warn 'Argument $display-mode of image-replacement() should be either "block" or "inline-block" to work appropriately';
+		}
 		display: $display-mode;
 		width: $width;
 		height: $height;
