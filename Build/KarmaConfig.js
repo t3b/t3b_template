@@ -14,15 +14,16 @@ module.exports = function (karmaConfig) {
 
 		singleRun: true,
 		colors: true,
-		captureTimeout: 7000,
+		captureTimeout: 12000,
 		logLevel: config.LOG_INFO,
+		autoWatch: false,
 
 		frameworks: ["jasmine", "requirejs"],
 		plugins: ["karma-jasmine", "karma-requirejs", "karma-coverage", "karma-chrome-launcher", "karma-firefox-launcher", "karma-safari-launcher", "karma-phantomjs-launcher"],
 		reporters: ["progress", "coverage"],
 
 		preprocessors: {
-			javascriptSources: "coverage",
+			"**/Resources/Public/Javascripts/Sources/**/*.js": "coverage",
 		},
 
 		coverageReporter: {
@@ -35,16 +36,16 @@ module.exports = function (karmaConfig) {
 			}]
 		},
 
-		// List of files to load in the browser
+		// List of files to load in the browser "Resources/Public/Javascripts/Tests
 		files: [{
-			pattern: javascriptSources,
+			pattern: "Resources/Public/Javascripts/Sources/**/*.js",
 			included: false
 		}, {
-			pattern: config.karma.testsDir + "/Specs/**/*.js",
+			pattern: "Resources/Public/Javascripts/Tests/Specs/**/*.js",
 			included: false
 		}, {
-			pattern: config.karma.testsDir + "/SpecList.js",
+			pattern: "Resources/Public/Javascripts/Tests/SpecList.js",
 			included: false
-		}, config.karma.testsDir + "/Test-App.js"]
+		}, "Resources/Public/Javascripts/Tests/Test-App.js"]
 	});
 };
