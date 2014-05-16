@@ -122,13 +122,16 @@
 // Styleguide 1.2.5
 //
 @mixin cssTriangle($triangle-size, $triangle-color, $triangle-direction) {
+	@if(not ($triangle-direction == "top") and not ($triangle-direction == "bottom") and not ($triangle-direction == "left") and not ($triangle-direction == "right")) {
+		@warn 'Argument $triangle-direction  of cssTriangle() should be either "top", "bottom", "left" or "right" to work appropriately';
+	}
 	content: "";
 	display: block;
 	width: 0;
 	height: 0;
 	border: solid $triangle-size;
-	@if ($triangle-direction == top)    { border-color: $triangle-color transparent transparent transparent; }
-	@if ($triangle-direction == bottom) { border-color: transparent transparent $triangle-color transparent; }
-	@if ($triangle-direction == left)   { border-color: transparent transparent transparent $triangle-color; }
-	@if ($triangle-direction == right)  { border-color: transparent $triangle-color transparent transparent; }
+	@if ($triangle-direction == "top")    { border-color: $triangle-color transparent transparent transparent; }
+	@if ($triangle-direction == "bottom") { border-color: transparent transparent $triangle-color transparent; }
+	@if ($triangle-direction == "left")   { border-color: transparent transparent transparent $triangle-color; }
+	@if ($triangle-direction == "right")  { border-color: transparent $triangle-color transparent transparent; }
 }
