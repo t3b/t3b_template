@@ -20,6 +20,12 @@
 // Styleguide 1.2.1
 //
 @mixin hdpi-img($file-name, $width, $height) {
+	@if(type-of($file-name) != "string") {
+		@warn 'Argument $file-name of hdpi-img() must be a string';
+	}
+	@if((type-of($width) != "number") or (type-of($height) != "number")) {
+		@warn 'Arguments $width and $height of hdpi-img() must be a number';
+	}
 	background-size: $width/2 $height/2;
 	background-image: image-url('#{$file-name}');
 }
