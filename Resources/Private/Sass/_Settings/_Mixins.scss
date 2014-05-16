@@ -6,7 +6,7 @@
 
 
 //
-// High density Image-Dimensions Mixin($file-name, $width, $height)
+// High density Image-Dimensions Mixin($fileName, $width, $height)
 //
 // Creates the required rules for high density optimized images.
 //
@@ -19,15 +19,15 @@
 //
 // Styleguide 1.2.1
 //
-@mixin hdpi-img($file-name, $width, $height) {
-	@if(type-of($file-name) != "string") {
-		@warn 'Argument $file-name of hdpi-img() must be a string';
+@mixin hdpi-img($fileName, $width, $height) {
+	@if(type-of($fileName) != "string") {
+		@warn 'Argument $fileName of hdpi-img() must be a string';
 	}
 	@if((type-of($width) != "number") or (type-of($height) != "number")) {
 		@warn 'Arguments $width and $height of hdpi-img() must be a number';
 	}
 	background-size: $width/2 $height/2;
-	background-image: image-url('#{$file-name}');
+	background-image: image-url('#{$fileName}');
 }
 
 
@@ -36,7 +36,7 @@
 //
 // A image-replacement mixin which generates the image-dimensions as CSS rules and
 // @extends the .ir rule inside the _helper.scss file.
-// Default $display-mode is set to 'block'.
+// Default $displayMode is set to 'block'.
 //
 // <!= type: css || isPureCode !>
 //
@@ -47,15 +47,15 @@
 //
 // Styleguide 1.2.2
 //
-@mixin image-replacement($file-name, $display-mode: block, $width: auto, $height: auto) {
-	@if $file-name { // Output the image dimensions if an image is passed as an argument
-		@if(not ($display-mode == "block") and not ($display-mode == "inline-block")) {
-			@warn 'Argument $display-mode of image-replacement() should be either "block" or "inline-block" to work appropriately';
+@mixin image-replacement($fileName, $displayMode: block, $width: auto, $height: auto) {
+	@if $fileName { // Output the image dimensions if an image is passed as an argument
+		@if(not ($displayMode == "block") and not ($displayMode == "inline-block")) {
+			@warn 'Argument $displayMode of image-replacement() should be either "block" or "inline-block" to work appropriately';
 		}
-		display: $display-mode;
+		display: $displayMode;
 		width: $width;
 		height: $height;
-		background-image: image-url('#{$file-name}');
+		background-image: image-url('#{$fileName}');
 		@extend .ir;
 	}
 }
@@ -82,7 +82,7 @@
 
 
 //
-// Font-Size Mixin($font-size, $append-vrythm)
+// Font-Size Mixin($font-size, $appendVrythm)
 //
 // Creates a fully formed type style (sizing and vertical rhythm) by passing in a single value.
 //
@@ -90,21 +90,21 @@
 //
 // Markup:
 // .selector {
-// 	@include rem($size: 16, $append-vrythm: true);
+// 	@include rem($size: 16, $appendVrythm: true);
 // }
 //
 // Styleguide 1.2.4
 //
-@mixin font-size($font-size, $append-vrythm: false) {
+@mixin font-size($font-size, $appendVrythm: false) {
 	@include rem(font-size, $font-size);
-	@if $append-vrythm {
+	@if $appendVrythm {
 		line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
 	}
 }
 
 
 //
-// CSS Triangle Mixin($triangle-size, $triangle-color, $triangle-direction)
+// CSS Triangle Mixin($triangleSize, $triangleColor, $triangleDirection)
 //
 // Creates an css arrow as per http://cssarrowplease.com/.
 //
@@ -121,17 +121,17 @@
 //
 // Styleguide 1.2.5
 //
-@mixin cssTriangle($triangle-size, $triangle-color, $triangle-direction) {
-	@if(not ($triangle-direction == "top") and not ($triangle-direction == "bottom") and not ($triangle-direction == "left") and not ($triangle-direction == "right")) {
-		@warn 'Argument $triangle-direction  of cssTriangle() should be either "top", "bottom", "left" or "right" to work appropriately';
+@mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
+	@if(not ($triangleDirection == "top") and not ($triangleDirection == "bottom") and not ($triangleDirection == "left") and not ($triangleDirection == "right")) {
+		@warn 'Argument $triangleDirection  of cssTriangle() should be either "top", "bottom", "left" or "right" to work appropriately';
 	}
 	content: "";
 	display: block;
 	width: 0;
 	height: 0;
-	border: solid $triangle-size;
-	@if ($triangle-direction == "top")    { border-color: $triangle-color transparent transparent transparent; }
-	@if ($triangle-direction == "bottom") { border-color: transparent transparent $triangle-color transparent; }
-	@if ($triangle-direction == "left")   { border-color: transparent transparent transparent $triangle-color; }
-	@if ($triangle-direction == "right")  { border-color: transparent $triangle-color transparent transparent; }
+	border: solid $triangleSize;
+	@if ($triangleDirection == "top")    { border-color: $triangleColor transparent transparent transparent; }
+	@if ($triangleDirection == "bottom") { border-color: transparent transparent $triangleColor transparent; }
+	@if ($triangleDirection == "left")   { border-color: transparent transparent transparent $triangleColor; }
+	@if ($triangleDirection == "right")  { border-color: transparent $triangleColor transparent transparent; }
 }
