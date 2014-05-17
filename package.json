@@ -28,9 +28,9 @@
     "sass"
   ],
   "devDependencies": {
+    "almond": "^0.2.9",
     "grunt": "~0.4.2",
     "grunt-autoprefixer": "~0.7.2",
-    "grunt-bower-task": "~0.3.4",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-connect": "^0.7.1",
     "grunt-contrib-copy": "~0.5.0",
@@ -58,12 +58,17 @@
     "karma-safari-launcher": "^0.1.1",
     "kss-node_glaciertheme": "^1.0.0-a",
     "load-grunt-configs": "~0.4.0",
+    "napa": "^0.4.1",
     "requirejs": "^2.1.11"
   },
   "scripts": {
+    "install": "napa",
     "test": "grunt travis --verbose --env=travis"
   },
   "dependencies": {
     "time-grunt": "~0.3.1"
+  },
+  "napa": {
+    "modernizr": "Modernizr/Modernizr#v2.8.1"
   }
 }

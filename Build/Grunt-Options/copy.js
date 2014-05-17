@@ -4,7 +4,25 @@
  * @docs https://github.com/gruntjs/grunt-contrib-copy
  */
 
-var config = require("../Config");
+var config = require("../Config"),
+	createNodeMdulesTargets = function() {
+		var nodeModulesFiles = [];
+
+		for(var key in config.nodeModuleDists) {
+			if (config.nodeModuleDists.hasOwnProperty(key)) {
+				nodeModulesFiles.push({
+					expand: true,
+					cwd: "./node_modules/" + key,
+					src: "**",
+					dest: config.nodeModuleDists[key]
+				})
+			}
+		}
+
+		return nodeModulesFiles;
+	};
+
+
 
 module.exports = {
 	imagesDir: {
@@ -14,5 +32,8 @@ module.exports = {
 			src: "**",
 			dest: config.Images.tempDir
 		}]
+	},
+	nodeModules: {
+		files: createNodeMdulesTargets()
 	}
 };

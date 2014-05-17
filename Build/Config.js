@@ -104,6 +104,13 @@ var ConfigCreator = function() {
 		coverageDir: this.paths.public + "/Javascripts/Tests/Coverages/",
 		testsDir : this.paths.public + "/Javascripts/Tests"
 	};
+
+	// Copy the source files of node modules into a specified location.
+	this.nodeModuleDists = {
+		almond: this.JavaScripts.paths.devDir + "/Vendor/almond/",
+		requirejs: this.JavaScripts.paths.devDir + "/Vendor/requirejs/",
+		modernizr: this.JavaScripts.paths.devDir + "/Vendor/modernizr/"
+	}
 };
 
 module.exports = new ConfigCreator();

@@ -17,8 +17,7 @@ module.exports = function(grunt) {
 	// Load all grunt-plugins that are specified in the 'package.json' file.
 	require('jit-grunt')(grunt, {
 		replace: 'grunt-text-replace',
-		cssmetrics: 'grunt-css-metrics',
-		bower: 'grunt-bower-task'
+		cssmetrics: 'grunt-css-metrics'
 	});
 
 
