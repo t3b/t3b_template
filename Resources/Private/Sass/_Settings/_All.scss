@@ -11,6 +11,7 @@ SASS Functions, Mixins and Variables
 
 Styleguide 1
 */
-@import "_Functions",
+@import "../_Variables",
+				"_Functions",
         "_Mixins",
         "_MediaQueries";
