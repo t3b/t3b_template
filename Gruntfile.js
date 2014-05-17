@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 	 */
 	grunt.registerTask("travis", function() {
 		var tasks = [],
-			primaryTasks = ["Init"],
+			primaryTasks = ["init"],
 			rootLevelTasks = helpers.filterDirWithFileType('./Build/Grunt-Tasks', 'js'),
 			compilerTasks = helpers.filterDirWithFileType('./Build/Grunt-Tasks/Compilers', 'js'),
 			secondaryTasks = [];
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
 
 		// Root level tasks in './Build/Grunt-Tasks'.
 		rootLevelTasks.forEach(function(item, index) {
-			var taskName = item.replace('.js', '');
+			var taskName = item.replace('.js', '').toLowerCase();
 			if(tasks.indexOf(taskName)) {
 				tasks.push(taskName);
 			}
@@ -57,7 +57,7 @@ module.exports = function(grunt) {
 
 		// Run each compiler task standalone again.
 		compilerTasks.forEach(function(item, index) {
-			var taskName = item.replace('.js', '');
+			var taskName = 'compile:' + item.replace('.js', '').toLowerCase();
 			if(tasks.indexOf(taskName)) {
 				tasks.push(taskName);
 			}
