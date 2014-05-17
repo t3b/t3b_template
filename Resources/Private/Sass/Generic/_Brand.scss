@@ -23,8 +23,7 @@ Styleguide 5.1.1
 
 /*
 Brand color helpers
-
-.brandColor-primary - Primary brand color.
+#{generateModifierComments($brand-colors, "brandColor-", " brand color.")}
 
 Markup:
 <span class="{$modifiers}">Brand color helpers.</span>

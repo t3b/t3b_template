@@ -176,3 +176,43 @@ Styleguide 1.1.5
 		@return map-remove($map, $keys);
 	}
 }
+
+
+/*
+generateModifierComments($map, $keys)
+
+Generate the modifier class comments for kss-node from a Sass map.
+
+Markup:
+generateModifierComments($brand-colors, " brand color.")
+*/
+@function generateModifierComments($map, $modifierClassPrefix , $additionalDescriptionText) {
+	@if(type-of($map) != "map") {
+		@warn 'Argument $map of generateModifierComments() must be a Sass map';
+	}
+	@if(type-of($modifierClassPrefix) != "string") {
+		@warn 'Argument $modifierClassPrefix of generateModifierComments() must be a string';
+	}
+
+	$text: "";
+	$description: "";
+	$class: "";
+
+	@if($additionalDescriptionText) {
+		$description: $additionalDescriptionText;
+	}
+
+	// Generate an modifier class for each key.
+	@each $key, $value in $map {
+		@if($modifierClassPrefix) {
+			$class: $modifierClassPrefix + $key;
+		} @else {
+			$class: $key;
+		}
+
+		$text: #{$text + "
+." +  $class + " - " + $key + $additionalDescriptionText}
+	}
+
+	@return $text
+}
