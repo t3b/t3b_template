@@ -17,7 +17,7 @@ var config = require("../Config"),
 					cwd: "./node_modules/" + key,
 					src: "**",
 					dest: config.nodeModuleDists[key]
-				})
+				});
 			}
 		}
 

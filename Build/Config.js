@@ -110,7 +110,7 @@ var ConfigCreator = function() {
 		almond: this.JavaScripts.paths.devDir + "/Vendor/almond/",
 		requirejs: this.JavaScripts.paths.devDir + "/Vendor/requirejs/",
 		modernizr: this.JavaScripts.paths.devDir + "/Vendor/modernizr/"
-	}
+	};
 };
 
 module.exports = new ConfigCreator();
