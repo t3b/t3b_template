@@ -29,19 +29,8 @@ module.exports = function(grunt) {
 	'use strict';
 
 	return {
-		preInit: {
-			src: [
-				'bower.json'
-			],
-			overwrite: true,
-			replacements: [{
-				from: config.defaultName,
-				to: config.package.name
-			}]
-		},
 		init: {
 			src: [
-				'bower.json',
 				'ext_emconf.php',
 				'ext_tables.php',
 				'Configuration/**/*.ts',

@@ -1,5 +1,2 @@
 # Node.js modules
 node_modules/*
-
-# Bower components (Please specify a custom location within the 'bower.json' as we dont want to polute the extension with unnecessary files)
-bower_components/*

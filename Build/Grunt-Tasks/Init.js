@@ -12,9 +12,6 @@ module.exports = function(grunt) {
 	'use strict';
 
 	grunt.registerTask('init', function() {
-		// Replace general text-strings and paths.
-		grunt.task.run('replace:preInit');
-
 		if (!helpers.isPackageDefault() || grunt.option('env') === 'travis') {
 			/*
 			 * If the package.json contents are edited:
