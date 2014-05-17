@@ -5,20 +5,20 @@
 //
 
 
-//
-// High density Image-Dimensions Mixin($fileName, $width, $height)
-//
-// Creates the required rules for high density optimized images.
-//
-// <!= type: css || isPureCode !>
-//
-// Markup:
-// .selector {
-// 	@include hdpi-img('brand-logo.png');
-// }
-//
-// Styleguide 1.2.1
-//
+/*
+High density Image-Dimensions Mixin($fileName, $width, $height)
+
+Creates the required rules for high density optimized images.
+
+<!= type: css || isPureCode !>
+
+Markup:
+.selector {
+	@include hdpi-img('brand-logo.png');
+}
+
+Styleguide 1.2.1
+*/
 @mixin hdpi-img($fileName, $width, $height) {
 	@if(type-of($fileName) != "string") {
 		@warn 'Argument $fileName of hdpi-img() must be a string';
@@ -31,22 +31,22 @@
 }
 
 
-//
-// Image-Replacement Mixin($imagePath)
-//
-// A image-replacement mixin which generates the image-dimensions as CSS rules and
-// @extends the .ir rule inside the _helper.scss file.
-// Default $displayMode is set to 'block'.
-//
-// <!= type: css || isPureCode !>
-//
-// Markup:
-// .selector {
-// 	@include image-replacement('image.png');
-// }
-//
-// Styleguide 1.2.2
-//
+/*
+Image-Replacement Mixin($imagePath)
+
+A image-replacement mixin which generates the image-dimensions as CSS rules and
+@extends the .ir rule inside the _helper.scss file.
+Default $displayMode is set to 'block'.
+
+<!= type: css || isPureCode !>
+
+Markup:
+.selector {
+	@include image-replacement('image.png');
+}
+
+Styleguide 1.2.2
+*/
 @mixin image-replacement($fileName, $displayMode: block, $width: auto, $height: auto) {
 	@if $fileName { // Output the image dimensions if an image is passed as an argument
 		@if(not ($displayMode == "block") and not ($displayMode == "inline-block")) {
@@ -61,40 +61,40 @@
 }
 
 
-//
-// REM Unit Mixin($property, $value)
-//
-// Creates a property independent 'rem' calculation with a pixel fallback, default property is set to 'font-size'.
-//
-// <!= type: css || isPureCode !>
-//
-// Markup:
-// .selector {
-// 	@include rem($property: font-size, $value: 18);
-// }
-//
-// Styleguide 1.2.3
-//
+/*
+REM Unit Mixin($property, $value)
+
+Creates a property independent 'rem' calculation with a pixel fallback, default property is set to 'font-size'.
+
+<!= type: css || isPureCode !>
+
+Markup:
+.selector {
+	@include rem($property: font-size, $value: 18);
+}
+
+Styleguide 1.2.3
+*/
 @mixin rem($property: font-size, $value: 16) {
 	#{$property}: $value +px;
 	#{$property}: ($value / 16)*1rem;
 }
 
 
-//
-// Font-Size Mixin($font-size, $appendVrythm)
-//
-// Creates a fully formed type style (sizing and vertical rhythm) by passing in a single value.
-//
-// <!= type: css || isPureCode !>
-//
-// Markup:
-// .selector {
-// 	@include rem($size: 16, $appendVrythm: true);
-// }
-//
-// Styleguide 1.2.4
-//
+/*
+Font-Size Mixin($font-size, $appendVrythm)
+
+Creates a fully formed type style (sizing and vertical rhythm) by passing in a single value.
+
+<!= type: css || isPureCode !>
+
+Markup:
+.selector {
+	@include rem($size: 16, $appendVrythm: true);
+}
+
+Styleguide 1.2.4
+*/
 @mixin font-size($font-size, $appendVrythm: false) {
 	@include rem(font-size, $font-size);
 	@if $appendVrythm {
@@ -103,24 +103,24 @@
 }
 
 
-//
-// CSS Triangle Mixin($triangleSize, $triangleColor, $triangleDirection)
-//
-// Creates an css arrow as per http://cssarrowplease.com/.
-//
-// <!= type: css || isPureCode !>
-//
-// Markup:
-// .selector:after {
-// 	position: absolute;
-// 	top: -5px;
-// 	left: 50%;
-// 	margin-left: -2.5px;
-// 	@include css-triangle(5px, #fff, bottom);
-// }
-//
-// Styleguide 1.2.5
-//
+/*
+CSS Triangle Mixin($triangleSize, $triangleColor, $triangleDirection)
+
+Creates an css arrow as per http://cssarrowplease.com/.
+
+<!= type: css || isPureCode !>
+
+Markup:
+.selector:after {
+	position: absolute;
+	top: -5px;
+	left: 50%;
+	margin-left: -2.5px;
+	@include css-triangle(5px, #fff, bottom);
+}
+
+Styleguide 1.2.5
+*/
 @mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
 	@if(not ($triangleDirection == "top") and not ($triangleDirection == "bottom") and not ($triangleDirection == "left") and not ($triangleDirection == "right")) {
 		@warn 'Argument $triangleDirection  of cssTriangle() should be either "top", "bottom", "left" or "right" to work appropriately';

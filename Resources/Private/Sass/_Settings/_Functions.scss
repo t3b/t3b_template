@@ -5,20 +5,20 @@
 //
 
 
-//
-// Image-Url($imagePath)
-//
-// Returns the path of an Image asset.
-//
-// <!= type: css || isPureCode !>
-//
-// Markup:
-// .selector {
-// 	background-image: image-url("logo.png");
-// }
-//
-// Styleguide 1.1.1
-//
+/*
+Image-Url($imagePath)
+
+Returns the path of an Image asset.
+
+<!= type: css || isPureCode !>
+
+Markup:
+.selector {
+	background-image: image-url("logo.png");
+}
+
+Styleguide 1.1.1
+*/
 @function image-url($imagePath) {
 	@if(type-of($imagePath) != "string") {
 		@warn 'Argument $imagePath of image-url() must be a string';
@@ -29,20 +29,20 @@
 
 
 
-//
-// Relative Size($target-size, $context, $unit)
-//
-// Calculates em's based on pixel values.
-//
-// <!= type: css || isPureCode !>
-//
-// Markup:
-// .selector {
-// 	font-size: rs(19, 16);
-// }
-//
-// Styleguide 1.1.2
-//
+/*
+Relative Size($target-size, $context, $unit)
+
+Calculates em's based on pixel values.
+
+<!= type: css || isPureCode !>
+
+Markup:
+.selector {
+	font-size: rs(19, 16);
+}
+
+Styleguide 1.1.2
+*/
 @function rs($target-size, $context: $base-font-size, $unit: em) {
 	@if(type-of($target-size) != "number") {
 		@warn 'Argument $target-size of rs() must be a number';
@@ -75,20 +75,20 @@ $end: right !default;
 }
 
 
-//
-// Color-Adjust($color, $contrast)
-//
-// Adjusts a color based on the lightness which is passed as a second parameter, this function was written by @necolas(https://github.com/necolas/).
-//
-// <!= type: css || isPureCode !>
-//
-// Markup:
-// .selector {
-// 	background: color-adjust(#0097d7, 100%);
-// }
-//
+/*
+Color-Adjust($color, $contrast)
+
+Adjusts a color based on the lightness which is passed as a second parameter, this function was written by @necolas(https://github.com/necolas/).
+
+<!= type: css || isPureCode !>
+
+Markup:
+.selector {
+	background: color-adjust(#0097d7, 100%);
+}
+
 // Styleguide 1.1.3
-//
+*/
 @function color-adjust($color, $contrast: 100%) {
 	@if(type-of($color) != "color") {
 		@warn 'Argument $color of color-adjust() must be a color';
@@ -106,22 +106,22 @@ $end: right !default;
 }
 
 
-//
-// Map-Fetch($map, $keys)
-//
-// Navigates through nested Sass maps, this function was written by @jlong(https://github.com/jlong/)
-//
-// <!= type: css || isPureCode !>
-//
-// Markup:
-// @each $key, $value in map-get($headings, elements) {
-// 	.selector {
-// 	 	font-size: map-fetch($headings, elements $key font-size) +px;
-// 	}
-// }
-//
-// Styleguide 1.1.4
-//
+/*
+Map-Fetch($map, $keys)
+
+Navigates through nested Sass maps, this function was written by @jlong(https://github.com/jlong/)
+
+<!= type: css || isPureCode !>
+
+Markup:
+@each $key, $value in map-get($headings, elements) {
+	.selector {
+	 	font-size: map-fetch($headings, elements $key font-size) +px;
+	}
+}
+
+Styleguide 1.1.4
+*/
 @function map-fetch($map, $keys) {
 	@if(type-of($map) != "map") {
 		@warn 'Argument $map of map-fetch() must be a Sass map';
@@ -145,18 +145,18 @@ $end: right !default;
 }
 
 
-//
-// Map-RemoveKeys($map, $keys)
-//
-// Removes multiple keys in a Sass map.
-//
-// <!= type: css || isPureCode !>
-//
-// Markup:
-// $newDecalarationsMap: map-removeKeys($declarations, font-size margin-bottom);
-//
-// Styleguide 1.1.5
-//
+/*
+Map-RemoveKeys($map, $keys)
+
+Removes multiple keys in a Sass map.
+
+<!= type: css || isPureCode !>
+
+Markup:
+$newDecalarationsMap: map-removeKeys($declarations, font-size margin-bottom);
+
+Styleguide 1.1.5
+*/
 @function map-removeKeys($map, $keys) {
 	@if(type-of($map) != "map") {
 		@warn 'Argument $map of map-removeKeys() must be a Sass map';

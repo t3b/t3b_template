@@ -9,7 +9,7 @@ var config = require("../Config");
 module.exports = {
 	options: {
 		template: {
-			src: "Build/Templates/Kss-Node"
+			src: "node_modules/kss-node_glaciertheme/Theme"
 		},
 		framework: {
 			name: "kss"
@@ -17,10 +17,7 @@ module.exports = {
 	},
 	css: {
 		files: [{
-			Documentation: config.Sass.sassDir + "/**/*.scss"
+			"Documentation": [config.Sass.cssDir + "/Main.css"]
 		}]
 	}
 };
-
-
-

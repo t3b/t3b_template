@@ -1,10 +1,5 @@
 @charset "UTF-8";
 
-//
-// SASS Functions, Mixins and Variables
-//
-// Styleguide 1
-//
 @import "_Variables",
         "_Settings/_All";
 
@@ -18,11 +13,11 @@
         "Generic/_T3General",
         "Generic/_Brand";
 
-//
-// Element styles
-//
-// Styleguide 2
-//
+/*
+Element styles
+
+Styleguide 2
+*/
 @import "Base/_Base",
         "Base/_Headings",
         "Base/_Typography",
@@ -35,13 +30,13 @@
         "Base/_Tables",
         "Base/_Forms";
 
-//
-// OOCSS Objects
-//
-// The purpose of CSS Objects is to encourage code reuse and, ultimately, faster and more efficient stylesheets that are easier to add to and maintain.
-//
-// Styleguide 4
-//
+/*
+OOCSS Objects
+
+The purpose of CSS Objects is to encourage code reuse and, ultimately, faster and more efficient stylesheets that are easier to add to and maintain.
+
+Styleguide 4
+*/
 @import "Objects/_Button",
 	"Objects/_Form",
         "Objects/_Navigation",
