@@ -16,6 +16,7 @@ module.exports = {
 			cwd: config.JavaScripts.paths.devDir,
 			src: [
 				"**/*.js",
+				"!Vendor/requirejs/bin/**/*.js",
 				"!Vendor/almond/**/*.js",
 				"!Vendor/modernizr/**/*.js"
 			],
