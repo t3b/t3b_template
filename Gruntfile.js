@@ -1,15 +1,15 @@
-var helpers = require("./Build/Libary/Helpers");
+var helpers = require('./Build/Libary/Helpers');
 
 module.exports = function(grunt) {
-	"use strict";
+	'use strict';
 
 	// Display the execution time of grunt tasks
-	require("time-grunt")(grunt);
+	require('time-grunt')(grunt);
 
 	// Load all grunt-tasks in 'Build/Grunt-Options'.
-	var gruntOptionsObj = require("load-grunt-configs")(grunt, {
-		"config" : {
-			src: "Build/Grunt-Options/*.js"
+	var gruntOptionsObj = require('load-grunt-configs')(grunt, {
+		'config' : {
+			src: 'Build/Grunt-Options/*.js'
 		}
 	});
 	grunt.initConfig(gruntOptionsObj);
@@ -26,8 +26,8 @@ module.exports = function(grunt) {
 	 * Compiles all .scss/.sass files with ':dev' options and
 	 * validates all js-files inside Resources/Private/Javascripts with JSHint.
 	 */
-	grunt.registerTask("default", function() {
-		grunt.task.run(["compile:css", "jshint"]);
+	grunt.registerTask('default', function() {
+		grunt.task.run(['compile:css', 'jshint']);
 	});
 
 
@@ -35,9 +35,9 @@ module.exports = function(grunt) {
 	 * Travis CI task
 	 * Test all specified grunt tasks.
 	 */
-	grunt.registerTask("travis", function() {
+	grunt.registerTask('travis', function() {
 		var tasks = [],
-			primaryTasks = ["init"],
+			primaryTasks = ['init'],
 			rootLevelTasks = helpers.filterDirWithFileType('./Build/Grunt-Tasks', 'js'),
 			compilerTasks = helpers.filterDirWithFileType('./Build/Grunt-Tasks/Compilers', 'js'),
 			secondaryTasks = [];
@@ -71,6 +71,6 @@ module.exports = function(grunt) {
 	 * Load custom tasks
 	 * Load all Grunt-Tasks inside the 'Build/Grunt-Tasks' dir.
 	 */
-	grunt.loadTasks("Build/Grunt-Tasks/Compilers");
-	grunt.loadTasks("Build/Grunt-Tasks");
+	grunt.loadTasks('Build/Grunt-Tasks/Compilers');
+	grunt.loadTasks('Build/Grunt-Tasks');
 };

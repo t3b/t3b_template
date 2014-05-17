@@ -4,7 +4,7 @@
  * @docs https://github.com/gruntjs/grunt-contrib-requirejs
 */
 
-var config = require("../Config"),
+var config = require('../Config'),
 	includedFiles = [];
 
 // Include the desired requireJS lib.
@@ -22,7 +22,7 @@ includedFiles.push(config.JavaScripts.requireJS.config);
 module.exports = {
 	deploy: {
 		options: {
-			mainConfigFile: config.JavaScripts.paths.devDir + "/" + config.JavaScripts.requireJS.config + ".js",
+			mainConfigFile: config.JavaScripts.paths.devDir + '/' + config.JavaScripts.requireJS.config + '.js',
 			include: includedFiles,
 			out: config.JavaScripts.requireJS.compileDistFile,
 
@@ -39,11 +39,11 @@ module.exports = {
 			preserveLicenseComments: false,
 
 			// Uglify the build with 'uglify2'.
-			optimize: "uglify2",
+			optimize: 'uglify2',
 
 			// Remove 'console.log(...)' statements if set to true in the grunt config.
 			onBuildRead: function (moduleName, path, contents) {
-				"use strict";
+				'use strict';
 				if(config.JavaScripts.requireJS.removeLoggingStatements) {
 					return contents.replace(/console.log(.*);/g, '');
 				} else {

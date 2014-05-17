@@ -1,12 +1,12 @@
 define(function(require) {
-	"use strict";
+	'use strict';
 
 	var App = function(el) {
         this.el = el;
     };
 
     App.prototype.render = function() {
-        this.el.innerHTML = "require.js up and running";
+        this.el.innerHTML = 'require.js up and running';
     };
 
     return App;

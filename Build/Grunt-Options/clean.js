@@ -4,7 +4,7 @@
  * @docs https://github.com/gruntjs/grunt-contrib-clean
  */
 
-var config = require("../Config");
+var config = require('../Config');
 
 module.exports = {
 	gitFolder: '.git/',

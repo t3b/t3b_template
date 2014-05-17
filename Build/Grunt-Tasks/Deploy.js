@@ -5,25 +5,25 @@
  */
 
 module.exports = function(grunt) {
-	"use strict";
+	'use strict';
 
-	grunt.registerTask("deploy", function() {
+	grunt.registerTask('deploy', function() {
 		// Compile the living styleguide.
-		grunt.task.run("compile:images");
+		grunt.task.run('compile:images');
 
 		// Compile the living styleguide.
-		grunt.task.run("compile:docs");
+		grunt.task.run('compile:docs');
 
 		// Compile the stylesheets.
-		grunt.task.run("compile:css:deploy");
+		grunt.task.run('compile:css:deploy');
 
 		// Compile the stylesheets.
-		grunt.task.run("compile:js");
+		grunt.task.run('compile:js');
 
 		// Generate a custom modernizr build.
-		grunt.task.run("modernizr");
+		grunt.task.run('modernizr');
 
 		// Replace paths to match the build files.
-		grunt.task.run("replace:deploy");
+		grunt.task.run('replace:deploy');
 	});
 };

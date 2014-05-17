@@ -4,7 +4,7 @@
  * @docs https://github.com/gruntjs/grunt-contrib-sass
  */
 
-var config = require("../Config");
+var config = require('../Config');
 
 module.exports = {
 	options: {
@@ -12,27 +12,27 @@ module.exports = {
 	},
 	dev: {
 		options: {
-			style: "expanded"
+			style: 'expanded'
 		},
 		files: [{
 			expand: true,
 			cwd: config.Sass.sassDir,
-			src: ["*.scss"],
+			src: ['*.scss'],
 			dest: config.Sass.cssDir,
-			ext: ".css"
+			ext: '.css'
 		}]
 	},
 	deploy: {
 		options: {
-			style: "compressed",
+			style: 'compressed',
 			sourcemap: true
 		},
 		files: [{
 			expand: true,
 			cwd: config.Sass.sassDir,
-			src: ["*.scss"],
+			src: ['*.scss'],
 			dest: config.Sass.cssDir,
-			ext: ".css"
+			ext: '.css'
 		}]
 	},
 };

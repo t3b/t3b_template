@@ -4,7 +4,7 @@
  * @docs https://npmjs.org/package/grunt-replace
  */
 
-var config = require("../Config"),
+var config = require('../Config'),
 	requireTagParts = {
 		tagStart: '<script type="text/javascript" src="typo3conf/ext/' + config.package.name + '/',
 		unDeployAttribute: '" data-main="typo3conf/ext/' + config.package.name + '/' + config.JavaScripts.paths.devDir + '/' + config.JavaScripts.requireJS.config,
@@ -26,12 +26,12 @@ var config = require("../Config"),
 	};
 
 module.exports = function(grunt) {
-	"use strict";
+	'use strict';
 
 	return {
 		preInit: {
 			src: [
-				"bower.json"
+				'bower.json'
 			],
 			overwrite: true,
 			replacements: [{
@@ -41,48 +41,48 @@ module.exports = function(grunt) {
 		},
 		init: {
 			src: [
-				"bower.json",
-				"ext_emconf.php",
-				"ext_tables.php",
-				"Configuration/**/*.ts",
-				"Configuration/**/*.txt",
-				"Build/Templates/Kss-Node/index.html",
-				config.paths.private + "/Elements/**/*.html",
-				config.paths.private + "/Layouts/**/*.html",
-				config.paths.private + "/Partials/**/*.html",
-				config.paths.private + "/Templates/**/*.html",
-				config.Sass.sassDir + "/**/*.scss",
-				config.Sass.sassDir + "/styleguide.md"
+				'bower.json',
+				'ext_emconf.php',
+				'ext_tables.php',
+				'Configuration/**/*.ts',
+				'Configuration/**/*.txt',
+				'Build/Templates/Kss-Node/index.html',
+				config.paths.private + '/Elements/**/*.html',
+				config.paths.private + '/Layouts/**/*.html',
+				config.paths.private + '/Partials/**/*.html',
+				config.paths.private + '/Templates/**/*.html',
+				config.Sass.sassDir + '/**/*.scss',
+				config.Sass.sassDir + '/styleguide.md'
 			],
 			overwrite: true,
 			replacements: [{
-				from: "<!= pkg.name !>",
+				from: '<!= pkg.name !>',
 				to: config.package.name
 			}, {
-				from: "<!= pkg.description !>",
+				from: '<!= pkg.description !>',
 				to: config.package.description
 			}, {
-				from: "<!= pkg.homepage !>",
+				from: '<!= pkg.homepage !>',
 				to: config.package.homepage
 			}, {
-				from: "<!= pkg.version !>",
+				from: '<!= pkg.version !>',
 				to: config.package.version
 			}, {
-				from: "<!= pkg.author.name !>",
+				from: '<!= pkg.author.name !>',
 				to: config.package.author.name
 			}, {
-				from: "<!= pkg.author.email !>",
+				from: '<!= pkg.author.email !>',
 				to: config.package.author.email
 			}, {
-				from: "<!= pkg.author.company !>",
+				from: '<!= pkg.author.company !>',
 				to: config.package.author.company
 			}, {
-				from: "<!= date !>",
-				to: grunt.template.today("dd-mm-yyyy hh:MM")
+				from: '<!= date !>',
+				to: grunt.template.today('dd-mm-yyyy hh:MM')
 			}]
 		},
 		deploy: {
-			src: [config.paths.private + "/Layouts/*.html"],
+			src: [config.paths.private + '/Layouts/*.html'],
 			overwrite: true,
 			replacements: [{
 				from: config.JavaScripts.modernizr.devSourceFile,
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
 			}]
 		},
 		dev: {
-			src: [config.paths.private + "/Layouts/*.html"],
+			src: [config.paths.private + '/Layouts/*.html'],
 			overwrite: true,
 			replacements: [{
 				from: config.JavaScripts.modernizr.buildDistFile,
@@ -105,3 +105,5 @@ module.exports = function(grunt) {
 		}
 	};
 };
+console.log("depoy - from:" + deployStrings.unDeploy.rJs,
+			"depoy - to:" + deployStrings.deploy.rJs)

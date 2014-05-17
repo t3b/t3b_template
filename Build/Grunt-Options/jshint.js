@@ -4,12 +4,12 @@
  * @docs https://github.com/gruntjs/grunt-contrib-jshint
  */
 
-var config = require("../Config");
+var config = require('../Config');
 
 module.exports = {
 	options: {
 		jshintrc: config.JavaScripts.jsHint.config,
-		reporter: require("jshint-stylish") // Use a more readable JSHint output theme
+		reporter: require('jshint-stylish') // Use a more readable JSHint output theme
 	},
 	files: config.JavaScripts.jsHint.files
 };

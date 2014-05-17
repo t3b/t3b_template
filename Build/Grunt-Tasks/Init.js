@@ -4,18 +4,18 @@
  * specified inside the 'package.json'. (Should be run after downloading the extension).
  */
 
-var fs = require("fs"),
-	config = require("../Config"),
-	helpers = require("../Libary/Helpers");
+var fs = require('fs'),
+	config = require('../Config'),
+	helpers = require('../Libary/Helpers');
 
 module.exports = function(grunt) {
-	"use strict";
+	'use strict';
 
-	grunt.registerTask("init", function() {
+	grunt.registerTask('init', function() {
 		// Replace general text-strings and paths.
-		grunt.task.run("replace:preInit");
+		grunt.task.run('replace:preInit');
 
-		if (!helpers.isPackageDefault() || grunt.option("env") === "travis") {
+		if (!helpers.isPackageDefault() || grunt.option('env') === 'travis') {
 			/*
 			 * If the package.json contents are edited:
 			 *		=> #1: replace all '<!=  !>' strings.
@@ -23,22 +23,22 @@ module.exports = function(grunt) {
 			 *		=> #2: Copy a bare version of the extensions '.gitignore' into the root.
 			 *		=> #3: Remove other files which aren't suitable for customized extensions.
 			 */
-			grunt.task.run(["replace:init", "clean:gitFolder"]); // #1
-			helpers.copyFile("Build/Templates/.gitignore", ".gitignore"); // #2
-			helpers.deleteFiles([".travis.yml", "CHANGELOG.md", "CONTRIBUTORS.md", "README.md"]); // #3
+			grunt.task.run(['replace:init', 'clean:gitFolder']); // #1
+			helpers.copyFile('Build/Templates/.gitignore', '.gitignore'); // #2
+			helpers.deleteFiles(['.travis.yml', 'CHANGELOG.md', 'CONTRIBUTORS.md', 'README.md']); // #3
 		} else {
 			/*
 			 * If the package.json contents are defaults:
 			 *		=> Remove any previous set git hooks.
 			 *		=> Copy the git hooks as they are not present by default.
 			 */
-			grunt.task.run(["shell:deleteGitHooks", "shell:hookUpGit"]);
+			grunt.task.run(['shell:deleteGitHooks', 'shell:hookUpGit']);
 		}
 
 		// Create the base Stylesheet to prevent errors from ext:vhs(File not found) as well as the living styleguide.
-		grunt.task.run("compile:docs");
+		grunt.task.run('compile:docs');
 
 		// Copy the specified node modules into the wanted location.
-		grunt.task.run("copy:nodeModules");
+		grunt.task.run('copy:nodeModules');
 	});
 };

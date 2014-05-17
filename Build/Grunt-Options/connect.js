@@ -4,7 +4,7 @@
  * @docs https://github.com/gruntjs/grunt-contrib-connect
  */
 
-var config = require("../Config");
+var config = require('../Config');
 
 module.exports = {
 	karma: {

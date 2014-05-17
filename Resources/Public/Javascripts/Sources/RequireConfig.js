@@ -6,12 +6,12 @@
 require.config({
 	shim: {},
 	paths: {
-		myModule: "Modules/Module"
+		myModule: 'Modules/Module'
 	},
 
 	// Append a date on each requested script to prevent caching issues.
-	urlArgs: "bust=" + Date.now(),
+	urlArgs: 'bust=' + Date.now(),
 
 	// Initialize the application with the main application file
-	deps: ["App"]
+	deps: ['App']
 });

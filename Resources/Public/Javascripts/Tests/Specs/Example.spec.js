@@ -8,7 +8,7 @@ define(['Modules/Module'], function (module) {
 
 	describe('just checking', function() {
 		it('module works', function() {
-			var el = document.createElement("div");
+			var el = document.createElement('div');
 
 			var app = new module(el);
 			app.render();

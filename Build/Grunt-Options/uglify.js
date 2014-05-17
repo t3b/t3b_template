@@ -4,7 +4,7 @@
  * @docs https://github.com/gruntjs/grunt-contrib-uglify
  */
 
-var config = require("../Config");
+var config = require('../Config');
 
 module.exports = {
 	js: {
@@ -15,10 +15,10 @@ module.exports = {
 			expand: true,
 			cwd: config.JavaScripts.paths.devDir,
 			src: [
-				"**/*.js",
-				"!Vendor/requirejs/bin/**/*.js",
-				"!Vendor/almond/**/*.js",
-				"!Vendor/modernizr/**/*.js"
+				'**/*.js',
+				'!Vendor/requirejs/bin/**/*.js',
+				'!Vendor/almond/**/*.js',
+				'!Vendor/modernizr/**/*.js'
 			],
 			dest:  config.JavaScripts.paths.distDir
 		}]

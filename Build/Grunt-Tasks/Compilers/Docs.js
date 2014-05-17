@@ -4,13 +4,13 @@
  */
 
 module.exports = function(grunt) {
-	"use strict";
+	'use strict';
 
-	grunt.registerTask("compile:docs", function() {
+	grunt.registerTask('compile:docs', function() {
 		// Compile the new stylesheets.
-		grunt.task.run("compile:css:dev");
+		grunt.task.run('compile:css:dev');
 
 		// Create the living CSS styleguide.
-		grunt.task.run("styleguide");
+		grunt.task.run('styleguide');
 	});
 };

@@ -4,9 +4,9 @@
  */
 
 module.exports = function(grunt) {
-	"use strict";
+	'use strict';
 
-	grunt.registerTask("test", function() {
-		grunt.task.run("jshint", "connect:karma", "karma:test");
+	grunt.registerTask('test', function() {
+		grunt.task.run('jshint', 'connect:karma', 'karma:test');
 	});
 };

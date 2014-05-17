@@ -5,12 +5,12 @@
  */
 
 module.exports = function(grunt) {
-	"use strict";
+	'use strict';
 
-	grunt.registerTask("compile:images", function() {
+	grunt.registerTask('compile:images', function() {
 		// Prevent 'imagemin' from executing if the build gets tested on travis to suppress errors.
 		if(grunt.option('env') !== 'travis') {
-			grunt.task.run(["copy:imagesDir", "imagemin", "clean:imagesTempDir"]);
+			grunt.task.run(['copy:imagesDir', 'imagemin', 'clean:imagesTempDir']);
 		}
 	});
 };
