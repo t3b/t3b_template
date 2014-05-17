@@ -12,9 +12,9 @@ module.exports = function(grunt) {
 
 		// Depending on the env, we start different browsers.
 		if(grunt.option('env') !== 'travis') {
-			grunt.task.run('karma:test']);
+			grunt.task.run('karma:test');
 		} else {
-			grunt.task.run('karma:ci']);
+			grunt.task.run('karma:ci');
 		}
 	});
 };
