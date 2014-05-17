@@ -1,3 +1,5 @@
+var helpers = require("./Build/Libary/Helpers");
+
 module.exports = function(grunt) {
 	"use strict";
 
@@ -35,7 +37,34 @@ module.exports = function(grunt) {
 	 * Test all specified grunt tasks.
 	 */
 	grunt.registerTask("travis", function() {
-		grunt.task.run(["init", "replace:init", "jshint", "connect:karma", "karma:ci", "deploy", "undeploy"]);
+		var tasks = [],
+			primaryTasks = ["Init"],
+			rootLevelTasks = helpers.filterDirWithFileType('./Build/Grunt-Tasks', 'js'),
+			compilerTasks = helpers.filterDirWithFileType('./Build/Grunt-Tasks/Compilers', 'js'),
+			secondaryTasks = [];
+
+		// Primary tasks that should be run first.
+		primaryTasks.forEach(function(task, index) {
+			tasks.push(task);
+		});
+
+		// Root level tasks in './Build/Grunt-Tasks'.
+		rootLevelTasks.forEach(function(item, index) {
+			var taskName = item.replace('.js', '');
+			if(tasks.indexOf(taskName)) {
+				tasks.push(taskName);
+			}
+		});
+
+		// Run each compiler task standalone again.
+		compilerTasks.forEach(function(item, index) {
+			var taskName = item.replace('.js', '');
+			if(tasks.indexOf(taskName)) {
+				tasks.push(taskName);
+			}
+		});
+
+		grunt.task.run(tasks);
 	});
 
 
