@@ -105,5 +105,3 @@ module.exports = function(grunt) {
 		}
 	};
 };
-console.log("depoy - from:" + deployStrings.unDeploy.rJs,
-			"depoy - to:" + deployStrings.deploy.rJs)
