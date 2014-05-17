@@ -6,6 +6,8 @@
 
 var config = require("../Config"),
 	createNodeMdulesTargets = function() {
+		"use strict";
+
 		var nodeModulesFiles = [];
 
 		for(var key in config.nodeModuleDists) {
