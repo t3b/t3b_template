@@ -12,8 +12,5 @@ module.exports = {
 	},
 	css: {
 		src: config.Sass.cssDir + "/*.css"
-	},
-	docs: {
-		src: "Documentation/public/*.css"
 	}
 };

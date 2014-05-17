@@ -17,9 +17,5 @@ module.exports = {
 	js: {
 		files: ["<%= jshint.files %>"],
 		tasks: ["jshint"]
-	},
-	docs: {
-		files: ["Build/Templates/Kss-Node/**/*"],
-		tasks: ["styleguide", "autoprefixer:docs"]
 	}
 };
