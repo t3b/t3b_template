@@ -23,8 +23,7 @@ Styleguide 5.1.1
 
 /*
 Brand color helpers
-
-.brandColor-primary - Primary brand color.
+#{generateModifierComments($brand-colors, "brandColor-", " brand color.")}
 
 Markup:
 <span class="{$modifiers}">Brand color helpers.</span>
@@ -56,5 +55,5 @@ Markup:
 Styleguide 5.1.4
 */
 .brandLogo {
-	@include image-replacement($file-name: map-get($brand-logo, image), $display-mode: inline-block, $width: map-get($brand-logo, width), $height: map-get($brand-logo, height));
+	@include image-replacement($fileName: map-get($brand-logo, image), $displayMode: inline-block, $width: map-get($brand-logo, width), $height: map-get($brand-logo, height));
 }

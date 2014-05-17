@@ -1,6 +1,9 @@
 # t3b_template
-[![Build
-Status](https://travis-ci.org/t3b/t3b_template.png?branch=master)](https://travis-ci.org/t3b/t3b_template)
+
+[![Build Status](https://travis-ci.org/t3b/t3b_template.png?branch=master)](https://travis-ci.org/t3b/t3b_template)
+[![Dependency Status](https://david-dm.org/t3b/t3b_template.svg)](https://david-dm.org/t3b/t3b_template)
+[![devDependency Status](https://david-dm.org/t3b/t3b_template/dev-status.svg)](https://david-dm.org/t3b/t3b_template#info=devDependencies)
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 A Kickstarter Template-Extension for [TYPO3](http://typo3.org/) which provides your with a clean and lean boilerplate for Fluid templates.
 Part of the boilerplate is an minimal [Sass](http://sass-lang.com/) base, a [RequireJS](http://requirejs.org/) boilerplate as well as an optional Build process based on [Grunt.js](http://gruntjs.com).

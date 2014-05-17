@@ -4,7 +4,7 @@
  * @docs https://github.com/gruntjs/grunt-contrib-imagemin
  */
 
-var config = require("../Config");
+var config = require('../Config');
 
 module.exports = {
 	images : {
@@ -14,7 +14,7 @@ module.exports = {
 		files: [{
 			expand: true,
 			cwd: config.Images.tempDir,
-			src: ["**/*.{png,jpg,gif}"],
+			src: ['**/*.{png,jpg,gif}'],
 			dest: config.Images.distDir
 		}]
 	}

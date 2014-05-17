@@ -1,37 +1,22 @@
 @charset "UTF-8";
-/*!
- * Base stylesheet for <!= pkg.homepage !>
- *
- * @package <!= pkg.name !>
- * @path /Main.scss
- * @author <!= pkg.author.name !> <<!= pkg.author.email !>>
 
-
- */
-
-//
-// SASS Functions, Mixins and Variables
-//
-// Styleguide 1
-//
 @import "_Settings/_All",
-        "_Variables";
+	"_Variables";
 
 //
 // Helper- & Generic-classes
 //
 @import "Generic/_Head",
         "Generic/_Normalize",
-        "Generic/_Debug",
         "Generic/_Widths",
         "Generic/_T3General",
         "Generic/_Brand";
 
-//
-// Element styles
-//
-// Styleguide 2
-//
+/*
+Element styles
+
+Styleguide 2
+*/
 @import "Base/_Base",
         "Base/_Headings",
         "Base/_Typography",
@@ -44,13 +29,13 @@
         "Base/_Tables",
         "Base/_Forms";
 
-//
-// OOCSS Objects
-//
-// The purpose of CSS Objects is to encourage code reuse and, ultimately, faster and more efficient stylesheets that are easier to add to and maintain.
-//
-// Styleguide 4
-//
+/*
+OOCSS Objects
+
+The purpose of CSS Objects is to encourage code reuse and, ultimately, faster and more efficient stylesheets that are easier to add to and maintain.
+
+Styleguide 4
+*/
 @import "Objects/_Button",
 	"Objects/_Form",
         "Objects/_Navigation",

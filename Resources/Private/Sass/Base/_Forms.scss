@@ -118,7 +118,7 @@ Styleguide 2.1.4
 label {
 	display: block;
 	font-weight: $bold;
-	@include font-size(14, $append-vrythm: true);
+	@include font-size(14, $appendVrythm: true);
 	&[for] {
 		cursor: pointer;
 	}

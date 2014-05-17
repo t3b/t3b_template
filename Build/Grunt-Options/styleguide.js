@@ -4,23 +4,20 @@
  * @docs https://github.com/indieisaconcept/grunt-styleguide
  */
 
-var config = require("../Config");
+var config = require('../Config');
 
 module.exports = {
 	options: {
 		template: {
-			src: "Build/Templates/Kss-Node"
+			src: 'node_modules/kss-node_glaciertheme/Theme'
 		},
 		framework: {
-			name: "kss"
+			name: 'kss'
 		}
 	},
-	all: {
+	css: {
 		files: [{
-			Documentation: config.Sass.sassDir + "/**/*.scss"
+			'Documentation': [config.Sass.cssDir + '/Main.css']
 		}]
 	}
 };
-
-
-

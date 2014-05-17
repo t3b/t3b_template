@@ -4,32 +4,26 @@
  * custom Modernizr build and changes the affected paths in all Fluid Layouts.
  */
 
-var fs = require("fs"),
-	config = require("../Config");
-
 module.exports = function(grunt) {
-	"use strict";
+	'use strict';
 
-	grunt.registerTask("deploy", function() {
-		// Prevent 'imagemin' from executing if the build gets tested on travis to suppress errors.
-		if(grunt.option('env') !== 'travis') {
-			grunt.task.run(["copy:imagesDir", "imagemin", "clean:imagesTempDir"]);
-		}
+	grunt.registerTask('deploy', function() {
+		// Compile the living styleguide.
+		grunt.task.run('compile:images');
 
 		// Compile the living styleguide.
-		grunt.task.run(["docs"]);
+		grunt.task.run('compile:docs');
 
-		// Remove all stylesheets to force a new compilation.
-		grunt.task.run(["clean:stylesheets"]);
-		grunt.task.run(["sass:deploy", "autoprefixer:main"]);
+		// Compile the stylesheets.
+		grunt.task.run('compile:css:deploy');
+
+		// Compile the stylesheets.
+		grunt.task.run('compile:js');
 
 		// Generate a custom modernizr build.
-		grunt.task.run(["modernizr"]);
-
-		// Generate a requireJS build to avoid too many http requests on the live server.
-		grunt.task.run(["requirejs"]);
+		grunt.task.run('modernizr');
 
 		// Replace paths to match the build files.
-		grunt.task.run(["replace:deploy"]);
+		grunt.task.run('replace:deploy');
 	});
 };

@@ -4,16 +4,13 @@
  * @docs https://github.com/nDmitry/grunt-autoprefixer
  */
 
-var config = require("../Config");
+var config = require('../Config');
 
 module.exports = {
 	options: {
 		browsers: config.Sass.browserSupport
 	},
-	main: {
-		src: config.Sass.cssDir + "/*.css"
-	},
-	styleguide: {
-		src: "Documentation/public/*.css"
+	css: {
+		src: config.Sass.cssDir + '/*.css'
 	}
 };

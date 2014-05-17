@@ -4,8 +4,8 @@
  * @docs https://github.com/Modernizr/grunt-modernizr
  */
 
-var config = require("../Config"),
-	modernizrConfig = require("../ModernizrConfig");
+var config = require('../Config'),
+	modernizrConfig = require('../ModernizrConfig');
 
 module.exports = {
 	main: {
