@@ -1,27 +1,27 @@
-{namespace flux=Tx_Flux_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
 
 <f:layout name="Content" />
 
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:flux="http://fedext.net/ns/flux/ViewHelpers" xmlns:v="http://fedext.net/ns/vhs/ViewHelpers" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 	<f:section name="Configuration">
-		<flux:flexform id="four-columns" label="[GRID] Four Columns (1 | 1 | 1 | 1)" description="Provides four columns to be filled with content elements.">
+		<flux:form id="four-columns" label="[GRID] Four Columns (1 | 1 | 1 | 1)" description="Provides four columns to be filled with content elements.">
 			<flux:flexform.grid>
-				<flux:flexform.grid.row>
-					<flux:flexform.grid.column  style="width: 25%">
-						<flux:flexform.content name="FirstColumn" label="First column" />
-					</flux:flexform.grid.column>
-					<flux:flexform.grid.column  style="width: 25%">
-						<flux:flexform.content name="SecondColumn" label="Second column" />
-					</flux:flexform.grid.column>
-					<flux:flexform.grid.column  style="width: 25%">
-						<flux:flexform.content name="ThirdColumn" label="Third column" />
-					</flux:flexform.grid.column>
-					<flux:flexform.grid.column  style="width: 25%">
-						<flux:flexform.content name="FourthColumn" label="Fourth column" />
-					</flux:flexform.grid.column>
-				</flux:flexform.grid.row>
-			</flux:flexform.grid>
-		</flux:flexform>
+				<flux:grid.row>
+					<flux:grid.column  style="width: 25%">
+						<flux:form.content name="FirstColumn" label="First column" />
+					</flux:grid.column>
+					<flux:grid.column  style="width: 25%">
+						<flux:form.content name="SecondColumn" label="Second column" />
+					</flux:grid.column>
+					<flux:grid.column  style="width: 25%">
+						<flux:form.content name="ThirdColumn" label="Third column" />
+					</flux:grid.column>
+					<flux:grid.column  style="width: 25%">
+						<flux:form.content name="FourthColumn" label="Fourth column" />
+					</flux:grid.column>
+				</flux:grid.row>
+			</flux:grid>
+		</flux:form>
 	</f:section>
 
 	<f:section name="Preview">
@@ -32,16 +32,16 @@
 	<f:section name="Main">
 		<div class="grid">
 			<div class="gi one-quarter">
-				<flux:flexform.renderContent area="FirstColumn" />
+				<flux:form.renderContent area="FirstColumn" />
 			</div>
 			<div class="gi one-quarter">
-				<flux:flexform.renderContent area="SecondColumn" />
+				<flux:form.renderContent area="SecondColumn" />
 			</div>
 			<div class="gi one-quarter">
-				<flux:flexform.renderContent area="ThirdColumn" />
+				<flux:form.renderContent area="ThirdColumn" />
 			</div>
 			<div class="gi one-quarter">
-				<flux:flexform.renderContent area="FourthColumn" />
+				<flux:form.renderContent area="FourthColumn" />
 			</div>
 		</div>
 	</f:section>
