@@ -46,7 +46,7 @@
     "grunt-shell": "~0.7.0",
     "grunt-styleguide": "~0.2.15",
     "grunt-text-replace": "~0.3.11",
-    "jit-grunt": "~0.6.0",
+    "jit-grunt": "~0.7.0",
     "jshint-stylish": "~0.2.0",
     "karma": "^0.12.16",
     "karma-chrome-launcher": "^0.1.3",
