@@ -12,5 +12,8 @@ module.exports = function(grunt) {
 
 		// Create the living CSS styleguide.
 		grunt.task.run('styleguide');
+
+		// Create the JsDoc docs.
+		grunt.task.run('jsdoc');
 	});
 };

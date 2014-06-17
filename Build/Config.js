@@ -70,6 +70,14 @@ var ConfigCreator = function() {
 		]
 	};
 
+	// JsDoc settings.
+	this.JavaScripts.jsDoc = {
+		files : [
+			this.JavaScripts.paths.devDir + '/**/*.js',
+			'!' + this.JavaScripts.paths.devDir + '/Vendor/**/*'
+		]
+	};
+
 
 	// Modernizr settings.
 	this.JavaScripts.modernizr = {

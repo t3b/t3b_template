@@ -14,5 +14,4 @@ Resources/Public/Javascripts/Tests/Coverages/**/*
 Resources/Public/Javascripts/Sources/Vendor/*
 Resources/Public/Stylesheets/*.css
 Resources/Public/Stylesheets/*.map
-Documentation/*.html
-Documentation/public
+Documentation/*
