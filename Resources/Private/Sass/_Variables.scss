@@ -96,7 +96,7 @@ $half-spacing:          $basic-spacing / 2;
 // =============================================================================
 // Default settings for all heading elements.
 $headings: (
-	fontFamily:           false,
+	fontFamily:           false, // 'false' will use the inherited font-family, f.e. $base-font-family.
 	fontWeight:           $bold,
 	color:                #000
 );
