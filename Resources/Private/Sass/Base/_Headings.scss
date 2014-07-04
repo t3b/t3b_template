@@ -52,13 +52,21 @@ Markup:
 
 Styleguide 2.2.2
 */
-@each $key, $value in map-get($headings, elements) {
-	$headingFontSize: map-fetch($headings, elements $key font-size);
-	$additionalRules: map-removeKeys(map-fetch($headings, elements $key), font-size);
-	#{$key}, .#{$key} {
-		@include font-size($headingFontSize, $appendVrythm: false);
-		@each $declaration, $value in $additionalRules {
-			#{$declaration}: $value;
-		}
-	}
+h1, .h1 {
+	font-size: 36px;
+}
+h2, .h2 {
+	font-size: 30px;
+}
+h3, .h3 {
+	font-size: 24px;
+}
+h4, .h4 {
+	font-size: 20px;
+}
+h5, .h5 {
+	font-size: 16px;
+}
+h6, .h6 {
+	font-size: 16px;
 }

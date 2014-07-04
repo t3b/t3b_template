@@ -139,7 +139,7 @@ legend {
 	width: 100%;
 	@extend %margin-bottom;
 
-	@include font-size(map-fetch($headings, elements h4 font-size));
+	@include font-size($base-font-size + 4);
 	color: map-get($headings, color);
 	border-bottom: 1px $basic-border-style $basic-border-color;
 
