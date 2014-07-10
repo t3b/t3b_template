@@ -6,6 +6,8 @@
 var module = require('./../../Modules/Module');
 
 describe('just checking', function() {
+	'use strict';
+
 	it('module works', function() {
 		var el = document.createElement('div');
 
