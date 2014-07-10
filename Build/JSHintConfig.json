@@ -28,6 +28,11 @@
 		"module": true,
 		"require": true,
 		"requirejs": true,
-		"define": true
+		"define": true,
+
+		// Jasmine
+		"describe": true,
+		"it": true,
+		"expect": true
 	}
 }
