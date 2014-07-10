@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 		grunt.task.run('compile:css:deploy');
 
 		// Compile the stylesheets.
-		grunt.task.run('compile:js');
+		grunt.task.run('compile:js:deploy');
 
 		// Generate a custom modernizr build.
 		grunt.task.run('modernizr');

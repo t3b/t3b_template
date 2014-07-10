@@ -2,8 +2,8 @@
  * Main.js
  * @description Require and execute the main application modules.
  */
-require(['myModule'], function(module) {
-	'use strict';
 
-	console.log(module);
-});
+var Module = require('./Modules/Module');
+
+// Create the module instance.
+new Module(document.createElement('div'));

@@ -45,18 +45,6 @@ var ConfigCreator = function() {
 	};
 
 
-	// RequireJS settings.
-	this.JavaScripts.requireJS = {
-		config : 'RequireConfig',
-		requireJsSourceFile : 'Vendor/requirejs/require', // Relative to the 'config' file.
-		almondSourceFile : 'Vendor/almond/almond', // Relative to the 'config' file.
-		compileDistFile : this.JavaScripts.paths.distDir + '/Main.js',
-		useSingleFileBuild : true,
-		useAlmondOnBuild : true, // Won't affect anything if 'useSingleFileBuild' is set to false.
-		removeLoggingStatements : true
-	};
-
-
 	// JSHint settings.
 	this.JavaScripts.jsHint = {
 		config : 'Build/JSHintConfig.json',
@@ -115,8 +103,6 @@ var ConfigCreator = function() {
 
 	// Copy the source files of node modules into a specified location.
 	this.nodeModuleDists = {
-		almond: this.JavaScripts.paths.devDir + '/Vendor/almond/',
-		requirejs: this.JavaScripts.paths.devDir + '/Vendor/requirejs/',
 		modernizr: this.JavaScripts.paths.devDir + '/Vendor/modernizr/'
 	};
 };

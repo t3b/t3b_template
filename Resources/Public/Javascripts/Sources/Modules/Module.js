@@ -3,29 +3,32 @@
  *
  * @module Modules/Module
  */
-define(function(require) {
+
+
+/**
+ * App
+ * @param el
+ * @constructor
+ */
+var App = function(el) {
 	'use strict';
 
-	/**
-	 * App
-	 * @param el
-	 * @constructor
-	 */
-	var App = function(el) {
-		this.el = el;
-	};
+	this.el = el;
+};
 
-	/**
-	 * Function used to to render the App
-	 *
-	 * @memberof module:Modules/Module
-	 * @returns {Object} the App itself.
-	 */
-	App.prototype.render = function() {
-		this.el.innerHTML = 'require.js up and running';
+/**
+ * Function used to to render the App
+ *
+ * @memberof module:Modules/Module
+ * @returns {Object} the App itself.
+ */
+App.prototype.render = function() {
+	'use strict';
 
-		return this;
-	};
+	this.el.innerHTML = 'require.js up and running';
 
-	return App;
-});
+	return this;
+};
+
+module.exports = App;
+
