@@ -3,7 +3,7 @@
  * @description An example specification for the example module in 'Modules/Module'.
  */
 
-var module = require('./../../Sources/Modules/Module');
+var module = require('./../../Modules/Module');
 
 describe('just checking', function() {
 	it('module works', function() {

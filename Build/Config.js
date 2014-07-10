@@ -97,8 +97,8 @@ var ConfigCreator = function() {
 		config : 'Build/KarmaConfig.js',
 		port: 8000,
 		browsers: ['Chrome', 'Firefox', 'Safari', 'PhantomJS'],
-		coverageDir: this.paths.public + '/Javascripts/Tests/Coverages/',
-		testsDir : this.paths.public + '/Javascripts/Tests'
+		coverageDir: 'Documentation/Javascripts/Coverages/',
+		testsDir : this.JavaScripts.paths.devDir + '/Tests/'
 	};
 
 	// Copy the source files of node modules into a specified location.

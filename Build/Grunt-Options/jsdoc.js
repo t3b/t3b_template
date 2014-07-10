@@ -10,7 +10,7 @@ module.exports = {
 	dist : {
 		src: config.JavaScripts.jsDoc.files,
 		options: {
-			destination: 'Documentation/Javascript'
+			destination: 'Documentation/Javascripts/Documentation'
 		}
 	}
 };

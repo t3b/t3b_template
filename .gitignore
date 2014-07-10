@@ -12,8 +12,6 @@ Build/Templates/kss-node_glaciertheme
 Resources/Public/Javascripts/*
 Resources/Public/Javascripts/Vendor/*
 Resources/Private/Javascripts/Vendor/*
-Resources/Public/Javascripts/Tests/Coverages/**/*
-
 Resources/Public/Stylesheets/*.css
 Resources/Public/Stylesheets/*.map
 Documentation/*
