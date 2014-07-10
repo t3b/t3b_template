@@ -40,8 +40,8 @@ var ConfigCreator = function() {
 	};
 	this.JavaScripts = {};
 	this.JavaScripts.paths = {
-		devDir : this.paths.public + '/Javascripts/Sources',
-		distDir : this.paths.public + '/Javascripts/Build'
+		devDir : this.paths.private + '/Javascripts',
+		distDir : this.paths.public + '/Javascripts'
 	};
 
 
