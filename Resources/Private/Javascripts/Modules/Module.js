@@ -4,13 +4,14 @@
  * @module Modules/Module
  */
 
+var App;
 
 /**
  * App
  * @param el
  * @constructor
  */
-var App = function(el) {
+App = function(el) {
 	'use strict';
 
 	this.el = el;
@@ -26,9 +27,6 @@ App.prototype.render = function() {
 	'use strict';
 
 	this.el.innerHTML = 'App is rendered properly!';
-
-	return this;
 };
 
 module.exports = App;
-
