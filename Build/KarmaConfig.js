@@ -20,10 +20,7 @@ module.exports = function (karmaConfig) {
 		plugins: ['karma-*'],
 
 		// list of files / patterns to load in the browser
-		files: [{
-			pattern: 'Resources/Private/Javascripts/Modules/Module.js',
-			included: false
-		},
+		files: [
 		  'Resources/Private/Javascripts/Tests/**/*.js'
 		],
 
