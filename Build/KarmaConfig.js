@@ -59,7 +59,7 @@ module.exports = function (karmaConfig) {
 		// Add browserify to preprocessors
 		preprocessors: {
 			'Resources/Private/Javascripts/Modules/**/*.js': ['browserify', 'coverage'],
-			'Resources/Private/Javascripts/Tests/**/*.js': ['browserify', 'coverage'],
+			'Resources/Private/Javascripts/Tests/**/*.js': ['browserify'],
 		},
 
 		coverageReporter: {
