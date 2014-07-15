@@ -25,7 +25,7 @@ var App = function(el) {
 App.prototype.render = function() {
 	'use strict';
 
-	this.el.innerHTML = 'require.js up and running';
+	this.el.innerHTML = 'App is rendered properly!';
 
 	return this;
 };

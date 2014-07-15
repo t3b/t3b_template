@@ -3,17 +3,17 @@
  * @description An example specification for the example module in 'Modules/Module'.
  */
 
-var module = require('./../../Modules/Module');
+var Module = require('./../../Modules/Module');
 
 describe('just checking', function() {
 	'use strict';
 
-	it('module works', function() {
+	it('should render a div with an example text inside of it', function() {
 		var el = document.createElement('div');
 
-		var app = new module(el);
+		var app = new Module(el);
 		app.render();
 
-		expect(el.innerHTML).toEqual('require.js up and running');
+		expect(el.innerHTML).toEqual('App is rendered properly!');
 	});
 });
