@@ -14,7 +14,7 @@ module.exports = function (karmaConfig) {
 		basePath: '../',
 
 		// frameworks to use
-    	frameworks: ['jasmine', 'browserify'],
+    	frameworks: ['jasmine', 'commonjs'],
 
     	// Plugins to load.
 		plugins: ['karma-*'],
@@ -46,20 +46,10 @@ module.exports = function (karmaConfig) {
 		// if true, it capture browsers, run tests and exit
 		singleRun: true,
 
-		// Browserify config (all optional)
-		browserify: {
-		  // extensions: ['.coffee'],
-		  // ignore: [],
-		  // transform: ['coffeeify'],
-		  // debug: true,
-		  // noParse: ['jquery'],
-		  watch: true,
-		},
-
 		// Add browserify to preprocessors
 		preprocessors: {
-			'Resources/Private/Javascripts/Modules/**/*.js': ['browserify', 'coverage'],
-			'Resources/Private/Javascripts/Tests/**/*.js': ['browserify'],
+			'Resources/Private/Javascripts/Modules/**/*.js': ['commonjs', 'coverage'],
+			'Resources/Private/Javascripts/Tests/**/*.js': ['commonjs'],
 		},
 
 		coverageReporter: {
