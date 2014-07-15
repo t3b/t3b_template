@@ -3,8 +3,7 @@
  * @description Configure the karma test runner.
  */
 
-var config = require('./Config'),
-	javascriptSources = config.JavaScripts.paths.devDir + '/**/*.js';
+var config = require('./Config');
 
 module.exports = function (karmaConfig) {
 	'use strict';
@@ -34,7 +33,7 @@ module.exports = function (karmaConfig) {
 
 		// level of logging
 		// possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-		logLevel: config.LOG_DISABLE,
+		logLevel: karmaConfig.LOG_ERROR,
 
 		// enable / disable watching file and executing tests whenever any file changes
 		autoWatch: false,
