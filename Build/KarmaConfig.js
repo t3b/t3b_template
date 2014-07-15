@@ -21,7 +21,8 @@ module.exports = function (karmaConfig) {
 
 		// list of files / patterns to load in the browser
 		files: [
-		  'Resources/Private/Javascripts/Tests/**/*.js'
+		  'Resources/Private/Javascripts/Tests/**/*.js',
+		  'Resources/Private/Javascripts/Modules/**/*.js'
 		],
 
 		// test results reporter to use
@@ -57,8 +58,8 @@ module.exports = function (karmaConfig) {
 
 		// Add browserify to preprocessors
 		preprocessors: {
-			'**/Resources/Private/Javascripts/Modules/Module.js': ['browserify', 'coverage'],
-			'Resources/Private/Javascripts/Tests/**/*.js': 'browserify'
+			'Resources/Private/Javascripts/Modules/**/*.js': ['browserify', 'coverage'],
+			'Resources/Private/Javascripts/Tests/**/*.js': ['browserify', 'coverage'],
 		},
 
 		coverageReporter: {
