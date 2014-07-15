@@ -26,6 +26,11 @@ App = function(el) {
 App.prototype.render = function() {
 	'use strict';
 
+	// Return false if not 'el' was set in the app.
+	if(!this.el) {
+		return false;
+	}
+
 	this.el.innerHTML = 'App is rendered properly!';
 };
 
