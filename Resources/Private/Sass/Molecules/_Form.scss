@@ -1,4 +1,33 @@
 /*
+Form
+
+Styleguide 5.3
+*/
+
+/*
+Form wrapper elements
+*/
+fieldset {
+	/**
+	 * Reset border, margin, and padding to define a consistend style accross all browsers
+	 */
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+form {
+	@if $legacy-normalizecss {
+		/**
+		 * Corrects margin displayed oddly in IE6/7.
+		 */
+		margin-top: 0;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	@extend %margin-bottom;
+}
+
+/*
 Form-Inline abstraction
 
 .form--inline - Display a `<form>` and all it's content in a horizontal order
@@ -15,7 +44,7 @@ Markup:
 	<button type="submit" class="btn">Sign in</button>
 </form>
 
-Styleguide 4.1.2
+Styleguide 5.3.1
 */
 .form--inline {
 	label {

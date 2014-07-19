@@ -3,7 +3,7 @@ Brand styles
 
 Helper classes for brand related stylings.
 
-Styleguide 5
+Styleguide 3.1
 */
 
 
@@ -14,7 +14,7 @@ Brand text styles
 Markup:
 <span class="brand">I am an paragraph.</span>
 
-Styleguide 5.1.1
+Styleguide 3.1.1
 */
 .brand {
 	font-family: $brand-font-family;
@@ -28,7 +28,7 @@ Brand color helpers
 Markup:
 <span class="{$modifiers}">Brand color helpers.</span>
 
-Styleguide 5.1.2
+Styleguide 3.1.2
 */
 @each $key, $value in $brand-colors {
 	.brandColor-#{$key} {
@@ -42,7 +42,7 @@ Brand font-family helper
 Markup:
 <span class="brandFace">This text will be set in the brands font-family.</span>
 
-Styleguide 5.1.3
+Styleguide 3.1.3
 */
 .brandFace { font-family: $brand-font-family; }
 
@@ -52,7 +52,7 @@ Brand logos
 Markup:
 <img class="brandLogo" />
 
-Styleguide 5.1.4
+Styleguide 3.1.4
 */
 .brandLogo {
 	@include image-replacement($fileName: map-get($brand-logo, image), $displayMode: inline-block, $width: map-get($brand-logo, width), $height: map-get($brand-logo, height));

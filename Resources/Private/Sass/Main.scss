@@ -1,53 +1,89 @@
 @charset "UTF-8";
 
+
+/*
+SASS Functions, Mixins and Variables
+
+Styleguide 1
+*/
 @import "_Settings/_All",
 	"_Variables";
 
-//
-// Helper- & Generic-classes
-//
-@import "Generic/_Head",
-        "Generic/_Normalize",
-        "Generic/_Widths",
-        "Generic/_T3General",
-        "Generic/_Brand";
 
 /*
-Element styles
+Generic rules
+
+Resets and other generic stuff.
+*/
+@import "Generic/_Head",
+        "Generic/_Normalize",
+        "Generic/_Base";
+
+
+/*
+Helpers
 
 Styleguide 2
 */
-@import "Base/_Base",
-        "Base/_Headings",
-        "Base/_Typography",
-        "Base/_Links",
-        "Base/_Lists",
-        "Base/_Code",
-        "Base/_Quotes",
-        "Base/_Ruler",
-        "Base/_Media",
-        "Base/_Tables",
-        "Base/_Forms";
+@import "Generic/Helpers/_Helper";
+
 
 /*
-OOCSS Objects
+Utilities
 
-The purpose of CSS Objects is to encourage code reuse and, ultimately, faster and more efficient stylesheets that are easier to add to and maintain.
+Utilitie classes which can be used independently from each other to create simple stylings.
+
+Styleguide 3
+*/
+@import "Generic/Utilities/_Brand",
+        "Generic/Utilities/_Typography",
+        "Generic/Utilities/_Widths",
+        "Generic/Utilities/_T3General";
+
+
+/*
+Atoms
+
+Atoms are basic tags, such as form labels, inputs or buttons.
 
 Styleguide 4
 */
-@import "Objects/_Button",
-	"Objects/_Form",
-        "Objects/_Navigation",
-        "Objects/_Grid";
+@import "Atoms/_Heading",
+        "Atoms/_Typography",
+        "Atoms/_Link",
+        "Atoms/_List",
+        "Atoms/_Label",
+        "Atoms/_Input",
+        "Atoms/_Button",
+        "Atoms/_Code",
+        "Atoms/_Quote",
+        "Atoms/_Ruler",
+        "Atoms/_Media",
+        "Atoms/_Table";
 
-//
-// Site dependent styles
-//
-@import "_Styles";
+/*
+Molecules
 
-//
-// Helpers and print styles
-//
-@import "Generic/_Helper",
-        "Generic/_Print";
+Mlecules are groups of elements that function together as a unit. For example, a form label, search input, and button atom can combine them together to form a search form molecule.
+
+Styleguide 5
+*/
+@import "Molecules/_Form",
+        "Molecules/_Navigation",
+        "Molecules/_Grid";
+
+/*
+Organisms
+
+Organisms are groups of molecules (and possibly atoms) joined together to form distinct section of an interface.
+
+Styleguide 6
+*/
+@import "Organisms/SiteHeader",
+        "Organisms/SiteFooter";
+
+
+/*
+Templates
+*/
+@import "Templates/_Print";

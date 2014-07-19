@@ -1,17 +1,9 @@
 /*
-Helper classes
+General helpers
 
-Several helper classes which can be used independently from each other to create the desired stylings.
-
-Styleguide 3
+Styleguide 2.1
 */
 
-
-//
-// General helpers
-//
-// Styleguide 3.1
-//
 
 /*
 Float helpers
@@ -22,7 +14,7 @@ Float helpers
 Markup:
 <span class="{$modifiers}">I am an paragraph.</span>
 
-Styleguide 3.1.1
+Styleguide 2.1.1
 */
 .fl-r { float: right; }
 .fl-l { float: left; }
@@ -35,7 +27,7 @@ Contain floats: h5bp.com/q
 Markup:
 <div class="cf">This element will clear any floats inside of it.</div>
 
-Styleguide 3.1.2
+Styleguide 2.1.2
 */
 .cf,
 .clearfix {
@@ -54,7 +46,7 @@ Visibillity helpers
 Markup:
 <div class="{$modifiers}">This element won't be visible.</div>
 
-Styleguide 3.1.3
+Styleguide 2.1.3
 */
 .hidden {
 	display: none !important;
@@ -89,7 +81,7 @@ Hides the text of a container and displays a image instead, you will need to set
 Markup:
 <span class="ir" style="background-image: url('http://placehold.it/350x150'); width: 350px; height: 150px; display: inline-block;">This text won't be visible for a user, but can be accessed by robots & assistive devices.</span>
 
-Styleguide 3.1.4
+Styleguide 2.1.4
 */
 .ir,
 .imageReplacement {

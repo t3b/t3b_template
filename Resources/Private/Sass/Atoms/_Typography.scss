@@ -3,7 +3,7 @@ Typographic elements
 
 Basic styling for all typographic related elements.
 
-Styleguide 2.3
+Styleguide 4.2
 */
 
 
@@ -13,7 +13,7 @@ Base paragraph
 Markup:
 <p>I am an paragraph.</p>
 
-Styleguide 2.3.1
+Styleguide 4.2.1
 */
 p {
 	@extend %reset-margin-top;
@@ -26,7 +26,7 @@ Bold and strong elements
 Markup:
 <b>This text should be displayed in a bolder font-weight than the standard one.</b>
 
-Styleguide 2.3.2
+Styleguide 4.2.2
 */
 b,
 strong {
@@ -39,7 +39,7 @@ Small text emphasis
 Markup:
 <small>This text should be smaller than the standard one.</small>
 
-Styleguide 2.3.3
+Styleguide 4.2.3
 */
 small { font-size: 80%; }
 
@@ -49,7 +49,7 @@ Abbreviation element
 Markup:
 <abbr title="The title of the abbreviation">This is an abbreviation.</abbr>
 
-Styleguide 2.3.4
+Styleguide 4.2.4
 */
 abbr[title] { /* Addresses styling not present in IE7/8/9, S5, Chrome. */
 	border-bottom: 1px dotted;
@@ -62,7 +62,7 @@ Marked text emphasis element
 Markup:
 <mark>This text should be displayed in a special manner.</mark>
 
-Styleguide 2.3.5
+Styleguide 4.2.5
 */
 mark { /* Addresses styling not present in IE6/7/8/9. */
 	background: map-get($brand-colors, primary);
@@ -75,7 +75,7 @@ Definition element
 Markup:
 <dfn>This text represents the defining instance of a term.</dfn>
 
-Styleguide 2.3.6
+Styleguide 4.2.6
 */
 dfn {
 	font-style: italic; /* Addresses styling not present in S5, Chrome. */
@@ -88,7 +88,7 @@ Markup:
 Regular text - <sup>this will be displayed higher and smaller than the main span of text.</sup><br>
 Regular text - <sub>this will be displayed lower and smaller than the main span of text.</sub>
 
-Styleguide 2.3.7
+Styleguide 4.2.7
 */
 sub,
 sup { /* Prevents `sub` and `sup` affecting `line-height` in all browsers. gist.github.com/413930 */
@@ -108,56 +108,4 @@ Text-Selection
 	background: map-get($brand-colors, primary);
 	color: color-adjust(map-get($brand-colors, primary), 100%);
 	text-shadow: none;
-}
-
-/*
-Typographic Helper Classes
-
-.align-center - Centers the text.
-.align-right - Aligns the text on it's right boundary.
-.align-left - Aligns the text on it's left boundary.
-.intend - Intends the element.
-.text-break - Break strings when their length exceeds the width of their container.
-.basic_spacing-top - Adds a basic typographic margin on the top.
-.basic_spacing-bottom - Adds a basic typographic margin on the bottom.
-.half_spacing-top - Adds a half sized typographic margin on the top.
-.half_spacing-bottom - Adds a half sized typographic margin on the bottom.
-
-
-Markup:
-<p class="{$modifiers}">I am an paragraph.</p>
-
-Styleguide 3.1.5
-*/
-.align-center { text-align: center; }
-.align-right  { text-align: right; }
-.align-left   { text-align: left; }
-.intend { padding: 0 1.5em; }
-
-%text-break,
-.text-break {
-	word-wrap: break-word;
-	hyphens: auto;
-}
-
-%reset-margin-top { margin-top: 0; }
-
-%margin-top,
-.basic_spacing-top {
-	@include rem(margin-top, $basic-spacing);
-}
-
-%half-margin-top,
-.half_spacing-top {
-	@include rem(margin-top, $half-spacing);
-}
-
-%margin-bottom,
-.basic_spacing-bottom {
-	@include rem(margin-bottom, $basic-spacing);
-}
-
-%half-margin-bottom,
-.half_spacing-bottom {
-	@include rem(margin-bottom, $half-spacing);
 }
