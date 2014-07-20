@@ -7,7 +7,7 @@ Markup:
 <samp>.css{ color: red; }</samp><br>
 <pre>.css{ color: red; }</pre>
 
-Styleguide 4.12
+Styleguide 3.12
 */
 code,
 kbd,
@@ -26,6 +26,6 @@ pre {
 	 * Improves readability of pre-formatted text in all browsers.
 	 */
 	white-space: pre-wrap;
-	@extend %reset-margin-top;
-	@extend %margin-bottom;
+	@extend %u-m0;
+	@extend %u-mb;
 }

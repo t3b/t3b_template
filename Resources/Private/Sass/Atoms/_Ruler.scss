@@ -4,7 +4,7 @@ Rulers
 Markup:
 <hr>
 
-Styleguide 4.10
+Styleguide 3.10
 */
 %horizontal-ruler,
 hr {
@@ -19,6 +19,6 @@ hr {
 	border: 0;
 	border-top: 1px $basic-border-style $basic-border-color;
 	padding: 0;
-	@extend %margin-top;
-	@extend %margin-bottom;
+	@extend %u-m0;
+	@extend %u-mb;
 }

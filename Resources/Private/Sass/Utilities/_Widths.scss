@@ -131,8 +131,8 @@ Sizes which are used in conjunction with other objects and abstractions like the
 .one-whole - One whole
 
 Markup:
-<div class="{$modifiers} kss___exampleGridItem">.{$modifiers}</div>
+<div class="{$modifiers}" style="padding: 10px; background: #eee;">.{$modifiers}</div>
 
-Styleguide 3.3
+Styleguide 2.6
 */
 @include grid-setup();

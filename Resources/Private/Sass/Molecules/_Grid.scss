@@ -10,13 +10,13 @@ Markup:
 	<div class="gi one-third">third collumn</div>
 </div>
 
-Styleguide 5.1
+Styleguide 4.1
 */
 $grid-direction:  $start;
 
 .g,
 .grid {
-	@extend .cf;
+	@extend .u-cf;
 	margin-left: -($column-gutter / 2);
 	margin-right: -($column-gutter / 2);
 }

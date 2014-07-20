@@ -3,7 +3,7 @@ Form input elements
 
 Basic styling for forms and inputs
 
-Styleguide 4.7
+Styleguide 3.7
 */
 
 
@@ -18,7 +18,7 @@ Markup:
 <input type="text" class="{$modifiers}" /><br>
 <textarea class="{$modifiers}" cols="40"></textarea>
 
-Styleguide 4.7.1
+Styleguide 3.7.1
 */
 %textInput,
 .textInput {
@@ -58,7 +58,7 @@ Markup:
 <label><input type="checkbox" /> I am an checkbox</label>
 <label><input type="radio" /> I am an radio button</label>
 
-Styleguide 4.7.2
+Styleguide 3.7.2
 */
 input[type="checkbox"],
 input[type="radio"] {

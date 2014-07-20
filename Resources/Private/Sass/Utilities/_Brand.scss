@@ -3,7 +3,7 @@ Brand styles
 
 Helper classes for brand related stylings.
 
-Styleguide 3.1
+Styleguide 2.5
 */
 
 
@@ -12,26 +12,26 @@ Styleguide 3.1
 Brand text styles
 
 Markup:
-<span class="brand">I am an paragraph.</span>
+<span class="u-brand">I am an paragraph.</span>
 
-Styleguide 3.1.1
+Styleguide 2.5.1
 */
-.brand {
+.u-brand {
 	font-family: $brand-font-family;
 	color: map-get($brand-colors, primary);
 }
 
 /*
 Brand color helpers
-#{generateModifierComments($brand-colors, "brandColor-", " brand color.")}
+#{generateModifierComments($brand-colors, "u-brandColor-", " brand color.")}
 
 Markup:
 <span class="{$modifiers}">Brand color helpers.</span>
 
-Styleguide 3.1.2
+Styleguide 2.5.2
 */
 @each $key, $value in $brand-colors {
-	.brandColor-#{$key} {
+	.u-brandColor-#{$key} {
 		color: $value;
 	}
 }
@@ -40,20 +40,20 @@ Styleguide 3.1.2
 Brand font-family helper
 
 Markup:
-<span class="brandFace">This text will be set in the brands font-family.</span>
+<span class="u-brandFace">This text will be set in the brands font-family.</span>
 
-Styleguide 3.1.3
+Styleguide 2.5.3
 */
-.brandFace { font-family: $brand-font-family; }
+.u-brandFace { font-family: $brand-font-family; }
 
 /*
 Brand logos
 
 Markup:
-<img class="brandLogo" />
+<img class="u-brandLogo" />
 
-Styleguide 3.1.4
+Styleguide 2.5.4
 */
-.brandLogo {
+.u-brandLogo {
 	@include image-replacement($fileName: map-get($brand-logo, image), $displayMode: inline-block, $width: map-get($brand-logo, width), $height: map-get($brand-logo, height));
 }

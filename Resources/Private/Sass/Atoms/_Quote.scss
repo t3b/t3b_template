@@ -5,7 +5,7 @@ Markup:
 The following text <q>is an inline-quote</q>
 <blockquote>This text is a full quotation element</blockquote>
 
-Styleguide 4.11
+Styleguide 3.11
 */
 q {
 	/**
@@ -25,6 +25,6 @@ q {
 	}
 }
 blockquote {
-	@extend %margin-top;
-	@extend %margin-bottom;
+	@extend %u-m0;
+	@extend %u-mb;
 }

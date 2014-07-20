@@ -17,15 +17,9 @@ Resets and other generic stuff.
 */
 @import "Generic/_Head",
         "Generic/_Normalize",
-        "Generic/_Base";
-
-
-/*
-Helpers
-
-Styleguide 2
-*/
-@import "Generic/Helpers/_Helper";
+        "Generic/_Base",
+        "Generic/Helpers/_Helper",
+        "Generic/_T3General";
 
 
 /*
@@ -33,12 +27,14 @@ Utilities
 
 Utilitie classes which can be used independently from each other to create simple stylings.
 
-Styleguide 3
+Styleguide 2
 */
-@import "Generic/Utilities/_Brand",
-        "Generic/Utilities/_Typography",
-        "Generic/Utilities/_Widths",
-        "Generic/Utilities/_T3General";
+@import "Utilities/_Brand",
+        "Utilities/_Display",
+        "Utilities/_Layout",
+        "Utilities/_Spacings",
+        "Utilities/_Typography",
+        "Utilities/_Widths";
 
 
 /*
@@ -46,7 +42,7 @@ Atoms
 
 Atoms are basic tags, such as form labels, inputs or buttons.
 
-Styleguide 4
+Styleguide 3
 */
 @import "Atoms/_Heading",
         "Atoms/_Typography",
@@ -66,7 +62,7 @@ Molecules
 
 Mlecules are groups of elements that function together as a unit. For example, a form label, search input, and button atom can combine them together to form a search form molecule.
 
-Styleguide 5
+Styleguide 4
 */
 @import "Molecules/_Form",
         "Molecules/_Navigation",
@@ -76,8 +72,6 @@ Styleguide 5
 Organisms
 
 Organisms are groups of molecules (and possibly atoms) joined together to form distinct section of an interface.
-
-Styleguide 6
 */
 @import "Organisms/SiteHeader",
         "Organisms/SiteFooter";

@@ -3,7 +3,7 @@ Form elements
 
 Basic styling for forms and inputs
 
-Styleguide 4.6
+Styleguide 3.6
 */
 
 
@@ -13,7 +13,7 @@ Labels
 Markup:
 <label>I am an label</label>
 
-Styleguide 4.6.1
+Styleguide 3.6.1
 */
 label {
 	display: block;
@@ -32,12 +32,12 @@ Markup:
 	<legend>I am an fieldset legend.</legend>
 </fieldset>
 
-Styleguide 4.6.2
+Styleguide 3.6.2
 */
 legend {
 	display: block;
 	width: 100%;
-	@extend %margin-bottom;
+	@extend %u-mb;
 
 	@include font-size($base-font-size + 4);
 	color: map-get($headings, color);

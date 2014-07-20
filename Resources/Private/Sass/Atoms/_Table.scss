@@ -35,7 +35,7 @@ Markup:
 	</tbody>
 </table>
 
-Styleguide 4.9
+Styleguide 3.9
 */
 table {
 	max-width: 100%;
@@ -51,7 +51,7 @@ td { vertical-align: top; }
 .table {
 	width: 100%;
 	margin-top: 0;
-	@extend %margin-bottom;
+	@extend %u-mb;
 	td, th { padding: 0.5em; }
 }
 
