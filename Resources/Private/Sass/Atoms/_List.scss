@@ -1,7 +1,7 @@
 /*
 List elements
 
-Basic styling for lists and definition elements
+Basic styling for lists and definition elements.
 
 Styleguide 3.5
 */
@@ -40,7 +40,7 @@ ul {
 li > ul,
 li > ol {
 	/**
-	 * Remove vertical spacing from nested lists
+	 * Remove vertical spacing from nested lists.
 	 */
 	margin-bottom: 0;
 }
