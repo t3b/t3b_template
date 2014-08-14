@@ -58,7 +58,7 @@ $brand-border-radius:   1px;
 //
 // Be aware that you need to specify the dimensions of your logo, otherwise it won't be displayed.
 $brand-logo: (
-  image: false,
+  image: 'brandLogo.png',
   width: 200px,
   height: 200px
 );
@@ -151,7 +151,7 @@ $textInput: (
 	borderRadius:         $brand-border-radius,
 	boxShadow:            inset 0 1px 1px rgba(#000, 0.075),
 	fontSize:             14,
-	textColor:                lighten($base-text-color, 5%)
+	textColor:            lighten($base-text-color, 5%)
 );
 
 

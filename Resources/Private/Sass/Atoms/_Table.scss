@@ -1,14 +1,11 @@
 /*
-Table elements
+Tables
 
-Basic styling and extended classes for tables.
-
-Styleguide 2.9
+Styleguide 3.9
 */
 
-
 /*
-Table classes
+Table Object
 
 .table - Base class for all table-styles.
 .table.table--bordered - Extends the base '.table' class to an basic bordered table.
@@ -44,7 +41,7 @@ Markup:
 	</tbody>
 </table>
 
-Styleguide 2.9.1
+Styleguide 3.9.1
 */
 table {
 	max-width: 100%;
@@ -60,7 +57,7 @@ td { vertical-align: top; }
 .table {
 	width: 100%;
 	margin-top: 0;
-	@extend %margin-bottom;
+	@extend %u-mb;
 	td, th { padding: 0.5em; }
 }
 

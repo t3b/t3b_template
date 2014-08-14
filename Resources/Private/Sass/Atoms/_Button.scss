@@ -1,7 +1,12 @@
 /*
+Buttons
+
+Styleguide 3.8
+*/
+/*
 Button Object
 
-Display an anchor tag as a button
+Display an anchor tag as a button.
 
 .btn           - Display an element as an button.
 .btn.btn--full - Set the button width to the width of it's parent element.
@@ -14,14 +19,14 @@ Markup:
 <input type="submit" class="{$modifiers}" value="Submit" />
 <a class="{$modifiers}">An anchor element.</a>
 
-Styleguide 4.1.1
+Styleguide 3.8.1
 */
 %btn,
 .btn {
 	display: inline-block;
 	@include rem(margin-bottom, map-get($button, bottomSpacing));
 	/**
-	 * Set in em's so we can change the size of the button depending on the font-size
+	 * Set in em's so we can change the size of the button depending on the font-size.
 	 */
 	padding: map-get($button, innerPadding);
 	border: 0;
@@ -49,8 +54,7 @@ Styleguide 4.1.1
 	display: block;
 	text-align: center;
 	/**
-	 * The following is so that this class works properly on inputs as well
-	 * as anchor tags.
+	 * The following is so that this class works properly on inputs as well as anchor tags.
 	 */
 	padding-right: 0;
 	padding-left: 0;

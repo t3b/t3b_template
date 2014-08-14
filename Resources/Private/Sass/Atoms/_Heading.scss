@@ -1,9 +1,9 @@
 /*
 Heading elements
 
-Basic styling for headings and sub-headings
+Basic styling for headings and sub-headings.
 
-Styleguide 2.2
+Styleguide 3.1
 */
 
 
@@ -18,7 +18,7 @@ Markup:
 <h5>I am an fifth-level heading</h5>
 <h6>I am an sixth-level heading</h6>
 
-Styleguide 2.2.1
+Styleguide 3.1.1
 */
 h1, h2, h3,
 h4, h5, h6 {
@@ -27,7 +27,7 @@ h4, h5, h6 {
 	color: map-get($headings, color);
 	/**
 	 * Optimized kerning for large font sizes
-	 * use this only on large font-sizes (f.e. headings) to avoid performance issues
+	 * use this only on large font-sizes (f.e. headings) to avoid performance issues.
 	 */
 	text-rendering: optimizeLegibility;
 }
@@ -50,7 +50,7 @@ Markup:
 <h5 class="{$modifiers}">I am an fifth-level heading</h5>
 <h6 class="{$modifiers}">I am an sixth-level heading</h6>
 
-Styleguide 2.2.2
+Styleguide 3.1.2
 */
 h1, .h1 {
 	font-size: 36px;

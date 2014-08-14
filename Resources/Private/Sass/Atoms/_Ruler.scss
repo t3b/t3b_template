@@ -1,17 +1,16 @@
-//
-// Rulers
-//
-// Styleguide 2.6
-//
+/*
+Rulers
 
+Styleguide 3.10
+*/
 
 /*
-Horizontal ruler element
+Default horizontal ruler
 
 Markup:
 <hr>
 
-Styleguide 2.6.1
+Styleguide 3.10.1
 */
 %horizontal-ruler,
 hr {
@@ -26,6 +25,6 @@ hr {
 	border: 0;
 	border-top: 1px $basic-border-style $basic-border-color;
 	padding: 0;
-	@extend %margin-top;
-	@extend %margin-bottom;
+	@extend %u-m0;
+	@extend %u-mb;
 }

@@ -1,5 +1,5 @@
 /*
-[Generic] TYPO3
+TYPO3
 
 Styling for typo3 related classes
 */
@@ -8,14 +8,26 @@ Styling for typo3 related classes
 CSC-Frames
 */
 .csc-frame-rulerBefore:before {
-	content: '';
-	@extend %horizontal-ruler;
+  content: '';
+  @extend %horizontal-ruler;
 }
 .csc-frame-rulerAfter:after {
-	content: '';
-	@extend %horizontal-ruler;
+  content: '';
+  @extend %horizontal-ruler;
 }
 
 .csc-frame-indent { padding: 0 10%; }
 .csc-frame-indent3366 { padding-left: 33.333%; }
 .csc-frame-indent6633 { padding-right: 33.333%; }
+
+
+// Extend some typographic utilities for the default TYPO3 RTE.
+.align-center {
+  @extend .u-alignCenter;
+}
+.align-right  {
+  @extend .u-alignRight;
+}
+.align-left   {
+  @extend .u-alignLeft;
+}

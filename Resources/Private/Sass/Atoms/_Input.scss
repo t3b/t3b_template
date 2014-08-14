@@ -1,9 +1,9 @@
 /*
-Form elements
+Form input elements
 
-Basic styling for forms and inputs
+Basic styling for form inputs.
 
-Styleguide 2.1
+Styleguide 3.7
 */
 
 
@@ -18,7 +18,7 @@ Markup:
 <input type="text" class="{$modifiers}" /><br>
 <textarea class="{$modifiers}" cols="40"></textarea>
 
-Styleguide 2.1.1
+Styleguide 3.7.1
 */
 %textInput,
 .textInput {
@@ -58,100 +58,10 @@ Markup:
 <label><input type="checkbox" /> I am an checkbox</label>
 <label><input type="radio" /> I am an radio button</label>
 
-Styleguide 2.1.2
+Styleguide 3.7.2
 */
 input[type="checkbox"],
 input[type="radio"] {
 	margin-right: .35em;
 	cursor: pointer;
-}
-
-/*
-Buttons
-
-For additional styling, please refer to the Button Object (4.1.1).
-
-Markup:
-<button>Send button</button>
-<input type="button" value="Button" />
-<input type="reset" value="Reset" />
-<input type="submit" value="Submit" />
-
-Styleguide 2.1.3
-*/
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] { }
-
-/*
-Form wrapper elements
-*/
-fieldset {
-	/**
-	 * Reset border, margin, and padding to define a consistend style accross all browsers
-	 */
-	border: 0;
-	margin: 0;
-	padding: 0;
-}
-form {
-	@if $legacy-normalizecss {
-		/**
-		 * Corrects margin displayed oddly in IE6/7.
-		 */
-		margin-top: 0;
-		margin-left: 0;
-		margin-right: 0;
-	}
-	@extend %margin-bottom;
-}
-
-/*
-Labels
-
-Markup:
-<label>I am an label</label>
-
-Styleguide 2.1.4
-*/
-label {
-	display: block;
-	font-weight: $bold;
-	@include font-size(14, $appendVrythm: true);
-	&[for] {
-		cursor: pointer;
-	}
-}
-
-/*
-Legends
-
-Markup:
-<fieldset>
-	<legend>I am an fieldset legend.</legend>
-</fieldset>
-
-Styleguide 2.1.5
-*/
-legend {
-	display: block;
-	width: 100%;
-	@extend %margin-bottom;
-
-	@include font-size($base-font-size + 4);
-	color: map-get($headings, color);
-	border-bottom: 1px $basic-border-style $basic-border-color;
-
-	padding: 0;
-	@if $legacy-normalizecss {
-		/**
-		 * Corrects text not wrapping in FF3.
-		 */
-		white-space: normal;
-		/**
-		 * Corrects alignment displayed oddly in IE6/7.
-		 */
-		*margin-left: -7px;
-	}
 }

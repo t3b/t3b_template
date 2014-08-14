@@ -1,17 +1,17 @@
-//
-// Quotes
-//
-// Styleguide 2.5
-//
+/*
+Quotes
+
+Styleguide 3.11
+*/
 
 /*
-Quote elements
+Default Quote
 
 Markup:
 The following text <q>is an inline-quote</q>
 <blockquote>This text is a full quotation element</blockquote>
 
-Styleguide 2.5.1
+Styleguide 3.11.1
 */
 q {
 	/**
@@ -31,6 +31,6 @@ q {
 	}
 }
 blockquote {
-	@extend %margin-top;
-	@extend %margin-bottom;
+	@extend %u-m0;
+	@extend %u-mb;
 }

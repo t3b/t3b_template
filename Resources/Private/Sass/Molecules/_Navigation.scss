@@ -1,7 +1,13 @@
 /*
-Navigation
+Navigations
 
-A modified version of the navigation object from inuit.css
+Styleguide 4.2
+*/
+
+/*
+Nav Object
+
+A modified version of the navigation object from inuit.css.
 
 .nav - Throws a list into horizontal mode.
 .nav.nav--stacked - Throws a list into vertical mode.
@@ -15,7 +21,7 @@ Markup:
 	<li><a href="">Contact</a></li>
 </ul>
 
-Styleguide 4.1.5
+Styleguide 4.2.1
 */
 .nav {
 	@extend %reset-list;
