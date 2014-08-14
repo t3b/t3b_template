@@ -1,6 +1,12 @@
 /*
 Tables
 
+Styleguide 3.9
+*/
+
+/*
+Table Object
+
 .table - Base class for all table-styles.
 .table.table--bordered - Extends the base '.table' class to an basic bordered table.
 .table.table--striped - Extends the base '.table' class to an clean table with borders below each row.
@@ -35,7 +41,7 @@ Markup:
 	</tbody>
 </table>
 
-Styleguide 3.9
+Styleguide 3.9.1
 */
 table {
 	max-width: 100%;

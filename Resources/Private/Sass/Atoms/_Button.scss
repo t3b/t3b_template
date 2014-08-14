@@ -1,6 +1,11 @@
 /*
 Buttons
 
+Styleguide 3.8
+*/
+/*
+Button Object
+
 Display an anchor tag as a button.
 
 .btn           - Display an element as an button.
@@ -14,7 +19,7 @@ Markup:
 <input type="submit" class="{$modifiers}" value="Submit" />
 <a class="{$modifiers}">An anchor element.</a>
 
-Styleguide 3.8
+Styleguide 3.8.1
 */
 %btn,
 .btn {

@@ -1,5 +1,11 @@
 /*
-Navigation
+Navigations
+
+Styleguide 4.2
+*/
+
+/*
+Nav Object
 
 A modified version of the navigation object from inuit.css.
 
@@ -15,7 +21,7 @@ Markup:
 	<li><a href="">Contact</a></li>
 </ul>
 
-Styleguide 4.2
+Styleguide 4.2.1
 */
 .nav {
 	@extend %reset-list;
