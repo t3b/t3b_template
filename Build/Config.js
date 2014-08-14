@@ -87,6 +87,7 @@ var ConfigCreator = function() {
 			src : [
 				'**/*.{js,css,scss}',
 				'!node_modules/**/*',
+				'!Documentation/**/*',
 				'!Gruntfile.js',
 				'!Build/**/*',
 				'!' + this.JavaScripts.paths.devDir + '/Vendor/**/*',
