@@ -32,36 +32,6 @@ Styleguide 1.2.1
 
 
 /*
-Image-Replacement Mixin($imagePath)
-
-A image-replacement mixin which generates the image-dimensions as CSS rules and
-@extends the .ir rule inside the _helper.scss file.
-Default $displayMode is set to 'block'.
-
-<!= type: css || isPureCode !>
-
-Markup:
-.selector {
-	@include image-replacement('image.png');
-}
-
-Styleguide 1.2.2
-*/
-@mixin image-replacement($fileName, $displayMode: block, $width: auto, $height: auto) {
-	@if $fileName { // Output the image dimensions if an image is passed as an argument
-		@if(not ($displayMode == "block") and not ($displayMode == "inline-block")) {
-			@warn 'Argument $displayMode of image-replacement() should be either "block" or "inline-block" to work appropriately';
-		}
-		display: $displayMode;
-		width: $width;
-		height: $height;
-		background-image: image-url('#{$fileName}');
-		@extend .ir;
-	}
-}
-
-
-/*
 REM Unit Mixin($property, $value)
 
 Creates a property independent 'rem' calculation with a pixel fallback, default property is set to 'font-size'.
@@ -73,7 +43,7 @@ Markup:
 	@include rem($property: font-size, $value: 18);
 }
 
-Styleguide 1.2.3
+Styleguide 1.2.2
 */
 @mixin rem($property: font-size, $value: 16) {
 	#{$property}: $value +px;
@@ -93,7 +63,7 @@ Markup:
 	@include rem($size: 16, $appendVrythm: true);
 }
 
-Styleguide 1.2.4
+Styleguide 1.2.3
 */
 @mixin font-size($font-size, $appendVrythm: false) {
 	@include rem(font-size, $font-size);
@@ -119,7 +89,7 @@ Markup:
 	@include css-triangle(5px, #fff, bottom);
 }
 
-Styleguide 1.2.5
+Styleguide 1.2.4
 */
 @mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
 	@if(not ($triangleDirection == "top") and not ($triangleDirection == "bottom") and not ($triangleDirection == "left") and not ($triangleDirection == "right")) {

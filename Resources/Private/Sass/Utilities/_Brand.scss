@@ -50,10 +50,15 @@ Styleguide 2.5.3
 Brand logos
 
 Markup:
-<img class="u-brandLogo" />
+<img src="blank.gif" alt="CSS Wizardry" class="s  s--csswizardry-logo">
+
+<img class="u-brandLogo" alt="Brand name" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  />
 
 Styleguide 2.5.4
 */
 .u-brandLogo {
-	@include image-replacement($fileName: map-get($brand-logo, image), $displayMode: inline-block, $width: map-get($brand-logo, width), $height: map-get($brand-logo, height));
+  display: inline-block;
+  width: map-get($brand-logo, width);
+  height: map-get($brand-logo, height);
+  background: image-url(map-get($brand-logo, image));
 }
