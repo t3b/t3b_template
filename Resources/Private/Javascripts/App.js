@@ -1,6 +1,6 @@
 /*
  * Main.js
- * @description Require and execute the main application modules.
+ * @description Require the main application modules.
  */
 
 var Module = require('./Modules/Module');

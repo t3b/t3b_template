@@ -5,27 +5,38 @@
  */
 
 var config = require('../Config'),
-	modules = {};
+	externals = require('../../Resources/Private/Javascripts/Vendor'),
+	vendorFile = {},
+	files = {};
 
 // Set the key for the main js application which should be compiled with browserify.
-modules[config.JavaScripts.paths.distDir + '/App.min.js'] = [config.JavaScripts.paths.devDir + '/App.js'];
+files[config.JavaScripts.paths.distDir + '/App.min.js'] = [config.JavaScripts.paths.devDir + '/App.js'];
+vendorFile[config.JavaScripts.paths.distDir + '/Vendor.min.js'] = [config.JavaScripts.paths.devDir + '/Vendor.js'];
 
 
 module.exports = {
 	options: {
+		external: externals,
 		bundleOptions: {
-			// Create a sourcemap.
-			debug: true
+			debug: true // Create a sourcemap.
 		}
 	},
 	dev: {
-		files: modules
+		files: files
 	},
 	deploy: {
-		files: modules,
 		options: {
-			// Strip console.logs and uglify the build on deploy.
-			transform: ['stripify', 'uglifyify']
-		}
+			transform: ['stripify', 'uglifyify'] // Strip console.logs and uglify the build on deploy.
+		},
+		files: files
+	},
+	vendor: {
+		options: {
+			debug: false,
+			external: null,
+			require: externals,
+			transform: ['uglifyify']
+		},
+		files: vendorFile
 	}
 };
