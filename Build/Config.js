@@ -3,7 +3,7 @@
  * @description Configure grunt tasks & options.
  */
 
-var ConfigCreator = function() {
+var Config = function() {
 	'use strict';
 
 	// Contents of the package.json.
@@ -52,7 +52,6 @@ var ConfigCreator = function() {
 			'Gruntfile.js',
 			'Build/**/*.js',
 			this.JavaScripts.paths.devDir + '/**/*.js',
-			'!Build/Templates/Kss-Node/**/*',
 			'!' + this.JavaScripts.paths.devDir + '/Vendor/**/*',
 			'!' + this.JavaScripts.paths.distDir + '/Vendor/**/*'
 		]
@@ -108,4 +107,4 @@ var ConfigCreator = function() {
 	};
 };
 
-module.exports = new ConfigCreator();
+module.exports = new Config();
