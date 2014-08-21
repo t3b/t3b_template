@@ -6,100 +6,78 @@
 var Config = function() {
 	'use strict';
 
-	// Contents of the package.json.
-	this.package = require('../package');
+	/*
+	 * Project settings.
+	 */
+	this.project = {
+		browserSupport: ['last 2 version', 'ie 8', 'ie 9'],
+		fileBanner: function(description) { // Banner comment for compressed files.
+			var banner;
 
+			// Add a delimiter between the description(if one was passed) and the build date.
+			description = (description) ? description + ' - ' : '';
 
-	// Banner comment for compressed files.
-	this.bannerComment = function(description) {
-		var banner;
+			banner = '/*!\n' +
+			         '* ' + description + 'Built on: <%= grunt.template.today("yyyy-mm-dd") %> \n' +
+			         '* \n' +
+			         '* @package ' + this.package.name + '\n' +
+			         '* @author ' + this.package.author.name + ' <' +  this.package.author.email + '>' + '\n' +
+			         '*/\n';
 
-		// Add a delimiter between the description - if one was passed - and the build date.
-		description = (description) ? description + ' - ' : '';
-
-		banner = '/*!\n' +
-		         '* ' + description + 'Built on: <%= grunt.template.today("yyyy-mm-dd") %> \n' +
-		         '* \n' +
-		         '* @package ' + this.package.name + '\n' +
-		         '* @author ' + this.package.author.name + ' <' +  this.package.author.email + '>' + '\n' +
-		         '*/\n';
-
-		return banner;
+			return banner;
+		}.bind(this)
 	};
 
 
-	// General Paths/Structure of the extension.
+	/*
+	 * Meta data
+	 */
+	this.package = require('../package'); // Contents of the package.json.
+
+
+	/*
+	 * Paths
+	 */
 	this.paths = {
-		private : 'Resources/Private',
-		public : 'Resources/Public',
+		private: 'Resources/Private',
+		public: 'Resources/Public',
+		docs: 'Documentation'
 	};
+
+
+	/*
+	 * Stylesheets
+	 */
 	this.Sass = {
-		sassDir : this.paths.private + '/Sass',
-		cssDir : this.paths.public + '/Stylesheets',
-		browserSupport : ['last 2 version', 'ie 8', 'ie 9'] // Browsers which to support, and to prefix the CSS rules for.
-	};
-	this.JavaScripts = {};
-	this.JavaScripts.paths = {
-		devDir : this.paths.private + '/Javascripts',
-		distDir : this.paths.public + '/Javascripts'
-	};
-
-
-	// JSHint settings.
-	this.JavaScripts.jsHint = {
-		config : 'Build/JSHintConfig.json',
-		files : [
-			'Gruntfile.js',
-			'Build/**/*.js',
-			this.JavaScripts.paths.devDir + '/**/*.js',
-			'!' + this.JavaScripts.paths.devDir + '/Vendor/**/*',
-			'!' + this.JavaScripts.paths.distDir + '/Vendor/**/*'
-		]
-	};
-
-	// JsDoc settings.
-	this.JavaScripts.jsDoc = {
-		files : [
-			this.JavaScripts.paths.devDir + '/**/*.js',
-			'!' + this.JavaScripts.paths.devDir + '/Vendor/**/*'
-		]
-	};
-
-
-	// Modernizr settings.
-	this.JavaScripts.modernizr = {
-		devSourceFile : this.JavaScripts.paths.devDir + '/Vendor/modernizr/modernizr.js',
-		buildDistFile : this.JavaScripts.paths.distDir + '/Vendor/Modernizr-Custom.js',
-		files : {
-			src : [
-				'**/*.{js,css,scss}',
-				'!node_modules/**/*',
-				'!Documentation/**/*',
-				'!Gruntfile.js',
-				'!Build/**/*',
-				'!' + this.JavaScripts.paths.devDir + '/Vendor/**/*',
-				'!' + this.JavaScripts.paths.distDir + '/Vendor/**/*'
-			]
+		paths: {
+			devDir: this.paths.private + '/Sass',
+			distDir: this.paths.public + '/Stylesheets'
 		}
 	};
 
 
-	// Image compression settings.
+	/*
+	 * Javascript
+	 */
+	this.JavaScripts = {
+		paths: {
+			devDir: this.paths.private + '/Javascripts',
+			distDir: this.paths.public + '/Javascripts'
+		}
+	};
+
+
+	/*
+	 * Images
+	 */
 	this.Images = {
-		tempDir : this.paths.public + '/tempImagesDir',
-		distDir : this.paths.public + '/Images',
-		optimizationLevel : 5
+		optimizationLevel : 5,
+		paths: {
+			tempDir: this.paths.public + '/tempImagesDir',
+			distDir: this.paths.public + '/Images'
+		}
 	};
 
-
-	// Karma settings.
-	this.karma = {
-		config : 'Build/KarmaConfig.js',
-		port: 8000,
-		browsers: ['Chrome', 'Firefox', 'Safari', 'PhantomJS'],
-		coverageDir: 'Documentation/Javascripts/Coverages/',
-		testsDir : this.JavaScripts.paths.devDir + '/Tests/'
-	};
 
 	// Copy the source files of node modules into a specified location.
 	this.nodeModuleDists = {

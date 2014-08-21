@@ -7,10 +7,13 @@
 var config = require('../Config');
 
 module.exports = {
+	options: {
+		destination: 'Documentation/Javascripts/Documentation'
+	},
 	dist : {
-		src: config.JavaScripts.jsDoc.files,
-		options: {
-			destination: 'Documentation/Javascripts/Documentation'
-		}
+		src: [
+			config.JavaScripts.paths.devDir + '/**/*.js',
+			'!' + config.JavaScripts.paths.devDir + '/Vendor/**/*'
+		]
 	}
 };

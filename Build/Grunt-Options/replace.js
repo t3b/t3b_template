@@ -4,7 +4,8 @@
  * @docs https://npmjs.org/package/grunt-replace
  */
 
-var config = require('../Config');
+var config = require('../Config'),
+	modernizrTaskConfig = require('./modernizr');
 
 module.exports = function(grunt) {
 	'use strict';
@@ -21,8 +22,8 @@ module.exports = function(grunt) {
 				config.paths.private + '/Layouts/**/*.html',
 				config.paths.private + '/Partials/**/*.html',
 				config.paths.private + '/Templates/**/*.html',
-				config.Sass.sassDir + '/**/*.scss',
-				config.Sass.sassDir + '/styleguide.md'
+				config.Sass.paths.devDir + '/**/*.scss',
+				config.Sass.paths.devDir + '/styleguide.md'
 			],
 			overwrite: true,
 			replacements: [{
@@ -55,16 +56,16 @@ module.exports = function(grunt) {
 			src: [config.paths.private + '/Layouts/*.html'],
 			overwrite: true,
 			replacements: [{
-				from: config.JavaScripts.modernizr.devSourceFile,
-				to: config.JavaScripts.modernizr.buildDistFile
+				from: modernizrTaskConfig.main.devFile,
+				to:  modernizrTaskConfig.main.outputFile
 			}]
 		},
 		dev: {
 			src: [config.paths.private + '/Layouts/*.html'],
 			overwrite: true,
 			replacements: [{
-				from: config.JavaScripts.modernizr.buildDistFile,
-				to: config.JavaScripts.modernizr.devSourceFile
+				from:  modernizrTaskConfig.main.outputFile,
+				to:  modernizrTaskConfig.main.devFile
 			}]
 		}
 	};

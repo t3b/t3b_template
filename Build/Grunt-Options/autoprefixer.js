@@ -4,13 +4,14 @@
  * @docs https://github.com/nDmitry/grunt-autoprefixer
  */
 
-var config = require('../Config');
+var config = require('../Config'),
+	sassTaskConfig = require('./sass');
 
 module.exports = {
 	options: {
-		browsers: config.Sass.browserSupport
+		browsers: config.project.browserSupport
 	},
 	css: {
-		src: config.Sass.cssDir + '/*.css'
+		src: config.Sass.paths.distDir + '/*.css'
 	}
 };

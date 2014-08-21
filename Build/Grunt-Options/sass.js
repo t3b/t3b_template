@@ -8,7 +8,7 @@ var config = require('../Config');
 
 module.exports = {
 	options: {
-		banner: config.bannerComment('Stylesheets for ' + config.package.homepage)
+		banner: config.project.fileBanner('Stylesheets for ' + config.package.homepage)
 	},
 	dev: {
 		options: {
@@ -16,9 +16,9 @@ module.exports = {
 		},
 		files: [{
 			expand: true,
-			cwd: config.Sass.sassDir,
+			cwd: config.Sass.paths.devDir,
 			src: ['*.scss'],
-			dest: config.Sass.cssDir,
+			dest: config.Sass.paths.distDir,
 			ext: '.css'
 		}]
 	},
@@ -29,9 +29,9 @@ module.exports = {
 		},
 		files: [{
 			expand: true,
-			cwd: config.Sass.sassDir,
+			cwd: config.Sass.paths.devDir,
 			src: ['*.scss'],
-			dest: config.Sass.cssDir,
+			dest: config.Sass.paths.distDir,
 			ext: '.css'
 		}]
 	},

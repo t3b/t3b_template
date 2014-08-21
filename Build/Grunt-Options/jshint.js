@@ -8,8 +8,14 @@ var config = require('../Config');
 
 module.exports = {
 	options: {
-		jshintrc: config.JavaScripts.jsHint.config,
+		jshintrc: 'Build/JSHintConfig.json',
 		reporter: require('jshint-stylish') // Use a more readable JSHint output theme
 	},
-	files: config.JavaScripts.jsHint.files
+	files: [
+		'Gruntfile.js',
+		'Build/**/*.js',
+		config.JavaScripts.paths.devDir + '/**/*.js',
+		'!' + config.JavaScripts.paths.devDir + '/Vendor/**/*',
+		'!' + config.JavaScripts.paths.distDir + '/Vendor/**/*'
+	]
 };

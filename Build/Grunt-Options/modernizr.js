@@ -9,16 +9,18 @@ var config = require('../Config'),
 
 module.exports = {
 	main: {
-		devFile: config.JavaScripts.modernizr.devSourceFile,
-		outputFile: config.JavaScripts.modernizr.buildDistFile,
+		devFile: config.JavaScripts.paths.devDir + '/Vendor/modernizr/modernizr.js',
+		outputFile: config.JavaScripts.paths.distDir + '/Vendor/Modernizr-Custom.js',
+		files: [
+			config.Sass.paths.devDir + '/**/*.scss',
+			config.JavaScripts.paths.devDir + '/**/*.js',
+			'!' + config.JavaScripts.paths.devDir + '/Vendor/**/*',
+		],
 
-		// Based on default settings on http://modernizr.com/download/
 		extra: modernizrConfig.extra,
-		// Based on default settings on http://modernizr.com/download/
 		extensibility: modernizrConfig.extensibility,
 		tests: modernizrConfig.tests,
 		customTests: modernizrConfig.customTests,
-		matchCommunityTests: modernizrConfig.matchCommunityTests,
-		files: config.JavaScripts.modernizr.files
+		matchCommunityTests: modernizrConfig.matchCommunityTests
 	}
 };

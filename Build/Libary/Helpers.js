@@ -6,6 +6,7 @@
 var fs = require('fs'),
 	path = require('path'),
 	config = require('../Config'),
+
 	helpers = {
 		copyFile : function(source, dist) {
 			'use strict';

@@ -55,10 +55,10 @@ module.exports = function (karmaConfig) {
 		coverageReporter: {
 			reporters: [{
 				type: 'text-summary',
-				dir: config.karma.coverageDir
+				dir: 'Documentation/Javascripts/Coverages/'
 			}, {
 				type: 'html',
-				dir: config.karma.coverageDir
+				dir: 'Documentation/Javascripts/Coverages/'
 			}]
 		},
 	});

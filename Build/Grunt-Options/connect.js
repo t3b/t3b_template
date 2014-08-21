@@ -4,10 +4,11 @@
  * @docs https://github.com/gruntjs/grunt-contrib-connect
  */
 
-var config = require('../Config');
+var config = require('../Config'),
+	karmaConfig = require('./karma');
 
 module.exports = {
 	karma: {
-		port: config.karma.port
+		port: karmaConfig.options.runnerPort
 	}
 };

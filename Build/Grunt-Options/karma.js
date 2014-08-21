@@ -8,14 +8,14 @@ var config = require('../Config');
 
 module.exports = {
 	options: {
-		configFile: config.karma.config,
-		runnerPort: config.karma.port
+		configFile: 'Build/KarmaConfig.js',
+		runnerPort: 8000
 	},
 
 	// Testing in all browsers
 	test: {
 		options: {
-			browsers: config.karma.browsers
+			browsers: ['Chrome', 'Firefox', 'Safari', 'PhantomJS']
 		}
 	},
 

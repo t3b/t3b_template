@@ -13,9 +13,9 @@ module.exports = {
 		},
 		files: [{
 			expand: true,
-			cwd: config.Images.tempDir,
+			cwd: config.Images.paths.tempDir,
 			src: ['**/*.{png,jpg,gif}'],
-			dest: config.Images.distDir
+			dest: config.Images.paths.distDir
 		}]
 	}
 };
