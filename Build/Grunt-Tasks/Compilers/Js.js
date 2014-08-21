@@ -8,14 +8,11 @@ var config = require('../../Config');
 module.exports = function(grunt) {
 	'use strict';
 
-	grunt.registerTask('compile:js', function() {
-		// Optimize all js files if the 'useSingleFileBuild' option is 'false'.
-		if(!config.JavaScripts.requireJS.useSingleFileBuild || grunt.option('env') === 'travis') {
-			grunt.task.run('uglify:js');
-		}
+	grunt.registerTask('compile:js', function(mode) {
+		mode = (!mode) ? 'dev' : mode;
 
-		// Optimize the project via the r.js optimizer.
-		grunt.task.run('requirejs');
+		// Compile the projects javsscript via browserify.
+		grunt.task.run('browserify:' + mode);
 	});
 };
 

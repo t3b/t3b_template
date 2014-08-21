@@ -4,26 +4,7 @@
  * @docs https://npmjs.org/package/grunt-replace
  */
 
-var config = require('../Config'),
-	requireTagParts = {
-		tagStart: '<script type="text/javascript" src="typo3conf/ext/' + config.package.name + '/',
-		unDeployAttribute: '" data-main="typo3conf/ext/' + config.package.name + '/' + config.JavaScripts.paths.devDir + '/' + config.JavaScripts.requireJS.config,
-		deployAttributes: {
-			singleFile:  '" data-mainJs="',
-			asyncModules:  '" data-main="typo3conf/ext/' + config.package.name + '/' + config.JavaScripts.paths.distDir + '/' + config.JavaScripts.requireJS.config,
-		},
-		tagEnd: '"></script>'
-	},
-	deployStrings = {
-		deploy: {
-			rJs: (config.JavaScripts.requireJS.useSingleFileBuild) ?
-					requireTagParts.tagStart + config.JavaScripts.requireJS.compileDistFile + requireTagParts.deployAttributes.singleFile + requireTagParts.tagEnd :
-					requireTagParts.tagStart + config.JavaScripts.paths.distDir + '/' + config.JavaScripts.requireJS.requireJsSourceFile + '.js' + requireTagParts.deployAttributes.asyncModules + requireTagParts.tagEnd
-		},
-		unDeploy : {
-			rJs: requireTagParts.tagStart + config.JavaScripts.paths.devDir + '/' + config.JavaScripts.requireJS.requireJsSourceFile + '.js' + requireTagParts.unDeployAttribute + requireTagParts.tagEnd
-		}
-	};
+var config = require('../Config');
 
 module.exports = function(grunt) {
 	'use strict';
@@ -76,9 +57,6 @@ module.exports = function(grunt) {
 			replacements: [{
 				from: config.JavaScripts.modernizr.devSourceFile,
 				to: config.JavaScripts.modernizr.buildDistFile
-			}, {
-				from: deployStrings.unDeploy.rJs,
-				to: deployStrings.deploy.rJs
 			}]
 		},
 		dev: {
@@ -87,9 +65,6 @@ module.exports = function(grunt) {
 			replacements: [{
 				from: config.JavaScripts.modernizr.buildDistFile,
 				to: config.JavaScripts.modernizr.devSourceFile
-			}, {
-				from: deployStrings.deploy.rJs,
-				to: deployStrings.unDeploy.rJs
 			}]
 		}
 	};

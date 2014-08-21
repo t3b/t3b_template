@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('test', function() {
 		// Pre-Linting and start off an webserver.
-		grunt.task.run(['jshint', 'connect:karma']);
+		grunt.task.run(['jshint', 'compile:docs', 'connect:karma']);
 
 		// Depending on the env, we start different browsers.
 		if(grunt.option('env') !== 'travis') {

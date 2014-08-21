@@ -40,20 +40,8 @@ var ConfigCreator = function() {
 	};
 	this.JavaScripts = {};
 	this.JavaScripts.paths = {
-		devDir : this.paths.public + '/Javascripts/Sources',
-		distDir : this.paths.public + '/Javascripts/Build'
-	};
-
-
-	// RequireJS settings.
-	this.JavaScripts.requireJS = {
-		config : 'RequireConfig',
-		requireJsSourceFile : 'Vendor/requirejs/require', // Relative to the 'config' file.
-		almondSourceFile : 'Vendor/almond/almond', // Relative to the 'config' file.
-		compileDistFile : this.JavaScripts.paths.distDir + '/Main.js',
-		useSingleFileBuild : true,
-		useAlmondOnBuild : true, // Won't affect anything if 'useSingleFileBuild' is set to false.
-		removeLoggingStatements : true
+		devDir : this.paths.private + '/Javascripts',
+		distDir : this.paths.public + '/Javascripts'
 	};
 
 
@@ -110,14 +98,12 @@ var ConfigCreator = function() {
 		config : 'Build/KarmaConfig.js',
 		port: 8000,
 		browsers: ['Chrome', 'Firefox', 'Safari', 'PhantomJS'],
-		coverageDir: this.paths.public + '/Javascripts/Tests/Coverages/',
-		testsDir : this.paths.public + '/Javascripts/Tests'
+		coverageDir: 'Documentation/Javascripts/Coverages/',
+		testsDir : this.JavaScripts.paths.devDir + '/Tests/'
 	};
 
 	// Copy the source files of node modules into a specified location.
 	this.nodeModuleDists = {
-		almond: this.JavaScripts.paths.devDir + '/Vendor/almond/',
-		requirejs: this.JavaScripts.paths.devDir + '/Vendor/requirejs/',
 		modernizr: this.JavaScripts.paths.devDir + '/Vendor/modernizr/'
 	};
 };
