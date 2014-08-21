@@ -5,12 +5,20 @@
  */
 
 var config = require('../Config'),
-	modernizrConfig = require('../ModernizrConfig');
+	modernizrConfig = require('../ModernizrConfig'),
+	modernizrSourceFile = 'node_modules/modernizr/modernizr.js';
 
 module.exports = {
-	main: {
-		devFile: config.JavaScripts.paths.devDir + '/Vendor/modernizr/modernizr.js',
-		outputFile: config.JavaScripts.paths.distDir + '/Vendor/Modernizr-Custom.js',
+	dev: {
+		devFile: modernizrSourceFile,
+		outputFile: config.JavaScripts.paths.distDir + '/Vendor/Modernizr.js',
+		files: {
+			src: ['node_modules/modernizr/**/*.js']
+		}
+	},
+	dist: {
+		devFile: modernizrSourceFile,
+		outputFile: config.JavaScripts.paths.distDir + '/Vendor/Modernizr.js',
 		files: {
 			src: [
 				config.Sass.paths.devDir + '/**/*.scss',

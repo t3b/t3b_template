@@ -1,14 +1,15 @@
 module.exports = {
 	// Slightly modified default settings of http://modernizr.com/download/
-	extra : {
+	extra: {
 		shiv: true,
 		printshiv: false,
 		load: false,
 		mq: false,
 		cssclasses: true
 	},
+
 	// Based on default settings on http://modernizr.com/download/
-	extensibility : {
+	extensibility: {
 		addtest: false,
 		prefixed: false,
 		teststyles: false,
@@ -18,10 +19,13 @@ module.exports = {
 		prefixes: false,
 		domprefixes: false
 	},
+
 	// Define any tests you want to implicitly include.
-	tests : [],
+	tests: [],
+
 	// Have custom Modernizr tests? Add paths to their location here.
-	customTests : [],
+	customTests: [],
+
 	// matchCommunityTests = true will attempt to match user-contributed tests.
-	matchCommunityTests : false
+	matchCommunityTests: false
 };

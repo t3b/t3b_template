@@ -51,22 +51,6 @@ module.exports = function(grunt) {
 				from: '<!= date !>',
 				to: grunt.template.today('dd-mm-yyyy hh:MM')
 			}]
-		},
-		deploy: {
-			src: [config.paths.private + '/Layouts/*.html'],
-			overwrite: true,
-			replacements: [{
-				from: modernizrTaskConfig.main.devFile,
-				to:  modernizrTaskConfig.main.outputFile
-			}]
-		},
-		dev: {
-			src: [config.paths.private + '/Layouts/*.html'],
-			overwrite: true,
-			replacements: [{
-				from:  modernizrTaskConfig.main.outputFile,
-				to:  modernizrTaskConfig.main.devFile
-			}]
 		}
 	};
 };

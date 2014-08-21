@@ -77,12 +77,6 @@ var Config = function() {
 			distDir: this.paths.public + '/Images'
 		}
 	};
-
-
-	// Copy the source files of node modules into a specified location.
-	this.nodeModuleDists = {
-		modernizr: this.JavaScripts.paths.devDir + '/Vendor/modernizr/'
-	};
 };
 
 module.exports = new Config();

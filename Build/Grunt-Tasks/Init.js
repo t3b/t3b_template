@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 		// Create the base Stylesheet to prevent errors from ext:vhs(File not found) as well as the living styleguide.
 		grunt.task.run('compile:js');
 
-		// Copy the specified node modules into the wanted location.
-		grunt.task.run('copy:nodeModules');
+		// Generate a dev version of the Modernizr Build.
+		grunt.task.run('modernizr:dev');
 	});
 };

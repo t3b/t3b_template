@@ -10,10 +10,10 @@ module.exports = function(grunt) {
 		// Re-Compile the css with :dev options.
 		grunt.task.run('compile:css:dev');
 
+		// Generate a dev version of the Modernizr Build.
+		grunt.task.run('modernizr:dev');
+
 		// Re-Compile the JS.
 		grunt.task.run('compile:js');
-
-		// Replace all paths pointing to the dist ressources with the dev equivalent.
-		grunt.task.run('replace:dev');
 	});
 };
