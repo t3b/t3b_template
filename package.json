@@ -70,6 +70,6 @@
     "test": "grunt travis --verbose --env=travis"
   },
   "napa": {
-    "modernizr": "Modernizr/Modernizr#v2.8.1"
+    "modernizr": "Modernizr/Modernizr#v2.8.3"
   }
 }
