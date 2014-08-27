@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 	 * validates all js-files inside Resources/Private/Javascripts with JSHint.
 	 */
 	grunt.registerTask('default', function() {
-		grunt.task.run(['compile:css', 'jshint']);
+		grunt.task.run(['compile:css', 'jshint', 'compile:js']);
 	});
 
 
