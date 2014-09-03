@@ -14,6 +14,6 @@ module.exports = function(grunt) {
 		grunt.task.run('styleguide');
 
 		// Create the JsDoc docs.
-		//grunt.task.run('jsdoc');
+		grunt.task.run('jsdoc');
 	});
 };
