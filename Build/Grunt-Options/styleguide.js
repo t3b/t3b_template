@@ -17,7 +17,7 @@ module.exports = {
 	},
 	css: {
 		files: [{
-			'Documentation/Stylesheets': [config.Sass.cssDir + '/Main.css']
+			'Documentation/Stylesheets': [config.Sass.paths.distDir + '/Main.css']
 		}]
 	}
 };
