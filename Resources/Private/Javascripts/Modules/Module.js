@@ -21,7 +21,7 @@ App = function(el) {
  * Function used to to render the App
  *
  * @memberof module:Modules/Module
- * @returns {Object} the App itself.
+ * @returns {Object} The App itself.
  */
 App.prototype.render = function() {
 	'use strict';
@@ -32,6 +32,8 @@ App.prototype.render = function() {
 	}
 
 	this.el.innerHTML = 'App is rendered properly!';
+
+	return this;
 };
 
 module.exports = App;
