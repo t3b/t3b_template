@@ -1,4 +1,4 @@
-/**
+/*
  * Example Spec
  * @description An example specification for the example module in 'Modules/Module'.
  */

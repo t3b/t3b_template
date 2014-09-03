@@ -8,7 +8,9 @@ var config = require('../Config');
 
 module.exports = {
 	options: {
-		destination: 'Documentation/Javascripts/Documentation'
+		destination: 'Documentation/Javascripts/Documentation',
+		template: "./node_modules/ink-docstrap/template",
+        configure: "./Build/JSDocConfig.json"
 	},
 	dist : {
 		src: [
