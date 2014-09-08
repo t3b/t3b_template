@@ -16,7 +16,7 @@ module.exports = {
 			src: ['node_modules/modernizr/**/*.js']
 		}
 	},
-	dist: {
+	deploy: {
 		devFile: modernizrSourceFile,
 		outputFile: config.JavaScripts.paths.distDir + '/Vendor/Modernizr.js',
 		files: {

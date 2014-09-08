@@ -12,7 +12,7 @@ module.exports = {
 		template: "./node_modules/ink-docstrap/template",
         configure: "./Build/JSDocConfig.json"
 	},
-	dist : {
+	dev : {
 		src: [
 			config.JavaScripts.paths.devDir + '/**/*.js',
 			'!' + config.JavaScripts.paths.devDir + '/Vendor/**/*'

@@ -21,6 +21,6 @@ module.exports = function(grunt) {
 		grunt.task.run('compile:js:deploy');
 
 		// Generate a custom modernizr build.
-		grunt.task.run('modernizr:dist');
+		grunt.task.run('modernizr:deploy');
 	});
 };
