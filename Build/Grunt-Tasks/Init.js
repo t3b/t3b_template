@@ -32,13 +32,13 @@ module.exports = function(grunt) {
 			grunt.task.run(['shell:deleteGitHooks', 'shell:hookUpGit']);
 		}
 
-		// Create the base Stylesheet to prevent errors from ext:vhs(File not found) as well as the living styleguide.
-		grunt.task.run('compile:docs');
-
-		// Create the base Stylesheet to prevent errors from ext:vhs(File not found) as well as the living styleguide.
-		grunt.task.run('compile:js');
+		// Create the base Stylesheet / JS bundle to prevent errors from ext:vhs(File not found).
+		grunt.task.run(['compile:css', 'compile:js']);
 
 		// Generate a dev version of the Modernizr Build.
 		grunt.task.run('modernizr:dev');
+
+		// Generate the base docs.
+		grunt.task.run('compile:docs');
 	});
 };
