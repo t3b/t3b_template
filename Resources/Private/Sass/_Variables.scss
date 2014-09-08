@@ -10,9 +10,6 @@
 // =============================================================================
 // Project settings
 // =============================================================================
-// Are you working in dev mode?
-$devMode:               true;
-
 // The template-root path, used to generate the box-sizing.htc path,
 // this has to be relative to the .html document.
 $template-path:         "typo3conf/ext/#{ext_directory()}/";
