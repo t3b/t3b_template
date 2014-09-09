@@ -28,7 +28,7 @@
     "sass"
   ],
   "dependencies": {
-    "kss-node_glaciertheme": "^1.0.0-a"
+    "kss-node_glaciertheme": "^1.0.1"
   },
   "devDependencies": {
     "browserify": "^4.2.0",
