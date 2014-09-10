@@ -26,11 +26,15 @@ module.exports = {
 
 		// Compile the bundle.
 		return b.bundle()
+			.on('error', helpers.logError)
 			.pipe(source(config.JavaScripts.paths.devDir + '/Vendor.js'))
+			.on('error', helpers.logError)
 			.pipe(rename({dirname: ''}))
 			.pipe(gulp.dest(config.JavaScripts.paths.distDir));
 	},
 	app: function(mode) {
+		mode = (!mode) ? 'dev' : mode;
+
 		// Create the browserify instance and set the entry point to the main app file.
 		var b = browserify({
 			entries: './' + config.JavaScripts.paths.devDir + '/App.js'
