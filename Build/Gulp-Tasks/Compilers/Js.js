@@ -5,14 +5,12 @@
 
 var config = require('./../../Config');
 var helpers = require('./../../Libary/Helpers');
+var externals = config.JavaScripts.vendorFiles;
 
 var gulp = require('gulp');
 var browserify = require('browserify');
 var rename = require('gulp-rename');
 var source = require('vinyl-source-stream');
-
-var externals = config.JavaScripts.vendorFiles;
-
 
 module.exports = {
 	vendor: function() {
@@ -59,5 +57,3 @@ module.exports = {
 			.pipe(gulp.dest(config.JavaScripts.paths.distDir));
 	}
 }
-
-
