@@ -8,7 +8,7 @@ var App;
 
 /**
  * App
- * @param el
+ * @param el {HTMLELement} The el on which the App initializes itself.
  * @constructor
  */
 App = function(el) {
