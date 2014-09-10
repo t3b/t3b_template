@@ -22,5 +22,6 @@ module.exports = function () {
             browsers: config.project.browserSupport,
             cascade: false
         }))
+        .on('error', helpers.logError)
         .pipe(gulp.dest(config.Sass.paths.distDir));
 }
