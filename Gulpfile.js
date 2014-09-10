@@ -7,9 +7,11 @@ gulp.task('default', function() {
   // place code for your default task here
 });
 
-gulp.task('compile:css', sassCompiler);
+gulp.task('compile:css', function() {
+	sassCompiler('dev');
+});
 gulp.task('compile:js', function() {
-	jsCompiler.vendor();
-	jsCompiler.app();
+	jsCompiler.vendor('dev');
+	jsCompiler.app('dev');
 });
 gulp.task('compile:dpcs', docsCompiler);

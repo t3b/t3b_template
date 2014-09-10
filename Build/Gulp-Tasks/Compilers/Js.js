@@ -1,8 +1,3 @@
-/**
- * Compile:JS task.
- * Uglify and merge all javascript files in 'Public/Javascripts/Sources/'.
- */
-
 var config = require('./../../Config');
 var helpers = require('./../../Libary/Helpers');
 var externals = config.JavaScripts.vendorFiles;
@@ -13,7 +8,9 @@ var rename = require('gulp-rename');
 var source = require('vinyl-source-stream');
 
 module.exports = {
-	vendor: function() {
+	vendor: function(mode) {
+		mode = (!mode) ? 'dev' : mode;
+
 		// Create the browserify instance.
 		var b = browserify();
 
@@ -32,6 +29,10 @@ module.exports = {
 			.pipe(rename({dirname: ''}))
 			.pipe(gulp.dest(config.JavaScripts.paths.distDir));
 	},
+
+	/*
+	 * ToDo: Banner support
+	 */
 	app: function(mode) {
 		mode = (!mode) ? 'dev' : mode;
 
