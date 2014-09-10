@@ -63,7 +63,8 @@ var Config = function() {
 		paths: {
 			devDir: this.paths.private + '/Javascripts',
 			distDir: this.paths.public + '/Javascripts'
-		}
+		},
+		vendorFiles: []
 	};
 
 
