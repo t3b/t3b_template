@@ -33,6 +33,9 @@ var fs = require('fs'),
 			return files.filter(function(file) {
 				return path.extname(file) === '.' + fileType;
 			});
+		},
+		logError : function(err) {
+			console.log(err);
 		}
 	};
 
