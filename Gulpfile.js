@@ -14,4 +14,7 @@ gulp.task('compile:js', function() {
 	jsCompiler.vendor('dev');
 	jsCompiler.app('dev');
 });
-gulp.task('compile:dpcs', docsCompiler);
+gulp.task('compile:docs', function() {
+	docsCompiler.js();
+	docsCompiler.css();
+});
