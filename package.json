@@ -49,6 +49,7 @@
     "kss-node_glaciertheme": "^1.0.1a",
     "napa": "^0.4.1",
     "stripify": "^1.2.0",
+    "uglifyify": "^2.5.0",
     "vinyl-source-stream": "^1.0.0"
   },
   "scripts": {

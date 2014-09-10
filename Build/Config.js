@@ -64,6 +64,7 @@ var Config = function() {
 			devDir: this.paths.private + '/Javascripts',
 			distDir: this.paths.public + '/Javascripts'
 		},
+		// List of files which will be included into the vendor file, all paths are relative to the root of this extensions.
 		vendorFiles: []
 	};
 

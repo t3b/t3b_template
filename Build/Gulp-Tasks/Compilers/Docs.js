@@ -3,17 +3,17 @@
  * Create the extension documentation/styleguide.
  */
 
-module.exports = function(grunt) {
-	'use strict';
+var config = require('./../../Config');
+var helpers = require('./../../Libary/Helpers');
 
-	grunt.registerTask('compile:docs', function() {
-		// Compile the new stylesheets.
-		grunt.task.run('compile:css:dev');
+var gulp = require('gulp');
+var jsdoc = require("gulp-jsdoc");
+var kss = require('gulp-kss');
 
-		// Create the living CSS styleguide.
-		grunt.task.run('styleguide');
-
-		// Create the JsDoc docs.
-		grunt.task.run('jsdoc');
-	});
-};
+module.exports = function () {
+	/* ToDo:
+	 * -
+	 */
+	gulp.src(config.JavaScripts.paths.devDir + '/**/*.js')
+		.pipe(jsdoc('Documentation/Javascripts/Documentation'));
+}
