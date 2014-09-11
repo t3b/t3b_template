@@ -1,8 +1,8 @@
 var gulp = require('gulp');
-var sassCompiler = require('./Build/Gulp-Tasks/Compilers/Css');
-var jsCompiler = require('./Build/Gulp-Tasks/Compilers/Js');
-var docsCompiler = require('./Build/Gulp-Tasks/Compilers/Docs');
-var imagesCompiler = require('./Build/Gulp-Tasks/Compilers/Images');
+var sassCompiler = require('./Build/Gulp/Compilers/Css');
+var jsCompiler = require('./Build/Gulp/Compilers/Js');
+var docsCompiler = require('./Build/Gulp/Compilers/Docs');
+var imagesCompiler = require('./Build/Gulp/Compilers/Images');
 
 gulp.task('default', function() {
   // place code for your default task here
