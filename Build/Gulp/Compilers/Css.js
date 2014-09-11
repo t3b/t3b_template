@@ -27,6 +27,4 @@ var sassCompiler = function(mode) {
 		.pipe(gulp.dest(config.Sass.paths.distDir));
 };
 
-module.exports = function (mode) {
-	return sassCompiler(mode);
-}
+module.exports = sassCompiler;
