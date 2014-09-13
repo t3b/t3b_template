@@ -12,6 +12,7 @@ var shell = require('gulp-shell');
 var browserify = require('browserify');
 var rename = require('gulp-rename');
 var source = require('vinyl-source-stream');
+var jshint = require('gulp-jshint');
 
 
 /**
@@ -19,7 +20,6 @@ var source = require('vinyl-source-stream');
  * @constructor
  */
 var Compiler = function() {};
-
 
 /**
  * CSS compiler
@@ -140,12 +140,35 @@ Compiler.prototype.docs = function () {
     return this;
 };
 
+
+/**
+ * Validator
+ * @constructor
+ */
+var Validator = function() {};
+
+/**
+ * JS validator
+ * @description Validate all JS files with JSHint.
+ * @returns {Validator}
+ */
+Validator.prototype.js = function() {
+    gulp.src([config.JavaScripts.paths.devDir + '/**/*.js'])
+        .pipe(jshint('./Build/JSHintConfig.json'))
+        .pipe(jshint.reporter('jshint-stylish'));
+
+    return this;
+};
+
+
 // Create the instance of the compiler.
 var compile = new Compiler();
+var validate = new Validator();
 
 gulp.task('default', function() {
     compile.css('dev');
 });
+gulp.task('validate', validate.js);
 gulp.task('compile:css', function() {
     compile.css('dev');
 });
@@ -153,4 +176,4 @@ gulp.task('compile:js', function() {
     compile.jsVendor('dev');
     compile.jsMain('dev');
 });
-gulp.task('compile:docs', ['compile:css', 'compile:js'], compile.docs);
+gulp.task('compile:docs', compile.docs);

@@ -32,6 +32,7 @@
     "browserify": "^5.11.1",
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "^1.0.0",
+    "gulp-jshint": "^1.8.4",
     "gulp-kss": "0.0.2",
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^0.7.1",
