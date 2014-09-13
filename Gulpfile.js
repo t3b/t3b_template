@@ -29,7 +29,7 @@ var Compiler = function() {};
  * @returns {Compiler}
  */
 Compiler.prototype.css = function(mode) {
-	mode = (!mode) ? 'dev' : mode;
+	mode = mode || 'dev';
 
 	gulp.src(config.Sass.paths.devDir + '/*.scss')
 		.pipe(sass({
@@ -56,7 +56,7 @@ Compiler.prototype.css = function(mode) {
  * @returns {Compiler}
  */
 Compiler.prototype.jsVendor = function(mode) {
-	mode = (!mode) ? 'dev' : mode;
+    mode = mode || 'dev';
 
 	// Create the browserify instance.
 	var b = browserify();
@@ -86,7 +86,7 @@ Compiler.prototype.jsVendor = function(mode) {
  * @returns {Compiler}
  */
 Compiler.prototype.jsMain = function(mode) {
-    mode = (!mode) ? 'dev' : mode;
+    mode = mode || 'dev';
 
     // Create the browserify instance and set the entry point to the main app file.
     var b = browserify({
@@ -191,12 +191,10 @@ gulp.task('validate', ['validate:js', 'validate:sass']);
 
 
 // Compilers.
-gulp.task('compile:css', function() {
-    compile.css('dev');
-});
+gulp.task('compile:css', compile.css);
 gulp.task('compile:js', function() {
-    compile.jsVendor('dev');
-    compile.jsMain('dev');
+    compile.jsVendor();
+    compile.jsMain();
 });
 gulp.task('compile:docs', compile.docs);
 gulp.task('compile', ['compile:css', 'compile:js', 'compile:docs']);
