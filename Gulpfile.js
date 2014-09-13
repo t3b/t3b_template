@@ -15,6 +15,7 @@ var source = require('vinyl-source-stream');
 var jshint = require('gulp-jshint');
 
 
+
 /**
  * Compiler
  * @constructor
@@ -141,6 +142,7 @@ Compiler.prototype.docs = function () {
 };
 
 
+
 /**
  * Validator
  * @constructor
@@ -160,15 +162,35 @@ Validator.prototype.js = function() {
     return this;
 };
 
+/**
+ * Sass validator
+ * @description Validate all SCSS files with SCSSLint.
+ * @returns {Validator}
+ */
+Validator.prototype.sass = function() {
+    return this;
+};
 
+
+
+/**
+ * Gulp Tasks
+ */
 // Create the instance of the compiler.
 var compile = new Compiler();
 var validate = new Validator();
 
-gulp.task('default', function() {
-    compile.css('dev');
-});
-gulp.task('validate', validate.js);
+// Default task
+gulp.task('default', ['compile']);
+
+
+// Validators.
+gulp.task('validate:js', validate.js);
+gulp.task('validate:sass', validate.sass);
+gulp.task('validate', ['validate:js', 'validate:sass']);
+
+
+// Compilers.
 gulp.task('compile:css', function() {
     compile.css('dev');
 });
@@ -177,3 +199,4 @@ gulp.task('compile:js', function() {
     compile.jsMain('dev');
 });
 gulp.task('compile:docs', compile.docs);
+gulp.task('compile', ['compile:css', 'compile:js', 'compile:docs']);
