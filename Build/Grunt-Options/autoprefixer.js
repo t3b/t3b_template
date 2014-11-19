@@ -4,8 +4,7 @@
  * @docs https://github.com/nDmitry/grunt-autoprefixer
  */
 
-var config = require('../Config'),
-	sassTaskConfig = require('./sass');
+var config = require('../Config');
 
 module.exports = {
 	options: {
