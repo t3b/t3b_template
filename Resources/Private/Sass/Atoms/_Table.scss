@@ -54,6 +54,7 @@ th {
 }
 td { vertical-align: top; }
 
+%table,
 .table {
 	width: 100%;
 	margin-top: 0;
@@ -61,6 +62,7 @@ td { vertical-align: top; }
 	td, th { padding: 0.5em; }
 }
 
+%table--bordered,
 .table--bordered {
 	border: 1px solid $basic-border-color;
 	border-collapse: separate;
@@ -72,15 +74,18 @@ td { vertical-align: top; }
 	tr:last-child > td { border-bottom: 0; }
 }
 
+%table--striped,
 .table--striped {
 	td, th { border-bottom: 1px solid $basic-border-color; }
 	th { padding-top: 0; }
 }
 
+%table--condensed,
 .table--condensed {
 	td, th { padding: 0.25em 0.5em 0.25em; }
 }
 
+%table--zebra,
 .table--zebra {
 	tbody {
 		tr:nth-child(even) { background: $content-background; }

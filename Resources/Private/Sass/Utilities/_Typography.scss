@@ -16,9 +16,20 @@ Markup:
 
 Styleguide 2.3.1
 */
-.u-alignCenter { text-align: center; }
-.u-alignRight  { text-align: right; }
-.u-alignLeft   { text-align: left; }
+%u-alignCenter,
+.u-alignCenter {
+    text-align: center;
+}
+
+%u-alignRight,
+.u-alignRight {
+    text-align: right;
+}
+
+%u-alignLeft,
+.u-alignLeft {
+    text-align: left;
+}
 
 
 

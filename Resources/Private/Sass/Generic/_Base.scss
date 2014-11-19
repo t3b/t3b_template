@@ -16,6 +16,7 @@ body {
 	color: $base-text-color;
 	background: $body-background;
 }
+%siteWrapper,
 .siteWrapper {
 	@if $centered-layout { margin-left: auto; margin-right: auto; }
 	width: $layout-width;

@@ -16,8 +16,15 @@ Markup:
 
 Styleguide 2.1.1
 */
-.u-floatRight { float: right; }
-.u-floatLeft { float: left; }
+%u-floatRight,
+.u-floatRight {
+    float: right;
+}
+
+%u-floatLeft,
+.u-floatLeft {
+    float: left;
+}
 
 
 /*
@@ -30,8 +37,15 @@ Markup:
 
 Styleguide 2.1.2
 */
+%u-cf,
 .u-cf,
 .u-clearfix {
-  &:before, &:after { content: ""; display: table; }
-  &:after { clear: both; }
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
 }

@@ -23,11 +23,11 @@ CSC-Frames
 
 // Extend some typographic utilities for the default TYPO3 RTE.
 .align-center {
-  @extend .u-alignCenter;
+  @extend %u-alignCenter;
 }
-.align-right  {
-  @extend .u-alignRight;
+.align-right {
+  @extend %u-alignRight;
 }
-.align-left   {
-  @extend .u-alignLeft;
+.align-left {
+  @extend %u-alignLeft;
 }
