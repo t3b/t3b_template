@@ -11,7 +11,7 @@ module.exports = {
 		nospawn: true
 	},
 	css: {
-		files: [config.Sass.sassDir + '/**/*.scss'],
+		files: [config.Sass.paths.devDir + '/**/*.scss'],
 		tasks: ['compile:css']
 	},
 	jshint: {
