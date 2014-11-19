@@ -8,10 +8,7 @@ node_modules/*
 composer.lock
 
 # Source-/Generated nad Vendor-Files which shouldn't pollute the source repository
-Build/Templates/kss-node_glaciertheme
 Resources/Public/Javascripts/*
-Resources/Public/Javascripts/Vendor/*
-Resources/Private/Javascripts/Vendor/*
 Resources/Public/Stylesheets/*.css
 Resources/Public/Stylesheets/*.map
 Documentation/*
