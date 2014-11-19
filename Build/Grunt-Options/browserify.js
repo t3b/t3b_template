@@ -5,13 +5,13 @@
  */
 
 var config = require('../Config'),
-	externals = require('../../Resources/Private/Javascripts/Vendor'),
+	externals = config.JavaScripts.externals,
 	vendorFile = {},
 	files = {};
 
 // Set the key for the main js application which should be compiled with browserify.
 files[config.JavaScripts.paths.distDir + '/App.min.js'] = [config.JavaScripts.paths.devDir + '/App.js'];
-vendorFile[config.JavaScripts.paths.distDir + '/Vendor.min.js'] = [config.JavaScripts.paths.devDir + '/Vendor.js'];
+vendorFile[config.JavaScripts.paths.distDir + '/Vendor.min.js'] = ['Vendor.js'];
 
 
 module.exports = {
