@@ -86,7 +86,7 @@ Markup:
 	top: -5px;
 	left: 50%;
 	margin-left: -2.5px;
-	@include css-triangle(5px, #fff, bottom);
+	@include cssTriangle(5px, #fff, bottom);
 }
 
 Styleguide 1.2.4
