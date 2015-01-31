@@ -10,11 +10,7 @@
 // =============================================================================
 // Project settings
 // =============================================================================
-// The template-root path, used to generate the box-sizing.htc path,
-// this has to be relative to the .html document.
-$template-path:         "typo3conf/ext/#{ext_directory()}/";
-
-// Reading direction of this project, if set to 'rtl' texts, labels
+// Reading direction of this project, if set to 'rtl' - texts, labels
 // and the grid will be aligned to the right side of the document.
 $direction:             ltr;
 
@@ -23,15 +19,15 @@ $direction:             ltr;
 // Brand related variables
 // =============================================================================
 // Your brand colors, for each of these keys, a class text-color helper-class will be generated.
-// f.e. `.brandColor-primary { color: #0097d7; }`
+// f.e. `.u-brandColor-primary { color: #0097d7; }`
 $brand-colors: (
 	primary: #0097d7
 );
 
-// Your main brand Font-Family
+// Your main brand font-family
 $brand-font-family:     "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-// If your layout makes use of rounded corners, you can specify an Border-Radius
+// If your layout makes use of rounded corners, you can specify an general border-radius
 // here to have a consistent setting.
 $brand-border-radius:   1px;
 
@@ -92,7 +88,7 @@ $headings: (
 // The value is wrapped in the relative-size function which converts pixels into em's.
 $layout-width:          rs(960);
 
-// Is this layout centered? If set to 'true' the '.wrapper' class will be centered.
+// Is this layout centered? If set to 'true' the '.siteWrapper' class will be centered.
 $centered-layout:       true;
 
 // Inner spacing for all grid-items.
@@ -104,7 +100,7 @@ $column-gutter:         20px;
 $body-background:       #fff;
 
 // Used to generate some colors, this doesn't have any direct effect on
-// the .site-content container or its background.
+// the .siteContent container or it's background.
 $content-background:    #fff;
 
 // default units for media-query mixins - it must include a digit e.g.:
