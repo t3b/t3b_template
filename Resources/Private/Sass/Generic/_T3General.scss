@@ -9,11 +9,11 @@ CSC-Frames
 */
 .csc-frame-rulerBefore:before {
   content: '';
-  @extend %horizontal-ruler;
+  @extend %hr;
 }
 .csc-frame-rulerAfter:after {
   content: '';
-  @extend %horizontal-ruler;
+  @extend %hr;
 }
 
 .csc-frame-indent { padding: 0 10%; }
