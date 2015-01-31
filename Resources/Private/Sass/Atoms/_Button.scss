@@ -6,11 +6,11 @@ Styleguide 3.8
 /*
 Button Object
 
-Display an anchor tag as a button.
+Disguise something as a button.
 
-.btn           - Display an element as an button.
-.btn.btn--full - Set the button width to the width of it's parent element.
+.btn           - The basic button styles for all .btn's.
 .btn:hover     - Standard hover styling for buttons.
+.btn.btn--full - Set the button width to the width of it's parent element.
 
 Markup:
 <button class="{$modifiers}">Send button</button>
