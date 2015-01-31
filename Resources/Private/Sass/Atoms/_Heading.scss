@@ -20,9 +20,8 @@ Markup:
 
 Styleguide 3.1.1
 */
-%heading,
-h1, h2, h3,
-h4, h5, h6 {
+.h,
+%h {
 	@if map-get($headings, fontFamily) { font-family: map-get($headings, fontFamily); }
 	font-weight: map-get($headings, fontWeight);
 	color: map-get($headings, color);
@@ -53,21 +52,27 @@ Markup:
 
 Styleguide 3.1.2
 */
-h1, .h1, %h1 {
+.h1, %h1 {
+	@extend %h;
 	font-size: 36px;
 }
-h2, .h2, %h2 {
+.h2, %h2 {
+	@extend %h;
 	font-size: 30px;
 }
-h3, .h3, %h3 {
+.h3, %h3 {
+	@extend %h;
 	font-size: 24px;
 }
-h4, .h4, %h4 {
+.h4, %h4 {
+	@extend %h;
 	font-size: 20px;
 }
-h5, .h5, %h5 {
+.h5, %h5 {
+	@extend %h;
 	font-size: 16px;
 }
-h6, .h6, %h6 {
+.h6, %h6 {
+	@extend %h;
 	font-size: 16px;
 }
