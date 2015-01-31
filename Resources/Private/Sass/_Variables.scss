@@ -71,17 +71,6 @@ $half-spacing:          $basic-spacing / 2;
 
 
 // =============================================================================
-// Headings
-// =============================================================================
-// Default settings for all heading elements.
-$headings: (
-	fontFamily:           false, // 'false' will use the inherited font-family, f.e. $base-font-family.
-	fontWeight:           $bold,
-	color:                #000
-);
-
-
-// =============================================================================
 // Layout
 // =============================================================================
 // Basic layout width (in pixels) - will be set on the '.siteWrapper' class

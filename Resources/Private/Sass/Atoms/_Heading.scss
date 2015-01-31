@@ -22,9 +22,8 @@ Styleguide 3.1.1
 */
 .h,
 %h {
-	@if map-get($headings, fontFamily) { font-family: map-get($headings, fontFamily); }
-	font-weight: map-get($headings, fontWeight);
-	color: map-get($headings, color);
+	font-weight: $bold;
+
 	/**
 	 * Optimized kerning for large font sizes
 	 * use this only on large font-sizes (f.e. headings) to avoid performance issues.
