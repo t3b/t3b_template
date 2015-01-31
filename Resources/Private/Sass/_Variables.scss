@@ -14,20 +14,6 @@
 // this has to be relative to the .html document.
 $template-path:         "typo3conf/ext/#{ext_directory()}/";
 
-// Set the box-sizing of all elements to 'border-box'.
-$global-border-box:     true;
-
-// Is this project a responsive one?
-$responsive:            false;
-
-// Browser support for 'false':
-// Google Chrome
-// Mozilla Firefox 4+
-// Apple Safari 5+
-// Opera 12+
-// Internet Explorer 8+
-$legacy-normalizecss:   false;
-
 // Reading direction of this project, if set to 'rtl' texts, labels
 // and the grid will be aligned to the right side of the document.
 $direction:             ltr;

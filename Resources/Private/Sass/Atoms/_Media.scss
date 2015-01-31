@@ -14,9 +14,7 @@ Contents: 1: Make Images & Attachements responsive
 					3: Removes border when inside `a` element in IE6/7/8/9, FF3.
 					4: Remove the gap between images and the bottom of their containers:
 						 h5bp.com/i/440
-					5: Improves image quality when scaled in IE7.
-						 code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
-					6: Decrease font-size on figcaption elements
+					5: Decrease font-size on figcaption elements
 */
 embed,
 iframe,
@@ -28,9 +26,6 @@ img {
 	font-style: italic; /* 2 */
 	border: 0; /* 3 */
 	vertical-align: middle; /* 4 */
-	@if $legacy-normalizecss {
-		-ms-interpolation-mode: bicubic; /* 5 */
-	}
 	&[height] { /* 1 */
 		height: auto;
 	}
@@ -41,7 +36,7 @@ figure {
 	 */
 	margin: 1em 40px;
 }
-figcaption { /* 6 */
+figcaption { /* 5 */
 	@include font-size(($base-font-size - 2));
 }
 iframe {

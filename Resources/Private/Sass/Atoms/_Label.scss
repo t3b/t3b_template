@@ -44,14 +44,4 @@ legend {
 	border-bottom: 1px $basic-border-style $basic-border-color;
 
 	padding: 0;
-	@if $legacy-normalizecss {
-		/**
-		 * Corrects text not wrapping in FF3.
-		 */
-		white-space: normal;
-		/**
-		 * Corrects alignment displayed oddly in IE6/7.
-		 */
-		*margin-left: -7px;
-	}
 }
